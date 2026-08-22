@@ -184,12 +184,15 @@ function renderNav(){
     { id:"themes",   ico:"\u{1F3AF}", name:"Essay Theme Map",     n:ESSAY_THEMES.length },
     { id:"essays",   ico:"📝", name:"Model Essays",
       n:(typeof ESSAYS !== "undefined") ? Object.keys(ESSAYS).length : 0 },
+    { id:"worklab",  ico:"\u{1F4D6}", name:"Works in Depth",
+      n:(typeof WORKLAB !== "undefined") ? Object.keys(WORKLAB).length : 0 },
     { id:"pyq",      ico:"\u{1F5C3}", name:"Past Questions",
       n:(typeof PYQ_PAPERS !== "undefined")
           ? PYQ_PAPERS.reduce((a, p) => a + p.a.length + p.b.length, 0) : 0 }
   ];
   document.getElementById("viewNav").innerHTML = views.map(v => `
-    <button class="nav-item ${state.view === v.id ? "active" : ""}" data-view="${v.id}">
+    <button class="nav-item ${(state.view === v.id ||
+        (v.id === "worklab" && state.view.startsWith("work:"))) ? "active" : ""}" data-view="${v.id}">
       <span class="nav-ico">${v.ico}</span><span class="nav-name">${v.name}</span>
       <span class="nav-count">${v.n}</span>
     </button>`).join("");
@@ -323,6 +326,72 @@ function essayLinkHTML(theme){
       <span class="el-go" aria-hidden="true">&rarr;</span>
     </button>`;
   }).join("");
+}
+
+/* One thinker's major works, explored. Reached by clicking a Major Works card. */
+function renderWorkLab(id, focus){
+  const e = (typeof WORKLAB !== "undefined") ? WORKLAB[id] : null;
+  const t = byId[id];
+  if (!e || !t) return `<div class="empty"><b>Not found</b>No deep dive for this thinker yet.</div>`;
+  const cat = catById[t.cat];
+  const W = (typeof WORKS !== "undefined") ? (WORKS[id] || []) : [];
+  const meta = Object.fromEntries(W.map(w => [w.t, w]));
+  const cover = w => (typeof COVERS !== "undefined" && w && w.w) ? COVERS[w.w] : null;
+  const slug = x => x.replace(/[^A-Za-z0-9]/g, "");
+  const n = [].concat(e.intro, e.close, e.works.reduce((a, w) => a.concat(w.p), []))
+              .join(" ").split(/\s+/).length;
+  return `
+    <button class="backlink" data-view="worklab">&larr; All works in depth</button>
+    <article class="worklab">
+      <div class="essay-kicker">${esc(cat ? cat.name : "")}</div>
+      <h1>${esc(e.t)}</h1>
+      <div class="essay-meta">${esc(t.name)} &middot; ${esc(t.years)} &middot; ${n} words</div>
+      <p class="mode-note">${esc(e.why)}</p>
+      ${e.intro.map(x => `<p>${rich(x)}</p>`).join("")}
+      ${e.works.map((w, i) => {
+        const m = meta[w.t], src = cover(m);
+        return `
+        <section class="wl-work${focus === w.t ? " focus" : ""}" id="wl-${esc(slug(w.t))}">
+          <header>
+            <div class="cover${src ? "" : " nocover"}">
+              ${ src ? `<img src="${esc(src)}" alt="${esc(w.t)}" loading="lazy" decoding="async"
+                         onerror="this.parentNode.classList.add('nocover');this.remove()">` : "" }
+              <span class="spine">${esc(w.t)}</span>
+            </div>
+            <div>
+              <h2>${esc(w.t)}</h2>
+              ${m ? `<span class="yr">${esc(m.y)}</span><span class="note">${esc(m.n)}</span>` : ""}
+            </div>
+          </header>
+          ${w.p.map(x => `<p>${rich(x)}</p>`).join("")}
+        </section>`;
+      }).join("")}
+      <div class="wl-close">${e.close.map(x => `<p>${rich(x)}</p>`).join("")}</div>
+      <button class="pill wl-open" data-open="${esc(id)}">Open the full page for ${esc(t.name)}</button>
+    </article>`;
+}
+
+/* Index of the five. */
+function renderWorkLabList(){
+  if (typeof WORKLAB === "undefined") return "";
+  const rows = Object.keys(WORKLAB).filter(id => byId[id]);
+  return `
+    <div class="sec-head">
+      <h3>Works in Depth</h3>
+      <p>Five thinkers, one from each of five traditions, chosen to be as unlike each other as
+         this roster allows &mdash; an aphoristic poem, a manual of statecraft, an unfinished
+         economics, a speech that was never delivered, and two novels. Roughly a thousand words
+         on each body of work, and on what actually happened to the books.</p>
+    </div>
+    <div class="essay-grid">${rows.map(id => {
+      const e = WORKLAB[id], t = byId[id], cat = catById[t.cat];
+      return `
+        <button class="essay-card" data-work="${esc(id)}:">
+          <span class="ec-theme">${esc(cat ? cat.name : "")}</span>
+          <b>${esc(e.t)}</b>
+          <span class="ec-meta">${esc(t.name)} &middot; ${e.works.length} work${e.works.length > 1 ? "s" : ""}</span>
+        </button>`;
+    }).join("")}</div>`;
 }
 
 /* An essay is keyed by its own title; the kicker should name its theme. */
@@ -478,6 +547,11 @@ function render(){
   if (state.view.startsWith("essay:")) main.innerHTML = renderEssay(state.view.slice(6), state.mode);
   else if (state.view === "essays")   main.innerHTML = renderEssayList();
   else if (state.view === "pyq")      main.innerHTML = renderPYQ();
+  else if (state.view.startsWith("work:")) {
+    const [, id, w] = state.view.split(/^work:([^:]*):?/);
+    main.innerHTML = renderWorkLab(id, w || "");
+  }
+  else if (state.view === "worklab")  main.innerHTML = renderWorkLabList();
   else if (state.view === "quotes")   main.innerHTML = renderQuotes();
   else if (state.view === "syllabus") main.innerHTML = renderMap(SYLLABUS, "GS Paper IV — Syllabus Map",
                                         "Each syllabus heading with the thinkers who answer it. Click a name for the full page.");
@@ -523,15 +597,18 @@ function profileHTML(t){
 function worksHTML(t){
   const list = (typeof WORKS !== "undefined") ? WORKS[t.id] : null;
   if (!list || !list.length) return "";
+  const lab = (typeof WORKLAB !== "undefined") ? WORKLAB[t.id] : null;
+  const deep = lab ? new Set(lab.works.map(w => w.t)) : null;
   const cover = w => (typeof COVERS !== "undefined" && w.w) ? COVERS[w.w] : null;
   return `
   <section class="block">
-    <div class="block-h"><span class="dot"></span>Major Works</div>
+    <div class="block-h"><span class="dot"></span>Major Works${
+      lab ? `<span class="block-hint">${lab.works.length} of these are explored in depth &mdash; click one</span>` : ""}</div>
     <div class="works">
       ${list.map(w => {
         const src = cover(w);
-        return `
-        <div class="work">
+        const on  = deep && deep.has(w.t);
+        const body = `
           <div class="cover${src ? "" : " nocover"}">
             ${ src ? `<img src="${esc(src)}" alt="${esc(w.t)}" loading="lazy" decoding="async"
                        onerror="this.parentNode.classList.add('nocover');this.remove()">`
@@ -539,15 +616,20 @@ function worksHTML(t){
             <span class="spine">${esc(w.t)}</span>
           </div>
           <div class="work-txt">
+            ${on ? `<span class="radio" aria-hidden="true"></span>` : ""}
             <b>${esc(w.t)}</b>
             <span class="yr">${esc(w.y)}</span>
             <span class="note">${esc(w.n)}</span>
-          </div>
-        </div>`;
+            ${on ? `<span class="work-go">Read this work in depth &rarr;</span>` : ""}
+          </div>`;
+        return on
+          ? `<button class="work deep" data-work="${esc(t.id)}:${esc(w.t)}">${body}</button>`
+          : `<div class="work">${body}</div>`;
       }).join("")}
     </div>
   </section>`;
 }
+
 
 /* Two practice questions, collapsed until the reader asks for them.
    Feedback appears the instant an option is picked — there is no submit step. */
@@ -751,6 +833,20 @@ function renderPYQ(){
 document.addEventListener("click", e => {
   const open = e.target.closest("[data-open]");
   if (open) { openSheet(open.dataset.open); return; }
+
+  const wk = e.target.closest("[data-work]");
+  if (wk) {
+    const i = wk.dataset.work.indexOf(":");
+    const id = wk.dataset.work.slice(0, i), title = wk.dataset.work.slice(i + 1);
+    closeSheet();
+    state.view = "work:" + id + (title ? ":" + title : "");
+    render();
+    if (title) {
+      const el = document.getElementById("wl-" + title.replace(/[^A-Za-z0-9]/g, ""));
+      if (el) el.scrollIntoView({ behavior:"instant", block:"start" });
+    }
+    return;
+  }
 
   const tab = e.target.closest(".pyqtab");
   if (tab) {

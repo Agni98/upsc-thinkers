@@ -141,6 +141,32 @@ manuscript folio — `covers.js` supplies it. Copyrighted modern jackets are del
 excluded, and any work without an accurate image is drawn as a small printed title card
 instead, so nothing on the page is misleading.
 
+### Works in Depth
+
+Five thinkers, **one from each of five different traditions**, picked to be as unlike each
+other as this roster allows — and each explored at roughly **1,000 words** on what is
+actually in their major works and what happened to the books.
+
+| Tradition | Thinker | The piece | Works |
+|---|---|---|---|
+| Eastern Wisdom | Lao Tzu | Eighty-one poems that begin by disqualifying themselves | 1 |
+| Indian Classical | Kautilya | The manual that disappeared for fifteen hundred years | 2 |
+| Modern Western Political | Karl Marx | A pamphlet, two abandoned notebooks and an unfinished economics | 4 |
+| Indian Renaissance | B. R. Ambedkar | A speech too dangerous to deliver | 4 |
+| Global Humanist | George Orwell | Fiction as a form of evidence | 4 |
+
+An aphoristic poem, a manual of statecraft, an unfinished economics, a speech that was never
+delivered, and two novels — five genres, five methods, roughly twenty-five centuries apart.
+
+**Every Major Works card for these five is a button.** Click a book on the thinker's page and
+it opens the deep dive scrolled to that book, with the section highlighted. Cards for thinkers
+without a deep dive stay as plain cards, so the clickable ones are visibly different.
+
+Content lives in `worklab.js`, keyed by thinker id: `t` the title, `why` one line on why that
+thinker was picked from their tradition, `intro`, `works` (each `t` matching the title in
+`works.js` exactly, which is what makes the link work), and `close`. Adding a sixth is a
+matter of adding an entry — the buttons appear automatically.
+
 ### The introductions
 
 Every thinker has a ~200-word prose profile behind the toggle under their photo — who they
@@ -176,6 +202,7 @@ profiles.js   the ~200-word introductions behind each toggle
 hindi.js      Hindi translations of those introductions
 works.js      3–4 major works per thinker
 covers.js     cover / title-page images for those works
+worklab.js    ~1,000-word deep dives on five thinkers' major works
 mcqs.js       two practice questions per thinker
 answers.js    five sub-theme model paragraphs per essay theme (45 in all)
 essays.js     19 model essays, two per theme, partitioned across the past questions

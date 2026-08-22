@@ -791,3 +791,65 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   flex:0 0 auto;font-style:normal;font-family:var(--sans);font-size:10px;font-weight:700;
   letter-spacing:.4px;color:var(--accent);white-space:nowrap}
 @media print{ .essay-serves{break-inside:avoid} }
+
+
+/* ================= WORKS IN DEPTH ================= */
+.block-hint{
+  font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.2px;
+  text-transform:none;color:var(--ink-3);margin-left:10px}
+
+/* a Major Works card that leads somewhere */
+button.work.deep{
+  text-align:left;background:none;border:1px solid transparent;border-radius:12px;
+  padding:8px;margin:-8px;cursor:pointer;transition:.15s;font:inherit;color:inherit;
+  display:flex;gap:14px;align-items:flex-start;width:100%}
+button.work.deep:hover{border-color:var(--accent);background:var(--accent-soft)}
+button.work.deep:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button.work.deep .work-txt{position:relative;padding-left:20px}
+button.work.deep .radio{
+  position:absolute;left:0;top:4px;width:12px;height:12px;border-radius:50%;
+  border:2px solid var(--accent);background:var(--panel);display:block}
+button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2px var(--panel)}
+.work-go{
+  display:block;margin-top:5px;font-family:var(--sans);font-size:11px;font-weight:700;
+  letter-spacing:.2px;color:var(--accent)}
+
+/* the deep-dive page */
+.worklab{max-width:760px}
+.worklab > h1{
+  font-family:var(--serif);font-size:31px;font-weight:600;line-height:1.2;
+  letter-spacing:-.5px;margin:6px 0 8px}
+.worklab > p{
+  font-family:var(--serif);font-size:16.5px;line-height:1.78;margin-bottom:17px;color:var(--ink)}
+.wl-work{
+  border-top:1px solid var(--line);margin-top:30px;padding-top:22px;scroll-margin-top:96px}
+.wl-work.focus{
+  border-top-color:var(--accent);background:var(--accent-soft);
+  border-radius:12px;padding:20px 20px 6px;margin-left:-20px;margin-right:-20px}
+.wl-work > header{display:flex;gap:16px;align-items:flex-start;margin-bottom:15px}
+.wl-work > header .cover{flex:0 0 62px;width:62px}
+.wl-work > header h2{
+  font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.3px;margin-bottom:3px}
+.wl-work > header .yr{
+  display:block;font-family:var(--sans);font-size:11.5px;font-weight:700;
+  letter-spacing:.4px;color:var(--accent);margin-bottom:4px}
+.wl-work > header .note{
+  display:block;font-size:13px;color:var(--ink-2);line-height:1.5;max-width:44ch}
+.wl-work p{
+  font-family:var(--serif);font-size:16px;line-height:1.78;margin-bottom:15px;color:var(--ink)}
+.wl-close{
+  margin-top:30px;padding-top:20px;border-top:2px solid var(--line)}
+.wl-close p{
+  font-family:var(--serif);font-size:16px;line-height:1.78;margin-bottom:14px;color:var(--ink)}
+.wl-open{margin-top:22px}
+
+@media (max-width:700px){
+  .wl-work.focus{margin-left:-12px;margin-right:-12px;padding:16px 12px 4px}
+  .wl-work > header{gap:12px}
+  .wl-work > header .cover{flex:0 0 48px;width:48px}
+  .worklab > h1{font-size:25px}
+}
+@media print{
+  .work-go,.wl-open,.backlink{display:none}
+  .wl-work{break-inside:avoid-page}
+}
