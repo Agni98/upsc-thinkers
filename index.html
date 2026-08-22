@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Thinkers for UPSC Mains — Essay &amp; Ethics</title>
+<meta name="description" content="Philosophers and thinkers asked in UPSC Essay and GS-IV Ethics, organised with core ideas, quotations and syllabus links.">
+<!-- The stylesheet and scripts below are loaded with a fresh timestamp every visit,
+     so an edited file is never served from a stale browser cache. -->
+<script>
+  document.write('<link rel="stylesheet" href="styles.css?v=' + Date.now() + '">');
+</script>
+<noscript><link rel="stylesheet" href="styles.css"></noscript>
+</head>
+<body>
+
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Toggle menu">&#9776;</button>
+  <div class="brand">
+    <div class="brand-mark">&#x0950;</div>
+    <div class="brand-text">
+      <h1>Thinkers for UPSC Mains</h1>
+      <p>Essay &middot; GS Paper IV Ethics</p>
+    </div>
+  </div>
+  <div class="search-wrap">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+      <circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path>
+    </svg>
+    <input id="search" type="search" placeholder="Search a thinker, idea, quote or theme…" autocomplete="off">
+    <span class="kbd">/</span>
+  </div>
+  <button class="icon-btn" id="themeBtn" aria-label="Toggle theme" title="Toggle light / dark">&#9789;</button>
+</header>
+
+<div class="shell">
+  <nav class="sidebar" id="sidebar">
+    <div class="side-label">Views</div>
+    <div id="viewNav"></div>
+    <div class="side-label">Schools &amp; Traditions</div>
+    <div id="catNav"></div>
+  </nav>
+
+  <main class="main" id="main"></main>
+</div>
+
+<div class="overlay" id="overlay">
+  <article class="sheet" id="sheet"></article>
+</div>
+
+<script>
+  // async=false keeps them executing in this exact order.
+  //
+  // Locally we bust the cache on every load, so an edited file shows up on a
+  // plain refresh. Once deployed that would be wasteful -- the data files are
+  // well over a megabyte and never change between releases -- so a published
+  // copy uses a fixed version instead and lets the browser cache properly.
+  // Bump BUILD when the data files change.
+  (function () {
+    var BUILD = '2026-08-22';
+    var local = ['localhost', '127.0.0.1', '::1', ''].indexOf(location.hostname) !== -1
+                || location.protocol === 'file:';
+    var v = local ? Date.now() : BUILD;
+    ['data.js', 'portraits.js', 'profiles.js', 'hindi.js',
+     'works.js', 'covers.js', 'mcqs.js', 'answers.js', 'essays.js','pyq.js', 'app.js'].forEach(function (f) {
+      var s = document.createElement('script');
+      s.src = f + '?v=' + v;
+      s.async = false;
+      document.head.appendChild(s);
+    });
+  })();
+</script>
+</body>
+</html>

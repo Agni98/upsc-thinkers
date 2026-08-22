@@ -1,0 +1,10 @@
+# Stale Word exports -- generated artefacts, and they predate most of the site.
+# They stay on disk; they just are not part of the published repository.
+*.docx
+
+# Local editor / OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+__pycache__/
+*.pyc
