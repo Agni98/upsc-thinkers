@@ -115,7 +115,7 @@ const PYQ_THEMES = [
 
   { t:"Ends, Means and the Ethics of Decision",
     why:"The administrator's cluster: how to decide, when to act, whether the means matter, and how far the ideal binds the real. Note that these contradict each other on purpose — shelving hard decisions as the least ethical course, against muddy water being best cleared by leaving it alone.",
-    link:["Ends & Means","Ends, Means and the Ethics of Decision"],
+    link:["The file that nobody moved","A standard nobody meets is still a standard"],
     ids:["gandhi","machiavelli","kautilya","kant","bentham","mill","simon","barnard","goleman"],
     qs:["2026B3","2025A2","2025B1","2024B4","2023A2","2022B1","2022B4","2021B4","2019A2","2018B1","2018B3","2018B4"],
     also:{ "2025A2":"also reads as strategy and international relations",
@@ -123,7 +123,7 @@ const PYQ_THEMES = [
 
   { t:"Knowledge, Education and the Doubting Mind",
     why:"The largest group by a clear margin. Every question here treats knowing as an activity rather than a possession — doubt, argument, research, reason. The examiner is asking what education is for, not what it delivers.",
-    link:["Education & Values","Knowledge, Education and the Doubting Mind"],
+    link:["The certificate and the question","The romantic man was never the enemy"],
     ids:["socrates","plato","aristotle","tagore","freire","nussbaum","vivekananda","kalam","mill"],
     qs:["2026B2","2025A3","2024A2","2024A4","2024B3","2023A1","2023B2","2023B4","2022A3","2021B2","2019A1"],
     also:{ "2025A3":"also reads as thought shaping reality",
@@ -131,7 +131,7 @@ const PYQ_THEMES = [
 
   { t:"Character, Adversity and the Test of Power",
     why:"Character is not stated here, it is tested. Each question puts a person under some pressure — failure, hardship, safety, time, power — and asks what the pressure reveals. The recurring answer is that the decisive threat is internal.",
-    link:["Character, Courage & Resilience","Character, Adversity and the Test of Power"],
+    link:["We examine for endurance and promote for compliance","The straight line is the least likely path"],
     ids:["marcus-aurelius","epictetus","nietzsche","camus","mandela","malala","aristotle","kalam","gandhi"],
     qs:["2026A3","2025A4","2025B2","2024B2","2023A3","2022A4","2022B2","2020A3","2019A4"],
     also:{ "2024B2":"also reads as the ethics of holding office",
@@ -139,41 +139,41 @@ const PYQ_THEMES = [
 
   { t:"The Good Life: Contentment, Simplicity and Being Humane",
     why:"These ask what a life should aim at, and every one is sceptical of accumulation. They want a defensible account of well-being — gratitude, simplicity, mindfulness, wantlessness — argued against the consumption economy rather than preached at it.",
-    link:["Compassion, Service & the Last Person","The Good Life: Contentment, Simplicity and Being Humane"],
+    link:["The country is richer. Ask it whether it is better","The inner life is not a private matter"],
     ids:["epicurus","buddha","mahavira","laozi","gandhi","thiruvalluvar","gibran","marcus-aurelius","epictetus"],
     qs:["2026A2","2025B3","2025B4","2024A3","2021A3","2020A1","2020A2","2020A4","2018A2"],
     also:{ "2020A1":"also reads as compassion and the humane state" } },
 
   { t:"Culture, Memory and the Making of Meaning",
     why:"How a society carries its past and makes sense of the present. Art, history, memory, irony and perception belong together because each is a way meaning gets made and transmitted — and each resists the tidy resolution an essay wants to impose.",
-    link:["Liberty, Dissent & Freedom of Expression","Culture, Memory and the Making of Meaning"],
+    link:["The argument a country has with itself","The most confident account is rarely the true one"],
     ids:["tagore","gibran","tolstoy","plato","aurobindo","gandhi","nehru","burke","azad"],
     qs:["2026A1","2023A4","2022A2","2022B3","2021A2","2021A4","2021B3","2020B1","2018B2"] },
 
   { t:"Justice, Equality and the Excluded",
     why:"What a society owes its weakest members, and whether charity is evidence of justice or of its absence. Gender belongs here because these questions frame it as structure rather than sentiment. Moral and economic arguments must run together; either alone reads thin.",
-    link:["Justice, Equality & Affirmative Action","Women & Gender Justice","Justice, Equality and the Excluded"],
+    link:["A country should not need this much kindness","Educated, and still not counted","Somebody always pays for the public good"],
     ids:["rawls","ambedkar","amartya-sen","nozick","deendayal","gandhi","mother-teresa","lohia","nussbaum"],
     qs:["2025A1","2023B3","2023B1","2021B1","2020B2","2020B3","2019A3","2019B2","2018A3"],
     also:{ "2025A1":"also reads as truth as impartiality" } },
 
   { t:"Democracy, the State and India in the World",
     why:"The paper's most explicitly political group: leadership, media, plural identity, borders, great-power rivalry. These reward specific institutional detail over general sentiment, and they are the questions most sensitive to the year in which they were set.",
-    link:["Democracy, Institutions & Citizenship","Democracy, the State and India in the World"],
+    link:["Between two elections","Autonomy is a capability, not a posture"],
     ids:["ambedkar","tocqueville","habermas","montesquieu","nehru","kautilya","patel","orwell","gandhi"],
     qs:["2026A4","2026B4","2019B1","2019B3","2018A4"],
     also:{ "2026B4":"also reads as leadership and public office" } },
 
   { t:"Nature, Development and Civilisation",
     why:"Forests recur here with unusual persistence. The framing is never merely ecological: it asks whether nature is a resource, a teacher or a moral limit — and what a civilisation that answers that wrongly ends up looking like.",
-    link:["Development, Environment & Sustainability","Nature, Development and Civilisation"],
+    link:["The bill arrives in a different currency","We stopped being taught by anything we did not make"],
     ids:["schumacher","ostrom","gandhi","thoreau","mahavira","burke","deendayal","amartya-sen","tagore"],
     qs:["2026B1","2024A1","2022A1","2018A1"],
     also:{ "2026B1":"demands the philosophical register, not the policy one" } },
 
   { t:"Technology and the Modern Self",
     why:"Technology enters this paper as something that changes people, not as something that solves problems. Attention, identity, employment, diplomacy — the question is always what a tool does to the person or the state that uses it.",
-    link:["Technology, Surveillance & Privacy","Technology and the Modern Self"],
+    link:["We built the rails without asking where they go","The jobs question is the wrong question"],
     ids:["foucault","orwell","einstein","schumacher","habermas","drucker","bentham","maslow","allport"],
     qs:["2024B1","2021A1","2020B4","2019B4"] }
 

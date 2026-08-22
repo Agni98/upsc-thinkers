@@ -35,39 +35,39 @@ const ESSAY_THEMES = [
   { t:"Ends, Means and the Ethics of Decision",
     s:"How to decide, when to act, whether the means matter, and the gap between ideal and real",
     ids:["gandhi","machiavelli","kautilya","kant","bentham","mill","simon","barnard","goleman","weber","arendt","drucker","aristotle","socrates","ambedkar","periyar","thoreau","rawls","nehru","hegel","aurobindo"],
-    essays:["Ends & Means","Ends, Means and the Ethics of Decision"] },
+    essays:["The file that nobody moved","A standard nobody meets is still a standard"] },
   { t:"Knowledge, Education and the Doubting Mind",
     s:"What knowing is for, and why the educated mind ends with more questions",
     ids:["socrates","plato","aristotle","tagore","freire","nussbaum","vivekananda","kalam","mill","einstein","habermas","ambedkar","gandhi"],
-    essays:["Education & Values","Knowledge, Education and the Doubting Mind"] },
+    essays:["The certificate and the question","The romantic man was never the enemy"] },
   { t:"Character, Adversity and the Test of Power",
     s:"What pressure reveals — failure, risk, time and authority as examinations",
     ids:["marcus-aurelius","epictetus","nietzsche","camus","mandela","malala","aristotle","kalam","gandhi","arendt","thoreau","laozi","buddha","machiavelli","bose","vivekananda","ambedkar","hegel","tagore","weber"],
-    essays:["Character, Courage & Resilience","Character, Adversity and the Test of Power"] },
+    essays:["We examine for endurance and promote for compliance","The straight line is the least likely path"] },
   { t:"The Good Life: Contentment, Simplicity and Being Humane",
     s:"What a life should aim at, argued against the economy of accumulation",
     ids:["epicurus","buddha","mahavira","laozi","gandhi","thiruvalluvar","gibran","marcus-aurelius","epictetus","aristotle","camus","schumacher","amartya-sen","kabir","guru-nanak","vivekananda","mother-teresa","gilligan","deendayal","kohlberg"],
-    essays:["Compassion, Service & the Last Person","The Good Life: Contentment, Simplicity and Being Humane"] },
+    essays:["The country is richer. Ask it whether it is better","The inner life is not a private matter"] },
   { t:"Culture, Memory and the Making of Meaning",
     s:"How a society carries its past and makes sense — art, history, language, perception",
     ids:["tagore","gibran","tolstoy","plato","aurobindo","gandhi","nehru","burke","azad","marx","hegel","orwell","socrates","camus","nietzsche","laozi","kabir","kant","shankara","sartre"],
-    essays:["Liberty, Dissent & Freedom of Expression","Culture, Memory and the Making of Meaning"] },
+    essays:["The argument a country has with itself","The most confident account is rarely the true one"] },
   { t:"Justice, Equality and the Excluded",
     s:"What a society owes its weakest members, and why patriarchy is a structure not a sentiment",
     ids:["rawls","ambedkar","amartya-sen","nozick","deendayal","gandhi","mother-teresa","lohia","nussbaum","jyotirao-phule","savitribai-phule","beauvoir","wollstonecraft","pandita-ramabai","periyar","gilligan","mill","bentham","tocqueville"],
-    essays:["Justice, Equality & Affirmative Action","Women & Gender Justice","Justice, Equality and the Excluded"] },
+    essays:["A country should not need this much kindness","Educated, and still not counted","Somebody always pays for the public good"] },
   { t:"Democracy, the State and India in the World",
     s:"Leadership, media, plural identity, borders and the ethics of asymmetric power",
     ids:["ambedkar","tocqueville","habermas","montesquieu","nehru","kautilya","patel","orwell","gandhi","mandela","tagore","azad","aurobindo","mill","rousseau","jp-narayan","machiavelli","barnard"],
-    essays:["Democracy, Institutions & Citizenship","Democracy, the State and India in the World"] },
+    essays:["Between two elections","Autonomy is a capability, not a posture"] },
   { t:"Nature, Development and Civilisation",
     s:"Whether nature is a resource, a teacher or a moral limit — and what growth is for",
     ids:["schumacher","ostrom","gandhi","thoreau","mahavira","burke","deendayal","amartya-sen","tagore","aurobindo","gibran","nussbaum","kalam","einstein"],
-    essays:["Development, Environment & Sustainability","Nature, Development and Civilisation"] },
+    essays:["The bill arrives in a different currency","We stopped being taught by anything we did not make"] },
   { t:"Technology and the Modern Self",
     s:"What a tool does to the person, the worker and the state that uses it",
     ids:["foucault","orwell","einstein","schumacher","habermas","drucker","bentham","maslow","allport","festinger","marx","amartya-sen","mcgregor","buddha","marcus-aurelius","kautilya","nehru","ambedkar"],
-    essays:["Technology, Surveillance & Privacy","Technology and the Modern Self"] }
+    essays:["We built the rails without asking where they go","The jobs question is the wrong question"] }
 ];
 
 /* ---- State ---- */
@@ -298,8 +298,9 @@ function rich(t){
 function essayBody(e){
   return (e.p && e.p.length) ? e.p : (e.ep && e.ep.length) ? e.ep : (e.cp || []);
 }
-function essayVersions(e){
-  return ESSAY_MODES.filter(m => Array.isArray(e[m.p]) && e[m.p].length).map(m => m.label.toLowerCase());
+/* How many past questions this essay is the home for. */
+function essayServes(e){
+  return (e.serves && e.serves.length) ? e.serves.length : 0;
 }
 
 /* The launchers that sit under the last "Open it out with" block. A theme may
@@ -311,17 +312,38 @@ function essayLinkHTML(theme){
   return rows.map(k => {
     const e = ESSAYS[k];
     const n = essayBody(e).reduce((a, x) => a + x.split(/\s+/).length, 0);
-    const v = essayVersions(e);
+    const q = essayServes(e);
     return `
     <button class="essay-launch" data-essay="${esc(k)}">
       <span class="radio" aria-hidden="true"></span>
       <span class="el-txt">
         <b>Read the full model essay</b>
-        <span>${esc(e.t || e.et)} &middot; ${v.length > 1 ? v.length + " versions" : v[0]} &middot; ${n} words</span>
+        <span>${esc(e.t || e.et)} &middot; ${n} words${q ? " &middot; answers " + q + " past question" + (q > 1 ? "s" : "") : ""}</span>
       </span>
       <span class="el-go" aria-hidden="true">&rarr;</span>
     </button>`;
   }).join("");
+}
+
+/* An essay is keyed by its own title; the kicker should name its theme. */
+function themeOfEssay(key){
+  const t = ESSAY_THEMES.find(x => (x.essays || []).includes(key));
+  return t ? t.t : "";
+}
+
+/* The past questions an essay is the home for, printed under its note so a
+   reader can see exactly which paper questions it was written to answer. */
+function servesHTML(e){
+  if (!e.serves || !e.serves.length || typeof PYQ_PAPERS === "undefined") return "";
+  const Q = pyqText();
+  const rows = e.serves.map(k => Q[k]).filter(Boolean);
+  if (!rows.length) return "";
+  return `
+    <div class="essay-serves">
+      <b>Written to answer</b>
+      <ul>${e.serves.map(k => Q[k]
+        ? `<li><i>${Q[k].y} ${Q[k].s}${Q[k].n}</i>${esc(Q[k].q)}</li>` : "").join("")}</ul>
+    </div>`;
 }
 
 /* Full-page essay view. Three registers: thinker-led, editorial, combined. */
@@ -344,7 +366,7 @@ function renderEssay(topic, mode){
   return `
     <button class="backlink" data-view="essays">&larr; All model essays</button>
     <article class="essay-doc">
-      <div class="essay-kicker">${esc(topic)}</div>
+      <div class="essay-kicker">${esc(themeOfEssay(topic) || topic)}</div>
       ${ avail.length > 1 ? `<div class="modebar" role="group" aria-label="Essay style">
           ${avail.map(x => `<button class="modebtn${x.id === m.id ? " on" : ""}"
              data-mode="${x.id}" data-topic="${esc(topic)}">${x.label}</button>`).join("")}
@@ -352,6 +374,7 @@ function renderEssay(topic, mode){
       <h1>${esc(title)}</h1>
       <div class="essay-meta">${m.label} &middot; ${n} words &middot; ${paras.length} paragraphs</div>
       <p class="mode-note">${esc(e.note || "") || m.note}</p>
+      ${servesHTML(e)}
       ${paras.map(x => `<p>${rich(x)}</p>`).join("")}
     </article>`;
 }
@@ -370,12 +393,12 @@ function renderEssayList(){
     ${ rows.length ? `<div class="essay-grid">${rows.map(r => {
         const e = ESSAYS[r.key];
         const n = essayBody(e).reduce((a, x) => a + x.split(/\s+/).length, 0);
-        const v = essayVersions(e);
+        const q = essayServes(e);
         return `
           <button class="essay-card" data-essay="${esc(r.key)}">
             <span class="ec-theme">${esc(r.theme)}</span>
             <b>${esc(e.t || e.et)}</b>
-            <span class="ec-meta">${n} words &middot; ${v.join(", ")}</span>
+            <span class="ec-meta">${n} words${q ? " &middot; answers " + q + " past question" + (q > 1 ? "s" : "") : ""}</span>
           </button>`;
       }).join("")}</div>`
       : `<div class="empty"><b>Nothing yet</b>Essays are added per theme in essays.js.</div>` }`;

@@ -76,49 +76,41 @@ the paragraph written for it. All 72 questions reach one.
 
 ### Model essays
 
-Below the last "Open it out with" block sits the full essay for that theme, in **three
-versions**:
+**Two essays per theme** (three for Justice), **nineteen in all**, and the pair on each theme
+is built to divide the work between them. The first takes the theme's central argument; the
+second takes the questions the first leaves open. So *The certificate and the question* asks
+whether Indian education produces minds or credentials, while its companion *The romantic man
+was never the enemy* asks what turns information into understanding — both knowledge
+questions, different demands, different essays.
 
-- **Thinker-led** (`t` / `p` in `essays.js`) — the argument is carried by the thinkers, each
-  introduced as an answer to the essay's central question. Roughly 1,050-1,180 words.
-- **Editorial** (`et` / `ep`) — the same question argued as a columnist would, through
-  politics, economics, society and current policy. Thinkers almost absent. 930-1,040 words.
-- **Combined** (`ct` / `cp`) — thinkers supply the conceptual spine and the evidence carries
-  it, interleaved rather than taken in turns. 1,080-1,260 words.
+Each essay carries a **`serves`** list naming the past questions it is the home for. Across a
+theme those lists **partition** the theme's questions: every past question has exactly one
+essay, none is shared, and none is missed. The site checks this, and all **72 of 72** are
+covered.
 
-All three answer the same central question, each has its own title, and all work through the
-theme's "Open it out with" prompts. Ten of these across the nine themes — Justice carries
-two, since the gender essay lives there.
+| Theme | Essays | PYQs |
+|---|---|---|
+| Ends, Means and the Ethics of Decision | The file that nobody moved · A standard nobody meets is still a standard | 12 |
+| Knowledge, Education and the Doubting Mind | The certificate and the question · The romantic man was never the enemy | 11 |
+| Character, Adversity and the Test of Power | We examine for endurance and promote for compliance · The straight line is the least likely path | 9 |
+| The Good Life | The country is richer. Ask it whether it is better · The inner life is not a private matter | 9 |
+| Culture, Memory and the Making of Meaning | The argument a country has with itself · The most confident account is rarely the true one | 9 |
+| Justice, Equality and the Excluded | A country should not need this much kindness · Educated, and still not counted · Somebody always pays for the public good | 9 |
+| Democracy, the State and India in the World | Between two elections · Autonomy is a capability, not a posture | 5 |
+| Nature, Development and Civilisation | The bill arrives in a different currency · We stopped being taught by anything we did not make | 4 |
+| Technology and the Modern Self | We built the rails without asking where they go · The jobs question is the wrong question | 4 |
 
-### The theme editorials
+All nineteen are written in **one register**. The argument is carried by policy, data and
+institutions; a thinker appears where the idea does real work and nowhere for the sake of
+appearing; and **no paragraph opens by announcing a philosopher** — a rule the build checks,
+because opening that way is the tell that an essay has stopped being editorial. Each is
+1,400–1,730 words and is built from its theme's five model paragraphs plus the "Open it out
+with" prompts those paragraphs leave for the writer.
 
-Alongside them sits **one editorial per theme**, nine in all, and these are built differently.
-Each is written from that theme's five sub-theme paragraphs *and from the "Open it out with"
-prompts the paragraphs deliberately leave open* — so it is the demonstration of what the
-model paragraphs become once the evidence they withheld is put back in. **Every one of a
-theme's 25 prompts is reached.** 1,450–1,730 words.
-
-The register is editorial throughout: the argument is carried by policy, data and
-institutions, no paragraph opens by announcing a philosopher, and a thinker appears only
-where the idea does real work — between two and nine per essay, never as a roll-call.
-
-These carry `et` / `ep` only, so the essay page shows no version switch. An essay may also
-set `note:` to override the standard register note.
-
-| Theme | Editorial |
-|---|---|
-| Ends, Means and the Ethics of Decision | The file that nobody moved |
-| Knowledge, Education and the Doubting Mind | The certificate and the question |
-| Character, Adversity and the Test of Power | We examine for endurance and promote for compliance |
-| The Good Life | The country is richer. Ask it whether it is better |
-| Culture, Memory and the Making of Meaning | The argument a country has with itself |
-| Justice, Equality and the Excluded | A country should not need this much kindness |
-| Democracy, the State and India in the World | Between two elections |
-| Nature, Development and Civilisation | The bill arrives in a different currency |
-| Technology and the Modern Self | We built the rails without asking where they go |
-
-Open any essay from the radio buttons under the model paragraphs, or from **Model Essays**
-in the sidebar. `**double asterisks**` render as bold and nothing else is treated as markup.
+Essays live in `essays.js`, keyed by their own title: `et` the title, `ep` the paragraphs,
+`serves` the questions it answers, `note` how it relates to its pair. `**double asterisks**`
+render as bold and nothing else is treated as markup. Open one from the radio buttons under
+the model paragraphs, or from **Model Essays** in the sidebar.
 
 ### Past questions, classified
 
@@ -186,7 +178,7 @@ works.js      3–4 major works per thinker
 covers.js     cover / title-page images for those works
 mcqs.js       two practice questions per thinker
 answers.js    five sub-theme model paragraphs per essay theme (45 in all)
-essays.js     19 model essays: 10 in three versions, 9 theme editorials
+essays.js     19 model essays, two per theme, partitioned across the past questions
 pyq.js        nine years of past essay questions, classified by theme
 portraits.js  pre-resolved portrait URLs (verified to load)
 app.js        rendering, search, syllabus maps
