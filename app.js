@@ -330,11 +330,45 @@ function essayLinkHTML(theme){
 
 /* WORKS IN DEPTH. Three levels: an index classified by thinker, a page per
    thinker, and a page of roughly a thousand words per individual work. */
+/* An entry may be a thinker or, like the Rigveda, a text with no single author. */
+function wlWho(id){
+  const e = WORKLAB[id], t = byId[id], cat = t ? catById[t.cat] : null;
+  return { name:(t && t.name) || e.who || id,
+           years:(t && t.years) || e.years || "",
+           tradition:(cat && cat.name) || e.tradition || "",
+           hasPage:!!t };
+}
+
+/* Paragraph array to HTML. "## " starts a section, "- " lines gather into a
+   list, anything else is a paragraph. Keeps the data flat and readable. */
+function wlBody(paras){
+  let out = "", li = [];
+  const flush = () => { if (li.length) { out += `<ul>${li.map(x => `<li>${rich(x)}</li>`).join("")}</ul>`; li = []; } };
+  (paras || []).forEach(x => {
+    if (x.indexOf("- ") === 0) { li.push(x.slice(2)); return; }
+    flush();
+    out += (x.indexOf("## ") === 0) ? `<h2>${esc(x.slice(3))}</h2>` : `<p>${rich(x)}</p>`;
+  });
+  flush();
+  return out;
+}
+
+function wlTimeline(rows){
+  if (!rows || !rows.length) return "";
+  return `
+    <div class="wl-timeline">
+      <b>In one timeline</b>
+      <ol>${rows.map(r => `<li><i>${esc(r.when)}</i><span>${esc(r.what)}</span></li>`).join("")}</ol>
+    </div>`;
+}
+
 const wlSlug = x => String(x).replace(/[^A-Za-z0-9]/g, "");
 
-function wlCover(id, title){
+function wlCover(id, work){
+  const title = (typeof work === "string") ? work : work.t;
   const w = ((typeof WORKS !== "undefined") ? (WORKS[id] || []) : []).find(x => x.t === title);
-  const src = (w && w.w && typeof COVERS !== "undefined") ? COVERS[w.w] : null;
+  const own = (typeof work === "object" && work.cover) ? work.cover : null;
+  const src = own || ((w && w.w && typeof COVERS !== "undefined") ? COVERS[w.w] : null);
   return { meta:w, html:`
     <div class="cover${src ? "" : " nocover"}">
       ${ src ? `<img src="${esc(src)}" alt="${esc(title)}" loading="lazy" decoding="async"
@@ -348,52 +382,55 @@ function renderWork(id, title){
   const e = WORKLAB[id], t = byId[id];
   const w = e.works.find(x => x.t === title);
   if (!w) return renderWorkThinker(id);
-  const cat = catById[t.cat], c = wlCover(id, w.t);
+  const who = wlWho(id), c = wlCover(id, w);
   const n = w.p.join(" ").split(/\s+/).length;
   const others = e.works.filter(x => x.t !== w.t);
+  const yr = (c.meta && c.meta.y) || who.years;
   return `
-    <button class="backlink" data-work="${esc(id)}:">&larr; ${esc(t.name)}</button>
+    <button class="backlink" data-work="${esc(id)}:">&larr; ${esc(who.name)}</button>
     <article class="worklab work-one">
       <div class="wl-head">
         ${c.html}
         <div>
-          <div class="essay-kicker">${esc(t.name)} &middot; ${esc(cat ? cat.name : "")}</div>
+          <div class="essay-kicker">${esc(who.name)} &middot; ${esc(who.tradition)}</div>
           <h1>${esc(w.t)}</h1>
-          ${c.meta ? `<div class="essay-meta">${esc(c.meta.y)} &middot; ${n} words</div>` : ""}
+          <div class="essay-meta">${esc(yr)} &middot; ${n} words</div>
           <div class="wl-tags">
             <span class="wl-tag"><i>Form</i>${esc(w.form)}</span>
             <span class="wl-tag"><i>Fate</i>${esc(w.fate)}</span>
           </div>
         </div>
       </div>
-      ${w.p.map(x => `<p>${rich(x)}</p>`).join("")}
+      ${ w.coverNote ? `<p class="wl-covernote">${esc(w.coverNote)}</p>` : "" }
+      <div class="wl-prose">${wlBody(w.p)}</div>
+      ${wlTimeline(w.timeline)}
       ${ others.length ? `<div class="wl-sibs">
-        <b>Also by ${esc(t.name)}</b>
+        <b>Also by ${esc(who.name)}</b>
         ${others.map(x => `<button class="pill" data-work="${esc(id)}:${esc(x.t)}">${esc(x.t)}</button>`).join("")}
       </div>` : "" }
-      <button class="pill wl-open" data-open="${esc(id)}">Open the full page for ${esc(t.name)}</button>
+      ${ who.hasPage ? `<button class="pill wl-open" data-open="${esc(id)}">Open the full page for ${esc(who.name)}</button>` : "" }
     </article>`;
 }
 
 /* Level 2 — one thinker's shelf. */
 function renderWorkThinker(id){
-  const e = WORKLAB[id], t = byId[id];
-  if (!e || !t) return `<div class="empty"><b>Not found</b>No deep dive for this thinker yet.</div>`;
-  const cat = catById[t.cat];
+  const e = WORKLAB[id];
+  if (!e) return `<div class="empty"><b>Not found</b>No deep dive for this entry yet.</div>`;
+  const who = wlWho(id);
   return `
     <button class="backlink" data-view="worklab">&larr; All works in depth</button>
     <article class="worklab">
-      <div class="essay-kicker">${esc(t.name)} &middot; ${esc(t.years)} &middot; ${esc(cat ? cat.name : "")}</div>
+      <div class="essay-kicker">${esc(who.name)} &middot; ${esc(who.years)} &middot; ${esc(who.tradition)}</div>
       <h1>${esc(e.t)}</h1>
       <p class="mode-note">${esc(e.why)}</p>
-      ${e.intro.map(x => `<p>${rich(x)}</p>`).join("")}
+      ${wlBody(e.intro)}
       <div class="wl-shelf">${e.works.map(w => wlCard(id, w)).join("")}</div>
       <div class="wl-close">${e.close.map(x => `<p>${rich(x)}</p>`).join("")}</div>
     </article>`;
 }
 
 function wlCard(id, w){
-  const c = wlCover(id, w.t);
+  const c = wlCover(id, w);
   const n = w.p.join(" ").split(/\s+/).length;
   return `
     <button class="wl-card" data-work="${esc(id)}:${esc(w.t)}">
@@ -401,7 +438,7 @@ function wlCard(id, w){
       <span class="wl-card-txt">
         <span class="radio" aria-hidden="true"></span>
         <b>${esc(w.t)}</b>
-        ${c.meta ? `<span class="yr">${esc(c.meta.y)}</span>` : ""}
+        ${(c.meta && c.meta.y) ? `<span class="yr">${esc(c.meta.y)}</span>` : ""}
         <span class="gist">${esc(w.gist)}</span>
         <span class="wl-mini"><i>Form</i>${esc(w.form)}</span>
         <span class="wl-mini"><i>Fate</i>${esc(w.fate)}</span>
@@ -413,7 +450,7 @@ function wlCard(id, w){
 /* Level 1 — the index, classified by thinker. */
 function renderWorkLabList(){
   if (typeof WORKLAB === "undefined") return "";
-  const ids = Object.keys(WORKLAB).filter(id => byId[id]);
+  const ids = Object.keys(WORKLAB).filter(id => byId[id] || WORKLAB[id].who);
   const total = ids.reduce((a, id) => a + WORKLAB[id].works.length, 0);
   return `
     <div class="sec-head">
@@ -424,13 +461,13 @@ function renderWorkLabList(){
          thousand words on each, on what is actually in the book and what happened to it.</p>
     </div>
     ${ids.map(id => {
-      const e = WORKLAB[id], t = byId[id], cat = catById[t.cat];
+      const e = WORKLAB[id], who = wlWho(id);
       return `
       <section class="wl-group">
         <header>
           <button class="wl-who" data-work="${esc(id)}:">
-            <b>${esc(t.name)}</b>
-            <span>${esc(t.years)} &middot; ${esc(cat ? cat.name : "")}</span>
+            <b>${esc(who.name)}</b>
+            <span>${esc(who.years)} &middot; ${esc(who.tradition)}</span>
           </button>
           <p>${esc(e.why)}</p>
         </header>

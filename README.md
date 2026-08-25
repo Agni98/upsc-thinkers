@@ -170,6 +170,12 @@ piece, plus links to the author's other works.
 opens that work's page. Cards for the other 86 thinkers stay plain, so what is clickable looks
 clickable.
 
+A sixth entry is a **text rather than a person**: **Rigveda — an Overview**, filed under
+*The Rigveda · Vedic Corpus*, because it has no single author. About 4,000 words across 17
+sections, illustrated with a CC0 palm-leaf manuscript from Kashmir written in **Sharada**
+script — chosen because it makes the piece's central point visible: the language is ancient,
+the script is not.
+
 Content lives in `worklab.js`, keyed by thinker id. Each work's `t` matches its title in
 `works.js` exactly — that is what makes the link work. Adding a sixth thinker is a matter of
 adding an entry; the buttons appear on their own.
@@ -209,7 +215,7 @@ profiles.js   the ~200-word introductions behind each toggle
 hindi.js      Hindi translations of those introductions
 works.js      3–4 major works per thinker
 covers.js     cover / title-page images for those works
-worklab.js    a ~1,000-word piece on each of 15 works by five thinkers
+worklab.js    16 works explored in depth, including the Rigveda
 mcqs.js       two practice questions per thinker
 answers.js    five sub-theme model paragraphs per essay theme (45 in all)
 essays.js     19 model essays, two per theme, partitioned across the past questions
