@@ -328,70 +328,115 @@ function essayLinkHTML(theme){
   }).join("");
 }
 
-/* One thinker's major works, explored. Reached by clicking a Major Works card. */
-function renderWorkLab(id, focus){
-  const e = (typeof WORKLAB !== "undefined") ? WORKLAB[id] : null;
-  const t = byId[id];
-  if (!e || !t) return `<div class="empty"><b>Not found</b>No deep dive for this thinker yet.</div>`;
-  const cat = catById[t.cat];
-  const W = (typeof WORKS !== "undefined") ? (WORKS[id] || []) : [];
-  const meta = Object.fromEntries(W.map(w => [w.t, w]));
-  const cover = w => (typeof COVERS !== "undefined" && w && w.w) ? COVERS[w.w] : null;
-  const slug = x => x.replace(/[^A-Za-z0-9]/g, "");
-  const n = [].concat(e.intro, e.close, e.works.reduce((a, w) => a.concat(w.p), []))
-              .join(" ").split(/\s+/).length;
+/* WORKS IN DEPTH. Three levels: an index classified by thinker, a page per
+   thinker, and a page of roughly a thousand words per individual work. */
+const wlSlug = x => String(x).replace(/[^A-Za-z0-9]/g, "");
+
+function wlCover(id, title){
+  const w = ((typeof WORKS !== "undefined") ? (WORKS[id] || []) : []).find(x => x.t === title);
+  const src = (w && w.w && typeof COVERS !== "undefined") ? COVERS[w.w] : null;
+  return { meta:w, html:`
+    <div class="cover${src ? "" : " nocover"}">
+      ${ src ? `<img src="${esc(src)}" alt="${esc(title)}" loading="lazy" decoding="async"
+                 onerror="this.parentNode.classList.add('nocover');this.remove()">` : "" }
+      <span class="spine">${esc(title)}</span>
+    </div>` };
+}
+
+/* Level 3 — one work. */
+function renderWork(id, title){
+  const e = WORKLAB[id], t = byId[id];
+  const w = e.works.find(x => x.t === title);
+  if (!w) return renderWorkThinker(id);
+  const cat = catById[t.cat], c = wlCover(id, w.t);
+  const n = w.p.join(" ").split(/\s+/).length;
+  const others = e.works.filter(x => x.t !== w.t);
   return `
-    <button class="backlink" data-view="worklab">&larr; All works in depth</button>
-    <article class="worklab">
-      <div class="essay-kicker">${esc(cat ? cat.name : "")}</div>
-      <h1>${esc(e.t)}</h1>
-      <div class="essay-meta">${esc(t.name)} &middot; ${esc(t.years)} &middot; ${n} words</div>
-      <p class="mode-note">${esc(e.why)}</p>
-      ${e.intro.map(x => `<p>${rich(x)}</p>`).join("")}
-      ${e.works.map((w, i) => {
-        const m = meta[w.t], src = cover(m);
-        return `
-        <section class="wl-work${focus === w.t ? " focus" : ""}" id="wl-${esc(slug(w.t))}">
-          <header>
-            <div class="cover${src ? "" : " nocover"}">
-              ${ src ? `<img src="${esc(src)}" alt="${esc(w.t)}" loading="lazy" decoding="async"
-                         onerror="this.parentNode.classList.add('nocover');this.remove()">` : "" }
-              <span class="spine">${esc(w.t)}</span>
-            </div>
-            <div>
-              <h2>${esc(w.t)}</h2>
-              ${m ? `<span class="yr">${esc(m.y)}</span><span class="note">${esc(m.n)}</span>` : ""}
-            </div>
-          </header>
-          ${w.p.map(x => `<p>${rich(x)}</p>`).join("")}
-        </section>`;
-      }).join("")}
-      <div class="wl-close">${e.close.map(x => `<p>${rich(x)}</p>`).join("")}</div>
+    <button class="backlink" data-work="${esc(id)}:">&larr; ${esc(t.name)}</button>
+    <article class="worklab work-one">
+      <div class="wl-head">
+        ${c.html}
+        <div>
+          <div class="essay-kicker">${esc(t.name)} &middot; ${esc(cat ? cat.name : "")}</div>
+          <h1>${esc(w.t)}</h1>
+          ${c.meta ? `<div class="essay-meta">${esc(c.meta.y)} &middot; ${n} words</div>` : ""}
+          <div class="wl-tags">
+            <span class="wl-tag"><i>Form</i>${esc(w.form)}</span>
+            <span class="wl-tag"><i>Fate</i>${esc(w.fate)}</span>
+          </div>
+        </div>
+      </div>
+      ${w.p.map(x => `<p>${rich(x)}</p>`).join("")}
+      ${ others.length ? `<div class="wl-sibs">
+        <b>Also by ${esc(t.name)}</b>
+        ${others.map(x => `<button class="pill" data-work="${esc(id)}:${esc(x.t)}">${esc(x.t)}</button>`).join("")}
+      </div>` : "" }
       <button class="pill wl-open" data-open="${esc(id)}">Open the full page for ${esc(t.name)}</button>
     </article>`;
 }
 
-/* Index of the five. */
+/* Level 2 — one thinker's shelf. */
+function renderWorkThinker(id){
+  const e = WORKLAB[id], t = byId[id];
+  if (!e || !t) return `<div class="empty"><b>Not found</b>No deep dive for this thinker yet.</div>`;
+  const cat = catById[t.cat];
+  return `
+    <button class="backlink" data-view="worklab">&larr; All works in depth</button>
+    <article class="worklab">
+      <div class="essay-kicker">${esc(t.name)} &middot; ${esc(t.years)} &middot; ${esc(cat ? cat.name : "")}</div>
+      <h1>${esc(e.t)}</h1>
+      <p class="mode-note">${esc(e.why)}</p>
+      ${e.intro.map(x => `<p>${rich(x)}</p>`).join("")}
+      <div class="wl-shelf">${e.works.map(w => wlCard(id, w)).join("")}</div>
+      <div class="wl-close">${e.close.map(x => `<p>${rich(x)}</p>`).join("")}</div>
+    </article>`;
+}
+
+function wlCard(id, w){
+  const c = wlCover(id, w.t);
+  const n = w.p.join(" ").split(/\s+/).length;
+  return `
+    <button class="wl-card" data-work="${esc(id)}:${esc(w.t)}">
+      ${c.html}
+      <span class="wl-card-txt">
+        <span class="radio" aria-hidden="true"></span>
+        <b>${esc(w.t)}</b>
+        ${c.meta ? `<span class="yr">${esc(c.meta.y)}</span>` : ""}
+        <span class="gist">${esc(w.gist)}</span>
+        <span class="wl-mini"><i>Form</i>${esc(w.form)}</span>
+        <span class="wl-mini"><i>Fate</i>${esc(w.fate)}</span>
+        <span class="work-go">Read the piece &middot; ${n} words &rarr;</span>
+      </span>
+    </button>`;
+}
+
+/* Level 1 — the index, classified by thinker. */
 function renderWorkLabList(){
   if (typeof WORKLAB === "undefined") return "";
-  const rows = Object.keys(WORKLAB).filter(id => byId[id]);
+  const ids = Object.keys(WORKLAB).filter(id => byId[id]);
+  const total = ids.reduce((a, id) => a + WORKLAB[id].works.length, 0);
   return `
     <div class="sec-head">
       <h3>Works in Depth</h3>
       <p>Five thinkers, one from each of five traditions, chosen to be as unlike each other as
          this roster allows &mdash; an aphoristic poem, a manual of statecraft, an unfinished
-         economics, a speech that was never delivered, and two novels. Roughly a thousand words
-         on each body of work, and on what actually happened to the books.</p>
+         economics, a sequence of interventions, and two novels. ${total} works, about a
+         thousand words on each, on what is actually in the book and what happened to it.</p>
     </div>
-    <div class="essay-grid">${rows.map(id => {
+    ${ids.map(id => {
       const e = WORKLAB[id], t = byId[id], cat = catById[t.cat];
       return `
-        <button class="essay-card" data-work="${esc(id)}:">
-          <span class="ec-theme">${esc(cat ? cat.name : "")}</span>
-          <b>${esc(e.t)}</b>
-          <span class="ec-meta">${esc(t.name)} &middot; ${e.works.length} work${e.works.length > 1 ? "s" : ""}</span>
-        </button>`;
-    }).join("")}</div>`;
+      <section class="wl-group">
+        <header>
+          <button class="wl-who" data-work="${esc(id)}:">
+            <b>${esc(t.name)}</b>
+            <span>${esc(t.years)} &middot; ${esc(cat ? cat.name : "")}</span>
+          </button>
+          <p>${esc(e.why)}</p>
+        </header>
+        <div class="wl-shelf">${e.works.map(w => wlCard(id, w)).join("")}</div>
+      </section>`;
+    }).join("")}`;
 }
 
 /* An essay is keyed by its own title; the kicker should name its theme. */
@@ -548,8 +593,11 @@ function render(){
   else if (state.view === "essays")   main.innerHTML = renderEssayList();
   else if (state.view === "pyq")      main.innerHTML = renderPYQ();
   else if (state.view.startsWith("work:")) {
-    const [, id, w] = state.view.split(/^work:([^:]*):?/);
-    main.innerHTML = renderWorkLab(id, w || "");
+    const rest = state.view.slice(5), c = rest.indexOf(":");
+    const id = c < 0 ? rest : rest.slice(0, c), w = c < 0 ? "" : rest.slice(c + 1);
+    main.innerHTML = (typeof WORKLAB !== "undefined" && WORKLAB[id])
+      ? (w ? renderWork(id, w) : renderWorkThinker(id))
+      : `<div class="empty"><b>Not found</b>No deep dive for this thinker yet.</div>`;
   }
   else if (state.view === "worklab")  main.innerHTML = renderWorkLabList();
   else if (state.view === "quotes")   main.innerHTML = renderQuotes();
@@ -841,10 +889,6 @@ document.addEventListener("click", e => {
     closeSheet();
     state.view = "work:" + id + (title ? ":" + title : "");
     render();
-    if (title) {
-      const el = document.getElementById("wl-" + title.replace(/[^A-Za-z0-9]/g, ""));
-      if (el) el.scrollIntoView({ behavior:"instant", block:"start" });
-    }
     return;
   }
 

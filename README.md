@@ -143,29 +143,36 @@ instead, so nothing on the page is misleading.
 
 ### Works in Depth
 
-Five thinkers, **one from each of five different traditions**, picked to be as unlike each
-other as this roster allows — and each explored at roughly **1,000 words** on what is
-actually in their major works and what happened to the books.
+Five thinkers, **one from each of five traditions**, picked to be as unlike each other as this
+roster allows. **Classified by thinker**, and each of their **15 works gets its own piece of
+roughly 1,000 words** — on what is actually in the book, and on what happened to it.
 
-| Tradition | Thinker | The piece | Works |
-|---|---|---|---|
-| Eastern Wisdom | Lao Tzu | Eighty-one poems that begin by disqualifying themselves | 1 |
-| Indian Classical | Kautilya | The manual that disappeared for fifteen hundred years | 2 |
-| Modern Western Political | Karl Marx | A pamphlet, two abandoned notebooks and an unfinished economics | 4 |
-| Indian Renaissance | B. R. Ambedkar | A speech too dangerous to deliver | 4 |
-| Global Humanist | George Orwell | Fiction as a form of evidence | 4 |
+| Thinker | Tradition | Works |
+|---|---|---|
+| Lao Tzu | Eastern Wisdom | Tao Te Ching |
+| Kautilya | Indian Classical | Arthashastra · Chanakya Niti |
+| Karl Marx | Modern Western Political | 1844 Manuscripts · The German Ideology · Manifesto · Das Kapital |
+| B. R. Ambedkar | Indian Renaissance | Problem of the Rupee · Annihilation of Caste · States and Minorities · Buddha and His Dhamma |
+| George Orwell | Global Humanist | Homage to Catalonia · Animal Farm · Politics and the English Language · Nineteen Eighty-Four |
 
-An aphoristic poem, a manual of statecraft, an unfinished economics, a speech that was never
-delivered, and two novels — five genres, five methods, roughly twenty-five centuries apart.
+Every work carries two classification tags, because the second turns out to be half the story:
 
-**Every Major Works card for these five is a button.** Click a book on the thinker's page and
-it opens the deep dive scrolled to that book, with the section highlighted. Cards for thinkers
-without a deep dive stay as plain cards, so the clickable ones are visibly different.
+- **Form** — what kind of book it is: aphoristic poem, statecraft manual, doctoral thesis,
+  unpublished notebooks, undelivered address, beast fable, war memoir.
+- **Fate** — how it reached us: *lost for fifteen centuries*, *abandoned to the mice and printed
+  in 1932*, *self-published after the conference was cancelled*, *rejected by four publishers*.
 
-Content lives in `worklab.js`, keyed by thinker id: `t` the title, `why` one line on why that
-thinker was picked from their tradition, `intro`, `works` (each `t` matching the title in
-`works.js` exactly, which is what makes the link work), and `close`. Adding a sixth is a
-matter of adding an entry — the buttons appear automatically.
+**Three levels.** The index groups the works under their thinker. A thinker's page carries the
+framing and their shelf. Each work has its own page with its form, fate, cover and the full
+piece, plus links to the author's other works.
+
+**Every Major Works card for these five is a button.** Click a book anywhere on the site and it
+opens that work's page. Cards for the other 86 thinkers stay plain, so what is clickable looks
+clickable.
+
+Content lives in `worklab.js`, keyed by thinker id. Each work's `t` matches its title in
+`works.js` exactly — that is what makes the link work. Adding a sixth thinker is a matter of
+adding an entry; the buttons appear on their own.
 
 ### The introductions
 
@@ -202,7 +209,7 @@ profiles.js   the ~200-word introductions behind each toggle
 hindi.js      Hindi translations of those introductions
 works.js      3–4 major works per thinker
 covers.js     cover / title-page images for those works
-worklab.js    ~1,000-word deep dives on five thinkers' major works
+worklab.js    a ~1,000-word piece on each of 15 works by five thinkers
 mcqs.js       two practice questions per thinker
 answers.js    five sub-theme model paragraphs per essay theme (45 in all)
 essays.js     19 model essays, two per theme, partitioned across the past questions
