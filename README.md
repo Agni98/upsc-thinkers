@@ -166,6 +166,11 @@ Every work carries two classification tags, because the second turns out to be h
 framing and their shelf. Each work has its own page with its form, fate, cover and the full
 piece, plus links to the author's other works.
 
+Every piece leads with **what the work says** — the argument, the story, the ideas explained
+for someone who has not read it — with publishing history and reception kept to a supporting
+section near the end. Each is broken into named sections rather than running as undifferentiated
+paragraphs.
+
 **Every Major Works card for these five is a button.** Click a book anywhere on the site and it
 opens that work's page. Cards for the other 86 thinkers stay plain, so what is clickable looks
 clickable.
