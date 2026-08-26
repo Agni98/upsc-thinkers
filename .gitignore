@@ -8,3 +8,8 @@ Thumbs.db
 desktop.ini
 __pycache__/
 *.pyc
+
+# Source material used for research only -- never published.
+# These stay on disk; they just do not go into a public repository.
+*.txt
+*.pdf
