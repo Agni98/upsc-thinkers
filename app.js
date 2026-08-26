@@ -581,19 +581,25 @@ function answersHTML(theme){
   if (!list || !list.length) return "";
   const words = list.reduce((a, x) => a + x.p.join(" ").split(/\s+/).length, 0);
   const Q = pyqText();
+  const slug = esc(topic).replace(/[^A-Za-z]/g, "");
   return `
-  <details class="answers">
-    <summary>
-      <span class="chev" aria-hidden="true">&#9656;</span>
-      <span class="ptitle">Model paragraphs</span>
-      <span class="pmeta">${list.length} sub-themes &middot; ~${Math.round(words / list.length)} words each</span>
-    </summary>
-    <div class="answers-body">
-      <p class="ans-note">Five paragraphs, one for each kind of question this theme actually throws up.
-        Each is built from the thinkers only; what follows &ldquo;Open it out with&rdquo; is deliberately
-        left for you to supply.</p>
+    <div class="ans-head">
+      <b>Model paragraphs</b>
+      <span>${list.length} sub-themes &middot; ~${Math.round(words / list.length)} words each &middot;
+        one for each kind of question this theme throws up &mdash; pick one to read it</span>
+    </div>
+    <div class="tiles">
       ${list.map((a, i) => `
-        <article class="ans" id="ans-${esc(topic).replace(/[^A-Za-z]/g, "")}-${i}">
+        <button class="tile" data-tile="${i}" aria-expanded="false">
+          <span class="tile-no">${i + 1}</span>
+          <b>${esc(a.h)}</b>
+          ${a.s ? `<span class="tile-for">${esc(a.s)}</span>` : ""}
+          <span class="tile-go">Read <i>&rarr;</i></span>
+        </button>`).join("")}
+    </div>
+    <div class="tile-panels">
+      ${list.map((a, i) => `
+        <article class="ans" data-panel="${i}" id="ans-${slug}-${i}" hidden>
           <h5><span class="ans-no">${i + 1}</span>${esc(a.h)}</h5>
           ${a.s ? `<p class="ans-for">${esc(a.s)}</p>` : ""}
           ${(a.qs && a.qs.length) ? `<div class="ans-serves"><b>Answers</b>${a.qs.map(k => Q[k]
@@ -603,23 +609,24 @@ function answersHTML(theme){
             <b>Open it out with</b>
             <ul>${a.open.map(x => `<li>${esc(x)}</li>`).join("")}</ul>
           </div>
+          <button class="tile-close" data-tile="${i}">Close</button>
         </article>`).join("")}
-      ${essayLinkHTML(theme)}
     </div>
-  </details>`;
+    ${essayLinkHTML(theme)}`;
 }
 
-function renderMap(rows, title, sub){
+function renderMap(rows, title, sub, opts){
+  const pills = !(opts && opts.pills === false);
   return `
     <div class="sec-head"><h3>${title}</h3><p>${sub}</p></div>
     ${rows.map(r => `
       <div class="map-card">
         <h4>${esc(r.t)}</h4>
         <div class="sub">${esc(r.s)}</div>
-        <div class="pills">
+        ${ pills ? `<div class="pills">
           ${r.ids.map(id => byId[id]
               ? `<button class="pill" data-open="${id}">${esc(byId[id].name)}</button>` : "").join("")}
-        </div>
+        </div>` : "" }
         ${answersHTML(r)}
       </div>`).join("")}`;
 }
@@ -641,7 +648,8 @@ function render(){
   else if (state.view === "syllabus") main.innerHTML = renderMap(SYLLABUS, "GS Paper IV — Syllabus Map",
                                         "Each syllabus heading with the thinkers who answer it. Click a name for the full page.");
   else if (state.view === "themes")   main.innerHTML = renderMap(ESSAY_THEMES, "Essay Theme Map",
-                                        "Recurring essay axes, and the thinkers who let you argue both sides of each.");
+                                        "The nine themes the paper keeps asking. Each opens into five model paragraphs \u2014 one per kind of question.",
+                                        { pills:false });
   else                                main.innerHTML = renderGrid();
   renderNav();
   applyPortraits(main);
@@ -929,6 +937,26 @@ document.addEventListener("click", e => {
     return;
   }
 
+  const tile = e.target.closest("[data-tile]");
+  if (tile) {
+    const card = tile.closest(".map-card"), i = tile.dataset.tile;
+    const panel = card.querySelector(`.ans[data-panel="${i}"]`);
+    const wasOpen = !panel.hidden;
+    card.querySelectorAll(".ans[data-panel]").forEach(x => { x.hidden = true; });
+    card.querySelectorAll(".tile").forEach(x => {
+      x.classList.remove("on"); x.setAttribute("aria-expanded", "false");
+    });
+    if (!wasOpen) {
+      panel.hidden = false;
+      const t = card.querySelector(`.tile[data-tile="${i}"]`);
+      t.classList.add("on"); t.setAttribute("aria-expanded", "true");
+      if (tile.classList.contains("tile-close")) t.scrollIntoView({ behavior:"instant", block:"center" });
+    } else if (tile.classList.contains("tile-close")) {
+      card.querySelector(`.tile[data-tile="${i}"]`).scrollIntoView({ behavior:"instant", block:"center" });
+    }
+    return;
+  }
+
   const tab = e.target.closest(".pyqtab");
   if (tab) {
     const box = tab.closest(".pyq");
@@ -944,9 +972,9 @@ document.addEventListener("click", e => {
     state.view = "themes"; render();
     const card = document.querySelectorAll(".map-card")[ti];
     if (card) {
-      const d = card.querySelector("details.answers");
-      if (d) d.open = true;
-      const art = card.querySelectorAll("article.ans")[pi];
+      const tile = card.querySelector(`.tile[data-tile="${pi}"]`);
+      if (tile) tile.click();                       // opens the panel and marks the tile
+      const art = card.querySelector(`.ans[data-panel="${pi}"]`);
       (art || card).scrollIntoView({ behavior:"instant", block:"start" });
     }
     return;
