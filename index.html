@@ -60,12 +60,12 @@
   // copy uses a fixed version instead and lets the browser cache properly.
   // Bump BUILD when the data files change.
   (function () {
-    var BUILD = '2026-08-27c';
+    var BUILD = '2026-08-27d';
     var local = ['localhost', '127.0.0.1', '::1', ''].indexOf(location.hostname) !== -1
                 || location.protocol === 'file:';
     var v = local ? Date.now() : BUILD;
     ['data.js', 'portraits.js', 'profiles.js', 'hindi.js',
-     'works.js', 'worklab.js', 'covers.js', 'mcqs.js', 'answers.js', 'essays.js','pyq.js', 'app.js'].forEach(function (f) {
+     'works.js', 'worklab.js', 'covers.js', 'mcqs.js', 'answers.js', 'essays.js','pyq.js', 'glossary.js', 'app.js'].forEach(function (f) {
       var s = document.createElement('script');
       s.src = f + '?v=' + v;
       s.async = false;

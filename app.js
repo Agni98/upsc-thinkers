@@ -296,6 +296,111 @@ function rich(t){
   return esc(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
 }
 
+/* ---- Glossary: terms of art explained where they are used ----
+   A reader who has not met "difference principle" should not have to leave the
+   paragraph to find out what it means. Concept terms and thinker names in the
+   model paragraphs become buttons that raise a short card on hover, tap or
+   keyboard focus. Terms come from glossary.js; names from the roster. */
+let _glossIdx = null;
+function glossIndex(){
+  if (_glossIdx) return _glossIdx;
+  const items = [];
+  if (typeof GLOSSARY !== "undefined")
+    Object.keys(GLOSSARY).forEach(k => items.push({ key:"c:" + k, src:GLOSSARY[k].t, ci:true }));
+  const amb = (typeof GLOSS_AMBIGUOUS !== "undefined") ? GLOSS_AMBIGUOUS : [];
+  (typeof THINKERS !== "undefined" ? THINKERS : []).forEach(t => {
+    items.push({ key:"t:" + t.id, src:t.name, ci:false });
+    const sur = t.name.split(" ").pop();          // "Mill", "Sen" are ordinary
+    if (sur !== t.name && sur.length > 3 && amb.indexOf(sur) < 0)
+      items.push({ key:"t:" + t.id, src:sur, ci:false });
+  });
+  _glossIdx = items;
+  return items;
+}
+
+/* Escape the plain stretches, wrap the matches. Longest match wins, and each
+   term is linked once per paragraph so the page does not fill with underlines. */
+function glossText(text){
+  const idx = glossIndex(), hits = [];
+  idx.forEach(it => {
+    const re = new RegExp("\\b" + it.src.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b",
+                          it.ci ? "gi" : "g");
+    let m;
+    while ((m = re.exec(text))) hits.push({ s:m.index, e:m.index + m[0].length, key:it.key });
+  });
+  if (!hits.length) return esc(text);
+  hits.sort((a, b) => a.s - b.s || (b.e - b.s) - (a.e - a.s));
+  const used = {}, out = [];
+  let at = 0;
+  hits.forEach(h => {
+    if (h.s < at || used[h.key]) return;
+    out.push(esc(text.slice(at, h.s)));
+    out.push(`<button class="gloss" data-gloss="${esc(h.key)}">${esc(text.slice(h.s, h.e))}</button>`);
+    used[h.key] = 1;
+    at = h.e;
+  });
+  out.push(esc(text.slice(at)));
+  return out.join("");
+}
+
+function glossCard(key){
+  const id = key.slice(2);
+  if (key.charAt(0) === "t") {
+    const t = byId[id];
+    if (!t) return "";
+    return `<b>${esc(t.name)}</b>
+      <span class="g-meta">${esc(t.years)}${t.school ? " &middot; " + esc(t.school) : ""}</span>
+      <p>${esc(t.gist)}</p>
+      <button class="g-more" data-open="${esc(t.id)}">Full page <i>&rarr;</i></button>`;
+  }
+  const g = (typeof GLOSSARY !== "undefined") ? GLOSSARY[id] : null;
+  if (!g) return "";
+  return `<b>${esc(g.t)}</b>
+    <span class="g-meta">${esc(g.w)}</span>
+    <p>${esc(g.d)}</p>
+    ${byId[g.i] ? `<button class="g-more" data-open="${esc(g.i)}">Full page <i>&rarr;</i></button>` : ""}`;
+}
+
+/* One card, reused. Placed above the term when there is room, below when not,
+   and always clamped inside the viewport. */
+let glossPinned = null;
+function glossBox(){
+  let b = document.getElementById("glossbox");
+  if (!b) {
+    b = document.createElement("div");
+    b.id = "glossbox";
+    b.hidden = true;
+    document.body.appendChild(b);
+  }
+  return b;
+}
+function glossShow(el, pin){
+  const html = glossCard(el.dataset.gloss);
+  if (!html) return;
+  const b = glossBox();
+  b.innerHTML = html;
+  b.hidden = false;
+  b.classList.toggle("pinned", !!pin);
+  const r = el.getBoundingClientRect(), bw = b.offsetWidth, bh = b.offsetHeight;
+  const pad = 10;
+  let left = r.left + r.width / 2 - bw / 2;
+  left = Math.max(pad, Math.min(left, window.innerWidth - bw - pad));
+  const above = r.top > bh + pad;
+  const top = above ? r.top - bh - 8 : r.bottom + 8;
+  b.classList.toggle("below", !above);
+  b.style.left = Math.round(left + window.scrollX) + "px";
+  b.style.top  = Math.round(top + window.scrollY) + "px";
+  document.querySelectorAll(".gloss.on").forEach(x => x.classList.remove("on"));
+  el.classList.add("on");
+}
+function glossHide(force){
+  if (glossPinned && !force) return;
+  glossPinned = null;
+  const b = document.getElementById("glossbox");
+  if (b) { b.hidden = true; b.classList.remove("pinned"); }
+  document.querySelectorAll(".gloss.on").forEach(x => x.classList.remove("on"));
+}
+
 /* An essay's first available register, since a theme editorial has only
    the editorial one. Used for word counts and card labels. */
 function essayBody(e){
@@ -604,7 +709,7 @@ function answersHTML(theme){
           ${a.s ? `<p class="ans-for">${esc(a.s)}</p>` : ""}
           ${(a.qs && a.qs.length) ? `<div class="ans-serves"><b>Answers</b>${a.qs.map(k => Q[k]
               ? `<span class="ans-q"><i>${Q[k].y} ${Q[k].s}${Q[k].n}</i>${esc(Q[k].q)}</span>` : "").join("")}</div>` : ""}
-          ${a.p.map(x => `<p>${esc(x)}</p>`).join("")}
+          ${a.p.map(x => `<p>${glossText(x)}</p>`).join("")}
           <div class="ans-open">
             <b>Open it out with</b>
             <ul>${a.open.map(x => `<li>${esc(x)}</li>`).join("")}</ul>
@@ -720,6 +825,7 @@ function render(){
                                         "Each syllabus heading with the thinkers who answer it. Click a name for the full page.");
   else if (state.view === "themes")   main.innerHTML = renderThemes();
   else                                main.innerHTML = renderGrid();
+  glossHide(true);
   renderNav();
   applyPortraits(main);
   window.scrollTo({ top:0, behavior:"instant" });
@@ -993,8 +1099,16 @@ function renderPYQ(){
 
 /* ================= EVENTS ================= */
 document.addEventListener("click", e => {
+  const gl = e.target.closest(".gloss");
+  if (gl) {
+    if (glossPinned === gl) glossHide(true);
+    else { glossPinned = gl; glossShow(gl, true); }
+    return;
+  }
+  if (!e.target.closest("#glossbox")) glossHide(true);
+
   const open = e.target.closest("[data-open]");
-  if (open) { openSheet(open.dataset.open); return; }
+  if (open) { glossHide(true); openSheet(open.dataset.open); return; }
 
   const wk = e.target.closest("[data-work]");
   if (wk) {
@@ -1131,8 +1245,35 @@ document.getElementById("themeBtn").addEventListener("click", () => {
   try{ localStorage.setItem("upsc_thinkers_theme", next); }catch(e){}
 });
 
+/* Hover opens the card, a short grace period lets the pointer reach it, and a
+   click pins it so the "Full page" button can be used. */
+let glossTimer = null;
+function glossHideSoon(){
+  clearTimeout(glossTimer);
+  glossTimer = setTimeout(() => glossHide(), 180);
+}
+document.addEventListener("mouseover", e => {
+  if (e.target.closest("#glossbox")) { clearTimeout(glossTimer); return; }
+  const gl = e.target.closest(".gloss");
+  if (!gl) return;
+  clearTimeout(glossTimer);
+  if (!glossPinned) glossShow(gl, false);
+});
+document.addEventListener("mouseout", e => {
+  if (glossPinned) return;
+  if (e.target.closest(".gloss") || e.target.closest("#glossbox")) glossHideSoon();
+});
+document.addEventListener("focusin", e => {
+  const gl = e.target.closest(".gloss");
+  if (gl) { clearTimeout(glossTimer); glossShow(gl, false); }
+});
+document.addEventListener("focusout", e => {
+  if (e.target.closest(".gloss") && !glossPinned) glossHideSoon();
+});
+window.addEventListener("resize", () => glossHide(true));
+
 document.addEventListener("keydown", e => {
-  if (e.key === "Escape") closeSheet();
+  if (e.key === "Escape") { glossHide(true); closeSheet(); }
   if ((e.key === "ArrowLeft" || e.key === "ArrowRight") && state.view === "themes"
       && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)
       && !e.metaKey && !e.ctrlKey && !e.altKey) {

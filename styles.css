@@ -1098,3 +1098,49 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 @media print{
   .pager,.backlink{display:none}
 }
+
+/* --- Glossary: a term of art explains itself where it is used --- */
+.gloss{
+  display:inline;font:inherit;color:inherit;padding:0;margin:0;cursor:help;
+  background:none;border:0;border-bottom:1px dotted var(--accent);
+  border-radius:2px;transition:background .13s,border-color .13s}
+.gloss:hover,.gloss.on{
+  background:var(--accent-soft);border-bottom-style:solid;color:var(--accent)}
+.gloss:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+
+#glossbox{
+  position:absolute;z-index:120;width:min(330px,calc(100vw - 20px));
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow-lg);padding:13px 15px 12px;
+  animation:glossIn .13s ease-out}
+@keyframes glossIn{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
+#glossbox::after{
+  content:"";position:absolute;left:50%;margin-left:-6px;width:11px;height:11px;
+  background:var(--panel);border:1px solid var(--line);transform:rotate(45deg)}
+#glossbox::after{bottom:-6px;border-top:0;border-left:0}
+#glossbox.below::after{bottom:auto;top:-6px;border:1px solid var(--line);border-bottom:0;border-right:0}
+#glossbox b{
+  display:block;font-family:var(--serif);font-size:14.6px;font-weight:600;
+  color:var(--ink);line-height:1.3;margin-bottom:2px}
+#glossbox .g-meta{
+  display:block;font-size:10.6px;font-weight:600;letter-spacing:.5px;
+  text-transform:uppercase;color:var(--accent);margin-bottom:7px}
+#glossbox p{
+  font-size:12.9px;line-height:1.6;color:var(--ink-2);margin:0}
+#glossbox .g-more{
+  display:inline-flex;align-items:center;gap:5px;margin-top:10px;
+  font:inherit;font-size:11.4px;font-weight:600;color:var(--accent);
+  background:var(--accent-soft);border:1px solid transparent;border-radius:7px;
+  padding:4px 10px;cursor:pointer;transition:.13s;opacity:0;pointer-events:none}
+#glossbox.pinned .g-more{opacity:1;pointer-events:auto}
+#glossbox .g-more:hover{border-color:var(--accent)}
+#glossbox .g-more i{font-style:normal}
+
+@media (hover:none){
+  .gloss{cursor:pointer}
+  #glossbox .g-more{opacity:1;pointer-events:auto}
+}
+@media print{
+  .gloss{border-bottom:0;background:none;color:inherit}
+  #glossbox{display:none}
+}
