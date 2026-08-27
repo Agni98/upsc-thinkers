@@ -71,7 +71,7 @@ const ESSAY_THEMES = [
 ];
 
 /* ---- State ---- */
-const state = { view:"all", q:"", tag:"", mode:"thinker" };
+const state = { view:"all", q:"", tag:"", mode:"thinker", page:0 };
 const byId = Object.fromEntries(THINKERS.map(t => [t.id, t]));
 const catById = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));
 
@@ -615,6 +615,77 @@ function answersHTML(theme){
     ${essayLinkHTML(theme)}`;
 }
 
+/* ---- Essay Theme Map, paginated ----
+   Nine themes on a single scroll meant hunting for the one you wanted. The map
+   is now an index page plus one page per theme, moved through with the pager. */
+function themeStats(t){
+  const list = (typeof ANSWERS !== "undefined") ? (ANSWERS[t.t] || []) : [];
+  return { list, words: list.reduce((a, x) => a + x.p.join(" ").split(/\s+/).length, 0) };
+}
+
+function themeIndexHTML(){
+  return `
+    <div class="sec-head"><h3>Essay Theme Map</h3>
+      <p>The nine themes the paper keeps asking. Open one to read its five model
+         paragraphs &mdash; one for each kind of question the theme throws up.</p></div>
+    <div class="tmap-index">
+      ${ESSAY_THEMES.map((t, i) => {
+        const st = themeStats(t);
+        return `
+        <button class="tmap-card" data-page="${i + 1}">
+          <span class="tmap-no">${i + 1}</span>
+          <b>${esc(t.t)}</b>
+          <span class="tmap-sub">${esc(t.s)}</span>
+          ${st.list.length ? `<ul class="tmap-list">
+            ${st.list.map(a => `<li>${esc(a.h)}</li>`).join("")}</ul>` : ""}
+          <span class="tmap-meta">${st.list.length} paragraphs &middot;
+            ${st.words.toLocaleString()} words<i>&rarr;</i></span>
+        </button>`; }).join("")}
+    </div>`;
+}
+
+function themePager(n){
+  const last = ESSAY_THEMES.length, prev = n - 1, next = n + 1;
+  const side = (to, dir) => {
+    const label = to === 0 ? "Index" : (dir < 0 ? "Previous" : "Next");
+    const name  = to === 0 ? "All nine themes" : esc(ESSAY_THEMES[to - 1].t);
+    const arrow = dir < 0 ? "&larr;" : "&rarr;";
+    return `<button class="pager-btn ${dir < 0 ? "left" : "right"}" data-page="${to}">
+        ${dir < 0 ? `<i>${arrow}</i>` : ""}
+        <span><em>${label}</em>${name}</span>
+        ${dir > 0 ? `<i>${arrow}</i>` : ""}
+      </button>`;
+  };
+  return `
+    <div class="pager">
+      ${side(prev, -1)}
+      <div class="pager-mid">
+        <span class="pager-count">Theme ${n} of ${last}</span>
+        <div class="pager-dots">
+          ${ESSAY_THEMES.map((x, i) => `<button class="pager-dot ${i + 1 === n ? "on" : ""}"
+             data-page="${i + 1}" title="${esc(x.t)}" aria-label="${esc(x.t)}"
+             aria-current="${i + 1 === n ? "true" : "false"}">${i + 1}</button>`).join("")}
+        </div>
+      </div>
+      ${side(next > last ? 0 : next, 1)}
+    </div>`;
+}
+
+function renderThemes(){
+  const n = state.page | 0;
+  if (!n || !ESSAY_THEMES[n - 1]) { state.page = 0; return themeIndexHTML(); }
+  const t = ESSAY_THEMES[n - 1];
+  return `
+    <button class="backlink" data-page="0">&larr; Essay Theme Map</button>
+    ${themePager(n)}
+    <div class="map-card">
+      <h4><span class="tmap-badge">Theme ${n}</span>${esc(t.t)}</h4>
+      <div class="sub">${esc(t.s)}</div>
+      ${answersHTML(t)}
+    </div>
+    ${themePager(n)}`;
+}
+
 function renderMap(rows, title, sub, opts){
   const pills = !(opts && opts.pills === false);
   return `
@@ -647,9 +718,7 @@ function render(){
   else if (state.view === "quotes")   main.innerHTML = renderQuotes();
   else if (state.view === "syllabus") main.innerHTML = renderMap(SYLLABUS, "GS Paper IV — Syllabus Map",
                                         "Each syllabus heading with the thinkers who answer it. Click a name for the full page.");
-  else if (state.view === "themes")   main.innerHTML = renderMap(ESSAY_THEMES, "Essay Theme Map",
-                                        "The nine themes the paper keeps asking. Each opens into five model paragraphs \u2014 one per kind of question.",
-                                        { pills:false });
+  else if (state.view === "themes")   main.innerHTML = renderThemes();
   else                                main.innerHTML = renderGrid();
   renderNav();
   applyPortraits(main);
@@ -969,8 +1038,8 @@ document.addEventListener("click", e => {
   const para = e.target.closest("[data-para]");
   if (para) {
     const [ti, pi] = para.dataset.para.split(":").map(Number);
-    state.view = "themes"; render();
-    const card = document.querySelectorAll(".map-card")[ti];
+    state.view = "themes"; state.page = ti + 1; render();
+    const card = document.querySelector(".map-card");
     if (card) {
       const tile = card.querySelector(`.tile[data-tile="${pi}"]`);
       if (tile) tile.click();                       // opens the panel and marks the tile
@@ -995,9 +1064,18 @@ document.addEventListener("click", e => {
   const es = e.target.closest("[data-essay]");
   if (es) { state.view = "essay:" + es.dataset.essay; render(); return; }
 
+  const pg = e.target.closest("[data-page]");
+  if (pg) {
+    state.view = "themes";
+    state.page = +pg.dataset.page;
+    render();
+    return;
+  }
+
   const nav = e.target.closest("[data-view]");
   if (nav) {
     state.view = nav.dataset.view;
+    state.page = 0;
     document.getElementById("sidebar").classList.remove("open");
     render();
     return;
@@ -1055,6 +1133,12 @@ document.getElementById("themeBtn").addEventListener("click", () => {
 
 document.addEventListener("keydown", e => {
   if (e.key === "Escape") closeSheet();
+  if ((e.key === "ArrowLeft" || e.key === "ArrowRight") && state.view === "themes"
+      && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)
+      && !e.metaKey && !e.ctrlKey && !e.altKey) {
+    const to = (state.page | 0) + (e.key === "ArrowLeft" ? -1 : 1);
+    if (to >= 0 && to <= ESSAY_THEMES.length) { state.page = to; render(); }
+  }
   if (e.key === "/" && document.activeElement.id !== "search") {
     e.preventDefault();
     document.getElementById("search").focus();
