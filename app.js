@@ -343,6 +343,24 @@ function glossText(text){
   return out.join("");
 }
 
+/* A prompt names an example; openouts.js supplies the substance behind it.
+   The material runs to a paragraph, too long for the glossary card, so it
+   opens inline under the prompt instead of floating over the page. */
+function openOutHTML(prompt, slug, i, j){
+  const o = (typeof OPENOUTS !== "undefined") ? OPENOUTS[prompt] : null;
+  if (!o) return `<li>${esc(prompt)}</li>`;
+  const id = "oo-" + slug + "-" + i + "-" + j;
+  return `<li class="has-oo">
+    <button class="oo-t" data-oo="${id}" aria-expanded="false" aria-controls="${id}">
+      <span>${esc(prompt)}</span><i></i>
+    </button>
+    <div class="oo" id="${id}" hidden>
+      ${o.t ? `<b>${esc(o.t)}</b>` : ""}
+      ${o.p.map(x => `<p>${glossText(x)}</p>`).join("")}
+    </div>
+  </li>`;
+}
+
 function glossCard(key){
   const id = key.slice(2);
   if (key.charAt(0) === "t") {
@@ -712,7 +730,7 @@ function answersHTML(theme){
           ${a.p.map(x => `<p>${glossText(x)}</p>`).join("")}
           <div class="ans-open">
             <b>Open it out with</b>
-            <ul>${a.open.map(x => `<li>${esc(x)}</li>`).join("")}</ul>
+            <ul>${a.open.map((x, j) => openOutHTML(x, slug, i, j)).join("")}</ul>
           </div>
           <button class="tile-close" data-tile="${i}">Close</button>
         </article>`).join("")}
@@ -1106,6 +1124,16 @@ document.addEventListener("click", e => {
     return;
   }
   if (!e.target.closest("#glossbox")) glossHide(true);
+
+  const oo = e.target.closest("[data-oo]");
+  if (oo) {
+    const panel = document.getElementById(oo.dataset.oo);
+    const show = panel.hidden;
+    panel.hidden = !show;
+    oo.setAttribute("aria-expanded", show ? "true" : "false");
+    oo.classList.toggle("on", show);
+    return;
+  }
 
   const open = e.target.closest("[data-open]");
   if (open) { glossHide(true); openSheet(open.dataset.open); return; }

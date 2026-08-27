@@ -1144,3 +1144,38 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   .gloss{border-bottom:0;background:none;color:inherit}
   #glossbox{display:none}
 }
+
+/* --- Open it out with: the material behind a prompt --- */
+.ans-open li.has-oo{padding-right:0}
+.oo-t{
+  display:flex;align-items:flex-start;gap:8px;width:100%;
+  font:inherit;font-size:12.8px;line-height:1.55;color:var(--ink);
+  text-align:left;background:none;border:0;padding:0;cursor:pointer;transition:color .13s}
+.oo-t span{border-bottom:1px dotted var(--accent);transition:border-color .13s}
+.oo-t:hover{color:var(--accent)}
+.oo-t:hover span,.oo-t.on span{border-bottom-style:solid}
+.oo-t:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+.oo-t i{
+  flex:0 0 auto;margin-left:auto;position:relative;width:15px;height:15px;
+  border-radius:4px;background:var(--accent-soft);transition:.15s}
+.oo-t i::before,.oo-t i::after{
+  content:"";position:absolute;left:50%;top:50%;background:var(--accent);
+  transform:translate(-50%,-50%);transition:.15s}
+.oo-t i::before{width:7px;height:1.5px}
+.oo-t i::after{width:1.5px;height:7px}
+.oo-t.on i{background:var(--accent)}
+.oo-t.on i::before{background:var(--panel)}
+.oo-t.on i::after{height:0}
+.oo{
+  margin:9px 0 13px;padding:12px 14px;
+  background:var(--panel);border:1px solid var(--line);
+  border-left:3px solid var(--accent);border-radius:0 8px 8px 0}
+.oo b{
+  display:block;font-family:var(--serif);font-size:13.6px;font-weight:600;
+  color:var(--ink);margin-bottom:6px;text-transform:none;letter-spacing:0}
+.oo p{font-size:12.9px;line-height:1.68;color:var(--ink-2);margin:0 0 9px}
+.oo p:last-child{margin-bottom:0}
+@media print{
+  .oo{display:block !important}
+  .oo-t i{display:none}
+}
