@@ -419,3 +419,230 @@ serving one term and standing down in 1999.
 **Instruments for seeing what a day hides**
 Arguments rather than sourced claims, except the general reference to birth
 cohort studies in the last, which rests on the standard longitudinal literature.
+
+---
+
+## Theme 4 — The Good Life: Contentment, Simplicity and Being Humane
+
+**What the income and happiness data actually says**
+Kahneman and Deaton (2010) found emotional well-being flattening above roughly
+USD 75,000 at 2010 prices; Killingsworth (2021) found no flattening; the
+Kahneman–Killingsworth adversarial collaboration with Barbara Mellers (2023)
+resolved it as flattening for the least happy group only, with well-being
+continuing to rise with log income for everyone else.
+- Killingsworth, Kahneman and Mellers, "Income and emotional well-being: A conflict resolved", *PNAS* (2023)
+- Kahneman and Deaton, *PNAS* (2010)
+
+**Measuring what a state says it is for**
+Gross National Happiness in Bhutan's 2008 constitution; the GNH index domains;
+Madhya Pradesh's happiness department created in 2016.
+- Constitution of the Kingdom of Bhutan (2008), Article 9
+- Centre for Bhutan Studies, GNH Index
+
+**Achievement measured, distress unmeasured**
+NMHS 2015-16: 10.6% current prevalence among adults, 13.7% lifetime; urban 13.5%
+against rural 6.9%; treatment gap of 70–92%; 12 states, 34,802 respondents.
+- NIMHANS, National Mental Health Survey of India 2015-16
+- PIB, "Advancing Mental Healthcare in India"
+
+**For the deprived, arrival is exactly the point** and **The evidence from after
+the goal**
+Arguments, drawing on the income research above. No separate figures quoted.
+
+**Mission LiFE and where responsibility is placed**
+Announced at COP26 Glasgow, November 2021; global launch June 2022; Pro Planet
+People framing; demand, supply and policy structure. CDP attribution of about
+70% of global emissions to 100 producers. UNEP Emissions Gap Report 2022 on
+individual and household action reaching up to 20% of emissions by 2050.
+- NITI Aayog, Mission LiFE brochure
+- Ministry of Environment, Forest and Climate Change, Mission LiFE portal
+- CDP Carbon Majors Report; UNEP Emissions Gap Report 2022
+
+**Want that is manufactured rather than found**
+Fast fashion cycle and post-purchase food waste described qualitatively. No
+tonnage or per-capita waste figure is quoted, because none was verified.
+
+**Why sufficiency reads differently by class**, **Degrowth against green growth**,
+**Consumption as the engine of employment**
+Arguments, not sourced claims.
+
+**When a law cannot be read by the person it binds**
+Argument about drafting style and intermediary cost. No figure quoted.
+
+**Where simplicity decided adoption**
+UPI annual volume from about 1.78 crore transactions in FY 2016-17 to more than
+24,162 crore in FY 2025-26; banks live on UPI from 44 to over 700; UPI at close
+to half of global real-time payment volume. DigiLocker at 67.63 crore users as
+of March 2026.
+- PIB, "UPI completes 10 years"
+- NPCI monthly statistics
+- DigiLocker blog and NeGD case study
+
+**Jargon as a barrier to accountability**
+Argument, not claim.
+
+**Where simplification kills**
+Surgical and aviation checklists cited as structure rather than compression. No
+mortality figure is quoted, because the specific study figures were not verified.
+
+**A decision rule reduced to one sentence**
+Gandhi's talisman, standard published text.
+
+**Attention as the thing being sold**
+Argument about advertising-funded design. No figure quoted.
+
+**Wellness offered instead of change**
+Fleming (2024): 46,336 workers across 233 organisations; no benefit found from
+resilience training, mindfulness or well-being apps; of roughly ninety
+offerings, only volunteering was associated with better well-being.
+- Fleming, W., "Employee well-being outcomes from individual-level mental health interventions", *Industrial Relations Journal* (2024)
+- Wellbeing Research Centre, University of Oxford
+
+**Gratitude research and where it is thin**
+Stated as a qualified claim: modest effects, frequent no-treatment controls,
+short follow-up, self-reported outcomes. No effect size quoted.
+
+**Yoga as public health policy**
+Ministry of AYUSH created 2014; International Day of Yoga on 21 June, observed
+from 2015 following the UN General Assembly resolution of December 2014.
+- Ministry of AYUSH
+- UN General Assembly Resolution 69/131
+
+**Tranquillity as accommodation**
+Argument, using Marx's critique of consolation and the Stoic control
+distinction.
+
+**Antyodaya and the last mile**
+PM-JAY launched September 2018; Rs 5 lakh per family per year for secondary and
+tertiary hospitalisation; beneficiary base revised from 10.74 crore to 12 crore
+families in 2023; extended in October 2024 to all aged 70 and above regardless
+of income; authorised admissions in the tens of crores.
+- National Health Authority, About PM-JAY
+- PIB releases on the 2023 revision and the 2024 senior citizen extension
+
+**The work that national accounts do not see**
+Time Use Survey 2019: women 299 minutes a day on unpaid domestic work against 97
+for men; caregiving 134 against 76; participation 92% of women aged 15–59
+against 29% of men. Time Use Survey 2024: 289 minutes against 88; caregiving 137
+against 75.
+- National Statistical Office, Time Use Survey 2019 and 2024
+- ORF, "Underlining the work that women do: Findings from Time Use Survey 2024"
+
+**Kerala's community model of palliative care**
+Neighbourhood Network in Palliative Care; Kerala's palliative care policy
+declared 15 April 2008, the first Indian state and the first in a developing
+country; thousands of patients weekly and coverage above 60% in many areas.
+- Kumar, S., "Kerala, India: A Regional Community-Based Palliative Care Model", *Journal of Pain and Symptom Management* (2007)
+- Institute of Palliative Medicine, Kozhikode
+
+**Systems against compassion**, **What sustains the people who absorb it**
+Arguments. The compassion fatigue entry states protective factors qualitatively
+and quotes no prevalence figure.
+
+---
+
+## Theme 5 — Culture, Memory and the Making of Meaning
+
+**When sentiment moved before the statute**
+Premchand, Mahasweta Devi and social cinema cited as illustration. The causal
+claim is deliberately weak: art changes the cost of inaction rather than
+producing statutes directly.
+
+**The state's judgement about what may be transmitted**
+Cinematograph Act 1952; *K. A. Abbas v Union of India* (1970) upholding
+pre-censorship of film; Shyam Benegal committee recommendations of 2016 favouring
+certification over modification.
+- *K. A. Abbas v Union of India*, AIR 1971 SC 481
+- Report of the Committee of Experts chaired by Shyam Benegal (2016)
+
+**Art organised as political intervention**
+Progressive Writers' Association, mid-1930s; Indian People's Theatre
+Association, 1943, formed against the background of the Bengal famine.
+
+**Who pays, and what that buys**
+Sangeet Natak Akademi established 1953 as an autonomous state-funded academy.
+- Sangeet Natak Akademi
+
+**Influence without accountability**
+Argument, not claim.
+
+**What gets listed, and who decides**
+UNESCO Representative List of the Intangible Cultural Heritage of Humanity:
+Kumbh Mela inscribed 2017, Durga Puja in Kolkata 2021, Garba of Gujarat 2023.
+- UNESCO ICH lists
+
+**What survives when consumption converges**
+Argument, not claim.
+
+**The arithmetic of language loss**
+Census 2011: 19,569 raw mother tongue returns rationalised to 1,369 mother
+tongues; 121 languages reported, being those with 10,000 or more speakers; 22
+scheduled and 99 non-scheduled; about 96.71% of the population reporting a
+scheduled language as mother tongue.
+- Office of the Registrar General, Language Data of Census 2011
+- The India Forum, "India's Linguistic Diversity: What the Census Obscures"
+
+**Inheritance defended against practice lived**, **Culture carried without its
+civilisation**
+Arguments, not sourced claims.
+
+**Who is authorised to narrate**, **The commemorative landscape**
+Arguments. The textbook entry deliberately makes a procedural test rather than
+adjudicating any particular revision.
+
+**The record, and whether it can be reached**
+Public Records Act 1993; transfer to the National Archives ordinarily after
+twenty-five years subject to departmental exemption; declassification by
+political decision rather than by rule.
+- Public Records Act, 1993
+- National Archives of India
+
+**Truth against amnesty**
+South African Truth and Reconciliation Commission established 1995 under Desmond
+Tutu; amnesty conditional on full disclosure of politically motivated acts;
+criticisms on justice, reparations and structural inequality.
+- Promotion of National Unity and Reconciliation Act, 1995 (South Africa)
+- TRC of South Africa Report
+
+**When history cannot be set down**
+Argument, not claim.
+
+**Agreements that work by not specifying**
+UN Security Council Resolution 242 (1967) and the territories/the territories
+distinction in its English text.
+- UNSC Resolution 242
+
+**Where ambiguity is simply a defect**
+Argument about vagueness as delegation, drawing on the standard treatment of
+vagueness in penal provisions.
+
+**Satire, and where it has been prosecuted**
+The entry argues that process functions as punishment and deliberately names no
+individual case or section number, since neither was verified.
+
+**What is lost between languages**
+Kinship terms, honorific systems and untranslatable concepts described
+qualitatively.
+
+**Euphemism as evasion**
+Orwell, "Politics and the English Language" (1946).
+
+**How perception gets attributed**
+Fundamental attribution error; confirmation bias; self-serving attribution.
+Standard social psychology, no single study cited.
+
+**The same event, differently constituted**, **Whose perception counts as
+neutral**
+Arguments, not sourced claims.
+
+**The witness who is certain and wrong**
+Innocence Project: eyewitness misidentification in about 69% of DNA exonerations
+(252 of 367), the largest single contributing cause. Loftus on reconstructive
+memory and the misinformation effect.
+- Innocence Project, DNA Exonerations in the United States
+- Loftus, E., misinformation effect literature
+
+**What a purely constructed world cannot explain**
+The no-miracles argument for scientific realism; general relativity's light
+bending prediction; the precision of quantum electrodynamics. Standard
+philosophy of science, no single source cited.
