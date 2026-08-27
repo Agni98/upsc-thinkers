@@ -22,6 +22,16 @@ const SYLLABUS = [
     ids:["kautilya","machiavelli","habermas","ostrom","foucault","orwell","burke","jp-narayan"] },
   { t:"Probity in Governance", s:"Concept of public service; philosophical basis of governance and probity; RTI, codes of ethics, citizen's charters, work culture, corruption",
     ids:["kautilya","gandhi","amartya-sen","gokhale","habermas","festinger","drucker","weber"] },
+  { t:"Corruption, Whistleblowing & Conflict of Interest", s:"Sources and consequences of corruption; whistleblower protection; conflict of interest and the duty to disclose",
+    ids:["kautilya","gandhi","gokhale","weber","arendt","bentham","orwell","jp-narayan"] },
+  { t:"Corporate Governance & Workplace Ethics", s:"Ethics in private enterprise; boards, auditors and disclosure; the ethics of the workplace and of the manager",
+    ids:["drucker","barnard","mcgregor","simon","gandhi","weber","schumacher"] },
+  { t:"Ethics in Science, Technology & Media", s:"Research integrity; data, privacy and surveillance; medical ethics; the responsibilities of reporting",
+    ids:["einstein","habermas","orwell","bentham","kalam","nehru","foucault","schumacher"] },
+  { t:"Environmental & Development Ethics", s:"Obligations to future generations; the commons; displacement and the ethics of a development project",
+    ids:["schumacher","gandhi","ostrom","thoreau","amartya-sen","mahavira","vinoba","tagore"] },
+  { t:"Social Justice, Gender & the Weaker Sections", s:"Equality and dignity; gender in administration; obligations to those the system reaches last",
+    ids:["ambedkar","jyotirao-phule","savitribai-phule","periyar","narayana-guru","rawls","beauvoir","nussbaum","amartya-sen"] },
   { t:"Case Studies", s:"Frameworks most useful when structuring a case-study answer",
     ids:["kant","bentham","mill","rawls","gilligan","kohlberg","weber","simon","gandhi","arendt"] }
 ];
@@ -809,6 +819,54 @@ function renderThemes(){
     ${themePager(n)}`;
 }
 
+/* ---- GS-IV past questions under their syllabus heading ----
+   The compilation groups twelve years of GS-IV into fourteen themes; each maps
+   onto one or more headings here. Collapsed by default, because some headings
+   carry more than thirty questions and the roster above them is the first
+   thing a reader wants. */
+function gs4For(title){
+  if (typeof GS4_PYQ === "undefined" || typeof GS4_THEMES === "undefined") return [];
+  if (title === "Case Studies") return GS4_PYQ.filter(q => q.sec === "B");
+  const codes = GS4_THEMES.filter(t => (t.maps || []).indexOf(title) >= 0).map(t => t.c);
+  if (!codes.length) return [];
+  return GS4_PYQ.filter(q => codes.indexOf(q.th) >= 0);
+}
+
+function gs4Rows(qs){
+  return qs.map(q => `
+    <li class="g4-q">
+      <span class="g4-yr">${q.y}<i>${esc(q.sec)}</i></span>
+      <span class="g4-body">
+        <span class="g4-text">${esc(q.q)}</span>
+        <span class="g4-meta">${esc(q.f)}${q.m ? " &middot; " + esc(q.m) : ""}</span>
+      </span>
+    </li>`).join("");
+}
+
+function gs4HTML(title){
+  const qs = gs4For(title);
+  if (!qs.length) return "";
+  const a = qs.filter(q => q.sec === "A"), b = qs.filter(q => q.sec === "B");
+  const yrs = qs.map(q => q.y);
+  const span = Math.min.apply(null, yrs) + " to " + Math.max.apply(null, yrs);
+  const shared = (title.indexOf("Moral Thinkers") === 0);
+  const slug = esc(title).replace(/[^A-Za-z]/g, "");
+  return `
+    <div class="g4">
+      <button class="g4-head" data-g4="${slug}" aria-expanded="false" aria-controls="g4-${slug}">
+        <b>Past questions</b>
+        <span>${qs.length} from ${span} &middot; ${a.length} theory${b.length ? ", " + b.length + " case " + (b.length === 1 ? "study" : "studies") : ""}</span>
+        <i></i>
+      </button>
+      <div class="g4-list" id="g4-${slug}" hidden>
+        ${shared ? `<p class="g4-note">The paper sets one theme for moral thinkers, so this pool is shared with the other moral-thinkers heading.</p>` : ""}
+        ${title === "Case Studies" ? `<p class="g4-note">Every Section B case from 2013 to 2024, gathered from all themes.</p>` : ""}
+        ${a.length ? `<h6>Section A &middot; theory</h6><ul>${gs4Rows(a)}</ul>` : ""}
+        ${b.length ? `<h6>Section B &middot; case studies</h6><ul>${gs4Rows(b)}</ul>` : ""}
+      </div>
+    </div>`;
+}
+
 function renderMap(rows, title, sub, opts){
   const pills = !(opts && opts.pills === false);
   return `
@@ -822,6 +880,7 @@ function renderMap(rows, title, sub, opts){
               ? `<button class="pill" data-open="${id}">${esc(byId[id].name)}</button>` : "").join("")}
         </div>` : "" }
         ${answersHTML(r)}
+        ${ (opts && opts.pyq) ? gs4HTML(r.t) : "" }
       </div>`).join("")}`;
 }
 
@@ -840,7 +899,8 @@ function render(){
   else if (state.view === "worklab")  main.innerHTML = renderWorkLabList();
   else if (state.view === "quotes")   main.innerHTML = renderQuotes();
   else if (state.view === "syllabus") main.innerHTML = renderMap(SYLLABUS, "GS Paper IV — Syllabus Map",
-                                        "Each syllabus heading with the thinkers who answer it. Click a name for the full page.");
+                                        "Each syllabus heading with the thinkers who answer it, and every past question the paper has set under it since 2013.",
+                                        { pyq:true });
   else if (state.view === "themes")   main.innerHTML = renderThemes();
   else                                main.innerHTML = renderGrid();
   glossHide(true);
@@ -1124,6 +1184,16 @@ document.addEventListener("click", e => {
     return;
   }
   if (!e.target.closest("#glossbox")) glossHide(true);
+
+  const g4 = e.target.closest("[data-g4]");
+  if (g4) {
+    const list = document.getElementById("g4-" + g4.dataset.g4);
+    const show = list.hidden;
+    list.hidden = !show;
+    g4.setAttribute("aria-expanded", show ? "true" : "false");
+    g4.classList.toggle("on", show);
+    return;
+  }
 
   const oo = e.target.closest("[data-oo]");
   if (oo) {
