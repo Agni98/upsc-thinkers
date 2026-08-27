@@ -987,3 +987,147 @@ SDG India Index figures as recorded for Theme 1.
 
 **Without growth there is nothing to convert**
 Argument, not claim.
+
+---
+
+## Theme 9 — Technology and the Modern Self
+
+This theme dates faster than the other eight. Where a figure moves annually, the
+entry says so or omits the number. Where a causal claim is contested in the
+literature, the entry reports the dispute rather than picking a side.
+
+**A causal claim that is genuinely contested**
+Haidt's 2024 argument that smartphones and social media caused the rise in
+adolescent anxiety; Odgers' review in Nature and Przybylski's objection that the
+association should strengthen as algorithms improve; the methodological point
+that much of the cited experimental evidence used adults aged eighteen and above
+while the prescriptions target children under thirteen. The entry states the
+correlation as robust and the causation as unsettled, which is the position the
+literature currently supports.
+- Haidt, J., *The Anxious Generation* (2024)
+- Odgers, C., review in *Nature* (2024); Haidt's published rebuttal
+- Przybylski, A., commentary on the causal inference
+
+**What the system is actually optimising**
+Argument about engagement objectives, variable reward and removed stopping
+points. No usage statistic quoted.
+
+**Consent, and who is exempt from needing it**
+DPDP Act passed August 2023; DPDP Rules notified 13 November 2025 and gazetted
+the following day; consent managers registered with the Data Protection Board;
+Section 17(2)(a) permitting exemption of notified state instrumentalities and
+Section 17(4) waiving duties such as erasure and grievance redressal for
+government processing; Section 44(3) amending Section 8(1)(j) of the RTI Act and
+removing the larger-public-interest override.
+- Digital Personal Data Protection Act, 2023
+- Digital Personal Data Protection Rules, 2025
+- Supreme Court Observer, Constitutionality of the DPDP Act case page
+
+**Correctives, and what they can reach**
+School phone restrictions and statutory minimum ages described, with Australia's
+minimum age of sixteen named. No commencement date is given, because the
+implementation timetable was not verified.
+
+**Where the platform is the only community available**
+Argument, not claim.
+
+**Interruption as a design decision**, **What divided attention does to
+comprehension**, **Why the model rewards the shallow**
+Arguments drawing on the general attention and media-multitasking literature. No
+single study is cited and no effect size is quoted, because none was verified.
+
+**Regulating the interface itself**
+EU Digital Services Act obligations on very large platforms; India's consumer
+protection guidelines on dark patterns issued in 2023 naming specific practices
+including false urgency, basket sneaking, confirm-shaming and subscription traps.
+- Regulation (EU) 2022/2065, Digital Services Act
+- Central Consumer Protection Authority, Guidelines for Prevention and Regulation of Dark Patterns, 2023
+
+**The oldest version of this complaint**
+Plato, *Phaedrus*, the Theuth and Thamus passage on writing and forgetfulness.
+
+**Exposure where the workforce is informal**
+Informality figures as recorded for Theme 6. The exposure argument is
+qualitative.
+
+**Certification against placement**
+Argument. No placement rate is quoted, because the published figures vary by
+scheme and period and were not verified.
+
+**The classification question**
+NITI Aayog estimate of about 77 lakh gig workers in 2020-21 rising to about 2.35
+crore by 2029-30; Rajasthan Platform Based Gig Workers (Registration and
+Welfare) Act 2023, the first state law, with registration and a portable unique
+identity; Karnataka's 2025 ordinance and Act creating a welfare board and a fund
+financed by a transaction fee; Code on Social Security 2020 recognising the
+category nationally.
+- NITI Aayog, *India's Booming Gig and Platform Economy* (2022)
+- PRS, Rajasthan and Karnataka gig worker legislation
+- Code on Social Security, 2020
+
+**The arithmetic behind basic income**
+Economic Survey 2016-17 chapter examining universal basic income and its fiscal
+demands. The entry states the arithmetic qualitatively; no cost-to-GDP figure is
+quoted.
+- Economic Survey 2016-17, Chapter 9
+
+**Where the machine augments rather than replaces**
+Diagnostic screening, machine translation and agricultural advisory described as
+gap-filling rather than displacing. No accuracy or coverage figure is quoted.
+
+**The test the Court actually laid down**
+*Justice K. S. Puttaswamy (Retd.) v Union of India* (2017), nine judges,
+unanimous on privacy as a fundamental right; the four-part test of legality,
+legitimate aim, proportionality and procedural safeguards.
+- *K. S. Puttaswamy v Union of India*, (2017) 10 SCC 1
+
+**When authentication fails, who bears it**
+Drèze Jharkhand survey and Right to Food Campaign figures as recorded for
+Theme 1.
+
+**Eighty per cent as a standard of proof**
+Delhi Police treating a similarity score above eighty per cent as a positive
+match, disclosed in response to Internet Freedom Foundation information
+requests; the programme resting on a departmental order of June 2022 rather than
+on statute; the ACLU test at the same threshold falsely matching twenty-eight
+members of the United States Congress against arrest photographs.
+- Internet Freedom Foundation, RTI disclosures on facial recognition
+- MediaNama and Outlook India reporting on the eighty per cent threshold
+- American Civil Liberties Union, 2018 Rekognition test
+
+**How a database acquires purposes**
+Argument about function creep, using Aadhaar's expansion from subsidy delivery
+into banking, telecom, schooling and pensions.
+
+**Whether a restriction can be challenged**
+*Anuradha Bhasin* and the 2024 shutdown count as recorded for Theme 7.
+
+**Chokepoints in a chain nobody controls entirely**
+Concentration in advanced logic fabrication, extreme ultraviolet lithography and
+design software; India Semiconductor Mission targeting assembly, testing and a
+mature-node fab. Specific export control instruments are not named or dated,
+because they change frequently and were not verified individually.
+
+**Infrastructure as an export**
+Cooperation agreements with more than twenty countries on India Stack and
+digital public infrastructure; UPI operating in several jurisdictions beyond
+India. Country lists are deliberately not enumerated, because they change.
+- PIB, "India has signed MoU / agreements with 23 countries for cooperation on Digital Public Infrastructure"
+
+**The grey zone and the attribution problem**
+Submarine cables carrying the overwhelming majority of intercontinental data
+traffic; attribution difficulty and sub-threshold operations. Qualitative; no
+percentage or cable count is quoted.
+
+**The geography of the transition**
+China accounting for roughly seventy per cent of rare earth mining and about
+ninety per cent of processing capacity; export licensing used as an instrument
+across a widening list of elements. India's National Critical Mineral Mission
+approved in January 2025 with an outlay of about 34,300 crore rupees over seven
+years.
+- Centre for Strategic and International Studies, rare earth processing shares
+- PIB / PMO, Cabinet approval of the National Critical Mineral Mission, 29 January 2025
+
+**Dual use, and why the distinction is thin**
+Argument about the inherent dual-use character of launch, imaging and navigation
+capability. No programme budget or launch figure is quoted.
