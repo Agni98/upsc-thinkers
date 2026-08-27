@@ -646,3 +646,344 @@ memory and the misinformation effect.
 The no-miracles argument for scientific realism; general relativity's light
 bending prediction; the precision of quantum electrodynamics. Standard
 philosophy of science, no single source cited.
+
+---
+
+## Theme 6 — Justice, Equality and the Excluded
+
+**CSR: obligation dressed as philanthropy**
+Section 135, Companies Act 2013: 2% of average net profits of the preceding
+three years; thresholds of Rs 500 crore net worth, Rs 1,000 crore turnover or
+Rs 5 crore net profit. FY 2024-25 spending about Rs 40,794 crore, cumulative
+about Rs 2.61 lakh crore over a decade; education about 34% and healthcare about
+21% of the total.
+- Companies Act 2013, Section 135
+- India CSR, "India's CSR spending hits record Rs 40,794 crore in FY 2024-25"
+
+**Entitlement rather than benevolence**
+MGNREGA 2005 (100 days, unemployment allowance); National Food Security Act 2013
+(about two-thirds of the population); Right to Education Act 2009.
+
+**Does cash change the relationship**
+Argument. No DBT savings figure is quoted, because the published estimates are
+contested and were not verified.
+
+**Filling gaps or entrenching them**, **Where charity moves faster than the state**
+Arguments, not sourced claims.
+
+**What the inequality numbers show and dispute**
+World Inequality Lab: top 1% holding about 40.1% of wealth in 2022-23, highest
+since 1961; top 10% about 65% of wealth and about 58% of income; bottom 50%
+about 15% of income. The 2024 "Billionaire Raj" paper. Measurement caveat about
+consumption surveys and top-end under-reporting is stated in the entry itself.
+- Bharti, Chancel, Piketty and Somanchi, *Income and Wealth Inequality in India, 1922-2023* (World Inequality Lab, 2024)
+- World Inequality Report 2026
+
+**When human development outruns income**
+Kerala and Tamil Nadu on life expectancy, literacy and infant mortality against
+higher-income states. Historical explanation given qualitatively.
+
+**Growth that does not become employment**
+About 90% of the workforce informal, roughly 93% on the broader definition;
+Economic Survey 2021-22 recording about 44 crore of 53.5 crore workers in the
+unorganised sector; formal workers about 9.7% on the combined ILO and official
+definition. No labour-share figure is quoted, because it did not confirm.
+- Economic Survey 2021-22
+- Data For India, "How big is India's formal sector?"
+
+**Who actually bears the tax**, **What East Asia did first**
+Arguments. The East Asian entry rests on the standard account of post-war land
+reform and near-universal primary schooling in Japan, South Korea and Taiwan.
+
+**Public health spending and what it leaves to households**
+National Health Accounts 2022-23: government health expenditure 1.15% of GDP in
+2013-14 rising to about 1.43% in 2022-23; total health expenditure about 3.37% of
+GDP; out-of-pocket expenditure falling from 64.2% to 43.4%. National Health
+Policy 2017 target of 2.5%.
+- Ministry of Health and Family Welfare, National Health Accounts Estimates 2022-23
+- National Health Policy 2017
+
+**Where the learning actually is**
+ASER 2024 figures as recorded for Theme 2.
+
+**Nutrition as a capability failure**
+NFHS-5 (2019-21): stunting 35.5% from 38.4%; wasting 19.3% from 21.0%;
+underweight 32.1% from 35.8%; anaemia among women 15-49 rising from 53% to about
+57%, and among children 6-59 months from 59% to about 67%.
+- International Institute for Population Sciences, NFHS-5 National Report
+
+**Insurance against primary care**, **Fiscal capacity and the sequencing problem**
+Arguments, not sourced claims.
+
+**A participation figure that reversed**
+PLFS: female LFPR 23.3% in 2017-18 to about 41.7% in 2023-24; rural 24.6% to
+47.6%; urban 20.4% to 25.4%; increase concentrated in self-employment and unpaid
+family work; share of rural working women in agriculture rising from 71.1% in
+2018-19 to 76.9% in 2023-24.
+- MoSPI, Periodic Labour Force Survey Annual Report 2023-24
+- UNFPA India, analysis of gendered labour force participation using PLFS 2023-24
+
+**The hours that do not appear in the accounts**
+Time Use Survey figures as recorded for Theme 4.
+
+**What the law gave and what practice withheld**
+Hindu Succession (Amendment) Act 2005; *Vineeta Sharma v Rakesh Sharma* (2020)
+holding the coparcenary right arises by birth and applies regardless of whether
+the father was living in 2005, subject to valid prior partitions.
+- *Vineeta Sharma v Rakesh Sharma*, (2020) 9 SCC 1
+
+**Son preference as a measurable structure**
+NFHS-5 sex ratio at birth 929 against 919 in NFHS-4, natural ratio about 952; 17
+states and UTs above the natural level against 11 previously; Punjab 860 to 904,
+Haryana 836 to 893. Beti Bachao Beti Padhao: parliamentary committee finding that
+about 79% of funds released between 2016 and 2019 went to media advocacy, a
+characterisation the government disputed in 2025. The entry states the dispute
+rather than resolving it.
+- NFHS-5 National Report
+- Committee on Empowerment of Women report; Government response, July 2025
+
+**The demand side of the same discipline**
+Male over-representation in recorded suicides and in occupational deaths stated
+qualitatively. No NCRB percentage is quoted, because it was not verified.
+
+**A public purpose that falls on particular people**
+Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation
+and Resettlement Act 2013: social impact assessment, consent thresholds,
+compensation as a multiple of market value, resettlement entitlements.
+
+**Liberty against aggregate health**
+*Jacob Puliyel v Union of India* (2022): bodily autonomy under Article 21, no
+forcible vaccination, reasonable restrictions permitted in the interest of
+public health.
+
+**A device against the majority**
+*Indra Sawhney v Union of India* (1992): 50% ceiling and creamy layer exclusion.
+*Janhit Abhiyan v Union of India* (2022): 103rd Amendment EWS quota upheld 3:2,
+majority holding the 50% limit is not part of the basic structure.
+- *Indra Sawhney v Union of India*, AIR 1993 SC 477
+- Supreme Court Observer, EWS Reservation case page
+
+**Clearance as a decision about someone else's place**
+Forest Rights Act 2006 recognition of pre-existing rights; environmental
+clearance public hearings held at the project site.
+
+**Rights as constraints no total may override**
+Nozick on side constraints, *Anarchy, State, and Utopia* (1974).
+
+---
+
+## Theme 7 — Democracy, the State and India in the World
+
+**Leadership as the aggregation of consent**, **Claiming the people's voice while
+removing its instruments**, **The duty to advise against**, **When consultation is
+impossible**
+Arguments, not sourced claims.
+
+**What decentralisation actually transferred**
+73rd and 74th Amendments in force from 1993; Eleventh Schedule listing 29
+subjects; the functions, funds and functionaries test; devolution at state
+discretion.
+
+**Who owns the outlet and who pays for it**, **The economics that reward heat**,
+**Where independent reporting survives**
+Arguments about revenue structure. No ownership-concentration statistic is
+quoted, because none was verified.
+
+**Who is empowered to designate a falsehood**
+*Kunal Kamra v Union of India*: Rule 3(1)(b)(v) as amended in 2023, providing for
+a government Fact Check Unit, struck down as unconstitutional by the Bombay High
+Court in September 2024 after Justice Chandurkar's tie-breaking opinion.
+- Bombay High Court judgment, 26 September 2024
+- Tech Policy Press and Saikrishna & Associates case notes
+
+**Shutdowns, and the orders nobody published**
+84 shutdowns in India in 2024, the most of any democracy and second globally
+behind Myanmar; more than 700 since 2016; Manipur 21, Haryana and Jammu and
+Kashmir 12 each; 41 protest-related and 23 linked to communal violence.
+*Anuradha Bhasin v Union of India* (2020) requiring publication, reasons,
+proportionality and review; documented non-publication in several states.
+- Access Now, #KeepItOn report on 2024
+- *Anuradha Bhasin v Union of India*, (2020) 3 SCC 637
+
+**Pluralism built into the institutions**
+States Reorganisation Act 1956; Sixth Schedule autonomous district councils in
+the north-east.
+
+**Minority rights and their scope**
+Articles 29 and 30; *T. M. A. Pai Foundation v State of Karnataka* (2002) on
+permissible regulation of minority institutions.
+
+**A formula and the resistance to it**
+Three-language formula from the 1968 policy; asymmetric adoption; Tamil Nadu's
+sustained objection; NEP 2020 retaining a three-language structure with a stated
+non-imposition principle.
+
+**Mobility against regional identity**
+Article 19 freedom of movement and residence; domicile-based reservation in
+private employment repeatedly challenged. Internal migration described
+qualitatively; no headcount is quoted.
+
+**Why shared culture was not enough**
+Intra-SAARC trade about 5% of members' trade against roughly a quarter within
+ASEAN; last SAARC summit the 18th, Nepal 2014; the 2016 Islamabad summit
+abandoned after India withdrew following the Uri attack. Note: several
+secondary sources wrongly attribute the 2016 collapse to Pulwama, which occurred
+in February 2019; Uri was September 2016 and is the correct trigger.
+- List of SAARC summits; SAARC Chamber trade data
+- The Wire, "As SAARC approaches ten years without a summit"
+
+**Autonomy exercised in several directions at once**, **Borders as questions that
+stay open**, **The friction that proximity produces**, **What the successful small
+states invested in**
+Arguments. The border entry deliberately avoids dates and claim lines for the
+LAC, Sir Creek and Kachchatheevu, none of which were verified in detail.
+
+**Dependence as the modern asymmetry**
+India Semiconductor Mission figures as recorded for Theme 2.
+
+**The Speaker, and the power of not deciding**
+Tenth Schedule; absence of a statutory deadline; *Keisham Meghachandra Singh v
+Speaker, Manipur Legislative Assembly* (2020) recommending decision within about
+three months and suggesting an independent tribunal.
+
+**Who appoints the watchdogs**
+*Anoop Baranwal v Union of India*, 2 March 2023: five-judge bench led by Justice
+K. M. Joseph directing appointment on the advice of the Prime Minister, the
+Leader of the Opposition and the Chief Justice of India as an interim measure.
+The Chief Election Commissioner and Other Election Commissioners Act 2023
+replaced the Chief Justice with a Union Minister nominated by the Prime Minister.
+- *Anoop Baranwal v Union of India*, Indian Kanoon
+- CEC and Other Election Commissioners Act, 2023
+
+**Routes around scrutiny**
+Ordinance power and re-promulgation; money bill certification and its effect on
+the Rajya Sabha.
+
+**The Governor's discretion**
+Appointment by the Union and tenure at pleasure; assent, reservation, government
+formation and summoning as recurring friction points; absence of textual time
+limits.
+
+**Constitutional morality at the counter**
+RTI Act 2005; RTI (Amendment) Act 2019 moving tenure and salary of Information
+Commissioners to central government rules; social audit under MGNREGA; citizens'
+charters as non-enforceable.
+
+---
+
+## Theme 8 — Nature, Development and Civilisation
+
+**Ostrom's conditions, tested in Indian forests**
+Ostrom's design principles for common-pool resources (Nobel, 2009); Forest Rights
+Act 2006 community forest resource rights vested in the gram sabha; nearly 48,000
+CFR claims recorded as rejected in the Ministry of Tribal Affairs progress
+reporting; only a handful of states recognising CFR rights at scale, with
+Maharashtra the clearest case of operationalisation.
+- Ostrom, E., *Governing the Commons* (1990)
+- Down To Earth, "Nearly 48,000 community forest rights claims rejected across India"
+
+**Plantation area against ecosystem function**
+Compensatory Afforestation Fund Act 2016; about Rs 54,685 crore released to
+states after the rules were notified in 2019; documented criticisms on
+monoculture planting, landscape connectivity, edge effects and fund diversion.
+- Mongabay India, "Can CAMPA compensate for the loss of forest land?"
+- PIB release on CAMPA fund utilisation
+
+**Why the green accounts stayed marginal**
+Argument about national accounting treating depletion as income. No specific
+green GDP estimate is quoted.
+
+**Collapse, and the disputes about why**
+The entry deliberately presents Easter Island, the Indus decline and Sahel
+degradation as contested rather than settled, noting the rat-and-contact
+challenge to the ecocide account of Rapa Nui.
+- Hunt, T. and Lipo, C., *The Statues that Walked* (2011), against Diamond, J., *Collapse* (2005)
+
+**Where the line was drawn, twice**
+Western Ghats Ecology Expert Panel (Gadgil) report 2011 proposing wide
+ecologically sensitive designation; High Level Working Group (Kasturirangan)
+report 2013 reducing the extent to roughly a third; neither implemented in full.
+
+**Paying a state for the forest it keeps**
+Forest and ecology weight in horizontal devolution raised from 7.5% under the
+Fourteenth Finance Commission to 10% under the Fifteenth, computed on a state's
+share of dense forest.
+- Fifteenth Finance Commission Report, 2021-26
+- World Resources Institute, "India's 15th Finance Commission supports air quality and forest protection"
+
+**Where community forest institutions held**
+Joint Forest Management from the 1990 circular; outcomes read against Ostrom's
+conditions. Qualitative.
+
+**Valuation exercises and what they are for**
+TEEB and Indian natural capital valuation; the entry argues that the purpose is
+to displace an implicit zero rather than to establish a precise figure.
+
+**What the forest yields without being cut**
+Minimum support price scheme for minor forest produce; Van Dhan value-addition
+centres. No price or coverage figure is quoted.
+
+**Without a price, the forest loses every contest**
+Argument, not claim.
+
+**Rivers as legal persons**
+Uttarakhand High Court, March 2017, declaring the Ganga and Yamuna legal persons
+with guardians, extended shortly afterwards to glaciers; stayed by the Supreme
+Court within months on practical objections including liability and
+inter-state authority.
+- *Mohd. Salim v State of Uttarakhand*, Uttarakhand High Court (2017)
+
+**Conservation carried by belief**
+Sacred groves; Bishnoi tenets; the Khejarli episode of 1730.
+
+**Intrinsic value against human benefit**
+Naess, A., "The shallow and the deep, long-range ecology movement" (1973).
+
+**Green space and who gets it**
+Argument. Indian cities described as below international green space guidance
+without quoting a specific per-capita figure, which was not verified.
+
+**Reverence has not stopped a mine**
+Argument, not claim.
+
+**Decentralised generation against central plants**
+Rooftop and household solar programme expanded in 2024; intermittency and
+capital access stated as qualifications. No capacity figure is quoted.
+
+**Cropping matched to the rainfall it has**
+Millets as drought-tolerant and less water-intensive; the international year
+observed in 2023; procurement and public distribution inclusion; the constraint
+identified as price support and assured purchase rather than agronomy.
+
+**Where decentralisation cannot deliver**
+National Green Hydrogen Mission approved in 2023 with an outlay of Rs 19,744
+crore and a target in millions of tonnes annually by 2030; nuclear as firm
+low-carbon base load.
+- National Green Hydrogen Mission, Ministry of New and Renewable Energy
+
+**Transfer, patents and the money**
+UNFCCC finance, technology transfer and intellectual property; the hundred
+billion dollar annual goal met late and disputed in accounting; the successor
+goal contested as inadequate. Figures for the successor goal are deliberately
+not quoted.
+
+**Old water systems as climate infrastructure**
+Johads, stepwells, ahar-pyne and tank cascades; Alwar johad revival credited with
+returning water to seasonal streams. Qualitative.
+
+**Ranking by income against ranking by life**
+NITI Aayog: multidimensional poverty headcount falling from 29.17% in 2013-14 to
+11.28% in 2022-23, about 24.8 crore people moving out; 12 indicators.
+- NITI Aayog, *Multidimensional Poverty in India since 2005-06* (Discussion Paper, 2024)
+
+**Human development at moderate income**
+Kerala as in Theme 6.
+
+**When output rises and households do not feel it**
+Informality and PLFS composition as in Theme 6.
+
+**Where the states diverge most**
+SDG India Index figures as recorded for Theme 1.
+
+**Without growth there is nothing to convert**
+Argument, not claim.
