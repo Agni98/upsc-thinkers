@@ -89,4 +89,4 @@ const GLOSSARY = {
 
 /* Surnames that double as ordinary English. These thinkers are linked
    only when their full name is written out. */
-const GLOSS_AMBIGUOUS = ["Mill", "Sen"];
+const GLOSS_AMBIGUOUS = ["Mill", "Phule", "Roy", "Sen"];
