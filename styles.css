@@ -1250,29 +1250,23 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 }
 
 /* --- GS-IV: the concepts that keep coming back --- */
-.gc{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
-.gc-head{
-  display:flex;align-items:center;gap:10px;width:100%;
-  font:inherit;text-align:left;background:none;border:0;padding:0;cursor:pointer}
-.gc-head b{
-  font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;
-  color:var(--accent);white-space:nowrap}
-.gc-head span{font-size:12.4px;color:var(--ink-3);line-height:1.4}
-.gc-head:hover span{color:var(--ink-2)}
-.gc-head:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-.gc-head i{
-  flex:0 0 auto;margin-left:auto;position:relative;width:15px;height:15px;
-  border-radius:4px;background:var(--accent-soft);transition:.15s}
-.gc-head i::before,.gc-head i::after{
-  content:"";position:absolute;left:50%;top:50%;background:var(--accent);
-  transform:translate(-50%,-50%);transition:.15s}
-.gc-head i::before{width:7px;height:1.5px}
-.gc-head i::after{width:1.5px;height:7px}
-.gc-head.on i{background:var(--accent)}
-.gc-head.on i::before{background:var(--panel)}
-.gc-head.on i::after{height:0}
+.gc{margin-top:2px}
 
-.gc-list{margin-top:14px}
+/* the concept tile carries one more line than an essay tile: how often the
+   paper has asked for the idea */
+.tile-freq{
+  align-self:flex-start;margin-top:6px;font-family:var(--sans);
+  font-size:10px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;
+  color:var(--accent);background:var(--accent-soft);border-radius:5px;padding:2px 7px}
+.gc .tile-for{-webkit-line-clamp:3;margin-top:6px}
+/* a selected tile fills with accent-soft, which is the badge's own colour, so
+   the badge takes the panel ground to keep its shape */
+.tile.on .tile-freq{background:var(--panel)}
+.tile-panels .gc-item{margin-top:14px;margin-bottom:0}
+
+/* the thinker roster, now that it sits under the concepts */
+.mapsec{margin-top:18px;border-top:1px solid var(--line)}
+
 .gc-item{
   background:var(--panel);border:1px solid var(--line);
   border-left:3px solid var(--accent);border-radius:var(--radius);
@@ -1309,9 +1303,7 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   font-size:11.4px !important;font-style:italic;color:var(--ink-2) !important;
   margin:9px 0 0 !important;padding-top:8px;border-top:1px solid var(--line)}
 @media (max-width:560px){
-  .gc-head{flex-wrap:wrap}
-  .gc-head span{flex:1 1 100%;order:3}
   .gc-item{padding:16px 14px 14px}
 }
-@media print{ .gc-list{display:block !important} .gc-head i{display:none} }
+@media print{ .gc .tiles{display:none} .tile-panels .gc-item[hidden]{display:block !important} }
 .gc-item p em{font-style:italic;color:var(--ink)}

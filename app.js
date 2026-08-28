@@ -721,6 +721,7 @@ function answersHTML(theme){
       <span>${list.length} sub-themes &middot; ~${Math.round(words / list.length)} words each &middot;
         one for each kind of question this theme throws up &mdash; pick one to read it</span>
     </div>
+    <div class="tilegroup">
     <div class="tiles">
       ${list.map((a, i) => `
         <button class="tile" data-tile="${i}" aria-expanded="false">
@@ -744,6 +745,7 @@ function answersHTML(theme){
           </div>
           <button class="tile-close" data-tile="${i}">Close</button>
         </article>`).join("")}
+    </div>
     </div>
     ${essayLinkHTML(theme)}`;
 }
@@ -834,6 +836,21 @@ function gloss2(t){
     .replace(/\*([^*<]+?)\*/g, "<em>$1</em>");
 }
 
+/* The opening sentence of a definition, stripped of its emphasis marks, for
+   the face of a tile. */
+function conceptGist(c){
+  var t = String((c.d && c.d[0]) || "").split("**").join("").split("*").join("");
+  var cut = -1;
+  [". ", "? ", "! "].forEach(function(p){
+    var k = t.indexOf(p);
+    if (k > 40 && (cut < 0 || k < cut)) cut = k;
+  });
+  return cut > 0 ? t.slice(0, cut + 1) : t.slice(0, 150);
+}
+
+/* Concepts for a syllabus heading, as an index of tiles over the panels they
+   open. Between four and twelve per heading, so they fit a grid; the Case
+   Studies heading has none and renders nothing. */
 function gcHTML(title){
   if (typeof GS4_CONCEPTS === "undefined") return "";
   const list = GS4_CONCEPTS[title];
@@ -843,28 +860,46 @@ function gcHTML(title){
   const slug = esc(title).replace(/[^A-Za-z]/g, "");
   const nq = new Set();
   list.forEach(c => c.qs.forEach(q => nq.add(q)));
+  const freq = c => {
+    const qs = c.qs.map(id => byId[id]).filter(Boolean);
+    if (!qs.length) return "";
+    const yrs = qs.map(q => q.y).sort();
+    return (c.qs.length === 1 ? "asked once" : "asked " + c.qs.length + " times") +
+      (yrs.length > 1 ? ", " + yrs[0] + " to " + yrs[yrs.length - 1] : " in " + yrs[0]);
+  };
   return `
     <div class="gc">
-      <button class="gc-head" data-gc="${slug}" aria-expanded="false" aria-controls="gc-${slug}">
+      <div class="ans-head">
         <b>Concepts that repeat</b>
-        <span>${list.length} ideas the paper keeps returning to, across ${nq.size} questions</span>
-        <i></i>
-      </button>
-      <div class="gc-list" id="gc-${slug}" hidden>
-        ${list.map((c, i) => {
-          const qs = c.qs.map(id => byId[id]).filter(Boolean);
-          const yrs = qs.map(q => q.y).sort();
-          return `
-          <article class="gc-item">
-            <h5><span class="gc-no">${i + 1}</span>${esc(c.t)}
-              ${qs.length ? `<em>${c.qs.length === 1 ? "asked once" : "asked " + c.qs.length + " times"}${
-                yrs.length > 1 ? ", " + yrs[0] + " to " + yrs[yrs.length - 1] : yrs.length ? " in " + yrs[0] : ""}</em>` : ""}</h5>
-            ${c.d.map(x => `<p>${gloss2(x)}</p>`).join("")}
-            ${qs.length ? `<div class="gc-qs"><b>Where it was asked</b>${qs.map(q =>
-                `<span class="gc-q"><i>${q.y} ${esc(q.sec)}</i>${esc(q.q)}</span>`).join("")}</div>` : ""}
-            ${c.src ? `<p class="gc-src">${esc(c.src)}</p>` : ""}
-          </article>`;
-        }).join("")}
+        <span>${list.length} ideas the paper keeps returning to, across ${nq.size} questions
+          &mdash; pick one to read it</span>
+      </div>
+      <div class="tilegroup">
+        <div class="tiles">
+          ${list.map((c, i) => `
+            <button class="tile" data-tile="${i}" aria-expanded="false">
+              <span class="tile-no">${i + 1}</span>
+              <b>${esc(c.t)}</b>
+              ${freq(c) ? `<span class="tile-freq">${esc(freq(c))}</span>` : ""}
+              <span class="tile-for">${esc(conceptGist(c))}</span>
+              <span class="tile-go">Read <i>&rarr;</i></span>
+            </button>`).join("")}
+        </div>
+        <div class="tile-panels">
+          ${list.map((c, i) => {
+            const qs = c.qs.map(id => byId[id]).filter(Boolean);
+            return `
+            <article class="gc-item" data-panel="${i}" id="gc-${slug}-${i}" hidden>
+              <h5><span class="gc-no">${i + 1}</span>${esc(c.t)}
+                ${freq(c) ? `<em>${esc(freq(c))}</em>` : ""}</h5>
+              ${c.d.map(x => `<p>${gloss2(x)}</p>`).join("")}
+              ${qs.length ? `<div class="gc-qs"><b>Where it was asked</b>${qs.map(q =>
+                  `<span class="gc-q"><i>${q.y} ${esc(q.sec)}</i>${esc(q.q)}</span>`).join("")}</div>` : ""}
+              ${c.src ? `<p class="gc-src">${esc(c.src)}</p>` : ""}
+              <button class="tile-close" data-tile="${i}">Close</button>
+            </article>`;
+          }).join("")}
+        </div>
       </div>
     </div>`;
 }
@@ -991,11 +1026,17 @@ function renderSyllabus(){
     <div class="map-card">
       <h4><span class="tmap-badge">Heading ${n}</span>${esc(r.t)}</h4>
       <div class="sub">${esc(r.s)}</div>
-      <div class="pills">
-        ${r.ids.map(id => byId[id]
-            ? `<button class="pill" data-open="${id}">${esc(byId[id].name)}</button>` : "").join("")}
-      </div>
       ${gcHTML(r.t)}
+      <div class="mapsec">
+        <div class="ans-head">
+          <b>Thinkers on this heading</b>
+          <span>${r.ids.length} profiles mapped here &mdash; open one to read it</span>
+        </div>
+        <div class="pills">
+          ${r.ids.map(id => byId[id]
+              ? `<button class="pill" data-open="${id}">${esc(byId[id].name)}</button>` : "").join("")}
+        </div>
+      </div>
       ${gs4HTML(r.t)}
     </div>
     ${syllabusPager(n)}`;
@@ -1300,16 +1341,6 @@ document.addEventListener("click", e => {
   }
   if (!e.target.closest("#glossbox")) glossHide(true);
 
-  const gc = e.target.closest("[data-gc]");
-  if (gc) {
-    const list = document.getElementById("gc-" + gc.dataset.gc);
-    const show = list.hidden;
-    list.hidden = !show;
-    gc.setAttribute("aria-expanded", show ? "true" : "false");
-    gc.classList.toggle("on", show);
-    return;
-  }
-
   const g4 = e.target.closest("[data-g4]");
   if (g4) {
     const list = document.getElementById("g4-" + g4.dataset.g4);
@@ -1345,10 +1376,10 @@ document.addEventListener("click", e => {
 
   const tile = e.target.closest("[data-tile]");
   if (tile) {
-    const card = tile.closest(".map-card"), i = tile.dataset.tile;
-    const panel = card.querySelector(`.ans[data-panel="${i}"]`);
+    const card = tile.closest(".tilegroup"), i = tile.dataset.tile;
+    const panel = card.querySelector(`[data-panel="${i}"]`);
     const wasOpen = !panel.hidden;
-    card.querySelectorAll(".ans[data-panel]").forEach(x => { x.hidden = true; });
+    card.querySelectorAll("[data-panel]").forEach(x => { x.hidden = true; });
     card.querySelectorAll(".tile").forEach(x => {
       x.classList.remove("on"); x.setAttribute("aria-expanded", "false");
     });
