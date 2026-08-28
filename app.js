@@ -793,7 +793,6 @@ function themePager(n){
     <div class="pager">
       ${side(prev, -1)}
       <div class="pager-mid">
-        <span class="pager-count">Theme ${n} of ${last}</span>
         <div class="pager-dots">
           ${ESSAY_THEMES.map((x, i) => `<button class="pager-dot ${i + 1 === n ? "on" : ""}"
              data-page="${i + 1}" title="${esc(x.t)}" aria-label="${esc(x.t)}"
@@ -809,7 +808,10 @@ function renderThemes(){
   if (!n || !ESSAY_THEMES[n - 1]) { state.page = 0; return themeIndexHTML(); }
   const t = ESSAY_THEMES[n - 1];
   return `
-    <button class="backlink" data-page="0">&larr; Essay Theme Map</button>
+    <div class="pager-top">
+      <button class="backlink" data-page="0">&larr; Essay Theme Map</button>
+      <span class="pager-count">Theme ${n} of ${ESSAY_THEMES.length}</span>
+    </div>
     ${themePager(n)}
     <div class="map-card">
       <h4><span class="tmap-badge">Theme ${n}</span>${esc(t.t)}</h4>
@@ -966,7 +968,6 @@ function syllabusPager(n){
     <div class="pager">
       ${side(prev, -1)}
       <div class="pager-mid">
-        <span class="pager-count">Heading ${n} of ${last}</span>
         <div class="pager-dots many">
           ${SYLLABUS.map((x, i) => `<button class="pager-dot ${i + 1 === n ? "on" : ""}"
              data-page="${i + 1}" title="${esc(x.t)}" aria-label="${esc(x.t)}"
@@ -982,7 +983,10 @@ function renderSyllabus(){
   if (!n || !SYLLABUS[n - 1]) { state.page = 0; return syllabusIndexHTML(); }
   const r = SYLLABUS[n - 1];
   return `
-    <button class="backlink" data-page="0">&larr; GS-IV Syllabus Map</button>
+    <div class="pager-top">
+      <button class="backlink" data-page="0">&larr; GS-IV Syllabus Map</button>
+      <span class="pager-count">Heading ${n} of ${SYLLABUS.length}</span>
+    </div>
     ${syllabusPager(n)}
     <div class="map-card">
       <h4><span class="tmap-badge">Heading ${n}</span>${esc(r.t)}</h4>
