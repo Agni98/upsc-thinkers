@@ -819,6 +819,45 @@ function renderThemes(){
     ${themePager(n)}`;
 }
 
+/* ---- GS-IV: the concepts that keep coming back ----
+   Sits above the question list, because a reader wants to know what the paper
+   keeps asking before they read twenty questions. Ordered as written, which is
+   by how often the paper has returned to each. */
+function gcHTML(title){
+  if (typeof GS4_CONCEPTS === "undefined") return "";
+  const list = GS4_CONCEPTS[title];
+  if (!list || !list.length) return "";
+  const byId = {};
+  if (typeof GS4_PYQ !== "undefined") GS4_PYQ.forEach(q => { byId[q.id] = q; });
+  const slug = esc(title).replace(/[^A-Za-z]/g, "");
+  const nq = new Set();
+  list.forEach(c => c.qs.forEach(q => nq.add(q)));
+  return `
+    <div class="gc">
+      <button class="gc-head" data-gc="${slug}" aria-expanded="false" aria-controls="gc-${slug}">
+        <b>Concepts that repeat</b>
+        <span>${list.length} ideas the paper keeps returning to, across ${nq.size} questions</span>
+        <i></i>
+      </button>
+      <div class="gc-list" id="gc-${slug}" hidden>
+        ${list.map((c, i) => {
+          const qs = c.qs.map(id => byId[id]).filter(Boolean);
+          const yrs = qs.map(q => q.y).sort();
+          return `
+          <article class="gc-item">
+            <h5><span class="gc-no">${i + 1}</span>${esc(c.t)}
+              <em>${c.qs.length === 1 ? "asked once" : "asked " + c.qs.length + " times"}${
+                yrs.length > 1 ? ", " + yrs[0] + " to " + yrs[yrs.length - 1] : yrs.length ? " in " + yrs[0] : ""}</em></h5>
+            ${c.d.map(x => `<p>${glossText(x)}</p>`).join("")}
+            ${qs.length ? `<div class="gc-qs"><b>Where it was asked</b>${qs.map(q =>
+                `<span class="gc-q"><i>${q.y} ${esc(q.sec)}</i>${esc(q.q)}</span>`).join("")}</div>` : ""}
+            ${c.src ? `<p class="gc-src">${esc(c.src)}</p>` : ""}
+          </article>`;
+        }).join("")}
+      </div>
+    </div>`;
+}
+
 /* ---- GS-IV past questions under their syllabus heading ----
    The compilation groups twelve years of GS-IV into fourteen themes; each maps
    onto one or more headings here. Collapsed by default, because some headings
@@ -880,6 +919,7 @@ function renderMap(rows, title, sub, opts){
               ? `<button class="pill" data-open="${id}">${esc(byId[id].name)}</button>` : "").join("")}
         </div>` : "" }
         ${answersHTML(r)}
+        ${ (opts && opts.pyq) ? gcHTML(r.t) : "" }
         ${ (opts && opts.pyq) ? gs4HTML(r.t) : "" }
       </div>`).join("")}`;
 }
@@ -1184,6 +1224,16 @@ document.addEventListener("click", e => {
     return;
   }
   if (!e.target.closest("#glossbox")) glossHide(true);
+
+  const gc = e.target.closest("[data-gc]");
+  if (gc) {
+    const list = document.getElementById("gc-" + gc.dataset.gc);
+    const show = list.hidden;
+    list.hidden = !show;
+    gc.setAttribute("aria-expanded", show ? "true" : "false");
+    gc.classList.toggle("on", show);
+    return;
+  }
 
   const g4 = e.target.closest("[data-g4]");
   if (g4) {

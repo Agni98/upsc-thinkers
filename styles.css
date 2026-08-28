@@ -1234,3 +1234,66 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   .g4-list{display:block !important}
   .g4-head i{display:none}
 }
+
+/* --- GS-IV: the concepts that keep coming back --- */
+.gc{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+.gc-head{
+  display:flex;align-items:center;gap:10px;width:100%;
+  font:inherit;text-align:left;background:none;border:0;padding:0;cursor:pointer}
+.gc-head b{
+  font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;
+  color:var(--accent);white-space:nowrap}
+.gc-head span{font-size:12.4px;color:var(--ink-3);line-height:1.4}
+.gc-head:hover span{color:var(--ink-2)}
+.gc-head:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.gc-head i{
+  flex:0 0 auto;margin-left:auto;position:relative;width:15px;height:15px;
+  border-radius:4px;background:var(--accent-soft);transition:.15s}
+.gc-head i::before,.gc-head i::after{
+  content:"";position:absolute;left:50%;top:50%;background:var(--accent);
+  transform:translate(-50%,-50%);transition:.15s}
+.gc-head i::before{width:7px;height:1.5px}
+.gc-head i::after{width:1.5px;height:7px}
+.gc-head.on i{background:var(--accent)}
+.gc-head.on i::before{background:var(--panel)}
+.gc-head.on i::after{height:0}
+
+.gc-list{margin-top:12px}
+.gc-item{
+  background:var(--bg);border:1px solid var(--line);
+  border-left:3px solid var(--accent);border-radius:0 8px 8px 0;
+  padding:13px 15px;margin-bottom:11px}
+.gc-item:last-child{margin-bottom:0}
+.gc-item h5{
+  display:flex;align-items:baseline;flex-wrap:wrap;gap:8px;
+  font-family:var(--serif);font-size:15px;font-weight:600;color:var(--ink);
+  line-height:1.32;margin:0 0 8px}
+.gc-no{
+  flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;
+  width:20px;height:20px;border-radius:50%;background:var(--accent-soft);
+  color:var(--accent);font-family:var(--sans,inherit);font-size:11px;font-weight:700}
+.gc-item h5 em{
+  font-style:normal;font-family:var(--sans,inherit);font-size:10.6px;font-weight:600;
+  letter-spacing:.4px;text-transform:uppercase;color:var(--accent);
+  background:var(--accent-soft);border-radius:5px;padding:2px 7px}
+.gc-item p{font-size:13px;line-height:1.68;color:var(--ink-2);margin:0 0 9px}
+.gc-qs{margin:11px 0 0;padding-top:10px;border-top:1px solid var(--line)}
+.gc-qs>b{
+  display:block;font-size:9.8px;font-weight:700;letter-spacing:.9px;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
+.gc-q{
+  display:block;font-size:12.4px;line-height:1.58;color:var(--ink-2);
+  padding:5px 0 5px 0}
+.gc-q i{
+  display:inline-block;font-style:normal;font-weight:700;font-size:10.4px;
+  color:var(--accent);background:var(--accent-soft);border-radius:4px;
+  padding:2px 6px;margin-right:7px;vertical-align:1px}
+.gc-src{
+  font-size:11.4px !important;font-style:italic;color:var(--ink-2) !important;
+  margin:9px 0 0 !important;padding-top:8px;border-top:1px solid var(--line)}
+@media (max-width:560px){
+  .gc-head{flex-wrap:wrap}
+  .gc-head span{flex:1 1 100%;order:3}
+  .gc-item{padding:11px 12px}
+}
+@media print{ .gc-list{display:block !important} .gc-head i{display:none} }
