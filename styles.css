@@ -6,7 +6,7 @@
   --panel:#ffffff;
   --ink:#241f1a;
   --ink-2:#5a5148;
-  --ink-3:#8a7f73;
+  --ink-3:#756c62;
   --line:#e2d9cb;
   --line-2:#efe8dc;
   --accent:#8a3324;
@@ -31,7 +31,7 @@ html[data-theme="dark"]{
   --panel:#211d18;
   --ink:#f0e9de;
   --ink-2:#c2b6a5;
-  --ink-3:#8e8071;
+  --ink-3:#938575;
   --line:#38312a;
   --line-2:#2b2620;
   --accent:#e08a6f;
@@ -131,7 +131,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .nav-name{flex:1;line-height:1.3}
 .nav-count{
   font-size:11px;font-weight:600;padding:1px 7px;border-radius:20px;
-  background:var(--line-2);color:var(--ink-3);flex-shrink:0;
+  background:var(--line-2);color:var(--ink-2);flex-shrink:0;
 }
 
 .main{flex:1;min-width:0;padding:26px 30px 80px}
@@ -1041,6 +1041,8 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 .tmap-list li::before{
   content:"";position:absolute;left:2px;top:11px;
   width:4px;height:4px;border-radius:50%;background:var(--accent)}
+.tmap-list li.tmap-more{color:var(--ink-3);font-style:italic}
+.tmap-list li.tmap-more::before{background:var(--line)}
 .tmap-meta{
   display:flex;align-items:center;gap:6px;width:100%;margin-top:auto;
   padding-top:10px;border-top:1px solid var(--line);
@@ -1078,6 +1080,8 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   font-size:10.5px;font-weight:700;letter-spacing:.8px;
   text-transform:uppercase;color:var(--ink-3)}
 .pager-dots{display:flex;gap:5px}
+/* sixteen syllabus headings do not fit on one row beside the two buttons */
+.pager-dots.many{flex-wrap:wrap;justify-content:center;max-width:250px}
 .pager-dot{
   width:25px;height:25px;border-radius:7px;font:inherit;font-size:11.5px;
   font-weight:600;cursor:pointer;transition:.13s;

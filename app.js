@@ -908,29 +908,93 @@ function gs4HTML(title){
       </button>
       <div class="g4-list" id="g4-${slug}" hidden>
         ${shared ? `<p class="g4-note">The paper sets one theme for moral thinkers, so this pool is shared with the other moral-thinkers heading.</p>` : ""}
-        ${title === "Case Studies" ? `<p class="g4-note">Every Section B case from 2013 to 2024, gathered from all themes.</p>` : ""}
+        ${title === "Case Studies" ? `<p class="g4-note">Every Section B case from 2013 to 2025, gathered from all themes.</p>` : ""}
         ${a.length ? `<h6>Section A &middot; theory</h6><ul>${gs4Rows(a)}</ul>` : ""}
         ${b.length ? `<h6>Section B &middot; case studies</h6><ul>${gs4Rows(b)}</ul>` : ""}
       </div>
     </div>`;
 }
 
-function renderMap(rows, title, sub, opts){
-  const pills = !(opts && opts.pills === false);
+/* ---- GS-IV Syllabus Map: an index page, then one page per heading ----
+   Same shape and the same controls as the Essay Theme Map, because a reader
+   moving between the two maps should not have to learn a second set. */
+function sylStats(r){
+  const con = (typeof GS4_CONCEPTS !== "undefined" && GS4_CONCEPTS[r.t]) || [];
+  return { thinkers:r.ids.filter(id => byId[id]).length,
+           concepts:con, questions:gs4For(r.t).length };
+}
+
+function syllabusIndexHTML(){
   return `
-    <div class="sec-head"><h3>${title}</h3><p>${sub}</p></div>
-    ${rows.map(r => `
-      <div class="map-card">
-        <h4>${esc(r.t)}</h4>
-        <div class="sub">${esc(r.s)}</div>
-        ${ pills ? `<div class="pills">
-          ${r.ids.map(id => byId[id]
-              ? `<button class="pill" data-open="${id}">${esc(byId[id].name)}</button>` : "").join("")}
-        </div>` : "" }
-        ${answersHTML(r)}
-        ${ (opts && opts.pyq) ? gcHTML(r.t) : "" }
-        ${ (opts && opts.pyq) ? gs4HTML(r.t) : "" }
-      </div>`).join("")}`;
+    <div class="sec-head"><h3>GS Paper IV &mdash; Syllabus Map</h3>
+      <p>The ${SYLLABUS.length} headings the paper is set from. Open one for the thinkers
+         who answer it, the concepts it keeps returning to, and every question the
+         Commission has asked under it since 2013.</p></div>
+    <div class="tmap-index">
+      ${SYLLABUS.map((r, i) => {
+        const st = sylStats(r);
+        const show = st.concepts.slice(0, 4), rest = st.concepts.length - show.length;
+        const bits = [st.thinkers + " thinker" + (st.thinkers === 1 ? "" : "s")];
+        if (st.concepts.length) bits.push(st.concepts.length + " concepts");
+        if (st.questions)  bits.push(st.questions + " question" + (st.questions === 1 ? "" : "s"));
+        return `
+        <button class="tmap-card" data-page="${i + 1}">
+          <span class="tmap-no">${i + 1}</span>
+          <b>${esc(r.t)}</b>
+          <span class="tmap-sub">${esc(r.s)}</span>
+          ${show.length ? `<ul class="tmap-list">
+            ${show.map(c => `<li>${esc(c.t)}</li>`).join("")}
+            ${rest > 0 ? `<li class="tmap-more">and ${rest} more</li>` : ""}</ul>` : ""}
+          <span class="tmap-meta">${bits.join(" &middot; ")}<i>&rarr;</i></span>
+        </button>`; }).join("")}
+    </div>`;
+}
+
+function syllabusPager(n){
+  const last = SYLLABUS.length, prev = n - 1, next = n + 1;
+  const side = (to, dir) => {
+    const label = to === 0 ? "Index" : (dir < 0 ? "Previous" : "Next");
+    const name  = to === 0 ? "All " + last + " headings" : esc(SYLLABUS[to - 1].t);
+    const arrow = dir < 0 ? "&larr;" : "&rarr;";
+    return `<button class="pager-btn ${dir < 0 ? "left" : "right"}" data-page="${to}">
+        ${dir < 0 ? `<i>${arrow}</i>` : ""}
+        <span><em>${label}</em>${name}</span>
+        ${dir > 0 ? `<i>${arrow}</i>` : ""}
+      </button>`;
+  };
+  return `
+    <div class="pager">
+      ${side(prev, -1)}
+      <div class="pager-mid">
+        <span class="pager-count">Heading ${n} of ${last}</span>
+        <div class="pager-dots many">
+          ${SYLLABUS.map((x, i) => `<button class="pager-dot ${i + 1 === n ? "on" : ""}"
+             data-page="${i + 1}" title="${esc(x.t)}" aria-label="${esc(x.t)}"
+             aria-current="${i + 1 === n ? "true" : "false"}">${i + 1}</button>`).join("")}
+        </div>
+      </div>
+      ${side(next > last ? 0 : next, 1)}
+    </div>`;
+}
+
+function renderSyllabus(){
+  const n = state.page | 0;
+  if (!n || !SYLLABUS[n - 1]) { state.page = 0; return syllabusIndexHTML(); }
+  const r = SYLLABUS[n - 1];
+  return `
+    <button class="backlink" data-page="0">&larr; GS-IV Syllabus Map</button>
+    ${syllabusPager(n)}
+    <div class="map-card">
+      <h4><span class="tmap-badge">Heading ${n}</span>${esc(r.t)}</h4>
+      <div class="sub">${esc(r.s)}</div>
+      <div class="pills">
+        ${r.ids.map(id => byId[id]
+            ? `<button class="pill" data-open="${id}">${esc(byId[id].name)}</button>` : "").join("")}
+      </div>
+      ${gcHTML(r.t)}
+      ${gs4HTML(r.t)}
+    </div>
+    ${syllabusPager(n)}`;
 }
 
 function render(){
@@ -947,9 +1011,7 @@ function render(){
   }
   else if (state.view === "worklab")  main.innerHTML = renderWorkLabList();
   else if (state.view === "quotes")   main.innerHTML = renderQuotes();
-  else if (state.view === "syllabus") main.innerHTML = renderMap(SYLLABUS, "GS Paper IV — Syllabus Map",
-                                        "Each syllabus heading with the thinkers who answer it, and every past question the paper has set under it since 2013.",
-                                        { pyq:true });
+  else if (state.view === "syllabus") main.innerHTML = renderSyllabus();
   else if (state.view === "themes")   main.innerHTML = renderThemes();
   else                                main.innerHTML = renderGrid();
   glossHide(true);
@@ -1337,7 +1399,7 @@ document.addEventListener("click", e => {
 
   const pg = e.target.closest("[data-page]");
   if (pg) {
-    state.view = "themes";
+    if (state.view !== "syllabus") state.view = "themes";   // both maps page the same way
     state.page = +pg.dataset.page;
     render();
     return;
@@ -1431,11 +1493,13 @@ window.addEventListener("resize", () => glossHide(true));
 
 document.addEventListener("keydown", e => {
   if (e.key === "Escape") { glossHide(true); closeSheet(); }
-  if ((e.key === "ArrowLeft" || e.key === "ArrowRight") && state.view === "themes"
+  const paged = state.view === "themes" ? ESSAY_THEMES.length
+              : state.view === "syllabus" ? SYLLABUS.length : 0;
+  if ((e.key === "ArrowLeft" || e.key === "ArrowRight") && paged
       && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)
       && !e.metaKey && !e.ctrlKey && !e.altKey) {
     const to = (state.page | 0) + (e.key === "ArrowLeft" ? -1 : 1);
-    if (to >= 0 && to <= ESSAY_THEMES.length) { state.page = to; render(); }
+    if (to >= 0 && to <= paged) { state.page = to; render(); }
   }
   if (e.key === "/" && document.activeElement.id !== "search") {
     e.preventDefault();
