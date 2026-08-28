@@ -855,8 +855,8 @@ function gcHTML(title){
           return `
           <article class="gc-item">
             <h5><span class="gc-no">${i + 1}</span>${esc(c.t)}
-              <em>${c.qs.length === 1 ? "asked once" : "asked " + c.qs.length + " times"}${
-                yrs.length > 1 ? ", " + yrs[0] + " to " + yrs[yrs.length - 1] : yrs.length ? " in " + yrs[0] : ""}</em></h5>
+              ${qs.length ? `<em>${c.qs.length === 1 ? "asked once" : "asked " + c.qs.length + " times"}${
+                yrs.length > 1 ? ", " + yrs[0] + " to " + yrs[yrs.length - 1] : yrs.length ? " in " + yrs[0] : ""}</em>` : ""}</h5>
             ${c.d.map(x => `<p>${gloss2(x)}</p>`).join("")}
             ${qs.length ? `<div class="gc-qs"><b>Where it was asked</b>${qs.map(q =>
                 `<span class="gc-q"><i>${q.y} ${esc(q.sec)}</i>${esc(q.q)}</span>`).join("")}</div>` : ""}
@@ -886,7 +886,7 @@ function gs4Rows(qs){
       <span class="g4-yr">${q.y}<i>${esc(q.sec)}</i></span>
       <span class="g4-body">
         <span class="g4-text">${esc(q.q)}</span>
-        <span class="g4-meta">${esc(q.f)}${q.m ? " &middot; " + esc(q.m) : ""}</span>
+        <span class="g4-meta">${esc(q.syl || "")}${q.m ? " &middot; " + esc(q.m) : ""}</span>
       </span>
     </li>`).join("");
 }
