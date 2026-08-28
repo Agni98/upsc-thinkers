@@ -1297,3 +1297,4 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   .gc-item{padding:11px 12px}
 }
 @media print{ .gc-list{display:block !important} .gc-head i{display:none} }
+.gc-item p em{font-style:italic;color:var(--ink)}

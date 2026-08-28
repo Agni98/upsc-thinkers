@@ -823,6 +823,15 @@ function renderThemes(){
    Sits above the question list, because a reader wants to know what the paper
    keeps asking before they read twenty questions. Ordered as written, which is
    by how often the paper has returned to each. */
+/* Concept definitions carry **bold** on their key claims. Gloss first, then
+   apply emphasis: glossText escapes the text and inserts buttons, and a bold
+   span that encloses one simply wraps it. */
+function gloss2(t){
+  return glossText(t)
+    .replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
+    .replace(/\*([^*<]+?)\*/g, "<em>$1</em>");
+}
+
 function gcHTML(title){
   if (typeof GS4_CONCEPTS === "undefined") return "";
   const list = GS4_CONCEPTS[title];
@@ -848,7 +857,7 @@ function gcHTML(title){
             <h5><span class="gc-no">${i + 1}</span>${esc(c.t)}
               <em>${c.qs.length === 1 ? "asked once" : "asked " + c.qs.length + " times"}${
                 yrs.length > 1 ? ", " + yrs[0] + " to " + yrs[yrs.length - 1] : yrs.length ? " in " + yrs[0] : ""}</em></h5>
-            ${c.d.map(x => `<p>${glossText(x)}</p>`).join("")}
+            ${c.d.map(x => `<p>${gloss2(x)}</p>`).join("")}
             ${qs.length ? `<div class="gc-qs"><b>Where it was asked</b>${qs.map(q =>
                 `<span class="gc-q"><i>${q.y} ${esc(q.sec)}</i>${esc(q.q)}</span>`).join("")}</div>` : ""}
             ${c.src ? `<p class="gc-src">${esc(c.src)}</p>` : ""}
