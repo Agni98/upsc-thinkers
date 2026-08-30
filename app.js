@@ -328,10 +328,60 @@ function glossIndex(){
   return items;
 }
 
+/* The GS-IV pages link the essay terms and the paper's own vocabulary. The two
+   are kept apart so that adding a GS-IV term does not start underlining words
+   in the essay paragraphs, where the prose already carries its own glossary. */
+let _gs4Idx = null;
+function gs4GlossIndex(){
+  if (_gs4Idx) return _gs4Idx;
+  const items = glossIndex().slice();
+  if (typeof GS4_GLOSS !== "undefined")
+    Object.keys(GS4_GLOSS).forEach(k => {
+      items.push({ key:"g:" + k, src:GS4_GLOSS[k].t, ci:true });
+      (GS4_GLOSS[k].alt || []).forEach(x => items.push({ key:"g:" + k, src:x, ci:true }));
+    });
+  _gs4Idx = items;
+  return items;
+}
+
+/* Inside a concept note, a term whose card would only send the reader back to
+   this same concept is left unlinked. */
+function gs4Skip(title){
+  return key => key.charAt(0) === "g" && typeof GS4_GLOSS !== "undefined" &&
+                GS4_GLOSS[key.slice(2)] && GS4_GLOSS[key.slice(2)].c === title;
+}
+
+/* Show one tile's panel and close the rest of its group. */
+function openTile(group, i, scroll){
+  if (!group) return null;
+  group.querySelectorAll("[data-panel]").forEach(x => { x.hidden = true; });
+  group.querySelectorAll(".tile").forEach(x => {
+    x.classList.remove("on"); x.setAttribute("aria-expanded", "false");
+  });
+  const t = group.querySelector('.tile[data-tile="' + i + '"]');
+  const art = group.querySelector('[data-panel="' + i + '"]');
+  if (t) { t.classList.add("on"); t.setAttribute("aria-expanded", "true"); }
+  if (art) art.hidden = false;
+  if (scroll) (art || t || group).scrollIntoView({ behavior:"instant", block:"start" });
+  return art;
+}
+
+/* Where a concept note develops a term, so the card can offer the way to it. */
+function conceptSite(title){
+  if (typeof GS4_CONCEPTS === "undefined" || typeof SYLLABUS === "undefined") return null;
+  for (let i = 0; i < SYLLABUS.length; i++) {
+    const list = GS4_CONCEPTS[SYLLABUS[i].t];
+    if (!list) continue;
+    for (let j = 0; j < list.length; j++) if (list[j].t === title) return { h:i, c:j };
+  }
+  return null;
+}
+
 /* Escape the plain stretches, wrap the matches. Longest match wins, and each
    term is linked once per paragraph so the page does not fill with underlines. */
-function glossText(text){
-  const idx = glossIndex(), hits = [];
+function glossText(text, idx, skip){
+  idx = idx || glossIndex();
+  const hits = [];
   idx.forEach(it => {
     const re = new RegExp("\\b" + it.src.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b",
                           it.ci ? "gi" : "g");
@@ -343,7 +393,7 @@ function glossText(text){
   const used = {}, out = [];
   let at = 0;
   hits.forEach(h => {
-    if (h.s < at || used[h.key]) return;
+    if (h.s < at || used[h.key] || (skip && skip(h.key))) return;
     out.push(esc(text.slice(at, h.s)));
     out.push(`<button class="gloss" data-gloss="${esc(h.key)}">${esc(text.slice(h.s, h.e))}</button>`);
     used[h.key] = 1;
@@ -380,6 +430,14 @@ function glossCard(key){
       <span class="g-meta">${esc(t.years)}${t.school ? " &middot; " + esc(t.school) : ""}</span>
       <p>${esc(t.gist)}</p>
       <button class="g-more" data-open="${esc(t.id)}">Full page <i>&rarr;</i></button>`;
+  }
+  if (key.charAt(0) === "g") {
+    const t = (typeof GS4_GLOSS !== "undefined") ? GS4_GLOSS[id] : null;
+    if (!t) return "";
+    return `<b>${esc(t.t)}</b>
+      <span class="g-meta">${esc(t.a)}</span>
+      <p>${esc(t.d)}</p>
+      ${t.c && conceptSite(t.c) ? `<button class="g-more" data-concept="${esc(t.c)}">Read the concept <i>&rarr;</i></button>` : ""}`;
   }
   const g = (typeof GLOSSARY !== "undefined") ? GLOSSARY[id] : null;
   if (!g) return "";
@@ -830,10 +888,51 @@ function renderThemes(){
 /* Concept definitions carry **bold** on their key claims. Gloss first, then
    apply emphasis: glossText escapes the text and inserts buttons, and a bold
    span that encloses one simply wraps it. */
-function gloss2(t){
-  return glossText(t)
+function gloss2(t, skip){
+  return glossText(t, gs4GlossIndex(), skip)
     .replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
     .replace(/\*([^*<]+?)\*/g, "<em>$1</em>");
+}
+
+/* Half the case studies and a handful of the theory questions ask several
+   things at once. Shown as one block the demands run together; shown as parts
+   the reader can see which part of the note answers which part of the question. */
+function qParts(text){
+  const at = [];
+  ["(a)", "(b)", "(c)", "(d)", "(e)"].forEach(m => {
+    const k = text.indexOf(m);
+    if (k >= 0) at.push({ i:k, k:m.charAt(1) });
+  });
+  at.sort((x, y) => x.i - y.i);
+  if (at.length < 2) return null;
+  // (a) then (b) then (c); anything out of order is a citation, not a part list
+  for (let j = 0; j < at.length; j++)
+    if (at[j].k !== "abcde".charAt(j)) return null;
+  const parts = [];
+  for (let j = 0; j < at.length; j++) {
+    const from = at[j].i + 3, to = (j + 1 < at.length) ? at[j + 1].i : text.length;
+    parts.push({ k:at[j].k, t:text.slice(from, to).trim() });
+  }
+  return { lead:text.slice(0, at[0].i).trim(), parts:parts };
+}
+
+/* One question under a concept: its parts, its terms, and the other concepts on
+   this heading that also turn on it. */
+function gcQuestion(q, title, byHead){
+  const also = (byHead[q.id] || []).filter(x => x !== title);
+  const body = qParts(q.q);
+  // the note suppresses a term that would only point back at itself; a question
+  // does not, since the reader is asking what the words in it mean
+  const mark = x => glossText(x, gs4GlossIndex());
+  return `<span class="gc-q">
+    <i>${q.y} ${esc(q.sec)}</i>
+    ${body
+      ? `${body.lead ? `<span class="gq-lead">${mark(body.lead)}</span>` : ""}
+         ${body.parts.map(p => `<span class="gq-part"><em>${p.k}</em>${mark(p.t)}</span>`).join("")}`
+      : `<span class="gq-lead">${mark(q.q)}</span>`}
+    ${also.length ? `<span class="gq-also"><b>Also under</b>${also.map(x =>
+        `<button class="gq-link" data-concept="${esc(x)}">${esc(x)}</button>`).join("")}</span>` : ""}
+  </span>`;
 }
 
 /* The opening sentence of a definition, stripped of its emphasis marks, for
@@ -860,6 +959,8 @@ function gcHTML(title){
   const slug = esc(title).replace(/[^A-Za-z]/g, "");
   const nq = new Set();
   list.forEach(c => c.qs.forEach(q => nq.add(q)));
+  const byHead = {};
+  list.forEach(c => c.qs.forEach(id => { (byHead[id] = byHead[id] || []).push(c.t); }));
   const freq = c => {
     const qs = c.qs.map(id => byId[id]).filter(Boolean);
     if (!qs.length) return "";
@@ -892,9 +993,9 @@ function gcHTML(title){
             <article class="gc-item" data-panel="${i}" id="gc-${slug}-${i}" hidden>
               <h5><span class="gc-no">${i + 1}</span>${esc(c.t)}
                 ${freq(c) ? `<em>${esc(freq(c))}</em>` : ""}</h5>
-              ${c.d.map(x => `<p>${gloss2(x)}</p>`).join("")}
-              ${qs.length ? `<div class="gc-qs"><b>Where it was asked</b>${qs.map(q =>
-                  `<span class="gc-q"><i>${q.y} ${esc(q.sec)}</i>${esc(q.q)}</span>`).join("")}</div>` : ""}
+              ${c.d.map(x => `<p>${gloss2(x, gs4Skip(c.t))}</p>`).join("")}
+              ${qs.length ? `<div class="gc-qs"><b>Where it was asked</b>${
+                  qs.map(q => gcQuestion(q, c.t, byHead)).join("")}</div>` : ""}
               ${c.src ? `<p class="gc-src">${esc(c.src)}</p>` : ""}
               <button class="tile-close" data-tile="${i}">Close</button>
             </article>`;
@@ -1025,7 +1126,7 @@ function renderSyllabus(){
     ${syllabusPager(n)}
     <div class="map-card">
       <h4><span class="tmap-badge">Heading ${n}</span>${esc(r.t)}</h4>
-      <div class="sub">${esc(r.s)}</div>
+      <div class="sub">${glossText(r.s, gs4GlossIndex())}</div>
       ${gcHTML(r.t)}
       <div class="mapsec">
         <div class="ans-head">
@@ -1361,6 +1462,17 @@ document.addEventListener("click", e => {
     return;
   }
 
+  const con = e.target.closest("[data-concept]");
+  if (con) {
+    const site = conceptSite(con.dataset.concept);
+    if (site) {
+      glossHide(true);
+      state.view = "syllabus"; state.page = site.h + 1; render();
+      openTile(document.querySelector(".map-card .tilegroup"), site.c, true);
+    }
+    return;
+  }
+
   const open = e.target.closest("[data-open]");
   if (open) { glossHide(true); openSheet(open.dataset.open); return; }
 
@@ -1376,21 +1488,18 @@ document.addEventListener("click", e => {
 
   const tile = e.target.closest("[data-tile]");
   if (tile) {
-    const card = tile.closest(".tilegroup"), i = tile.dataset.tile;
-    const panel = card.querySelector(`[data-panel="${i}"]`);
-    const wasOpen = !panel.hidden;
-    card.querySelectorAll("[data-panel]").forEach(x => { x.hidden = true; });
-    card.querySelectorAll(".tile").forEach(x => {
-      x.classList.remove("on"); x.setAttribute("aria-expanded", "false");
-    });
-    if (!wasOpen) {
-      panel.hidden = false;
-      const t = card.querySelector(`.tile[data-tile="${i}"]`);
-      t.classList.add("on"); t.setAttribute("aria-expanded", "true");
-      if (tile.classList.contains("tile-close")) t.scrollIntoView({ behavior:"instant", block:"center" });
-    } else if (tile.classList.contains("tile-close")) {
-      card.querySelector(`.tile[data-tile="${i}"]`).scrollIntoView({ behavior:"instant", block:"center" });
+    const group = tile.closest(".tilegroup"), i = tile.dataset.tile;
+    const wasOpen = !group.querySelector(`[data-panel="${i}"]`).hidden;
+    if (wasOpen) {
+      group.querySelectorAll("[data-panel]").forEach(x => { x.hidden = true; });
+      group.querySelectorAll(".tile").forEach(x => {
+        x.classList.remove("on"); x.setAttribute("aria-expanded", "false");
+      });
+    } else {
+      openTile(group, i, false);
     }
+    if (tile.classList.contains("tile-close"))
+      group.querySelector(`.tile[data-tile="${i}"]`).scrollIntoView({ behavior:"instant", block:"center" });
     return;
   }
 
@@ -1407,13 +1516,7 @@ document.addEventListener("click", e => {
   if (para) {
     const [ti, pi] = para.dataset.para.split(":").map(Number);
     state.view = "themes"; state.page = ti + 1; render();
-    const card = document.querySelector(".map-card");
-    if (card) {
-      const tile = card.querySelector(`.tile[data-tile="${pi}"]`);
-      if (tile) tile.click();                       // opens the panel and marks the tile
-      const art = card.querySelector(`.ans[data-panel="${pi}"]`);
-      (art || card).scrollIntoView({ behavior:"instant", block:"start" });
-    }
+    openTile(document.querySelector(".map-card .tilegroup"), pi, true);
     return;
   }
 
