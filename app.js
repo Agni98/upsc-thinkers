@@ -1042,12 +1042,12 @@ function gcQuestion(q, title, byHead){
    words: decide, and say why. The six moves are those demands deduplicated and
    put in an order that holds whichever subset a given case asks for. */
 const CASE_MOVES = [
-  { n:"Frame",   w:"25", x:"Say what you must decide, in one sentence. Who decides what, and by when. Do not retell the story." },
-  { n:"Collide", w:"45", x:"Name the two duties pulling against each other. Say who each one is owed to. The concept note below gives you this." },
-  { n:"Cost",    w:"60", x:"Give three options. One line each: what it saves, and who pays for it." },
-  { n:"Choose",  w:"65", x:"Pick one. Give the single reason that decided it. One reason, not a list of values." },
-  { n:"Concede", w:"25", x:"Say what your choice costs. Every real choice loses something." },
-  { n:"Close",   w:"30", x:"Say what would stop this happening again. A third of the cases ask this outright." }
+  { n:"Frame",    w:"25", x:"Say what you must decide, in one sentence. Name the pressure you are deciding against. Do not retell the story." },
+  { n:"Collide",  w:"41", x:"Name the two sides of the dilemma. Then name what else matters but cannot override them." },
+  { n:"Cost",     w:"51", x:"Weigh each course. What it saves, who pays, and whether the damage can be undone." },
+  { n:"Choose",   w:"50", x:"Decide, and say what you would actually do, in order. Give the one reason that settles it." },
+  { n:"Concede",  w:"25", x:"Admit what your choice costs. Then say why it is still right." },
+  { n:"Close",    w:"42", x:"Fix responsibility and strengthen the system. The aim is to prevent a repeat, not just to settle this case." }
 ];
 const CASE_TRAPS = [
   ["Frame",   "Retelling the case eats half your words before you begin."],
@@ -1058,12 +1058,12 @@ const CASE_TRAPS = [
   ["Close",   "Stopping at the choice, when the case asked what prevents a repeat."]
 ];
 const CASE_SAMPLE = [
-  ["Frame", "As Executive Engineer I must decide, before this flyover opens, whether to act on deviations I believe threaten its safety, against my Chief Engineer's instruction to ignore them."],
-  ["Collide", "Both duties are real. I owe obedience to a lawful order from a senior with longer experience and the authority to overrule me. I also owe a sound structure to people who will never know this decision was taken. Obedience is owed to someone I can argue with. Safety is owed to people who cannot agree to the risk."],
-  ["Cost", "Go ahead as advised: saves the schedule and the contractor, and puts the cost on the public, who cannot see the risk. Record everything and ask for written orders: protects safety and the chain of command together, at the price of delay. Seek transfer or report sick: protects me alone, and the defect waits for the next officer."],
-  ["Choose", "I take the second. A risk cannot be traded against a deadline when the people bearing it are absent and cannot agree to it. Safety is the condition of the project, not one interest to be weighed inside it. Asking for written orders is not defiance. It keeps the decision in the hierarchy, and an improper order is rarely written down."],
-  ["Concede", "This delays a road the public badly needs, costs the contractor real money, and will be read as insubordination by a senior who may still turn out to be right."],
-  ["Close", "I would also order an independent structural test, ask the Junior Engineers to explain their false daily reports, and have surprise inspection written into the contract. This failed on supervision, not on design."]
+  ["Frame", "As Executive Engineer, I must decide whether to permit opening of the flyover despite safety-related deviations, contrary to my Chief Engineer's instruction to ignore them."],
+  ["Collide", "The dilemma is between obedience to a superior and institutional hierarchy on one hand, and public safety, professional integrity and duty of care on the other. The contractor's interests and project timelines also have to be considered, but cannot override safety."],
+  ["Cost", "Ignoring the deviations may prevent delay and financial loss to the contractor but could expose the public to structural risk and make me personally and institutionally accountable. Stopping the opening may delay an important road project and impose financial costs, but these are reversible whereas loss of life may be irreversible."],
+  ["Choose", "I would not permit opening until the safety concerns are independently examined and resolved. I would document the deviations, seek the Chief Engineer's instructions in writing and escalate the matter to the competent authority if necessary. Seeking written directions is not insubordination; it ensures accountability within the chain of command."],
+  ["Concede", "This may delay public infrastructure, inconvenience commuters and invite allegations of insubordination. However, administrative efficiency cannot justify knowingly exposing citizens to an avoidable safety risk."],
+  ["Close", "I would order an independent structural assessment, examine the conduct of the Junior Engineers who submitted inaccurate reports, fix responsibility for supervisory failure, and strengthen inspection and reporting mechanisms. The objective is not merely to stop this opening but to prevent recurrence."]
 ];
 
 function caseMethodHTML(title){
@@ -1073,7 +1073,7 @@ function caseMethodHTML(title){
       <div class="ans-head">
         <b>How to answer one</b>
         <span>Thirty-nine of these ask the same thing in different words: decide, and say why.
-          Six moves answer all of them. Word counts are for a 250-word answer</span>
+          Six moves answer all of them. Word counts are what the worked answer below actually uses</span>
       </div>
       <ol class="cm-moves">
         ${CASE_MOVES.map((m, i) => `
@@ -1094,7 +1094,7 @@ function caseMethodHTML(title){
         <div class="cm-eg-body">
           ${CASE_SAMPLE.map(x => `
             <div class="cm-slot"><span class="cm-tag">${x[0]}</span><p>${esc(x[1])}</p></div>`).join("")}
-          <p class="cm-note">Shorter answer? Cut Cost to two options and fold Concede into Choose.</p>
+          <p class="cm-note">Shorter answer? Compress Cost to one sentence and fold Concede into Choose.</p>
         </div>
       </details>
     </div>`;
