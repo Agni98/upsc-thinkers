@@ -1323,6 +1323,70 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 }
 
 /* --- GS-IV: the concepts that keep coming back --- */
+/* ---- Case studies: how to answer one ---- */
+.cm{margin-top:2px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.cm-moves{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.cm-moves li{
+  display:grid;grid-template-columns:26px 92px 1fr 46px;gap:12px;align-items:baseline;
+  background:var(--panel);padding:11px 14px}
+.cm-n{
+  display:grid;place-items:center;width:20px;height:20px;border-radius:50%;
+  background:var(--accent-soft);color:var(--accent);
+  font-family:var(--sans);font-size:11px;font-weight:700;align-self:center}
+.cm-name{
+  font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.9px;
+  text-transform:uppercase;color:var(--accent)}
+.cm-x{font-size:13.2px;line-height:1.58;color:var(--ink-2)}
+.cm-w{
+  font-family:var(--sans);font-size:13px;font-weight:700;color:var(--ink-3);
+  text-align:right;font-variant-numeric:tabular-nums}
+.cm-w i{font-style:normal;font-size:10px;font-weight:600;margin-left:1px}
+
+.cm-traps{margin-top:16px}
+.cm-traps > b{
+  display:block;font-size:10.5px;font-weight:700;letter-spacing:.8px;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
+.cm-traps ul{list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:6px 20px}
+.cm-traps li{font-size:12.8px;line-height:1.55;color:var(--ink-2)}
+.cm-traps em{
+  font-style:normal;font-family:var(--sans);font-size:10px;font-weight:700;
+  letter-spacing:.6px;text-transform:uppercase;color:var(--accent);
+  background:var(--accent-soft);border-radius:4px;padding:2px 6px;margin-right:8px}
+
+.cm-eg{margin-top:16px;border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--panel);overflow:hidden}
+.cm-eg > summary{
+  display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:12px 15px;cursor:pointer;
+  list-style:none;font-family:var(--serif);font-size:14.5px;font-weight:600;color:var(--ink)}
+.cm-eg > summary::-webkit-details-marker{display:none}
+.cm-eg > summary:hover{background:var(--accent-soft)}
+.cm-eg > summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.cm-eg > summary em{
+  font-style:normal;font-family:var(--sans);font-size:11.5px;font-weight:500;color:var(--ink-3)}
+.cm-eg .chev{font-size:10px;color:var(--accent);transition:transform .18s;display:inline-block}
+.cm-eg[open] > summary{border-bottom:1px solid var(--line)}
+.cm-eg[open] .chev{transform:rotate(90deg)}
+.cm-eg-body{padding:4px 15px 14px}
+.cm-slot{display:grid;grid-template-columns:82px 1fr;gap:14px;padding:11px 0}
+.cm-slot + .cm-slot{border-top:1px dashed var(--line)}
+.cm-tag{
+  font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.8px;
+  text-transform:uppercase;color:var(--accent);padding-top:3px}
+.cm-slot p{font-size:13.6px;line-height:1.68;color:var(--ink)}
+.cm-note{
+  margin-top:12px;padding-top:10px;border-top:1px solid var(--line);
+  font-size:12px;font-style:italic;color:var(--ink-2)}
+
+@media (max-width:640px){
+  .cm-moves li{grid-template-columns:22px 1fr 44px;gap:9px}
+  .cm-name{grid-column:2;font-size:10.5px}
+  .cm-x{grid-column:2 / span 2;margin-top:2px}
+  .cm-slot{grid-template-columns:1fr;gap:5px}
+}
+@media print{ .cm-eg{display:none} }
+
 .gc{margin-top:2px}
 
 /* the concept tile carries one more line than an essay tile: how often the

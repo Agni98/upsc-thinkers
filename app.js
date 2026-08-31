@@ -1037,6 +1037,69 @@ function gcQuestion(q, title, byHead){
   </span>`;
 }
 
+/* ---- How to answer a case study ----
+   Thirty-nine of the seventy-five case studies ask the same thing in different
+   words: decide, and say why. The six moves are those demands deduplicated and
+   put in an order that holds whichever subset a given case asks for. */
+const CASE_MOVES = [
+  { n:"Frame",   w:"25", x:"Say what you must decide, in one sentence. Who decides what, and by when. Do not retell the story." },
+  { n:"Collide", w:"45", x:"Name the two duties pulling against each other. Say who each one is owed to. The concept note below gives you this." },
+  { n:"Cost",    w:"60", x:"Give three options. One line each: what it saves, and who pays for it." },
+  { n:"Choose",  w:"65", x:"Pick one. Give the single reason that decided it. One reason, not a list of values." },
+  { n:"Concede", w:"25", x:"Say what your choice costs. Every real choice loses something." },
+  { n:"Close",   w:"30", x:"Say what would stop this happening again. A third of the cases ask this outright." }
+];
+const CASE_TRAPS = [
+  ["Frame",   "Retelling the case eats half your words before you begin."],
+  ["Collide", "Listing every value in the syllabus. Name the two that clash."],
+  ["Cost",    "The brave option \u2014 resign, call the press \u2014 chosen without counting its cost."],
+  ["Choose",  "Forming a committee. That is a way of not deciding."],
+  ["Concede", "The clean win. No real dilemma ends with nobody losing."],
+  ["Close",   "Stopping at the choice, when the case asked what prevents a repeat."]
+];
+const CASE_SAMPLE = [
+  ["Frame", "As Executive Engineer I must decide, before this flyover opens, whether to act on deviations I believe threaten its safety, against my Chief Engineer's instruction to ignore them."],
+  ["Collide", "Both duties are real. I owe obedience to a lawful order from a senior with longer experience and the authority to overrule me. I also owe a sound structure to people who will never know this decision was taken. Obedience is owed to someone I can argue with. Safety is owed to people who cannot agree to the risk."],
+  ["Cost", "Go ahead as advised: saves the schedule and the contractor, and puts the cost on the public, who cannot see the risk. Record everything and ask for written orders: protects safety and the chain of command together, at the price of delay. Seek transfer or report sick: protects me alone, and the defect waits for the next officer."],
+  ["Choose", "I take the second. A risk cannot be traded against a deadline when the people bearing it are absent and cannot agree to it. Safety is the condition of the project, not one interest to be weighed inside it. Asking for written orders is not defiance. It keeps the decision in the hierarchy, and an improper order is rarely written down."],
+  ["Concede", "This delays a road the public badly needs, costs the contractor real money, and will be read as insubordination by a senior who may still turn out to be right."],
+  ["Close", "I would also order an independent structural test, ask the Junior Engineers to explain their false daily reports, and have surprise inspection written into the contract. This failed on supervision, not on design."]
+];
+
+function caseMethodHTML(title){
+  if (title !== "Case Studies") return "";
+  return `
+    <div class="cm">
+      <div class="ans-head">
+        <b>How to answer one</b>
+        <span>Thirty-nine of these ask the same thing in different words: decide, and say why.
+          Six moves answer all of them. Word counts are for a 250-word answer</span>
+      </div>
+      <ol class="cm-moves">
+        ${CASE_MOVES.map((m, i) => `
+          <li>
+            <span class="cm-n">${i + 1}</span>
+            <span class="cm-name">${m.n}</span>
+            <span class="cm-x">${esc(m.x)}</span>
+            <span class="cm-w">${m.w}<i>w</i></span>
+          </li>`).join("")}
+      </ol>
+      <div class="cm-traps">
+        <b>Six ways it goes wrong</b>
+        <ul>${CASE_TRAPS.map(t => `<li><em>${t[0]}</em>${esc(t[1])}</li>`).join("")}</ul>
+      </div>
+      <details class="cm-eg">
+        <summary><span class="chev">&#9656;</span>One written out in full
+          <em>2013 &middot; the flyover with the deviations</em></summary>
+        <div class="cm-eg-body">
+          ${CASE_SAMPLE.map(x => `
+            <div class="cm-slot"><span class="cm-tag">${x[0]}</span><p>${esc(x[1])}</p></div>`).join("")}
+          <p class="cm-note">Shorter answer? Cut Cost to two options and fold Concede into Choose.</p>
+        </div>
+      </details>
+    </div>`;
+}
+
 /* The opening sentence of a definition, stripped of its emphasis marks, for
    the face of a tile. */
 function conceptGist(c){
@@ -1063,19 +1126,27 @@ function gcHTML(title){
   list.forEach(c => c.qs.forEach(q => nq.add(q)));
   const byHead = {};
   list.forEach(c => c.qs.forEach(id => { (byHead[id] = byHead[id] || []).push(c.t); }));
+  // a syllabus concept is asked; a case-study collision simply has cases in it
+  const cases = title === "Case Studies";
   const freq = c => {
     const qs = c.qs.map(id => byId[id]).filter(Boolean);
     if (!qs.length) return "";
     const yrs = qs.map(q => q.y).sort();
-    return (c.qs.length === 1 ? "asked once" : "asked " + c.qs.length + " times") +
-      (yrs.length > 1 ? ", " + yrs[0] + " to " + yrs[yrs.length - 1] : " in " + yrs[0]);
+    const n = cases
+      ? (c.qs.length === 1 ? "1 case" : c.qs.length + " cases")
+      : (c.qs.length === 1 ? "asked once" : "asked " + c.qs.length + " times");
+    const a = yrs[0], b = yrs[yrs.length - 1];      // 2015 to 2015 reads badly
+    return n + (a === b ? " in " + a : ", " + a + " to " + b);
   };
   return `
     <div class="gc">
       <div class="ans-head">
-        <b>Concepts that repeat</b>
-        <span>${list.length} ideas the paper keeps returning to, across ${nq.size} questions
-          &mdash; pick one to read it</span>
+        <b>${cases ? "Sorted by what collides" : "Concepts that repeat"}</b>
+        <span>${cases
+          ? `The same ${nq.size} cases, grouped by the two duties that pull against each other.
+             The grouping matters because move 2 turns on it &mdash; pick one to read it`
+          : `${list.length} ideas the paper keeps returning to, across ${nq.size} questions
+             &mdash; pick one to read it`}</span>
       </div>
       <div class="tilegroup">
         <div class="tiles">
@@ -1229,6 +1300,7 @@ function renderSyllabus(){
     <div class="map-card">
       <h4><span class="tmap-badge">Heading ${n}</span>${esc(r.t)}</h4>
       <div class="sub">${glossText(r.s, gs4GlossIndex())}</div>
+      ${caseMethodHTML(r.t)}
       ${gcHTML(r.t)}
       <div class="mapsec">
         <div class="ans-head">
