@@ -81,7 +81,7 @@ const ESSAY_THEMES = [
 ];
 
 /* ---- State ---- */
-const state = { view:"all", q:"", tag:"", mode:"thinker", page:0 };
+const state = { view:"home", q:"", tag:"", mode:"thinker", page:0 };
 const byId = Object.fromEntries(THINKERS.map(t => [t.id, t]));
 const catById = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));
 
@@ -183,29 +183,131 @@ const splitIdea = s => {
 const tagsHTML = t => (t.tag || []).map(x =>
   `<span class="tag ${x.toLowerCase()}">${x}</span>`).join("");
 
+/* ================= THE FRONT PAGE =================
+   Counts are read out of the data rather than written down, so the page cannot
+   promise more than the site holds. */
+function siteStats(){
+  const A  = (typeof ANSWERS !== "undefined") ? ANSWERS : {};
+  const C  = (typeof GS4_CONCEPTS !== "undefined") ? GS4_CONCEPTS : {};
+  const Q4 = (typeof GS4_PYQ !== "undefined") ? GS4_PYQ : [];
+  const OO = (typeof OPENOUTS !== "undefined") ? OPENOUTS : {};
+  return {
+    headings: SYLLABUS.length,
+    concepts: Object.keys(C).reduce((n, k) => n + C[k].length, 0),
+    gsq:      Q4.length,
+    cases:    Q4.filter(q => q.sec === "B").length,
+    themes:   ESSAY_THEMES.length,
+    paras:    Object.keys(A).reduce((n, k) => n + A[k].length, 0),
+    opens:    Object.keys(OO).length,
+    essays:   (typeof ESSAYS !== "undefined") ? Object.keys(ESSAYS).length : 0,
+    topics:   (typeof PYQ_PAPERS !== "undefined")
+                ? PYQ_PAPERS.reduce((n, p) => n + p.a.length + p.b.length, 0) : 0,
+    thinkers: THINKERS.length,
+    quotes:   THINKERS.reduce((n, t) => n + t.quotes.length, 0),
+    works:    (typeof WORKLAB !== "undefined") ? Object.keys(WORKLAB).length : 0
+  };
+}
+
+function paperCard(o){
+  return `
+    <section class="paper">
+      <div class="paper-h">
+        <span class="paper-mark">${o.mark}</span>
+        <div class="paper-t">
+          <h3>${o.t}<em>${o.marks}</em></h3>
+          <p>${o.d}</p>
+        </div>
+      </div>
+      <ul class="paper-stats">
+        ${o.stats.map(x => `<li><b>${x[0]}</b><span>${x[1]}</span></li>`).join("")}
+      </ul>
+      <div class="paper-go">
+        ${o.go.map((g, i) => `<button class="gobtn ${i ? "" : "primary"}" data-view="${g[0]}">${
+          g[1]}${i ? "" : " <i>&rarr;</i>"}</button>`).join("")}
+      </div>
+    </section>`;
+}
+
+function renderHome(){
+  const s = siteStats();
+  return `
+    <div class="home-lead">
+      <h2>Two papers, prepared from the questions backwards</h2>
+      <p>Every concept note, model paragraph and essay here is built from what the
+         Commission has actually asked between 2013 and 2025, and carries the
+         questions it answers. Start with a paper.</p>
+    </div>
+
+    <div class="papers">
+      ${paperCard({
+        mark:"\u2696\uFE0F", t:"GS-IV Ethics", marks:"250 marks",
+        d:"The syllabus, heading by heading. Under each, the ideas the paper keeps returning to, written plainly, with the questions that asked them.",
+        stats:[[s.headings, "syllabus headings"], [s.concepts, "concept notes"],
+               [s.gsq, "past questions mapped"], [s.cases, "case studies"]],
+        go:[["syllabus", "Open the syllabus map"], ["ethics", "Thinkers for Ethics"]]
+      })}
+      ${paperCard({
+        mark:"\u270D\uFE0F", t:"Essay Paper", marks:"250 marks",
+        d:"Nine themes covering every past topic. Each carries model paragraphs you can adapt, and the material to open each one out with.",
+        stats:[[s.themes, "essay themes"], [s.paras, "model paragraphs"],
+               [s.essays, "full model essays"], [s.topics, "past topics"]],
+        go:[["themes", "Open the theme map"], ["essays", "Model essays"], ["pyq", "Past topics"]]
+      })}
+    </div>
+
+    <div class="home-sec">Reference</div>
+    <div class="ref-row">
+      ${[["all", "\u{1F4DA}", "Thinkers", s.thinkers, "profiles, each with ideas, quotations and how to use them"],
+         ["quotes", "\u{1F4AC}", "Quote bank", s.quotes, "quotations, attributed and searchable"],
+         ["worklab", "\u{1F4D6}", "Works in depth", s.works, "books read closely, chapter by chapter"]]
+        .map(r => `
+        <button class="refcard" data-view="${r[0]}">
+          <span class="ref-ico">${r[1]}</span>
+          <b>${r[2]}</b>
+          <span class="ref-n">${r[3]}</span>
+          <span class="ref-d">${r[4]}</span>
+        </button>`).join("")}
+    </div>`;
+}
+
 /* ================= NAVIGATION ================= */
 function renderNav(){
-  const views = [
-    { id:"all",      ico:"\u{1F4DA}", name:"All Thinkers",       n:THINKERS.length },
-    { id:"essay",    ico:"\u{270D}",  name:"Essay Paper",        n:THINKERS.filter(t => t.tag.includes("Essay")).length },
-    { id:"ethics",   ico:"\u{2696}",  name:"GS-IV Ethics",       n:THINKERS.filter(t => t.tag.includes("Ethics")).length },
-    { id:"quotes",   ico:"\u{1F4AC}", name:"Quote Bank",         n:THINKERS.reduce((a, t) => a + t.quotes.length, 0) },
-    { id:"syllabus", ico:"\u{1F5FA}", name:"GS-IV Syllabus Map",  n:SYLLABUS.length },
-    { id:"themes",   ico:"\u{1F3AF}", name:"Essay Theme Map",     n:ESSAY_THEMES.length },
-    { id:"essays",   ico:"📝", name:"Model Essays",
-      n:(typeof ESSAYS !== "undefined") ? Object.keys(ESSAYS).length : 0 },
-    { id:"worklab",  ico:"\u{1F4D6}", name:"Works in Depth",
-      n:(typeof WORKLAB !== "undefined") ? Object.keys(WORKLAB).length : 0 },
-    { id:"pyq",      ico:"\u{1F5C3}", name:"Past Questions",
-      n:(typeof PYQ_PAPERS !== "undefined")
-          ? PYQ_PAPERS.reduce((a, p) => a + p.a.length + p.b.length, 0) : 0 }
+  const tagged = x => THINKERS.filter(t => t.tag.includes(x)).length;
+  const groups = [
+    { label:"", items:[
+      { id:"home", ico:"\u{1F3E0}", name:"Start here" }
+    ]},
+    { label:"GS-IV Ethics", items:[
+      { id:"syllabus", ico:"\u{1F5FA}\uFE0F", name:"Syllabus Map", n:SYLLABUS.length },
+      { id:"ethics",   ico:"\u2696\uFE0F",    name:"Thinkers for Ethics", n:tagged("Ethics") }
+    ]},
+    { label:"Essay Paper", items:[
+      { id:"themes", ico:"\u{1F3AF}", name:"Theme Map", n:ESSAY_THEMES.length },
+      { id:"essays", ico:"\u{1F4DD}", name:"Model Essays",
+        n:(typeof ESSAYS !== "undefined") ? Object.keys(ESSAYS).length : 0 },
+      { id:"pyq",    ico:"\u{1F5C3}\uFE0F", name:"Past Topics",
+        n:(typeof PYQ_PAPERS !== "undefined")
+            ? PYQ_PAPERS.reduce((a, p) => a + p.a.length + p.b.length, 0) : 0 },
+      { id:"essay",  ico:"\u270D\uFE0F",    name:"Thinkers for Essay", n:tagged("Essay") }
+    ]},
+    { label:"Reference", items:[
+      { id:"all",     ico:"\u{1F4DA}", name:"All Thinkers", n:THINKERS.length },
+      { id:"quotes",  ico:"\u{1F4AC}", name:"Quote Bank",
+        n:THINKERS.reduce((a, t) => a + t.quotes.length, 0) },
+      { id:"worklab", ico:"\u{1F4D6}", name:"Works in Depth",
+        n:(typeof WORKLAB !== "undefined") ? Object.keys(WORKLAB).length : 0 }
+    ]}
   ];
-  document.getElementById("viewNav").innerHTML = views.map(v => `
-    <button class="nav-item ${(state.view === v.id ||
-        (v.id === "worklab" && state.view.startsWith("work:"))) ? "active" : ""}" data-view="${v.id}">
-      <span class="nav-ico">${v.ico}</span><span class="nav-name">${v.name}</span>
-      <span class="nav-count">${v.n}</span>
-    </button>`).join("");
+  const on = id => state.view === id ||
+    (id === "worklab" && state.view.startsWith("work:")) ||
+    (id === "essays"  && state.view.startsWith("essay:"));
+  document.getElementById("viewNav").innerHTML = groups.map(g => `
+    ${g.label ? `<div class="side-label">${g.label}</div>` : ""}
+    ${g.items.map(v => `
+      <button class="nav-item ${on(v.id) ? "active" : ""}" data-view="${v.id}">
+        <span class="nav-ico">${v.ico}</span><span class="nav-name">${v.name}</span>
+        ${v.n === undefined ? "" : `<span class="nav-count">${v.n}</span>`}
+      </button>`).join("")}`).join("");
 
   document.getElementById("catNav").innerHTML = CATEGORIES.map(c => `
     <button class="nav-item ${state.view === c.id ? "active" : ""}" data-view="${c.id}">
@@ -1145,7 +1247,8 @@ function renderSyllabus(){
 
 function render(){
   const main = document.getElementById("main");
-  if (state.view.startsWith("essay:")) main.innerHTML = renderEssay(state.view.slice(6), state.mode);
+  if (state.view === "home")          main.innerHTML = renderHome();
+  else if (state.view.startsWith("essay:")) main.innerHTML = renderEssay(state.view.slice(6), state.mode);
   else if (state.view === "essays")   main.innerHTML = renderEssayList();
   else if (state.view === "pyq")      main.innerHTML = renderPYQ();
   else if (state.view.startsWith("work:")) {
