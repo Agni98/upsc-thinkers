@@ -1063,9 +1063,12 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 .tile:hover .tile-go,.tile.on .tile-go{opacity:1}
 .tile.on .tile-go i{transform:rotate(90deg);display:inline-block}
 
-.tile-panels .ans{
+.tilegroup .ans{
   margin-top:14px;background:var(--bg);border:1px solid var(--line);
   border-left:3px solid var(--accent);border-radius:var(--radius);padding:20px 22px 18px}
+/* an open panel sits inside the grid, across every column, so it reads as
+   belonging to the row above it and not to the end of the list */
+.tiles > .ans,.tiles > .gc-item{grid-column:1 / -1;margin-top:0}
 .tile-close{
   margin-top:16px;font-family:var(--sans);font-size:11.5px;font-weight:600;
   padding:6px 15px;border:1px solid var(--line);border-radius:999px;
@@ -1077,18 +1080,18 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   .tile{aspect-ratio:auto;min-height:0;padding:12px}
   .tile-for{-webkit-line-clamp:3;font-size:11.5px}
   .tile-go{display:none}
-  .tile-panels .ans{padding:16px 14px 14px}
+  .tilegroup .ans{padding:16px 14px 14px}
 }
 @media print{
-  .tiles,.tile-close{display:none}
-  .tile-panels .ans[hidden]{display:block !important}
+  .tiles > .tile,.tile-close{display:none}
+  .tilegroup .ans[hidden]{display:block !important}
 }
 
 
 /* --- Model paragraphs: readability over decoration ---
    Inside a tile panel the card sits on white, so the cream call-out blocks
    read as raised rather than washed out. */
-.tile-panels .ans{background:var(--panel)}
+.tilegroup .ans{background:var(--panel)}
 .ans-q{background:var(--bg);border-color:var(--line)}
 
 /* --- Essay Theme Map: index page + one page per theme --- */
@@ -1399,7 +1402,7 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 /* a selected tile fills with accent-soft, which is the badge's own colour, so
    the badge takes the panel ground to keep its shape */
 .tile.on .tile-freq{background:var(--panel)}
-.tile-panels .gc-item{margin-top:14px;margin-bottom:0}
+.tilegroup .gc-item{margin-top:14px;margin-bottom:0}
 
 /* the thinker roster, now that it sits under the concepts */
 .mapsec{margin-top:18px;border-top:1px solid var(--line)}
@@ -1461,5 +1464,5 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 @media (max-width:560px){
   .gc-item{padding:16px 14px 14px}
 }
-@media print{ .gc .tiles{display:none} .tile-panels .gc-item[hidden]{display:block !important} }
+@media print{ .gc .tiles > .tile{display:none} .tilegroup .gc-item[hidden]{display:block !important} }
 .gc-item p em{font-style:italic;color:var(--ink)}

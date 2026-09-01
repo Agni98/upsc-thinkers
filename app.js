@@ -453,20 +453,72 @@ function gs4Skip(title){
                 GS4_GLOSS[key.slice(2)] && GS4_GLOSS[key.slice(2)].c === title;
 }
 
-/* Show one tile's panel and close the rest of its group. */
-function openTile(group, i, scroll){
-  if (!group) return null;
-  group.querySelectorAll("[data-panel]").forEach(x => { x.hidden = true; });
+/* ---- Opening a tile ----
+   The panel belongs directly under the row its tile is in. Rendered after the
+   whole grid, clicking the first of eleven tiles opened the reading below the
+   eleventh, which on a phone meant scrolling past everything else to reach it.
+   So the panel is moved into the grid, spanning every column, right after the
+   last tile sharing its row. */
+function stowPanel(group, art){
+  const hold = group.querySelector(".tile-panels");
+  if (!hold || art.parentElement === hold) return;
+  const i = +art.dataset.panel;
+  const after = [...hold.children].find(x => +x.dataset.panel > i);
+  if (after) hold.insertBefore(art, after); else hold.appendChild(art);
+}
+
+function placePanel(group, art, tile){
+  const grid = group.querySelector(".tiles");
+  if (!grid) return;
+  // out of the grid first: an open panel spans a full row and would otherwise
+  // split the very row we are trying to measure
+  stowPanel(group, art);
+  const top = Math.round(tile.getBoundingClientRect().top);
+  let last = tile;
+  grid.querySelectorAll(".tile").forEach(t => {
+    if (Math.round(t.getBoundingClientRect().top) === top) last = t;
+  });
+  last.after(art);
+}
+
+function closeTiles(group){
+  group.querySelectorAll("[data-panel]").forEach(x => {
+    x.hidden = true;
+    stowPanel(group, x);
+  });
   group.querySelectorAll(".tile").forEach(x => {
     x.classList.remove("on"); x.setAttribute("aria-expanded", "false");
   });
+}
+
+/* Show one tile's panel and close the rest of its group. */
+function openTile(group, i, scroll){
+  if (!group) return null;
+  closeTiles(group);
   const t = group.querySelector('.tile[data-tile="' + i + '"]');
   const art = group.querySelector('[data-panel="' + i + '"]');
-  if (t) { t.classList.add("on"); t.setAttribute("aria-expanded", "true"); }
-  if (art) art.hidden = false;
-  if (scroll) (art || t || group).scrollIntoView({ behavior:"instant", block:"start" });
+  if (!art) return null;
+  if (t) {
+    t.classList.add("on"); t.setAttribute("aria-expanded", "true");
+    placePanel(group, art, t);
+  }
+  art.hidden = false;
+  if (scroll) (t || art).scrollIntoView({ behavior:"instant", block:"start" });
   return art;
 }
+
+/* A narrower window regroups the rows, so an open panel has to move with them. */
+let tileReflow = null;
+window.addEventListener("resize", () => {
+  clearTimeout(tileReflow);
+  tileReflow = setTimeout(() => {
+    document.querySelectorAll(".tilegroup").forEach(g => {
+      const art = g.querySelector("[data-panel]:not([hidden])");
+      const t = g.querySelector(".tile.on");
+      if (art && t) placePanel(g, art, t);
+    });
+  }, 120);
+});
 
 /* Where a concept note develops a term, so the card can offer the way to it. */
 function conceptSite(title){
@@ -1665,14 +1717,7 @@ document.addEventListener("click", e => {
   if (tile) {
     const group = tile.closest(".tilegroup"), i = tile.dataset.tile;
     const wasOpen = !group.querySelector(`[data-panel="${i}"]`).hidden;
-    if (wasOpen) {
-      group.querySelectorAll("[data-panel]").forEach(x => { x.hidden = true; });
-      group.querySelectorAll(".tile").forEach(x => {
-        x.classList.remove("on"); x.setAttribute("aria-expanded", "false");
-      });
-    } else {
-      openTile(group, i, false);
-    }
+    if (wasOpen) closeTiles(group); else openTile(group, i, false);
     if (tile.classList.contains("tile-close"))
       group.querySelector(`.tile[data-tile="${i}"]`).scrollIntoView({ behavior:"instant", block:"center" });
     return;
