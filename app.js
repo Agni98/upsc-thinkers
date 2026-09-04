@@ -81,7 +81,8 @@ const ESSAY_THEMES = [
 ];
 
 /* ---- State ---- */
-const state = { view:"home", q:"", tag:"", mode:"thinker", page:0 };
+const state = { view:"home", q:"", tag:"", mode:"thinker", page:0,
+                sel:null, reading:false, nav:"views" };
 const byId = Object.fromEntries(THINKERS.map(t => [t.id, t]));
 const catById = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));
 
@@ -271,7 +272,29 @@ function renderHome(){
 }
 
 /* ================= NAVIGATION ================= */
+/* Inside the syllabus map the sidebar carries the sixteen headings. A fourth
+   column would not fit beside the map's own two, so this one is borrowed. */
+function renderSyllabusNav(){
+  document.getElementById("viewNav").innerHTML = `
+    <button class="nav-item nav-back" data-nav="views">
+      <span class="nav-ico">&larr;</span><span class="nav-name">All views</span>
+    </button>
+    <div class="side-label">GS-IV Syllabus</div>
+    ${SYLLABUS.map((r, i) => `
+      <button class="nav-item ${state.page === i + 1 ? "active" : ""}" data-page="${i + 1}">
+        <span class="nav-ico syl-no">${i + 1}</span>
+        <span class="nav-name">${esc(r.t)}</span>
+        <span class="nav-count">${sylStats(r).concepts.length}</span>
+      </button>`).join("")}`;
+  document.getElementById("catNav").innerHTML = "";
+  const lab = document.getElementById("catLabel");
+  if (lab) lab.hidden = true;
+}
+
 function renderNav(){
+  if (state.view === "syllabus" && state.nav === "syllabus") return renderSyllabusNav();
+  const lab = document.getElementById("catLabel");
+  if (lab) lab.hidden = false;
   const tagged = x => THINKERS.filter(t => t.tag.includes(x)).length;
   const groups = [
     { label:"", items:[
@@ -1278,95 +1301,144 @@ function gs4HTML(title){
     </div>`;
 }
 
-/* ---- GS-IV Syllabus Map: an index page, then one page per heading ----
-   Same shape and the same controls as the Essay Theme Map, because a reader
-   moving between the two maps should not have to learn a second set. */
+/* ---- GS-IV Syllabus Map ----
+   One heading at a time. Its contents in the middle column, whatever is chosen
+   from them on the right. There is no index page and no pager any more: with
+   every heading in the sidebar, both were describing a list already on screen. */
 function sylStats(r){
   const con = (typeof GS4_CONCEPTS !== "undefined" && GS4_CONCEPTS[r.t]) || [];
   return { thinkers:r.ids.filter(id => byId[id]).length,
            concepts:con, questions:gs4For(r.t).length };
 }
 
-function syllabusIndexHTML(){
+/* What a heading contains, in the order it should be read. */
+function sylItems(r){
+  const items = [];
+  const cases = r.t === "Case Studies";
+  if (cases) items.push({ id:"method", g:"How to answer one", t:"The six moves", n:0 });
+  const list = (typeof GS4_CONCEPTS !== "undefined" && GS4_CONCEPTS[r.t]) || [];
+  const g = cases ? "Sorted by what collides" : "Concepts that repeat";
+  list.forEach((c, i) => items.push({ id:"c:" + i, g:g, t:c.t, n:c.qs.length }));
+  const th = r.ids.filter(id => byId[id]).length;
+  if (th) items.push({ id:"thinkers", g:"Also on this heading", t:"Thinkers", n:th });
+  const nq = gs4For(r.t).length;
+  if (nq) items.push({ id:"pyq", g:"Also on this heading", t:"Past questions", n:nq });
+  return items;
+}
+
+function sylSel(items){
+  if (!items.length) return null;
+  return items.some(x => x.id === state.sel) ? state.sel : items[0].id;
+}
+
+/* How often the paper has come back to a concept; cases are counted, not asked. */
+function conceptFreq(title, c, byQ){
+  const qs = c.qs.map(id => byQ[id]).filter(Boolean);
+  if (!qs.length) return "";
+  const yrs = qs.map(q => q.y).sort();
+  const n = title === "Case Studies"
+    ? (c.qs.length === 1 ? "1 case" : c.qs.length + " cases")
+    : (c.qs.length === 1 ? "asked once" : "asked " + c.qs.length + " times");
+  const a = yrs[0], b = yrs[yrs.length - 1];
+  return n + (a === b ? " in " + a : ", " + a + " to " + b);
+}
+
+function conceptPane(title, i){
+  const list = (typeof GS4_CONCEPTS !== "undefined" && GS4_CONCEPTS[title]) || [];
+  const c = list[i];
+  if (!c) return "";
+  const byQ = {};
+  if (typeof GS4_PYQ !== "undefined") GS4_PYQ.forEach(q => { byQ[q.id] = q; });
+  const byHead = {};
+  list.forEach(x => x.qs.forEach(id => { (byHead[id] = byHead[id] || []).push(x.t); }));
+  const qs = c.qs.map(id => byQ[id]).filter(Boolean);
+  const f = conceptFreq(title, c, byQ);
   return `
-    <div class="sec-head"><h3>GS Paper IV &mdash; Syllabus Map</h3>
-      <p>The ${SYLLABUS.length} headings the paper is set from. Open one for the thinkers
-         who answer it, the concepts it keeps returning to, and every question the
-         Commission has asked under it since 2013.</p></div>
-    <div class="tmap-index">
-      ${SYLLABUS.map((r, i) => {
-        const st = sylStats(r);
-        const show = st.concepts.slice(0, 4), rest = st.concepts.length - show.length;
-        const bits = [st.thinkers + " thinker" + (st.thinkers === 1 ? "" : "s")];
-        if (st.concepts.length) bits.push(st.concepts.length + " concepts");
-        if (st.questions)  bits.push(st.questions + " question" + (st.questions === 1 ? "" : "s"));
-        return `
-        <button class="tmap-card" data-page="${i + 1}">
-          <span class="tmap-no">${i + 1}</span>
-          <b>${esc(r.t)}</b>
-          <span class="tmap-sub">${esc(r.s)}</span>
-          ${show.length ? `<ul class="tmap-list">
-            ${show.map(c => `<li>${esc(c.t)}</li>`).join("")}
-            ${rest > 0 ? `<li class="tmap-more">and ${rest} more</li>` : ""}</ul>` : ""}
-          <span class="tmap-meta">${bits.join(" &middot; ")}<i>&rarr;</i></span>
-        </button>`; }).join("")}
+    <article class="gc-item sm-pane">
+      <h5><span class="gc-no">${i + 1}</span>${esc(c.t)}${f ? `<em>${esc(f)}</em>` : ""}</h5>
+      ${c.d.map(x => `<p>${gloss2(x, gs4Skip(c.t))}</p>`).join("")}
+      ${qs.length ? `<div class="gc-qs"><b>${
+          title === "Case Studies" ? "The cases" : "Where it was asked"}</b>${
+          qs.map(q => gcQuestion(q, c.t, byHead)).join("")}</div>` : ""}
+      ${c.src ? `<p class="gc-src">${esc(c.src)}</p>` : ""}
+    </article>`;
+}
+
+function thinkerPane(r){
+  const n = r.ids.filter(id => byId[id]).length;
+  return `
+    <div class="sm-pane">
+      <div class="ans-head"><b>Thinkers on this heading</b>
+        <span>${n} profile${n === 1 ? "" : "s"} mapped here &mdash; open one to read it</span></div>
+      <div class="pills">
+        ${r.ids.map(id => byId[id]
+            ? `<button class="pill" data-open="${id}">${esc(byId[id].name)}</button>` : "").join("")}
+      </div>
     </div>`;
 }
 
-function syllabusPager(n){
-  const last = SYLLABUS.length, prev = n - 1, next = n + 1;
-  const side = (to, dir) => {
-    const label = to === 0 ? "Index" : (dir < 0 ? "Previous" : "Next");
-    const name  = to === 0 ? "All " + last + " headings" : esc(SYLLABUS[to - 1].t);
-    const arrow = dir < 0 ? "&larr;" : "&rarr;";
-    return `<button class="pager-btn ${dir < 0 ? "left" : "right"}" data-page="${to}">
-        ${dir < 0 ? `<i>${arrow}</i>` : ""}
-        <span><em>${label}</em>${name}</span>
-        ${dir > 0 ? `<i>${arrow}</i>` : ""}
-      </button>`;
-  };
+function questionPane(title){
+  const qs = gs4For(title);
+  if (!qs.length) return "";
+  const a = qs.filter(q => q.sec === "A"), b = qs.filter(q => q.sec === "B");
+  const yrs = qs.map(q => q.y);
+  const span = Math.min.apply(null, yrs) + " to " + Math.max.apply(null, yrs);
   return `
-    <div class="pager">
-      ${side(prev, -1)}
-      <div class="pager-mid">
-        <div class="pager-dots many">
-          ${SYLLABUS.map((x, i) => `<button class="pager-dot ${i + 1 === n ? "on" : ""}"
-             data-page="${i + 1}" title="${esc(x.t)}" aria-label="${esc(x.t)}"
-             aria-current="${i + 1 === n ? "true" : "false"}">${i + 1}</button>`).join("")}
-        </div>
-      </div>
-      ${side(next > last ? 0 : next, 1)}
+    <div class="sm-pane g4-list">
+      <div class="ans-head"><b>Past questions</b>
+        <span>${qs.length} from ${span} &middot; ${a.length} theory${
+          b.length ? ", " + b.length + " case " + (b.length === 1 ? "study" : "studies") : ""}</span></div>
+      ${title.indexOf("Moral Thinkers") === 0
+        ? `<p class="g4-note">The paper sets one theme for moral thinkers, so this pool is shared with the other moral-thinkers heading.</p>` : ""}
+      ${title === "Case Studies"
+        ? `<p class="g4-note">Every Section B case from 2013 to 2025, gathered from all themes.</p>` : ""}
+      ${a.length ? `<h6>Section A &middot; theory</h6><ul>${gs4Rows(a)}</ul>` : ""}
+      ${b.length ? `<h6>Section B &middot; case studies</h6><ul>${gs4Rows(b)}</ul>` : ""}
     </div>`;
+}
+
+function sylRead(r, sel){
+  if (sel === "method")   return caseMethodHTML(r.t);
+  if (sel === "thinkers") return thinkerPane(r);
+  if (sel === "pyq")      return questionPane(r.t);
+  if (sel && sel.charAt(0) === "c") return conceptPane(r.t, +sel.slice(2));
+  return `<div class="empty"><b>Nothing here yet</b>No notes written for this heading.</div>`;
 }
 
 function renderSyllabus(){
-  const n = state.page | 0;
-  if (!n || !SYLLABUS[n - 1]) { state.page = 0; return syllabusIndexHTML(); }
+  let n = state.page | 0;
+  if (!n || !SYLLABUS[n - 1]) { n = 1; state.page = 1; }
   const r = SYLLABUS[n - 1];
+  const items = sylItems(r);
+  const sel = sylSel(items);
+  const groups = [];
+  items.forEach(it => {
+    const last = groups[groups.length - 1];
+    if (last && last.g === it.g) last.items.push(it); else groups.push({ g:it.g, items:[it] });
+  });
   return `
-    <div class="pager-top">
-      <button class="backlink" data-page="0">&larr; GS-IV Syllabus Map</button>
-      <span class="pager-count">Heading ${n} of ${SYLLABUS.length}</span>
-    </div>
-    ${syllabusPager(n)}
-    <div class="map-card">
-      <h4><span class="tmap-badge">Heading ${n}</span>${esc(r.t)}</h4>
-      <div class="sub">${glossText(r.s, gs4GlossIndex())}</div>
-      ${caseMethodHTML(r.t)}
-      ${gcHTML(r.t)}
-      <div class="mapsec">
-        <div class="ans-head">
-          <b>Thinkers on this heading</b>
-          <span>${r.ids.length} profiles mapped here &mdash; open one to read it</span>
+    <div class="sm${state.reading ? " reading" : ""}">
+      <aside class="sm-list">
+        <div class="sm-head">
+          <span class="sm-no">Heading ${n} of ${SYLLABUS.length}</span>
+          <h4>${esc(r.t)}</h4>
+          <p>${glossText(r.s, gs4GlossIndex())}</p>
         </div>
-        <div class="pills">
-          ${r.ids.map(id => byId[id]
-              ? `<button class="pill" data-open="${id}">${esc(byId[id].name)}</button>` : "").join("")}
-        </div>
-      </div>
-      ${gs4HTML(r.t)}
-    </div>
-    ${syllabusPager(n)}`;
+        ${groups.map(g => `
+          <div class="sm-group">
+            <b>${esc(g.g)}</b>
+            ${g.items.map(it => `
+              <button class="sm-pick${it.id === sel ? " on" : ""}" data-sel="${esc(it.id)}">
+                <span class="sm-t">${esc(it.t)}</span>
+                ${it.n ? `<span class="sm-n">${it.n}</span>` : ""}
+              </button>`).join("")}
+          </div>`).join("")}
+      </aside>
+      <section class="sm-read">
+        <button class="sm-back" data-sel="">&larr; ${esc(r.t)}</button>
+        ${sylRead(r, sel)}
+      </section>
+    </div>`;
 }
 
 function render(){
@@ -1694,8 +1766,9 @@ document.addEventListener("click", e => {
     const site = conceptSite(con.dataset.concept);
     if (site) {
       glossHide(true);
-      state.view = "syllabus"; state.page = site.h + 1; render();
-      openTile(document.querySelector(".map-card .tilegroup"), site.c, true);
+      state.view = "syllabus"; state.nav = "syllabus";
+      state.page = site.h + 1; state.sel = "c:" + site.c; state.reading = true;
+      render();
     }
     return;
   }
@@ -1755,10 +1828,24 @@ document.addEventListener("click", e => {
   const es = e.target.closest("[data-essay]");
   if (es) { state.view = "essay:" + es.dataset.essay; render(); return; }
 
+  const sel = e.target.closest("[data-sel]");
+  if (sel) {
+    const v = sel.dataset.sel;
+    state.sel = v || null;
+    state.reading = !!v;                 // on a narrow screen the panes take turns
+    render();
+    return;
+  }
+
+  const nb = e.target.closest("[data-nav]");
+  if (nb) { state.nav = nb.dataset.nav; renderNav(); return; }
+
   const pg = e.target.closest("[data-page]");
   if (pg) {
     if (state.view !== "syllabus") state.view = "themes";   // both maps page the same way
     state.page = +pg.dataset.page;
+    state.sel = null; state.reading = false;   // a new heading opens at its first item
+    document.getElementById("sidebar").classList.remove("open");
     render();
     return;
   }
@@ -1766,7 +1853,9 @@ document.addEventListener("click", e => {
   const nav = e.target.closest("[data-view]");
   if (nav) {
     state.view = nav.dataset.view;
-    state.page = 0;
+    state.page = state.view === "syllabus" ? 1 : 0;
+    state.nav = state.view === "syllabus" ? "syllabus" : "views";
+    state.sel = null; state.reading = false;
     document.getElementById("sidebar").classList.remove("open");
     render();
     return;

@@ -39,7 +39,7 @@
 <div class="shell">
   <nav class="sidebar" id="sidebar">
     <div id="viewNav"></div>
-    <div class="side-label">Schools &amp; Traditions</div>
+    <div class="side-label" id="catLabel">Schools &amp; Traditions</div>
     <div id="catNav"></div>
   </nav>
 
@@ -59,7 +59,7 @@
   // copy uses a fixed version instead and lets the browser cache properly.
   // Bump BUILD when the data files change.
   (function () {
-    var BUILD = '2026-08-29g';
+    var BUILD = '2026-09-04c';
     var local = ['localhost', '127.0.0.1', '::1', ''].indexOf(location.hostname) !== -1
                 || location.protocol === 'file:';
     var v = local ? Date.now() : BUILD;

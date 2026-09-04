@@ -1026,6 +1026,89 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 @media print{ .wl-prose h2{break-after:avoid} .wl-timeline{break-inside:avoid} }
 
 
+/* ================= GS-IV SYLLABUS MAP: TWO PANES =================
+   The contents of a heading on the left, whatever is chosen from them on the
+   right. The reading always arrives in the same place, which is the one thing
+   a grid of tiles could not promise however the panel was placed. */
+.sm{display:grid;grid-template-columns:264px minmax(0,1fr);align-items:start}
+.sm-list{
+  position:sticky;top:79px;max-height:calc(100vh - 100px);overflow-y:auto;
+  padding:2px 20px 20px 0;border-right:1px solid var(--line);
+  display:flex;flex-direction:column;gap:20px}
+.sm-list::-webkit-scrollbar{width:7px}
+.sm-list::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+.sm-read{padding-left:28px;min-width:0}
+
+.sm-head{display:flex;flex-direction:column;gap:5px}
+.sm-no{
+  font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.9px;
+  text-transform:uppercase;color:var(--accent)}
+.sm-head h4{
+  font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.22;
+  letter-spacing:-.2px;color:var(--ink)}
+.sm-head p{font-size:12.2px;line-height:1.55;color:var(--ink-3)}
+
+.sm-group{display:flex;flex-direction:column;gap:1px}
+.sm-group > b{
+  font-size:9.8px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;
+  color:var(--ink-3);margin-bottom:6px}
+.sm-pick{
+  display:flex;align-items:baseline;gap:9px;width:100%;text-align:left;
+  padding:7px 10px;border-radius:7px;border:0;background:none;cursor:pointer;
+  font:inherit;transition:.13s}
+.sm-pick:hover{background:var(--line-2)}
+.sm-pick:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.sm-pick.on{background:var(--accent-soft)}
+.sm-t{flex:1;font-size:13.2px;line-height:1.42;color:var(--ink-2)}
+.sm-pick.on .sm-t{color:var(--accent);font-weight:600}
+.sm-n{
+  flex:0 0 auto;font-family:var(--sans);font-size:10.5px;font-weight:700;
+  color:var(--ink-3);font-variant-numeric:tabular-nums}
+.sm-pick.on .sm-n{color:var(--accent)}
+
+.sm-pane{
+  background:var(--panel);border:1px solid var(--line);
+  border-left:3px solid var(--accent);border-radius:var(--radius);
+  padding:20px 22px 18px}
+.sm-pane .ans-head{margin-top:0}
+.sm-back{display:none}
+
+/* the sidebar, while it is carrying the sixteen headings */
+.nav-back{color:var(--accent) !important;font-weight:600}
+.syl-no{
+  font-family:var(--sans);font-size:10.5px;font-weight:700;
+  color:var(--ink-3);font-variant-numeric:tabular-nums}
+.nav-item.active .syl-no{color:inherit}
+
+/* Below this the reading column falls under about 520px, which is too narrow
+   for six paragraphs and a call-out, so the panes take turns instead. */
+@media (max-width:1120px){
+  .sm{grid-template-columns:1fr}
+  .sm-list{
+    position:static;max-height:none;overflow:visible;
+    border-right:0;padding:0 0 4px}
+  .sm-read{padding-left:0}
+  .sm.reading .sm-list{display:none}
+  .sm:not(.reading) .sm-read{display:none}
+  .sm.reading .sm-back{
+    display:inline-flex;align-items:center;gap:7px;margin-bottom:14px;
+    font-family:var(--sans);font-size:12.5px;font-weight:600;color:var(--accent);
+    padding:6px 12px;border:1px solid var(--line);border-radius:20px;
+    background:var(--panel);cursor:pointer}
+  .sm.reading .sm-back:hover{border-color:var(--accent);background:var(--accent-soft)}
+  .sm.reading .sm-back{padding:9px 14px}
+  .sm-pane{padding:16px 15px 14px}
+  /* a finger needs more than a pointer does */
+  .sm-pick{padding:11px 12px}
+  .sm-t{font-size:14px}
+  .sm-list{gap:24px}
+}
+@media print{
+  .sm{grid-template-columns:1fr}
+  .sm-list,.sm-back{display:none}
+  .sm-read{padding-left:0}
+}
+
 /* ================= ESSAY THEME MAP: TILES ================= */
 .ans-head{margin:16px 0 12px}
 .ans-head > b{
