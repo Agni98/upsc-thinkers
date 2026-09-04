@@ -935,6 +935,7 @@ function renderThemes(){
   const t = ESSAY_THEMES[n - 1];
   const items = themeItems(t);
   const sel = items.some(x => x.id === state.sel) ? state.sel : (items[0] ? items[0].id : null);
+  const walk = mapWalk(), at = mapWhere(walk, n, sel);
   const groups = [];
   items.forEach(it => {
     const last = groups[groups.length - 1];
@@ -947,6 +948,7 @@ function renderThemes(){
           <span class="sm-no">Theme ${n} of ${ESSAY_THEMES.length}</span>
           <h4>${esc(t.t)}</h4>
           <p>${esc(t.s)}</p>
+  ${progressHTML(walk, at)}
         </div>
         ${groups.map(g => `
           <div class="sm-group">
@@ -962,6 +964,7 @@ function renderThemes(){
       <section class="sm-read">
         <button class="sm-back" data-sel="">&larr; ${esc(t.t)}</button>
         ${themeRead(t, sel)}
+        ${moveHTML(walk, at, t.t)}
       </section>
     </div>`;
 }
@@ -1117,6 +1120,59 @@ function sylStats(r){
            concepts:con, questions:gs4For(r.t).length };
 }
 
+/* Every item in the open map, in reading order, so that previous and next can
+   cross from the last item of one heading into the first of the next, and so
+   that progress has a denominator. */
+function mapWalk(){
+  const out = [];
+  if (state.view === "syllabus")
+    SYLLABUS.forEach((r, i) => sylItems(r).forEach(it =>
+      out.push({ p:i + 1, id:it.id, t:it.t, h:r.t })));
+  else if (state.view === "themes")
+    ESSAY_THEMES.forEach((t, i) => themeItems(t).forEach(it =>
+      out.push({ p:i + 1, id:it.id, t:it.t, h:t.t })));
+  return out;
+}
+
+function mapWhere(walk, page, sel){
+  for (let i = 0; i < walk.length; i++)
+    if (walk[i].p === page && walk[i].id === sel) return i;
+  return -1;
+}
+
+/* The bar reports position in the whole map, not in the heading, because the
+   heading is already visible in the column beside it. */
+function progressHTML(walk, at){
+  if (at < 0 || !walk.length) return "";
+  const pc = Math.round((at + 1) / walk.length * 100);
+  return `
+    <div class="sm-prog" role="img"
+         aria-label="Item ${at + 1} of ${walk.length} in this map, ${pc} per cent">
+      <div class="sm-bar"><i style="width:${pc}%"></i></div>
+      <span>${at + 1} of ${walk.length}<b>${pc}%</b></span>
+    </div>`;
+}
+
+/* Where the reader can go from here. The heading is named only when the step
+   leaves the one they are in. */
+function moveHTML(walk, at, here){
+  if (at < 0) return "";
+  const step = (i, dir) => {
+    const x = walk[i];
+    if (!x) return `<span class="mv-end">${dir < 0 ? "Start of the map" : "End of the map"}</span>`;
+    return `<button class="mv ${dir < 0 ? "prev" : "next"}" data-go="${i}">
+        <em>${dir < 0 ? "Previous" : "Next"}</em>
+        <span>${esc(x.t)}</span>
+        ${x.h !== here ? `<i>in ${esc(x.h)}</i>` : ""}
+      </button>`;
+  };
+  return `
+    <nav class="sm-move" aria-label="Move through the map">
+      ${step(at - 1, -1)}
+      ${step(at + 1, 1)}
+    </nav>`;
+}
+
 /* What a heading contains, in the order it should be read. */
 function sylItems(r){
   const items = [];
@@ -1217,6 +1273,7 @@ function renderSyllabus(){
   const r = SYLLABUS[n - 1];
   const items = sylItems(r);
   const sel = sylSel(items);
+  const walk = mapWalk(), at = mapWhere(walk, n, sel);
   const groups = [];
   items.forEach(it => {
     const last = groups[groups.length - 1];
@@ -1229,6 +1286,7 @@ function renderSyllabus(){
           <span class="sm-no">Heading ${n} of ${SYLLABUS.length}</span>
           <h4>${esc(r.t)}</h4>
           <p>${glossText(r.s, gs4GlossIndex())}</p>
+  ${progressHTML(walk, at)}
         </div>
         ${groups.map(g => `
           <div class="sm-group">
@@ -1243,6 +1301,7 @@ function renderSyllabus(){
       <section class="sm-read">
         <button class="sm-back" data-sel="">&larr; ${esc(r.t)}</button>
         ${sylRead(r, sel)}
+        ${moveHTML(walk, at, r.t)}
       </section>
     </div>`;
 }
@@ -1625,6 +1684,18 @@ document.addEventListener("click", e => {
   const es = e.target.closest("[data-essay]");
   if (es) { state.view = "essay:" + es.dataset.essay; render(); return; }
 
+  const go = e.target.closest("[data-go]");
+  if (go) {
+    const x = mapWalk()[+go.dataset.go];
+    if (x) {
+      state.page = x.p; state.sel = x.id; state.reading = true;
+      render();
+      const m = document.querySelector(".sm-read");
+      if (m) m.scrollIntoView({ behavior:"instant", block:"start" });
+    }
+    return;
+  }
+
   const sel = e.target.closest("[data-sel]");
   if (sel) {
     const v = sel.dataset.sel;
@@ -1699,23 +1770,32 @@ document.getElementById("search").addEventListener("input", e => {
   render();
 });
 
-/* Wide: collapse the sidebar to a rail. Narrow: slide the drawer in and out. */
+/* The panel collapses to a rail. The control lives in the panel, where a reader
+   looks for it; the hamburger does the same thing, and opens the drawer on a
+   narrow screen where there is no panel to collapse. */
+function setRail(off){
+  if (off) document.documentElement.dataset.side = "off";
+  else delete document.documentElement.dataset.side;
+  const b = document.getElementById("railBtn");
+  if (b) {
+    b.setAttribute("aria-expanded", off ? "false" : "true");
+    b.title = off ? "Expand the panel" : "Collapse the panel";
+    b.querySelector("i").innerHTML = off ? "&raquo;" : "&laquo;";
+  }
+  document.getElementById("menuBtn").setAttribute("aria-expanded", off ? "false" : "true");
+  try { localStorage.setItem("upsc_thinkers_side", off ? "off" : "on"); } catch (e) {}
+}
+document.getElementById("railBtn").addEventListener("click", () =>
+  setRail(document.documentElement.dataset.side !== "off"));
 document.getElementById("menuBtn").addEventListener("click", () => {
   if (window.matchMedia("(max-width:880px)").matches) {
     document.getElementById("sidebar").classList.toggle("open");
     return;
   }
-  const off = document.documentElement.dataset.side === "off";
-  if (off) delete document.documentElement.dataset.side;
-  else document.documentElement.dataset.side = "off";
-  document.getElementById("menuBtn").setAttribute("aria-expanded", off ? "true" : "false");
-  try { localStorage.setItem("upsc_thinkers_side", off ? "on" : "off"); } catch (e) {}
+  setRail(document.documentElement.dataset.side !== "off");
 });
 try {
-  if (localStorage.getItem("upsc_thinkers_side") === "off") {
-    document.documentElement.dataset.side = "off";
-    document.getElementById("menuBtn").setAttribute("aria-expanded", "false");
-  }
+  if (localStorage.getItem("upsc_thinkers_side") === "off") setRail(true);
 } catch (e) {}
 
 document.getElementById("themeBtn").addEventListener("click", () => {

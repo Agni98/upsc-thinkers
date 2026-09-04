@@ -13,6 +13,7 @@
   --ink-3:#756c62;
   --line:#e2d9cb;
   --line-2:#efe8dc;
+  --rail:#ece4d6;      /* the sidebar, a step deeper than the page */
   --accent:#8a3324;
   --accent-2:#b8563f;
   --accent-soft:#f7ece8;
@@ -38,6 +39,7 @@ html[data-theme="dark"]{
   --ink-3:#938575;
   --line:#38312a;
   --line-2:#2b2620;
+  --rail:#100e0b;      /* the sidebar, a step deeper than the page */
   --accent:#e08a6f;
   --accent-2:#f0a98f;
   --accent-soft:#33241f;
@@ -114,10 +116,25 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   width:var(--sidebar-w);flex-shrink:0;
   position:sticky;top:63px;
   height:calc(100vh - 63px);overflow-y:auto;
-  padding:20px 14px 40px;
+  padding:12px 14px 40px;
+  background:var(--rail);
   border-right:1px solid var(--line);
 }
+/* the panel's own control, where a reader looks for it */
+.rail-btn{
+  display:flex;align-items:center;gap:9px;width:100%;
+  padding:6px 10px;margin-bottom:10px;border:0;border-radius:8px;
+  background:none;color:var(--ink-3);cursor:pointer;
+  font-family:var(--sans);font-size:11px;font-weight:700;
+  letter-spacing:.9px;text-transform:uppercase;transition:.13s}
+.rail-btn:hover{background:var(--line-2);color:var(--accent)}
+.rail-btn:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.rail-btn i{font-style:normal;font-size:14px;line-height:1;color:var(--accent)}
+/* the panel now sits on a deeper ground, so its small text steps up a shade */
+.rail-btn,.sidebar .side-label,.sidebar .syl-no{color:var(--ink-2)}
 @media (min-width:881px){
+  html[data-side="off"] .rail-btn{justify-content:center;padding:8px 0}
+  html[data-side="off"] .rail-btn span{display:none}
   html[data-side="off"] .sidebar{
     width:58px;padding-left:8px;padding-right:8px;overflow-x:hidden}
   html[data-side="off"] .nav-name,
@@ -685,6 +702,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 @media (max-width:1080px){ .qbank{columns:1} }
 @media (max-width:880px){
   .menu-btn{display:grid}
+  .rail-btn{display:none}   /* the drawer has nothing to collapse into */
   .topbar{gap:10px;padding:10px 14px}
   .brand-mark{width:34px;height:34px;font-size:18px}
   .brand-text h1{font-size:15px}
@@ -1057,6 +1075,16 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   letter-spacing:-.2px;color:var(--ink)}
 .sm-head p{font-size:12.2px;line-height:1.55;color:var(--ink-3)}
 
+/* how far through the whole map this reading sits */
+.sm-prog{display:flex;flex-direction:column;gap:5px;margin-top:9px}
+.sm-bar{height:4px;border-radius:3px;background:var(--line);overflow:hidden}
+.sm-bar i{display:block;height:100%;border-radius:3px;background:var(--accent)}
+.sm-prog span{
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-family:var(--sans);font-size:10.5px;font-weight:600;color:var(--ink-3);
+  font-variant-numeric:tabular-nums}
+.sm-prog b{color:var(--accent);font-weight:700}
+
 .sm-group{display:flex;flex-direction:column;gap:1px}
 .sm-group > b{
   font-size:9.8px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;
@@ -1080,6 +1108,29 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   border-left:3px solid var(--accent);border-radius:var(--radius);
   padding:20px 22px 18px}
 .sm-pane .ans-head{margin-top:0}
+/* previous and next run across the whole map, not just this heading */
+.sm-move{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px;
+  padding-top:16px;border-top:1px solid var(--line)}
+.mv{
+  display:flex;flex-direction:column;gap:2px;text-align:left;
+  padding:12px 15px;border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--panel);cursor:pointer;transition:.15s;min-width:0}
+.mv:hover{border-color:var(--accent);box-shadow:var(--shadow)}
+.mv:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mv.next{text-align:right}
+.mv em{
+  font-style:normal;font-family:var(--sans);font-size:10px;font-weight:700;
+  letter-spacing:.9px;text-transform:uppercase;color:var(--accent)}
+.mv > span{
+  font-family:var(--serif);font-size:14.5px;font-weight:600;color:var(--ink);
+  line-height:1.32}
+.mv i{font-style:normal;font-size:11.5px;color:var(--ink-3);line-height:1.4}
+.mv-end{
+  display:flex;align-items:center;padding:12px 15px;font-size:12px;
+  color:var(--ink-3);border:1px dashed var(--line);border-radius:var(--radius)}
+.sm-move .mv.next,.sm-move .mv-end:last-child{justify-content:flex-end;text-align:right}
+
 .sm-back{display:none}
 
 /* the sidebar, while it is carrying the sixteen headings */
@@ -1107,6 +1158,7 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   .sm.reading .sm-back:hover{border-color:var(--accent);background:var(--accent-soft)}
   .sm.reading .sm-back{padding:9px 14px}
   .sm-pane{padding:16px 15px 14px}
+  .sm-move{grid-template-columns:1fr}
   /* a finger needs more than a pointer does */
   .sm-pick{padding:11px 12px}
   .sm-t{font-size:14px}
@@ -1114,7 +1166,7 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 }
 @media print{
   .sm{grid-template-columns:1fr}
-  .sm-list,.sm-back{display:none}
+  .sm-list,.sm-back,.sm-move{display:none}
   .sm-read{padding-left:0}
 }
 
