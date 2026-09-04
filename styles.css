@@ -102,7 +102,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   transition:.15s;flex-shrink:0;
 }
 .icon-btn:hover{border-color:var(--accent);color:var(--accent)}
-.menu-btn{display:none}
+
+/* the menu button collapses the sidebar on a wide screen and opens the drawer
+   on a narrow one, so one control means one thing: show me the navigation */
+.menu-btn{display:grid}
 
 /* ---------------- Layout ---------------- */
 .shell{display:flex;align-items:flex-start;max-width:1560px;margin:0 auto}
@@ -113,6 +116,19 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   height:calc(100vh - 63px);overflow-y:auto;
   padding:20px 14px 40px;
   border-right:1px solid var(--line);
+}
+@media (min-width:881px){
+  html[data-side="off"] .sidebar{
+    width:58px;padding-left:8px;padding-right:8px;overflow-x:hidden}
+  html[data-side="off"] .nav-name,
+  html[data-side="off"] .nav-count,
+  html[data-side="off"] .side-label{display:none}
+  html[data-side="off"] .nav-item{justify-content:center;padding:9px 0}
+  html[data-side="off"] .nav-ico{width:auto;font-size:16px}
+  html[data-side="off"] .syl-no{font-size:12px}
+  html[data-side="off"] #catNav{
+    margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+  html[data-side="off"] .nav-back .nav-ico{color:var(--accent)}
 }
 .sidebar::-webkit-scrollbar{width:8px}
 .sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
@@ -713,7 +729,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .quiz{break-inside:avoid}
 }
 
-
 /* ================= PAST QUESTIONS ================= */
 .pyq.page{margin-top:0;padding-top:0;border-top:0}
 .pyq .sec-head{margin-bottom:16px}
@@ -827,7 +842,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .pyqt .pyq-body{display:block !important}
 }
 
-
 /* --- sub-theme model paragraphs, and the ties between the three sections --- */
 .ans-for{
   font-size:12.5px;color:var(--ink-3);font-style:italic;margin:-2px 0 9px 30px;max-width:700px}
@@ -853,7 +867,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .pyq-para{margin-left:0}
 }
 
-
 /* --- the past questions an essay is the home for --- */
 .essay-serves{
   border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;
@@ -869,7 +882,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   flex:0 0 auto;font-style:normal;font-family:var(--sans);font-size:10px;font-weight:700;
   letter-spacing:.4px;color:var(--accent);white-space:nowrap}
 @media print{ .essay-serves{break-inside:avoid} }
-
 
 /* ================= WORKS IN DEPTH ================= */
 .block-hint{
@@ -911,7 +923,6 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 @media print{
   .work-go,.wl-open,.backlink{display:none}
 }
-
 
 /* --- Works in Depth: classified by thinker --- */
 .wl-group{margin-bottom:34px}
@@ -984,7 +995,6 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 }
 @media print{ .wl-sibs,.wl-card .work-go{display:none} }
 
-
 /* --- long-form work pages: sections, lists, timeline --- */
 .wl-prose h2{
   font-family:var(--serif);font-size:20px;font-weight:600;letter-spacing:-.2px;
@@ -1024,7 +1034,6 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   .wl-timeline li span{border-left:0;padding-left:0}
 }
 @media print{ .wl-prose h2{break-after:avoid} .wl-timeline{break-inside:avoid} }
-
 
 /* ================= GS-IV SYLLABUS MAP: TWO PANES =================
    The contents of a heading on the left, whatever is chosen from them on the
@@ -1116,160 +1125,24 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   text-transform:uppercase;color:var(--ink-3)}
 .ans-head > span{
   display:block;font-size:12.5px;line-height:1.55;color:var(--ink-3);margin-top:3px;max-width:720px}
-
-.tiles{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:11px;margin-bottom:4px}
-.tile{
-  position:relative;display:flex;flex-direction:column;align-items:flex-start;
-  aspect-ratio:1/1;text-align:left;font:inherit;color:inherit;overflow:hidden;
-  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
-  padding:14px 14px 12px;cursor:pointer;transition:.16s;box-shadow:var(--shadow)}
-.tile:hover{border-color:var(--accent);box-shadow:var(--shadow-lg);transform:translateY(-2px)}
-.tile:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.tile.on{
-  border-color:var(--accent);background:var(--accent-soft);box-shadow:var(--shadow-lg)}
-.tile-no{
-  width:24px;height:24px;flex:0 0 auto;border-radius:50%;background:var(--accent-soft);
-  color:var(--accent);font-family:var(--sans);font-size:11.5px;font-weight:700;
-  display:grid;place-items:center;margin-bottom:9px}
-.tile.on .tile-no{background:var(--accent);color:var(--panel)}
-.tile b{
-  font-family:var(--serif);font-size:15.5px;font-weight:600;line-height:1.3;
-  letter-spacing:-.2px;color:var(--ink)}
-.tile-for{
-  display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;
-  font-size:12px;line-height:1.5;color:var(--ink-2);margin-top:7px}
-.tile-go{
-  margin-top:auto;padding-top:8px;font-family:var(--sans);font-size:10.5px;font-weight:700;
-  letter-spacing:.5px;text-transform:uppercase;color:var(--accent);opacity:0;transition:.16s}
-.tile-go i{font-style:normal}
-.tile:hover .tile-go,.tile.on .tile-go{opacity:1}
-.tile.on .tile-go i{transform:rotate(90deg);display:inline-block}
-
-.tilegroup .ans{
-  margin-top:14px;background:var(--bg);border:1px solid var(--line);
-  border-left:3px solid var(--accent);border-radius:var(--radius);padding:20px 22px 18px}
 /* an open panel sits inside the grid, across every column, so it reads as
    belonging to the row above it and not to the end of the list */
-.tiles > .ans,.tiles > .gc-item{grid-column:1 / -1;margin-top:0}
-.tile-close{
-  margin-top:16px;font-family:var(--sans);font-size:11.5px;font-weight:600;
-  padding:6px 15px;border:1px solid var(--line);border-radius:999px;
-  background:var(--panel);color:var(--ink-2);cursor:pointer;transition:.15s}
-.tile-close:hover{border-color:var(--accent);color:var(--accent)}
 
 @media (max-width:700px){
-  .tiles{grid-template-columns:repeat(2,1fr);gap:9px}
-  .tile{aspect-ratio:auto;min-height:0;padding:12px}
-  .tile-for{-webkit-line-clamp:3;font-size:11.5px}
-  .tile-go{display:none}
-  .tilegroup .ans{padding:16px 14px 14px}
 }
 @media print{
-  .tiles > .tile,.tile-close{display:none}
-  .tilegroup .ans[hidden]{display:block !important}
 }
-
 
 /* --- Model paragraphs: readability over decoration ---
    Inside a tile panel the card sits on white, so the cream call-out blocks
    read as raised rather than washed out. */
-.tilegroup .ans{background:var(--panel)}
 .ans-q{background:var(--bg);border-color:var(--line)}
 
-/* --- Essay Theme Map: index page + one page per theme --- */
-.tmap-index{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(272px,1fr));gap:14px}
-.tmap-card{
-  display:flex;flex-direction:column;align-items:flex-start;text-align:left;
-  font:inherit;color:inherit;cursor:pointer;transition:.16s;
-  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
-  padding:18px 18px 14px;box-shadow:var(--shadow)}
-.tmap-card:hover{
-  border-color:var(--accent);box-shadow:var(--shadow-lg);transform:translateY(-2px)}
-.tmap-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.tmap-no{
-  width:26px;height:26px;flex:0 0 auto;border-radius:50%;background:var(--accent-soft);
-  color:var(--accent);font-family:var(--sans);font-size:12px;font-weight:700;
-  display:grid;place-items:center;margin-bottom:10px}
-.tmap-card:hover .tmap-no{background:var(--accent);color:var(--panel)}
-.tmap-card b{
-  font-family:var(--serif);font-size:16.5px;font-weight:600;line-height:1.3;
-  color:var(--ink);margin-bottom:5px}
-.tmap-sub{font-size:12.3px;color:var(--ink-3);line-height:1.5;margin-bottom:11px}
-.tmap-list{list-style:none;padding:0;margin:0 0 12px;width:100%}
-.tmap-list li{
-  position:relative;padding:3px 0 3px 15px;font-size:12.4px;
-  color:var(--ink-2);line-height:1.5}
-.tmap-list li::before{
-  content:"";position:absolute;left:2px;top:11px;
-  width:4px;height:4px;border-radius:50%;background:var(--accent)}
-.tmap-list li.tmap-more{color:var(--ink-3);font-style:italic}
-.tmap-list li.tmap-more::before{background:var(--line)}
-.tmap-meta{
-  display:flex;align-items:center;gap:6px;width:100%;margin-top:auto;
-  padding-top:10px;border-top:1px solid var(--line);
-  font-size:11.4px;font-weight:600;letter-spacing:.3px;color:var(--ink-3)}
-.tmap-meta i{margin-left:auto;font-style:normal;color:var(--accent);font-size:14px}
-.tmap-badge{
-  display:inline-block;margin-right:9px;padding:3px 9px;border-radius:20px;
-  background:var(--accent-soft);color:var(--accent);
-  font-family:var(--sans);font-size:10.5px;font-weight:700;
-  letter-spacing:.7px;text-transform:uppercase;vertical-align:middle}
-
-/* the counter sits on the back-link row, so the pager itself is only
-   prev / dots / next and the three columns come out the same height */
-.pager-top{
-  display:flex;align-items:center;justify-content:space-between;
-  gap:12px;flex-wrap:wrap;margin-bottom:12px}
-.pager-top .backlink{margin-bottom:0}
-.pager{display:flex;align-items:stretch;gap:10px;margin:0 0 16px}
-.pager + .map-card{margin-top:0}
-.map-card + .pager{margin-top:16px;margin-bottom:0}
-.pager-btn{
-  display:flex;align-items:center;gap:10px;flex:1 1 0;min-width:0;
-  font:inherit;color:inherit;text-align:left;cursor:pointer;transition:.16s;
-  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
-  padding:11px 14px}
-.pager-btn.right{text-align:right;justify-content:flex-end}
-.pager-btn:hover{
-  border-color:var(--accent);background:var(--accent-soft);transform:translateY(-1px)}
-.pager-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.pager-btn i{font-style:normal;font-size:17px;color:var(--accent);flex:0 0 auto}
-.pager-btn em{
-  display:block;font-style:normal;font-size:10px;font-weight:700;
-  letter-spacing:.8px;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
-.pager-btn span{
-  display:block;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
-  font-family:var(--serif);font-size:13.4px;color:var(--ink);line-height:1.35}
-.pager-mid{
-  display:flex;align-items:center;justify-content:center;
-  flex:0 0 auto;padding:0 4px}
-.pager-count{
-  font-size:10.5px;font-weight:700;letter-spacing:.8px;
-  text-transform:uppercase;color:var(--ink-3)}
-.pager-dots{display:flex;gap:5px}
-/* sixteen syllabus headings do not fit on one row beside the two buttons */
-.pager-dots.many{flex-wrap:wrap;justify-content:center;max-width:250px}
-.pager-dot{
-  width:25px;height:25px;border-radius:7px;font:inherit;font-size:11.5px;
-  font-weight:600;cursor:pointer;transition:.13s;
-  background:transparent;border:1px solid var(--line);color:var(--ink-3)}
-.pager-dot:hover{border-color:var(--accent);color:var(--accent)}
-.pager-dot.on{background:var(--accent);border-color:var(--accent);color:var(--panel)}
-.pager-dot:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-
 @media (max-width:860px){
-  .pager{flex-wrap:wrap}
-  .pager-mid{order:-1;flex:1 0 100%}
-  .pager-btn{flex:1 1 44%}
 }
 @media (max-width:560px){
-  .pager-dots,.pager-mid{display:none}
-  .tmap-index{grid-template-columns:1fr}
 }
 @media print{
-  .pager,.pager-top,.backlink{display:none}
 }
 
 /* --- Glossary: a term of art explains itself where it is used --- */
@@ -1475,18 +1348,6 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 
 .gc{margin-top:2px}
 
-/* the concept tile carries one more line than an essay tile: how often the
-   paper has asked for the idea */
-.tile-freq{
-  align-self:flex-start;margin-top:6px;font-family:var(--sans);
-  font-size:10px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;
-  color:var(--accent);background:var(--accent-soft);border-radius:5px;padding:2px 7px}
-.gc .tile-for{-webkit-line-clamp:3;margin-top:6px}
-/* a selected tile fills with accent-soft, which is the badge's own colour, so
-   the badge takes the panel ground to keep its shape */
-.tile.on .tile-freq{background:var(--panel)}
-.tilegroup .gc-item{margin-top:14px;margin-bottom:0}
-
 /* the thinker roster, now that it sits under the concepts */
 .mapsec{margin-top:18px;border-top:1px solid var(--line)}
 
@@ -1547,5 +1408,5 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 @media (max-width:560px){
   .gc-item{padding:16px 14px 14px}
 }
-@media print{ .gc .tiles > .tile{display:none} .tilegroup .gc-item[hidden]{display:block !important} }
+
 .gc-item p em{font-style:italic;color:var(--ink)}

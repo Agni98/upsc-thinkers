@@ -276,12 +276,13 @@ function renderHome(){
    column would not fit beside the map's own two, so this one is borrowed. */
 function renderSyllabusNav(){
   document.getElementById("viewNav").innerHTML = `
-    <button class="nav-item nav-back" data-nav="views">
+    <button class="nav-item nav-back" data-nav="views" title="All views">
       <span class="nav-ico">&larr;</span><span class="nav-name">All views</span>
     </button>
     <div class="side-label">GS-IV Syllabus</div>
     ${SYLLABUS.map((r, i) => `
-      <button class="nav-item ${state.page === i + 1 ? "active" : ""}" data-page="${i + 1}">
+      <button class="nav-item ${state.page === i + 1 ? "active" : ""}" data-page="${i + 1}"
+              title="${esc(r.t)}">
         <span class="nav-ico syl-no">${i + 1}</span>
         <span class="nav-name">${esc(r.t)}</span>
         <span class="nav-count">${sylStats(r).concepts.length}</span>
@@ -291,8 +292,28 @@ function renderSyllabusNav(){
   if (lab) lab.hidden = true;
 }
 
+/* The essay map borrows the sidebar the same way the syllabus map does. */
+function renderThemeNav(){
+  document.getElementById("viewNav").innerHTML = `
+    <button class="nav-item nav-back" data-nav="views" title="All views">
+      <span class="nav-ico">&larr;</span><span class="nav-name">All views</span>
+    </button>
+    <div class="side-label">Essay themes</div>
+    ${ESSAY_THEMES.map((t, i) => `
+      <button class="nav-item ${state.page === i + 1 ? "active" : ""}" data-page="${i + 1}"
+              title="${esc(t.t)}">
+        <span class="nav-ico syl-no">${i + 1}</span>
+        <span class="nav-name">${esc(t.t)}</span>
+        <span class="nav-count">${themeStats(t).list.length}</span>
+      </button>`).join("")}`;
+  document.getElementById("catNav").innerHTML = "";
+  const lab = document.getElementById("catLabel");
+  if (lab) lab.hidden = true;
+}
+
 function renderNav(){
   if (state.view === "syllabus" && state.nav === "syllabus") return renderSyllabusNav();
+  if (state.view === "themes"   && state.nav === "themes")   return renderThemeNav();
   const lab = document.getElementById("catLabel");
   if (lab) lab.hidden = false;
   const tagged = x => THINKERS.filter(t => t.tag.includes(x)).length;
@@ -327,13 +348,15 @@ function renderNav(){
   document.getElementById("viewNav").innerHTML = groups.map(g => `
     ${g.label ? `<div class="side-label">${g.label}</div>` : ""}
     ${g.items.map(v => `
-      <button class="nav-item ${on(v.id) ? "active" : ""}" data-view="${v.id}">
+      <button class="nav-item ${on(v.id) ? "active" : ""}" data-view="${v.id}"
+              title="${esc(v.name)}">
         <span class="nav-ico">${v.ico}</span><span class="nav-name">${v.name}</span>
         ${v.n === undefined ? "" : `<span class="nav-count">${v.n}</span>`}
       </button>`).join("")}`).join("");
 
   document.getElementById("catNav").innerHTML = CATEGORIES.map(c => `
-    <button class="nav-item ${state.view === c.id ? "active" : ""}" data-view="${c.id}">
+    <button class="nav-item ${state.view === c.id ? "active" : ""}" data-view="${c.id}"
+            title="${esc(c.name)}">
       <span class="nav-ico">${c.icon}</span><span class="nav-name">${c.name}</span>
       <span class="nav-count">${THINKERS.filter(t => t.cat === c.id).length}</span>
     </button>`).join("");
@@ -476,72 +499,6 @@ function gs4Skip(title){
                 GS4_GLOSS[key.slice(2)] && GS4_GLOSS[key.slice(2)].c === title;
 }
 
-/* ---- Opening a tile ----
-   The panel belongs directly under the row its tile is in. Rendered after the
-   whole grid, clicking the first of eleven tiles opened the reading below the
-   eleventh, which on a phone meant scrolling past everything else to reach it.
-   So the panel is moved into the grid, spanning every column, right after the
-   last tile sharing its row. */
-function stowPanel(group, art){
-  const hold = group.querySelector(".tile-panels");
-  if (!hold || art.parentElement === hold) return;
-  const i = +art.dataset.panel;
-  const after = [...hold.children].find(x => +x.dataset.panel > i);
-  if (after) hold.insertBefore(art, after); else hold.appendChild(art);
-}
-
-function placePanel(group, art, tile){
-  const grid = group.querySelector(".tiles");
-  if (!grid) return;
-  // out of the grid first: an open panel spans a full row and would otherwise
-  // split the very row we are trying to measure
-  stowPanel(group, art);
-  const top = Math.round(tile.getBoundingClientRect().top);
-  let last = tile;
-  grid.querySelectorAll(".tile").forEach(t => {
-    if (Math.round(t.getBoundingClientRect().top) === top) last = t;
-  });
-  last.after(art);
-}
-
-function closeTiles(group){
-  group.querySelectorAll("[data-panel]").forEach(x => {
-    x.hidden = true;
-    stowPanel(group, x);
-  });
-  group.querySelectorAll(".tile").forEach(x => {
-    x.classList.remove("on"); x.setAttribute("aria-expanded", "false");
-  });
-}
-
-/* Show one tile's panel and close the rest of its group. */
-function openTile(group, i, scroll){
-  if (!group) return null;
-  closeTiles(group);
-  const t = group.querySelector('.tile[data-tile="' + i + '"]');
-  const art = group.querySelector('[data-panel="' + i + '"]');
-  if (!art) return null;
-  if (t) {
-    t.classList.add("on"); t.setAttribute("aria-expanded", "true");
-    placePanel(group, art, t);
-  }
-  art.hidden = false;
-  if (scroll) (t || art).scrollIntoView({ behavior:"instant", block:"start" });
-  return art;
-}
-
-/* A narrower window regroups the rows, so an open panel has to move with them. */
-let tileReflow = null;
-window.addEventListener("resize", () => {
-  clearTimeout(tileReflow);
-  tileReflow = setTimeout(() => {
-    document.querySelectorAll(".tilegroup").forEach(g => {
-      const art = g.querySelector("[data-panel]:not([hidden])");
-      const t = g.querySelector(".tile.on");
-      if (art && t) placePanel(g, art, t);
-    });
-  }, 120);
-});
 
 /* Where a concept note develops a term, so the card can offer the way to it. */
 function conceptSite(title){
@@ -672,28 +629,6 @@ function essayBody(e){
 /* How many past questions this essay is the home for. */
 function essayServes(e){
   return (e.serves && e.serves.length) ? e.serves.length : 0;
-}
-
-/* The launchers that sit under the last "Open it out with" block. A theme may
-   carry more than one full essay. */
-function essayLinkHTML(theme){
-  const keys = (theme && theme.essays) ? theme.essays : (typeof theme === "string" ? [theme] : []);
-  const rows = keys.filter(k => (typeof ESSAYS !== "undefined") && ESSAYS[k]);
-  if (!rows.length) return "";
-  return rows.map(k => {
-    const e = ESSAYS[k];
-    const n = essayBody(e).reduce((a, x) => a + x.split(/\s+/).length, 0);
-    const q = essayServes(e);
-    return `
-    <button class="essay-launch" data-essay="${esc(k)}">
-      <span class="radio" aria-hidden="true"></span>
-      <span class="el-txt">
-        <b>Read the full model essay</b>
-        <span>${esc(e.t || e.et)} &middot; ${n} words${q ? " &middot; answers " + q + " past question" + (q > 1 ? "s" : "") : ""}</span>
-      </span>
-      <span class="el-go" aria-hidden="true">&rarr;</span>
-    </button>`;
-  }).join("");
 }
 
 /* WORKS IN DEPTH. Three levels: an index classified by thinker, a page per
@@ -883,7 +818,9 @@ function renderEssay(topic, mode){
   const paras = e[m.p], title = e[m.t];
   const n = paras.reduce((a, x) => a + x.split(/\s+/).length, 0);
   return `
-    <button class="backlink" data-view="essays">&larr; All model essays</button>
+    ${state.view === "themes"
+      ? ""
+      : `<button class="backlink" data-view="essays">&larr; All model essays</button>`}
     <article class="essay-doc">
       <div class="essay-kicker">${esc(themeOfEssay(topic) || topic)}</div>
       ${ avail.length > 1 ? `<div class="modebar" role="group" aria-label="Essay style">
@@ -942,49 +879,6 @@ function pyqAnswer(){
   return m;
 }
 
-/* Model paragraphs for an essay theme, if any have been written for it. */
-function answersHTML(theme){
-  const topic = theme.t;
-  const list = (typeof ANSWERS !== "undefined") ? ANSWERS[topic] : null;
-  if (!list || !list.length) return "";
-  const words = list.reduce((a, x) => a + x.p.join(" ").split(/\s+/).length, 0);
-  const Q = pyqText();
-  const slug = esc(topic).replace(/[^A-Za-z]/g, "");
-  return `
-    <div class="ans-head">
-      <b>Model paragraphs</b>
-      <span>${list.length} sub-themes &middot; ~${Math.round(words / list.length)} words each &middot;
-        one for each kind of question this theme throws up &mdash; pick one to read it</span>
-    </div>
-    <div class="tilegroup">
-    <div class="tiles">
-      ${list.map((a, i) => `
-        <button class="tile" data-tile="${i}" aria-expanded="false">
-          <span class="tile-no">${i + 1}</span>
-          <b>${esc(a.h)}</b>
-          ${a.s ? `<span class="tile-for">${esc(a.s)}</span>` : ""}
-          <span class="tile-go">Read <i>&rarr;</i></span>
-        </button>`).join("")}
-    </div>
-    <div class="tile-panels">
-      ${list.map((a, i) => `
-        <article class="ans" data-panel="${i}" id="ans-${slug}-${i}" hidden>
-          <h5><span class="ans-no">${i + 1}</span>${esc(a.h)}</h5>
-          ${a.s ? `<p class="ans-for">${esc(a.s)}</p>` : ""}
-          ${(a.qs && a.qs.length) ? `<div class="ans-serves"><b>Answers</b>${a.qs.map(k => Q[k]
-              ? `<span class="ans-q"><i>${Q[k].y} ${Q[k].s}${Q[k].n}</i>${esc(Q[k].q)}</span>` : "").join("")}</div>` : ""}
-          ${a.p.map(x => `<p>${glossText(x)}</p>`).join("")}
-          <div class="ans-open">
-            <b>Open it out with</b>
-            <ul>${a.open.map((x, j) => openOutHTML(x, slug, i, j)).join("")}</ul>
-          </div>
-          <button class="tile-close" data-tile="${i}">Close</button>
-        </article>`).join("")}
-    </div>
-    </div>
-    ${essayLinkHTML(theme)}`;
-}
-
 /* ---- Essay Theme Map, paginated ----
    Nine themes on a single scroll meant hunting for the one you wanted. The map
    is now an index page plus one page per theme, moved through with the pager. */
@@ -993,69 +887,83 @@ function themeStats(t){
   return { list, words: list.reduce((a, x) => a + x.p.join(" ").split(/\s+/).length, 0) };
 }
 
-function themeIndexHTML(){
-  return `
-    <div class="sec-head"><h3>Essay Theme Map</h3>
-      <p>The nine themes the paper keeps asking. Open one to read its five model
-         paragraphs &mdash; one for each kind of question the theme throws up.</p></div>
-    <div class="tmap-index">
-      ${ESSAY_THEMES.map((t, i) => {
-        const st = themeStats(t);
-        return `
-        <button class="tmap-card" data-page="${i + 1}">
-          <span class="tmap-no">${i + 1}</span>
-          <b>${esc(t.t)}</b>
-          <span class="tmap-sub">${esc(t.s)}</span>
-          ${st.list.length ? `<ul class="tmap-list">
-            ${st.list.map(a => `<li>${esc(a.h)}</li>`).join("")}</ul>` : ""}
-          <span class="tmap-meta">${st.list.length} paragraphs &middot;
-            ${st.words.toLocaleString()} words<i>&rarr;</i></span>
-        </button>`; }).join("")}
-    </div>`;
+/* What a theme contains: its model paragraphs, then the full essays written
+   from them. */
+function themeItems(t){
+  const items = [];
+  const list = (typeof ANSWERS !== "undefined") ? (ANSWERS[t.t] || []) : [];
+  list.forEach((x, i) => items.push({ id:"p:" + i, g:"Model paragraphs", t:x.h,
+                                      n:(x.qs || []).length }));
+  const keys = (t.essays || []).filter(k => (typeof ESSAYS !== "undefined") && ESSAYS[k]);
+  keys.forEach(k => {
+    const e = ESSAYS[k];
+    const w = essayBody(e).reduce((n, x) => n + x.split(/\s+/).length, 0);
+    items.push({ id:"e:" + k, g:"Written out in full", t:e.t || e.et, n:0, w:w });
+  });
+  return items;
 }
 
-function themePager(n){
-  const last = ESSAY_THEMES.length, prev = n - 1, next = n + 1;
-  const side = (to, dir) => {
-    const label = to === 0 ? "Index" : (dir < 0 ? "Previous" : "Next");
-    const name  = to === 0 ? "All nine themes" : esc(ESSAY_THEMES[to - 1].t);
-    const arrow = dir < 0 ? "&larr;" : "&rarr;";
-    return `<button class="pager-btn ${dir < 0 ? "left" : "right"}" data-page="${to}">
-        ${dir < 0 ? `<i>${arrow}</i>` : ""}
-        <span><em>${label}</em>${name}</span>
-        ${dir > 0 ? `<i>${arrow}</i>` : ""}
-      </button>`;
-  };
+function paragraphPane(t, i){
+  const list = (typeof ANSWERS !== "undefined") ? (ANSWERS[t.t] || []) : [];
+  const x = list[i];
+  if (!x) return "";
+  const Q = pyqText();
+  const slug = esc(t.t).replace(/[^A-Za-z]/g, "");
   return `
-    <div class="pager">
-      ${side(prev, -1)}
-      <div class="pager-mid">
-        <div class="pager-dots">
-          ${ESSAY_THEMES.map((x, i) => `<button class="pager-dot ${i + 1 === n ? "on" : ""}"
-             data-page="${i + 1}" title="${esc(x.t)}" aria-label="${esc(x.t)}"
-             aria-current="${i + 1 === n ? "true" : "false"}">${i + 1}</button>`).join("")}
-        </div>
+    <article class="ans sm-pane">
+      <h5><span class="ans-no">${i + 1}</span>${esc(x.h)}</h5>
+      ${x.s ? `<p class="ans-for">${esc(x.s)}</p>` : ""}
+      ${(x.qs && x.qs.length) ? `<div class="ans-serves"><b>Answers</b>${x.qs.map(k => Q[k]
+          ? `<span class="ans-q"><i>${Q[k].y} ${Q[k].s}${Q[k].n}</i>${esc(Q[k].q)}</span>` : "").join("")}</div>` : ""}
+      ${x.p.map(y => `<p>${glossText(y)}</p>`).join("")}
+      <div class="ans-open">
+        <b>Open it out with</b>
+        <ul>${x.open.map((y, j) => openOutHTML(y, slug, i, j)).join("")}</ul>
       </div>
-      ${side(next > last ? 0 : next, 1)}
-    </div>`;
+    </article>`;
+}
+
+function themeRead(t, sel){
+  if (sel && sel.charAt(0) === "p") return paragraphPane(t, +sel.slice(2));
+  if (sel && sel.charAt(0) === "e") return renderEssay(sel.slice(2), state.mode);
+  return `<div class="empty"><b>Nothing here yet</b>No paragraphs written for this theme.</div>`;
 }
 
 function renderThemes(){
-  const n = state.page | 0;
-  if (!n || !ESSAY_THEMES[n - 1]) { state.page = 0; return themeIndexHTML(); }
+  let n = state.page | 0;
+  if (!n || !ESSAY_THEMES[n - 1]) { n = 1; state.page = 1; }
   const t = ESSAY_THEMES[n - 1];
+  const items = themeItems(t);
+  const sel = items.some(x => x.id === state.sel) ? state.sel : (items[0] ? items[0].id : null);
+  const groups = [];
+  items.forEach(it => {
+    const last = groups[groups.length - 1];
+    if (last && last.g === it.g) last.items.push(it); else groups.push({ g:it.g, items:[it] });
+  });
   return `
-    <div class="pager-top">
-      <button class="backlink" data-page="0">&larr; Essay Theme Map</button>
-      <span class="pager-count">Theme ${n} of ${ESSAY_THEMES.length}</span>
-    </div>
-    ${themePager(n)}
-    <div class="map-card">
-      <h4><span class="tmap-badge">Theme ${n}</span>${esc(t.t)}</h4>
-      <div class="sub">${esc(t.s)}</div>
-      ${answersHTML(t)}
-    </div>
-    ${themePager(n)}`;
+    <div class="sm${state.reading ? " reading" : ""}">
+      <aside class="sm-list">
+        <div class="sm-head">
+          <span class="sm-no">Theme ${n} of ${ESSAY_THEMES.length}</span>
+          <h4>${esc(t.t)}</h4>
+          <p>${esc(t.s)}</p>
+        </div>
+        ${groups.map(g => `
+          <div class="sm-group">
+            <b>${esc(g.g)}</b>
+            ${g.items.map(it => `
+              <button class="sm-pick${it.id === sel ? " on" : ""}" data-sel="${esc(it.id)}">
+                <span class="sm-t">${esc(it.t)}</span>
+                ${it.w ? `<span class="sm-n">${Math.round(it.w / 100) / 10}k</span>`
+                       : it.n ? `<span class="sm-n">${it.n}</span>` : ""}
+              </button>`).join("")}
+          </div>`).join("")}
+      </aside>
+      <section class="sm-read">
+        <button class="sm-back" data-sel="">&larr; ${esc(t.t)}</button>
+        ${themeRead(t, sel)}
+      </section>
+    </div>`;
 }
 
 /* ---- GS-IV: the concepts that keep coming back ----
@@ -1175,84 +1083,6 @@ function caseMethodHTML(title){
     </div>`;
 }
 
-/* The opening sentence of a definition, stripped of its emphasis marks, for
-   the face of a tile. */
-function conceptGist(c){
-  var t = String((c.d && c.d[0]) || "").split("**").join("").split("*").join("");
-  var cut = -1;
-  [". ", "? ", "! "].forEach(function(p){
-    var k = t.indexOf(p);
-    if (k > 40 && (cut < 0 || k < cut)) cut = k;
-  });
-  return cut > 0 ? t.slice(0, cut + 1) : t.slice(0, 150);
-}
-
-/* Concepts for a syllabus heading, as an index of tiles over the panels they
-   open. Between four and twelve per heading, so they fit a grid; the Case
-   Studies heading has none and renders nothing. */
-function gcHTML(title){
-  if (typeof GS4_CONCEPTS === "undefined") return "";
-  const list = GS4_CONCEPTS[title];
-  if (!list || !list.length) return "";
-  const byId = {};
-  if (typeof GS4_PYQ !== "undefined") GS4_PYQ.forEach(q => { byId[q.id] = q; });
-  const slug = esc(title).replace(/[^A-Za-z]/g, "");
-  const nq = new Set();
-  list.forEach(c => c.qs.forEach(q => nq.add(q)));
-  const byHead = {};
-  list.forEach(c => c.qs.forEach(id => { (byHead[id] = byHead[id] || []).push(c.t); }));
-  // a syllabus concept is asked; a case-study collision simply has cases in it
-  const cases = title === "Case Studies";
-  const freq = c => {
-    const qs = c.qs.map(id => byId[id]).filter(Boolean);
-    if (!qs.length) return "";
-    const yrs = qs.map(q => q.y).sort();
-    const n = cases
-      ? (c.qs.length === 1 ? "1 case" : c.qs.length + " cases")
-      : (c.qs.length === 1 ? "asked once" : "asked " + c.qs.length + " times");
-    const a = yrs[0], b = yrs[yrs.length - 1];      // 2015 to 2015 reads badly
-    return n + (a === b ? " in " + a : ", " + a + " to " + b);
-  };
-  return `
-    <div class="gc">
-      <div class="ans-head">
-        <b>${cases ? "Sorted by what collides" : "Concepts that repeat"}</b>
-        <span>${cases
-          ? `The same ${nq.size} cases, grouped by the two duties that pull against each other.
-             The grouping matters because move 2 turns on it &mdash; pick one to read it`
-          : `${list.length} ideas the paper keeps returning to, across ${nq.size} questions
-             &mdash; pick one to read it`}</span>
-      </div>
-      <div class="tilegroup">
-        <div class="tiles">
-          ${list.map((c, i) => `
-            <button class="tile" data-tile="${i}" aria-expanded="false">
-              <span class="tile-no">${i + 1}</span>
-              <b>${esc(c.t)}</b>
-              ${freq(c) ? `<span class="tile-freq">${esc(freq(c))}</span>` : ""}
-              <span class="tile-for">${esc(conceptGist(c))}</span>
-              <span class="tile-go">Read <i>&rarr;</i></span>
-            </button>`).join("")}
-        </div>
-        <div class="tile-panels">
-          ${list.map((c, i) => {
-            const qs = c.qs.map(id => byId[id]).filter(Boolean);
-            return `
-            <article class="gc-item" data-panel="${i}" id="gc-${slug}-${i}" hidden>
-              <h5><span class="gc-no">${i + 1}</span>${esc(c.t)}
-                ${freq(c) ? `<em>${esc(freq(c))}</em>` : ""}</h5>
-              ${c.d.map(x => `<p>${gloss2(x, gs4Skip(c.t))}</p>`).join("")}
-              ${qs.length ? `<div class="gc-qs"><b>Where it was asked</b>${
-                  qs.map(q => gcQuestion(q, c.t, byHead)).join("")}</div>` : ""}
-              ${c.src ? `<p class="gc-src">${esc(c.src)}</p>` : ""}
-              <button class="tile-close" data-tile="${i}">Close</button>
-            </article>`;
-          }).join("")}
-        </div>
-      </div>
-    </div>`;
-}
-
 /* ---- GS-IV past questions under their syllabus heading ----
    The compilation groups twelve years of GS-IV into fourteen themes; each maps
    onto one or more headings here. Collapsed by default, because some headings
@@ -1275,30 +1105,6 @@ function gs4Rows(qs){
         <span class="g4-meta">${esc(q.syl || "")}${q.m ? " &middot; " + esc(q.m) : ""}</span>
       </span>
     </li>`).join("");
-}
-
-function gs4HTML(title){
-  const qs = gs4For(title);
-  if (!qs.length) return "";
-  const a = qs.filter(q => q.sec === "A"), b = qs.filter(q => q.sec === "B");
-  const yrs = qs.map(q => q.y);
-  const span = Math.min.apply(null, yrs) + " to " + Math.max.apply(null, yrs);
-  const shared = (title.indexOf("Moral Thinkers") === 0);
-  const slug = esc(title).replace(/[^A-Za-z]/g, "");
-  return `
-    <div class="g4">
-      <button class="g4-head" data-g4="${slug}" aria-expanded="false" aria-controls="g4-${slug}">
-        <b>Past questions</b>
-        <span>${qs.length} from ${span} &middot; ${a.length} theory${b.length ? ", " + b.length + " case " + (b.length === 1 ? "study" : "studies") : ""}</span>
-        <i></i>
-      </button>
-      <div class="g4-list" id="g4-${slug}" hidden>
-        ${shared ? `<p class="g4-note">The paper sets one theme for moral thinkers, so this pool is shared with the other moral-thinkers heading.</p>` : ""}
-        ${title === "Case Studies" ? `<p class="g4-note">Every Section B case from 2013 to 2025, gathered from all themes.</p>` : ""}
-        ${a.length ? `<h6>Section A &middot; theory</h6><ul>${gs4Rows(a)}</ul>` : ""}
-        ${b.length ? `<h6>Section B &middot; case studies</h6><ul>${gs4Rows(b)}</ul>` : ""}
-      </div>
-    </div>`;
 }
 
 /* ---- GS-IV Syllabus Map ----
@@ -1786,16 +1592,6 @@ document.addEventListener("click", e => {
     return;
   }
 
-  const tile = e.target.closest("[data-tile]");
-  if (tile) {
-    const group = tile.closest(".tilegroup"), i = tile.dataset.tile;
-    const wasOpen = !group.querySelector(`[data-panel="${i}"]`).hidden;
-    if (wasOpen) closeTiles(group); else openTile(group, i, false);
-    if (tile.classList.contains("tile-close"))
-      group.querySelector(`.tile[data-tile="${i}"]`).scrollIntoView({ behavior:"instant", block:"center" });
-    return;
-  }
-
   const tab = e.target.closest(".pyqtab");
   if (tab) {
     const box = tab.closest(".pyq");
@@ -1808,8 +1604,9 @@ document.addEventListener("click", e => {
   const para = e.target.closest("[data-para]");
   if (para) {
     const [ti, pi] = para.dataset.para.split(":").map(Number);
-    state.view = "themes"; state.page = ti + 1; render();
-    openTile(document.querySelector(".map-card .tilegroup"), pi, true);
+    state.view = "themes"; state.nav = "themes";
+    state.page = ti + 1; state.sel = "p:" + pi; state.reading = true;
+    render();
     return;
   }
 
@@ -1853,8 +1650,9 @@ document.addEventListener("click", e => {
   const nav = e.target.closest("[data-view]");
   if (nav) {
     state.view = nav.dataset.view;
-    state.page = state.view === "syllabus" ? 1 : 0;
-    state.nav = state.view === "syllabus" ? "syllabus" : "views";
+    const maps = { syllabus:1, themes:1 };
+    state.page = maps[state.view] || 0;
+    state.nav = maps[state.view] ? state.view : "views";
     state.sel = null; state.reading = false;
     document.getElementById("sidebar").classList.remove("open");
     render();
@@ -1901,8 +1699,24 @@ document.getElementById("search").addEventListener("input", e => {
   render();
 });
 
-document.getElementById("menuBtn").addEventListener("click", () =>
-  document.getElementById("sidebar").classList.toggle("open"));
+/* Wide: collapse the sidebar to a rail. Narrow: slide the drawer in and out. */
+document.getElementById("menuBtn").addEventListener("click", () => {
+  if (window.matchMedia("(max-width:880px)").matches) {
+    document.getElementById("sidebar").classList.toggle("open");
+    return;
+  }
+  const off = document.documentElement.dataset.side === "off";
+  if (off) delete document.documentElement.dataset.side;
+  else document.documentElement.dataset.side = "off";
+  document.getElementById("menuBtn").setAttribute("aria-expanded", off ? "true" : "false");
+  try { localStorage.setItem("upsc_thinkers_side", off ? "on" : "off"); } catch (e) {}
+});
+try {
+  if (localStorage.getItem("upsc_thinkers_side") === "off") {
+    document.documentElement.dataset.side = "off";
+    document.getElementById("menuBtn").setAttribute("aria-expanded", "false");
+  }
+} catch (e) {}
 
 document.getElementById("themeBtn").addEventListener("click", () => {
   const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
