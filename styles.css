@@ -1,53 +1,53 @@
 /* ================= UPSC THINKERS — STYLES ================= */
 
 :root{
-  --bg:#f6f2ea;
-  --bg-2:#fffdf9;
+  --bg:#f8f8f6;
+  --bg-2:#fcfcfb;
   --panel:#ffffff;
   /* the brand gradient runs across both of these and carries white text, so it
      stays the same in either theme; --accent alone is too pale in dark mode */
-  --brand-a:#8a3324;
-  --brand-b:#5d2118;
-  --ink:#241f1a;
-  --ink-2:#5a5148;
-  --ink-3:#756c62;
-  --line:#e2d9cb;
-  --line-2:#efe8dc;
-  --rail:#ece4d6;      /* the sidebar, a step deeper than the page */
-  --accent:#8a3324;
-  --accent-2:#b8563f;
-  --accent-soft:#f7ece8;
-  --gold:#856512;
-  --gold-soft:#faf3e0;
-  --shadow:0 1px 2px rgba(60,45,30,.05), 0 8px 24px rgba(60,45,30,.07);
-  --shadow-lg:0 4px 12px rgba(60,45,30,.10), 0 24px 60px rgba(60,45,30,.16);
+  --brand-a:#a9503a;
+  --brand-b:#6e3325;
+  --ink:#242424;
+  --ink-2:#6b6b6b;
+  --ink-3:#6b6b6b;   /* the palette names two text colours; tier three is size and weight */
+  --line:#e5e5e2;
+  --line-2:#f0f0ee;
+  --rail:#f1f1ee;      /* the sidebar, a step deeper than the page */
+  --accent:#a9503a;
+  --accent-2:#c06a52;
+  --accent-soft:#f6edea;
+  --gold:#7a6636;
+  --gold-soft:#f3f2ec;
+  --shadow:0 1px 2px rgba(30,30,28,.05), 0 8px 24px rgba(30,30,28,.06);
+  --shadow-lg:0 4px 12px rgba(30,30,28,.09), 0 24px 60px rgba(30,30,28,.14);
   --radius:14px;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
   --sans:"Segoe UI",Inter,system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
   /* quotations get their own face so they stand apart from the body text */
   --quote:Aptos,"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
-  --quote-ink:#151210;
+  --quote-ink:#1c1c1c;
   --sidebar-w:288px;
 }
 
 html[data-theme="dark"]{
-  --bg:#15130f;
-  --bg-2:#1c1915;
-  --panel:#211d18;
-  --ink:#f0e9de;
-  --ink-2:#c2b6a5;
-  --ink-3:#938575;
-  --line:#38312a;
-  --line-2:#2b2620;
-  --rail:#100e0b;      /* the sidebar, a step deeper than the page */
-  --accent:#e08a6f;
-  --accent-2:#f0a98f;
-  --accent-soft:#33241f;
-  --gold:#d9b45c;
-  --gold-soft:#2e2717;
+  --bg:#161615;
+  --bg-2:#1e1e1c;
+  --panel:#232322;
+  --ink:#ededea;
+  --ink-2:#a6a6a1;
+  --ink-3:#93938e;
+  --line:#33332f;
+  --line-2:#2a2a28;
+  --rail:#111110;      /* the sidebar, a step deeper than the page */
+  --accent:#d98368;
+  --accent-2:#e8a189;
+  --accent-soft:#2c211d;
+  --gold:#c9b681;
+  --gold-soft:#26261f;
   --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
   --shadow-lg:0 4px 12px rgba(0,0,0,.4), 0 24px 60px rgba(0,0,0,.55);
-  --quote-ink:#fbf6ec;
+  --quote-ink:#f2f2ee;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -165,7 +165,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 }
 .nav-item:hover{background:var(--line-2);color:var(--ink)}
 .nav-item.active{background:var(--accent);color:var(--panel);font-weight:600}
-.nav-item.active .nav-count{background:rgba(255,255,255,.22);color:var(--panel)}
+/* the pill has to move away from the accent, and which way depends on the
+   theme: the light accent is dark, the dark accent is light */
+.nav-item.active .nav-count{background:rgba(0,0,0,.20);color:var(--panel)}
+html[data-theme="dark"] .nav-item.active .nav-count{background:rgba(255,255,255,.24)}
 .nav-ico{font-size:15px;width:20px;text-align:center;flex-shrink:0}
 .nav-name{flex:1;line-height:1.3}
 .nav-count{
