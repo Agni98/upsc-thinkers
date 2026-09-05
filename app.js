@@ -951,8 +951,10 @@ function renderThemes(){
   });
   return `
     <div class="sm${state.reading ? " reading" : ""}">
-      <aside class="sm-list">
+      <aside class="sm-list" id="smList">
         <div class="sm-head">
+          <button class="mid-btn" data-mid="off" title="Hide this column"
+                  aria-controls="smList">&laquo; Hide</button>
           <span class="sm-no">Theme ${n} of ${ESSAY_THEMES.length}</span>
           <h4>${esc(t.t)}</h4>
           <p>${esc(t.s)}</p>
@@ -970,6 +972,8 @@ function renderThemes(){
           </div>`).join("")}
       </aside>
       <section class="sm-read">
+        <button class="mid-btn show" data-mid="on" title="Show the contents"
+                aria-controls="smList">&raquo; Contents</button>
         <button class="sm-back" data-sel="">&larr; ${esc(t.t)}</button>
         ${themeRead(t, sel)}
         ${moveHTML(walk, at, t.t)}
@@ -1366,8 +1370,10 @@ function renderSyllabus(){
   });
   return `
     <div class="sm${state.reading ? " reading" : ""}">
-      <aside class="sm-list">
+      <aside class="sm-list" id="smList">
         <div class="sm-head">
+          <button class="mid-btn" data-mid="off" title="Hide this column"
+                  aria-controls="smList">&laquo; Hide</button>
           <span class="sm-no">Heading ${n} of ${SYLLABUS.length}</span>
           <h4>${esc(r.t)}</h4>
           <p>${glossText(r.s, gs4GlossIndex())}</p>
@@ -1384,6 +1390,8 @@ function renderSyllabus(){
           </div>`).join("")}
       </aside>
       <section class="sm-read">
+        <button class="mid-btn show" data-mid="on" title="Show the contents"
+                aria-controls="smList">&raquo; Contents</button>
         <button class="sm-back" data-sel="">&larr; ${esc(r.t)}</button>
         ${sylRead(r, sel)}
         ${moveHTML(walk, at, r.t)}
@@ -1772,6 +1780,9 @@ document.addEventListener("click", e => {
   const es = e.target.closest("[data-essay]");
   if (es) { state.view = "essay:" + es.dataset.essay; render(); return; }
 
+  const md = e.target.closest("[data-mid]");
+  if (md) { setMid(md.dataset.mid === "off"); return; }
+
   const go = e.target.closest("[data-go]");
   if (go) {
     const x = mapWalk()[+go.dataset.go];
@@ -1858,33 +1869,20 @@ document.getElementById("search").addEventListener("input", e => {
   render();
 });
 
-/* The panel collapses to a rail. The control lives in the panel, where a reader
-   looks for it; the hamburger does the same thing, and opens the drawer on a
-   narrow screen where there is no panel to collapse. */
-function setRail(off){
-  if (off) document.documentElement.dataset.side = "off";
-  else delete document.documentElement.dataset.side;
-  const b = document.getElementById("railBtn");
-  if (b) {
-    b.setAttribute("aria-expanded", off ? "false" : "true");
-    b.title = off ? "Expand the panel" : "Collapse the panel";
-    b.querySelector("i").innerHTML = off ? "&raquo;" : "&laquo;";
-  }
-  document.getElementById("menuBtn").setAttribute("aria-expanded", off ? "false" : "true");
-  try { localStorage.setItem("upsc_thinkers_side", off ? "off" : "on"); } catch (e) {}
+/* The contents column folds away so the reading can have the width. The
+   sidebar stays: it is the spine of the map and moving it costs the reader
+   their place. */
+function setMid(off){
+  if (off) document.documentElement.dataset.mid = "off";
+  else delete document.documentElement.dataset.mid;
+  try { localStorage.setItem("upsc_thinkers_mid", off ? "off" : "on"); } catch (e) {}
 }
-document.getElementById("railBtn").addEventListener("click", () =>
-  setRail(document.documentElement.dataset.side !== "off"));
-document.getElementById("menuBtn").addEventListener("click", () => {
-  if (window.matchMedia("(max-width:880px)").matches) {
-    document.getElementById("sidebar").classList.toggle("open");
-    return;
-  }
-  setRail(document.documentElement.dataset.side !== "off");
-});
 try {
-  if (localStorage.getItem("upsc_thinkers_side") === "off") setRail(true);
+  if (localStorage.getItem("upsc_thinkers_mid") === "off") setMid(true);
 } catch (e) {}
+
+document.getElementById("menuBtn").addEventListener("click", () =>
+  document.getElementById("sidebar").classList.toggle("open"));
 
 document.getElementById("themeBtn").addEventListener("click", () => {
   const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
