@@ -105,7 +105,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 }
 .icon-btn:hover{border-color:var(--accent);color:var(--accent)}
 
-.menu-btn{display:none}   /* the drawer control, narrow screens only */
+/* the menu button collapses the sidebar on a wide screen and opens the drawer
+   on a narrow one, so one control means one thing: show me the navigation */
+.menu-btn{display:grid}
 
 /* ---------------- Layout ---------------- */
 .shell{display:flex;align-items:flex-start;max-width:1560px;margin:0 auto}
@@ -118,8 +120,33 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   background:var(--rail);
   border-right:1px solid var(--line);
 }
-/* the sidebar sits on a deeper ground, so its small text steps up a shade */
-.sidebar .side-label,.sidebar .syl-no{color:var(--ink-2)}
+/* the panel's own control, where a reader looks for it */
+.rail-btn{
+  display:flex;align-items:center;gap:9px;width:100%;
+  padding:6px 10px;margin-bottom:10px;border:0;border-radius:8px;
+  background:none;color:var(--ink-3);cursor:pointer;
+  font-family:var(--sans);font-size:11px;font-weight:700;
+  letter-spacing:.9px;text-transform:uppercase;transition:.13s}
+.rail-btn:hover{background:var(--line-2);color:var(--accent)}
+.rail-btn:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.rail-btn i{font-style:normal;font-size:14px;line-height:1;color:var(--accent)}
+/* the panel now sits on a deeper ground, so its small text steps up a shade */
+.rail-btn,.sidebar .side-label,.sidebar .syl-no{color:var(--ink-2)}
+@media (min-width:881px){
+  html[data-side="off"] .rail-btn{justify-content:center;padding:8px 0}
+  html[data-side="off"] .rail-btn span{display:none}
+  html[data-side="off"] .sidebar{
+    width:58px;padding-left:8px;padding-right:8px;overflow-x:hidden}
+  html[data-side="off"] .nav-name,
+  html[data-side="off"] .nav-count,
+  html[data-side="off"] .side-label{display:none}
+  html[data-side="off"] .nav-item{justify-content:center;padding:9px 0}
+  html[data-side="off"] .nav-ico{width:auto;font-size:16px}
+  html[data-side="off"] .syl-no{font-size:12px}
+  html[data-side="off"] #catNav{
+    margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+  html[data-side="off"] .nav-back .nav-ico{color:var(--accent)}
+}
 .sidebar::-webkit-scrollbar{width:8px}
 .sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
 
@@ -675,6 +702,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 @media (max-width:1080px){ .qbank{columns:1} }
 @media (max-width:880px){
   .menu-btn{display:grid}
+  .rail-btn{display:none}   /* the drawer has nothing to collapse into */
   .topbar{gap:10px;padding:10px 14px}
   .brand-mark{width:34px;height:34px;font-size:18px}
   .brand-text h1{font-size:15px}
@@ -1081,23 +1109,7 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 .sm-list::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
 .sm-read{padding-left:28px;min-width:0}
 
-.sm-head{display:flex;flex-direction:column;gap:5px;align-items:flex-start}
-/* the middle column folds so the reading can have the width; the sidebar stays,
-   because it is the spine of the map */
-.mid-btn{
-  font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.9px;
-  text-transform:uppercase;color:var(--ink-2);background:none;border:0;
-  padding:4px 8px;margin:-4px 0 3px -8px;border-radius:7px;cursor:pointer;transition:.13s}
-.mid-btn:hover{background:var(--line-2);color:var(--accent)}
-.mid-btn:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
-.mid-btn.show{
-  display:none;margin:0 0 16px;border:1px solid var(--line);background:var(--panel);
-  color:var(--accent);padding:7px 13px}
-.mid-btn.show:hover{border-color:var(--accent);background:var(--accent-soft)}
-html[data-mid="off"] .sm{grid-template-columns:minmax(0,1fr)}
-html[data-mid="off"] .sm-list{display:none}
-html[data-mid="off"] .sm-read{padding-left:0}
-html[data-mid="off"] .mid-btn.show{display:inline-flex}
+.sm-head{display:flex;flex-direction:column;gap:5px}
 .sm-no{
   font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.9px;
   text-transform:uppercase;color:var(--accent)}
@@ -1181,8 +1193,6 @@ html[data-mid="off"] .mid-btn.show{display:inline-flex}
   .sm-read{padding-left:0}
   .sm.reading .sm-list{display:none}
   .sm:not(.reading) .sm-read{display:none}
-  .mid-btn{display:none}                       /* the panes already take turns */
-  html[data-mid="off"] .sm-list{display:flex}
   .sm.reading .sm-back{
     display:inline-flex;align-items:center;gap:7px;margin-bottom:14px;
     font-family:var(--sans);font-size:12.5px;font-weight:600;color:var(--accent);
