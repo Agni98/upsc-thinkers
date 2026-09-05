@@ -1133,68 +1133,68 @@ function sylStats(r){
    returned to without hunting. */
 function mapIntroHTML(kind){
   const syl = kind === "syllabus";
-  const s = siteStats();
-  const walk = mapWalk().length;
+  // the middle panel's groups, drawn as bands of rows rather than written out
+  const mid = syl ? [3, 1, 1] : [5, 2];
+  let y = 24, band = "";
+  mid.forEach((n, g) => {
+    band += `<rect class="d-gap" x="14" y="${y}" rx="2" width="46" height="5"/>`;
+    y += 13;
+    for (let i = 0; i < n; i++) {
+      const on = g === 0 && i === 0;
+      band += `<rect class="d-row${on ? " on" : ""}" x="14" y="${y}" rx="4"
+                     width="${on ? 128 : 96 + (i % 3) * 11}" height="10"/>`;
+      y += 16;
+    }
+    y += 9;
+  });
   const steps = [
-    ["Pick a heading", syl
-      ? `All ${SYLLABUS.length} are in the panel on the left, and stay there while you read.`
-      : `All ${ESSAY_THEMES.length} are in the panel on the left, and stay there while you read.`],
-    ["Pick something to read", syl
-      ? "The middle column lists what that heading holds: its concepts first, then the thinkers and the past questions."
-      : "The middle column lists the theme's model paragraphs, then the essays written out in full."],
-    ["Read it", "The reading opens on the right and always arrives in the same place. Previous and next at the foot of it carry you through the whole map, heading to heading."]
-  ];
-  const parts = syl ? [
-    ["Concept notes", s.concepts, "The ideas the paper keeps returning to, written plainly. Each carries the questions that asked it."],
-    ["Thinkers", s.thinkers, "Profiles mapped to the headings they answer, with quotations you can use."],
-    ["Past questions", s.gsq, "Every question from 2013 to 2025, under the heading the Commission set it from."],
-    ["Case studies", s.cases, "Heading 16, sorted by what collides in each, with a six-move method for answering."]
-  ] : [
-    ["Model paragraphs", s.paras, "Five per theme, one for each kind of question the theme throws up. Adapt them; do not memorise them."],
-    ["Open it out with", s.opens, "The substance behind each prompt: the case, the number, the judgment, so a paragraph can be widened on the day."],
-    ["Full model essays", s.essays, "Written out end to end, each answering past topics."],
-    ["Past topics", s.topics, "Every essay set since 2013, grouped by the theme it belongs to."]
+    ["Pick a " + (syl ? "heading" : "theme"), syl
+      ? "All sixteen stay in the panel while you read."
+      : "All nine stay in the panel while you read."],
+    ["Pick what to read", syl
+      ? "A concept, a thinker, or the past questions."
+      : "A model paragraph, or an essay written out in full."],
+    ["Read it", "It always opens in the same place. Back and next carry you through the whole map."]
   ];
   return `
     <div class="intro">
-      <div class="intro-head">
-        <span class="intro-eyebrow">${syl ? "GS Paper IV \u00b7 Ethics" : "Essay Paper"}</span>
-        <h2>${syl ? "The syllabus, heading by heading" : "Nine themes, and what to write about them"}</h2>
-        <p>${syl
-          ? `The ${SYLLABUS.length} headings the paper is set from. Under each one are the ideas it keeps
-             returning to, the thinkers who answer it, and every question asked since 2013.`
-          : `The ${ESSAY_THEMES.length} themes cover every topic set since 2013. Each carries model
-             paragraphs you can adapt, and the material to open each one out with.`}</p>
-      </div>
+      <h2>${syl ? "Sixteen headings, one reading at a time"
+                : "Nine themes, one paragraph at a time"}</h2>
 
-      <div class="intro-how">
-        <div class="how-diagram" aria-hidden="true">
-          <span class="hd-col hd-1"><i></i><i></i><i></i><i></i><i></i><i></i></span>
-          <span class="hd-col hd-2"><i></i><i></i><i></i><i></i></span>
-          <span class="hd-col hd-3"><b></b><b></b><b></b><b></b><b></b></span>
-        </div>
-        <ol class="how-steps">
+      <figure class="how">
+        <svg viewBox="0 0 690 226" role="img" preserveAspectRatio="xMidYMid meet"
+             aria-label="Three panels side by side: a list of headings, a list of what the chosen heading holds, and the reading.">
+          <rect class="d-box rail" x="1" y="1" width="128" height="224" rx="10"/>
+          ${[0,1,2,3,4,5,6,7].map(i => `
+            <rect class="d-row${i === 1 ? " on" : ""}" x="14" y="${22 + i * 25}" rx="4"
+                  width="${i === 1 ? 100 : 62 + (i * 13) % 39}" height="10"/>`).join("")}
+
+          <path class="d-arrow" d="M145 113 h26 m-8 -7 l8 7 l-8 7"/>
+
+          <g transform="translate(187 0)">
+            <rect class="d-box" x="1" y="1" width="158" height="224" rx="10"/>
+            ${band}
+          </g>
+
+          <path class="d-arrow" d="M358 113 h26 m-8 -7 l8 7 l-8 7"/>
+
+          <g transform="translate(400 0)">
+            <rect class="d-box" x="1" y="1" width="288" height="224" rx="10"/>
+            <rect class="d-title" x="20" y="24" rx="4" width="152" height="14"/>
+            ${[0,1,2,3,4,5,6,7].map(i => `
+              <rect class="d-line" x="20" y="${58 + i * 18}" rx="3"
+                    width="${250 - (i === 7 ? 98 : (i * 31) % 46)}" height="7"/>`).join("")}
+            <rect class="d-btn" x="20" y="186" rx="6" width="78" height="24"/>
+            <rect class="d-btn on" x="190" y="186" rx="6" width="78" height="24"/>
+          </g>
+        </svg>
+        <figcaption class="how-steps">
           ${steps.map((x, i) => `
-            <li><span class="how-n">${i + 1}</span>
-              <b>${esc(x[0])}</b><span>${esc(x[1])}</span></li>`).join("")}
-        </ol>
-      </div>
+            <span class="how-step"><b>${i + 1}</b><em>${esc(x[0])}</em>${esc(x[1])}</span>`).join("")}
+        </figcaption>
+      </figure>
 
-      <div class="intro-sec">What is in it</div>
-      <div class="intro-parts">
-        ${parts.map(p => `
-          <div class="part">
-            <b>${p[1]}</b>
-            <span class="part-t">${esc(p[0])}</span>
-            <span class="part-d">${esc(p[2])}</span>
-          </div>`).join("")}
-      </div>
-
-      <div class="intro-go">
-        <button class="gobtn primary" data-page="1">
-          Start at ${syl ? "heading" : "theme"} 1 <i>&rarr;</i></button>
-        <span class="intro-count">${walk} readings in this map, end to end</span>
-      </div>
+      <button class="gobtn primary" data-page="1">Start <i>&rarr;</i></button>
     </div>`;
 }
 
