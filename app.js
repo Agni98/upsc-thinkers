@@ -279,6 +279,10 @@ function renderSyllabusNav(){
     <button class="nav-item nav-back" data-nav="views" title="All views">
       <span class="nav-ico">&larr;</span><span class="nav-name">All views</span>
     </button>
+    <button class="nav-item nav-intro ${state.page ? "" : "active"}" data-page="0"
+            title="How this map works">
+      <span class="nav-ico">&#9432;</span><span class="nav-name">How this map works</span>
+    </button>
     <div class="side-label">GS-IV Syllabus</div>
     ${SYLLABUS.map((r, i) => `
       <button class="nav-item ${state.page === i + 1 ? "active" : ""}" data-page="${i + 1}"
@@ -297,6 +301,10 @@ function renderThemeNav(){
   document.getElementById("viewNav").innerHTML = `
     <button class="nav-item nav-back" data-nav="views" title="All views">
       <span class="nav-ico">&larr;</span><span class="nav-name">All views</span>
+    </button>
+    <button class="nav-item nav-intro ${state.page ? "" : "active"}" data-page="0"
+            title="How this map works">
+      <span class="nav-ico">&#9432;</span><span class="nav-name">How this map works</span>
     </button>
     <div class="side-label">Essay themes</div>
     ${ESSAY_THEMES.map((t, i) => `
@@ -930,8 +938,8 @@ function themeRead(t, sel){
 }
 
 function renderThemes(){
-  let n = state.page | 0;
-  if (!n || !ESSAY_THEMES[n - 1]) { n = 1; state.page = 1; }
+  const n = state.page | 0;
+  if (!n || !ESSAY_THEMES[n - 1]) { state.page = 0; return mapIntroHTML("themes"); }
   const t = ESSAY_THEMES[n - 1];
   const items = themeItems(t);
   const sel = items.some(x => x.id === state.sel) ? state.sel : (items[0] ? items[0].id : null);
@@ -1120,6 +1128,76 @@ function sylStats(r){
            concepts:con, questions:gs4For(r.t).length };
 }
 
+/* ---- How the map works ----
+   Both maps open here. The panel keeps it above heading one, so it can be
+   returned to without hunting. */
+function mapIntroHTML(kind){
+  const syl = kind === "syllabus";
+  const s = siteStats();
+  const walk = mapWalk().length;
+  const steps = [
+    ["Pick a heading", syl
+      ? `All ${SYLLABUS.length} are in the panel on the left, and stay there while you read.`
+      : `All ${ESSAY_THEMES.length} are in the panel on the left, and stay there while you read.`],
+    ["Pick something to read", syl
+      ? "The middle column lists what that heading holds: its concepts first, then the thinkers and the past questions."
+      : "The middle column lists the theme's model paragraphs, then the essays written out in full."],
+    ["Read it", "The reading opens on the right and always arrives in the same place. Previous and next at the foot of it carry you through the whole map, heading to heading."]
+  ];
+  const parts = syl ? [
+    ["Concept notes", s.concepts, "The ideas the paper keeps returning to, written plainly. Each carries the questions that asked it."],
+    ["Thinkers", s.thinkers, "Profiles mapped to the headings they answer, with quotations you can use."],
+    ["Past questions", s.gsq, "Every question from 2013 to 2025, under the heading the Commission set it from."],
+    ["Case studies", s.cases, "Heading 16, sorted by what collides in each, with a six-move method for answering."]
+  ] : [
+    ["Model paragraphs", s.paras, "Five per theme, one for each kind of question the theme throws up. Adapt them; do not memorise them."],
+    ["Open it out with", s.opens, "The substance behind each prompt: the case, the number, the judgment, so a paragraph can be widened on the day."],
+    ["Full model essays", s.essays, "Written out end to end, each answering past topics."],
+    ["Past topics", s.topics, "Every essay set since 2013, grouped by the theme it belongs to."]
+  ];
+  return `
+    <div class="intro">
+      <div class="intro-head">
+        <span class="intro-eyebrow">${syl ? "GS Paper IV \u00b7 Ethics" : "Essay Paper"}</span>
+        <h2>${syl ? "The syllabus, heading by heading" : "Nine themes, and what to write about them"}</h2>
+        <p>${syl
+          ? `The ${SYLLABUS.length} headings the paper is set from. Under each one are the ideas it keeps
+             returning to, the thinkers who answer it, and every question asked since 2013.`
+          : `The ${ESSAY_THEMES.length} themes cover every topic set since 2013. Each carries model
+             paragraphs you can adapt, and the material to open each one out with.`}</p>
+      </div>
+
+      <div class="intro-how">
+        <div class="how-diagram" aria-hidden="true">
+          <span class="hd-col hd-1"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="hd-col hd-2"><i></i><i></i><i></i><i></i></span>
+          <span class="hd-col hd-3"><b></b><b></b><b></b><b></b><b></b></span>
+        </div>
+        <ol class="how-steps">
+          ${steps.map((x, i) => `
+            <li><span class="how-n">${i + 1}</span>
+              <b>${esc(x[0])}</b><span>${esc(x[1])}</span></li>`).join("")}
+        </ol>
+      </div>
+
+      <div class="intro-sec">What is in it</div>
+      <div class="intro-parts">
+        ${parts.map(p => `
+          <div class="part">
+            <b>${p[1]}</b>
+            <span class="part-t">${esc(p[0])}</span>
+            <span class="part-d">${esc(p[2])}</span>
+          </div>`).join("")}
+      </div>
+
+      <div class="intro-go">
+        <button class="gobtn primary" data-page="1">
+          Start at ${syl ? "heading" : "theme"} 1 <i>&rarr;</i></button>
+        <span class="intro-count">${walk} readings in this map, end to end</span>
+      </div>
+    </div>`;
+}
+
 /* Every item in the open map, in reading order, so that previous and next can
    cross from the last item of one heading into the first of the next, and so
    that progress has a denominator. */
@@ -1268,8 +1346,8 @@ function sylRead(r, sel){
 }
 
 function renderSyllabus(){
-  let n = state.page | 0;
-  if (!n || !SYLLABUS[n - 1]) { n = 1; state.page = 1; }
+  const n = state.page | 0;
+  if (!n || !SYLLABUS[n - 1]) { state.page = 0; return mapIntroHTML("syllabus"); }
   const r = SYLLABUS[n - 1];
   const items = sylItems(r);
   const sel = sylSel(items);
@@ -1722,7 +1800,7 @@ document.addEventListener("click", e => {
   if (nav) {
     state.view = nav.dataset.view;
     const maps = { syllabus:1, themes:1 };
-    state.page = maps[state.view] || 0;
+    state.page = 0;                       // both maps open on how they work
     state.nav = maps[state.view] ? state.view : "views";
     state.sel = null; state.reading = false;
     document.getElementById("sidebar").classList.remove("open");
