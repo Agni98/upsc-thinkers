@@ -1133,69 +1133,76 @@ function sylStats(r){
    returned to without hunting. */
 function mapIntroHTML(kind){
   const syl = kind === "syllabus";
-  // the middle panel's groups, drawn as bands of rows rather than written out
-  const mid = syl ? [3, 1, 1] : [5, 2];
-  let y = 24, band = "";
-  mid.forEach((n, g) => {
-    band += `<rect class="d-gap" x="14" y="${y}" rx="2" width="46" height="5"/>`;
-    y += 13;
-    for (let i = 0; i < n; i++) {
-      const on = g === 0 && i === 0;
-      band += `<rect class="d-row${on ? " on" : ""}" x="14" y="${y}" rx="4"
-                     width="${on ? 128 : 96 + (i % 3) * 11}" height="10"/>`;
-      y += 16;
-    }
-    y += 9;
-  });
-  const steps = [
-    ["Pick a " + (syl ? "heading" : "theme"), syl
-      ? "All sixteen stay in the panel while you read."
-      : "All nine stay in the panel while you read."],
-    ["Pick what to read", syl
-      ? "A concept, a thinker, or the past questions."
-      : "A model paragraph, or an essay written out in full."],
-    ["Read it", "It always opens in the same place. Back and next carry you through the whole map."]
-  ];
+  const S = SYLLABUS, T = ESSAY_THEMES;
+  const lead   = syl ? S[0].t : T[0].t;
+  const others = syl ? [S[1].t, S[2].t] : [T[1].t, T[2].t];
+  const rest   = (syl ? S.length : T.length) - 4;
+  const last   = syl ? "Case Studies" : T[T.length - 1].t;
+  const leaves = syl
+    ? [["Concepts", "the ideas the paper keeps coming back to"],
+       ["Thinkers", "who to quote, and for what"],
+       ["Past questions", "every one set since 2013"]]
+    : [["Model paragraphs", "five, one per kind of question"],
+       ["Open it out with", "the case, the number, the judgment"],
+       ["Full essays", "the whole thing, written out"]];
+  const node = (t, cls, sub) =>
+    `<span class="mnode${cls ? " " + cls : ""}"><b>${esc(t)}</b>${
+      sub ? `<em>${esc(sub)}</em>` : ""}</span>`;
   return `
     <div class="intro">
-      <h2>${syl ? "Sixteen headings, one reading at a time"
-                : "Nine themes, one paragraph at a time"}</h2>
+      <h2>${syl ? "One paper, sixteen headings, three things under each"
+                : "One paper, nine themes, three things under each"}</h2>
 
-      <figure class="how">
-        <svg viewBox="0 0 690 226" role="img" preserveAspectRatio="xMidYMid meet"
-             aria-label="Three panels side by side: a list of headings, a list of what the chosen heading holds, and the reading.">
-          <rect class="d-box rail" x="1" y="1" width="128" height="224" rx="10"/>
-          ${[0,1,2,3,4,5,6,7].map(i => `
-            <rect class="d-row${i === 1 ? " on" : ""}" x="14" y="${22 + i * 25}" rx="4"
-                  width="${i === 1 ? 100 : 62 + (i * 13) % 39}" height="10"/>`).join("")}
+      <div class="mind">
+        <svg class="mlines" aria-hidden="true"></svg>
+        <div class="mrow">
+          ${node(syl ? "GS Paper IV" : "Essay Paper", "root")}
+          <ul class="mb">
+            <li>
+              <div class="mrow">
+                ${node(lead, "lead")}
+                <ul class="mb">
+                  ${leaves.map(l => `<li>${node(l[0], "leaf", l[1])}</li>`).join("")}
+                </ul>
+              </div>
+            </li>
+            ${others.map(x => `<li>${node(x)}</li>`).join("")}
+            <li>${node("and " + rest + " more", "dim")}</li>
+            <li>${node(last, "", syl ? "with a method for answering" : "")}</li>
+          </ul>
+        </div>
+      </div>
 
-          <path class="d-arrow" d="M145 113 h26 m-8 -7 l8 7 l-8 7"/>
-
-          <g transform="translate(187 0)">
-            <rect class="d-box" x="1" y="1" width="158" height="224" rx="10"/>
-            ${band}
-          </g>
-
-          <path class="d-arrow" d="M358 113 h26 m-8 -7 l8 7 l-8 7"/>
-
-          <g transform="translate(400 0)">
-            <rect class="d-box" x="1" y="1" width="288" height="224" rx="10"/>
-            <rect class="d-title" x="20" y="24" rx="4" width="152" height="14"/>
-            ${[0,1,2,3,4,5,6,7].map(i => `
-              <rect class="d-line" x="20" y="${58 + i * 18}" rx="3"
-                    width="${250 - (i === 7 ? 98 : (i * 31) % 46)}" height="7"/>`).join("")}
-            <rect class="d-btn" x="20" y="186" rx="6" width="78" height="24"/>
-            <rect class="d-btn on" x="190" y="186" rx="6" width="78" height="24"/>
-          </g>
-        </svg>
-        <figcaption class="how-steps">
-          ${steps.map((x, i) => `
-            <span class="how-step"><b>${i + 1}</b><em>${esc(x[0])}</em>${esc(x[1])}</span>`).join("")}
-        </figcaption>
-      </figure>
-
+      <p class="mind-note">Every ${syl ? "heading" : "theme"} opens the same way.</p>
       <button class="gobtn primary" data-page="1">Start <i>&rarr;</i></button>
     </div>`;
+}
+
+/* The branches are real text of unpredictable width, so the connectors are
+   measured and drawn once the browser has laid the nodes out. */
+function drawMind(root){
+  const wrap = root.querySelector(".mind");
+  if (!wrap) return;
+  const svg = wrap.querySelector(".mlines");
+  const box = wrap.getBoundingClientRect();
+  if (!box.width) return;
+  svg.setAttribute("viewBox", "0 0 " + box.width + " " + box.height);
+  const d = [];
+  wrap.querySelectorAll("ul.mb").forEach(ul => {
+    const from = ul.previousElementSibling;
+    if (!from) return;
+    const a = from.getBoundingClientRect();
+    const x1 = a.right - box.left, y1 = a.top + a.height / 2 - box.top;
+    ul.querySelectorAll(":scope > li").forEach(li => {
+      const n = li.querySelector(".mnode");
+      if (!n) return;
+      const b = n.getBoundingClientRect();
+      const x2 = b.left - box.left, y2 = b.top + b.height / 2 - box.top;
+      const mx = x1 + (x2 - x1) / 2;
+      d.push(`M${x1} ${y1} C${mx} ${y1} ${mx} ${y2} ${x2} ${y2}`);
+    });
+  });
+  svg.innerHTML = d.map(p => `<path d="${p}"/>`).join("");
 }
 
 /* Every item in the open map, in reading order, so that previous and next can
@@ -1405,6 +1412,9 @@ function render(){
   glossHide(true);
   renderNav();
   applyPortraits(main);
+  drawMind(main);
+  // a webfont arriving late changes every label width, so measure again
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => drawMind(main));
   window.scrollTo({ top:0, behavior:"instant" });
 }
 
@@ -1909,6 +1919,11 @@ document.addEventListener("focusout", e => {
   if (e.target.closest(".gloss") && !glossPinned) glossHideSoon();
 });
 window.addEventListener("resize", () => glossHide(true));
+let mindReflow = null;
+window.addEventListener("resize", () => {
+  clearTimeout(mindReflow);
+  mindReflow = setTimeout(() => drawMind(document.getElementById("main")), 120);
+});
 
 document.addEventListener("keydown", e => {
   if (e.key === "Escape") { glossHide(true); closeSheet(); }
