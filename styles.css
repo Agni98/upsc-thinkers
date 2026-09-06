@@ -1,24 +1,24 @@
 /* ================= UPSC THINKERS — STYLES ================= */
 
 :root{
-  --bg:#f8f8f6;
-  --bg-2:#fcfcfb;
+  --bg:#fbfaf8;
+  --bg-2:#fefdfc;
   --panel:#ffffff;
   /* the brand gradient runs across both of these and carries white text, so it
      stays the same in either theme; --accent alone is too pale in dark mode */
-  --brand-a:#a9503a;
-  --brand-b:#6e3325;
-  --ink:#242424;
-  --ink-2:#6b6b6b;
-  --ink-3:#6b6b6b;   /* the palette names two text colours; tier three is size and weight */
-  --line:#e5e5e2;
-  --line-2:#f0f0ee;
-  --rail:#f1f1ee;      /* the sidebar, a step deeper than the page */
-  --accent:#a9503a;
-  --accent-2:#c06a52;
-  --accent-soft:#f6edea;
-  --gold:#7a6636;
-  --gold-soft:#f3f2ec;
+  --brand-a:#b4442b;
+  --brand-b:#7a2d1b;
+  --ink:#333130;      /* warm near-black: 11.9:1, not 14.6 */
+  --ink-2:#55524f;    /* body text, 7.5:1 */
+  --ink-3:#6f6b67;    /* labels and captions, 4.8:1 */
+  --line:#e8e5e1;
+  --line-2:#f2f0ed;
+  --rail:#f4f2ef;      /* the sidebar, a step deeper than the page */
+  --accent:#b4442b;
+  --accent-2:#c9634a;
+  --accent-soft:#faeee9;
+  --gold:#7d6a3c;
+  --gold-soft:#f5f3ea;
   --shadow:0 1px 2px rgba(30,30,28,.05), 0 8px 24px rgba(30,30,28,.06);
   --shadow-lg:0 4px 12px rgba(30,30,28,.09), 0 24px 60px rgba(30,30,28,.14);
   --radius:14px;
@@ -26,28 +26,28 @@
   --sans:"Segoe UI",Inter,system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
   /* quotations get their own face so they stand apart from the body text */
   --quote:Aptos,"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
-  --quote-ink:#1c1c1c;
+  --quote-ink:#2b2927;
   --sidebar-w:288px;
 }
 
 html[data-theme="dark"]{
-  --bg:#161615;
-  --bg-2:#1e1e1c;
-  --panel:#232322;
-  --ink:#ededea;
-  --ink-2:#a6a6a1;
-  --ink-3:#93938e;
-  --line:#33332f;
-  --line-2:#2a2a28;
-  --rail:#111110;      /* the sidebar, a step deeper than the page */
-  --accent:#d98368;
-  --accent-2:#e8a189;
-  --accent-soft:#2c211d;
-  --gold:#c9b681;
-  --gold-soft:#26261f;
+  --bg:#191817;
+  --bg-2:#211f1e;
+  --panel:#262423;
+  --ink:#e4e1dc;      /* eased off pure white too */
+  --ink-2:#b0aca6;
+  --ink-3:#948f89;
+  --line:#38352f;
+  --line-2:#2d2a28;
+  --rail:#131211;      /* the sidebar, a step deeper than the page */
+  --accent:#dd8064;
+  --accent-2:#eb9f85;
+  --accent-soft:#302019;
+  --gold:#cbb47c;
+  --gold-soft:#282318;
   --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
   --shadow-lg:0 4px 12px rgba(0,0,0,.4), 0 24px 60px rgba(0,0,0,.55);
-  --quote-ink:#f2f2ee;
+  --quote-ink:#eeeae4;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
