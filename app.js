@@ -82,7 +82,7 @@ const ESSAY_THEMES = [
 
 /* ---- State ---- */
 const state = { view:"home", q:"", tag:"", mode:"thinker", page:0,
-                sel:null, reading:false, nav:"views" };
+                sel:null, reading:false, nav:"views", fold:false };
 const byId = Object.fromEntries(THINKERS.map(t => [t.id, t]));
 const catById = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));
 
@@ -286,10 +286,13 @@ function renderSyllabusNav(){
     <div class="side-label">GS-IV Syllabus</div>
     ${SYLLABUS.map((r, i) => `
       <button class="nav-item ${state.page === i + 1 ? "active" : ""}" data-page="${i + 1}"
-              title="${esc(r.t)}">
+              aria-expanded="${state.page === i + 1 ? String(!state.fold) : ""}"
+              title="${esc(r.t)}${state.page === i + 1
+                ? (state.fold ? " — click to show its contents" : " — click to hide its contents") : ""}">
         <span class="nav-ico syl-no">${i + 1}</span>
         <span class="nav-name">${esc(r.t)}</span>
         <span class="nav-count">${sylStats(r).concepts.length}</span>
+        ${state.page === i + 1 ? `<span class="nav-fold">${state.fold ? "&#9656;" : "&#9662;"}</span>` : ""}
       </button>`).join("")}`;
   document.getElementById("catNav").innerHTML = "";
   const lab = document.getElementById("catLabel");
@@ -309,10 +312,13 @@ function renderThemeNav(){
     <div class="side-label">Essay themes</div>
     ${ESSAY_THEMES.map((t, i) => `
       <button class="nav-item ${state.page === i + 1 ? "active" : ""}" data-page="${i + 1}"
-              title="${esc(t.t)}">
+              aria-expanded="${state.page === i + 1 ? String(!state.fold) : ""}"
+              title="${esc(t.t)}${state.page === i + 1
+                ? (state.fold ? " — click to show its contents" : " — click to hide its contents") : ""}">
         <span class="nav-ico syl-no">${i + 1}</span>
         <span class="nav-name">${esc(t.t)}</span>
         <span class="nav-count">${themeStats(t).list.length}</span>
+        ${state.page === i + 1 ? `<span class="nav-fold">${state.fold ? "&#9656;" : "&#9662;"}</span>` : ""}
       </button>`).join("")}`;
   document.getElementById("catNav").innerHTML = "";
   const lab = document.getElementById("catLabel");
@@ -950,7 +956,7 @@ function renderThemes(){
     if (last && last.g === it.g) last.items.push(it); else groups.push({ g:it.g, items:[it] });
   });
   return `
-    <div class="sm${state.reading ? " reading" : ""}">
+    <div class="sm${state.fold ? " fold" : ""}${state.reading ? " reading" : ""}">
       <aside class="sm-list">
         <div class="sm-head">
           <span class="sm-no">Theme ${n} of ${ESSAY_THEMES.length}</span>
@@ -1365,7 +1371,7 @@ function renderSyllabus(){
     if (last && last.g === it.g) last.items.push(it); else groups.push({ g:it.g, items:[it] });
   });
   return `
-    <div class="sm${state.reading ? " reading" : ""}">
+    <div class="sm${state.fold ? " fold" : ""}${state.reading ? " reading" : ""}">
       <aside class="sm-list">
         <div class="sm-head">
           <span class="sm-no">Heading ${n} of ${SYLLABUS.length}</span>
@@ -1798,9 +1804,21 @@ document.addEventListener("click", e => {
 
   const pg = e.target.closest("[data-page]");
   if (pg) {
+    const to = +pg.dataset.page;
+    const inMap = state.view === "syllabus" || state.view === "themes";
+    // the heading you are on is the control for its own contents
+    if (inMap && to > 0 && to === state.page && pg.closest("#viewNav")) {
+      document.getElementById("sidebar").classList.remove("open");
+      // below the two-pane breakpoint the panes already take turns, so there is
+      // nothing to fold and the tap simply closes the drawer
+      if (!window.matchMedia("(max-width:1120px)").matches) state.fold = !state.fold;
+      render();
+      return;
+    }
     if (state.view !== "syllabus") state.view = "themes";   // both maps page the same way
-    state.page = +pg.dataset.page;
+    state.page = to;
     state.sel = null; state.reading = false;   // a new heading opens at its first item
+    state.fold = false;                        // and opens showing what is in it
     document.getElementById("sidebar").classList.remove("open");
     render();
     return;
