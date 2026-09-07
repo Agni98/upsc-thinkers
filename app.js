@@ -82,7 +82,7 @@ const ESSAY_THEMES = [
 
 /* ---- State ---- */
 const state = { view:"home", q:"", tag:"", mode:"thinker", page:0,
-                sel:null, reading:false, nav:"views", fold:false };
+                sel:null, reading:false, nav:"views", fold:false, all:false };
 const byId = Object.fromEntries(THINKERS.map(t => [t.id, t]));
 const catById = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));
 
@@ -1139,49 +1139,62 @@ function sylStats(r){
    returned to without hunting. */
 function mapIntroHTML(kind){
   const syl = kind === "syllabus";
-  const S = SYLLABUS, T = ESSAY_THEMES;
-  const lead   = syl ? S[0].t : T[0].t;
-  const others = syl ? [S[1].t, S[2].t] : [T[1].t, T[2].t];
-  const rest   = (syl ? S.length : T.length) - 4;
-  const last   = syl ? "Case Studies" : T[T.length - 1].t;
+  const list = syl ? SYLLABUS : ESSAY_THEMES;
+  // every node opens what it names, so the picture is also the way in
   const leaves = syl
-    ? [["Concepts", "the ideas the paper keeps coming back to"],
-       ["Thinkers", "who to quote, and for what"],
-       ["Past questions", "every one set since 2013"]]
-    : [["Model paragraphs", "five, one per kind of question"],
-       ["Open it out with", "the case, the number, the judgment"],
-       ["Full essays", "the whole thing, written out"]];
-  const node = (t, cls, sub) =>
-    `<span class="mnode${cls ? " " + cls : ""}"><b>${esc(t)}</b>${
-      sub ? `<em>${esc(sub)}</em>` : ""}</span>`;
+    ? [["Concepts", "the ideas the paper keeps coming back to", "c:0"],
+       ["Thinkers", "who to quote, and for what", "thinkers"],
+       ["Past questions", "every one set since 2013", "pyq"]]
+    : [["Model paragraphs", "five, one per kind of question", "p:0"],
+       ["Full essays", "the whole thing, written out", firstEssaySel(list[0])]];
+  const node = (t, at, cls, sub) => {
+    const c = "mnode" + (cls ? " " + cls : "");
+    const body = `<b>${esc(t)}</b>${sub ? `<em>${esc(sub)}</em>` : ""}`;
+    return at === null
+      ? `<span class="${c}">${body}</span>`
+      : `<button class="${c} live" data-open-at="${esc(at)}">${body}</button>`;
+  };
+  const shown = state.all ? list.length : 3;
+  const rest = list.length - shown - (syl && !state.all ? 1 : 0);
   return `
     <div class="intro">
       <h2>${syl ? "One paper, sixteen headings, three things under each"
-                : "One paper, nine themes, three things under each"}</h2>
+                : "One paper, nine themes, two things under each"}</h2>
 
       <div class="mind">
         <svg class="mlines" aria-hidden="true"></svg>
         <div class="mrow">
-          ${node(syl ? "GS Paper IV" : "Essay Paper", "root")}
+          ${node(syl ? "GS Paper IV" : "Essay Paper", null, "root")}
           <ul class="mb">
             <li>
               <div class="mrow">
-                ${node(lead, "lead")}
+                ${node(list[0].t, "1|", "lead")}
                 <ul class="mb">
-                  ${leaves.map(l => `<li>${node(l[0], "leaf", l[1])}</li>`).join("")}
+                  ${leaves.map(l => `<li>${node(l[0], "1|" + l[2], "leaf", l[1])}</li>`).join("")}
                 </ul>
               </div>
             </li>
-            ${others.map(x => `<li>${node(x)}</li>`).join("")}
-            <li>${node("and " + rest + " more", "dim")}</li>
-            <li>${node(last, "", syl ? "with a method for answering" : "")}</li>
+            ${list.slice(1, shown).map((x, i) => `<li>${node(x.t, (i + 2) + "|")}</li>`).join("")}
+            ${rest > 0
+              ? `<li><button class="mnode live dim" data-all="on">and ${rest} more<i>&#9662;</i></button></li>`
+              : state.all
+                ? `<li><button class="mnode live dim" data-all="off">show fewer<i>&#9652;</i></button></li>`
+                : ""}
+            ${(syl && !state.all)
+              ? `<li>${node("Case Studies", list.length + "|", "", "with a method for answering")}</li>` : ""}
           </ul>
         </div>
       </div>
 
-      <p class="mind-note">Every ${syl ? "heading" : "theme"} opens the same way.</p>
-      <button class="gobtn primary" data-page="1">Start <i>&rarr;</i></button>
+      <p class="mind-note">Click any of them to open it.</p>
     </div>`;
+}
+
+/* The first full essay a theme has, if it has one. */
+function firstEssaySel(theme){
+  const keys = (theme && theme.essays) || [];
+  const k = keys.filter(x => (typeof ESSAYS !== "undefined") && ESSAYS[x])[0];
+  return k ? "e:" + k : "p:0";
 }
 
 /* The branches are real text of unpredictable width, so the connectors are
@@ -1778,6 +1791,20 @@ document.addEventListener("click", e => {
   const es = e.target.closest("[data-essay]");
   if (es) { state.view = "essay:" + es.dataset.essay; render(); return; }
 
+  const oa = e.target.closest("[data-open-at]");
+  if (oa) {
+    const bits = oa.dataset.openAt.split("|");
+    state.page = +bits[0];
+    state.sel = bits[1] || null;
+    state.reading = !!bits[1];
+    state.fold = false;
+    render();
+    return;
+  }
+
+  const al = e.target.closest("[data-all]");
+  if (al) { state.all = al.dataset.all === "on"; render(); return; }
+
   const go = e.target.closest("[data-go]");
   if (go) {
     const x = mapWalk()[+go.dataset.go];
@@ -1819,6 +1846,7 @@ document.addEventListener("click", e => {
     state.page = to;
     state.sel = null; state.reading = false;   // a new heading opens at its first item
     state.fold = false;                        // and opens showing what is in it
+    state.all = false;
     document.getElementById("sidebar").classList.remove("open");
     render();
     return;
