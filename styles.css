@@ -1168,7 +1168,7 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 
 /* ---------------- Reading ----------------
    A plain white sheet with room inside it, and the prose set in Roboto Slab at
-   17px on 1.78 leading, both edges flush. The accent stripe comes off the sheet:
+   17px on 1.78 leading, left-aligned. The accent stripe comes off the sheet:
    the reference has none, and the type now does the work the stripe was doing. */
 .sm-pane,.sm-pane.gc-item,.sm-pane.ans{
   background:var(--panel);border:1px solid var(--line);border-radius:10px;
@@ -1181,13 +1181,11 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 
 .sm-pane.gc-item > p,.sm-pane.ans > p,.profile-body p,.essay-doc p{
   font-family:var(--read);font-size:17px;font-weight:400;line-height:1.78;
-  color:var(--read-ink);text-align:justify;hyphens:auto;-webkit-hyphens:auto;
+  color:var(--read-ink);text-align:left;
   margin:0 0 1.05em}
 .sm-pane.gc-item > p b,.sm-pane.ans > p b{font-weight:600;color:var(--ink)}
-/* the short italic note above an essay is a caption, not prose: keep it ragged */
-.essay-doc .mode-note{text-align:left;hyphens:manual;-webkit-hyphens:manual}
 
-/* call-outs keep a ragged edge: short lines cannot take justification */
+/* call-outs: the same face, a size down */
 .sm-pane .gc-q,.sm-pane .ans-open li,.sm-pane .oo p,.sm-pane .ans-q{
   font-family:var(--read);font-size:15px;line-height:1.66;color:var(--read-ink)}
 .sm-pane .gc-qs,.sm-pane .ans-open{padding:16px 20px;margin-top:22px}
@@ -1263,7 +1261,7 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 @media (max-width:700px){
   .sm-pane,.sm-pane.gc-item,.sm-pane.ans{padding:22px 18px 20px}
   .sm-pane.gc-item > p,.sm-pane.ans > p,.profile-body p,.essay-doc p{
-    font-size:16px;line-height:1.72;text-align:left;hyphens:manual;-webkit-hyphens:manual}
+    font-size:16px;line-height:1.72}
   .sm-pane.gc-item h5,.sm-pane.ans h5{font-size:19px}
   .profile-body{padding:18px 16px 20px}
 }
