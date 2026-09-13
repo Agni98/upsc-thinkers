@@ -241,7 +241,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
    the schools and traditions (and, inside a map, its headings). Below 1001px the
    band has no room for the sections, so the drawer goes on listing them. */
 @media (min-width:1001px){
-  .nav-sections,.nav-back{display:none}
+  .nav-sections,.sidebar .nav-back{display:none}   /* .nav-item sets display later on */
   #catLabel{margin-top:4px}
   html[data-side="off"] #catNav{margin-top:0;padding-top:0;border-top:0}
 }
