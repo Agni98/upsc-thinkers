@@ -196,7 +196,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .tn-btn::after{left:11px;right:11px}
   .band{padding-left:54px}
 }
-@media (max-width:1200px) and (min-width:1001px){ .brand-text{display:none} }
+@media (max-width:1260px) and (min-width:1001px){ .brand-text{display:none} }
 @media (max-width:1000px){ .topnav{display:none} }
 
 /* ---------------- Layout ---------------- */

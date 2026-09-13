@@ -368,7 +368,10 @@ function closeSearch(force){
   if (!bar || !bar.classList.contains("open")) return;
   if (!force && document.getElementById("search").value) return;
   bar.classList.remove("open");
-  document.getElementById("searchBtn").setAttribute("aria-expanded", "false");
+  const btn = document.getElementById("searchBtn");
+  btn.setAttribute("aria-expanded", "false");
+  // focus must not stay behind in a box that is no longer on screen
+  if (document.activeElement && document.activeElement.id === "search") btn.focus();
 }
 
 /* ================= NAVIGATION ================= */
