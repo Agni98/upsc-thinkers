@@ -237,6 +237,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
   html[data-side="off"] .nav-back .nav-ico{color:var(--accent)}
 }
+/* With the header band carrying the sections, a wide screen's sidebar keeps only
+   the schools and traditions (and, inside a map, its headings). Below 1001px the
+   band has no room for the sections, so the drawer goes on listing them. */
+@media (min-width:1001px){
+  .nav-sections,.nav-back{display:none}
+  #catLabel{margin-top:4px}
+  html[data-side="off"] #catNav{margin-top:0;padding-top:0;border-top:0}
+}
 .sidebar::-webkit-scrollbar{width:8px}
 .sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
 
@@ -841,6 +849,7 @@ html[data-theme="dark"] .nav-item.active .nav-count{background:rgba(255,255,255,
 }
 
 /* ================= PAST QUESTIONS ================= */
+/* questions are read, so both question pages use the reading face */
 .pyq.page{margin-top:0;padding-top:0;border-top:0}
 .pyq .sec-head{margin-bottom:16px}
 
@@ -878,7 +887,7 @@ html[data-theme="dark"] .nav-item.active .nav-count{background:rgba(255,255,255,
   color:var(--accent);font-family:var(--sans);font-size:11px;font-weight:700;
   display:grid;place-items:center;order:0}
 .pyq-name{
-  order:0;font-family:var(--serif);font-size:16.5px;font-weight:600;color:var(--ink);
+  order:0;font-family:var(--read);font-size:16.5px;font-weight:500;color:var(--ink);
   letter-spacing:-.2px}
 .pyq-bar{
   order:1;flex:1 1 60px;min-width:44px;height:5px;border-radius:3px;
@@ -899,8 +908,8 @@ html[data-theme="dark"] .nav-item.active .nav-count{background:rgba(255,255,255,
   padding:2px 6px;line-height:1.5}
 .pyq-yr i{font-style:normal;color:var(--accent);margin-left:5px}
 .pyq-q{
-  flex:1 1 260px;font-family:var(--quote);font-size:14.5px;line-height:1.55;
-  color:var(--quote-ink)}
+  flex:1 1 260px;font-family:var(--read);font-size:15px;line-height:1.66;
+  color:var(--read-ink)}
 .pyq-also{
   flex:0 0 100%;font-size:11.5px;color:var(--ink-3);padding-left:44px;font-style:italic}
 
@@ -921,7 +930,7 @@ html[data-theme="dark"] .nav-item.active .nav-count{background:rgba(255,255,255,
   background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
   padding:16px 20px 18px;margin-bottom:11px;box-shadow:var(--shadow)}
 .pyq-paper > h4{
-  font-family:var(--serif);font-size:19px;font-weight:600;color:var(--accent);
+  font-family:var(--read);font-size:19px;font-weight:500;color:var(--accent);
   display:flex;align-items:baseline;gap:10px;margin-bottom:11px}
 .pyq-paper > h4 span{
   font-family:var(--sans);font-size:11px;font-weight:600;color:var(--ink-3);letter-spacing:.3px}
@@ -939,6 +948,31 @@ html[data-theme="dark"] .nav-item.active .nav-count{background:rgba(255,255,255,
   font-weight:600;padding:2px 9px;border:1px solid var(--line);border-radius:999px;
   background:var(--bg);color:var(--ink-3);cursor:pointer;transition:.15s}
 .pyq-tag:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+
+/* --- GS-IV: theory and cases apart inside a topic; a long case folds --- */
+.g4-sub{
+  display:flex;align-items:baseline;gap:8px;margin:2px 0 10px;
+  font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.9px;
+  text-transform:uppercase;color:var(--ink-3)}
+.g4-sub span{color:var(--accent);letter-spacing:0}
+.pyq-list + .g4-sub{margin-top:22px}
+.g4pyq .pyq-list li{gap:12px}
+.g4-case{flex:1 1 260px;min-width:0}
+.g4-case > summary{cursor:pointer;list-style:none}
+.g4-case > summary::-webkit-details-marker{display:none}
+.g4-case > summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.g4-case .pyq-q{display:block}
+.g4-case .g4-clip{display:inline}
+.g4-more{
+  display:inline-block;margin-left:7px;font-family:var(--sans);font-size:11.5px;
+  font-weight:600;color:var(--accent);white-space:nowrap}
+.g4-more::after{content:"Read the whole case \25B8"}
+.g4-case[open] .g4-clip{display:none}
+.g4-case[open] .g4-more{margin:0 0 6px}
+.g4-case[open] .g4-more::after{content:"Fold the case \25B4"}
+.g4-case > summary:hover .g4-more{text-decoration:underline}
+.pyq-sec .g4-case{display:block}
+@media (max-width:700px){ .g4pyq .pyqt .foldhint{white-space:normal} }
 
 @media (max-width:700px){
   .pyq-name{flex:1 1 100%;order:0}

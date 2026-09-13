@@ -245,7 +245,7 @@ function renderHome(){
         d:"The syllabus, heading by heading. Under each, the ideas the paper keeps returning to, written plainly, with the questions that asked them.",
         stats:[[s.headings, "syllabus headings"], [s.concepts, "concept notes"],
                [s.gsq, "past questions mapped"], [s.cases, "case studies"]],
-        go:[["syllabus", "Open the syllabus map"], ["ethics", "Thinkers for Ethics"]]
+        go:[["syllabus", "Open the syllabus map"], ["gs4pyq", "Past questions"], ["ethics", "Thinkers for Ethics"]]
       })}
       ${paperCard({
         mark:"\u270D\uFE0F", t:"Essay Paper", marks:"250 marks",
@@ -281,6 +281,8 @@ function topSections(){
   const cs = SYLLABUS.findIndex(r => r.t === "Case Studies") + 1;
   const span = (typeof PYQ_PAPERS !== "undefined" && PYQ_PAPERS.length)
     ? PYQ_PAPERS[PYQ_PAPERS.length - 1].y + " to " + PYQ_PAPERS[0].y : "";
+  const g4y = (typeof GS4_PYQ !== "undefined") ? GS4_PYQ.map(q => q.y) : [];
+  const g4span = g4y.length ? Math.min.apply(null, g4y) + " to " + Math.max.apply(null, g4y) : "";
   return [
     { id:"home", t:"Home", to:"home|0|" },
     { id:"map", t:"Syllabus Map", to:"syllabus|0|", items:[
@@ -294,7 +296,7 @@ function topSections(){
     ]},
     { id:"pyq", t:"Past Year Questions", to:"pyq|0|", items:[
       ["pyq|0|", "Essay topics", s.topics + " topics" + (span ? ", " + span : "") + ", by theme and by year"],
-      ["syllabus|1|pyq", "GS-IV questions", "filed under the syllabus heading they test"],
+      ["gs4pyq|0|", "GS-IV questions", s.gsq + " questions" + (g4span ? ", " + g4span : "") + ", classified by topic"],
       cs && ["syllabus|" + cs + "|pyq", "GS-IV case studies", s.cases + " cases from past papers"]
     ]},
     { id:"thinkers", t:"Thinkers & Quotes", to:"all|0|", items:[
@@ -328,7 +330,7 @@ function topSectionOf(v){
   if (v === "home") return "home";
   if (v === "syllabus" || v === "themes") return "map";
   if (v === "essays" || v.startsWith("essay:")) return "essays";
-  if (v === "pyq") return "pyq";
+  if (v === "pyq" || v === "gs4pyq") return "pyq";
   return "thinkers";
 }
 
@@ -440,6 +442,8 @@ function renderNav(){
     ]},
     { label:"GS-IV Ethics", items:[
       { id:"syllabus", ico:"\u{1F5FA}\uFE0F", name:"Syllabus Map", n:SYLLABUS.length },
+      { id:"gs4pyq",   ico:"\u{1F5C3}\uFE0F", name:"Past Questions",
+        n:(typeof GS4_PYQ !== "undefined") ? GS4_PYQ.length : 0 },
       { id:"ethics",   ico:"\u2696\uFE0F",    name:"Thinkers for Ethics", n:tagged("Ethics") }
     ]},
     { label:"Essay Paper", items:[
@@ -462,14 +466,16 @@ function renderNav(){
   const on = id => state.view === id ||
     (id === "worklab" && state.view.startsWith("work:")) ||
     (id === "essays"  && state.view.startsWith("essay:"));
-  document.getElementById("viewNav").innerHTML = groups.map(g => `
+  // the sections are the header band's job on a wide screen; the drawer on a
+  // narrow one still needs them, so they are drawn and the stylesheet decides
+  document.getElementById("viewNav").innerHTML = `<div class="nav-sections">${groups.map(g => `
     ${g.label ? `<div class="side-label">${g.label}</div>` : ""}
     ${g.items.map(v => `
       <button class="nav-item ${on(v.id) ? "active" : ""}" data-view="${v.id}"
               title="${esc(v.name)}">
         <span class="nav-ico">${v.ico}</span><span class="nav-name">${v.name}</span>
         ${v.n === undefined ? "" : `<span class="nav-count">${v.n}</span>`}
-      </button>`).join("")}`).join("");
+      </button>`).join("")}`).join("")}</div>`;
 
   document.getElementById("catNav").innerHTML = CATEGORIES.map(c => `
     <button class="nav-item ${state.view === c.id ? "active" : ""}" data-view="${c.id}"
@@ -1519,6 +1525,7 @@ function render(){
   else if (state.view.startsWith("essay:")) main.innerHTML = renderEssay(state.view.slice(6), state.mode);
   else if (state.view === "essays")   main.innerHTML = renderEssayList();
   else if (state.view === "pyq")      main.innerHTML = renderPYQ();
+  else if (state.view === "gs4pyq")   main.innerHTML = renderGS4PYQ();
   else if (state.view.startsWith("work:")) {
     const rest = state.view.slice(5), c = rest.indexOf(":");
     const id = c < 0 ? rest : rest.slice(0, c), w = c < 0 ? "" : rest.slice(c + 1);
@@ -1802,6 +1809,109 @@ function renderPYQ(){
     <div class="pyq-year" hidden>
       <p class="pyq-note">The papers as they were set. The label under each question is the group
          it belongs to &mdash; click it to jump there.</p>
+      ${byYear}
+    </div>
+  </section>`;
+}
+
+/* ================= GS-IV PAST QUESTIONS =================
+   Every GS Paper IV question, filed under the topic it tests, most asked topic
+   first; and the same questions paper by paper. Built on the essay page's
+   classes, so its tabs and the jump from a year back to a topic just work.
+   A case study runs to a few hundred words, so it shows its opening and folds
+   the rest: the list stays scannable and the whole case is one click away. */
+function renderGS4PYQ(){
+  if (typeof GS4_PYQ === "undefined" || typeof GS4_THEMES === "undefined") return "";
+
+  const newest = (x, y) => y.y - x.y;
+  const topics = GS4_THEMES
+    .map(t => ({ t, qs:GS4_PYQ.filter(q => q.th === t.c).sort(newest) }))
+    .filter(x => x.qs.length)
+    .sort((x, y) => y.qs.length - x.qs.length);
+  const rank = {}, name = {};
+  topics.forEach((x, i) => { rank[x.t.c] = i; name[x.t.c] = x.t.t; });
+
+  const years  = [...new Set(GS4_PYQ.map(q => q.y))].sort((a, b) => b - a);
+  const papers = years.length;
+  const span   = years[years.length - 1] + " to " + years[0];
+  const max    = topics[0].qs.length;
+  const nCases = GS4_PYQ.filter(q => q.sec === "B").length;
+  const page   = h => SYLLABUS.findIndex(r => r.t === h) + 1;
+  const plural = (n, one, many) => n + " " + (n === 1 ? one : many);
+
+  const chip = q => `<span class="pyq-yr">${q.y}<i>${esc(q.sec)}</i></span>`;
+  const text = q => {
+    if (q.sec !== "B" || q.q.length <= 300) return `<span class="pyq-q">${esc(q.q)}</span>`;
+    const cut = q.q.lastIndexOf(" ", 240);
+    return `<details class="g4-case">
+        <summary><span class="pyq-q g4-clip">${esc(q.q.slice(0, cut))}&hellip;</span><span class="g4-more"></span></summary>
+        <span class="pyq-q">${esc(q.q)}</span>
+      </details>`;
+  };
+
+  const byTopic = topics.map((x, i) => {
+    const a = x.qs.filter(q => q.sec === "A"), b = x.qs.filter(q => q.sec === "B");
+    const yrs = new Set(x.qs.map(q => q.y)).size;
+    const heads = (x.t.maps || []).filter(h => page(h));
+    return `
+    <details class="fold pyqt">
+      <summary>
+        <span class="pyq-rank">${i + 1}</span>
+        <span class="pyq-name">${esc(x.t.t)}</span>
+        <span class="pyq-bar"><i style="width:${Math.round(x.qs.length / max * 100)}%"></i></span>
+        <span class="foldhint">${plural(x.qs.length, "question", "questions")}${
+          b.length ? " &middot; " + plural(b.length, "case", "cases") : ""} &middot; ${yrs} of ${papers} papers</span>
+        <span class="chev" aria-hidden="true">&#9656;</span>
+      </summary>
+      <div class="pyq-body">
+        ${a.length ? `<h5 class="g4-sub">Section A &middot; theory<span>${a.length}</span></h5>
+        <ol class="pyq-list">${a.map(q => `<li>${chip(q)}${text(q)}</li>`).join("")}</ol>` : ""}
+        ${b.length ? `<h5 class="g4-sub">Section B &middot; case studies<span>${b.length}</span></h5>
+        <ol class="pyq-list">${b.map(q => `<li>${chip(q)}${text(q)}</li>`).join("")}</ol>` : ""}
+        ${heads.length ? `<div class="pyq-foot">
+          <div class="pyq-row"><b>Concept notes</b>${heads.map(h =>
+            `<button class="pyq-link" data-to="syllabus|${page(h)}|">${esc(h)}</button>`).join("")}</div>
+        </div>` : ""}
+      </div>
+    </details>`;
+  }).join("");
+
+  const byYear = years.map(y => {
+    const qs = GS4_PYQ.filter(q => q.y === y);
+    return `
+    <div class="pyq-paper">
+      <h4>${y}<span>${qs.length} questions</span></h4>
+      ${["A", "B"].map(sec => {
+        const list = qs.filter(q => q.sec === sec);
+        return list.length ? `
+        <div class="pyq-sec">
+          <b>Section ${sec} &middot; ${sec === "A" ? "theory" : "case studies"}</b>
+          <ol>${list.map(q => `<li>${text(q)}
+            <button class="pyq-tag" data-jump="${rank[q.th]}">${esc(name[q.th] || "")}</button></li>`).join("")}</ol>
+        </div>` : "";
+      }).join("")}
+    </div>`;
+  }).join("");
+
+  return `
+  <section class="pyq page g4pyq" id="gs4pyq">
+    <div class="sec-head">
+      <h3>GS-IV Past Questions, by Topic</h3>
+      <p>All ${GS4_PYQ.length} questions from the ${papers} GS Paper IV papers, ${span}:
+         ${GS4_PYQ.length - nCases} theory questions and ${nCases} case studies, filed under the
+         topic each one tests. Most asked topic first. Open a topic to see its questions, newest
+         first, and go from there to its concept notes.</p>
+    </div>
+
+    <div class="pyq-tabs">
+      <button class="pyqtab on" data-pyq="theme">By topic</button>
+      <button class="pyqtab" data-pyq="year">By year</button>
+    </div>
+
+    <div class="pyq-theme">${byTopic}</div>
+    <div class="pyq-year" hidden>
+      <p class="pyq-note">The papers as they were set. The label under each question is its topic
+         &mdash; click it to jump there.</p>
       ${byYear}
     </div>
   </section>`;
