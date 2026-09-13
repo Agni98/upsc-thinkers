@@ -28,6 +28,9 @@
   --quote:Aptos,"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
   --quote-ink:#2b2927;
   --sidebar-w:288px;
+  /* the reading: a slab serif, set large and loose, the way ANRF sets its prose */
+  --read:"Roboto Slab","Rockwell","Georgia",serif;
+  --read-ink:#3a3835;
 }
 
 html[data-theme="dark"]{
@@ -48,6 +51,7 @@ html[data-theme="dark"]{
   --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
   --shadow-lg:0 4px 12px rgba(0,0,0,.4), 0 24px 60px rgba(0,0,0,.55);
   --quote-ink:#eeeae4;
+  --read-ink:#dcd8d2;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -358,10 +362,8 @@ html[data-theme="dark"] .nav-item.active .nav-count{background:rgba(255,255,255,
 .profile .ptitle{flex:1}
 .profile .pmeta{font-size:11px;font-weight:500;color:var(--ink-3);letter-spacing:.3px}
 .profile[open] summary{border-bottom:1px solid var(--line)}
-.profile-body{padding:16px 18px 18px}
-.profile-body p{
-  font-size:13.8px;line-height:1.72;color:var(--ink-2);margin-bottom:12px;
-}
+
+.profile-body{padding:22px 26px 24px}
 .profile-body p:last-child{margin-bottom:0}
 .profile-body .essence{
   font-family:var(--serif);font-size:14.5px;font-style:italic;color:var(--ink);
@@ -370,7 +372,9 @@ html[data-theme="dark"] .nav-item.active .nav-count{background:rgba(255,255,255,
 }
 .profile-body .essence b{font-style:normal;color:var(--gold);font-weight:700}
 .profile-body[data-lang="hi"]{font-family:"Nirmala UI","Noto Sans Devanagari",var(--sans)}
-.profile-body[data-lang="hi"] p{font-size:14.6px;line-height:1.85}
+.profile-body[data-lang="hi"] p{
+  font-family:"Nirmala UI","Noto Sans Devanagari",var(--sans);font-size:16px;line-height:1.9;
+  text-align:left}
 .profile-body[data-lang="hi"] .essence{font-family:inherit;font-style:normal}
 
 /* language switch inside the introduction */
@@ -675,17 +679,14 @@ html[data-theme="dark"] .nav-item.active .nav-count{background:rgba(255,255,255,
   color:var(--accent);margin-bottom:9px;
 }
 .essay-doc h1{
-  font-family:var(--serif);font-size:27px;font-weight:600;line-height:1.25;
+  font-family:var(--read);font-size:28px;font-weight:500;line-height:1.3;
   letter-spacing:-.4px;color:var(--ink);margin-bottom:8px;
 }
 .essay-meta{
   font-size:11.5px;color:var(--ink-3);padding-bottom:18px;margin-bottom:22px;
   border-bottom:1px solid var(--line);
 }
-.essay-doc p{
-  font-family:var(--quote);font-size:15px;line-height:1.85;
-  color:var(--quote-ink);margin-bottom:17px;
-}
+.essay-doc p{margin-bottom:1.05em}
 .essay-doc p:last-child{
   margin-bottom:0;margin-top:24px;padding:15px 18px;border-radius:0 9px 9px 0;
   border-left:4px solid var(--gold);background:var(--gold-soft);font-weight:500;
@@ -1164,6 +1165,33 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   border-left:3px solid var(--accent);border-radius:var(--radius);
   padding:20px 22px 18px}
 .sm-pane .ans-head{margin-top:0}
+
+/* ---------------- Reading ----------------
+   A plain white sheet with room inside it, and the prose set in Roboto Slab at
+   17px on 1.78 leading, both edges flush. The accent stripe comes off the sheet:
+   the reference has none, and the type now does the work the stripe was doing. */
+.sm-pane,.sm-pane.gc-item,.sm-pane.ans{
+  background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  padding:34px 40px 32px;box-shadow:0 1px 3px rgba(30,30,28,.04)}
+.sm-pane.ans{border-bottom:1px solid var(--line);margin-bottom:0}
+
+.sm-pane.gc-item h5,.sm-pane.ans h5{
+  font-family:var(--read);font-size:21px;font-weight:500;line-height:1.35;
+  letter-spacing:-.1px;margin:0 0 18px}
+
+.sm-pane.gc-item > p,.sm-pane.ans > p,.profile-body p,.essay-doc p{
+  font-family:var(--read);font-size:17px;font-weight:400;line-height:1.78;
+  color:var(--read-ink);text-align:justify;hyphens:auto;-webkit-hyphens:auto;
+  margin:0 0 1.05em}
+.sm-pane.gc-item > p b,.sm-pane.ans > p b{font-weight:600;color:var(--ink)}
+
+/* call-outs keep a ragged edge: short lines cannot take justification */
+.sm-pane .gc-q,.sm-pane .ans-open li,.sm-pane .oo p,.sm-pane .ans-q{
+  font-family:var(--read);font-size:15px;line-height:1.66;color:var(--read-ink)}
+.sm-pane .gc-qs,.sm-pane .ans-open{padding:16px 20px;margin-top:22px}
+.sm-pane .ans-open li::before{top:12px}
+.sm-pane .gc-src{margin-top:18px !important;padding-top:12px}
+.sm-pane .sm-move{margin-top:26px}
 /* previous and next run across the whole map, not just this heading */
 .sm-move{
   display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px;
@@ -1230,6 +1258,14 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   .sm-t{font-size:14px}
   .sm-list{gap:24px}
 }
+@media (max-width:700px){
+  .sm-pane,.sm-pane.gc-item,.sm-pane.ans{padding:22px 18px 20px}
+  .sm-pane.gc-item > p,.sm-pane.ans > p,.profile-body p,.essay-doc p{
+    font-size:16px;line-height:1.72;text-align:left;hyphens:manual;-webkit-hyphens:manual}
+  .sm-pane.gc-item h5,.sm-pane.ans h5{font-size:19px}
+  .profile-body{padding:18px 16px 20px}
+}
+
 @media print{
   .sm{grid-template-columns:1fr}
   .sm-list,.sm-back,.sm-move{display:none}
