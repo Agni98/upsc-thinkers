@@ -2075,7 +2075,10 @@ document.getElementById("searchBtn").addEventListener("click", () => {
 });
 (function(){
   const nav = document.getElementById("topNav");
+  // a choice made inside the band keeps its menu shut until the pointer leaves;
+  // arriving at the band from outside is always a fresh start
   nav.addEventListener("mouseleave", () => nav.classList.remove("shut"));
+  nav.addEventListener("mouseenter", () => nav.classList.remove("shut"));
   nav.addEventListener("focusin", () => nav.classList.remove("shut"));
 })();
 
