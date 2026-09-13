@@ -21,24 +21,37 @@
 </head>
 <body>
 
-<header class="topbar">
+<header class="topbar" id="topbar">
+  <a class="skip" href="#main">Skip to main content</a>
   <button class="icon-btn menu-btn" id="menuBtn" aria-label="Show or hide the navigation"
           aria-controls="sidebar" aria-expanded="true" title="Show or hide the navigation">&#9776;</button>
-  <div class="brand">
+  <a class="brand" href="./" data-to="home|0|" title="Home">
     <div class="brand-mark">&#x0950;</div>
     <div class="brand-text">
       <h1>Thinkers for UPSC Mains</h1>
       <p>Essay &middot; GS Paper IV Ethics</p>
     </div>
+  </a>
+  <!-- the sections, on a band that runs out to the right edge -->
+  <div class="band">
+    <nav class="topnav" id="topNav" aria-label="Sections"></nav>
+    <button class="band-btn solid" id="searchBtn" aria-label="Search" aria-controls="searchBar"
+            aria-expanded="false" title="Search (press /)">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+        <circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path>
+      </svg>
+    </button>
+    <button class="band-btn" id="themeBtn" aria-label="Toggle theme" title="Toggle light / dark">&#9789;</button>
   </div>
-  <div class="search-wrap">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-      <circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path>
-    </svg>
-    <input id="search" type="search" placeholder="Search a thinker, idea, quote or theme…" autocomplete="off">
-    <span class="kbd">/</span>
+  <div class="searchbar" id="searchBar">
+    <div class="search-wrap">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path>
+      </svg>
+      <input id="search" type="search" placeholder="Search a thinker, idea, quote or theme…" autocomplete="off">
+      <span class="kbd">Esc</span>
+    </div>
   </div>
-  <button class="icon-btn" id="themeBtn" aria-label="Toggle theme" title="Toggle light / dark">&#9789;</button>
 </header>
 
 <div class="shell">
@@ -50,7 +63,7 @@
     <div id="catNav"></div>
   </nav>
 
-  <main class="main" id="main"></main>
+  <main class="main" id="main" tabindex="-1"></main>
 </div>
 
 <div class="overlay" id="overlay">
@@ -66,7 +79,7 @@
   // copy uses a fixed version instead and lets the browser cache properly.
   // Bump BUILD when the data files change.
   (function () {
-    var BUILD = '2026-09-13c';
+    var BUILD = '2026-09-13d';
     var local = ['localhost', '127.0.0.1', '::1', ''].indexOf(location.hostname) !== -1
                 || location.protocol === 'file:';
     var v = local ? Date.now() : BUILD;

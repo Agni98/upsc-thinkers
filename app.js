@@ -271,6 +271,106 @@ function renderHome(){
     </div>`;
 }
 
+/* ================= THE TOP MENU =================
+   The site's sections along the header band, each with a menu of what is in
+   it. Built once: render() only moves the highlight, so a menu is never torn
+   down under the pointer. Every entry is view|page|selection. */
+function topSections(){
+  const s = siteStats();
+  const tagged = x => THINKERS.filter(t => t.tag.includes(x)).length;
+  const cs = SYLLABUS.findIndex(r => r.t === "Case Studies") + 1;
+  const span = (typeof PYQ_PAPERS !== "undefined" && PYQ_PAPERS.length)
+    ? PYQ_PAPERS[PYQ_PAPERS.length - 1].y + " to " + PYQ_PAPERS[0].y : "";
+  return [
+    { id:"home", t:"Home", to:"home|0|" },
+    { id:"map", t:"Syllabus Map", to:"syllabus|0|", items:[
+      ["syllabus|0|", "GS-IV Ethics", s.headings + " syllabus headings, and the ideas under each"],
+      ["themes|0|", "Essay", s.themes + " themes that cover every past topic"],
+      cs && ["syllabus|" + cs + "|method", "Case Studies", "six moves for answering one"]
+    ]},
+    { id:"essays", t:"Model Essays", to:"essays|0|", items:[
+      ["essays|0|", "Full model essays", s.essays + " essays, written out in full"],
+      ["themes|1|p:0", "Model paragraphs", s.paras + " paragraphs to adapt, arranged by theme"]
+    ]},
+    { id:"pyq", t:"Past Year Questions", to:"pyq|0|", items:[
+      ["pyq|0|", "Essay topics", s.topics + " topics" + (span ? ", " + span : "") + ", by theme and by year"],
+      ["syllabus|1|pyq", "GS-IV questions", "filed under the syllabus heading they test"],
+      cs && ["syllabus|" + cs + "|pyq", "GS-IV case studies", s.cases + " cases from past papers"]
+    ]},
+    { id:"thinkers", t:"Thinkers & Quotes", to:"all|0|", items:[
+      ["all|0|", "All thinkers", s.thinkers + " profiles, with ideas and quotations"],
+      ["ethics|0|", "Thinkers for Ethics", tagged("Ethics") + " named in or serving the GS-IV syllabus"],
+      ["essay|0|", "Thinkers for Essay", tagged("Essay") + " who open, carry or answer an essay"],
+      ["quotes|0|", "Quote bank", s.quotes + " quotations, attributed and searchable"],
+      ["worklab|0|", "Works in depth", s.works + " books read closely"]
+    ]}
+  ];
+}
+
+function renderTopNav(){
+  const nav = document.getElementById("topNav");
+  if (!nav) return;
+  nav.innerHTML = `<ul class="tn-list">${topSections().map(x => {
+    const items = (x.items || []).filter(Boolean);
+    return `
+    <li class="tn" data-sec="${x.id}">
+      <button class="tn-btn" data-to="${x.to}"${items.length ? ` aria-expanded="false"` : ""}>${
+        esc(x.t)}${items.length ? `<i class="tn-caret" aria-hidden="true"></i>` : ""}</button>
+      ${items.length ? `
+      <div class="dd"><ul>${items.map(it => `
+        <li><button class="dd-item" data-to="${it[0]}"><b>${esc(it[1])}</b><span>${esc(it[2])}</span></button></li>`).join("")}
+      </ul></div>` : ""}
+    </li>`;
+  }).join("")}</ul>`;
+}
+
+function topSectionOf(v){
+  if (v === "home") return "home";
+  if (v === "syllabus" || v === "themes") return "map";
+  if (v === "essays" || v.startsWith("essay:")) return "essays";
+  if (v === "pyq") return "pyq";
+  return "thinkers";
+}
+
+function markTopNav(){
+  const sec = topSectionOf(state.view);
+  document.querySelectorAll("#topNav .tn").forEach(li => {
+    const on = li.dataset.sec === sec;
+    li.classList.toggle("on", on);
+    const b = li.querySelector(".tn-btn");
+    if (on) b.setAttribute("aria-current", "true"); else b.removeAttribute("aria-current");
+  });
+}
+
+/* shut: after a choice, keep the menu closed even though the pointer is still
+   over it, until the pointer leaves */
+function closeTopMenus(shut){
+  const nav = document.getElementById("topNav");
+  if (!nav) return;
+  nav.querySelectorAll(".tn.open").forEach(li => {
+    li.classList.remove("open");
+    li.querySelector(".tn-btn").setAttribute("aria-expanded", "false");
+  });
+  if (shut) {
+    nav.classList.add("shut");
+    if (nav.contains(document.activeElement)) document.activeElement.blur();
+  }
+}
+
+function openSearch(){
+  document.getElementById("searchBar").classList.add("open");
+  document.getElementById("searchBtn").setAttribute("aria-expanded", "true");
+  document.getElementById("search").focus();
+}
+/* force: close even with a query in the box; otherwise a live query keeps it open */
+function closeSearch(force){
+  const bar = document.getElementById("searchBar");
+  if (!bar || !bar.classList.contains("open")) return;
+  if (!force && document.getElementById("search").value) return;
+  bar.classList.remove("open");
+  document.getElementById("searchBtn").setAttribute("aria-expanded", "false");
+}
+
 /* ================= NAVIGATION ================= */
 /* Inside the syllabus map the sidebar carries the sixteen headings. A fourth
    column would not fit beside the map's own two, so this one is borrowed. */
@@ -1430,6 +1530,7 @@ function render(){
   else                                main.innerHTML = renderGrid();
   glossHide(true);
   renderNav();
+  markTopNav();
   applyPortraits(main);
   drawMind(main);
   // a webfont arriving late changes every label width, so measure again
@@ -1705,6 +1806,39 @@ function renderPYQ(){
 
 /* ================= EVENTS ================= */
 document.addEventListener("click", e => {
+  if (!e.target.closest("#topNav")) closeTopMenus(false);
+  if (!e.target.closest("#searchBar, #searchBtn")) closeSearch(false);
+
+  const to = e.target.closest("[data-to]");
+  if (to) {
+    // the name is a real link: a modified click still opens a new tab
+    if (to.tagName === "A" && (e.metaKey || e.ctrlKey || e.shiftKey || e.button)) return;
+    e.preventDefault();
+    const tn = to.classList.contains("tn-btn") ? to.closest(".tn") : null;
+    // with no hover to open a menu, the first tap on a section opens its menu
+    if (tn && tn.querySelector(".dd") && !window.matchMedia("(hover:hover)").matches) {
+      const show = !tn.classList.contains("open");
+      closeTopMenus(false);
+      tn.classList.toggle("open", show);
+      to.setAttribute("aria-expanded", String(show));
+      return;
+    }
+    const bits = to.dataset.to.split("|");
+    state.view = bits[0];
+    state.page = +bits[1] || 0;
+    state.sel = bits[2] || null;
+    state.reading = !!bits[2];
+    state.nav = (bits[0] === "syllabus" || bits[0] === "themes") ? bits[0] : "views";
+    state.fold = false; state.all = false;
+    closeTopMenus(true);
+    closeSheet();
+    document.getElementById("sidebar").classList.remove("open");
+    render();
+    // a keyboard choice lands on the page it opened, not back at the top of the tab order
+    if (e.detail === 0) document.getElementById("main").focus({ preventScroll:true });
+    return;
+  }
+
   const gl = e.target.closest(".gloss");
   if (gl) {
     if (glossPinned === gl) glossHide(true);
@@ -1932,6 +2066,16 @@ try {
   if (localStorage.getItem("upsc_thinkers_side") === "off") setRail(true);
 } catch (e) {}
 
+document.getElementById("searchBtn").addEventListener("click", () => {
+  if (document.getElementById("searchBar").classList.contains("open")) closeSearch(true);
+  else openSearch();
+});
+(function(){
+  const nav = document.getElementById("topNav");
+  nav.addEventListener("mouseleave", () => nav.classList.remove("shut"));
+  nav.addEventListener("focusin", () => nav.classList.remove("shut"));
+})();
+
 document.getElementById("themeBtn").addEventListener("click", () => {
   const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
   document.documentElement.dataset.theme = next;
@@ -1972,7 +2116,7 @@ window.addEventListener("resize", () => {
 });
 
 document.addEventListener("keydown", e => {
-  if (e.key === "Escape") { glossHide(true); closeSheet(); }
+  if (e.key === "Escape") { glossHide(true); closeSheet(); closeTopMenus(false); closeSearch(true); }
   const paged = state.view === "themes" ? ESSAY_THEMES.length
               : state.view === "syllabus" ? SYLLABUS.length : 0;
   if ((e.key === "ArrowLeft" || e.key === "ArrowRight") && paged
@@ -1981,9 +2125,10 @@ document.addEventListener("keydown", e => {
     const to = (state.page | 0) + (e.key === "ArrowLeft" ? -1 : 1);
     if (to >= 0 && to <= paged) { state.page = to; render(); }
   }
-  if (e.key === "/" && document.activeElement.id !== "search") {
+  if (e.key === "/" && document.activeElement.id !== "search"
+      && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) {
     e.preventDefault();
-    document.getElementById("search").focus();
+    openSearch();
   }
 });
 
@@ -1998,6 +2143,7 @@ document.addEventListener("keydown", e => {
   }catch(e){}
 
   loadCache();
+  renderTopNav();
   render();
   fetchPortraits();
 
