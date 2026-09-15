@@ -948,36 +948,44 @@ const ATLAS_ENTRIES = {
     ]
   },
   "gyges": {
-    "source": "Plato, Republic, Book II (359c–360d). An older version, without the ring, is in Herodotus, Histories, Book I (8–13).",
+    "source": "Plato, Republic, Book II (358b–362c), with Socrates’s reply in Book X (612b). An older story about Gyges, without the ring, is in Herodotus, Histories, Book I (8–13).",
     "period": "Plato wrote the Republic in Athens around 375 BCE. Herodotus wrote around 430 BCE.",
     "tradition": "Greek philosophy",
-    "type": "A thought experiment told as a story",
+    "type": "A thought experiment told as a story. A thought experiment is an imagined situation used to test an idea.",
     "setup": [
-      "In Book II of the Republic, Glaucon challenges Socrates. Glaucon says that people do not follow justice because they love it. They follow it only because they are afraid of punishment. To prove his point, he tells the story of a shepherd named Gyges.",
-      "Gyges worked for the king of Lydia. One day there was a heavy storm and an earthquake. The ground split open where Gyges was grazing his sheep. He went down into the gap. There he found a hollow horse made of bronze, with small doors in it. Inside the horse there was a dead body. The body was larger than a normal man, and it was wearing only a gold ring. Gyges took the ring and climbed out.",
-      "Later, Gyges sat with the other shepherds at their monthly meeting. By chance, he turned the top of the ring towards the inside of his hand. At once he became invisible. The other shepherds started talking about him as if he had left. When he turned the ring back, he became visible again. He tried this again and again, and it worked every time.",
-      "Gyges then used the ring for his own gain. He arranged to be sent to the palace as a messenger. There he started an affair with the queen. With her help, he killed the king and took over the kingdom.",
-      "Glaucon then asks Socrates to imagine two such rings. One is given to a just man and the other to an unjust man. Glaucon says that both men would behave in the same way. Both would take whatever they wanted, because no one could see them. So, according to Glaucon, nobody is just by choice. People are just only when they are forced to be."
+      "Plato’s Republic is a long conversation about one question: what is justice, and is it worth having? In Book I, a teacher named Thrasymachus argues that clever people are better off being unjust. Socrates argues against him, but Plato’s older brother Glaucon is not satisfied. At the start of Book II, Glaucon makes the case for injustice as strongly as he can, so that Socrates is forced to answer it properly.",
+      "Glaucon first explains what most people believe about justice. By nature, doing wrong to others is good for the person who does it, and suffering wrong is bad. But suffering wrong is worse than doing wrong is good. So people who are too weak to do wrong safely make an agreement: nobody will do wrong, and nobody will suffer it. Laws come from this agreement, and obeying them is called justice. On this view, justice is a compromise. The best life would be to do wrong and never be punished. The worst would be to suffer wrong and be unable to hit back. People accept justice only because they are too weak to get the best.",
+      "To show that people are just only because they must be, Glaucon tells an old story. A shepherd worked for the king of Lydia, a kingdom in what is now western Turkey. One day, a storm and an earthquake split open the ground where his sheep were grazing. He climbed down into the gap and found a hollow horse made of bronze, with small doors in its side. There was a dead body inside the horse. The body was larger than a normal man, and it wore nothing except a gold ring. The shepherd took the ring and climbed out.",
+      "Every month, the shepherds met to send the king a report on his flocks. At one of these meetings, the shepherd happened to turn the setting of the ring, the part that holds the stone, towards the inside of his hand. At once he became invisible, and the others began to talk about him as if he had gone away. When he turned the setting outwards, he could be seen again. He tested the ring many times, and it worked every time.",
+      "The shepherd then got himself chosen as one of the messengers sent to the palace. There he seduced the queen, and with her help he killed the king and took the throne. Plato links the story to Gyges, a real king of Lydia in the seventh century BCE, so the ring is called the ring of Gyges.",
+      "Glaucon then asks Socrates to imagine two such rings, one for a just man and one for an unjust man. Glaucon claims that nobody has a will strong enough to stay just with such a ring. A man who could take anything from the market, enter any house and kill anyone without being seen would do those things. So the just man and the unjust man would end up behaving in the same way. Glaucon concludes that nobody is just by choice. People are just only because they are forced to be.",
+      "Glaucon pushes the test one step further. He asks Socrates to compare two lives. The first man is completely unjust, but he is so clever that everyone believes he is just, so he becomes rich, powerful and respected. The second man is completely just, but everyone believes he is unjust, so he is whipped, tortured, blinded and finally executed. Glaucon’s brother Adeimantus adds that even parents teach children to be just only for the rewards and the good name it brings. The brothers ask Socrates to prove that justice is better in itself, even with no reward at all.",
+      "Socrates spends most of the rest of the Republic answering them. In Book X, he gives his verdict. A person should do what is just whether he has the ring of Gyges or not, and even if he also wears the helmet of Hades, a magic cap from Greek myth that made its wearer invisible."
     ],
     "question": "Would you still do the right thing if you knew you could never be caught?",
-    "reveals": "The story separates two things: being good and only looking good. If people are honest only because they fear punishment, then the ring would end their honesty. Plato does not agree with this. He says that justice is a healthy state of the mind, in which reason controls desire and anger. A person who uses the ring to do wrong is not truly free. He is a slave to his own desires. So the ring does not change what is right. It only shows what kind of person someone already is.",
+    "reveals": "The ring separates two things that usually go together: being just and being seen as just. Glaucon’s argument is simple. If people behave well only because they fear being caught, then a ring that removes the fear will also remove the good behaviour. Plato’s answer, built up over the rest of the Republic, is that justice is not a rule pressed on a person from outside. Justice is a healthy order inside a person, in which reason guides the desires and the emotions. A person who uses the ring to steal and kill gets what he wants, but he becomes a slave to his desires, and his inner life falls into disorder. So for Plato, the just person is better off even with the ring. The story leaves every reader with the same test: what would you do if no one could ever see you?",
     "readings": [
       [
         "Plato’s answer",
-        "Justice is good in itself, not only for its rewards. A person who uses the ring to do wrong harms his own soul."
+        "Socrates argues that the soul has three parts: reason, spirit, which feels anger and pride, and desire. A just person is one in whom reason, helped by spirit, rules the desires. An unjust person is ruled by his desires, like a tyrant who looks powerful but is really a slave. So a person who uses the ring to do wrong harms himself most of all."
       ],
       [
         "Social contract view",
-        "Glaucon’s argument is an early form of the social contract idea, which Thomas Hobbes later developed. In this view, people follow rules only because they are afraid of being harmed by others."
+        "Glaucon’s account of justice as an agreement among people who are too weak to do wrong safely is an early form of social contract theory. Thomas Hobbes later argued that people accept laws and rulers because life without them would be too dangerous."
       ],
       [
         "Herodotus’s older story",
         "Herodotus tells the story of Gyges without any magic ring. In his version, Gyges is the bodyguard of King Candaules. The king forces Gyges to secretly see the queen without her clothes. The queen finds out. She tells Gyges that he must either kill the king or be killed himself. Plato took this known story and added the ring to make a point about morality."
+      ],
+      [
+        "Later retellings",
+        "The story may have influenced J. R. R. Tolkien, whose ring in The Lord of the Rings makes its wearer invisible and slowly corrupts him."
       ]
     ],
     "breaks": [
       "The ring hides a person from others, but not from his own conscience. Many people feel guilty even when no one knows what they did.",
       "The story treats human nature as fixed. In real life, upbringing, habits and values shape how people act when no one is watching.",
+      "Glaucon’s two lives are extreme. In real life, reputations usually follow behaviour over time, and Socrates himself argues in Book X that the clever cheat is usually found out in the end.",
       "Research gives mixed results. Some people cheat more when no one can identify them, but many people stay honest."
     ],
     "uses": [
@@ -991,18 +999,24 @@ const ATLAS_ENTRIES = {
       "panopticon",
       "cave",
       "noblelie",
+      "er",
       "milgram"
     ],
     "reading": [
       [
         "Plato, The Republic, translated by Benjamin Jowett",
-        "Book II has Glaucon’s challenge. Free on Project Gutenberg.",
+        "Glaucon’s challenge and the ring are at the start of Book II. Socrates’s reply about the ring comes in Book X. Free on Project Gutenberg.",
         "https://www.gutenberg.org/ebooks/1497"
       ],
       [
         "Herodotus, Histories, Book I, translated by G. C. Macaulay",
         "The older story without the ring. Free on Project Gutenberg.",
         "https://www.gutenberg.org/ebooks/2707"
+      ],
+      [
+        "“Ring of Gyges”, Wikipedia",
+        "Free overview of the story, its sources and its later influence.",
+        "https://en.wikipedia.org/wiki/Ring_of_Gyges"
       ],
       [
         "“Plato’s Ethics: An Overview”, Stanford Encyclopedia of Philosophy",
