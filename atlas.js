@@ -108,24 +108,24 @@ const ATLAS = [
 
 const ATLAS_ENTRIES = {
   "nachiketa": {
-    "source": "Katha Upanishad, Part 1, sections 1 and 2",
+    "source": "Katha Upanishad (कठोपनिषद्), Part 1, sections 1 and 2",
     "period": "One of the main Upanishads. Scholars usually date it to the later part of the first millennium BCE.",
     "tradition": "Indian philosophy (Upanishads)",
     "type": "A dialogue inside a story",
     "setup": [
-      "A man named Vajashravas performed a sacrifice in which he had to give away everything he owned. But the cows he gave away were very old. They could no longer give milk or have calves. His young son, Nachiketa, saw his father giving away these old cows. He felt that such poor gifts were useless.",
+      "A man named Vajashravas performed a sacrifice in which he had to give away everything he owned. But the cows he gave away were very old. They could no longer give milk or have calves. His young son, Nachiketa (नचिकेता), saw his father giving away these old cows. He felt that such poor gifts were useless.",
       "Nachiketa asked his father, “To whom will you give me?” He asked this three times. At last his father became angry and said, “I give you to Death.”",
       "So Nachiketa went to the house of Yama, the god of death. Yama was away. Nachiketa waited at the door for three nights without food. When Yama came back, he was sorry that his guest had waited so long. He offered Nachiketa three wishes.",
       "First, Nachiketa asked that his father should be calm and welcome him back. Second, he asked to learn a fire ritual that leads to heaven. Third, he asked, “When a person dies, some say he still exists and some say he does not. What is the truth?”",
       "Yama did not want to answer this question. So he offered Nachiketa many other gifts. He offered him sons and grandsons who would live for a hundred years. He offered him cattle, elephants, gold, horses and land. He also offered him a long life and beautiful women.",
-      "Nachiketa refused all these gifts. He said that such things last only for a short time and weaken the senses. He said that no one becomes happy through wealth. Yama was pleased with this answer and began to teach him. He said that every person has two paths: shreyas, which is the good, and preyas, which is the pleasant. The wise person chooses the good. The foolish person chooses the pleasant and misses the real goal."
+      "Nachiketa refused all these gifts. He said that such things last only for a short time and weaken the senses. He said that no one becomes happy through wealth. Yama was pleased with this answer and began to teach him. He said that every person has two paths: shreyas (श्रेयस्), which is the good, and preyas (प्रेयस्), which is the pleasant. The wise person chooses the good. The foolish person chooses the pleasant and misses the real goal."
     ],
     "question": "If you could have everything you desire, what would be worth choosing, knowing that you will die one day?",
-    "reveals": "The story compares two kinds of good. The pleasant is real, but it does not last. The good lasts. Yama does not say that pleasure is bad. He says that pleasure cannot answer the real questions about life and death. Nachiketa’s strength is that he does not give in to temptation. Because of this, he is ready to receive knowledge. Yama then teaches him that the true self, the atman, is never born and never dies. A person can know this self only when the mind stops chasing desires.",
+    "reveals": "The story compares two kinds of good. The pleasant is real, but it does not last. The good lasts. Yama does not say that pleasure is bad. He says that pleasure cannot answer the real questions about life and death. Nachiketa’s strength is that he does not give in to temptation. Because of this, he is ready to receive knowledge. Yama then teaches him that the true self, the atman (आत्मन्), is never born and never dies. A person can know this self only when the mind stops chasing desires.",
     "readings": [
       [
-        "Advaita Vedanta (Shankaracharya)",
-        "The story is about moksha, or liberation. The true self is the same as Brahman, the ultimate reality. When a person knows this, the cycle of birth and death ends. Nachiketa’s refusal of pleasures is the kind of renunciation that makes this knowledge possible."
+        "Advaita Vedanta (Shankaracharya, शंकराचार्य)",
+        "The story is about moksha (मोक्ष), or liberation. The true self is the same as Brahman (ब्रह्मन्), the ultimate reality. When a person knows this, the cycle of birth and death ends. Nachiketa’s refusal of pleasures is the kind of renunciation that makes this knowledge possible."
       ],
       [
         "Ethical reading",
@@ -1338,7 +1338,7 @@ const ATLAS_ENTRIES = {
     "tradition": "Indian (Buddhist)",
     "type": "A parable based on the life of a woman disciple of the Buddha",
     "setup": [
-      "Kisa Gotami lived in the city of Savatthi at the time of the Buddha. Her name was Gotami. People called her Kisa Gotami, which means “thin Gotami”, because she was very slim. She married a rich young man, and they had a son.",
+      "Kisa Gotami (किसा गोतमी) lived in the city of Savatthi at the time of the Buddha. Her name was Gotami. People called her Kisa Gotami, which means “thin Gotami”, because she was very slim. She married a rich young man, and they had a son.",
       "When the boy was still very small, he died. Kisa Gotami could not accept his death. She carried his body from house to house, asking everyone for a medicine that would bring him back to life. People began to think that she had gone mad.",
       "A wise man told her, “Go to the Buddha. He has the medicine you want.” So she went to the Buddha and begged him to bring her son back to life.",
       "The Buddha said that he could help her. He told her to bring him some mustard seeds. But the seeds had to come from a house where no one had ever died.",
@@ -4132,16 +4132,16 @@ const ATLAS_ENTRIES = {
     ]
   },
   "maitreyi": {
-    "source": "Brihadaranyaka Upanishad 2.4. An almost identical version appears again at 4.5.",
+    "source": "Brihadaranyaka Upanishad (बृहदारण्यकोपनिषद्) 2.4. An almost identical version appears again at 4.5.",
     "period": "The Brihadaranyaka is one of the oldest Upanishads. Scholars usually date it to around the seventh or sixth century BCE.",
     "tradition": "Indian philosophy (Upanishads)",
     "type": "A philosophical dialogue between a husband and his wife",
     "setup": [
-      "Yajnavalkya was one of the most famous thinkers of the Upanishads. He had two wives, Maitreyi and Katyayani. The text says that Maitreyi liked to discuss questions about Brahman, the ultimate reality. It says that Katyayani knew only what women of that time were usually expected to know.",
+      "Yajnavalkya (याज्ञवल्क्य) was one of the most famous thinkers of the Upanishads. He had two wives, Maitreyi (मैत्रेयी) and Katyayani. The text says that Maitreyi liked to discuss questions about Brahman (ब्रह्मन्), the ultimate reality. It says that Katyayani knew only what women of that time were usually expected to know.",
       "One day, Yajnavalkya decided to leave his home and live as a wandering monk. So he wanted to divide his property between his two wives.",
       "Maitreyi asked him, “If this whole earth, full of wealth, belonged to me, would that make me immortal?” Yajnavalkya answered, “No. Your life would be like the life of rich people. But there is no hope of immortality through wealth.”",
       "Maitreyi said, “Then what should I do with something that will not make me immortal? Tell me instead what you know.” Yajnavalkya was pleased. He asked her to sit down and listen carefully.",
-      "He said, “A husband is not dear for the husband’s own sake. He is dear because of the Self. A wife is not dear for the wife’s own sake. She is dear because of the Self.” He said the same about children, wealth and everything else. So the Self, the atman, is what must be seen, heard, thought about and deeply understood.",
+      "He said, “A husband is not dear for the husband’s own sake. He is dear because of the Self. A wife is not dear for the wife’s own sake. She is dear because of the Self.” He said the same about children, wealth and everything else. So the Self, the atman (आत्मन्), is what must be seen, heard, thought about and deeply understood.",
       "Maitreyi found the rest of his teaching confusing. So Yajnavalkya explained further. Where there is duality, one person sees another and knows another. But when everything has become one’s own Self, who could see whom, and by what means? How can anyone know the knower?"
     ],
     "question": "Can wealth give a person what they most deeply want?",
@@ -4157,7 +4157,7 @@ const ATLAS_ENTRIES = {
       ],
       [
         "Maitreyi as a thinker",
-        "Maitreyi is remembered as a brahmavadini, a woman who discussed questions about Brahman. She chose knowledge over property. Some scholars suggest that she may have been an independent teacher herself. The text’s description of Katyayani, however, shows the limited view of women in that period."
+        "Maitreyi is remembered as a brahmavadini (ब्रह्मवादिनी), a woman who discussed questions about Brahman. She chose knowledge over property. Some scholars suggest that she may have been an independent teacher herself. The text’s description of Katyayani, however, shows the limited view of women in that period."
       ]
     ],
     "breaks": [
@@ -4192,14 +4192,14 @@ const ATLAS_ENTRIES = {
     ]
   },
   "gargi": {
-    "source": "Brihadaranyaka Upanishad 3.6 and 3.8",
+    "source": "Brihadaranyaka Upanishad (बृहदारण्यकोपनिषद्) 3.6 and 3.8",
     "period": "The Brihadaranyaka is one of the oldest Upanishads. Scholars usually date it to around the seventh or sixth century BCE.",
     "tradition": "Indian philosophy (Upanishads)",
     "type": "A philosophical debate",
     "setup": [
-      "At a great sacrifice, King Janaka of Videha offered a prize of a thousand cows, with gold tied to their horns, to the scholar who knew the most about Brahman, the ultimate reality. The sage Yajnavalkya told his student to drive the cows home. The other scholars challenged him. Only one of them, the woman philosopher Gargi Vachaknavi, challenged him twice.",
+      "At a great sacrifice, King Janaka of Videha offered a prize of a thousand cows, with gold tied to their horns, to the scholar who knew the most about Brahman (ब्रह्मन्), the ultimate reality. The sage Yajnavalkya (याज्ञवल्क्य) told his student to drive the cows home. The other scholars challenged him. Only one of them, the woman philosopher Gargi Vachaknavi (गार्गी वाचक्नवी), challenged him twice.",
       "In those days, people used a picture from weaving to describe the world. Just as cloth is woven on long threads, the whole world was believed to be woven on water.",
-      "Gargi started from this belief. She asked, “If the world is woven on water, what is water woven on?” Yajnavalkya answered, “On air.” Every time he answered, she asked the same question about his new answer. He named higher and higher bases: the sky, the sun, the moon, the stars, the gods and Prajapati, the creator. At last he said that all of these rest on the worlds of Brahman.",
+      "Gargi started from this belief. She asked, “If the world is woven on water, what is water woven on?” Yajnavalkya answered, “On air.” Every time he answered, she asked the same question about his new answer. He named higher and higher bases: the sky, the sun, the moon, the stars, the gods and Prajapati (प्रजापति), the creator. At last he said that all of these rest on the worlds of Brahman.",
       "Gargi then asked what the worlds of Brahman are woven on. Yajnavalkya stopped her. He warned, “Gargi, do not ask too much, or your head will fall off.” He added that no further question can be asked about Brahman. Gargi fell silent.",
       "Later in the debate, Gargi rose again. She compared herself to a warrior holding two sharp arrows, and said that she had two questions for Yajnavalkya.",
       "Her first question was, “What is the base of everything above the sky and below the earth, and of the past, the present and the future?” Yajnavalkya answered, “Space.” Her second question was, “Then what is space woven on?”",
@@ -4219,7 +4219,7 @@ const ATLAS_ENTRIES = {
       ],
       [
         "Gargi as a thinker",
-        "Gargi and Maitreyi are the only two women who take part in philosophical discussion in the Upanishads. Gargi was the only scholar who challenged Yajnavalkya twice, and at the end she was the one who declared the result of the debate."
+        "Gargi and Maitreyi (मैत्रेयी) are the only two women who take part in philosophical discussion in the Upanishads. Gargi was the only scholar who challenged Yajnavalkya twice, and at the end she was the one who declared the result of the debate."
       ]
     ],
     "breaks": [
@@ -4255,12 +4255,12 @@ const ATLAS_ENTRIES = {
     ]
   },
   "indra": {
-    "source": "Chandogya Upanishad 8.7 to 8.12",
+    "source": "Chandogya Upanishad (छान्दोग्योपनिषद्) 8.7 to 8.12",
     "period": "The Chandogya is one of the oldest Upanishads. Scholars usually date it to around the seventh or sixth century BCE.",
     "tradition": "Indian philosophy (Upanishads)",
     "type": "A teaching story",
     "setup": [
-      "Prajapati, the creator, announced that there is a Self, called the atman, which never grows old or dies and feels no sorrow, hunger or thirst. He promised that whoever understands this Self gains everything worth having. The gods sent their king, Indra, to learn about this Self, and the demons sent their king, Virochana.",
+      "Prajapati (प्रजापति), the creator, announced that there is a Self, called the atman (आत्मन्), which never grows old or dies and feels no sorrow, hunger or thirst. He promised that whoever understands this Self gains everything worth having. The gods sent their king, Indra, to learn about this Self, and the demons sent their king, Virochana (विरोचन).",
       "The two kings came to Prajapati carrying firewood in their hands, which was how a student asked a teacher to accept him. They lived with Prajapati as students for thirty-two years.",
       "Then Prajapati told them to look into a pan of water, first as they were and then in fine clothes and jewellery. Each time, they saw their own bodies reflected. Prajapati said, “That is the Self.” Both kings went away satisfied. But as they left, Prajapati said that they had not found the Self.",
       "Virochana told the demons that the body is the Self, so a person should serve and please only his own body. The Upanishad says that for this reason, selfish people who do not give to others and have no faith are called demons. The same people even dress their dead in fine clothes, because they believe that the dressed body will win the next world.",
@@ -4318,27 +4318,27 @@ const ATLAS_ENTRIES = {
     ]
   },
   "uddalaka": {
-    "source": "Chandogya Upanishad, chapter 6",
+    "source": "Chandogya Upanishad (छान्दोग्योपनिषद्), chapter 6",
     "period": "The Chandogya is one of the oldest Upanishads. Scholars usually date it to around the seventh or sixth century BCE.",
     "tradition": "Indian philosophy (Upanishads)",
     "type": "A teaching dialogue between a father and his son",
     "setup": [
-      "Uddalaka Aruni sent his son Shvetaketu away to study the Vedas. Shvetaketu left home at the age of twelve. He studied for twelve years and learned all the Vedas. When he came home at twenty-four, he was proud and thought that he was very learned.",
+      "Uddalaka Aruni (उद्दालक आरुणि) sent his son Shvetaketu (श्वेतकेतु) away to study the Vedas. Shvetaketu left home at the age of twelve. He studied for twelve years and learned all the Vedas. When he came home at twenty-four, he was proud and thought that he was very learned.",
       "His father asked him, “Did you ask your teachers for the teaching by which the unheard becomes heard, the unthought becomes thought, and the unknown becomes known?” Shvetaketu did not know any such teaching. He asked his father to explain it.",
       "Uddalaka said, “By knowing one lump of clay, you know everything that is made of clay. The things made from it differ only in name. The truth is that they are all clay.” He gave similar examples with metal ornaments and iron tools. In the same way, he said, there is one reality behind everything. In the beginning, there was only Being, one without a second.",
       "Then Uddalaka gave more examples. He asked his son to bring a fruit from a banyan tree and break it open. Inside were tiny seeds. He asked him to break one seed. Shvetaketu said, “I see nothing.” His father said, “From this fine essence that you cannot see, this great banyan tree grows.”",
       "Next, he told his son to put some salt in water and leave it overnight. In the morning, the salt could not be seen. But the water tasted salty at the top, in the middle and at the bottom. The salt was present everywhere, though it could not be seen.",
-      "After each example, Uddalaka said, “That fine essence is the Self of the whole world. That is the truth. That is the Self. That you are, Shvetaketu.” In Sanskrit, the last words are tat tvam asi. The father repeats them nine times."
+      "After each example, Uddalaka said, “That fine essence is the Self of the whole world. That is the truth. That is the Self. That you are, Shvetaketu.” In Sanskrit, the last words are tat tvam asi (तत्त्वमसि). The father repeats them nine times."
     ],
     "question": "What is the one reality behind all the different things we see, and how are you related to it?",
     "reveals": "Uddalaka teaches that the many things of the world are different forms of one reality, just as pots are forms of clay. This reality is subtle, like the essence in a seed or salt in water. It cannot be seen, but it is everywhere. The final teaching is personal. That reality is not somewhere far away. It is your own deepest Self. The story also teaches humility. A proud young man who knew many texts had not yet learned the one thing that explains them all.",
     "readings": [
       [
-        "Advaita Vedanta (Shankaracharya)",
-        "Tat tvam asi means that the individual self and Brahman are completely identical. It is one of the four great sayings, the mahavakyas, of Vedanta."
+        "Advaita Vedanta (Shankaracharya, शंकराचार्य)",
+        "Tat tvam asi means that the individual self and Brahman (ब्रह्मन्) are completely identical. It is one of the four great sayings, the mahavakyas, of Vedanta."
       ],
       [
-        "Vishishtadvaita (Ramanuja)",
+        "Vishishtadvaita (Ramanuja, रामानुज)",
         "The individual self is real and distinct, but it depends on Brahman, just as a body depends on its soul. So tat tvam asi means that Brahman lives within the self and controls it, not that the two are simply the same."
       ],
       [
@@ -4445,7 +4445,7 @@ const ATLAS_ENTRIES = {
     ]
   },
   "anekanta": {
-    "source": "Jain philosophy. The idea goes back to the teachings of Mahavira. The Jain scholar Siddhasena Divakara gave it the name anekantavada. Later thinkers such as Kundakunda and Samantabhadra developed it further.",
+    "source": "Jain philosophy. The idea goes back to the teachings of Mahavira. The Jain scholar Siddhasena Divakara gave it the name anekantavada (अनेकान्तवाद). Later thinkers such as Kundakunda and Samantabhadra developed it further.",
     "period": "From the time of Mahavira, around the sixth to fifth century BCE, and developed over the following centuries",
     "tradition": "Indian (Jain)",
     "type": "A concept. Anekantavada means the doctrine that reality has many sides.",
@@ -4453,7 +4453,7 @@ const ATLAS_ENTRIES = {
       "Anekantavada is a central idea of Jain philosophy. The word means “the doctrine of not being one-sided”. The doctrine says that reality is complex and has many sides. So no single statement can describe the whole truth about anything.",
       "Jains explain this idea with simple examples. A man is a father to his son, a son to his own father, a husband to his wife and a brother to his sister. Each description is true. But each one is true only from one point of view. None of them tells the whole truth about the man.",
       "Mahavira, the great teacher of Jainism, used this way of thinking. For example, he taught that the soul is permanent from one point of view, because its basic substance does not change. From another point of view, it is always changing, because its states keep changing. Both statements are true in their own way.",
-      "Jain thinkers built two methods on this idea. The first is nayavada, the theory of points of view. It studies the different standpoints from which a thing can be described. The second is syadvada, the method of conditional statements. It adds the word syat, meaning “in some respect”, to a statement. For example, in some respect the pot exists, and in some respect it does not exist. Syadvada lists seven possible forms of such statements. Jains often explain the whole idea with the story of the blind men and the elephant."
+      "Jain thinkers built two methods on this idea. The first is nayavada, the theory of points of view. It studies the different standpoints from which a thing can be described. The second is syadvada (स्याद्वाद), the method of conditional statements. It adds the word syat, meaning “in some respect”, to a statement. For example, in some respect the pot exists, and in some respect it does not exist. Syadvada lists seven possible forms of such statements. Jains often explain the whole idea with the story of the blind men and the elephant."
     ],
     "question": "If each of us sees only part of the truth, how should we judge other people’s views?",
     "reveals": "Anekantavada teaches intellectual humility. When two people disagree, both may be describing a real side of the same thing. Before rejecting another view, we should ask from which point of view it could be true. But Jain thinkers insisted that anekantavada is not relativism. The doctrine does not mean that all views are equally true. It means that a full understanding must combine many partial views.",
@@ -4468,7 +4468,7 @@ const ATLAS_ENTRIES = {
       ],
       [
         "Criticism by other schools",
-        "Philosophers of other schools, including Shankaracharya, criticised the doctrine. They argued that one thing cannot have opposite qualities at the same time, so the Jain method is inconsistent."
+        "Philosophers of other schools, including Shankaracharya (शंकराचार्य), criticised the doctrine. They argued that one thing cannot have opposite qualities at the same time, so the Jain method is inconsistent."
       ],
       [
         "Modern reading",
@@ -4705,7 +4705,7 @@ const ATLAS_ENTRIES = {
       ],
       [
         "Jain reading",
-        "Jains use the story to explain anekantavada, the idea that reality has many sides. Each person’s description is true from his own point of view. A fuller understanding comes from putting these points of view together. Jain temples often show this scene."
+        "Jains use the story to explain anekantavada (अनेकान्तवाद), the idea that reality has many sides. Each person’s description is true from his own point of view. A fuller understanding comes from putting these points of view together. Jain temples often show this scene."
       ],
       [
         "Modern reading",
@@ -4744,13 +4744,13 @@ const ATLAS_ENTRIES = {
     ]
   },
   "chariot": {
-    "source": "Katha Upanishad, Part 1, section 3, verses 3 to 11",
+    "source": "Katha Upanishad (कठोपनिषद्), Part 1, section 3, verses 3 to 11",
     "period": "One of the main Upanishads. Scholars usually date it to the later part of the first millennium BCE.",
     "tradition": "Indian philosophy (Upanishads)",
     "type": "A metaphor. A metaphor explains one thing by comparing it to another.",
     "setup": [
-      "The chariot comparison is part of the teaching that Yama, the god of death, gives to the boy Nachiketa in the Katha Upanishad. Yama wants to explain how a person can reach the highest goal. So he compares a human being to a chariot.",
-      "Yama says that the true self, the atman, is the owner of the chariot, who sits in it. The body is the chariot. The intellect, the part of us that judges and decides, is the driver. The mind is the reins. The senses, such as sight and hearing, are the horses. And the things that the senses are drawn to are the roads on which the horses run.",
+      "The chariot comparison is part of the teaching that Yama, the god of death, gives to the boy Nachiketa (नचिकेता) in the Katha Upanishad. Yama wants to explain how a person can reach the highest goal. So he compares a human being to a chariot.",
+      "Yama says that the true self, the atman (आत्मन्), is the owner of the chariot, who sits in it. The body is the chariot. The intellect, the part of us that judges and decides, is the driver. The mind is the reins. The senses, such as sight and hearing, are the horses. And the things that the senses are drawn to are the roads on which the horses run.",
       "Yama then describes two kinds of drivers. If the driver has no understanding and does not hold the reins firmly, the senses run wild, like bad horses that the driver cannot control. But if the driver has understanding and holds the reins firmly, the senses obey, like good horses.",
       "Yama says that a person whose intellect is weak and whose mind is not controlled does not reach the goal. Such a person keeps going round in the cycle of birth and death. But a person who has a wise intellect as the driver and a controlled mind as the reins reaches the end of the journey. Yama calls this the highest place of Vishnu.",
       "Yama also gives an order from lower to higher. Higher than the senses are their objects. Higher than the objects is the mind. Higher than the mind is the intellect. And higher than the intellect is the great self."
@@ -4812,7 +4812,7 @@ const ATLAS_ENTRIES = {
     ]
   },
   "twobirds": {
-    "source": "Mundaka Upanishad 3.1.1–2. The same two verses appear in the Shvetashvatara Upanishad (4.6–7). The image first appears in a hymn of the Rig Veda (1.164.20).",
+    "source": "Mundaka Upanishad (मुण्डकोपनिषद्) 3.1.1–2. The same two verses appear in the Shvetashvatara Upanishad (4.6–7). The image first appears in a hymn of the Rig Veda (1.164.20).",
     "period": "The Rig Veda hymn is much older than the two Upanishads. Scholars date the Mundaka and Shvetashvatara Upanishads to the later centuries BCE.",
     "tradition": "Indian philosophy (Upanishads)",
     "type": "A metaphor. A metaphor explains one thing by comparing it to another.",
@@ -4820,7 +4820,7 @@ const ATLAS_ENTRIES = {
       "The Mundaka Upanishad describes two birds sitting on the same tree. The two birds are close companions and always stay together.",
       "One bird eats the sweet fruit of the tree. The other bird does not eat anything. The second bird only watches.",
       "The Upanishad then explains the picture. A person lives on that same tree. He is sunk in the world and confused. He grieves because he feels helpless. But when he sees the other bird, the Lord, calm and full of greatness, his sorrow ends.",
-      "The image is very old. It first appears in a hymn of the Rig Veda. The Shvetashvatara Upanishad later repeats the same two verses.",
+      "The image is very old. It first appears in a hymn of the Rig Veda. The Shvetashvatara Upanishad (श्वेताश्वतरोपनिषद्) later repeats the same two verses.",
       "Later teachers explained each part of the picture. The tree is the body. The fruits are the results of our actions, both pleasant and painful. The eating bird is the individual self, which enjoys and suffers. The watching bird is the higher Self, which sees everything but is not caught up in anything."
     ],
     "question": "Can you live your life and, at the same time, watch it calmly?",
@@ -4929,7 +4929,7 @@ const ATLAS_ENTRIES = {
     ]
   },
   "angulimala": {
-    "source": "Angulimala Sutta, Majjhima Nikaya 86, in the Pali Canon. The story of his early life was added later, in the commentaries.",
+    "source": "Angulimala (अंगुलिमाल) Sutta, Majjhima Nikaya 86, in the Pali Canon. The story of his early life was added later, in the commentaries.",
     "period": "An early Buddhist text. The Pali Canon was written down in Sri Lanka in the first century BCE.",
     "tradition": "Indian (Buddhist)",
     "type": "A narrative. A narrative is a story about events in a person’s life.",
@@ -4994,7 +4994,7 @@ const ATLAS_ENTRIES = {
   },
   "aggregates": {
     "source": "Samyutta Nikaya 5.10 (the verses of the nun Vajira) and the Questions of King Milinda (Milindapanha), Book 2, chapter 1. Nagarjuna’s Madhyamaka philosophy develops the idea further.",
-    "period": "The Pali verses are early Buddhist texts. The Questions of King Milinda was compiled around the start of the common era. Nagarjuna lived around the second century CE.",
+    "period": "The Pali verses are early Buddhist texts. The Questions of King Milinda was compiled around the start of the common era. Nagarjuna (नागार्जुन) lived around the second century CE.",
     "tradition": "Indian (Buddhist)",
     "type": "An analogy. An analogy explains an idea by comparing it to something familiar.",
     "setup": [
@@ -5122,8 +5122,8 @@ const ATLAS_ENTRIES = {
     "tradition": "Indian philosophy (Samkhya and the Bhagavad Gita)",
     "type": "A framework. A framework is a set of ideas used to understand many different things.",
     "setup": [
-      "Samkhya, one of the oldest schools of Indian philosophy, teaches that nature, called prakriti, is made of three qualities. These qualities are called the gunas. The word guna originally means a strand, like one of the strands twisted together in a rope.",
-      "The first guna is sattva. Sattva is light, clarity, calm and goodness. The second guna is rajas. Rajas is energy, activity, desire and restlessness. The third guna is tamas. Tamas is heaviness, darkness, laziness and confusion. Everything in nature, including every person, is a mixture of all three gunas. In each person and in each situation, one guna is usually stronger than the other two.",
+      "Samkhya, one of the oldest schools of Indian philosophy, teaches that nature, called prakriti (प्रकृति), is made of three qualities. These qualities are called the gunas. The word guna originally means a strand, like one of the strands twisted together in a rope.",
+      "The first guna is sattva (सत्त्व). Sattva is light, clarity, calm and goodness. The second guna is rajas (रजस्). Rajas is energy, activity, desire and restlessness. The third guna is tamas (तमस्). Tamas is heaviness, darkness, laziness and confusion. Everything in nature, including every person, is a mixture of all three gunas. In each person and in each situation, one guna is usually stronger than the other two.",
       "In the Bhagavad Gita, Krishna explains to Arjuna how each guna binds a person. Sattva binds a person through attachment to happiness and knowledge. Rajas binds a person through attachment to action. Tamas binds a person through carelessness, laziness and sleep.",
       "Krishna then uses the gunas to describe many things. For example, he describes three kinds of giving. A sattvic gift is given gladly, at the right place and time, to a worthy person who cannot give anything back. A rajasic gift is given in the hope of getting something in return, or given unwillingly. A tamasic gift is given at the wrong time and place, to an unworthy person, with contempt.",
       "Krishna says that the highest state is to rise above all three gunas. A person who reaches this state stays calm in pleasure and pain, in praise and blame, and in honour and dishonour."
@@ -5133,7 +5133,7 @@ const ATLAS_ENTRIES = {
     "readings": [
       [
         "Samkhya reading",
-        "The gunas are the basic building blocks of nature. When the three gunas are balanced, nature is still. When the balance is disturbed, the world develops. The true self, called purusha, is separate from the gunas and only watches them."
+        "The gunas are the basic building blocks of nature. When the three gunas are balanced, nature is still. When the balance is disturbed, the world develops. The true self, called purusha (पुरुष), is separate from the gunas and only watches them."
       ],
       [
         "Gita reading",
@@ -5178,8 +5178,8 @@ const ATLAS_ENTRIES = {
     ]
   },
   "maya": {
-    "source": "Shvetashvatara Upanishad 4.10. The rope and snake example comes from Gaudapada’s Mandukya Karika, and later Advaita teachers used it widely.",
-    "period": "The word maya already appears in the Rig Veda. Gaudapada wrote around the sixth century CE.",
+    "source": "Shvetashvatara Upanishad (श्वेताश्वतरोपनिषद्) 4.10. The rope and snake example comes from Gaudapada’s Mandukya Karika, and later Advaita teachers used it widely.",
+    "period": "The word maya (माया) already appears in the Rig Veda. Gaudapada wrote around the sixth century CE.",
     "tradition": "Indian philosophy (Vedanta)",
     "type": "A concept, explained through a metaphor. Maya is often translated as illusion.",
     "setup": [
@@ -5187,17 +5187,17 @@ const ATLAS_ENTRIES = {
       "Later, the Shvetashvatara Upanishad gave the word a deeper meaning. The Upanishad says that nature is maya, and that the great Lord is the one who uses maya. The world is like a magic show, and God is like the magician.",
       "Advaita Vedanta teachers explained maya with a simple example. A man walks along a path in the evening, when the light is fading. He sees a long, coiled shape on the ground and thinks that it is a snake. He is frightened and jumps back.",
       "Then someone brings a lamp. In the light, the man sees that the shape is only a piece of rope. The snake disappears at once, and so does his fear. But the rope was there all along. Nothing had changed except his understanding.",
-      "According to Advaita, the world of separate things is like the snake, and Brahman, the one reality, is like the rope. Because of ignorance, people see a world of separate things, and they suffer. When true knowledge comes, they see the one reality that was always there."
+      "According to Advaita, the world of separate things is like the snake, and Brahman (ब्रह्मन्), the one reality, is like the rope. Because of ignorance, people see a world of separate things, and they suffer. When true knowledge comes, they see the one reality that was always there."
     ],
     "question": "Is the world we see the real world, or only the way it appears to us?",
     "reveals": "Maya teaches that appearance and reality can differ. Our fears and desires are often based on how things seem, not on how they are. The snake was not real, but the fear was real, and so was the suffering. Knowledge does not destroy the rope. Knowledge only removes the mistake. In Advaita, maya is neither simply real nor simply unreal. The world is experienced, so it is not nothing. But the world is not the final truth either.",
     "readings": [
       [
         "Advaita reading",
-        "Only Brahman is ultimately real. The world of many separate things is an appearance produced by maya and ignorance, and liberation means seeing through this appearance. Scholars disagree, however, about whether Shankaracharya himself treated the world as an illusion, or whether this view developed among later Advaita teachers."
+        "Only Brahman is ultimately real. The world of many separate things is an appearance produced by maya and ignorance, and liberation means seeing through this appearance. Scholars disagree, however, about whether Shankaracharya (शंकराचार्य) himself treated the world as an illusion, or whether this view developed among later Advaita teachers."
       ],
       [
-        "Vishishtadvaita reading (Ramanuja)",
+        "Vishishtadvaita reading (Ramanuja, रामानुज)",
         "Ramanuja rejected the idea that the world is an illusion. He held that the world of living beings and matter is real, and that it forms the body of Brahman."
       ],
       [
@@ -5238,12 +5238,12 @@ const ATLAS_ENTRIES = {
     ]
   },
   "netineti": {
-    "source": "Brihadaranyaka Upanishad 2.3.6, 3.9.26, 4.2.4, 4.4.22 and 4.5.15",
+    "source": "Brihadaranyaka Upanishad (बृहदारण्यकोपनिषद्) 2.3.6, 3.9.26, 4.2.4, 4.4.22 and 4.5.15",
     "period": "The Brihadaranyaka is one of the oldest Upanishads. Scholars usually date it to around the seventh or sixth century BCE.",
     "tradition": "Indian philosophy (Upanishads and Advaita Vedanta)",
-    "type": "A method. Neti neti means “not this, not this”.",
+    "type": "A method. Neti neti (नेति नेति) means “not this, not this”.",
     "setup": [
-      "At King Janaka’s court, the scholar Vidagdha Shakalya questioned Yajnavalkya. Shakalya asked, “How many gods are there?” Yajnavalkya first gave the number from an old prayer: three thousand three hundred and six.",
+      "At King Janaka’s court, the scholar Vidagdha Shakalya (विदग्ध शाकल्य) questioned Yajnavalkya (याज्ञवल्क्य). Shakalya asked, “How many gods are there?” Yajnavalkya first gave the number from an old prayer: three thousand three hundred and six.",
       "Shakalya asked again, “But really, how many gods are there?” Yajnavalkya said, “Thirty-three.” Shakalya asked the same question again and again. Each time, Yajnavalkya gave a smaller number: six, then three, then two, then one and a half, and finally one. By removing what was less basic each time, the answer came down to one.",
       "The Upanishad uses a similar method to describe the Self. The Self cannot be pointed to like an object. So the Upanishad describes the Self only by saying what it is not. The Upanishad says, “The Self is not this, not this.” The Self cannot be grasped, because it is beyond grasping. The Self cannot be destroyed, and nothing can cling to it.",
       "Advaita teachers later used neti neti as a method of self-inquiry. The method works like peeling away layers. A person asks, “Am I this body?” The body changes and grows old, so the answer is: not this. The person asks, “Am I my thoughts?” Thoughts come and go, so the answer is again: not this. Whatever can be observed is not the observer. What remains, after everything else is set aside, is the Self."
@@ -5253,7 +5253,7 @@ const ATLAS_ENTRIES = {
     "readings": [
       [
         "Advaita reading",
-        "Shankaracharya used neti neti to remove the wrong ideas that ignorance places on Brahman. His student Sureshvara explained that the purpose of the negation is not emptiness. Its purpose is to reveal identity with Brahman."
+        "Shankaracharya (शंकराचार्य) used neti neti to remove the wrong ideas that ignorance places on Brahman (ब्रह्मन्). His student Sureshvara explained that the purpose of the negation is not emptiness. Its purpose is to reveal identity with Brahman."
       ],
       [
         "Negative theology",
@@ -5296,25 +5296,25 @@ const ATLAS_ENTRIES = {
     ]
   },
   "atman": {
-    "source": "Taittiriya Upanishad 3.1–6 (the story of Bhrigu and Varuna). Other key statements are in the Chandogya Upanishad 3.14 and the Brihadaranyaka Upanishad 1.4.10.",
+    "source": "Taittiriya Upanishad (तैत्तिरीयोपनिषद्) 3.1–6 (the story of Bhrigu and Varuna). Other key statements are in the Chandogya Upanishad (छान्दोग्योपनिषद्) 3.14 and the Brihadaranyaka Upanishad (बृहदारण्यकोपनिषद्) 1.4.10.",
     "period": "The principal Upanishads, from around the seventh century BCE to the last centuries BCE",
     "tradition": "Indian philosophy (Upanishads and Vedanta)",
-    "type": "A philosophical concept. Atman means the Self, and Brahman means the ultimate reality.",
+    "type": "A philosophical concept. Atman (आत्मन्) means the Self, and Brahman (ब्रह्मन्) means the ultimate reality.",
     "setup": [
-      "Bhrigu was the son of Varuna. One day, Bhrigu went to his father and said, “Sir, teach me Brahman.” Varuna did not give a direct answer. He said, “Brahman is that from which all beings are born, by which they live after birth, and into which they return at death. Try to understand that through tapas.” Tapas means austerity and deep concentration.",
+      "Bhrigu (भृगु) was the son of Varuna. One day, Bhrigu went to his father and said, “Sir, teach me Brahman.” Varuna did not give a direct answer. He said, “Brahman is that from which all beings are born, by which they live after birth, and into which they return at death. Try to understand that through tapas (तपस्).” Tapas means austerity and deep concentration.",
       "Bhrigu practised tapas. He decided that food is Brahman, because beings are born from food, live by food and return to food. He went back to his father. Varuna again told him to seek Brahman through tapas.",
       "Bhrigu reflected again. Step by step, he understood that Brahman is breath, then that Brahman is mind, and then that Brahman is understanding. Each time, his father sent him back to reflect more deeply. At last, Bhrigu understood that Brahman is bliss. All beings are born from bliss, live by bliss and return to bliss. With this understanding, his search was complete.",
-      "Other Upanishads add that the Self in each person is this same reality. The Chandogya Upanishad says that the Self within the heart is smaller than a grain of rice or a mustard seed, yet greater than the earth, the sky and all the worlds. The Chandogya then declares that this Self within the heart is Brahman. The Brihadaranyaka Upanishad contains the famous saying aham brahmasmi, which means “I am Brahman”."
+      "Other Upanishads add that the Self in each person is this same reality. The Chandogya Upanishad says that the Self within the heart is smaller than a grain of rice or a mustard seed, yet greater than the earth, the sky and all the worlds. The Chandogya then declares that this Self within the heart is Brahman. The Brihadaranyaka Upanishad contains the famous saying aham brahmasmi (अहं ब्रह्मास्मि), which means “I am Brahman”."
     ],
     "question": "Is the deepest self within you the same as the ultimate reality of the universe?",
     "reveals": "The Upanishads search for the ground of everything and for the true nature of the self, and they find that the two searches lead to the same place. Bhrigu’s story shows the search moving from the physical to the subtle: from food, to breath, to mind, to understanding, to bliss. The final teaching is that the reality behind the universe is not far away. That reality is the innermost Self of every being. The idea gives every person, and every living being, a share in the same dignity.",
     "readings": [
       [
-        "Advaita Vedanta (Shankaracharya)",
+        "Advaita Vedanta (Shankaracharya, शंकराचार्य)",
         "Atman and Brahman are completely identical. The feeling of being a separate individual comes from ignorance."
       ],
       [
-        "Vishishtadvaita (Ramanuja)",
+        "Vishishtadvaita (Ramanuja, रामानुज)",
         "The self is real and distinct, but it belongs to Brahman, just as a body belongs to its soul. The self depends on Brahman and exists within Brahman."
       ],
       [
@@ -5333,7 +5333,7 @@ const ATLAS_ENTRIES = {
     ],
     "uses": [
       "Human dignity: If the same reality lives in every person, then every person has equal worth. The idea supports the constitutional value of the dignity of the individual.",
-      "Vasudhaiva Kutumbakam: The Maha Upanishad teaches that for the noble-minded, the whole world is one family. The verse is engraved in the entrance hall of India’s Parliament, and India used the idea as the theme of its G20 presidency in 2023.",
+      "Vasudhaiva Kutumbakam (वसुधैव कुटुम्बकम्): The Maha Upanishad teaches that for the noble-minded, the whole world is one family. The verse is engraved in the entrance hall of India’s Parliament, and India used the idea as the theme of its G20 presidency in 2023.",
       "Environmental ethics: If all life shares the same deep reality, harming nature is not separate from harming ourselves.",
       "Exam use: In GS-IV, use it for human dignity, compassion and Indian moral thinkers. In the Essay paper, use it for topics on unity, the self and the world as one family."
     ],
