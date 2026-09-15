@@ -15,8 +15,6 @@ const ATLAS = [
   {"id": "nachiketa", "t": "Nachiketa and Yama", "src": "Katha Upanishad", "form": "Dialogue", "fg": "dialogue", "tr": "indian", "q": "Mortality; desire; knowledge vs pleasure", "sec": "existence", "th": ["death", "knowledge", "freedom"]},
   {"id": "er", "t": "Myth of Er", "src": "Plato, Republic", "form": "Myth", "fg": "myth", "tr": "greek", "q": "Justice; soul; consequences of choice", "sec": "existence", "th": ["justice", "death", "freedom"]},
   {"id": "sisyphus", "t": "Myth of Sisyphus", "src": "Greek myth / Camus", "form": "Myth + philosophical essay", "fg": "myth", "tr": "western", "q": "Absurdity; meaning; repetition", "sec": "existence", "th": ["death", "freedom"]},
-  {"id": "faust", "t": "Faust", "src": "Goethe / Faust tradition", "form": "Legend", "fg": "myth", "tr": "western", "q": "Ambition; knowledge; desire; limits", "sec": "existence", "th": ["knowledge", "freedom", "unintended"]},
-  {"id": "ecclesiastes", "t": "Ecclesiastes", "src": "Hebrew Bible", "form": "Wisdom literature", "fg": "literary", "tr": "scripture", "q": "Futility; time; mortality", "sec": "existence", "th": ["death"]},
   {"id": "epicurus", "t": "Epicurus on death", "src": "Epicurean philosophy", "form": "Argument", "fg": "concept", "tr": "greek", "q": "Why fear death?", "sec": "existence", "th": ["death"]},
   {"id": "cave", "t": "Allegory of the Cave", "src": "Plato, Republic", "form": "Allegory", "fg": "myth", "tr": "greek", "q": "Appearance vs reality; education; ideology", "sec": "knowledge", "th": ["knowledge", "power"]},
   {"id": "dream", "t": "Dream Argument", "src": "Descartes, Meditations", "form": "Thought experiment", "fg": "te", "tr": "western", "q": "Can experience establish reality?", "sec": "knowledge", "th": ["knowledge", "uncertainty"]},
@@ -37,7 +35,6 @@ const ATLAS = [
   {"id": "kisagotami", "t": "Kisa Gotami and the Mustard Seed", "src": "Buddhist tradition", "form": "Parable", "fg": "parable", "tr": "indian", "q": "Grief; universality of death", "sec": "morality", "th": ["death"]},
   {"id": "omelas", "t": "The Ones Who Walk Away from Omelas", "src": "Ursula K. Le Guin", "form": "Short story", "fg": "literary", "tr": "western", "q": "Collective welfare vs individual suffering", "sec": "morality", "th": ["justice", "cooperation"]},
   {"id": "samaritan", "t": "The Good Samaritan", "src": "Gospel of Luke", "form": "Parable", "fg": "parable", "tr": "scripture", "q": "Moral obligation; otherness", "sec": "morality", "th": ["cooperation", "justice"]},
-  {"id": "statenature", "t": "State of Nature", "src": "Hobbes, Locke, Rousseau", "form": "Conceptual model", "fg": "model", "tr": "western", "q": "Political authority and legitimacy", "sec": "politics", "th": ["power", "freedom", "cooperation"]},
   {"id": "noblelie", "t": "Noble Lie", "src": "Plato, Republic", "form": "Political myth", "fg": "myth", "tr": "greek", "q": "Social cohesion; ideology", "sec": "politics", "th": ["power", "knowledge"]},
   {"id": "panopticon", "t": "Panopticon", "src": "Bentham / Foucault", "form": "Architectural metaphor", "fg": "metaphor", "tr": "western", "q": "Surveillance; discipline; power", "sec": "politics", "th": ["power", "freedom"]},
   {"id": "generalwill", "t": "General Will", "src": "Rousseau", "form": "Conceptual model", "fg": "concept", "tr": "western", "q": "Collective sovereignty", "sec": "politics", "th": ["freedom", "power"]},
@@ -85,7 +82,6 @@ const ATLAS = [
   {"id": "gargi", "t": "Gargi and Yajnavalkya", "src": "Brihadaranyaka Upanishad", "form": "Philosophical dialogue", "fg": "dialogue", "tr": "indian", "q": "How far can reason question the structure of reality?", "sec": "traditions", "th": ["knowledge"]},
   {"id": "indra", "t": "Indra and Virochana", "src": "Chandogya Upanishad", "form": "Teaching story", "fg": "parable", "tr": "indian", "q": "Self-knowledge and mistaken identification", "sec": "traditions", "th": ["identity", "knowledge"]},
   {"id": "uddalaka", "t": "Uddalaka and Shvetaketu", "src": "Chandogya Upanishad", "form": "Teaching dialogue", "fg": "dialogue", "tr": "indian", "q": "Unity; identity; reality", "sec": "traditions", "th": ["identity"]},
-  {"id": "arjuna", "t": "Arjuna's Crisis", "src": "Bhagavad Gita", "form": "Philosophical dialogue", "fg": "dialogue", "tr": "indian", "q": "Duty; action; moral conflict", "sec": "traditions", "th": ["justice", "freedom", "death"]},
   {"id": "raft", "t": "The Parable of the Raft", "src": "Early Buddhist texts", "form": "Parable", "fg": "parable", "tr": "indian", "q": "Teachings are tools, not possessions", "sec": "traditions", "th": ["knowledge", "freedom"]},
   {"id": "anekanta", "t": "Anekantavada (Many-sidedness)", "src": "Jain philosophy", "form": "Conceptual framework", "fg": "concept", "tr": "indian", "q": "Partial perspectives and intellectual humility", "sec": "traditions", "th": ["knowledge"]},
   {"id": "uselesstree", "t": "Zhuangzi's Useless Tree", "src": "Zhuangzi", "form": "Parable", "fg": "parable", "tr": "chinese", "q": "Usefulness; alternative value systems", "sec": "traditions", "th": ["freedom", "identity"]},
@@ -95,13 +91,10 @@ const ATLAS = [
   {"id": "chariot", "t": "The Chariot (Katha Upanishad)", "src": "Katha Upanishad", "form": "Metaphor", "fg": "metaphor", "tr": "indian", "q": "Self, senses, mind and disciplined agency", "sec": "traditions", "th": ["identity", "freedom"]},
   {"id": "twobirds", "t": "The Two Birds", "src": "Upanishadic tradition", "form": "Metaphor", "fg": "metaphor", "tr": "indian", "q": "Witnessing consciousness and experience", "sec": "traditions", "th": ["identity", "knowledge"]},
   {"id": "burninghouse", "t": "The Burning House", "src": "Lotus Sutra", "form": "Parable", "fg": "parable", "tr": "indian", "q": "Skilful means; saving those who do not see the danger", "sec": "traditions", "th": ["knowledge", "freedom"]},
-  {"id": "syadvada", "t": "Syadvada", "src": "Jain philosophy", "form": "Logical framework", "fg": "concept", "tr": "indian", "q": "Conditional assertion and perspectival qualification", "sec": "traditions", "th": ["knowledge", "uncertainty"]},
   {"id": "angulimala", "t": "Buddha and Angulimala", "src": "Buddhist tradition", "form": "Narrative", "fg": "literary", "tr": "indian", "q": "Transformation, violence and moral agency", "sec": "traditions", "th": ["justice", "identity"]},
   {"id": "aggregates", "t": "The Five Aggregates as a Chariot", "src": "Buddhist analytical tradition", "form": "Analogy", "fg": "metaphor", "tr": "indian", "q": "Personal identity as a constructed bundle", "sec": "traditions", "th": ["identity"]},
   {"id": "threepoisons", "t": "The Three Poisons", "src": "Buddhist tradition", "form": "Conceptual metaphor", "fg": "concept", "tr": "indian", "q": "Desire, aversion and ignorance as roots of suffering", "sec": "traditions", "th": ["freedom", "knowledge"]},
   {"id": "gunas", "t": "The Gunas", "src": "Samkhya / Bhagavad Gita", "form": "Conceptual framework", "fg": "concept", "tr": "indian", "q": "Patterns of nature, action and temperament", "sec": "traditions", "th": ["identity"]},
-  {"id": "karma", "t": "Karma as Causation", "src": "Indian philosophical traditions", "form": "Conceptual model", "fg": "concept", "tr": "indian", "q": "Action, consequence and moral causality", "sec": "traditions", "th": ["justice", "freedom", "unintended"]},
-  {"id": "dharma", "t": "Dharma and Svadharma", "src": "Indian traditions / Bhagavad Gita", "form": "Conceptual framework", "fg": "concept", "tr": "indian", "q": "Role, duty and the ethics of action", "sec": "traditions", "th": ["justice", "identity"]},
   {"id": "maya", "t": "Maya", "src": "Vedantic traditions", "form": "Metaphor / concept", "fg": "concept", "tr": "indian", "q": "Appearance, cognition and reality", "sec": "traditions", "th": ["knowledge"]},
   {"id": "netineti", "t": "Neti Neti", "src": "Upanishadic tradition", "form": "Method / formula", "fg": "concept", "tr": "indian", "q": "Knowledge through negation; limits of concepts", "sec": "traditions", "th": ["knowledge", "identity"]},
   {"id": "atman", "t": "Atman and Brahman", "src": "Upanishadic / Vedantic traditions", "form": "Philosophical concept", "fg": "concept", "tr": "indian", "q": "Self, reality and metaphysical identity", "sec": "traditions", "th": ["identity"]},
@@ -157,7 +150,6 @@ const ATLAS_ENTRIES = {
     ],
     "related": [
       "chariot",
-      "arjuna",
       "experience",
       "maitreyi",
       "sisyphus",
@@ -219,9 +211,7 @@ const ATLAS_ENTRIES = {
       "gyges",
       "cave",
       "nachiketa",
-      "karma",
-      "sisyphus",
-      "faust"
+      "sisyphus"
     ],
     "reading": [
       [
@@ -275,7 +265,6 @@ const ATLAS_ENTRIES = {
       "Exam use: In the Essay paper, use it for topics on the meaning of life, perseverance, work and hope. In GS-IV, use it for attitude and resilience."
     ],
     "related": [
-      "ecclesiastes",
       "epicurus",
       "nachiketa",
       "experience",
@@ -291,128 +280,6 @@ const ATLAS_ENTRIES = {
         "“Albert Camus”, Stanford Encyclopedia of Philosophy",
         "Explains Camus’s idea of the absurd and The Myth of Sisyphus.",
         "https://plato.stanford.edu/entries/camus/"
-      ]
-    ]
-  },
-  "faust": {
-    "source": "The German legend of Doctor Faust, first printed in the Historia von D. Johann Fausten (1587); Christopher Marlowe’s play Doctor Faustus (written around 1590); Johann Wolfgang von Goethe’s Faust, Part One (1808) and Part Two (1832)",
-    "period": "1587 to 1832",
-    "tradition": "German legend and European literature",
-    "type": "A legend. A legend is a traditional story that may be based on a real person.",
-    "setup": [
-      "The legend is based on a real man, Johann Georg Faust, a German magician and alchemist of the early sixteenth century. After his death, stories spread that he had made a deal with the devil. In 1587, a popular book told his story.",
-      "In the story, Faust is a brilliant scholar who has studied everything, but he is still not satisfied. He wants unlimited knowledge, power and pleasure. So he calls up a devil named Mephistopheles and makes a pact. For twenty-four years, Mephistopheles will serve Faust and give him whatever he wants. After that, Faust’s soul will belong to the devil.",
-      "In Christopher Marlowe’s play, Faustus uses his power for tricks, travel and pleasure. When the twenty-four years end, he is terrified and begs for more time. Devils carry him off to hell.",
-      "Goethe changed the ending. His Faust makes a wager instead. If Faust ever feels so satisfied with a moment that he wants it to last forever and stops striving, Mephistopheles may take his soul. Faust’s search for experience leads him to seduce a young woman, Gretchen, and her life ends in tragedy. In Part Two, the old Faust takes land back from the sea in a huge project, and an old couple who stand in his way are killed. At last, blind and close to death, Faust imagines a free people living on the land he has made. He says that he would like that moment to stay, and he dies. But angels carry his soul to heaven, because he never stopped striving."
-    ],
-    "question": "What happens when a person wants unlimited knowledge, power and pleasure?",
-    "reveals": "Faust stands for the restless modern mind that is never satisfied. His ambition is not only evil. The same ambition drives learning, science and progress. But the deal with the devil shows the price of chasing everything without limits. Other people often pay that price, as Gretchen and the old couple do. Marlowe’s Faustus is punished for his pride. Goethe’s Faust is saved because he never stopped striving. Together, the two versions ask whether endless ambition is our greatest strength or our greatest danger.",
-    "readings": [
-      [
-        "Christian moral reading (Marlowe)",
-        "Faustus chooses worldly power over his soul. His damnation warns against pride, and against selling one’s deepest values for short-term gain."
-      ],
-      [
-        "Romantic reading (Goethe)",
-        "Constant striving is what makes human beings great. In the play, God says that a person makes mistakes for as long as he strives. Faust is saved not because he is good, but because he never settles for comfort."
-      ],
-      [
-        "Modern reading",
-        "A Faustian bargain now means any deal in which a person gives up something of lasting value, such as integrity or health, in exchange for power, money or knowledge."
-      ]
-    ],
-    "breaks": [
-      "Goethe’s ending can seem unfair. Faust is saved even though innocent people suffered and died because of him.",
-      "Ambition is not always a pact with evil. Most scientific and social progress comes from honest striving within ethical limits.",
-      "The story can make knowledge itself look dangerous. The real danger lies in how knowledge and power are used."
-    ],
-    "uses": [
-      "Integrity: An official who accepts favours from powerful interests in return for quick success is making a Faustian bargain.",
-      "Technology: Powerful technologies, from nuclear energy to artificial intelligence, bring great benefits and serious risks. Societies must decide what limits to set.",
-      "Development and displacement: Faust’s land project, which destroys an old couple’s home, is a picture of development that ignores the people it displaces.",
-      "Exam use: In GS-IV, use it for integrity, ambition, and ends and means. In the Essay paper, use it for topics on ambition, knowledge, technology and development."
-    ],
-    "related": [
-      "prometheus",
-      "icarus",
-      "midas",
-      "apprentice",
-      "er",
-      "experience"
-    ],
-    "reading": [
-      [
-        "Johann Wolfgang von Goethe, Faust, Part One, translated by Bayard Taylor",
-        "Free on Project Gutenberg.",
-        "https://www.gutenberg.org/ebooks/14591"
-      ],
-      [
-        "Christopher Marlowe, The Tragical History of Doctor Faustus",
-        "Free on Project Gutenberg.",
-        "https://www.gutenberg.org/ebooks/779"
-      ]
-    ]
-  },
-  "ecclesiastes": {
-    "source": "Ecclesiastes, a book of the Hebrew Bible, which Christians call the Old Testament",
-    "period": "Scholars usually date the book between about 450 and 180 BCE.",
-    "tradition": "Hebrew wisdom literature",
-    "type": "Wisdom literature. Wisdom literature is a collection of sayings and reflections about how to live.",
-    "setup": [
-      "The book presents the words of a teacher called Kohelet, a name often translated as “the Preacher”. He is described as a son of David and a king in Jerusalem. Tradition linked the book to King Solomon, but most scholars think that it was written much later.",
-      "Kohelet begins with a bitter observation. Everything is vanity, which means empty and passing, like a breath. Generations come and go, but the earth stays the same. The sun rises and sets. The rivers run into the sea, but the sea is never full. There is nothing new under the sun.",
-      "Kohelet says that he tried everything to find meaning. He built houses and gardens, gathered silver and gold, and enjoyed music and pleasure. But when he looked at all his work, he found it empty. The wise man and the fool both die, and both are forgotten.",
-      "Kohelet also observes that life is not fair. The race is not always won by the fastest, and the battle is not always won by the strongest. Bread does not always go to the wise, and riches do not always go to the clever. Time and chance happen to them all.",
-      "Yet the book is not only gloomy. Kohelet says that there is a right time for everything: a time to be born and a time to die, a time to weep and a time to laugh. He advises people to eat and drink, to enjoy their work, and to take pleasure in the simple gifts of life. The book ends by telling readers to respect God and keep his commandments."
-    ],
-    "question": "How should we live, when life is short, uncertain and often unfair?",
-    "reveals": "Ecclesiastes refuses easy answers. Wealth, wisdom and hard work cannot protect anyone from death or chance. Many things that people chase are empty. But the book does not end in despair. It recommends a humble kind of joy: accepting that we cannot control everything, enjoying ordinary good things, and doing our work well while we can. Knowing that life has seasons helps a person face both good and bad times calmly.",
-    "readings": [
-      [
-        "Religious reading",
-        "Human wisdom has limits, and only God understands the whole pattern of life. The right response is humility, reverence and obedience to God."
-      ],
-      [
-        "Philosophical reading",
-        "The book is close to later Greek philosophies such as Stoicism and Epicureanism. Accept what you cannot change, avoid endless chasing, and enjoy simple pleasures."
-      ],
-      [
-        "Existential reading",
-        "Kohelet faces the absurdity of life, much as Albert Camus did many centuries later. He sees no final reward for effort, yet he still chooses to live and to enjoy life."
-      ],
-      [
-        "Scholarly reading",
-        "Many scholars think that the final verses, which tell readers to fear God and keep his commandments, were added by a later writer to make the book fit religious teaching more closely."
-      ]
-    ],
-    "breaks": [
-      "The claim that there is nothing new under the sun ignores real progress, such as advances in medicine and in human rights.",
-      "Accepting that life is unfair can become an excuse for doing nothing about injustice.",
-      "The book’s mood changes often, and its different voices can seem to contradict each other."
-    ],
-    "uses": [
-      "Humility in success: Leaders and officials who succeed should remember the role of chance and circumstances, not only their own merit.",
-      "Resilience: The idea that life has seasons helps people cope with failure, loss and change.",
-      "Balanced living: The advice to enjoy work and simple pleasures, instead of endlessly chasing wealth, speaks to modern problems of stress and burnout.",
-      "Exam use: In the Essay paper, use it for topics on time, chance, success and contentment. In GS-IV, use it for attitude and emotional resilience."
-    ],
-    "related": [
-      "sisyphus",
-      "epicurus",
-      "nachiketa",
-      "hedonic",
-      "kisagotami"
-    ],
-    "reading": [
-      [
-        "The King James Version of the Bible",
-        "Ecclesiastes is a short book of twelve chapters. Free on Project Gutenberg.",
-        "https://www.gutenberg.org/ebooks/10"
-      ],
-      [
-        "“Ecclesiastes”, Wikipedia",
-        "Free overview of the book, its date and its structure.",
-        "https://en.wikipedia.org/wiki/Ecclesiastes"
       ]
     ]
   },
@@ -458,7 +325,6 @@ const ATLAS_ENTRIES = {
     "related": [
       "nachiketa",
       "sisyphus",
-      "ecclesiastes",
       "kisagotami",
       "experience"
     ],
@@ -941,7 +807,6 @@ const ATLAS_ENTRIES = {
       "dream",
       "cave",
       "blindmen",
-      "syadvada",
       "montyhall"
     ],
     "reading": [
@@ -1122,7 +987,6 @@ const ATLAS_ENTRIES = {
       "Exam use: In GS-IV, use it for integrity, probity and conscience, and when writing about Plato. In the Essay paper, use it for topics on character and integrity."
     ],
     "related": [
-      "statenature",
       "pd",
       "panopticon",
       "cave",
@@ -1194,8 +1058,7 @@ const ATLAS_ENTRIES = {
       "gyges",
       "heinz",
       "omelas",
-      "experience",
-      "arjuna"
+      "experience"
     ],
     "reading": [
       [
@@ -1320,7 +1183,6 @@ const ATLAS_ENTRIES = {
     "related": [
       "trolley",
       "omelas",
-      "statenature",
       "gyges",
       "generalwill",
       "commons"
@@ -1380,8 +1242,6 @@ const ATLAS_ENTRIES = {
     "related": [
       "trolley",
       "veil",
-      "dharma",
-      "arjuna",
       "samaritan",
       "gyges"
     ],
@@ -1625,8 +1485,7 @@ const ATLAS_ENTRIES = {
       "kisagotami",
       "heinz",
       "omelas",
-      "angulimala",
-      "karma"
+      "angulimala"
     ],
     "reading": [
       [
@@ -1638,74 +1497,6 @@ const ATLAS_ENTRIES = {
         "John M. Darley and C. Daniel Batson, “From Jerusalem to Jericho”, Journal of Personality and Social Psychology (1973)",
         "The study of seminary students in a hurry.",
         "https://doi.org/10.1037/h0034449"
-      ]
-    ]
-  },
-  "statenature": {
-    "source": "Thomas Hobbes, Leviathan (1651), chapter 13; John Locke, Second Treatise of Government (1689), chapter 2; Jean-Jacques Rousseau, Discourse on the Origin of Inequality (1755)",
-    "period": "England and France, 1651 to 1755",
-    "tradition": "Modern Western political philosophy",
-    "type": "A model. A model is a simple picture of how something works.",
-    "setup": [
-      "Imagine a world with no government, no police, no courts and no laws made by any ruler. Philosophers call this imagined condition the state of nature. They use it to ask why people need government at all, and what makes a government legitimate.",
-      "Thomas Hobbes, writing after the English Civil War, painted a dark picture. Without a common power to keep everyone in awe, people live in constant fear. Each person may attack others to protect himself or to take what he wants. The result is a war of every man against every man. There is no farming, no trade, no art and no society. Life is solitary, poor, nasty, brutish and short. So people agree to give up much of their freedom to a strong ruler who can keep the peace.",
-      "John Locke saw the state of nature differently. In his account, people are free and equal, but they are not free to do anything they like. A law of nature, known through reason, forbids harming anyone’s life, liberty or property. The problem is that there is no neutral judge to settle disputes. So people form a government to protect their rights, and they may resist a government that violates those rights.",
-      "Jean-Jacques Rousseau imagined early humans as peaceful and self-sufficient. For him, conflict and inequality came later, with private property and society. He argued that inequality began when someone first fenced off a piece of land, claimed it as his own, and found other people simple enough to believe him."
-    ],
-    "question": "What would life be like without government, and why should anyone obey the state?",
-    "reveals": "The state of nature tests government by imagining its absence. If life without government would be terrible, as Hobbes thought, then almost any government is better than none. If people already have natural rights, as Locke thought, then government exists to protect those rights and loses its legitimacy when it abuses them. If society itself corrupts people, as Rousseau thought, then the task is to design institutions that restore freedom and equality. Each picture of human nature leads to a different kind of state.",
-    "readings": [
-      [
-        "Hobbes: security first",
-        "Fear of violent death drives people to accept an all-powerful ruler. Peace requires a power strong enough to keep everyone in awe."
-      ],
-      [
-        "Locke: rights first",
-        "Government is a trust. Government rests on the consent of the governed and must protect life, liberty and property. Locke’s ideas shaped the American Declaration of Independence and modern constitutional democracy."
-      ],
-      [
-        "Rousseau: society as the problem",
-        "Human beings are not naturally wicked. Inequality and conflict grow with property and social comparison. Rousseau’s later book, The Social Contract, tried to design a free political community."
-      ],
-      [
-        "Relations between countries",
-        "Hobbes noted that independent states have no common power above them. Many scholars of international relations describe the world of states as a kind of state of nature."
-      ]
-    ],
-    "breaks": [
-      "The state of nature never existed as a period of history. Humans have always lived in groups with customs and rules.",
-      "Each philosopher builds his own assumptions about human nature into the picture, and then draws conclusions from those assumptions.",
-      "The models focus on individuals and ignore families, communities and the long history of human cooperation."
-    ],
-    "uses": [
-      "Collapse of order: When governments collapse, as in civil wars, violence and insecurity follow. The suffering in such places shows why basic order matters.",
-      "Constitutional rights: Article 21 of the Constitution of India protects life and personal liberty. Locke’s idea that government exists to protect rights stands behind such guarantees.",
-      "Disasters: When normal systems break down after a disaster, people often help each other, which challenges Hobbes’s dark picture.",
-      "Exam use: In GS-IV, use it for the basis of state authority, rights and duties, and Western political thinkers. In the Essay paper, use it for topics on freedom, order and the role of the state."
-    ],
-    "related": [
-      "generalwill",
-      "gyges",
-      "pd",
-      "staghunt",
-      "commons",
-      "noblelie"
-    ],
-    "reading": [
-      [
-        "Thomas Hobbes, Leviathan",
-        "The state of nature is described in chapter 13. Free on Project Gutenberg.",
-        "https://www.gutenberg.org/ebooks/3207"
-      ],
-      [
-        "John Locke, Second Treatise of Government",
-        "Chapter 2 describes Locke’s state of nature. Free on Project Gutenberg.",
-        "https://www.gutenberg.org/ebooks/7370"
-      ],
-      [
-        "“Hobbes’s Moral and Political Philosophy”, Stanford Encyclopedia of Philosophy",
-        "",
-        "https://plato.stanford.edu/entries/hobbes-moral/"
       ]
     ]
   },
@@ -1752,8 +1543,7 @@ const ATLAS_ENTRIES = {
       "cave",
       "burninghouse",
       "gyges",
-      "panopticon",
-      "statenature"
+      "panopticon"
     ],
     "reading": [
       [
@@ -1872,7 +1662,6 @@ const ATLAS_ENTRIES = {
       "Exam use: In GS-IV, use it for public interest, legitimacy and Western political thinkers. In the Essay paper, use it for topics on democracy, freedom and the common good."
     ],
     "related": [
-      "statenature",
       "staghunt",
       "noblelie",
       "commons",
@@ -1935,7 +1724,6 @@ const ATLAS_ENTRIES = {
       "pd",
       "chicken",
       "mad",
-      "statenature",
       "staghunt",
       "dictator"
     ],
@@ -2114,8 +1902,7 @@ const ATLAS_ENTRIES = {
       "collectiveaction",
       "pd",
       "staghunt",
-      "invisiblehand",
-      "statenature"
+      "invisiblehand"
     ],
     "reading": [
       [
@@ -2237,8 +2024,7 @@ const ATLAS_ENTRIES = {
       "gyges",
       "dictator",
       "mad",
-      "gadfly",
-      "ecclesiastes"
+      "gadfly"
     ],
     "reading": [
       [
@@ -2981,7 +2767,6 @@ const ATLAS_ENTRIES = {
       "butterfly",
       "maxwell",
       "schrodinger",
-      "karma",
       "montyhall",
       "boltzmann"
     ],
@@ -3529,7 +3314,6 @@ const ATLAS_ENTRIES = {
       "asch",
       "stanfordprison",
       "bystander",
-      "arjuna",
       "beforelaw"
     ],
     "reading": [
@@ -3834,7 +3618,6 @@ const ATLAS_ENTRIES = {
       "Exam use: In GS-IV, use it for happiness, contentment, values and the limits of material success. In the Essay paper, use it for topics on happiness, consumerism and development."
     ],
     "related": [
-      "ecclesiastes",
       "epicurus",
       "experience",
       "threepoisons",
@@ -3896,7 +3679,6 @@ const ATLAS_ENTRIES = {
       "cobra",
       "marshmallow",
       "hedonic",
-      "karma",
       "laplace",
       "panopticon"
     ],
@@ -4142,8 +3924,7 @@ const ATLAS_ENTRIES = {
       "securitydilemma",
       "pd",
       "tacitus",
-      "fermi",
-      "arjuna"
+      "fermi"
     ],
     "reading": [
       [
@@ -4202,8 +3983,7 @@ const ATLAS_ENTRIES = {
       "chicken",
       "securitydilemma",
       "butterfly",
-      "beauty",
-      "arjuna"
+      "beauty"
     ],
     "reading": [
       [
@@ -4262,7 +4042,6 @@ const ATLAS_ENTRIES = {
       "commons",
       "freerider",
       "securitydilemma",
-      "statenature",
       "gyges",
       "chicken"
     ],
@@ -4321,7 +4100,6 @@ const ATLAS_ENTRIES = {
     "related": [
       "pd",
       "commons",
-      "statenature",
       "generalwill",
       "focal",
       "collectiveaction"
@@ -4591,70 +4369,6 @@ const ATLAS_ENTRIES = {
       ]
     ]
   },
-  "arjuna": {
-    "source": "Bhagavad Gita, chapters 1 and 2. Krishna’s full answer continues until chapter 18. The Gita is part of the Bhishma Parva of the Mahabharata.",
-    "period": "Scholars usually date it between the last centuries BCE and the first centuries CE.",
-    "tradition": "Indian philosophy (Vedanta, Yoga and Bhakti)",
-    "type": "A philosophical dialogue",
-    "setup": [
-      "Two armies from the same family, the Pandavas and the Kauravas, stood ready for war at Kurukshetra. Arjuna was the greatest archer of the Pandavas. He asked his charioteer, Krishna, to drive the chariot between the two armies. He wanted to see the people he had to fight.",
-      "In the enemy army, Arjuna saw his grandfather, his teachers, his uncles, his cousins and his friends. His body started to shake. His mouth went dry. His bow, Gandiva, slipped from his hand.",
-      "Arjuna told Krishna that no victory was worth killing his own family and teachers, such as Bhishma and Drona. He said that such killing would destroy families and their traditions, and that society would fall into disorder. He said that he would rather be killed without fighting back. He put down his bow and said, “I will not fight.” Then he became silent.",
-      "Krishna answered him over the next sixteen chapters. He told Arjuna that the true self is never born and never dies. It is not killed when the body is killed. He said that Arjuna was a warrior, and that his own duty, or svadharma, was to fight a righteous war. If he ran away, he would lose his honour. Most importantly, Krishna told him to act without being attached to the results. He said that a person has a right to his actions, but never to their results (2.47). A person should stay calm in both success and failure. At the end of the Gita, Arjuna’s confusion was gone, and he picked up his bow again."
-    ],
-    "question": "Should you do your duty when doing it seems to cause great harm?",
-    "reveals": "Arjuna faces a conflict between two real duties. One is his love and loyalty towards his family. The other is his duty as a warrior in a just war. Krishna does not deny Arjuna’s pain. Instead, he asks Arjuna to see the situation in a different way. The most lasting idea of the Gita is nishkama karma. It means doing one’s work fully and well, without being attached to the results. When a person is not attached to results, fear, greed and grief cannot spoil his decisions.",
-    "readings": [
-      [
-        "Bal Gangadhar Tilak",
-        "In his book Gita Rahasya (1915), Tilak said that the Gita is a call to action. It asks people to work selflessly in the world, and not to run away from it."
-      ],
-      [
-        "Mahatma Gandhi",
-        "Gandhi said that the battlefield stands for the struggle inside every human heart. For him, the main teaching was anasakti, which means non-attachment. Gandhi believed that this teaching leads towards non-violence, not towards war."
-      ],
-      [
-        "B. R. Ambedkar",
-        "Ambedkar criticised the Gita. He argued that it defends the caste system, because it says that every person has a fixed duty based on birth."
-      ],
-      [
-        "Amartya Sen",
-        "In his book The Idea of Justice (2009), Sen argued that Arjuna’s worry about the results of the war deserves more respect. A just decision must consider what actually happens to people."
-      ]
-    ],
-    "breaks": [
-      "The idea of duty based on one’s role can be misused to excuse harm. People who follow harmful orders often say, “My position required it.”",
-      "The argument that the true self cannot be killed does not convince people who do not share this belief. It may also seem to make any killing unimportant.",
-      "Detachment from results can turn into not caring about results. Public decisions cannot ignore their results.",
-      "A duty fixed by birth does not fit with the modern idea that all people are equal before the law."
-    ],
-    "uses": [
-      "Civil servants: An officer may have to carry out a lawful policy that he personally dislikes. He must also know when his conscience should come before his role.",
-      "Conflict of interest: When family or friends are involved in a decision, the right step today is to stay out of that decision.",
-      "Public service: Nishkama karma is a good ideal for public servants. It means doing good work without looking for credit or reward.",
-      "Exam use: In GS-IV, use it for duty versus conscience, ethical dilemmas, Indian moral thinkers and emotional intelligence under pressure. In the Essay paper, use it for topics on duty, action and detachment."
-    ],
-    "related": [
-      "dharma",
-      "gunas",
-      "trolley",
-      "milgram",
-      "nachiketa",
-      "karma"
-    ],
-    "reading": [
-      [
-        "The Song Celestial (Bhagavad Gita), translated by Edwin Arnold (1885)",
-        "A translation in verse. Free on Project Gutenberg.",
-        "https://www.gutenberg.org/ebooks/2388"
-      ],
-      [
-        "“Bhagavad Gita”, Internet Encyclopedia of Philosophy",
-        "Free overview of the text and the different ways it has been read.",
-        "https://iep.utm.edu/bhagavad-gita/"
-      ]
-    ]
-  },
   "raft": {
     "source": "Alagaddupama Sutta (The Simile of the Snake), Majjhima Nikaya 22, in the Pali Canon",
     "period": "An early Buddhist teaching. The Pali Canon was written down in Sri Lanka in the first century BCE.",
@@ -4760,7 +4474,6 @@ const ATLAS_ENTRIES = {
     ],
     "related": [
       "blindmen",
-      "syadvada",
       "butterflydream",
       "raft",
       "cave",
@@ -4820,7 +4533,6 @@ const ATLAS_ENTRIES = {
     ],
     "related": [
       "butterflydream",
-      "ecclesiastes",
       "epicurus",
       "commons",
       "hedonic",
@@ -4999,7 +4711,6 @@ const ATLAS_ENTRIES = {
     ],
     "related": [
       "anekanta",
-      "syadvada",
       "cave",
       "butterflydream",
       "arrow",
@@ -5063,7 +4774,6 @@ const ATLAS_ENTRIES = {
     ],
     "related": [
       "nachiketa",
-      "arjuna",
       "gunas",
       "threepoisons",
       "aggregates",
@@ -5130,8 +4840,7 @@ const ATLAS_ENTRIES = {
       "chariot",
       "atman",
       "maya",
-      "netineti",
-      "arjuna"
+      "netineti"
     ],
     "reading": [
       [
@@ -5205,65 +4914,6 @@ const ATLAS_ENTRIES = {
       ]
     ]
   },
-  "syadvada": {
-    "source": "Jain philosophy. The Jain thinker Samantabhadra, in his Aptamimamsa (verse 105), describes syadvada as a light that shows reality, alongside the knowledge of the enlightened. Later Jain logicians developed the method in detail.",
-    "period": "Developed by Jain thinkers during the first millennium CE",
-    "tradition": "Indian (Jain)",
-    "type": "A method of reasoning. Syadvada means the method of saying “in some respect”.",
-    "setup": [
-      "Jain philosophy teaches that reality has many sides. This teaching is called anekantavada. Syadvada is the method that Jains use to speak about a many-sided reality without making mistakes.",
-      "The method adds the word syat to a statement. Syat means “in some respect” or “from one point of view”. Adding syat shows that the statement is true, but only from a certain point of view.",
-      "Jains explain the method with the example of a pot. A clay pot exists as a pot, made of clay, in this place and at this time. But the same pot does not exist as a piece of cloth, or as something made of gold, or in another place. So Jains say that in some respect the pot exists, and in some respect the pot does not exist.",
-      "From these two basic statements, Jain thinkers build seven forms of statement, called the saptabhangi. In some respect, the pot exists. In some respect, the pot does not exist. In some respect, the pot both exists and does not exist. In some respect, the pot cannot be described, because both answers cannot be spoken at the same moment. The last three forms combine “cannot be described” with the first three.",
-      "Jains believe that only a fully enlightened being sees all these aspects at once. Ordinary people should speak with this care, so that they do not mistake one side of the truth for the whole truth."
-    ],
-    "question": "How can we speak truthfully about something that has many sides?",
-    "reveals": "Syadvada turns intellectual humility into a clear method. Every statement is tied to a point of view. When the point of view is stated, two statements that seem to contradict each other can both be true. So two people who seem to disagree may both be right, each from their own side. The method also teaches honesty about the limits of language. Some things cannot be fully captured in a single sentence.",
-    "readings": [
-      [
-        "Jain reading",
-        "Syadvada is not doubt. It is an exact way of stating truths that depend on a point of view. Samantabhadra placed syadvada beside the knowledge of the enlightened as a light that shows reality."
-      ],
-      [
-        "Logical reading",
-        "Modern logicians have compared syadvada with systems of logic that allow more than two truth values. The scientist J. B. S. Haldane wrote a paper on syadvada in the 1950s, and the logician Graham Priest discussed it in 2008."
-      ],
-      [
-        "Criticism by other schools",
-        "Critics, including Shankaracharya, argued that saying a thing both exists and does not exist is simply a contradiction. Jains reply that there is no contradiction, because each statement is made from a different point of view."
-      ]
-    ],
-    "breaks": [
-      "Adding “in some respect” to every sentence can make speech vague. In practice, people often need a clear answer.",
-      "Some questions have one correct answer from every reasonable point of view. The method can be misused to avoid admitting a mistake.",
-      "The seven forms are useful for careful thinking, but they are hard to apply to complicated real-world problems."
-    ],
-    "uses": [
-      "Balanced answers: A good answer about a government scheme often says that the scheme succeeded in some respects and failed in others, and then explains each respect.",
-      "Science and statistics: Scientific findings are true under certain conditions and within certain limits. Stating those conditions is a form of syadvada.",
-      "Public debate: Headlines that show only one side of a complex issue mislead readers. Stating the point of view reduces conflict.",
-      "Exam use: In GS-IV, use it for objectivity, tolerance and Jain thought. In the Essay paper, use it to build balanced arguments on complex topics."
-    ],
-    "related": [
-      "anekanta",
-      "blindmen",
-      "butterflydream",
-      "raft",
-      "gargi"
-    ],
-    "reading": [
-      [
-        "“Jain Philosophy”, Internet Encyclopedia of Philosophy",
-        "Explains the seven forms of statement.",
-        "https://iep.utm.edu/jain/"
-      ],
-      [
-        "Graham Priest, “Jaina Logic: A Contemporary Perspective”, History and Philosophy of Logic (2008)",
-        "",
-        "https://doi.org/10.1080/01445340701690233"
-      ]
-    ]
-  },
   "angulimala": {
     "source": "Angulimala Sutta, Majjhima Nikaya 86, in the Pali Canon. The story of his early life was added later, in the commentaries.",
     "period": "An early Buddhist text. The Pali Canon was written down in Sri Lanka in the first century BCE.",
@@ -5311,7 +4961,6 @@ const ATLAS_ENTRIES = {
     "related": [
       "kisagotami",
       "arrow",
-      "karma",
       "threepoisons",
       "milgram",
       "gyges"
@@ -5497,11 +5146,8 @@ const ATLAS_ENTRIES = {
       "Exam use: In GS-IV, use it for attitude, motivation, public service values and Indian moral thinkers. In the Essay paper, use it for topics on character, work and the quality of action."
     ],
     "related": [
-      "dharma",
-      "arjuna",
       "chariot",
       "threepoisons",
-      "karma",
       "atman"
     ],
     "reading": [
@@ -5514,134 +5160,6 @@ const ATLAS_ENTRIES = {
         "“Sankhya”, Internet Encyclopedia of Philosophy",
         "",
         "https://iep.utm.edu/sankhya/"
-      ]
-    ]
-  },
-  "karma": {
-    "source": "Brihadaranyaka Upanishad 3.2.13 and 4.4.5. The Buddha’s teaching on intention is in Anguttara Nikaya 6.63. Jain philosophy gives its own account of karma.",
-    "period": "From the early Upanishads, around the seventh or sixth century BCE, and developed in Buddhist and Jain thought",
-    "tradition": "Indian (Hindu, Buddhist and Jain)",
-    "type": "A concept. The word karma means action.",
-    "setup": [
-      "At King Janaka’s court, the scholar Artabhaga questioned Yajnavalkya. Artabhaga asked what happens to a person after death, when his speech goes into fire, his breath into the wind and his eye into the sun. What is left of that person then?",
-      "Yajnavalkya did not answer in front of the gathering. He said, “Artabhaga, take my hand. This question is only for the two of us, not for a public debate.” The two men went aside and talked privately. The Upanishad says that what they talked about was karma, and what they praised was karma. A person becomes good by good action and bad by bad action.",
-      "Later in the same Upanishad, the teaching is stated clearly. As a person acts and behaves, so he becomes. The one who does good becomes good. The one who does evil becomes evil. A person’s desires shape his decisions, his decisions shape his actions, and his actions shape what he becomes.",
-      "The Buddha gave the idea a new focus. He said, “It is intention that I call karma.” For the Buddha, what matters most is the intention behind an action, whether the action is done through body, speech or mind.",
-      "Jain thinkers explained karma in yet another way. For them, karma is a very fine kind of matter. This matter sticks to the soul whenever a person acts with passion, and it weighs the soul down. The soul becomes free when all the karmic matter is removed."
-    ],
-    "question": "Do our actions shape who we become and what happens to us?",
-    "reveals": "The idea of karma says that actions have consequences, not only in the world but also in the person who acts. Every choice leaves a mark on character. Good actions build a good person, and harmful actions build a harmful one. In its religious form, the idea extends across lifetimes and explains rebirth. In its everyday form, the idea reminds us that we are responsible for what we do, and that habits formed today shape our future.",
-    "readings": [
-      [
-        "Upanishadic reading",
-        "Karma links action, desire and rebirth. A person keeps being reborn according to his actions until he knows the Self and becomes free from desire."
-      ],
-      [
-        "Buddhist reading",
-        "Karma is about intention. The same outward act can have a different moral weight, depending on the mind behind it. Karma is not fixed fate, because present actions can change what past actions lead to."
-      ],
-      [
-        "Gita reading",
-        "The Bhagavad Gita teaches nishkama karma, which means acting without attachment to results. Action done in this spirit does not bind a person."
-      ],
-      [
-        "Social criticism",
-        "Social reformers, including B. R. Ambedkar, criticised the use of karma to justify caste inequality and poverty, as if people deserved their suffering because of actions in past lives."
-      ]
-    ],
-    "breaks": [
-      "The link between actions in a past life and suffering in this life cannot be tested. It is a matter of faith, not evidence.",
-      "Karma can be misused to blame victims. A child born into poverty or with a disability has done nothing to deserve it.",
-      "Karma can lead to fatalism, the belief that nothing can be changed. Fatalism discourages action against injustice."
-    ],
-    "uses": [
-      "Personal responsibility: Public servants are accountable for the results of their decisions. They cannot blame fate or the system for their own choices.",
-      "Character and habits: Small acts of honesty or dishonesty, repeated over time, become character. Such habit-building is the everyday meaning of karma.",
-      "Social justice: Policy must reject any idea that the poor or disadvantaged deserve their condition. Welfare and rights are based on human dignity, not on past deeds.",
-      "Exam use: In GS-IV, use it for accountability, intention and consequences, and for Indian moral thinkers. In the Essay paper, use it for topics on action, responsibility and fate."
-    ],
-    "related": [
-      "dharma",
-      "arjuna",
-      "gunas",
-      "angulimala",
-      "threepoisons",
-      "nachiketa"
-    ],
-    "reading": [
-      [
-        "The Thirteen Principal Upanishads, translated by Robert Ernest Hume (1921)",
-        "Artabhaga’s question is Brihadaranyaka 3.2.13, and “as one acts, so one becomes” is 4.4.5. Free on the Internet Archive.",
-        "https://archive.org/details/thirteenprincipa00hume"
-      ],
-      [
-        "Anguttara Nikaya 6.63, translated by Bhikkhu Sujato, SuttaCentral",
-        "The Buddha on intention and karma. Free.",
-        "https://suttacentral.net/an6.63"
-      ]
-    ]
-  },
-  "dharma": {
-    "source": "Mahabharata, Vana Parva (the questions of the Yaksha), and Bhagavad Gita 3.35 and 18.47",
-    "period": "The Mahabharata took shape over many centuries, roughly between 400 BCE and 400 CE.",
-    "tradition": "Indian philosophy (the epics and the Bhagavad Gita)",
-    "type": "A framework. Dharma means what holds life together: duty, law, justice and right conduct.",
-    "setup": [
-      "Dharma is one of the most important ideas in Indian thought. It has many meanings, including duty, law, justice and the right way to live. Svadharma means one’s own dharma, the duties that belong to a person’s own role and nature.",
-      "The Mahabharata tells a famous story about dharma. During their exile, the five Pandava brothers became very thirsty in a forest. One by one, Nakula, Sahadeva, Arjuna and Bhima went to a lake to fetch water. At the lake, a voice from a crane told each of them to answer its questions before drinking. Each brother ignored the voice, drank the water and fell dead.",
-      "Then Yudhishthira reached the lake. He agreed to answer the questions. The voice belonged to a Yaksha, who asked him many questions. One question was, “What is the path?” Yudhishthira answered that reasoning is uncertain, scriptures differ, and no sage’s opinion is final. The truth about dharma is hidden deep, as if in a cave. So the path is the one that great people have followed.",
-      "The Yaksha was pleased and said that one brother could be brought back to life. Yudhishthira chose Nakula, not the mighty Bhima or Arjuna. He explained that his father had two wives. Kunti’s son, Yudhishthira himself, was alive, so a son of Madri should also live. The Yaksha then revealed that he was Dharma himself, and he brought all four brothers back to life.",
-      "The Bhagavad Gita adds the idea of svadharma. Krishna tells Arjuna that it is better to do one’s own duty imperfectly than to do another person’s duty well."
-    ],
-    "question": "How do we know what is right, when reason, scripture and experts disagree?",
-    "reveals": "The Yaksha’s story shows two sides of dharma. First, dharma is hard to know. Rules and arguments do not settle every case, so people must also learn from the example of good people. Second, dharma means fairness beyond self-interest. Yudhishthira could have saved his strongest brother. Instead, he chose to be fair to his stepmother. The Gita’s idea of svadharma adds that each person must do the duties of his own role honestly, instead of copying someone else’s role.",
-    "readings": [
-      [
-        "Dharma as the duty of a role",
-        "Each role in society, such as ruler, teacher, parent or soldier, has its own duties. The Mahabharata’s long teaching on rajadharma, the duty of kings, describes how rulers must protect their people and act justly."
-      ],
-      [
-        "Dharma as subtle",
-        "The epics often say that dharma is subtle. The right action depends on the situation, and good people can disagree about it. For this reason, the Mahabharata is full of hard cases rather than simple rules."
-      ],
-      [
-        "Svadharma and caste",
-        "The Gita links svadharma to the duties of the four varnas. Critics argue that this link made duty depend on birth, and that it was used to keep people in fixed social roles."
-      ],
-      [
-        "Modern reading",
-        "Many modern thinkers read svadharma as the duty that comes from a person’s own abilities, commitments and chosen profession, not from birth."
-      ]
-    ],
-    "breaks": [
-      "Following the example of great people is useful, but great people also make mistakes. The Mahabharata itself shows its heroes doing wrong.",
-      "Svadharma can become an excuse to ignore wider duties, such as speaking up against injustice outside one’s own role.",
-      "Duties based on birth conflict with the modern values of equality and free choice of profession."
-    ],
-    "uses": [
-      "Professional ethics: Doctors, judges and civil servants each have duties that come from their role. Codes of conduct turn these duties into clear rules.",
-      "Fairness in decisions: Yudhishthira’s choice of Nakula is a model of impartial fairness that places justice above personal advantage.",
-      "Hard cases: Officials often face situations where the rules give no clear answer. They must then rely on good judgement and on the example of honest officers.",
-      "Exam use: In GS-IV, use it for duty, impartiality, role conflict and Indian moral thinkers. In the Essay paper, use it for topics on duty, justice and right conduct."
-    ],
-    "related": [
-      "arjuna",
-      "gunas",
-      "karma",
-      "trolley",
-      "veil",
-      "gadfly"
-    ],
-    "reading": [
-      [
-        "“Yaksha Prashna”, Wikipedia",
-        "Free summary of the Yaksha’s questions and Yudhishthira’s answers.",
-        "https://en.wikipedia.org/wiki/Yaksha_Prashna"
-      ],
-      [
-        "The Song Celestial (Bhagavad Gita), translated by Edwin Arnold (1885)",
-        "Svadharma is in chapters 3 and 18. Free on Project Gutenberg.",
-        "https://www.gutenberg.org/ebooks/2388"
       ]
     ]
   },
@@ -5866,7 +5384,6 @@ const ATLAS_ENTRIES = {
       "Exam use: In GS-IV, use it for the ethics of science and technology, moral courage and civil disobedience. In the Essay paper, use it for topics on technology, progress and rebellion."
     ],
     "related": [
-      "faust",
       "apprentice",
       "icarus",
       "gadfly",
@@ -5934,9 +5451,7 @@ const ATLAS_ENTRIES = {
       "prometheus",
       "midas",
       "apprentice",
-      "dunningkruger",
-      "faust",
-      "ecclesiastes"
+      "dunningkruger"
     ],
     "reading": [
       [
@@ -5994,7 +5509,6 @@ const ATLAS_ENTRIES = {
     "related": [
       "aesop",
       "icarus",
-      "faust",
       "goodhart",
       "hedonic",
       "nachiketa"
@@ -6054,7 +5568,6 @@ const ATLAS_ENTRIES = {
     "related": [
       "prometheus",
       "cobra",
-      "faust",
       "icarus",
       "midas",
       "butterfly"
