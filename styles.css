@@ -1395,6 +1395,89 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   .sm-read{padding-left:0}
 }
 
+/* ================= HUMAN THOUGHT ATLAS =================
+   The syllabus map's two panes, with a search box and five ways to arrange the
+   contents above the list, and one entry at a time in the reading face. */
+.atlas .sec-head p{max-width:780px}
+.atl .sm-list{gap:16px}
+.atl .sm-head{gap:10px}
+.atl-search{
+  width:100%;padding:8px 11px;border:1px solid var(--line);border-radius:8px;
+  background:var(--panel);color:var(--ink);font:13.5px/1.3 var(--sans)}
+.atl-search::placeholder{color:var(--ink-3)}
+.atl-search:focus{outline:2px solid var(--accent);outline-offset:-1px}
+.atl-modes{display:flex;flex-wrap:wrap;gap:5px}
+.atl-mode{
+  font:600 11.5px/1 var(--sans);padding:6px 10px;border-radius:20px;cursor:pointer;
+  border:1px solid var(--line);background:var(--panel);color:var(--ink-2)}
+.atl-mode:hover{border-color:var(--accent);color:var(--accent)}
+.atl-mode.on{background:var(--accent);border-color:var(--accent);color:var(--panel)}
+.atl-mode:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.atl-groups{display:flex;flex-direction:column;gap:20px}
+.atl-none{font-size:13px;line-height:1.55;color:var(--ink-3)}
+
+.atl-eyebrow{
+  font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.9px;
+  text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+.sm-pane.atl-entry h5{
+  font-family:var(--read);font-size:28px;font-weight:500;line-height:1.22;
+  letter-spacing:-.3px;color:var(--ink);margin:0 0 18px}
+.atl-meta{
+  display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 18px;
+  padding:14px 0;margin:0 0 14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.atl-meta dt{
+  padding-top:3px;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.8px;
+  text-transform:uppercase;color:var(--ink-3);white-space:nowrap}
+.atl-meta dd{font-family:var(--read);font-size:14.5px;line-height:1.55;color:var(--read-ink)}
+.atl-tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 28px}
+.atl-tags span{
+  font-family:var(--sans);font-size:11.5px;font-weight:600;padding:4px 10px;
+  border-radius:20px;background:var(--line-2);color:var(--ink-2)}
+.atl-f{margin:0 0 30px}
+.atl-f h6{
+  font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.9px;
+  text-transform:uppercase;color:var(--ink-3);margin:0 0 11px}
+.atl-f p,.atl-list li,.atl-readings dd{
+  font-family:var(--read);font-size:17px;font-weight:400;line-height:1.78;
+  color:var(--read-ink);text-align:left}
+.atl-f p{margin:0 0 1.05em}
+.atl-f p:last-child{margin-bottom:0}
+.atl-f .atl-q{font-size:21px;font-weight:500;line-height:1.45;color:var(--ink)}
+.atl-readings div{padding:13px 0;border-top:1px solid var(--line-2)}
+.atl-readings div:first-child{padding-top:0;border-top:0}
+.atl-readings dt{
+  font-family:var(--read);font-size:15.5px;font-weight:600;line-height:1.4;
+  color:var(--ink);margin-bottom:3px}
+.atl-list{list-style:none;display:grid;gap:10px}
+.atl-list li{position:relative;padding-left:20px}
+.atl-list li::before{
+  content:"";position:absolute;left:3px;top:.8em;width:6px;height:6px;
+  background:var(--accent);opacity:.75;transform:rotate(45deg)}
+.atl-list li b{font-weight:600;color:var(--ink)}
+.atl-list li.atl-exam{
+  margin-top:6px;padding:12px 16px;border-radius:8px;background:var(--accent-soft);
+  font-size:15.5px;line-height:1.66}
+.atl-list li.atl-exam::before{display:none}
+.atl-list li.atl-exam b{
+  display:block;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.8px;
+  text-transform:uppercase;color:var(--accent)}
+.atl-refs{list-style:none;display:grid;gap:12px}
+.atl-refs li{font-family:var(--read);font-size:15px;line-height:1.55;color:var(--read-ink)}
+.atl-refs a{
+  color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;
+  text-underline-offset:3px}
+.atl-refs span{display:block;font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--ink-3)}
+@media (max-width:700px){
+  .sm-pane.atl-entry h5{font-size:23px}
+  .atl-f p,.atl-list li,.atl-readings dd{font-size:16px;line-height:1.72}
+  .atl-f .atl-q{font-size:18.5px}
+  .atl-meta{grid-template-columns:minmax(0,1fr);gap:2px}
+  .atl-meta dd{margin-bottom:8px}
+}
+@media print{
+  .atl .sm-list{display:none}
+}
+
 /* ================= ESSAY THEME MAP: TILES ================= */
 .ans-head{margin:16px 0 12px}
 .ans-head > b{
