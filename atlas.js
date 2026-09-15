@@ -15,8 +15,6 @@ const ATLAS = [
   {"id": "nachiketa", "t": "Nachiketa and Yama", "src": "Katha Upanishad", "form": "Dialogue", "fg": "dialogue", "tr": "indian", "q": "Mortality; desire; knowledge vs pleasure", "sec": "existence", "th": ["death", "knowledge", "freedom"]},
   {"id": "er", "t": "Myth of Er", "src": "Plato, Republic", "form": "Myth", "fg": "myth", "tr": "greek", "q": "Justice; soul; consequences of choice", "sec": "existence", "th": ["justice", "death", "freedom"]},
   {"id": "sisyphus", "t": "Myth of Sisyphus", "src": "Greek myth / Camus", "form": "Myth + philosophical essay", "fg": "myth", "tr": "western", "q": "Absurdity; meaning; repetition", "sec": "existence", "th": ["death", "freedom"]},
-  {"id": "ilyich", "t": "The Death of Ivan Ilyich", "src": "Tolstoy", "form": "Literary narrative", "fg": "literary", "tr": "western", "q": "Authenticity; mortality; social conformity", "sec": "existence", "th": ["death", "identity"]},
-  {"id": "inquisitor", "t": "The Grand Inquisitor", "src": "Dostoevsky, The Brothers Karamazov", "form": "Parable within novel", "fg": "literary", "tr": "western", "q": "Freedom; security; authority", "sec": "existence", "th": ["freedom", "power"]},
   {"id": "faust", "t": "Faust", "src": "Goethe / Faust tradition", "form": "Legend", "fg": "myth", "tr": "western", "q": "Ambition; knowledge; desire; limits", "sec": "existence", "th": ["knowledge", "freedom", "unintended"]},
   {"id": "ecclesiastes", "t": "Ecclesiastes", "src": "Hebrew Bible", "form": "Wisdom literature", "fg": "literary", "tr": "scripture", "q": "Futility; time; mortality", "sec": "existence", "th": ["death"]},
   {"id": "epicurus", "t": "Epicurus on death", "src": "Epicurean philosophy", "form": "Argument", "fg": "concept", "tr": "greek", "q": "Why fear death?", "sec": "existence", "th": ["death"]},
@@ -95,7 +93,6 @@ const ATLAS = [
   {"id": "aesop", "t": "The Goose That Laid the Golden Eggs", "src": "Aesop’s Fables", "form": "Fable", "fg": "parable", "tr": "greek", "q": "Greed, patience and the source of wealth", "sec": "traditions", "th": ["incentives", "unintended"]},
   {"id": "blindmen", "t": "The Blind Men and the Elephant", "src": "Indian and Buddhist narrative traditions", "form": "Parable", "fg": "parable", "tr": "indian", "q": "Partial perspectives mistaken for the whole", "sec": "traditions", "th": ["knowledge"]},
   {"id": "chariot", "t": "The Chariot (Katha Upanishad)", "src": "Katha Upanishad", "form": "Metaphor", "fg": "metaphor", "tr": "indian", "q": "Self, senses, mind and disciplined agency", "sec": "traditions", "th": ["identity", "freedom"]},
-  {"id": "ashtavakra", "t": "Ashtavakra and Janaka", "src": "Ashtavakra Gita tradition", "form": "Dialogue", "fg": "dialogue", "tr": "indian", "q": "Self, liberation and detachment", "sec": "traditions", "th": ["freedom", "identity"]},
   {"id": "twobirds", "t": "The Two Birds", "src": "Upanishadic tradition", "form": "Metaphor", "fg": "metaphor", "tr": "indian", "q": "Witnessing consciousness and experience", "sec": "traditions", "th": ["identity", "knowledge"]},
   {"id": "burninghouse", "t": "The Burning House", "src": "Lotus Sutra", "form": "Parable", "fg": "parable", "tr": "indian", "q": "Skilful means; saving those who do not see the danger", "sec": "traditions", "th": ["knowledge", "freedom"]},
   {"id": "syadvada", "t": "Syadvada", "src": "Jain philosophy", "form": "Logical framework", "fg": "concept", "tr": "indian", "q": "Conditional assertion and perspectival qualification", "sec": "traditions", "th": ["knowledge", "uncertainty"]},
@@ -164,7 +161,6 @@ const ATLAS_ENTRIES = {
       "experience",
       "maitreyi",
       "sisyphus",
-      "ilyich",
       "epicurus"
     ],
     "reading": [
@@ -279,7 +275,6 @@ const ATLAS_ENTRIES = {
       "Exam use: In the Essay paper, use it for topics on the meaning of life, perseverance, work and hope. In GS-IV, use it for attitude and resilience."
     ],
     "related": [
-      "ilyich",
       "ecclesiastes",
       "epicurus",
       "nachiketa",
@@ -296,130 +291,6 @@ const ATLAS_ENTRIES = {
         "“Albert Camus”, Stanford Encyclopedia of Philosophy",
         "Explains Camus’s idea of the absurd and The Myth of Sisyphus.",
         "https://plato.stanford.edu/entries/camus/"
-      ]
-    ]
-  },
-  "ilyich": {
-    "source": "Leo Tolstoy, The Death of Ivan Ilyich (1886)",
-    "period": "Russia, 1886",
-    "tradition": "Russian literature",
-    "type": "A novella. A novella is a story that is longer than a short story but shorter than a novel.",
-    "setup": [
-      "Ivan Ilyich is a judge in a high court in nineteenth-century Russia. Tolstoy says that his life has been most simple and most ordinary, and therefore most terrible. Ivan has always done what was expected of him. He studied law, rose steadily in his career, married a suitable woman named Praskovya Fyodorovna, and enjoyed playing cards with important people.",
-      "One day, while hanging curtains in his new and fashionable home, Ivan falls and hurts his side. At first it seems like nothing. But the pain grows, and he becomes seriously ill. Doctors talk about his kidney and his intestine, but none of them tells him the plain truth. He is dying.",
-      "Ivan’s family behaves as if he is only sick and will soon get better. They carry on with their social life. Their pretence makes him lonely and angry. The only person who comforts him is Gerasim, a young peasant servant. Gerasim speaks honestly about death and cares for Ivan without complaint. At night, Gerasim holds Ivan’s legs up on his shoulders, which eases the pain.",
-      "As death comes closer, Ivan begins to ask a terrible question. What if his whole life was not what it should have been? He sees that his career, his social life and his careful manners were a way of hiding from what really matters.",
-      "In his last days, Ivan screams for three days. Then he feels himself pushed into a black hole, and he sees a light. His hand falls on his son’s head, and he feels pity for his son and his wife. His fear of death disappears. Death is finished, he thinks, and he dies."
-    ],
-    "question": "What makes a life truly worth living, if we must all die?",
-    "reveals": "The story shows how a person can live a respectable life that is empty inside. Ivan followed every social rule, but he never asked what his life was for. Only the nearness of death forces him to face this question. The people around him hide from death with lies and routine, just as Ivan hid from life. Gerasim accepts death as a natural part of life, and he is the only one who shows real compassion. The story suggests that facing our own death honestly can help us live more truthfully.",
-    "readings": [
-      [
-        "Tolstoy’s religious reading",
-        "Tolstoy wrote the story after a spiritual crisis in the late 1870s. He came to believe that a life built on status and comfort is false, and that true life means love and service to others."
-      ],
-      [
-        "Existentialist reading",
-        "The German philosopher Martin Heidegger pointed to this story as a picture of how people avoid thinking about their own death. For such thinkers, facing death honestly is the beginning of an authentic life."
-      ],
-      [
-        "Medical ethics reading",
-        "The story is often read by medical students. Ivan’s suffering is made worse by doctors who hide the truth and by a family that pretends. The story shows why honesty and compassion matter in the care of dying people."
-      ]
-    ],
-    "breaks": [
-      "Tolstoy presents upper-class life as almost completely empty. But ordinary work, family and friendship can be meaningful, even when they follow social rules.",
-      "The peaceful ending may be too neat. Many people die in pain or fear without such a clear moment of understanding.",
-      "Gerasim is shown as simple and good because he is a peasant. This picture can romanticise the poor instead of showing them as full individuals."
-    ],
-    "uses": [
-      "Palliative care: Honest communication about serious illness, together with care that reduces pain and loneliness, respects the dignity of dying patients.",
-      "Work and meaning: Civil servants and professionals can ask whether their careers serve a real purpose, or only status and promotion.",
-      "End-of-life decisions: In 2018, the Supreme Court of India recognised the right to die with dignity and allowed advance medical directives, often called living wills.",
-      "Exam use: In GS-IV, use it for compassion, authenticity and the ethics of care. In the Essay paper, use it for topics on death, success and the meaning of life."
-    ],
-    "related": [
-      "sisyphus",
-      "nachiketa",
-      "epicurus",
-      "ecclesiastes",
-      "kisagotami",
-      "experience"
-    ],
-    "reading": [
-      [
-        "Leo Tolstoy, The Death of Ivan Ilych, Wikisource",
-        "The full story in English. Free.",
-        "https://en.wikisource.org/wiki/The_Death_of_Ivan_Ilych"
-      ],
-      [
-        "“The Death of Ivan Ilyich”, Wikipedia",
-        "Free summary of the story and its reception.",
-        "https://en.wikipedia.org/wiki/The_Death_of_Ivan_Ilyich"
-      ]
-    ]
-  },
-  "inquisitor": {
-    "source": "Fyodor Dostoevsky, The Brothers Karamazov (1880), Book 5, chapter 5",
-    "period": "Russia, 1879 to 1880",
-    "tradition": "Russian literature",
-    "type": "A parable inside a novel. A parable is a simple story that teaches a lesson.",
-    "setup": [
-      "In the novel, Ivan Karamazov tells his younger brother Alyosha a story that he has imagined. The story is set in Seville, in Spain, in the sixteenth century, during the Inquisition. The Inquisition was a church court that punished people for holding the wrong religious beliefs.",
-      "On the day before the story begins, almost a hundred heretics have been burnt alive in the city. Then Christ quietly appears in the streets. The people recognise him at once and follow him. He heals an old man who has been blind from childhood. At the steps of the cathedral, he brings a dead girl back to life.",
-      "The Grand Inquisitor, a cardinal who is almost ninety years old, sees these miracles. He orders his guards to arrest Christ and put him in prison. That night, the old man visits Christ in his cell. He speaks for a long time, and Christ stays silent.",
-      "The Inquisitor says that Christ made a mistake. When Satan tempted Christ in the desert, Christ refused to turn stones into bread. He refused to prove who he was with a miracle. He refused to rule the kingdoms of the world. Christ wanted people to follow him freely. But the Inquisitor says that most people cannot bear freedom. They want bread, miracles and someone to obey. So the Church has taken away their freedom and given them security instead. The Inquisitor says that he will burn Christ the next day.",
-      "Christ does not answer. He only goes up to the old man and kisses him gently on the lips. The Inquisitor opens the door and tells him to go and never come back. The kiss stays warm in the old man’s heart, but he does not change his mind."
-    ],
-    "question": "Do people really want freedom, or would most of them rather have bread and security?",
-    "reveals": "The story sets freedom against security. Freedom is hard. It brings choice, doubt and responsibility. Security is easy, but its price is obedience. The Inquisitor claims to love humanity, and he believes that he is making people happy. His sincere belief that he is doing good is what makes his argument dangerous. Rulers who take away freedom often say that they are doing it for the people’s own good.",
-    "readings": [
-      [
-        "Criticism of the Church",
-        "Dostoevsky was an Orthodox Christian. Through the story, he criticised the Roman Catholic Church, which he believed had replaced Christ’s message of freedom with worldly power."
-      ],
-      [
-        "Criticism of dictatorship",
-        "Many readers see the Inquisitor as a picture of any system, including socialist and totalitarian states, that promises bread and order in exchange for freedom."
-      ],
-      [
-        "Ivan and the answer of the novel",
-        "The story belongs to Ivan, who cannot accept a world full of suffering. The novel does not answer him with an argument. It answers with the kiss, and with the life and teachings of the monk Zosima in the next part of the book."
-      ],
-      [
-        "Psychology of freedom",
-        "The psychologist Erich Fromm made a similar point in his book Escape from Freedom (1941). He argued that many people are afraid of the burden of freedom, and so they willingly give it up to strong leaders."
-      ]
-    ],
-    "breaks": [
-      "The Inquisitor assumes that most people are weak and cannot handle freedom. This view looks down on ordinary people, and history shows many people fighting and dying for freedom.",
-      "Freedom and security are not always opposites. Good institutions can provide both, as well-run democracies try to do.",
-      "The story is written as a debate about Christianity. Readers from other traditions may need to translate its religious terms into general ideas."
-    ],
-    "uses": [
-      "Welfare and rights: A government that gives people free goods but takes away their right to speak or protest is making the Inquisitor’s bargain.",
-      "Security and surveillance: Many states limit privacy and freedom in the name of safety. The story helps us ask how much freedom should be given up, and to whom.",
-      "Paternalism: Officials sometimes decide what is good for citizens without asking them. The story warns against assuming that people cannot choose for themselves.",
-      "Exam use: In GS-IV, use it for freedom versus security, paternalism and the ethics of power. In the Essay paper, use it for topics on freedom, authority, democracy and welfare."
-    ],
-    "related": [
-      "cave",
-      "noblelie",
-      "panopticon",
-      "milgram",
-      "gadfly",
-      "experience"
-    ],
-    "reading": [
-      [
-        "Fyodor Dostoevsky, The Brothers Karamazov, translated by Constance Garnett",
-        "The Grand Inquisitor is Book 5, chapter 5. Free on Project Gutenberg.",
-        "https://www.gutenberg.org/ebooks/28054"
-      ],
-      [
-        "“The Grand Inquisitor”, Wikipedia",
-        "Free overview of the story and how it has been read.",
-        "https://en.wikipedia.org/wiki/The_Grand_Inquisitor"
       ]
     ]
   },
@@ -527,7 +398,6 @@ const ATLAS_ENTRIES = {
     ],
     "related": [
       "sisyphus",
-      "ilyich",
       "epicurus",
       "nachiketa",
       "hedonic",
@@ -587,7 +457,6 @@ const ATLAS_ENTRIES = {
     ],
     "related": [
       "nachiketa",
-      "ilyich",
       "sisyphus",
       "ecclesiastes",
       "kisagotami",
@@ -1638,7 +1507,6 @@ const ATLAS_ENTRIES = {
       "raft",
       "nachiketa",
       "epicurus",
-      "ilyich",
       "threepoisons"
     ],
     "reading": [
@@ -1694,7 +1562,6 @@ const ATLAS_ENTRIES = {
       "Exam use: In GS-IV, use it for utilitarianism and its limits, human dignity and complicity. In the Essay paper, use it for topics on development, justice and the price of progress."
     ],
     "related": [
-      "inquisitor",
       "trolley",
       "veil",
       "experience",
@@ -1884,7 +1751,6 @@ const ATLAS_ENTRIES = {
     "related": [
       "cave",
       "burninghouse",
-      "inquisitor",
       "gyges",
       "panopticon",
       "statenature"
@@ -1944,7 +1810,6 @@ const ATLAS_ENTRIES = {
     "related": [
       "gyges",
       "noblelie",
-      "inquisitor",
       "beforelaw",
       "milgram",
       "stanfordprison"
@@ -2314,7 +2179,6 @@ const ATLAS_ENTRIES = {
       "noblelie",
       "panopticon",
       "tacitus",
-      "inquisitor",
       "milgram"
     ],
     "reading": [
@@ -2372,7 +2236,6 @@ const ATLAS_ENTRIES = {
     "related": [
       "gyges",
       "dictator",
-      "inquisitor",
       "mad",
       "gadfly",
       "ecclesiastes"
@@ -2437,8 +2300,7 @@ const ATLAS_ENTRIES = {
       "gyges",
       "milgram",
       "beforelaw",
-      "noblelie",
-      "inquisitor"
+      "noblelie"
     ],
     "reading": [
       [
@@ -3668,7 +3530,6 @@ const ATLAS_ENTRIES = {
       "stanfordprison",
       "bystander",
       "arjuna",
-      "inquisitor",
       "beforelaw"
     ],
     "reading": [
@@ -4523,7 +4384,6 @@ const ATLAS_ENTRIES = {
       "nachiketa",
       "atman",
       "netineti",
-      "ashtavakra",
       "uddalaka"
     ],
     "reading": [
@@ -4780,8 +4640,7 @@ const ATLAS_ENTRIES = {
       "trolley",
       "milgram",
       "nachiketa",
-      "karma",
-      "ashtavakra"
+      "karma"
     ],
     "reading": [
       [
@@ -5228,74 +5087,6 @@ const ATLAS_ENTRIES = {
       ]
     ]
   },
-  "ashtavakra": {
-    "source": "Ashtavakra Gita, also called Ashtavakra Samhita. The story of Ashtavakra’s birth and his debate at King Janaka’s court is told in the Mahabharata, Vana Parva (Book 3).",
-    "period": "The date of the Ashtavakra Gita is uncertain. Some scholars place it before the common era. Others date it to the eighth or the fourteenth century CE.",
-    "tradition": "Indian philosophy (Advaita Vedanta)",
-    "type": "A dialogue between a teacher and a king",
-    "setup": [
-      "The Mahabharata tells how Ashtavakra got his name. His father Kahoda was a scholar. One night, while Kahoda was reciting the Vedas, the unborn child in his mother’s womb spoke. He told his father that his recitation was not correct. Kahoda felt insulted in front of his students. In anger, he cursed the child to be born with a body bent in eight places. So the boy was named Ashtavakra, which means “bent in eight places”.",
-      "Before the child was born, Kahoda went to the court of King Janaka to earn money. There he lost a debate to a scholar named Vandin, and he was drowned in water as a punishment. When Ashtavakra was twelve years old, he learned what had happened to his father. He went to Janaka’s court to face Vandin. The gatekeeper stopped him and said that only old and learned Brahmins could enter. Ashtavakra replied that a person is old because of his knowledge, not because of his years. He was allowed in. He defeated Vandin in debate, and his father was returned to him.",
-      "The Ashtavakra Gita is a separate text. It presents a conversation between Ashtavakra and King Janaka. Janaka asks three questions. How is knowledge gained? How is liberation reached? How is detachment achieved?",
-      "Ashtavakra answers that Janaka is not his body. He is pure awareness, the witness of everything. If Janaka rests in this awareness and sees himself as separate from the body, he will become happy, peaceful and free at once. Ashtavakra also says, “If one thinks of oneself as free, one is free, and if one thinks of oneself as bound, one is bound.”"
-    ],
-    "question": "Is freedom something you must earn, or something you only need to recognise?",
-    "reveals": "Ashtavakra teaches that a person is bound mainly by a mistaken idea of who he is. We think that we are our body, our roles and our possessions, so we suffer when these change. The true self is pure awareness, and it is always free. Liberation is not a new state that has to be built slowly. It is seeing clearly what one already is. The birth story adds a second lesson. Wisdom does not depend on age, rank or appearance. A boy with a bent body defeated the most feared scholar at the court.",
-    "readings": [
-      [
-        "Advaita Vedanta reading",
-        "The Ashtavakra Gita is one of the most direct statements of non-dualism. There is only one reality, pure consciousness, and the self is that reality. Rituals and practices are less important than direct understanding."
-      ],
-      [
-        "Psychological reading",
-        "The verse about thinking oneself free or bound is often read as a teaching about the power of the mind. How a person sees himself shapes how free he feels."
-      ],
-      [
-        "Reading about dignity",
-        "Ashtavakra’s story challenges prejudice about age and physical appearance. A person’s worth lies in knowledge and character, not in the shape of the body."
-      ],
-      [
-        "King Janaka as a model",
-        "Janaka is remembered as a king who ruled a kingdom while staying free of attachment. The Bhagavad Gita (3.20) says that Janaka reached perfection through action alone. So Janaka shows that detachment does not require leaving the world."
-      ]
-    ],
-    "breaks": [
-      "Saying that a person is already free can ignore real chains, such as poverty, caste discrimination or illness. Freedom of the mind does not remove the need for social justice.",
-      "The teaching can lead to withdrawal from the world. If nothing except awareness really matters, a person may feel no duty to act.",
-      "Popular self-help books often misuse the idea that we become what we think. Used in this way, the idea can suggest that people who suffer are simply thinking in the wrong way."
-    ],
-    "uses": [
-      "Stress and calm: Officers under heavy pressure can use the idea of a calm witness to respond to crises with a steady mind.",
-      "Disability and dignity: Ashtavakra’s story supports the idea behind the Rights of Persons with Disabilities Act, 2016, that people must be judged by their abilities, not by their appearance.",
-      "Merit over seniority: The gatekeeper’s rule that only old men may enter is a picture of any system that values age or rank more than knowledge.",
-      "Detached public service: King Janaka ruled with full authority but without being possessed by power. Officials can use their authority fully while staying free of personal gain.",
-      "Exam use: In GS-IV, use it for equanimity, emotional intelligence, dignity and Indian moral thinkers. In the Essay paper, use it for topics on freedom, the mind and merit."
-    ],
-    "related": [
-      "maitreyi",
-      "atman",
-      "netineti",
-      "chariot",
-      "arjuna"
-    ],
-    "reading": [
-      [
-        "The Ashtavakra Gita, translated by John Richards, Wikisource",
-        "A translation placed in the public domain by its translator. Free.",
-        "https://en.wikisource.org/wiki/Ashtavakra_Gita"
-      ],
-      [
-        "The Mahabharata, Vana Parva, translated by Kisari Mohan Ganguli",
-        "The story of Ashtavakra’s birth and debate. Free on Project Gutenberg.",
-        "https://www.gutenberg.org/ebooks/11894"
-      ],
-      [
-        "“Vedanta, Advaita”, Internet Encyclopedia of Philosophy",
-        "",
-        "https://iep.utm.edu/advaita-vedanta/"
-      ]
-    ]
-  },
   "twobirds": {
     "source": "Mundaka Upanishad 3.1.1–2. The same two verses appear in the Shvetashvatara Upanishad (4.6–7). The image first appears in a hymn of the Rig Veda (1.164.20).",
     "period": "The Rig Veda hymn is much older than the two Upanishads. Scholars date the Mundaka and Shvetashvatara Upanishads to the later centuries BCE.",
@@ -5338,7 +5129,6 @@ const ATLAS_ENTRIES = {
     "related": [
       "chariot",
       "atman",
-      "ashtavakra",
       "maya",
       "netineti",
       "arjuna"
@@ -5400,7 +5190,6 @@ const ATLAS_ENTRIES = {
       "noblelie",
       "raft",
       "arrow",
-      "inquisitor",
       "trolley"
     ],
     "reading": [
@@ -5959,7 +5748,6 @@ const ATLAS_ENTRIES = {
       "gargi",
       "maitreyi",
       "maya",
-      "ashtavakra",
       "twobirds"
     ],
     "reading": [
@@ -6396,7 +6184,6 @@ const ATLAS_ENTRIES = {
       "milgram",
       "principalagent",
       "cave",
-      "inquisitor",
       "noblelie"
     ],
     "reading": [

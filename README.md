@@ -226,7 +226,7 @@ answers.js    five sub-theme model paragraphs per essay theme (45 in all)
 essays.js     19 model essays, two per theme, partitioned across the past questions
 pyq.js        nine years of past essay questions, classified by theme
 portraits.js  pre-resolved portrait URLs (verified to load)
-atlas.js      the Human Thought Atlas: 102 stories, thought experiments and models
+atlas.js      the Human Thought Atlas: stories, thought experiments and models
 app.js        rendering, search, syllabus maps
 ```
 
