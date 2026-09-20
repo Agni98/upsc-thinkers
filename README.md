@@ -104,8 +104,10 @@ All nineteen are written in **one register**. The argument is carried by policy,
 institutions; a thinker appears where the idea does real work and nowhere for the sake of
 appearing; and **no paragraph opens by announcing a philosopher** — a rule the build checks,
 because opening that way is the tell that an essay has stopped being editorial. Each is
-1,400–1,730 words and is built from its theme's five model paragraphs plus the "Open it out
-with" prompts those paragraphs leave for the writer.
+1,500–1,900 words and is built from its theme's five model paragraphs plus the "Open it out
+with" prompts those paragraphs leave for the writer. Where a story, experiment or model from the
+Human Thought Atlas does real work in an argument, it is used inside the paragraph that needs
+it; no essay is built around one.
 
 Essays live in `essays.js`, keyed by their own title: `et` the title, `ep` the paragraphs,
 `serves` the questions it answers, `note` how it relates to its pair. `**double asterisks**`
