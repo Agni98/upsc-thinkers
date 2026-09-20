@@ -78,7 +78,6 @@ const ATLAS = [
   {"id": "ooda", "t": "OODA Loop", "src": "John Boyd", "form": "Decision model", "fg": "model", "tr": "western", "q": "Observe–orient–decide–act", "sec": "strategy", "th": ["uncertainty", "power"]},
   {"id": "pd", "t": "Prisoner's Dilemma", "src": "Game theory", "form": "Strategic model", "fg": "model", "tr": "science", "q": "Cooperation vs individual incentives", "sec": "strategy", "th": ["cooperation", "incentives"]},
   {"id": "staghunt", "t": "Assurance Game / Stag Hunt", "src": "Game theory", "form": "Strategic model", "fg": "model", "tr": "science", "q": "Trust and coordination", "sec": "strategy", "th": ["cooperation"]},
-  {"id": "maitreyi", "t": "Yajnavalkya and Maitreyi", "src": "Brihadaranyaka Upanishad", "form": "Dialogue", "fg": "dialogue", "tr": "indian", "q": "Self, love, immortality and value", "sec": "traditions", "th": ["identity", "death"]},
   {"id": "gargi", "t": "Gargi and Yajnavalkya", "src": "Brihadaranyaka Upanishad", "form": "Philosophical dialogue", "fg": "dialogue", "tr": "indian", "q": "How far can reason question the structure of reality?", "sec": "traditions", "th": ["knowledge"]},
   {"id": "indra", "t": "Indra and Virochana", "src": "Chandogya Upanishad", "form": "Teaching story", "fg": "parable", "tr": "indian", "q": "Self-knowledge and mistaken identification", "sec": "traditions", "th": ["identity", "knowledge"]},
   {"id": "uddalaka", "t": "Uddalaka and Shvetaketu", "src": "Chandogya Upanishad", "form": "Teaching dialogue", "fg": "dialogue", "tr": "indian", "q": "Unity; identity; reality", "sec": "traditions", "th": ["identity"]},
@@ -151,7 +150,6 @@ const ATLAS_ENTRIES = {
     "related": [
       "chariot",
       "experience",
-      "maitreyi",
       "sisyphus",
       "epicurus"
     ],
@@ -4131,66 +4129,6 @@ const ATLAS_ENTRIES = {
       ]
     ]
   },
-  "maitreyi": {
-    "source": "Brihadaranyaka Upanishad (बृहदारण्यकोपनिषद्) 2.4. An almost identical version appears again at 4.5.",
-    "period": "The Brihadaranyaka is one of the oldest Upanishads. Scholars usually date it to around the seventh or sixth century BCE.",
-    "tradition": "Indian philosophy (Upanishads)",
-    "type": "A philosophical dialogue between a husband and his wife",
-    "setup": [
-      "Yajnavalkya (याज्ञवल्क्य) was one of the most famous thinkers of the Upanishads. He had two wives, Maitreyi (मैत्रेयी) and Katyayani. The text says that Maitreyi liked to discuss questions about Brahman (ब्रह्मन्), the ultimate reality. It says that Katyayani knew only what women of that time were usually expected to know.",
-      "One day, Yajnavalkya decided to leave his home and live as a wandering monk. So he wanted to divide his property between his two wives.",
-      "Maitreyi asked him, “If this whole earth, full of wealth, belonged to me, would that make me immortal?” Yajnavalkya answered, “No. Your life would be like the life of rich people. But there is no hope of immortality through wealth.”",
-      "Maitreyi said, “Then what should I do with something that will not make me immortal? Tell me instead what you know.” Yajnavalkya was pleased. He asked her to sit down and listen carefully.",
-      "He said, “A husband is not dear for the husband’s own sake. He is dear because of the Self. A wife is not dear for the wife’s own sake. She is dear because of the Self.” He said the same about children, wealth and everything else. So the Self, the atman (आत्मन्), is what must be seen, heard, thought about and deeply understood.",
-      "Maitreyi found the rest of his teaching confusing. So Yajnavalkya explained further. Where there is duality, one person sees another and knows another. But when everything has become one’s own Self, who could see whom, and by what means? How can anyone know the knower?"
-    ],
-    "question": "Can wealth give a person what they most deeply want?",
-    "reveals": "Maitreyi sees that wealth can make life comfortable, but it cannot answer the deepest human questions. Yajnavalkya’s reply goes further. We love people and things because, in some way, they are connected to the Self. When we understand the Self, we understand what all our love is really pointing to. So the dialogue moves from a question about property to a question about what is truly valuable.",
-    "readings": [
-      [
-        "Advaita reading",
-        "The Self in each person is the same universal Self, Brahman. So all love is, at its root, love of the one Self that is present in everyone. When this is known, the gap between the knower and the known disappears."
-      ],
-      [
-        "Ethical reading",
-        "Some readers take the words “dear because of the Self” to mean that all love is selfish. Most commentators reject this reading. The Self here is not the small ego. It is the deeper Self shared by all, so the teaching points towards unity, not selfishness."
-      ],
-      [
-        "Maitreyi as a thinker",
-        "Maitreyi is remembered as a brahmavadini (ब्रह्मवादिनी), a woman who discussed questions about Brahman. She chose knowledge over property. Some scholars suggest that she may have been an independent teacher herself. The text’s description of Katyayani, however, shows the limited view of women in that period."
-      ]
-    ],
-    "breaks": [
-      "The story treats wealth as unimportant. But for poor people, wealth means food, health and dignity. It is easier to give up wealth when one is already secure.",
-      "The teaching is very abstract. Maitreyi herself finds it confusing, and most readers need a teacher to follow it.",
-      "Yajnavalkya leaves his family to seek liberation. The text does not ask what his wives lose when he goes."
-    ],
-    "uses": [
-      "Measuring development: Income alone does not measure a good life. So the Human Development Index measures health and education as well as income.",
-      "Consumer culture: Advertising often suggests that buying more will make people happy. Maitreyi’s question challenges this idea.",
-      "Women and knowledge: Maitreyi and Gargi show that women took part in philosophical discussion in ancient India. They are often mentioned in discussions about women’s education.",
-      "Exam use: In GS-IV, use it for values, materialism and Indian moral thinkers. In the Essay paper, use it for topics on wealth and happiness, love, and women in Indian thought."
-    ],
-    "related": [
-      "gargi",
-      "nachiketa",
-      "atman",
-      "netineti",
-      "uddalaka"
-    ],
-    "reading": [
-      [
-        "The Thirteen Principal Upanishads, translated by Robert Ernest Hume (1921)",
-        "The Maitreyi dialogue is Brihadaranyaka 2.4 and 4.5. Free on the Internet Archive.",
-        "https://archive.org/details/thirteenprincipa00hume"
-      ],
-      [
-        "“Upanisads”, Internet Encyclopedia of Philosophy",
-        "",
-        "https://iep.utm.edu/upanisad/"
-      ]
-    ]
-  },
   "gargi": {
     "source": "Brihadaranyaka Upanishad (बृहदारण्यकोपनिषद्) 3.6 and 3.8",
     "period": "The Brihadaranyaka is one of the oldest Upanishads. Scholars usually date it to around the seventh or sixth century BCE.",
@@ -4234,7 +4172,6 @@ const ATLAS_ENTRIES = {
       "Exam use: In GS-IV, use it for the spirit of inquiry, accountability and Indian moral thinkers. In the Essay paper, use it for topics on questioning, knowledge and the role of women in Indian thought."
     ],
     "related": [
-      "maitreyi",
       "netineti",
       "atman",
       "gadfly",
@@ -4300,7 +4237,6 @@ const ATLAS_ENTRIES = {
       "uddalaka",
       "chariot",
       "atman",
-      "maitreyi",
       "cave",
       "experience"
     ],
@@ -4364,7 +4300,6 @@ const ATLAS_ENTRIES = {
     ],
     "related": [
       "indra",
-      "maitreyi",
       "atman",
       "gargi",
       "nachiketa",
@@ -5278,7 +5213,6 @@ const ATLAS_ENTRIES = {
     "related": [
       "atman",
       "gargi",
-      "maitreyi",
       "maya",
       "twobirds"
     ],
@@ -5340,7 +5274,6 @@ const ATLAS_ENTRIES = {
     "related": [
       "uddalaka",
       "indra",
-      "maitreyi",
       "netineti",
       "twobirds",
       "chariot"
