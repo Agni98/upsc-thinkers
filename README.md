@@ -42,13 +42,11 @@ from Wikimedia Commons.
 ### GS-IV concept notes
 
 Each concept in `gs4concepts.js` has a definition (`d`), the questions that asked it (`qs`) and a
-source line (`src`). Every concept under headings 1 to 15 is written as structured reading notes,
-shown as a definition box, the body, and a key-takeaway box (`take`). The body takes one of two forms:
-- `secs`: numbered sections, each `[heading, paragraphs]`. Used for all of *Ethics & Human Interface*
-  and the first two *Human Values* concepts. A paragraph that is itself a list of strings becomes bullets.
-- `parts`: labelled parts, each `[label, paragraphs]`, with labels such as *Core idea*, *Practical
-  application* and *The tension / limitation*. Used for the rest of headings 2 to 15.
-The case-study patterns under heading 16 keep the plain paragraph form.
+source line (`src`). Every concept under headings 1 to 15 is written as structured reading notes:
+`d` holds the definition, `secs` the numbered sections, each `[heading, paragraphs]`, and `take` the
+key takeaway. The page shows a definition box, the numbered sections and a takeaway box. A paragraph
+that is itself a list of strings becomes bullets. The case-study patterns under heading 16 keep the
+plain paragraph form.
 
 ### Reading the maps
 
