@@ -1703,15 +1703,8 @@ function mapSpec(view){
 const mapSel = items => items.some(x => x.id === state.sel) ? state.sel : (items[0] ? items[0].id : null);
 const readKey = (view, page, id) => view + "|" + page + "|" + id;
 
-/* What a heading holds, in one line. */
+/* What a theme holds, in one line. (The syllabus map's cards say it themselves.) */
 function mapMeta(spec, x){
-  if (spec.view === "syllabus") {
-    const s = sylStats(x), cases = x.t === "Case Studies";
-    return [plural(s.concepts.length, cases ? "case pattern" : "concept", cases ? "case patterns" : "concepts"),
-            s.thinkers ? plural(s.thinkers, "thinker", "thinkers") : "",
-            s.questions ? plural(s.questions, "past question", "past questions") : ""]
-      .filter(Boolean).join(" &middot; ");
-  }
   const es = (x.essays || []).filter(k => (typeof ESSAYS !== "undefined") && ESSAYS[k]).length;
   const st = themeStories(x).length;
   return [plural(themeStats(x).list.length, "model paragraph", "model paragraphs"),
@@ -1721,10 +1714,178 @@ function mapMeta(spec, x){
     .filter(Boolean).join(" &middot; ");
 }
 
+/* ---- The GS-IV syllabus map's first page ----
+   The home page's look: a header band, then how a heading is built, where the
+   paper asks most, and every heading as a card with what it holds. */
+const SYL_ICON = {
+  "Ethics & Human Interface":"scale", "Human Values":"heart", "Attitude":"eye",
+  "Aptitude & Foundational Values for Civil Service":"target", "Emotional Intelligence":"sun",
+  "Moral Thinkers & Philosophers of India":"book", "Moral Thinkers & Philosophers of the World":"globe",
+  "Public / Civil Service Values & Ethics in Public Administration":"landmark",
+  "Accountability & Ethical Governance":"file", "Probity in Governance":"compass",
+  "Corruption, Whistleblowing & Conflict of Interest":"alert",
+  "Corporate Governance & Workplace Ethics":"case", "Ethics in Science, Technology & Media":"cpu",
+  "Environmental & Development Ethics":"leaf", "Social Justice, Gender & the Weaker Sections":"users",
+  "Case Studies":"layers"
+};
+const SYL_PARTS = [
+  ["layers",  "Concepts that repeat", "The ideas the paper keeps returning to, most asked first"],
+  ["book",    "Inside each concept",  "A definition, numbered sections and a key takeaway"],
+  ["file",    "Where it was asked",   "Every past question that turns on the concept"],
+  ["users",   "Thinkers and questions", "Who to quote on the heading, and its full question list"]
+];
+
+/* Where the paper asks most: theory and case questions per heading. The case
+   studies are counted under the heading they test, so the Case Studies heading,
+   which gathers them all, is left out; the two moral-thinkers headings share
+   one pool of questions and are shown once. */
+function sylChartHTML(){
+  const rows = [];
+  SYLLABUS.forEach((r, i) => {
+    if (r.t === "Case Studies" || r.t === "Moral Thinkers & Philosophers of the World") return;
+    const q = gs4For(r.t);
+    const t = r.t === "Moral Thinkers & Philosophers of India" ? "Moral thinkers, India and the world" : r.t;
+    rows.push({ t, p:i + 1, a:q.filter(x => x.sec === "A").length, b:q.filter(x => x.sec === "B").length });
+  });
+  rows.sort((x, y) => (y.a + y.b) - (x.a + x.b) || x.p - y.p);
+  const max = Math.max.apply(null, rows.map(r => r.a + r.b));
+  return `
+    <div class="schart-legend" aria-hidden="true">
+      <span><i class="sw-a"></i>Theory questions (Section A)</span>
+      <span><i class="sw-b"></i>Case studies (Section B)</span>
+    </div>
+    <ol class="schart">${rows.map(r => `
+      <li><button class="schart-row" data-open-at="${r.p}|" data-tip="${esc(r.t)}" data-a="${r.a}" data-b="${r.b}"
+                  aria-label="${esc(r.t)}: ${r.a} theory, ${r.b} case studies, ${r.a + r.b} in all">
+        <span class="schart-t">${esc(r.t)}</span>
+        <span class="schart-track">
+          <span class="schart-bar" style="width:calc((100% - 44px) * ${((r.a + r.b) / max).toFixed(3)})">
+            ${r.a ? `<i class="seg-a" style="flex-grow:${r.a}"></i>` : ""}${r.b ? `<i class="seg-b" style="flex-grow:${r.b}"></i>` : ""}
+          </span>
+          <b class="schart-n">${r.a + r.b}</b>
+        </span>
+      </button></li>`).join("")}
+    </ol>
+    <details class="schart-table">
+      <summary>Show as a table</summary>
+      <table>
+        <thead><tr><th scope="col">Heading</th><th scope="col">Theory</th><th scope="col">Case studies</th><th scope="col">Total</th></tr></thead>
+        <tbody>${rows.map(r => `<tr><th scope="row">${esc(r.t)}</th><td>${r.a}</td><td>${r.b}</td><td>${r.a + r.b}</td></tr>`).join("")}</tbody>
+      </table>
+    </details>`;
+}
+
+function sylCardHTML(r, i){
+  const s = sylStats(r), items = sylItems(r);
+  const done = items.filter(it => isRead(readKey("syllabus", i + 1, it.id))).length;
+  const cases = r.t === "Case Studies";
+  const top = s.concepts.slice(0, 3).map(c => c.t);
+  return `
+      <button class="scard" data-open-at="${i + 1}|">
+        <span class="scard-top">
+          <span class="scard-no">${i + 1}</span>${ico(SYL_ICON[r.t] || "book")}
+          <em>${done ? done + " of " + items.length + " read" : "Not started"}</em>
+        </span>
+        <b>${esc(r.t)}</b>
+        <span class="scard-s">${esc(r.s)}</span>
+        <span class="scard-stats">
+          <span><b>${s.concepts.length}</b>${cases ? "patterns" : "concepts"}</span>
+          <span><b>${s.questions}</b>${cases ? "cases" : "questions"}</span>
+          <span><b>${s.thinkers}</b>thinkers</span>
+        </span>
+        ${top.length ? `<span class="scard-top-c"><i>Most asked</i>${top.map(esc).join(" &middot; ")}</span>` : ""}
+        <i class="atile-bar"><i style="width:${items.length ? Math.round(done / items.length * 100) : 0}%"></i></i>
+      </button>`;
+}
+
+function sylIndexHTML(spec){
+  const s = siteStats();
+  const cs = SYLLABUS.findIndex(r => r.t === "Case Studies") + 1;
+  const g4y = GS4_PYQ.map(q => q.y);
+  const span = Math.min.apply(null, g4y) + " to " + Math.max.apply(null, g4y);
+  return `
+  <section class="hero hero-sm">
+    <div class="hero-art art-aristotle" aria-hidden="true"></div>
+    <div class="hero-body">
+      <p class="hero-k">GS Paper IV</p>
+      <h2 class="hero-t">GS-IV Syllabus Map</h2>
+      <p class="hero-s">The whole syllabus in ${SYLLABUS.length} headings. Under each: the concepts the paper
+         keeps coming back to, the thinkers worth quoting, and every question set on it from ${span}.</p>
+      <p class="hero-note">Open a heading to begin. Its contents stay in the panel beside you, each item
+         is ticked once you have opened it, and your place is kept.</p>
+    </div>
+    <div class="hero-aside">
+      <button data-open-at="1|"><b>${s.concepts}</b><span>concept notes</span></button>
+      <button data-view="gs4pyq"><b>${s.gsq}</b><span>past questions</span></button>
+      ${cs ? `<button data-open-at="${cs}|pyq"><b>${s.cases}</b><span>case studies</span></button>` : ""}
+    </div>
+  </section>
+
+  <div class="home">
+    ${resumeHTML(lastPlaces()[spec.view])}
+
+    <section class="atl-guide" aria-label="How every heading is built">
+      <h3 class="hb-t">How every heading is built</h3>
+      <ol class="atl-steps">${SYL_PARTS.map((p, i) => `
+        <li><span class="atl-step-ico">${ico(p[0])}</span>
+            <b><i>${i + 1}</i>${esc(p[1])}</b><span>${esc(p[2])}</span></li>`).join("")}
+      </ol>
+    </section>
+
+    <section class="hblock">
+      <div class="hb-head">
+        <div><h3 class="hb-t">Where the paper asks most</h3>
+          <p class="hb-s">Past questions under each heading, ${span}. Open a bar to go to its heading.</p></div>
+        <button class="hb-link" data-view="gs4pyq">All ${s.gsq} questions ${ico("arrow")}</button>
+      </div>
+      <div class="schart-card">${sylChartHTML()}</div>
+    </section>
+
+    <section class="hblock">
+      <div class="hb-head">
+        <div><h3 class="hb-t">The ${SYLLABUS.length} headings</h3>
+          <p class="hb-s">In syllabus order. Each card shows what the heading holds and its most asked concepts.</p></div>
+      </div>
+      <div class="scards">${SYLLABUS.map(sylCardHTML).join("")}</div>
+    </section>
+  </div>`;
+}
+
+/* One tooltip for the chart, filled with textContent. Values lead; the
+   heading's name follows. */
+function vizTip(el, x, y){
+  let tip = document.getElementById("vizTip");
+  if (!tip) {
+    tip = document.createElement("div");
+    tip.id = "vizTip";
+    tip.className = "viz-tip";
+    tip.setAttribute("role", "status");
+    document.body.appendChild(tip);
+  }
+  if (!el) { tip.hidden = true; return; }
+  const a = +el.dataset.a, b = +el.dataset.b;
+  tip.textContent = "";
+  const row = (cls, n, label) => {
+    const d = document.createElement("div");
+    const k = document.createElement("i"); k.className = cls;
+    const v = document.createElement("b"); v.textContent = n;
+    d.append(k, v, document.createTextNode(" " + label));
+    return d;
+  };
+  const h = document.createElement("span");
+  h.textContent = el.dataset.tip;
+  tip.append(row("tk-a", a, "theory"), row("tk-b", b, "case studies"), h);
+  tip.hidden = false;
+  const w = tip.offsetWidth, hgt = tip.offsetHeight;
+  tip.style.left = Math.min(window.innerWidth - w - 8, x + 14) + "px";
+  tip.style.top = Math.max(8, y - hgt - 12) + "px";
+}
+
 /* The first page of a map: every heading, what is inside it and how much of it
-   has been read, so the whole paper can be seen before any of it is opened. */
+   has been read, so the whole paper can be seen before any of it is opened. The
+   syllabus map has its own first page, above. */
 function mapIndexHTML(spec){
-  const syl = spec.view === "syllabus";
+  if (spec.view === "syllabus") return sylIndexHTML(spec);
   const rows = spec.list.map((x, i) => {
     const items = spec.items(x);
     const done = items.filter(it => isRead(readKey(spec.view, i + 1, it.id))).length;
@@ -1744,11 +1905,9 @@ function mapIndexHTML(spec){
     <div class="mapx">
       <header class="mapx-head">
         <p class="rd-crumbs"><span>${spec.paper}</span></p>
-        <h2>${syl ? "Sixteen headings: the whole GS-IV syllabus"
-                  : "Nine themes that cover every essay the paper has set"}</h2>
-        <p>${syl
-          ? "Under each heading are the concepts the paper keeps coming back to, the thinkers worth quoting on it, and every question set on it since 2013."
-          : "Under each theme are five model paragraphs, one for each kind of question the theme throws up, the full essays written from them, and stories from the Thought Atlas that suit it."}
+        <h2>Nine themes that cover every essay the paper has set</h2>
+        <p>Under each theme are five model paragraphs, one for each kind of question the theme throws up,
+           the full essays written from them, and stories from the Thought Atlas that suit it.
            Open one to begin. Its contents stay in the panel beside you as you read,
            each item is ticked once you have opened it, and your place is kept.</p>
       </header>
@@ -1798,6 +1957,11 @@ function mapPageHTML(spec){
         </div>
         <h2 class="rd-title">${esc(x.t)}</h2>
         <p class="rd-sub">${spec.sub(x)}</p>
+        ${spec.view === "syllabus" ? (() => { const st = sylStats(x), cases = x.t === "Case Studies"; return `
+        <p class="rd-stats">${ico(SYL_ICON[x.t] || "book")}
+          <span><b>${st.concepts.length}</b> ${cases ? "case patterns" : "concepts"}</span>
+          <span><b>${st.questions}</b> ${cases ? "cases" : "past questions"}</span>
+          <span><b>${st.thinkers}</b> thinkers</span></p>`; })() : ""}
         <div class="rd-where">
           ${kind ? `<span class="rd-kind">${esc(kind)}</span>` : "<span></span>"}
           ${stepHTML(walk, at)}
@@ -1881,13 +2045,13 @@ function conceptBody(c){
   const para = x => Array.isArray(x)
     ? `<ul>${x.map(li => `<li>${g(li)}</li>`).join("")}</ul>` : `<p>${g(x)}</p>`;
   return `
-      <div class="gc-def"><b class="gc-lab">${esc(c.dlab || "Definition")}</b>${c.d.map(para).join("")}</div>
+      <div class="gc-def" id="cp-def"><b class="gc-lab">${esc(c.dlab || "Definition")}</b>${c.d.map(para).join("")}</div>
       ${c.secs.map((sec, k) => `
-      <section class="gc-sec">
+      <section class="gc-sec" id="cp-s${k + 1}">
         <h6><span>${k + 1}</span>${esc(sec[0])}</h6>
         ${sec[1].map(para).join("")}
       </section>`).join("")}
-      ${c.take ? `<div class="gc-take"><b class="gc-lab">Key takeaway</b><p>${g(c.take)}</p></div>` : ""}`;
+      ${c.take ? `<div class="gc-take" id="cp-take"><b class="gc-lab">Key takeaway</b><p>${g(c.take)}</p></div>` : ""}`;
 }
 
 function conceptPane(title, i){
@@ -1900,11 +2064,20 @@ function conceptPane(title, i){
   list.forEach(x => x.qs.forEach(id => { (byHead[id] = byHead[id] || []).push(x.t); }));
   const qs = c.qs.map(id => byQ[id]).filter(Boolean);
   const f = conceptFreq(title, c, byQ);
+  const cases = title === "Case Studies";
+  const strip = !c.secs ? "" : `
+      <nav class="atl-jump gc-jump" aria-label="Parts of this note">
+        <button data-apart="cp-def"><i>${ico("book")}</i>${esc(c.dlab || "Definition")}</button>${c.secs.map((sec, k) => `
+        <button data-apart="cp-s${k + 1}" title="${esc(sec[0])}"><i>${k + 1}</i><span>${esc(sec[0])}</span></button>`).join("")}
+        ${c.take ? `<button data-apart="cp-take"><i>${ico("bulb")}</i>Takeaway</button>` : ""}
+        ${qs.length ? `<button data-apart="cp-qs"><i>${qs.length}</i>${cases ? "The cases" : "Where asked"}</button>` : ""}
+      </nav>`;
   return `
     <article class="gc-item sm-pane">
       <h5><span class="gc-no">${i + 1}</span>${esc(c.t)}${f ? `<em>${esc(f)}</em>` : ""}</h5>
+      ${strip}
       ${conceptBody(c)}
-      ${qs.length ? `<div class="gc-qs"><b>${
+      ${qs.length ? `<div class="gc-qs" id="cp-qs"><b>${
           title === "Case Studies" ? "The cases" : "Where it was asked"}</b>${
           qs.map(q => gcQuestion(q, c.t, byHead)).join("")}</div>` : ""}
       ${c.src ? `<p class="gc-src">${esc(c.src)}</p>` : ""}
@@ -1986,6 +2159,7 @@ function render(){
   applyThinkerFilter();
   atlasApplyFilter();
   atlasWatch();
+  vizTip(null);
   window.scrollTo({ top:0, behavior:"instant" });
 }
 
@@ -2709,7 +2883,8 @@ function renderAtlas(){
     </div>`;
 }
 
-/* The numbered strip marks the part being read. */
+/* The numbered strip, on an atlas entry or a concept note, marks the part
+   being read. */
 let atlasObs = null;
 function atlasWatch(){
   if (atlasObs) { atlasObs.disconnect(); atlasObs = null; }
@@ -2719,7 +2894,7 @@ function atlasWatch(){
   atlasObs = new IntersectionObserver(list => list.forEach(en => {
     if (en.isIntersecting) btns.forEach(b => b.classList.toggle("on", b.dataset.apart === en.target.id));
   }), { rootMargin:"-140px 0px -55% 0px" });
-  document.querySelectorAll(".apart").forEach(s => atlasObs.observe(s));
+  btns.map(b => document.getElementById(b.dataset.apart)).filter(Boolean).forEach(el => atlasObs.observe(el));
 }
 
 /* ================= EVENTS ================= */
@@ -3113,6 +3288,21 @@ document.addEventListener("keydown", e => {
     e.preventDefault();
     openSearch();
   }
+});
+
+/* the syllabus chart's tooltip */
+document.addEventListener("pointermove", e => {
+  const row = e.target.closest && e.target.closest(".schart-row");
+  vizTip(row, e.clientX, e.clientY);
+});
+document.addEventListener("focusin", e => {
+  const row = e.target.closest && e.target.closest(".schart-row");
+  if (!row) return;
+  const r = row.getBoundingClientRect();
+  vizTip(row, r.left + r.width / 2, r.top);
+});
+document.addEventListener("focusout", e => {
+  if (e.target.closest && e.target.closest(".schart-row")) vizTip(null);
 });
 
 /* the thinkers page filters its cards in place, so the box keeps focus */

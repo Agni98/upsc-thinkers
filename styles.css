@@ -1451,6 +1451,102 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 }
 @media print{ .wl-prose h2{break-after:avoid} .wl-timeline{break-inside:avoid} }
 
+/* ================= GS-IV SYLLABUS MAP: FIRST PAGE =================
+   The home page's look: a header band, how a heading is built, where the paper
+   asks most, and every heading as a card. The chart's two colours were checked
+   for lightness, chroma, colour-blind separation and contrast in both themes. */
+:root{--viz-a:#3d68b8;--viz-b:#c97218}
+html[data-theme="dark"]{--viz-a:#5a86d4;--viz-b:#c9792b}
+.hero-note{max-width:640px;margin-top:14px;font:13.5px/1.6 var(--sans);color:var(--ink-3)}
+
+.schart-card{padding:18px 20px 12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+.schart-legend{display:flex;flex-wrap:wrap;gap:6px 20px;margin:0 0 12px;font:500 12.5px/1.3 var(--sans);color:var(--ink-2)}
+.schart-legend span{display:inline-flex;align-items:center;gap:7px}
+.schart-legend i{width:12px;height:12px;border-radius:3px}
+.sw-a{background:var(--viz-a)}
+.sw-b{background:var(--viz-b)}
+.schart{list-style:none;margin:0;padding:0}
+.schart-row{
+  display:grid;grid-template-columns:minmax(0,38%) minmax(0,1fr);gap:14px;align-items:center;
+  width:100%;padding:6px 8px;margin:0 -8px;border:0;border-radius:8px;background:none;text-align:left;cursor:pointer}
+.schart-row:hover,.schart-row:focus-visible{background:var(--line-2)}
+.schart-row:focus-visible{outline:2px solid var(--saffron);outline-offset:0}
+.schart-t{font:13.5px/1.35 var(--sans);color:var(--ink-2)}
+.schart-row:hover .schart-t{color:var(--head)}
+.schart-track{display:flex;align-items:center;gap:8px;min-width:0}
+/* bars grow from one baseline: square there, a 4px rounded data-end, a 2px gap
+   in the surface colour between the two segments */
+.schart-bar{display:flex;gap:2px;height:14px;flex:0 0 auto}
+.schart-bar i{display:block;height:100%;min-width:3px}
+.schart-bar i:last-child{border-radius:0 4px 4px 0}
+.seg-a{background:var(--viz-a)}
+.seg-b{background:var(--viz-b)}
+.schart-row:hover .schart-bar i{filter:brightness(1.08)}
+.schart-n{font:600 13px/1 var(--sans);font-variant-numeric:tabular-nums;color:var(--ink)}
+.schart-table{margin:10px 0 4px}
+.schart-table summary{
+  display:inline-block;cursor:pointer;font:600 12.5px/1.4 var(--sans);color:var(--accent)}
+.schart-table table{width:100%;margin-top:10px;border-collapse:collapse;font:13px/1.45 var(--sans);color:var(--ink-2)}
+.schart-table th,.schart-table td{padding:6px 8px;border-top:1px solid var(--line);text-align:left}
+.schart-table td{text-align:right;font-variant-numeric:tabular-nums}
+.schart-table thead th{border-top:0;font-weight:700;color:var(--ink-3);font-size:11.5px;letter-spacing:.4px;text-transform:uppercase}
+.schart-table thead th:not(:first-child){text-align:right}
+.schart-table tbody th{font-weight:500;color:var(--ink)}
+/* the tooltip: values first, in ink; the series keyed by a short line */
+.viz-tip{
+  position:fixed;z-index:95;pointer-events:none;min-width:160px;max-width:280px;padding:9px 12px;
+  background:var(--panel);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow-lg);
+  font:12.5px/1.5 var(--sans);color:var(--ink-2)}
+.viz-tip div{display:flex;align-items:center;gap:7px}
+.viz-tip b{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+.viz-tip i{width:12px;height:2px;border-radius:2px}
+.viz-tip .tk-a{background:var(--viz-a)}
+.viz-tip .tk-b{background:var(--viz-b)}
+.viz-tip span{display:block;margin-top:4px;padding-top:4px;border-top:1px solid var(--line);color:var(--ink-3)}
+
+.scards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:14px}
+.scard{
+  display:flex;flex-direction:column;gap:9px;padding:16px 16px 14px;text-align:left;
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);
+  cursor:pointer;transition:.15s}
+.scard:hover{border-color:var(--saffron);box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+.scard:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
+.scard-top{display:flex;align-items:center;gap:9px}
+.scard-no{
+  display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--saffron-soft);color:var(--saffron-ink);font:700 12.5px/1 var(--sans)}
+.scard-top > .ic{width:20px;height:20px;color:var(--saffron-ink)}
+.scard-top em{margin-left:auto;font:500 11.5px/1 var(--sans);font-style:normal;color:var(--ink-3)}
+.scard > b{font:600 16.5px/1.3 var(--read);color:var(--head)}
+.scard-s{
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+  font:13px/1.5 var(--sans);color:var(--ink-3)}
+.scard-stats{display:flex;gap:6px}
+.scard-stats span{
+  flex:1;display:flex;flex-direction:column;gap:1px;padding:7px 9px;border-radius:8px;background:var(--line-2);
+  font:12px/1.2 var(--sans);color:var(--ink-3)}
+.scard-stats b{font:600 17px/1.1 var(--read);color:var(--head)}
+.scard-top-c{font:13px/1.5 var(--read);color:var(--ink-2)}
+.scard-top-c i{
+  display:block;margin-bottom:2px;font:700 10px/1.4 var(--sans);font-style:normal;letter-spacing:.8px;
+  text-transform:uppercase;color:var(--saffron-ink)}
+.scard .atile-bar{margin-top:auto}
+
+/* a heading page says what the heading holds */
+.rd-stats{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin-top:10px;font:13px/1.4 var(--sans);color:var(--ink-3)}
+.rd-stats .ic{width:18px;height:18px;color:var(--saffron-ink)}
+.rd-stats b{font-weight:700;color:var(--head)}
+
+/* a concept note's strip of its parts */
+.gc-jump{margin-top:-4px}
+.gc-jump button span{max-width:24ch;overflow:hidden;text-overflow:ellipsis}
+.gc-jump button i .ic{width:11px;height:11px}
+.gc-item [id^="cp-"]{scroll-margin-top:132px}
+@media (max-width:620px){
+  .schart-row{grid-template-columns:minmax(0,1fr);gap:5px}
+  .schart-card{padding:14px 14px 8px}
+}
+
 /* ---------------- A map's index page ----------------
    Every heading at once, each with what is inside it and how much has been read.
    One row per heading, because the headings are sentences, not labels. */

@@ -62,6 +62,21 @@ The site remembers what has been read and where you stopped, in this browser onl
 page offers **Continue where you left off**, and each map's index offers its own. On a narrow
 screen the contents live in the drawer, opened from **Contents** at the top of the column.
 
+### The GS-IV syllabus map
+
+Its first page has the home page's header band, with shortcuts to the concept notes, past
+questions and case studies. Below that come:
+- a guide to how every heading is built
+- **Where the paper asks most**: a stacked bar per heading of theory and case-study questions,
+  2013 to 2025, sorted by total, with a tooltip and a table view. The two moral-thinkers headings
+  share one pool and appear once. The Case Studies heading is left out, since its cases are
+  already counted under the heading each tests.
+- a card per heading: its syllabus line, counts, most asked concepts and reading progress
+
+A heading page shows what the heading holds. Every concept note carries a strip of its parts
+(definition, numbered sections, takeaway, where it was asked) that stays in view and jumps to
+each one.
+
 ### Reading the atlas
 
 The atlas opens on an **overview**. It first shows how every entry is built, in eight numbered
