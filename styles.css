@@ -6,17 +6,22 @@
   --panel:#ffffff;
   /* the brand gradient runs across both of these and carries white text, so it
      stays the same in either theme; --accent alone is too pale in dark mode */
-  --brand-a:#b4442b;
-  --brand-b:#7a2d1b;
+  --brand-a:#2f4b80;
+  --brand-b:#1f2a44;
   --ink:#333130;      /* warm near-black: 11.9:1, not 14.6 */
   --ink-2:#55524f;    /* body text, 7.5:1 */
   --ink-3:#6f6b67;    /* labels and captions, 4.8:1 */
   --line:#e8e5e1;
   --line-2:#f2f0ed;
   --rail:#f4f2ef;      /* the sidebar, a step deeper than the page */
-  --accent:#b4442b;
-  --accent-2:#c9634a;
-  --accent-soft:#faeee9;
+  /* ink and saffron: ink blue for anything you can press, saffron only for the
+     rules and marks that frame a heading */
+  --accent:#2f4b80;    /* 8.3:1 on the page */
+  --accent-2:#4a6aa6;
+  --accent-soft:#edf1f8;
+  --head:#1f2a44;      /* page headings */
+  --saffron:#e0902f;   /* rules, underlines and the brand mark; never text on white */
+  --saffron-ink:#9a5514; /* saffron as text: the small labels over a heading, 5.7:1 */
   --gold:#7d6a3c;
   --gold-soft:#f5f3ea;
   --shadow:0 1px 2px rgba(30,30,28,.05), 0 8px 24px rgba(30,30,28,.06);
@@ -31,7 +36,8 @@
   /* the reading: a slab serif, set large and loose, the way ANRF sets its prose */
   --read:"Roboto Slab","Rockwell","Georgia",serif;
   --read-ink:#3a3835;
-  --band:#9a3b25;      /* the header band; white on it is 6.9:1 */
+  --band:#1f2a44;      /* the header; white on it is 14.3:1 */
+  --band-ink:#c9cfdc;  /* the sections you are not in, 9.1:1 on the header */
 }
 
 html[data-theme="dark"]{
@@ -44,16 +50,18 @@ html[data-theme="dark"]{
   --line:#38352f;
   --line-2:#2d2a28;
   --rail:#131211;      /* the sidebar, a step deeper than the page */
-  --accent:#dd8064;
-  --accent-2:#eb9f85;
-  --accent-soft:#302019;
+  --accent:#9fb5e3;
+  --accent-2:#bccbee;
+  --accent-soft:#212838;
+  --head:#e3e7f0;
+  --saffron-ink:#e8a55a;
   --gold:#cbb47c;
   --gold-soft:#282318;
   --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
   --shadow-lg:0 4px 12px rgba(0,0,0,.4), 0 24px 60px rgba(0,0,0,.55);
   --quote-ink:#eeeae4;
   --read-ink:#dcd8d2;
-  --band:#4a2419;
+  --band:#182033;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -70,15 +78,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 ::selection{background:var(--accent);color:var(--panel)}
 
 /* ---------------- Header ----------------
-   The ANRF arrangement: the name on the page ground at the left, the sections
-   on a slanted band running out to the right edge. The band's colour is drawn
-   by a pseudo-element, so the slant cannot clip the menus that drop out of it. */
+   One ink-blue bar across the whole width: the name at the left, the sections
+   at the right, a saffron underline under the section you are in. */
 .topbar{
   position:sticky;top:0;z-index:60;
   display:flex;align-items:center;gap:12px;
   height:64px;padding:0 0 0 18px;
-  background:var(--panel);
-  border-bottom:1px solid var(--line);
+  background:var(--band);color:#fff;
+  box-shadow:0 1px 0 rgba(0,0,0,.18),0 2px 10px rgba(20,28,48,.12);
 }
 .skip{
   position:absolute;left:12px;top:-52px;z-index:90;
@@ -87,28 +94,25 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .skip:focus{top:12px}
 
 .brand{display:flex;align-items:center;gap:11px;flex-shrink:0;min-width:0;color:inherit}
-.brand:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
+.brand:focus-visible{outline:2px solid var(--saffron);outline-offset:3px;border-radius:8px}
 .brand-mark{
-  width:38px;height:38px;border-radius:10px;flex-shrink:0;
-  background:linear-gradient(145deg,var(--brand-a),var(--brand-b));
-  color:#fff;display:grid;place-items:center;
+  width:38px;height:38px;border-radius:50%;flex-shrink:0;
+  background:var(--saffron);color:var(--band);
+  display:grid;place-items:center;
   font-family:var(--serif);font-size:20px;font-weight:700;
-  box-shadow:0 2px 8px rgba(138,51,36,.3);
+  box-shadow:0 0 0 3px rgba(224,144,47,.22);
 }
 .brand-text h1{
-  font-family:var(--read);font-size:19px;font-weight:600;letter-spacing:-.1px;
-  line-height:1.15;color:var(--accent);white-space:nowrap}
+  font-family:var(--read);font-size:19px;font-weight:500;letter-spacing:-.1px;
+  line-height:1.15;color:#fff;white-space:nowrap}
 .brand-text p{
-  font-size:10.5px;color:var(--ink-3);letter-spacing:.6px;text-transform:uppercase;
+  font-size:10.5px;color:var(--band-ink);letter-spacing:.6px;text-transform:uppercase;
   margin-top:3px;white-space:nowrap}
 
 .band{
-  position:relative;isolation:isolate;align-self:stretch;margin-left:auto;
+  position:relative;align-self:stretch;margin-left:auto;
   display:flex;align-items:center;gap:8px;
-  padding:0 18px 0 60px;color:#fff}
-.band::before{
-  content:"";position:absolute;inset:0 0 -1px 0;z-index:-1;background:var(--band);
-  clip-path:polygon(40px 0,100% 0,100% 100%,0 100%)}
+  padding:0 18px 0 24px;color:#fff}
 
 .topnav{align-self:stretch;margin-right:6px}
 .tn-list{display:flex;height:100%;list-style:none}
@@ -116,12 +120,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .tn-btn{
   position:relative;display:flex;align-items:center;gap:8px;height:100%;
   padding:0 14px;font-family:var(--read);font-size:15.5px;font-weight:400;
-  letter-spacing:.1px;color:#fff;white-space:nowrap}
-/* a bar under the section you are in; a fainter one under the menu you are in */
+  letter-spacing:.1px;color:var(--band-ink);white-space:nowrap;transition:color .15s}
+.tn:hover .tn-btn,.tn:focus-within .tn-btn,.tn.open .tn-btn,.tn.on .tn-btn{color:#fff}
+/* a saffron bar under the section you are in; a fainter one under the menu you are in */
 .tn-btn::after{
   content:"";position:absolute;left:14px;right:14px;bottom:0;height:3px;
-  border-radius:3px 3px 0 0;background:#fff;opacity:0;transition:opacity .15s}
-.tn:hover .tn-btn::after,.tn:focus-within .tn-btn::after,.tn.open .tn-btn::after{opacity:.45}
+  border-radius:3px 3px 0 0;background:var(--saffron);opacity:0;transition:opacity .15s}
+.tn:hover .tn-btn::after,.tn:focus-within .tn-btn::after,.tn.open .tn-btn::after{opacity:.5}
 .tn.on .tn-btn::after{opacity:1}
 .tn-btn:focus-visible{outline:2px solid #fff;outline-offset:-8px;border-radius:10px}
 .tn-caret{
@@ -131,7 +136,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .dd{
   display:none;position:absolute;top:100%;left:0;z-index:80;
   min-width:300px;padding:6px;
-  background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--band);
+  background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--saffron);
   border-radius:0 0 12px 12px;box-shadow:var(--shadow-lg)}
 .tn:last-child .dd{left:auto;right:0}
 @media (hover:hover){ .topnav:not(.shut) .tn:hover > .dd{display:block} }
@@ -150,11 +155,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
 .band-btn{
   width:38px;height:38px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;
-  border:1.5px solid rgba(255,255,255,.6);color:#fff;font-size:16px;transition:.15s}
-.band-btn:hover{background:rgba(255,255,255,.14);border-color:#fff}
-.band-btn:focus-visible{outline:2px solid #fff;outline-offset:2px}
-.band-btn.solid{background:#fff;border-color:#fff;color:var(--band)}
-.band-btn.solid:hover{background:rgba(255,255,255,.86)}
+  border:1.5px solid rgba(255,255,255,.35);color:#fff;font-size:16px;transition:.15s}
+.band-btn:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.8)}
+.band-btn:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
+.band-btn.solid{background:var(--saffron);border-color:var(--saffron);color:var(--band)}
+.band-btn.solid:hover{background:#eba24c;border-color:#eba24c}
 
 /* search drops out of the band's end, and stays open while it holds a query */
 .searchbar{
@@ -188,13 +193,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 /* the menu button collapses the sidebar on a wide screen and opens the drawer
    on a narrow one, so one control means one thing: show me the navigation */
 .menu-btn{display:grid}
+.topbar .menu-btn{background:transparent;border-color:rgba(255,255,255,.3);color:#fff}
+.topbar .menu-btn:hover{border-color:var(--saffron);color:var(--saffron)}
+.topbar .menu-btn:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 
 /* The band gives up air first, then the name steps back to its mark, and only
    then do the sections leave for the drawer, which already lists them all. */
 @media (max-width:1340px){
   .tn-btn{padding:0 11px;font-size:14.5px}
   .tn-btn::after{left:11px;right:11px}
-  .band{padding-left:54px}
+  .band{padding-left:16px}
 }
 @media (max-width:1260px) and (min-width:1001px){ .brand-text{display:none} }
 @media (max-width:1000px){ .topnav{display:none} }
@@ -278,7 +286,11 @@ html[data-theme="dark"] .nav-item.active .nav-count{background:rgba(255,255,255,
 
 /* ---------------- Section head + filters ---------------- */
 .sec-head{margin-bottom:18px}
-.sec-head h3{font-family:var(--serif);font-size:23px;font-weight:600;letter-spacing:-.3px}
+/* every page heading stands in ink blue behind a saffron rule; where a small
+   label sits over it, the rule runs down beside both so they read as one */
+.sec-head h3{
+  font-family:var(--serif);font-size:23px;font-weight:600;letter-spacing:-.3px;
+  color:var(--head);border-left:4px solid var(--saffron);padding-left:14px}
 .sec-head p{color:var(--ink-2);font-size:14px;margin-top:3px;max-width:720px}
 
 .chips{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0 20px}
@@ -293,14 +305,15 @@ html[data-theme="dark"] .nav-item.active .nav-count{background:rgba(255,255,255,
 .home-lead{max-width:720px;margin:6px 0 28px}
 .home-lead h2{
   font-family:var(--read);font-size:30px;font-weight:500;line-height:1.25;
-  letter-spacing:-.3px;color:var(--ink);margin-bottom:12px}
+  letter-spacing:-.3px;color:var(--head);margin-bottom:12px;
+  border-left:4px solid var(--saffron);padding-left:16px}
 .home-lead p{font-family:var(--read);font-size:17px;line-height:1.78;color:var(--read-ink)}
 
 .papers{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px}
 .paper{
   display:flex;flex-direction:column;
   background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
-  border-top:3px solid var(--accent);padding:22px 24px 20px;box-shadow:var(--shadow)}
+  border-top:3px solid var(--saffron);padding:22px 24px 20px;box-shadow:var(--shadow)}
 .paper-h{display:flex;gap:15px;align-items:flex-start}
 .paper-mark{
   flex:0 0 auto;width:44px;height:44px;border-radius:11px;display:grid;place-items:center;
@@ -308,7 +321,7 @@ html[data-theme="dark"] .nav-item.active .nav-count{background:rgba(255,255,255,
 .paper-t{min-width:0}
 .paper-t h3{
   font-family:var(--read);font-size:22px;font-weight:500;line-height:1.25;
-  letter-spacing:-.2px;color:var(--ink);display:flex;align-items:baseline;
+  letter-spacing:-.2px;color:var(--head);display:flex;align-items:baseline;
   gap:10px;flex-wrap:wrap}
 .paper-t h3 em{
   font-style:normal;font-family:var(--sans);font-size:10.5px;font-weight:700;
@@ -338,7 +351,7 @@ html[data-theme="dark"] .nav-item.active .nav-count{background:rgba(255,255,255,
 
 .home-sec{
   font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.9px;
-  text-transform:uppercase;color:var(--ink-3);margin:30px 0 11px}
+  text-transform:uppercase;color:var(--saffron-ink);margin:30px 0 11px}
 .ref-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
 .refcard{
   display:flex;flex-direction:column;align-items:flex-start;text-align:left;
@@ -802,11 +815,14 @@ html[data-theme="dark"] .nav-item.active .nav-count{background:rgba(255,255,255,
 }
 .essay-kicker{
   font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
-  color:var(--accent);margin-bottom:9px;
+  color:var(--saffron-ink);padding:0 0 9px 14px;border-left:4px solid var(--saffron);
 }
+/* the style buttons sit between the label and the title, so the rule runs past them */
+.essay-kicker + .modebar{margin:0;padding:0 0 14px 14px;border-left:4px solid var(--saffron)}
 .essay-doc h1{
   font-family:var(--read);font-size:28px;font-weight:500;line-height:1.3;
-  letter-spacing:-.4px;color:var(--ink);margin-bottom:8px;
+  letter-spacing:-.4px;color:var(--head);margin-bottom:8px;
+  border-left:4px solid var(--saffron);padding-left:14px;
 }
 .essay-meta{
   font-size:11.5px;color:var(--ink-3);padding-bottom:18px;margin-bottom:22px;
@@ -1084,7 +1100,8 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 .worklab{max-width:760px}
 .worklab h1{
   font-family:var(--serif);font-size:31px;font-weight:600;line-height:1.2;
-  letter-spacing:-.5px;margin:6px 0 8px}
+  letter-spacing:-.5px;margin:0 0 8px;color:var(--head);
+  border-left:4px solid var(--saffron);padding-left:14px}
 .worklab > p{
   font-family:var(--serif);font-size:16.5px;line-height:1.78;margin-bottom:17px;color:var(--ink)}
 .wl-close{
@@ -1174,7 +1191,7 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 /* --- long-form work pages: sections, lists, timeline --- */
 .wl-prose h2{
   font-family:var(--serif);font-size:20px;font-weight:600;letter-spacing:-.2px;
-  color:var(--ink);margin:32px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+  color:var(--head);margin:32px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
 .wl-prose h2:first-child{margin-top:6px}
 .wl-prose p{
   font-family:var(--serif);font-size:16.5px;line-height:1.8;margin-bottom:16px;color:var(--ink)}
@@ -1218,7 +1235,8 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 .mapx-head{margin:0 0 20px}
 .mapx-head h2{
   font-family:var(--read);font-size:clamp(23px,3vw,30px);font-weight:500;line-height:1.22;
-  letter-spacing:-.3px;color:var(--ink);margin:0 0 10px;max-width:26ch}
+  letter-spacing:-.3px;color:var(--head);margin:0 0 10px;max-width:26ch;
+  border-left:4px solid var(--saffron);padding-left:14px}
 .mapx-head > p:not(.rd-crumbs){
   font-family:var(--read);font-size:16px;line-height:1.72;color:var(--read-ink);max-width:70ch}
 .mapx-list{list-style:none;display:grid;gap:10px;margin:0;padding:0}
@@ -1313,9 +1331,10 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 .rd{max-width:860px}
 .rd-head{margin:0 0 22px;padding:0 0 16px;border-bottom:1px solid var(--line)}
 .rd-crumbs{
-  display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0 0 9px;
+  display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0;padding:0 0 9px 14px;
+  border-left:4px solid var(--saffron);
   font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.8px;
-  text-transform:uppercase;color:var(--ink-3)}
+  text-transform:uppercase;color:var(--saffron-ink)}
 .rd-up{
   border:0;background:none;padding:0;cursor:pointer;color:var(--accent);
   font:inherit;letter-spacing:inherit;text-transform:inherit}
@@ -1325,7 +1344,7 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 .rd-toc{display:none}
 .rd-title{
   font-family:var(--read);font-size:27px;font-weight:500;line-height:1.22;
-  letter-spacing:-.3px;color:var(--ink)}
+  letter-spacing:-.3px;color:var(--head);border-left:4px solid var(--saffron);padding-left:14px}
 .rd-sub{
   font-family:var(--read);font-size:15px;line-height:1.66;color:var(--ink-2);
   margin-top:7px;max-width:70ch}
@@ -1449,10 +1468,12 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 
 .atl-eyebrow{
   font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.9px;
-  text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+  text-transform:uppercase;color:var(--saffron-ink);margin:0;padding:0 0 8px 14px;
+  border-left:4px solid var(--saffron)}
 .sm-pane.atl-entry h5{
   font-family:var(--read);font-size:28px;font-weight:500;line-height:1.22;
-  letter-spacing:-.3px;color:var(--ink);margin:0 0 18px}
+  letter-spacing:-.3px;color:var(--head);margin:0 0 18px;
+  border-left:4px solid var(--saffron);padding-left:14px}
 .atl-meta{
   display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 18px;
   padding:14px 0;margin:0 0 14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
