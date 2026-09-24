@@ -532,7 +532,8 @@ function searchHits(q){
     const all = [];
     SYLLABUS.forEach((r, p) => (GS4_CONCEPTS[r.t] || []).forEach((c, i) =>
       all.push({ t:c.t, h:r.t, to:"syllabus|" + (p + 1) + "|c:" + i,
-                 d:[].concat(c.d || [], ...(c.secs || []).map(x => [x[0]].concat(...x[1])), c.take || "").join(" ") })));
+                 d:[].concat(c.d || [], ...(c.secs || []).map(x => [x[0]].concat(...x[1])),
+                             ...(c.parts || []).map(x => x[1]), c.take || "").join(" ") })));
     out.concepts = titled(all, c => c.t, c => c.d);
   }
   if (typeof ATLAS !== "undefined") {
@@ -1863,19 +1864,24 @@ function conceptFreq(title, c, byQ){
   return n + (a === b ? " in " + a : ", " + a + " to " + b);
 }
 
-/* A note written as structured reading notes gets a definition box, numbered
-   sections and a key takeaway; an older note is plain paragraphs. */
+/* A note written as structured reading notes gets a definition box, then either
+   numbered sections (secs) or labelled parts (parts), and a key takeaway. A note
+   with neither is plain paragraphs. */
 function conceptBody(c){
   const g = x => gloss2(x, gs4Skip(c.t));
-  if (!c.secs) return c.d.map(x => `<p>${g(x)}</p>`).join("");
+  if (!c.secs && !c.parts) return c.d.map(x => `<p>${g(x)}</p>`).join("");
   const para = x => Array.isArray(x)
     ? `<ul>${x.map(li => `<li>${g(li)}</li>`).join("")}</ul>` : `<p>${g(x)}</p>`;
   return `
       <div class="gc-def"><b class="gc-lab">Definition</b>${c.d.map(para).join("")}</div>
-      ${c.secs.map((sec, k) => `
+      ${c.secs ? c.secs.map((sec, k) => `
       <section class="gc-sec">
         <h6><span>${k + 1}</span>${esc(sec[0])}</h6>
         ${sec[1].map(para).join("")}
+      </section>`).join("") : c.parts.map(pt => `
+      <section class="gc-part">
+        <b class="gc-role">${esc(pt[0])}</b>
+        ${pt[1].map(para).join("")}
       </section>`).join("")}
       ${c.take ? `<div class="gc-take"><b class="gc-lab">Key takeaway</b><p>${g(c.take)}</p></div>` : ""}`;
 }
