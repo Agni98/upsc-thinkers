@@ -20,9 +20,24 @@ all its text work exactly the same and show lettered monograms in place of photo
 | **Essay Paper** | Thinkers who supply an opening quote, a spine, or a counter-argument |
 | **GS-IV Ethics** | Thinkers named in or directly serving the Ethics syllabus |
 | **Quote Bank** | All 316 quotations in one scannable column, searchable |
-| **GS-IV Syllabus Map** | Each syllabus heading → the thinkers who answer it |
-| **Essay Theme Map** | The nine themes the paper keeps asking → thinkers, five sub-theme paragraphs, full essays |
+| **GS-IV Syllabus Map** | Each syllabus heading → its recurring concepts, the thinkers who answer it, its past questions |
+| **Essay Theme Map** | The nine themes the paper keeps asking → five sub-theme paragraphs, full essays, stories to use |
+| **Stories and Models** | The Human Thought Atlas: stories, thought experiments and models, arrangeable by essay theme |
 | **Past Questions** | 72 questions from nine Mains papers, grouped by what each one asks of you |
+
+### Reading the maps
+
+Both maps, and the atlas, read the same way. A map opens on an **index** of every heading,
+each with what is inside it and how much of it has been read. Open a heading and the sidebar
+becomes its **contents**: every heading down the side, the open one showing its items as a
+tree, and a tick against each item once it has been opened. The item itself fills a single
+reading column capped at a comfortable width, under a header that says where you are
+(*Theme 4 of 9 · Model paragraph 2 of 5*), with previous and next both at the top and the
+bottom. The left and right arrow keys step item by item, across headings.
+
+The site remembers what has been read and where you stopped, in this browser only. The home
+page offers **Continue where you left off**, and each map's index offers its own. On a narrow
+screen the contents live in the drawer, opened from **Contents** at the top of the column.
 
 Each thinker page has: a collapsed **Read full introduction** toggle → **Core Ideas** →
 **Key Quotations** → **Major Works** → **Where to Use It** (split into Essay themes and
@@ -108,6 +123,12 @@ because opening that way is the tell that an essay has stopped being editorial. 
 with" prompts those paragraphs leave for the writer. Where a story, experiment or model from the
 Human Thought Atlas does real work in an argument, it is used inside the paragraph that needs
 it; no essay is built around one.
+
+The atlas is part of the Essay paper in three places. Each theme in the Essay Theme Map lists
+**Stories to use** after its essays — the ones its essays draw on first — and they open in the
+same reading column. Each essay ends with **Stories this essay uses**. And each atlas entry
+says which themes it suits and which model essays use it. A theme's list is its `atlas` field
+in `ESSAY_THEMES` (app.js); an essay's is its `atlas` field in `essays.js`.
 
 Essays live in `essays.js`, keyed by their own title: `et` the title, `ep` the paragraphs,
 `serves` the questions it answers, `note` how it relates to its pair. `**double asterisks**`

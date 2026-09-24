@@ -353,6 +353,37 @@ html[data-theme="dark"] .nav-item.active .nav-count{background:rgba(255,255,255,
   color:var(--accent);margin:4px 0 5px}
 .ref-d{font-family:var(--read);font-size:13.5px;line-height:1.6;color:var(--ink-2)}
 
+/* ---------------- The front page: straight to a heading ---------------- */
+.paper-jl{
+  margin-top:17px;font:700 10.5px/1.4 var(--sans);letter-spacing:.8px;
+  text-transform:uppercase;color:var(--ink-3)}
+.paper-jump{list-style:none;margin:7px 0 0;padding:0;columns:2;column-gap:14px}
+.paper-jump li{break-inside:avoid}
+.paper-jump button{
+  display:flex;gap:8px;width:100%;text-align:left;padding:5px 7px;border:0;border-radius:7px;
+  background:none;cursor:pointer;font-family:var(--read);font-size:13.5px;line-height:1.42;
+  color:var(--ink-2);transition:.12s}
+.paper-jump button:hover{background:var(--accent-soft);color:var(--accent)}
+.paper-jump button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.paper-jump i{
+  flex:0 0 auto;min-width:17px;font-style:normal;font-family:var(--sans);font-size:11px;
+  font-weight:700;line-height:1.8;color:var(--accent)}
+@media (max-width:560px){ .paper-jump{columns:1} }
+
+/* ---------------- The Thought Atlas in the Essay paper ---------------- */
+.essay-stories{
+  margin-top:30px;padding:18px 20px;border:1px solid var(--line);border-radius:12px;
+  background:var(--bg)}
+.essay-stories > b{
+  display:block;font:700 10.5px/1.4 var(--sans);letter-spacing:.8px;text-transform:uppercase;
+  color:var(--accent)}
+.essay-doc .essay-stories p{
+  font-family:var(--read);font-size:14.5px;line-height:1.6;color:var(--ink-2);margin:6px 0 12px}
+.atl-uses{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 12px}
+.atl-uses:last-child{margin-bottom:0}
+.atl-uses b{flex:0 0 100%;font:600 12.5px/1.4 var(--sans);color:var(--ink-2)}
+@media print{ .essay-stories{break-inside:avoid} }
+
 @media (max-width:560px){
   .home-lead h2{font-size:24px}
   .home-lead p{font-size:16px;line-height:1.72}
@@ -1180,109 +1211,147 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 }
 @media print{ .wl-prose h2{break-after:avoid} .wl-timeline{break-inside:avoid} }
 
-/* ---------------- The map of the map ----------------
-   A root, its branches, and one branch opened. The connectors are drawn by
-   drawMind() once the text has been laid out. */
-.intro{max-width:840px;display:flex;flex-direction:column;align-items:flex-start;gap:24px}
-.intro h2{
-  font-family:var(--serif);font-size:clamp(23px,3.2vw,30px);font-weight:600;
-  line-height:1.16;letter-spacing:-.4px;color:var(--ink);max-width:20ch}
-
-.mind{position:relative;width:100%}
-.mlines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
-.mlines path{fill:none;stroke:var(--line);stroke-width:1.5}
-.mrow{display:flex;align-items:center;gap:40px}
-.mb{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
-.mnode{
-  position:relative;z-index:1;display:inline-flex;flex-direction:column;gap:2px;
-  background:var(--panel);border:1px solid var(--line);border-radius:10px;
-  padding:9px 15px;max-width:26ch}
-.mnode b{
-  font-family:var(--serif);font-size:14.5px;font-weight:600;color:var(--ink);
-  line-height:1.28}
-.mnode em{font-style:normal;font-size:11.8px;line-height:1.4;color:var(--ink-3)}
-.mnode.root{
-  background:var(--accent);border-color:var(--accent);padding:13px 19px}
-.mnode.root b{color:var(--panel);font-size:16.5px}
-.mnode.lead{border-color:var(--accent);border-width:1.5px}
-.mnode.leaf{background:var(--bg)}
-.mnode.dim{
-  background:none;border-style:dashed;flex-direction:row;align-items:center;gap:7px;
-  font-family:var(--sans);font-size:12.5px;font-weight:600;color:var(--ink-3)}
-.mnode.dim i{font-style:normal;font-size:9px;line-height:1}
-
-/* a node that opens something looks like it will */
-.mnode{font:inherit;text-align:left;color:inherit}
-.mnode.live{cursor:pointer;transition:.14s}
-.mnode.live:hover{border-color:var(--accent);box-shadow:var(--shadow)}
-.mnode.live:hover b{color:var(--accent)}
-.mnode.live:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.mnode.dim.live:hover{border-color:var(--accent);color:var(--accent)}
-
-.mind-note{font-size:13.4px;color:var(--ink-3)}
-
-@media (max-width:820px){
-  /* a branch that will not fit sideways becomes an indent */
-  .mlines{display:none}
-  .mrow{flex-direction:column;align-items:flex-start;gap:9px}
-  .mb{padding-left:16px;border-left:1.5px solid var(--line);width:100%}
-  .mnode{max-width:100%;width:100%;padding:12px 15px}   /* a finger, not a pointer */
+/* ---------------- A map's index page ----------------
+   Every heading at once, each with what is inside it and how much has been read.
+   One row per heading, because the headings are sentences, not labels. */
+.mapx{max-width:900px}
+.mapx-head{margin:0 0 20px}
+.mapx-head h2{
+  font-family:var(--read);font-size:clamp(23px,3vw,30px);font-weight:500;line-height:1.22;
+  letter-spacing:-.3px;color:var(--ink);margin:0 0 10px;max-width:26ch}
+.mapx-head > p:not(.rd-crumbs){
+  font-family:var(--read);font-size:16px;line-height:1.72;color:var(--read-ink);max-width:70ch}
+.mapx-list{list-style:none;display:grid;gap:10px;margin:0;padding:0}
+.mx{
+  display:flex;align-items:flex-start;gap:16px;width:100%;text-align:left;
+  padding:16px 18px;background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--radius);cursor:pointer;transition:.15s;font:inherit;color:inherit}
+.mx:hover{border-color:var(--accent);box-shadow:var(--shadow)}
+.mx:hover .mx-body b{color:var(--accent)}
+.mx:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mx-no{
+  flex:0 0 auto;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;
+  background:var(--accent-soft);color:var(--accent);font:700 13px/1 var(--sans)}
+.mx-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.mx-body b{font-family:var(--read);font-size:17.5px;font-weight:500;line-height:1.32;color:var(--ink);transition:.15s}
+.mx-body em{font-style:normal;font-family:var(--read);font-size:14px;line-height:1.55;color:var(--ink-2)}
+.mx-meta{font-family:var(--sans);font-size:12px;line-height:1.5;color:var(--ink-3);margin-top:4px}
+.mx-done{
+  flex:0 0 auto;margin-top:7px;font:600 11.5px/1.2 var(--sans);color:var(--ink-3);white-space:nowrap}
+.mx-done.full{color:var(--accent)}
+@media (max-width:620px){
+  .mx{padding:14px;gap:12px}
+  .mx-done{display:none}
 }
+
+/* ---------------- Continue where you left off ---------------- */
+.resume{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:14px;
+  width:100%;max-width:720px;text-align:left;margin:0 0 22px;padding:14px 18px;
+  border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;
+  background:var(--panel);box-shadow:var(--shadow);cursor:pointer;font:inherit;color:inherit;transition:.15s}
+.resume:hover{border-color:var(--accent);box-shadow:var(--shadow-lg)}
+.resume:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.resume-k{
+  grid-column:1;font:700 10.5px/1.5 var(--sans);letter-spacing:.8px;text-transform:uppercase;
+  color:var(--accent)}
+.resume b{
+  grid-column:1;font-family:var(--read);font-size:17px;font-weight:500;line-height:1.35;
+  color:var(--ink);margin:2px 0}
+.resume-w{grid-column:1;font-size:12.5px;line-height:1.45;color:var(--ink-2)}
+.resume i{grid-column:2;grid-row:1 / span 3;font-style:normal;font-size:20px;color:var(--accent)}
 
 /* the panel's own link back to it */
 .nav-intro .nav-ico{color:var(--accent);font-size:15px}
 .nav-intro .nav-name{font-weight:600}
 
-/* ================= GS-IV SYLLABUS MAP: TWO PANES =================
-   The contents of a heading on the left, whatever is chosen from them on the
-   right. The reading always arrives in the same place, which is the one thing
-   a grid of tiles could not promise however the panel was placed. */
-.sm{display:grid;grid-template-columns:264px minmax(0,1fr);align-items:start}
-.sm-list{
-  position:sticky;top:80px;max-height:calc(100vh - 100px);overflow-y:auto;
-  padding:2px 20px 20px 0;border-right:1px solid var(--line);
-  display:flex;flex-direction:column;gap:20px}
-.sm-list::-webkit-scrollbar{width:7px}
-.sm-list::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
-.sm-read{padding-left:28px;min-width:0}
+/* ================= READING A MAP =================
+   One column of navigation and one of reading. The sidebar carries the map's
+   contents as a tree: every heading, the open one showing what is in it, and a
+   tick against whatever has been read. The reading column is capped at a
+   comfortable measure and opens with a header that says where the reader is. */
 
-.sm-head{display:flex;flex-direction:column;gap:5px}
-.sm-no{
-  font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.9px;
-  text-transform:uppercase;color:var(--accent)}
-.sm-head h4{
-  font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.22;
-  letter-spacing:-.2px;color:var(--ink)}
-.sm-head p{font-size:12.2px;line-height:1.55;color:var(--ink-3)}
+/* the contents tree, inside the sidebar */
+.tree{
+  display:flex;flex-direction:column;gap:1px;
+  margin:3px 0 12px 19px;padding-left:9px;border-left:1.5px solid var(--line)}
+.tree-g{
+  display:flex;justify-content:space-between;gap:8px;padding:11px 8px 5px;
+  font-size:10px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;color:var(--ink-3)}
+.tree-g:first-child{padding-top:5px}
+.tree-g span{font-weight:600;letter-spacing:0}
+.tree-item{
+  display:flex;align-items:flex-start;gap:9px;width:100%;text-align:left;
+  padding:6px 8px;border:0;border-radius:7px;background:none;cursor:pointer;
+  font:inherit;font-size:13px;line-height:1.42;color:var(--ink-2);transition:.12s}
+.tree-item:hover{background:var(--line-2);color:var(--ink)}
+.tree-item:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.tree-item.on{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.tree-t{flex:1;min-width:0}
+/* an empty ring until read, then a filled tick */
+.tree-mark{
+  position:relative;flex:0 0 auto;width:13px;height:13px;margin-top:2.5px;
+  border-radius:50%;border:1.5px solid var(--line)}
+.tree-item.on .tree-mark{border-color:var(--accent)}
+.tree-item.done .tree-mark{border-color:var(--accent);background:var(--accent)}
+.tree-item.done .tree-mark::after{
+  content:"";position:absolute;left:3.2px;top:.6px;width:3px;height:6.5px;
+  border:solid var(--panel);border-width:0 1.6px 1.6px 0;transform:rotate(45deg)}
+/* the count against each heading reads as progress */
+.nav-count.full{background:var(--accent-soft);color:var(--accent)}
+.nav-item.active .nav-count.full{background:rgba(0,0,0,.20);color:var(--panel)}
+@media (min-width:881px){
+  html[data-side="off"] .tree,
+  html[data-side="off"] .atl-side{display:none}
+}
+@media (max-width:880px){
+  /* a finger needs more than a pointer does */
+  .tree-item{padding:10px 10px;font-size:14px}
+}
 
-/* how far through the whole map this reading sits */
-.sm-prog{display:flex;flex-direction:column;gap:5px;margin-top:9px}
-.sm-bar{height:4px;border-radius:3px;background:var(--line);overflow:hidden}
-.sm-bar i{display:block;height:100%;border-radius:3px;background:var(--accent)}
-.sm-prog span{
-  display:flex;justify-content:space-between;align-items:baseline;
-  font-family:var(--sans);font-size:10.5px;font-weight:600;color:var(--ink-3);
-  font-variant-numeric:tabular-nums}
-.sm-prog b{color:var(--accent);font-weight:700}
+/* the reading column */
+.rd{max-width:860px}
+.rd-head{margin:0 0 22px;padding:0 0 16px;border-bottom:1px solid var(--line)}
+.rd-crumbs{
+  display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0 0 9px;
+  font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.8px;
+  text-transform:uppercase;color:var(--ink-3)}
+.rd-up{
+  border:0;background:none;padding:0;cursor:pointer;color:var(--accent);
+  font:inherit;letter-spacing:inherit;text-transform:inherit}
+.rd-up:hover{text-decoration:underline;text-underline-offset:3px}
+.rd-up:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+.rd-sep{color:var(--line)}
+.rd-toc{display:none}
+.rd-title{
+  font-family:var(--read);font-size:27px;font-weight:500;line-height:1.22;
+  letter-spacing:-.3px;color:var(--ink)}
+.rd-sub{
+  font-family:var(--read);font-size:15px;line-height:1.66;color:var(--ink-2);
+  margin-top:7px;max-width:70ch}
+.rd-where{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px}
+.rd-kind{
+  font-family:var(--sans);font-size:12px;font-weight:700;line-height:1;
+  color:var(--accent);background:var(--accent-soft);border-radius:20px;padding:6px 12px}
+.rd-steps{display:flex;gap:6px}
+.rd-step{
+  width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+  border:1px solid var(--line);background:var(--panel);color:var(--ink-2);
+  font-size:15px;line-height:1;cursor:pointer;transition:.13s}
+.rd-step:hover{border-color:var(--accent);color:var(--accent)}
+.rd-step:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.rd-step.off{opacity:.35;cursor:default}
+.rd .sm-move{margin-top:22px}
+@media (max-width:880px){
+  .rd-toc{
+    display:inline-flex;align-items:center;gap:7px;margin-right:4px;padding:8px 13px;
+    border:1px solid var(--accent);border-radius:20px;background:var(--accent-soft);
+    color:var(--accent);font:700 12px/1 var(--sans);letter-spacing:0;text-transform:none;cursor:pointer}
+  .rd-title{font-size:23px}
+}
 
-.sm-group{display:flex;flex-direction:column;gap:1px}
-.sm-group > b{
-  font-size:9.8px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;
-  color:var(--ink-3);margin-bottom:6px}
-.sm-pick{
-  display:flex;align-items:baseline;gap:9px;width:100%;text-align:left;
-  padding:7px 10px;border-radius:7px;border:0;background:none;cursor:pointer;
-  font:inherit;transition:.13s}
-.sm-pick:hover{background:var(--line-2)}
-.sm-pick:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
-.sm-pick.on{background:var(--accent-soft)}
-.sm-t{flex:1;font-size:13.2px;line-height:1.42;color:var(--ink-2)}
-.sm-pick.on .sm-t{color:var(--accent);font-weight:600}
-.sm-n{
-  flex:0 0 auto;font-family:var(--sans);font-size:10.5px;font-weight:700;
-  color:var(--ink-3);font-variant-numeric:tabular-nums}
-.sm-pick.on .sm-n{color:var(--accent)}
-
+/* ---------------- The item being read ----------------
+   A paragraph, a concept, a list of thinkers or questions: a plain sheet. */
 .sm-pane{
   background:var(--panel);border:1px solid var(--line);
   border-left:3px solid var(--accent);border-radius:var(--radius);
@@ -1338,49 +1407,14 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   color:var(--ink-3);border:1px dashed var(--line);border-radius:var(--radius)}
 .sm-move .mv.next,.sm-move .mv-end:last-child{justify-content:flex-end;text-align:right}
 
-/* clicking the open heading folds its contents; the reading takes the width */
-.sm.fold{grid-template-columns:minmax(0,1fr)}
-.sm.fold .sm-list{display:none}
-.sm.fold .sm-read{padding-left:0}
-.nav-fold{
-  flex:0 0 auto;margin-left:5px;font-size:9px;line-height:1;opacity:.75}
-
-.sm-back{display:none}
-
-/* the sidebar, while it is carrying the sixteen headings */
+/* the sidebar, while it is carrying a map's contents */
 .nav-back{color:var(--accent) !important;font-weight:600}
 .syl-no{
   font-family:var(--sans);font-size:10.5px;font-weight:700;
   color:var(--ink-3);font-variant-numeric:tabular-nums}
 .nav-item.active .syl-no{color:inherit}
 
-/* Below this the reading column falls under about 520px, which is too narrow
-   for six paragraphs and a call-out, so the panes take turns instead. */
-@media (max-width:1120px){
-  .sm{grid-template-columns:1fr}
-  .sm-list{
-    position:static;max-height:none;overflow:visible;
-    border-right:0;padding:0 0 4px}
-  .sm-read{padding-left:0}
-  .sm.reading .sm-list{display:none}
-  .sm:not(.reading) .sm-read{display:none}
-  /* the panes already take turns here, so there is nothing to fold */
-  .sm.fold .sm-list{display:flex}
-  .nav-fold{display:none}
-  .sm.reading .sm-back{
-    display:inline-flex;align-items:center;gap:7px;margin-bottom:14px;
-    font-family:var(--sans);font-size:12.5px;font-weight:600;color:var(--accent);
-    padding:6px 12px;border:1px solid var(--line);border-radius:20px;
-    background:var(--panel);cursor:pointer}
-  .sm.reading .sm-back:hover{border-color:var(--accent);background:var(--accent-soft)}
-  .sm.reading .sm-back{padding:9px 14px}
-  .sm-pane{padding:16px 15px 14px}
-  .sm-move{grid-template-columns:1fr}
-  /* a finger needs more than a pointer does */
-  .sm-pick{padding:11px 12px}
-  .sm-t{font-size:14px}
-  .sm-list{gap:24px}
-}
+@media (max-width:1120px){ .sm-move{grid-template-columns:1fr} }
 @media (max-width:700px){
   .sm-pane,.sm-pane.gc-item,.sm-pane.ans{padding:22px 18px 20px}
   .sm-pane.gc-item > p,.sm-pane.ans > p,.profile-body p,.essay-doc p{
@@ -1390,17 +1424,15 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 }
 
 @media print{
-  .sm{grid-template-columns:1fr}
-  .sm-list,.sm-back,.sm-move{display:none}
-  .sm-read{padding-left:0}
+  .sm-move,.rd-steps,.rd-toc,.rd-kind{display:none}
+  .rd{max-width:100%}
 }
 
 /* ================= HUMAN THOUGHT ATLAS =================
-   The syllabus map's two panes, with a search box and five ways to arrange the
-   contents above the list, and one entry at a time in the reading face. */
-.atlas .sec-head p{max-width:780px}
-.atl .sm-list{gap:16px}
-.atl .sm-head{gap:10px}
+   Its contents live in the sidebar like a map's: a search box and six ways to
+   arrange the entries above the list, and one entry at a time in the column. */
+.atl-side{display:flex;flex-direction:column;gap:9px;padding:0 2px 6px}
+.atl-tree{margin:0;padding:0;border:0}
 .atl-search{
   width:100%;padding:8px 11px;border:1px solid var(--line);border-radius:8px;
   background:var(--panel);color:var(--ink);font:13.5px/1.3 var(--sans)}
@@ -1413,8 +1445,7 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 .atl-mode:hover{border-color:var(--accent);color:var(--accent)}
 .atl-mode.on{background:var(--accent);border-color:var(--accent);color:var(--panel)}
 .atl-mode:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.atl-groups{display:flex;flex-direction:column;gap:20px}
-.atl-none{font-size:13px;line-height:1.55;color:var(--ink-3)}
+.atl-none{padding:6px 8px;font-size:13px;line-height:1.55;color:var(--ink-3)}
 
 .atl-eyebrow{
   font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.9px;
@@ -1473,9 +1504,6 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   .atl-f .atl-q{font-size:18.5px}
   .atl-meta{grid-template-columns:minmax(0,1fr);gap:2px}
   .atl-meta dd{margin-bottom:8px}
-}
-@media print{
-  .atl .sm-list{display:none}
 }
 
 /* ================= ESSAY THEME MAP: TILES ================= */
