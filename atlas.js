@@ -45,6 +45,7 @@ const ATLAS = [
   {"id": "dictator", "t": "Dictator's Dilemma", "src": "Political science", "form": "Strategic model", "fg": "model", "tr": "science", "q": "Information and authoritarian stability", "sec": "politics", "th": ["power", "knowledge"]},
   {"id": "tacitus", "t": "The Sword of Damocles", "src": "Cicero, Tusculan Disputations", "form": "Historical anecdote", "fg": "anecdote", "tr": "greek", "q": "Power, fear and political judgment", "sec": "politics", "th": ["power", "uncertainty"]},
   {"id": "gadfly", "t": "Socrates' Gadfly", "src": "Plato, Apology", "form": "Historical anecdote", "fg": "anecdote", "tr": "greek", "q": "Dissent; examination; civic responsibility", "sec": "politics", "th": ["power", "freedom"]},
+  {"id": "womenleaders", "t": "Women as Policy Makers", "src": "Raghabendra Chattopadhyay and Esther Duflo", "form": "Natural experiment", "fg": "experiment", "tr": "science", "q": "Does it matter who holds office?", "sec": "politics", "th": ["justice", "power", "identity"]},
   {"id": "invisiblehand", "t": "Invisible Hand", "src": "Adam Smith", "form": "Metaphor", "fg": "metaphor", "tr": "western", "q": "Decentralized coordination", "sec": "economics", "th": ["cooperation", "incentives", "unintended"]},
   {"id": "cobra", "t": "Cobra Effect", "src": "Colonial India anecdote", "form": "Institutional anecdote", "fg": "anecdote", "tr": "science", "q": "Perverse incentives", "sec": "economics", "th": ["incentives", "unintended"]},
   {"id": "goodhart", "t": "Goodhart's Law", "src": "Marilyn Strathern / economics", "form": "Principle", "fg": "model", "tr": "science", "q": "Targets distort when used as measures", "sec": "economics", "th": ["incentives", "unintended"]},
@@ -53,6 +54,9 @@ const ATLAS = [
   {"id": "moralhazard", "t": "Moral Hazard", "src": "Insurance / economics", "form": "Conceptual model", "fg": "model", "tr": "science", "q": "Behaviour changes when protected from consequences", "sec": "economics", "th": ["incentives", "unintended"]},
   {"id": "beauty", "t": "Beauty Contest", "src": "Keynes, General Theory", "form": "Game / metaphor", "fg": "model", "tr": "science", "q": "Strategic anticipation of others", "sec": "economics", "th": ["uncertainty", "cooperation"]},
   {"id": "brokenwindows", "t": "Broken Windows", "src": "Wilson & Kelling", "form": "Metaphor / theory", "fg": "model", "tr": "science", "q": "Signals, disorder and social behaviour", "sec": "economics", "th": ["power", "unintended"]},
+  {"id": "lemons", "t": "The Market for Lemons", "src": "George Akerlof", "form": "Economic model", "fg": "model", "tr": "science", "q": "How hidden quality drives good goods out of a market", "sec": "economics", "th": ["incentives", "knowledge", "cooperation"]},
+  {"id": "rentseeking", "t": "Rent-Seeking", "src": "Anne Krueger", "form": "Economic concept", "fg": "concept", "tr": "science", "q": "Wealth from capturing favours instead of creating value", "sec": "economics", "th": ["incentives", "power", "justice"]},
+  {"id": "fineprice", "t": "A Fine Is a Price", "src": "Uri Gneezy and Aldo Rustichini", "form": "Field experiment", "fg": "experiment", "tr": "science", "q": "When money crowds out duty", "sec": "economics", "th": ["incentives", "unintended", "cooperation"]},
   {"id": "maxwell", "t": "Maxwell's Demon", "src": "James Clerk Maxwell", "form": "Thought experiment", "fg": "te", "tr": "science", "q": "Information, entropy and thermodynamics", "sec": "science", "th": ["knowledge", "uncertainty"]},
   {"id": "schrodinger", "t": "Schrödinger's Cat", "src": "Erwin Schrödinger", "form": "Thought experiment", "fg": "te", "tr": "science", "q": "Quantum superposition and measurement", "sec": "science", "th": ["uncertainty", "knowledge"]},
   {"id": "laplace", "t": "Laplace's Demon", "src": "Pierre-Simon Laplace", "form": "Thought experiment", "fg": "te", "tr": "science", "q": "Determinism and predictability", "sec": "science", "th": ["uncertainty", "freedom"]},
@@ -71,6 +75,11 @@ const ATLAS = [
   {"id": "dunningkruger", "t": "Dunning–Kruger Effect", "src": "Dunning & Kruger", "form": "Psychological finding", "fg": "experiment", "tr": "science", "q": "Metacognition and competence", "sec": "psychology", "th": ["knowledge"]},
   {"id": "hedonic", "t": "Hedonic Treadmill", "src": "Positive psychology / adaptation research", "form": "Model", "fg": "model", "tr": "science", "q": "Adaptation to gains and losses", "sec": "psychology", "th": ["identity"]},
   {"id": "skinner", "t": "Skinner Box", "src": "B. F. Skinner", "form": "Experimental setup", "fg": "experiment", "tr": "science", "q": "Reinforcement and behaviour", "sec": "psychology", "th": ["incentives", "freedom"]},
+  {"id": "dissonance", "t": "Cognitive Dissonance", "src": "Leon Festinger", "form": "Experiment and theory", "fg": "experiment", "tr": "science", "q": "Why actions change beliefs", "sec": "psychology", "th": ["identity", "knowledge"]},
+  {"id": "groupthink", "t": "Groupthink", "src": "Irving Janis", "form": "Concept from case studies", "fg": "model", "tr": "science", "q": "Why close-knit groups make bad decisions", "sec": "psychology", "th": ["power", "knowledge", "cooperation"]},
+  {"id": "robberscave", "t": "Robbers Cave and the Minimal Group", "src": "Muzafer Sherif / Henri Tajfel", "form": "Experiment", "fg": "experiment", "tr": "science", "q": "How groups turn hostile, and what brings them back together", "sec": "psychology", "th": ["identity", "cooperation", "power"]},
+  {"id": "framing", "t": "Framing and Loss Aversion", "src": "Amos Tversky and Daniel Kahneman", "form": "Experiment", "fg": "experiment", "tr": "science", "q": "Why the same choice, worded differently, gets a different answer", "sec": "psychology", "th": ["knowledge", "uncertainty", "incentives"]},
+  {"id": "scarcity", "t": "The Scarcity Mindset", "src": "Mani, Mullainathan, Shafir and Zhao", "form": "Experiment", "fg": "experiment", "tr": "science", "q": "How poverty uses up mental bandwidth", "sec": "psychology", "th": ["justice", "freedom", "incentives"]},
   {"id": "chicken", "t": "Chicken Game", "src": "Game theory", "form": "Strategic model", "fg": "model", "tr": "science", "q": "Brinkmanship and commitment", "sec": "strategy", "th": ["power", "cooperation"]},
   {"id": "battlesexes", "t": "Battle of the Sexes", "src": "Game theory", "form": "Strategic model", "fg": "model", "tr": "science", "q": "Coordination under preference conflict", "sec": "strategy", "th": ["cooperation"]},
   {"id": "focal", "t": "Schelling's Focal Point", "src": "Thomas Schelling", "form": "Concept / example", "fg": "model", "tr": "science", "q": "Coordination without communication", "sec": "strategy", "th": ["cooperation"]},
@@ -1792,7 +1801,8 @@ const ATLAS_ENTRIES = {
       "pd",
       "staghunt",
       "generalwill",
-      "principalagent"
+      "principalagent",
+      "womenleaders"
     ],
     "reading": [
       [
@@ -2113,6 +2123,64 @@ const ATLAS_ENTRIES = {
       ]
     ]
   },
+  "womenleaders": {
+    "source": "Raghabendra Chattopadhyay and Esther Duflo, “Women as Policy Makers: Evidence from a Randomized Policy Experiment in India”, Econometrica (2004)",
+    "period": "India, 1993 to 2012",
+    "tradition": "Development economics",
+    "type": "A natural experiment. In a natural experiment, chance or a rule, and not the researcher, decides who receives a change.",
+    "setup": [
+      "The 73rd Amendment to the Constitution, which came into force in 1993, reserved one third of the posts of panchayat head, or pradhan, for women. In West Bengal, the reserved villages were chosen at random. For researchers, the rule created a rare chance. They could compare villages with women pradhans to similar villages led by men, knowing that chance alone had decided which was which.",
+      "The economists Raghabendra Chattopadhyay and Esther Duflo studied 265 village councils in Birbhum district in West Bengal and Udaipur district in Rajasthan. They recorded what each council had built, and they asked villagers what they wanted from it. The study was published in 2004.",
+      "Leaders built what people of their own sex asked for. In West Bengal, women complained most about drinking water and roads. Councils led by women built more drinking water facilities and kept roads in better repair. In Rajasthan, women complained about drinking water but much less about roads. There, councils led by women built more water facilities, and their roads were in worse repair.",
+      "Later studies in Birbhum found further effects. Male villagers who had never had a woman pradhan rated a recorded speech lower when a woman’s voice read it. In villages that had already had a woman pradhan, men judged women leaders more fairly. After two terms of reservation, women also won more seats that were not reserved. And in villages led by women for two terms, parents’ hopes for their daughters came closer to their hopes for their sons, and girls caught up with boys in schooling."
+    ],
+    "question": "Does it make a difference to ordinary people whether a man or a woman holds public office?",
+    "reveals": "The study shows that representation is not only symbolic. Leaders tend to act on the problems that people like them feel most sharply. When women were given power by law, public spending moved toward what women had asked for. Over time, seeing women in office also changed what villagers believed women could do.",
+    "readings": [
+      [
+        "Presence and policy",
+        "Political scientists distinguish between an assembly that looks like the people and an assembly that acts for them. The Indian evidence suggests that the first can lead to the second."
+      ],
+      [
+        "Role models",
+        "Girls who see a woman running the village may raise their own ambitions. Parents who see her may raise their hopes for their daughters."
+      ],
+      [
+        "Chance as evidence",
+        "Because chance decided which villages were reserved, the differences can be traced to the pradhan’s sex and not to differences between villages. Evidence this clean is rare in politics."
+      ]
+    ],
+    "breaks": [
+      "Some women pradhans are figureheads for husbands or male relatives, a practice known as pradhan pati or sarpanch pati. In 2025, an advisory committee of the Ministry of Panchayati Raj recommended strict penalties against such proxy rule.",
+      "Results differ by place. A study of four South Indian states, published in 2008 by Radu Ban and Vijayendra Rao, found that women leaders performed no differently from men.",
+      "Rotation means that a woman may hold office for only one term. She has little time to learn the job or to build a record for re-election."
+    ],
+    "uses": [
+      "Women’s reservation: The Constitution (106th Amendment) Act, 2023, known as the Nari Shakti Vandan Adhiniyam, reserves one third of seats in the Lok Sabha and the state assemblies for women. The reservation will take effect after the next census and delimitation.",
+      "Panchayats today: Twenty-one states and two union territories have raised the reservation for women in panchayats to 50 percent.",
+      "Proxy rule: Training for women representatives, public swearing-in ceremonies and open records of who attends meetings help make sure that the elected woman, and not a relative, holds the office.",
+      "Exam use: In GS-II, use it for local government and the representation of women. In GS-IV, use it for justice, equality and role models. In the Essay paper, use it for topics on women’s empowerment, democracy and whether laws can change attitudes."
+    ],
+    "related": [
+      "veil",
+      "generalwill",
+      "collectiveaction",
+      "principalagent",
+      "robberscave"
+    ],
+    "reading": [
+      [
+        "Raghabendra Chattopadhyay and Esther Duflo, “Women as Policy Makers: Evidence from a Randomized Policy Experiment in India”, Econometrica (2004)",
+        "",
+        "https://doi.org/10.1111/j.1468-0262.2004.00539.x"
+      ],
+      [
+        "Lori Beaman and others, “Female Leadership Raises Aspirations and Educational Attainment for Girls: A Policy Experiment in India”, Science (2012)",
+        "",
+        "https://doi.org/10.1126/science.1212382"
+      ]
+    ]
+  },
   "invisiblehand": {
     "source": "Adam Smith, The Theory of Moral Sentiments (1759), Part IV, chapter 1; An Inquiry into the Nature and Causes of the Wealth of Nations (1776), Book IV, chapter 2",
     "period": "Scotland, 1759 and 1776",
@@ -2222,7 +2290,8 @@ const ATLAS_ENTRIES = {
       "principalagent",
       "moralhazard",
       "butterfly",
-      "midas"
+      "midas",
+      "fineprice"
     ],
     "reading": [
       [
@@ -2410,7 +2479,8 @@ const ATLAS_ENTRIES = {
       "campbell",
       "dictator",
       "collectiveaction",
-      "gyges"
+      "gyges",
+      "rentseeking"
     ],
     "reading": [
       [
@@ -2475,7 +2545,8 @@ const ATLAS_ENTRIES = {
       "commons",
       "cobra",
       "goodhart",
-      "samaritan"
+      "samaritan",
+      "lemons"
     ],
     "reading": [
       [
@@ -2612,6 +2683,186 @@ const ATLAS_ENTRIES = {
         "“Broken windows theory”, Wikipedia",
         "Free overview of the theory, the evidence and the criticism.",
         "https://en.wikipedia.org/wiki/Broken_windows_theory"
+      ]
+    ]
+  },
+  "lemons": {
+    "source": "George Akerlof, “The Market for ‘Lemons’: Quality Uncertainty and the Market Mechanism”, Quarterly Journal of Economics (1970)",
+    "period": "United States and India, 1967 to 1970",
+    "tradition": "Economics",
+    "type": "A model. A model is a simple picture of how something works.",
+    "setup": [
+      "In American slang, a lemon is a used car with hidden defects. The seller knows whether the car is good. The buyer, at the time of sale, does not.",
+      "In 1970, the economist George Akerlof showed what follows. Suppose buyers cannot tell good cars from lemons. They will offer only an average price, since any car might be a lemon. But an average price is too low for the owner of a good car, so good cars are held back from the market. The cars left for sale are worse on average, so buyers lower their offers again. More good cars leave. In the extreme case, only lemons remain and the market collapses.",
+      "Three leading journals rejected the paper. Two found it trivial. The third said that if it were correct, no goods could be traded at all. The paper was finally published on the fourth attempt. In 2001, Akerlof shared the Nobel Prize in economics with Michael Spence and Joseph Stiglitz for their work on markets where one side knows more than the other.",
+      "Akerlof spent 1967–68 at the Indian Statistical Institute in New Delhi, and India appears in the paper. He wrote about the managing agencies that then controlled much of Indian industry. Investors trusted an agency with a reputation for honest dealing, or invested only within their own community, where family ties discouraged cheating. He also used the idea to explain why village moneylenders could charge very high interest. An outside lender who offered lower rates would attract the borrowers least likely to repay.",
+      "Akerlof’s wider point was that dishonesty has a hidden cost. A cheat does not harm only one buyer. By making buyers suspicious, the cheat drives honest sellers out of business."
+    ],
+    "question": "What happens to a market when sellers know much more about quality than buyers?",
+    "reveals": "The market for lemons shows that a market needs trust as much as it needs buyers and sellers. When quality is hidden, the price falls to the average, good products leave, and the average falls further. The problem is not greed on one side. The problem is missing information. Warranties, brands, certificates and regulators keep good sellers in the market by making quality visible.",
+    "readings": [
+      [
+        "Adverse selection",
+        "When one side knows more, the deals that actually happen tend to be the bad ones. People who expect to fall ill are the keenest to buy health insurance. Insurers then raise prices, and healthy people drop out."
+      ],
+      [
+        "Signals and guarantees",
+        "Sellers of good products try to prove their quality. A warranty, a brand with a long record or an independent certificate tells the buyer what inspection cannot."
+      ],
+      [
+        "Trust as an asset",
+        "Honesty in a market helps everyone in it. When cheating becomes common, even honest traders lose, because buyers cannot tell them apart from cheats."
+      ]
+    ],
+    "breaks": [
+      "Real markets rarely collapse completely. Dealers, warranties, reviews and inspection services grow up to fill the gap.",
+      "Tests on used cars have found smaller quality gaps than the model suggests. An early study in 1982 found that used pickup trucks bought second-hand needed no more repairs than similar trucks that had never been sold.",
+      "Buyers are not always the side that knows less. In insurance, the company often understands the fine print far better than the customer."
+    ],
+    "uses": [
+      "Housing: Buyers of flats under construction cannot see what they are paying for. The Real Estate (Regulation and Development) Act, 2016 requires projects to be registered, key details to be disclosed, and most of the buyers’ money to be kept in a separate account for the project.",
+      "Gold: Buyers cannot judge the purity of jewellery by looking at it. Since June 2021, hallmarking of gold jewellery by the Bureau of Indian Standards has been compulsory, starting with 256 districts.",
+      "Jobs and degrees: Employers cannot see a graduate’s real ability, so they lean on degrees and the names of colleges. When degrees become easy to get, employers stop trusting them, and able graduates suffer along with the rest.",
+      "Exam use: In GS-IV, use it for honesty, trust and the cost of corruption to the whole economy. In GS-III, use it for consumer protection and regulation. In the Essay paper, use it for topics on trust, markets and the value of honesty."
+    ],
+    "related": [
+      "moralhazard",
+      "principalagent",
+      "goodhart",
+      "invisiblehand",
+      "rentseeking",
+      "staghunt"
+    ],
+    "reading": [
+      [
+        "George A. Akerlof, “The Market for ‘Lemons’: Quality Uncertainty and the Market Mechanism”, Quarterly Journal of Economics (1970)",
+        "",
+        "https://doi.org/10.2307/1879431"
+      ],
+      [
+        "“The Market for Lemons”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/The_Market_for_Lemons"
+      ]
+    ]
+  },
+  "rentseeking": {
+    "source": "Anne O. Krueger, “The Political Economy of the Rent-Seeking Society”, American Economic Review (1974)",
+    "period": "India and Turkey, 1964 to 1974",
+    "tradition": "Economics",
+    "type": "A concept, measured with data. A concept is a general idea used to explain many cases.",
+    "setup": [
+      "For decades after independence, an Indian firm needed government permission for almost everything. A firm needed a licence to set up a factory, to expand it and to import machines or materials. Because imports were restricted, an import licence was worth a great deal. Whoever held one could buy goods abroad and sell them at home at a much higher price. C. Rajagopalachari called the system the permit-licence raj.",
+      "In 1974, the economist Anne Krueger looked at what firms did to get these licences. Licences for imported materials and parts were often shared out in proportion to a firm’s factory capacity. So firms built extra capacity that they did not need, just to qualify for more licences. Businessmen made trips to the capital and opened offices there. Firms hired relatives of officials, or officials who had retired. Some paid bribes.",
+      "Krueger called this competition rent-seeking. A rent here means income that comes from a special privilege, such as a licence, and not from producing anything. Rent-seeking is the effort people spend to capture such income. The effort is a real loss to the economy. The factories built for licences, the trips and the lobbying produce nothing useful.",
+      "Krueger estimated that rents in India in 1964 were worth about 7.3 percent of national income. Import licences were the largest part. For Turkey in 1968, she estimated about 15 percent.",
+      "She also warned of a vicious circle. When people see that wealth goes to the well connected, they lose faith in markets. They then demand more controls, which create more rents and more rent-seeking."
+    ],
+    "question": "What happens to an economy when people can grow rich faster by winning favours from the state than by producing goods?",
+    "reveals": "Rent-seeking shows that a control on the economy has a cost beyond the obvious one. Firms and individuals spend time, money and talent competing for the privilege the control creates, and the effort itself is wasted. Where favours are the surest route to wealth, able people move from making things to lobbying for things. Trust in both the market and the state then falls.",
+    "readings": [
+      [
+        "Rent versus profit",
+        "Profit that comes from a better product rewards value created. Rent that comes from a licence or a monopoly rewards a position held. Both look like income, but only one adds to the economy."
+      ],
+      [
+        "Corruption as one symptom",
+        "Bribery is one form of rent-seeking, but most rent-seeking is legal. Lobbying, extra capacity and endless applications waste resources without breaking any law."
+      ],
+      [
+        "Discretion",
+        "Every decision that depends on an official’s choice creates a possible rent. Clear rules, open auctions and fewer permissions shrink the prize worth competing for."
+      ]
+    ],
+    "breaks": [
+      "Krueger’s figures are rough estimates. They assume that competition for rents wastes their whole value, which may overstate the loss.",
+      "Not all lobbying is waste. Firms and groups can give the government useful information about the effects of a policy.",
+      "Removing controls does not end rent-seeking. Rents can move to new places, such as land use, spectrum or public contracts."
+    ],
+    "uses": [
+      "1991 reforms: The New Industrial Policy of 1991 ended industrial licensing for all but a short list of industries and began to ease import controls. Much of the licence raj described by Krueger was taken apart.",
+      "Natural resources: In 2012, the Supreme Court cancelled 122 telecom licences that had been issued in 2008 on a first-come, first-served basis. Spectrum has since been sold mainly by auction. In 2014, the Court cancelled 214 coal block allocations. The criminal trial in the telecom case ended in acquittals in 2017, but the Court’s point about arbitrary allocation still stands.",
+      "Compliance: The Jan Vishwas (Amendment of Provisions) Act, 2023 removed or reduced criminal penalties in 183 provisions across 42 central laws. Fewer ways to threaten a business mean fewer chances to demand a bribe.",
+      "Exam use: In GS-IV, use it for probity, corruption and the ethics of discretion in public office. In GS-III, use it for liberalisation and the allocation of natural resources. In the Essay paper, use it for topics on the state and the market."
+    ],
+    "related": [
+      "principalagent",
+      "cobra",
+      "collectiveaction",
+      "freerider",
+      "dictator",
+      "lemons"
+    ],
+    "reading": [
+      [
+        "Anne O. Krueger, “The Political Economy of the Rent-Seeking Society”, American Economic Review (1974)",
+        "The original paper, online.",
+        "https://www.aeaweb.org/aer/top20/64.3.291-303.pdf"
+      ],
+      [
+        "“Rent-seeking”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/Rent-seeking"
+      ]
+    ]
+  },
+  "fineprice": {
+    "source": "Uri Gneezy and Aldo Rustichini, “A Fine Is a Price”, Journal of Legal Studies (2000), and Richard Titmuss, The Gift Relationship (1970)",
+    "period": "Israel, 2000, and the United Kingdom, 1970",
+    "tradition": "Behavioural economics",
+    "type": "A field experiment. A field experiment is a test run in real life, not in a laboratory.",
+    "setup": [
+      "Ten day-care centres in Haifa, in Israel, closed at four in the afternoon. Some parents came late, and a teacher had to wait with their children. In a study published in 2000, the economists Uri Gneezy and Aldo Rustichini watched what happened when late parents were fined.",
+      "For four weeks, the researchers simply counted late arrivals. Then, in six of the ten centres, a fine of 10 shekels per child was introduced for any parent who came more than ten minutes late. The monthly fee was 1,400 shekels. The other four centres made no change.",
+      "Ordinary economics predicts that a fine reduces the behaviour it punishes. The opposite happened. In the centres with the fine, late arrivals rose steadily. Within two or three weeks they had roughly doubled. At the start of the seventeenth week, the fine was removed. Lateness stayed at the new, higher level.",
+      "The authors argued that the fine changed the meaning of being late. Before, a parent who came late knew that a teacher was doing a favour, and felt guilty. The fine turned the favour into a service with a price. Ten shekels was a small price for extra care, so parents bought it. When the fine was removed, the guilt did not come back. The authors summed up the new rule in the parents’ minds as once a commodity, always a commodity.",
+      "Thirty years earlier, the British social scientist Richard Titmuss had made a similar argument about blood. He compared Britain, where blood was given freely, with the United States, where much blood was bought. He argued that paying for blood weakens the spirit of giving and attracts donors whose blood is less safe."
+    ],
+    "question": "Can putting a price on bad behaviour make people behave worse?",
+    "reveals": "The day-care study shows that a penalty is also a message. A small fine can tell people that a duty has become a service they can buy. Money can then push out the sense of obligation that was doing the real work, and once lost, that sense is hard to restore. Incentives work, but they work on top of values. A badly designed incentive can wear those values away.",
+    "readings": [
+      [
+        "Crowding out",
+        "Economists call this effect motivational crowding out. An outside reward or penalty can replace an inner motive, such as duty or generosity, instead of adding to it."
+      ],
+      [
+        "Size matters",
+        "The fine in Haifa was small. In a related study, Gneezy and Rustichini found that students paid a small amount for collecting charity donations collected less than students paid nothing. Their advice was to pay enough or not to pay at all."
+      ],
+      [
+        "The meaning of money",
+        "A price says that a thing can be traded. For some things, such as blood, votes or the care of a child, that message alone can change behaviour."
+      ]
+    ],
+    "breaks": [
+      "Most fines work. Large fines and fines that are strictly enforced do reduce the behaviour they target, as traffic and tax penalties show.",
+      "Later studies of blood donation give mixed results. A Swedish experiment in 2008 found that a small cash payment made women less willing to donate. But a review of many studies in 2013 found no general sign that incentives reduce donations.",
+      "The fine may also have told parents the worst that would happen if they came late. Before the fine, some may have feared something more serious. On this reading, parents learned a fact, and did not lose their guilt."
+    ],
+    "uses": [
+      "Blood donation: In 1996, in Common Cause v. Union of India, the Supreme Court directed that paid, professional blood donation be ended within two years. India’s policy since then has been to rely on voluntary, unpaid donors.",
+      "Penalty design: A fine that is small compared with the gain from breaking a rule can work as a licence fee. Pollution charges and parking fines need to be high enough, and enforced, to change behaviour and not merely to price it.",
+      "Public service: Paying officials only by narrow targets can weaken their sense of duty to the public. Rewards work best when they support public service values and do not replace them.",
+      "Exam use: In GS-IV, use it for the relation between values and incentives, public service motivation and the design of rules. In the Essay paper, use it for topics on money and morality, and on whether everything should have a price."
+    ],
+    "related": [
+      "cobra",
+      "goodhart",
+      "skinner",
+      "samaritan",
+      "freerider",
+      "moralhazard"
+    ],
+    "reading": [
+      [
+        "Uri Gneezy and Aldo Rustichini, “A Fine Is a Price”, Journal of Legal Studies (2000)",
+        "",
+        "https://doi.org/10.1086/468061"
+      ],
+      [
+        "Michael J. Sandel, What Money Can’t Buy: The Moral Limits of Markets (2012)",
+        "Discusses the day-care study and the argument about blood.",
+        ""
       ]
     ]
   },
@@ -3089,7 +3340,8 @@ const ATLAS_ENTRIES = {
       "drake",
       "laplace",
       "dunningkruger",
-      "asch"
+      "asch",
+      "framing"
     ],
     "reading": [
       [
@@ -3271,7 +3523,8 @@ const ATLAS_ENTRIES = {
       "bystander",
       "gadfly",
       "beauty",
-      "gorilla"
+      "gorilla",
+      "groupthink"
     ],
     "reading": [
       [
@@ -3326,7 +3579,8 @@ const ATLAS_ENTRIES = {
       "asch",
       "stanfordprison",
       "bystander",
-      "beforelaw"
+      "beforelaw",
+      "dissonance"
     ],
     "reading": [
       [
@@ -3451,7 +3705,8 @@ const ATLAS_ENTRIES = {
       "epicurus",
       "nachiketa",
       "principalagent",
-      "dunningkruger"
+      "dunningkruger",
+      "scarcity"
     ],
     "reading": [
       [
@@ -3709,6 +3964,326 @@ const ATLAS_ENTRIES = {
         "“Behaviorism”, Stanford Encyclopedia of Philosophy",
         "",
         "https://plato.stanford.edu/entries/behaviorism/"
+      ]
+    ]
+  },
+  "dissonance": {
+    "source": "Leon Festinger, A Theory of Cognitive Dissonance (1957), and Leon Festinger and James M. Carlsmith, “Cognitive Consequences of Forced Compliance” (1959)",
+    "period": "United States, 1957 to 1959",
+    "tradition": "Social psychology",
+    "type": "An experiment and a theory",
+    "setup": [
+      "In one of Aesop’s fables, a hungry fox jumps again and again for a bunch of grapes but cannot reach them. As the fox walks away, it decides that the grapes were sour anyway. The fox has changed its opinion so that failing hurts less.",
+      "In 1957, the American psychologist Leon Festinger gave this habit a name. He called it cognitive dissonance. Dissonance is the discomfort a person feels when two beliefs, or a belief and an action, do not fit together. Festinger argued that people work to reduce the discomfort. Often the easiest way is to change a belief, because an action that is already done cannot be undone.",
+      "In 1959, Festinger and James Carlsmith tested the idea at Stanford University. Male students spent an hour on dull tasks. They put spools on a tray and took them off again, and then turned 48 square pegs a quarter turn, again and again. Afterwards, each student was asked to tell the next participant, who was really working for the researchers, that the tasks had been fun.",
+      "Some students were paid one dollar for telling the lie. Others were paid twenty dollars. A third group told no lie. Later, all of them rated how enjoyable the tasks had been, on a scale from minus 5 to plus 5. The students paid twenty dollars rated the tasks at about zero, close to the group that told no lie. The students paid one dollar rated them at plus 1.35. They had come to believe their own lie.",
+      "Festinger’s explanation was simple. Twenty dollars was a good reason to lie, so the well-paid students felt no conflict. One dollar was not. The students paid one dollar could not explain their lie by the money, so they decided that the tasks had not been so dull after all."
+    ],
+    "question": "Why do people change their beliefs to fit what they have already done?",
+    "reveals": "Cognitive dissonance shows that the link between belief and action runs both ways. Beliefs guide actions, but actions also shape beliefs. When people act against their values for a strong outside reason, such as a large reward or a threat, they keep their values. When the outside reason is weak, they often change their values to match the action. So a gentle push that gets a person to act can change a mind more than a large reward.",
+    "readings": [
+      [
+        "Attitude and behaviour",
+        "Most people assume that attitudes come first and behaviour follows. Festinger showed the reverse as well. Doing something, especially in public and by choice, can change what a person believes."
+      ],
+      [
+        "Self-justification",
+        "People want to see themselves as honest and sensible. After a bad choice or a small wrong, they often defend the choice instead of admitting the mistake. Each defence makes the next wrong step easier."
+      ],
+      [
+        "Persuasion",
+        "A person who is pushed too hard can blame the pressure and keep the old belief. A person who freely agrees to a small request has no one else to blame, so the belief moves instead."
+      ]
+    ],
+    "breaks": [
+      "The psychologist Daryl Bem offered another explanation in 1967. He argued that people simply watch their own behaviour and work out their attitudes from it, as an outsider would. On this view, no inner discomfort is needed.",
+      "In 2024, a similar experiment was repeated in 39 laboratories in 19 countries, with nearly 4,900 participants. Students who wrote an essay against their own views did change their attitudes. But the key test failed. Students who chose to write the essay changed no more than students who were told to write it.",
+      "People can reduce dissonance in many ways. They can change a belief, change their behaviour, find a new excuse or avoid the subject. So the theory does not always predict which way a person will go."
+    ],
+    "uses": [
+      "Integrity: An official who accepts a small gift may start to believe that such gifts are harmless, because everyone takes them. The new belief then makes a larger gift easier to accept. The safest point to refuse is the first one.",
+      "Admitting mistakes: Governments and companies often keep spending on a failing project because stopping would mean admitting that the first decision was wrong. A review by someone who did not make the first decision helps.",
+      "Behaviour change: Campaigns that get people to take a small action in public, such as a pledge or a cleaning drive, can shift attitudes more than lectures. People come to see themselves as the kind of person who acts that way.",
+      "Exam use: In GS-IV, use it for the syllabus topic on attitude and its relation with thought and behaviour, and for persuasion, probity and self-deception. In the Essay paper, use it for topics on character, honesty and the gap between belief and action."
+    ],
+    "related": [
+      "asch",
+      "milgram",
+      "gyges",
+      "groupthink",
+      "dunningkruger",
+      "noblelie"
+    ],
+    "reading": [
+      [
+        "Leon Festinger and James M. Carlsmith, “Cognitive Consequences of Forced Compliance”, Journal of Abnormal and Social Psychology (1959)",
+        "The original paper, online.",
+        "https://psychclassics.yorku.ca/Festinger/"
+      ],
+      [
+        "David C. Vaidis and others, “A Multilab Replication of the Induced-Compliance Paradigm of Cognitive Dissonance”, Advances in Methods and Practices in Psychological Science (2024)",
+        "The large repeat of the experiment described above.",
+        "https://doi.org/10.1177/25152459231213375"
+      ],
+      [
+        "“Cognitive dissonance”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/Cognitive_dissonance"
+      ]
+    ]
+  },
+  "groupthink": {
+    "source": "Irving Janis, Victims of Groupthink (1972), revised as Groupthink (1982)",
+    "period": "United States, 1961 to 1982",
+    "tradition": "Social psychology",
+    "type": "A concept built from case studies. A case study is a close look at one real event.",
+    "setup": [
+      "In April 1961, about 1,400 Cuban exiles trained by the American Central Intelligence Agency landed at the Bay of Pigs in Cuba. The plan assumed that Cubans would rise up against Fidel Castro and join them. No uprising came. Within three days the invaders were defeated, and about 1,200 of them were captured.",
+      "The plan had been approved by President John F. Kennedy and a small group of very able advisers. Several of them had doubts. The historian Arthur Schlesinger Jr., who sat in the meetings, later blamed himself for staying almost silent. Before the final decision, Robert Kennedy took Schlesinger aside. He told him that the President had made up his mind and that it was time to support him.",
+      "In 1972, the Yale psychologist Irving Janis studied this failure and others like it. He called the pattern groupthink. Groupthink happens when the members of a close and friendly group care more about agreeing than about testing their plan. Doubts are kept private. Silence is taken as agreement. Some members guard the leader from bad news.",
+      "Janis listed eight signs. They include a feeling that the group cannot fail, a belief that the group is morally right, a simple and scornful picture of the opponent, self-censorship, a false sense that everyone agrees, and pressure on anyone who dissents.",
+      "Janis also noted that the same team did much better eighteen months later, in the Cuban missile crisis of October 1962. Kennedy invited outside experts, split his advisers into smaller groups and sometimes left the room so that his views would not steer the talk. The advisers argued openly about the options. The crisis ended without war."
+    ],
+    "question": "Why do groups of capable people sometimes make decisions that none of them would make alone?",
+    "reveals": "Groupthink shows that a group can be less wise than its members. The danger is greatest when the group is close, proud of itself, under pressure and led by someone whose wishes are known. The remedy is not a less loyal team. The remedy is a way of working that makes disagreement safe and expected.",
+    "readings": [
+      [
+        "Loyalty and dissent",
+        "In a close group, raising a doubt can feel like disloyalty. So the most loyal members may be the quietest. A good leader treats honest objection as a form of loyalty."
+      ],
+      [
+        "The role of the leader",
+        "When the leader speaks first, others tend to agree. Janis advised leaders to hold back their own view until the others have spoken."
+      ],
+      [
+        "Remedies",
+        "Janis suggested giving one member the job of arguing against the plan, bringing in outsiders, letting separate groups work on the same problem, and holding a last meeting to air any remaining doubts."
+      ]
+    ],
+    "breaks": [
+      "Janis built the idea from a few famous cases chosen after the event. A review of experiments by Won-Woo Park in 1990 found only partial support for his theory.",
+      "Later research by the psychologist Roderick Kramer, published in 1998, argued that Kennedy relied on his own judgment and on outside advice more than Janis had claimed. On this view, group pressure was not the main cause of the failure.",
+      "Close groups are not always a problem. Teams that trust each other can also argue more freely. The trouble comes from the pressure to agree, not from closeness itself."
+    ],
+    "uses": [
+      "Committees: The Monetary Policy Committee of the Reserve Bank of India publishes the minutes of its meetings, with each member’s vote and statement. A member who dissents is on the record, so a lone doubt cannot quietly disappear.",
+      "Administration: A senior officer who announces a view at the start of a meeting may hear only agreement. Asking junior officers to speak first, and recording notes of dissent on the file, brings problems out early.",
+      "Disasters: Investigations after the Challenger space shuttle disaster of 1986 found that engineers had warned about the risk of launching in cold weather. Their managers overruled them. Many writers use the case to show how pressure to agree can silence expert warnings.",
+      "Exam use: In GS-IV, use it for decision-making, moral courage, the ethics of dissent and case studies about committees. In the Essay paper, use it for topics on leadership, democracy, dissent and compliance."
+    ],
+    "related": [
+      "asch",
+      "milgram",
+      "dictator",
+      "gadfly",
+      "dissonance",
+      "bystander"
+    ],
+    "reading": [
+      [
+        "Irving L. Janis, Groupthink: Psychological Studies of Policy Decisions and Fiascoes, second edition (1982)",
+        "",
+        ""
+      ],
+      [
+        "“Groupthink”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/Groupthink"
+      ],
+      [
+        "“Bay of Pigs Invasion”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/Bay_of_Pigs_Invasion"
+      ]
+    ]
+  },
+  "robberscave": {
+    "source": "Muzafer Sherif and colleagues, the Robbers Cave experiment (1954), and Henri Tajfel, “Experiments in Intergroup Discrimination” (1970)",
+    "period": "United States, 1954, and the United Kingdom, 1970",
+    "tradition": "Social psychology",
+    "type": "Two experiments",
+    "setup": [
+      "In the summer of 1954, 22 boys aged eleven and twelve arrived at a summer camp at Robbers Cave State Park in Oklahoma, in the United States. They came from similar homes and did not know each other. The psychologist Muzafer Sherif and his team had split them into two groups. For the first week, each group lived on its own and did not know that the other existed. The groups named themselves the Eagles and the Rattlers.",
+      "Then the staff brought the groups together for a tournament of baseball, tug-of-war and other games. The winners would get a trophy, medals and pocket knives. The losers would get nothing. Name-calling began almost at once. The Eagles burned the Rattlers’ flag. The Rattlers raided the Eagles’ cabin.",
+      "Next, the staff tried simple contact. The boys watched films and ate meals together. Contact alone made things worse, and meals turned into food fights.",
+      "Finally, the staff set problems that neither group could solve alone. The camp’s water supply stopped, and both groups searched for the fault together. Both groups put in money to rent a film. They pulled a stuck food truck with the rope they had used for tug-of-war. Slowly the hostility faded. On the bus home, the Rattlers spent their five-dollar prize on malted milk drinks for every boy.",
+      "In 1970, the psychologist Henri Tajfel went further. He told schoolboys in Bristol, in England, that they had been grouped by their taste in paintings. The groups were really made at random, and the boys never met their group. Even so, when they shared out money between other boys, they favoured their own group. Many chose to give their own group less, if the other group got much less still."
+    ],
+    "question": "How do ordinary people come to see another group as the enemy, and what brings them back together?",
+    "reveals": "The two experiments show how little it takes to create an us and a them. A name, a flag or a meaningless label is enough for people to favour their own side. Competition for a prize that cannot be shared turns that preference into hostility. Contact alone does not undo the damage. What works is a shared goal that neither side can reach without the other.",
+    "readings": [
+      [
+        "Realistic conflict",
+        "Sherif argued that hostility grows out of competition for real resources, such as land, jobs or prizes. When competition is turned into cooperation, the hostility can change too."
+      ],
+      [
+        "Social identity",
+        "Tajfel and John Turner later argued that people draw part of their self-respect from their groups. Favouring the in-group makes people feel better about who they are, even when nothing material is at stake."
+      ],
+      [
+        "Contact that works",
+        "In 1954, the psychologist Gordon Allport argued that contact reduces prejudice only under certain conditions. The groups need equal status, shared goals, support from those in authority, and reasons to work together."
+      ]
+    ],
+    "breaks": [
+      "The Robbers Cave study had only 22 boys, all white, Protestant and from similar homes. The results may not hold for adults, or for groups divided by long histories.",
+      "The writer Gina Perry studied Sherif’s papers and found that the staff did much to create the conflict and to steer events. An earlier camp study in 1953, at Middle Grove in New York, had failed. The boys there refused to turn against each other and began to suspect the adults.",
+      "Real conflicts between castes, religions or nations carry memory and grievance. A shared task at a summer camp is a much easier problem."
+    ],
+    "uses": [
+      "Communal harmony: The political scientist Ashutosh Varshney compared Indian cities in his book Ethnic Conflict and Civic Life (2002). Where Hindus and Muslims belonged to the same business associations, trade unions and clubs, as in Calicut, riots were rare. Where such links were missing, as in Aligarh, riots were frequent.",
+      "Caste: In a study published in 2021, the economist Matt Lowe organised cricket leagues for 800 young men in villages near Varanasi. Men placed on teams with players of other castes made more friends across caste lines. Men who only played against other castes made fewer.",
+      "Schools: A study by the economist Gautam Rao, published in 2019, looked at private schools in Delhi that had to admit poor children from 2007. Rich students with poor classmates became more generous and less likely to discriminate against poor children.",
+      "Exam use: In GS-IV, use it for prejudice, tolerance, and the role of contact and shared goals in building trust. In the Essay paper, use it for topics on communal harmony, caste, national integration and plural identity."
+    ],
+    "related": [
+      "asch",
+      "stanfordprison",
+      "staghunt",
+      "pd",
+      "securitydilemma",
+      "blindmen"
+    ],
+    "reading": [
+      [
+        "Muzafer Sherif and others, Intergroup Conflict and Cooperation: The Robbers Cave Experiment (1961)",
+        "The full report, online.",
+        "https://psychclassics.yorku.ca/Sherif/index.htm"
+      ],
+      [
+        "Matt Lowe, “Types of Contact: A Field Experiment on Collaborative and Adversarial Caste Integration”, American Economic Review (2021)",
+        "",
+        "https://doi.org/10.1257/aer.20191780"
+      ],
+      [
+        "“Realistic conflict theory”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/Realistic_conflict_theory"
+      ]
+    ]
+  },
+  "framing": {
+    "source": "Amos Tversky and Daniel Kahneman, “The Framing of Decisions and the Psychology of Choice”, Science (1981), building on their “Prospect Theory” (1979)",
+    "period": "North America, 1979 to 1981",
+    "tradition": "Psychology and behavioural economics",
+    "type": "An experiment",
+    "setup": [
+      "In 1981, the psychologists Amos Tversky and Daniel Kahneman gave students a problem. Imagine, they said, that the country is preparing for an unusual disease that is expected to kill 600 people. Two programmes have been proposed to fight it.",
+      "One group of students read this version. If Programme A is adopted, 200 people will be saved. If Programme B is adopted, there is a one-third chance that all 600 will be saved and a two-thirds chance that no one will be saved. Of these students, 72 percent chose Programme A, the sure option.",
+      "A second group read a different version. If Programme C is adopted, 400 people will die. If Programme D is adopted, there is a one-third chance that nobody will die and a two-thirds chance that all 600 will die. Now 78 percent chose Programme D, the gamble.",
+      "The two versions describe exactly the same outcomes. Saving 200 people out of 600 is the same as losing 400. Only the words changed, from lives saved to lives lost. Yet the choice of the majority reversed.",
+      "Tversky and Kahneman explained the result with prospect theory, which they had published in 1979. People judge outcomes as gains or losses from a starting point, not as final totals. They play safe when choosing between gains. They take risks to avoid a sure loss. And a loss hurts more than an equal gain pleases, roughly twice as much in many studies. They called this loss aversion. Kahneman received the Nobel Prize in economics in 2002. Tversky had died in 1996."
+    ],
+    "question": "Why does the way a choice is described change the choice that people make?",
+    "reveals": "Framing shows that people do not simply choose between outcomes. They choose between descriptions of outcomes. The same facts described as a gain or as a loss lead to different decisions, even among educated people. Loss aversion explains much of the effect. A certain loss feels so bad that people will gamble to avoid it.",
+    "readings": [
+      [
+        "Reference points",
+        "People judge a result by comparing it with a starting point, such as what they have now or what they expected. The same pay rise can feel like a gain or a loss, depending on the rise a person expected."
+      ],
+      [
+        "The endowment effect",
+        "In a study published in 1990, students who were given a coffee mug asked for more than twice as much to sell it as other students would pay to buy it. Owning something makes giving it up feel like a loss."
+      ],
+      [
+        "The power of the framer",
+        "Whoever describes a choice has power over the answer. A government, a doctor or a journalist can steer a decision without telling a single lie."
+      ]
+    ],
+    "breaks": [
+      "The effect is not universal. When people see both versions side by side, most notice that the choices are the same, and the effect weakens.",
+      "The size of loss aversion is debated. In 2018, the researchers David Gal and Derek Rucker argued that many findings of loss aversion have other explanations.",
+      "The disease problem is a puzzle on paper. Real decisions involve trust, context and experience, which can change how people react to wording."
+    ],
+    "uses": [
+      "Reform: People resist losing a benefit more strongly than they welcome an equal new one. When India introduced the Goods and Services Tax in 2017, the Centre promised the states compensation for five years if their tax revenue grew by less than 14 percent a year. The promise protected states against a loss and helped win their support.",
+      "Public policy: The Economic Survey of 2018–19 had a chapter titled Policy for Homo Sapiens, Not Homo Economicus. The chapter argued that policy should be designed for real human behaviour, including the way choices are presented.",
+      "Ethics: Framing is never neutral. An officer who presents only the favourable frame of a project misleads, even if every number is correct. Honest communication presents the risks in more than one way.",
+      "Exam use: In GS-IV, use it for decision-making, persuasion, the ethics of communication and case studies where information is presented to the public. In the Essay paper, use it for topics on truth, perception and the power of words."
+    ],
+    "related": [
+      "montyhall",
+      "gorilla",
+      "dunningkruger",
+      "beauty",
+      "noblelie",
+      "scarcity"
+    ],
+    "reading": [
+      [
+        "Amos Tversky and Daniel Kahneman, “The Framing of Decisions and the Psychology of Choice”, Science (1981)",
+        "",
+        "https://doi.org/10.1126/science.7455683"
+      ],
+      [
+        "Economic Survey 2018–19, Volume 1, Chapter 2, “Policy for Homo Sapiens, Not Homo Economicus”",
+        "",
+        "https://www.indiabudget.gov.in/budget2019-20/economicsurvey/doc/vol1chapter/echap02_vol1.pdf"
+      ],
+      [
+        "Daniel Kahneman, Thinking, Fast and Slow (2011)",
+        "A readable account of this research by one of its authors.",
+        ""
+      ]
+    ]
+  },
+  "scarcity": {
+    "source": "Anandi Mani, Sendhil Mullainathan, Eldar Shafir and Jiaying Zhao, “Poverty Impedes Cognitive Function”, Science (2013)",
+    "period": "United States and India, 2010 to 2013",
+    "tradition": "Behavioural economics and psychology",
+    "type": "Two experiments",
+    "setup": [
+      "Poor people are often blamed for bad choices. They borrow at high interest, miss appointments and forget to take their medicine. The usual explanation is a lack of discipline or education. In 2013, four researchers tested a different explanation. Perhaps poverty itself takes up so much of the mind that less is left for everything else.",
+      "The first test took place in a shopping mall in New Jersey, in the United States. Shoppers were asked to think about a problem, such as a car repair. For some, the repair cost 150 dollars. For others, it cost 1,500 dollars. Then they took tests of reasoning and self-control. With the small bill, rich and poor shoppers did equally well. With the large bill, the poorer shoppers did much worse.",
+      "The second test took place among sugarcane farmers in Tamil Nadu. The researchers tested 464 small farmers in 54 villages around Villupuram and Tiruvannamalai districts. Sugarcane is harvested once a year, so these farmers are paid once a year. Before the harvest, money runs short. The farmers pawn things and take loans. After the harvest, they have money.",
+      "The same farmers took the same kinds of tests before and after the harvest. Before the harvest, they scored clearly lower. The researchers showed that the difference was not caused by diet, tiredness from work or practice at the tests. They compared the drop to a loss of up to ten IQ points.",
+      "In their book Scarcity (2013), Mullainathan and Shafir called the effect a loss of bandwidth. Scarcity of money, like scarcity of time, pulls attention toward the most urgent problem. The mind is busy with the bill that is due and has less room for planning, patience and self-control."
+    ],
+    "question": "Does poverty make decisions harder, and not only choices fewer?",
+    "reveals": "The study suggests that some of the poor decisions blamed on poor people are a result of poverty, not a cause of it. Worry about money uses up attention and self-control. The same person makes better decisions when the pressure lifts. So programmes for the poor should be judged by how much mental effort they demand, and not only by how much money they give.",
+    "readings": [
+      [
+        "Bandwidth",
+        "Attention and self-control are limited. Anything that takes up a large share of them, such as debt, hunger or a sick child, leaves less for other decisions."
+      ],
+      [
+        "Tunnelling",
+        "Scarcity makes people focus hard on the problem in front of them. The focus helps with the urgent task but causes neglect of everything outside it, such as saving or preventive health care."
+      ],
+      [
+        "Compassion",
+        "The finding changes the moral question. If poverty itself weakens judgment, then blaming the poor for poor judgment is unfair. Help should reduce the load, not add lectures."
+      ]
+    ],
+    "breaks": [
+      "Other studies have found weaker effects or none. In 2016, a study of low-income families in the United States found that people tested just before payday did no worse on cognitive tests than people tested just after.",
+      "In 2021, a group of researchers repeated 20 studies on the psychology of scarcity. Some results held, but others did not. Other scholars disputed which studies should have been included.",
+      "The farmers’ results come from one crop, one region and one season. Other things also change around harvest time, and not all of them can be ruled out."
+    ],
+    "uses": [
+      "Scheme design: Long forms, many documents and repeated visits to offices cost the poor more than money. They use up bandwidth that is already short. Simple procedures, automatic enrolment and reminders make schemes work better.",
+      "Timing: The study suggests that when money reaches poor households matters as much as how much reaches them. Payments spread across the year, such as the three instalments of PM-KISAN, can ease the lean months before a harvest.",
+      "Attitude: An officer who sees a poor applicant as careless may be seeing the effect of poverty. Patience, clear instructions and a second chance are not favours. They make up for a burden that the officer does not carry.",
+      "Exam use: In GS-IV, use it for empathy and compassion towards the weaker sections and for the ethics of public service delivery. In the Essay paper, use it for topics on poverty, dignity and what the state owes the poor."
+    ],
+    "related": [
+      "marshmallow",
+      "hedonic",
+      "veil",
+      "samaritan",
+      "framing",
+      "collectiveaction"
+    ],
+    "reading": [
+      [
+        "Anandi Mani and others, “Poverty Impedes Cognitive Function”, Science (2013)",
+        "",
+        "https://doi.org/10.1126/science.1238041"
+      ],
+      [
+        "Leandro S. Carvalho, Stephan Meier and Stephanie W. Wang, “Poverty and Economic Decision-Making: Evidence from Changes in Financial Resources at Payday”, American Economic Review (2016)",
+        "The payday study that found no effect.",
+        "https://doi.org/10.1257/aer.20140481"
       ]
     ]
   },
@@ -4114,7 +4689,8 @@ const ATLAS_ENTRIES = {
       "commons",
       "generalwill",
       "focal",
-      "collectiveaction"
+      "collectiveaction",
+      "robberscave"
     ],
     "reading": [
       [
