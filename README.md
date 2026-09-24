@@ -77,6 +77,18 @@ A heading page shows what the heading holds. Every concept note carries a strip 
 (definition, numbered sections, takeaway, where it was asked) that stays in view and jumps to
 each one.
 
+### The Essay Theme Map
+
+Its first page follows the same pattern:
+- the header band
+- a guide to how every theme is built
+- the same stacked chart, splitting each theme's past topics by the section of the paper they were
+  set in (A or B)
+- a card per theme with its counts, a strip of the years the paper asked it, and its latest topic
+
+A theme page shows what the theme holds. Both maps' charts come from one function,
+`stackChartHTML` in app.js.
+
 ### Reading the atlas
 
 The atlas opens on an **overview**. It first shows how every entry is built, in eight numbered

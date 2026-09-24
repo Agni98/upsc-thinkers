@@ -1547,39 +1547,14 @@ html[data-theme="dark"]{--viz-a:#5a86d4;--viz-b:#c9792b}
   .schart-card{padding:14px 14px 8px}
 }
 
-/* ---------------- A map's index page ----------------
-   Every heading at once, each with what is inside it and how much has been read.
-   One row per heading, because the headings are sentences, not labels. */
-.mapx{max-width:900px}
-.mapx-head{margin:0 0 20px}
-.mapx-head h2{
-  font-family:var(--read);font-size:clamp(23px,3vw,30px);font-weight:500;line-height:1.22;
-  letter-spacing:-.3px;color:var(--head);margin:0 0 10px;max-width:26ch;
-  border-left:4px solid var(--saffron);padding-left:14px}
-.mapx-head > p:not(.rd-crumbs){
-  font-family:var(--read);font-size:16px;line-height:1.72;color:var(--read-ink);max-width:70ch}
-.mapx-list{list-style:none;display:grid;gap:10px;margin:0;padding:0}
-.mx{
-  display:flex;align-items:flex-start;gap:16px;width:100%;text-align:left;
-  padding:16px 18px;background:var(--panel);border:1px solid var(--line);
-  border-radius:var(--radius);cursor:pointer;transition:.15s;font:inherit;color:inherit}
-.mx:hover{border-color:var(--accent);box-shadow:var(--shadow)}
-.mx:hover .mx-body b{color:var(--accent)}
-.mx:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.mx-no{
-  flex:0 0 auto;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;
-  background:var(--accent-soft);color:var(--accent);font:700 13px/1 var(--sans)}
-.mx-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
-.mx-body b{font-family:var(--read);font-size:17.5px;font-weight:500;line-height:1.32;color:var(--ink);transition:.15s}
-.mx-body em{font-style:normal;font-family:var(--read);font-size:14px;line-height:1.55;color:var(--ink-2)}
-.mx-meta{font-family:var(--sans);font-size:12px;line-height:1.5;color:var(--ink-3);margin-top:4px}
-.mx-done{
-  flex:0 0 auto;margin-top:7px;font:600 11.5px/1.2 var(--sans);color:var(--ink-3);white-space:nowrap}
-.mx-done.full{color:var(--accent)}
-@media (max-width:620px){
-  .mx{padding:14px;gap:12px}
-  .mx-done{display:none}
-}
+/* ---------------- The Essay Theme Map's cards ----------------
+   A strip of the paper's years under each theme: pale where the theme was
+   asked once, full saffron where it was asked more than once. */
+.tyears{display:flex;align-items:center;gap:3px}
+.tyears .ty{flex:1;height:10px;border-radius:2px;background:var(--line-2)}
+.tyears .ty1{background:var(--viz-b);opacity:.45}
+.tyears .ty2{background:var(--viz-b)}
+.tyears-l{padding:0 4px;font:600 10.5px/1 var(--sans);font-style:normal;color:var(--ink-3)}
 
 /* ---------------- Continue where you left off ---------------- */
 .resume{

@@ -1703,17 +1703,6 @@ function mapSpec(view){
 const mapSel = items => items.some(x => x.id === state.sel) ? state.sel : (items[0] ? items[0].id : null);
 const readKey = (view, page, id) => view + "|" + page + "|" + id;
 
-/* What a theme holds, in one line. (The syllabus map's cards say it themselves.) */
-function mapMeta(spec, x){
-  const es = (x.essays || []).filter(k => (typeof ESSAYS !== "undefined") && ESSAYS[k]).length;
-  const st = themeStories(x).length;
-  return [plural(themeStats(x).list.length, "model paragraph", "model paragraphs"),
-          es ? plural(es, "full essay", "full essays") : "",
-          st ? plural(st, "story", "stories") : "",
-          plural(themeQuestions(x), "past topic", "past topics")]
-    .filter(Boolean).join(" &middot; ");
-}
-
 /* ---- The GS-IV syllabus map's first page ----
    The home page's look: a header band, then how a heading is built, where the
    paper asks most, and every heading as a card with what it holds. */
@@ -1745,34 +1734,10 @@ function sylChartHTML(){
     if (r.t === "Case Studies" || r.t === "Moral Thinkers & Philosophers of the World") return;
     const q = gs4For(r.t);
     const t = r.t === "Moral Thinkers & Philosophers of India" ? "Moral thinkers, India and the world" : r.t;
-    rows.push({ t, p:i + 1, a:q.filter(x => x.sec === "A").length, b:q.filter(x => x.sec === "B").length });
+    rows.push({ t, open:(i + 1) + "|", a:q.filter(x => x.sec === "A").length, b:q.filter(x => x.sec === "B").length });
   });
-  rows.sort((x, y) => (y.a + y.b) - (x.a + x.b) || x.p - y.p);
-  const max = Math.max.apply(null, rows.map(r => r.a + r.b));
-  return `
-    <div class="schart-legend" aria-hidden="true">
-      <span><i class="sw-a"></i>Theory questions (Section A)</span>
-      <span><i class="sw-b"></i>Case studies (Section B)</span>
-    </div>
-    <ol class="schart">${rows.map(r => `
-      <li><button class="schart-row" data-open-at="${r.p}|" data-tip="${esc(r.t)}" data-a="${r.a}" data-b="${r.b}"
-                  aria-label="${esc(r.t)}: ${r.a} theory, ${r.b} case studies, ${r.a + r.b} in all">
-        <span class="schart-t">${esc(r.t)}</span>
-        <span class="schart-track">
-          <span class="schart-bar" style="width:calc((100% - 44px) * ${((r.a + r.b) / max).toFixed(3)})">
-            ${r.a ? `<i class="seg-a" style="flex-grow:${r.a}"></i>` : ""}${r.b ? `<i class="seg-b" style="flex-grow:${r.b}"></i>` : ""}
-          </span>
-          <b class="schart-n">${r.a + r.b}</b>
-        </span>
-      </button></li>`).join("")}
-    </ol>
-    <details class="schart-table">
-      <summary>Show as a table</summary>
-      <table>
-        <thead><tr><th scope="col">Heading</th><th scope="col">Theory</th><th scope="col">Case studies</th><th scope="col">Total</th></tr></thead>
-        <tbody>${rows.map(r => `<tr><th scope="row">${esc(r.t)}</th><td>${r.a}</td><td>${r.b}</td><td>${r.a + r.b}</td></tr>`).join("")}</tbody>
-      </table>
-    </details>`;
+  return stackChartHTML(rows, "theory question (Section A)|theory questions (Section A)",
+                         "case study (Section B)|case studies (Section B)");
 }
 
 function sylCardHTML(r, i){
@@ -1874,46 +1839,158 @@ function vizTip(el, x, y){
   };
   const h = document.createElement("span");
   h.textContent = el.dataset.tip;
-  tip.append(row("tk-a", a, "theory"), row("tk-b", b, "case studies"), h);
+  tip.append(row("tk-a", a, nLab(el.dataset.la, a)), row("tk-b", b, nLab(el.dataset.lb, b)), h);
   tip.hidden = false;
   const w = tip.offsetWidth, hgt = tip.offsetHeight;
   tip.style.left = Math.min(window.innerWidth - w - 8, x + 14) + "px";
   tip.style.top = Math.max(8, y - hgt - 12) + "px";
 }
 
-/* The first page of a map: every heading, what is inside it and how much of it
-   has been read, so the whole paper can be seen before any of it is opened. The
-   syllabus map has its own first page, above. */
-function mapIndexHTML(spec){
-  if (spec.view === "syllabus") return sylIndexHTML(spec);
-  const rows = spec.list.map((x, i) => {
-    const items = spec.items(x);
-    const done = items.filter(it => isRead(readKey(spec.view, i + 1, it.id))).length;
-    return `
-      <li><button class="mx" data-open-at="${i + 1}|">
-        <span class="mx-no">${i + 1}</span>
-        <span class="mx-body">
-          <b>${esc(x.t)}</b>
-          <em>${esc(x.s)}</em>
-          <span class="mx-meta">${mapMeta(spec, x)}</span>
-        </span>
-        <span class="mx-done${items.length && done === items.length ? " full" : ""}">${
-          done ? done + " of " + items.length + " read" : "Not started"}</span>
-      </button></li>`;
-  }).join("");
+/* A stacked bar per row, two series, sorted by total: used by both maps'
+   first pages. rows: [{ t, open, a, b }]; open is a data-open-at value. A
+   series label is "one|many", so a count of one reads correctly. */
+const nLab = (lab, n) => { const p = lab.split("|"); return n === 1 ? p[0] : (p[1] || p[0]); };
+function stackChartHTML(rows, la, lb, first){
+  rows = rows.slice().sort((x, y) => (y.a + y.b) - (x.a + x.b));
+  const max = Math.max.apply(null, rows.map(r => r.a + r.b)) || 1;
+  const cap = s => { s = nLab(s, 2); return s.charAt(0).toUpperCase() + s.slice(1); };
   return `
-    <div class="mapx">
-      <header class="mapx-head">
-        <p class="rd-crumbs"><span>${spec.paper}</span></p>
-        <h2>Nine themes that cover every essay the paper has set</h2>
-        <p>Under each theme are five model paragraphs, one for each kind of question the theme throws up,
-           the full essays written from them, and stories from the Thought Atlas that suit it.
-           Open one to begin. Its contents stay in the panel beside you as you read,
-           each item is ticked once you have opened it, and your place is kept.</p>
-      </header>
-      ${resumeHTML(lastPlaces()[spec.view])}
-      <ol class="mapx-list">${rows}</ol>
-    </div>`;
+    <div class="schart-legend" aria-hidden="true">
+      <span><i class="sw-a"></i>${esc(cap(la))}</span>
+      <span><i class="sw-b"></i>${esc(cap(lb))}</span>
+    </div>
+    <ol class="schart">${rows.map(r => `
+      <li><button class="schart-row" data-open-at="${r.open}" data-tip="${esc(r.t)}" data-a="${r.a}" data-b="${r.b}"
+                  data-la="${esc(la)}" data-lb="${esc(lb)}"
+                  aria-label="${esc(r.t)}: ${r.a} ${esc(nLab(la, r.a))}, ${r.b} ${esc(nLab(lb, r.b))}, ${r.a + r.b} in all">
+        <span class="schart-t">${esc(r.t)}</span>
+        <span class="schart-track">
+          <span class="schart-bar" style="width:calc((100% - 44px) * ${((r.a + r.b) / max).toFixed(3)})">
+            ${r.a ? `<i class="seg-a" style="flex-grow:${r.a}"></i>` : ""}${r.b ? `<i class="seg-b" style="flex-grow:${r.b}"></i>` : ""}
+          </span>
+          <b class="schart-n">${r.a + r.b}</b>
+        </span>
+      </button></li>`).join("")}
+    </ol>
+    <details class="schart-table">
+      <summary>Show as a table</summary>
+      <table>
+        <thead><tr><th scope="col">${esc(first || "Heading")}</th><th scope="col">${esc(cap(la))}</th><th scope="col">${esc(cap(lb))}</th><th scope="col">Total</th></tr></thead>
+        <tbody>${rows.map(r => `<tr><th scope="row">${esc(r.t)}</th><td>${r.a}</td><td>${r.b}</td><td>${r.a + r.b}</td></tr>`).join("")}</tbody>
+      </table>
+    </details>`;
+}
+
+/* ---- The Essay Theme Map's first page ----
+   The same look as the syllabus map: a header band, how a theme is built,
+   where the paper asks most, and every theme as a card. */
+const THEME_PARTS = [
+  ["layers",  "Model paragraphs", "Five per theme, one for each kind of question the theme throws up"],
+  ["nib",     "Full essays",      "Complete essays written from those paragraphs"],
+  ["compass", "Stories to use",   "Atlas entries that can open or carry an essay on the theme"],
+  ["file",    "The topics it answers", "Each paragraph names the past topics it serves"]
+];
+
+/* The past topics a theme has been set, as parsed keys: 2023B4 is 2023,
+   Section B, topic 4. */
+function themeTopics(t){
+  const keys = new Set();
+  themeStats(t).list.forEach(a => (a.qs || []).forEach(k => keys.add(k)));
+  return [...keys].map(k => ({ k, y:+k.slice(0, 4), s:k.charAt(4) }));
+}
+
+function themeCardHTML(t, i, years){
+  const items = themeItems(t), st = themeStats(t), tp = themeTopics(t);
+  const done = items.filter(it => isRead(readKey("themes", i + 1, it.id))).length;
+  const essays = (t.essays || []).filter(k => (typeof ESSAYS !== "undefined") && ESSAYS[k]).length;
+  const Q = pyqText();
+  const latest = tp.slice().sort((a, b) => b.y - a.y || a.k.localeCompare(b.k))[0];
+  const per = y => tp.filter(x => x.y === y).length;
+  const asked = years.filter(y => per(y)).map(y => y + (per(y) > 1 ? " (" + per(y) + ")" : ""));
+  return `
+      <button class="scard" data-open-at="${i + 1}|">
+        <span class="scard-top">
+          <span class="scard-no">${i + 1}</span>${ico(t.ic || "target")}
+          <em>${done ? done + " of " + items.length + " read" : "Not started"}</em>
+        </span>
+        <b>${esc(t.t)}</b>
+        <span class="scard-s">${esc(t.s)}</span>
+        <span class="scard-stats">
+          <span><b>${st.list.length}</b>paragraphs</span>
+          <span><b>${essays}</b>essays</span>
+          <span><b>${themeStories(t).length}</b>stories</span>
+          <span><b>${tp.length}</b>topics</span>
+        </span>
+        <span class="tyears" aria-label="Asked in ${esc(asked.join(", ") || "no year yet")}">
+          <i class="tyears-l">${years[0]}</i>${years.map(y => `<i class="ty${per(y) > 1 ? " ty2" : per(y) ? " ty1" : ""}" title="${y}: ${plural(per(y), "topic", "topics")}"></i>`).join("")}<i class="tyears-l">${years[years.length - 1]}</i>
+        </span>
+        ${latest && Q[latest.k] ? `<span class="scard-top-c"><i>Latest topic, ${latest.y}</i>${esc(Q[latest.k].q)}</span>` : ""}
+        <i class="atile-bar"><i style="width:${items.length ? Math.round(done / items.length * 100) : 0}%"></i></i>
+      </button>`;
+}
+
+function themeIndexHTML(spec){
+  const s = siteStats();
+  const years = (typeof PYQ_PAPERS !== "undefined") ? PYQ_PAPERS.map(p => p.y).sort() : [];
+  const span = years.length ? years[0] + " to " + years[years.length - 1] : "";
+  const rows = ESSAY_THEMES.map((t, i) => {
+    const tp = themeTopics(t);
+    return { t:t.t, open:(i + 1) + "|", a:tp.filter(x => x.s === "A").length, b:tp.filter(x => x.s === "B").length };
+  });
+  return `
+  <section class="hero hero-sm">
+    <div class="hero-art art-pen" aria-hidden="true"></div>
+    <div class="hero-body">
+      <p class="hero-k">Essay Paper</p>
+      <h2 class="hero-t">Essay Theme Map</h2>
+      <p class="hero-s">${ESSAY_THEMES.length} themes that cover every essay topic the paper has set, ${span}.
+         Under each: model paragraphs to adapt, full essays written from them, and stories from the
+         Thought Atlas that suit it.</p>
+      <p class="hero-note">Open a theme to begin. Its contents stay in the panel beside you, each item
+         is ticked once you have opened it, and your place is kept.</p>
+    </div>
+    <div class="hero-aside">
+      <button data-open-at="1|p:0"><b>${s.paras}</b><span>model paragraphs</span></button>
+      <button data-view="essays"><b>${s.essays}</b><span>full essays</span></button>
+      <button data-view="pyq"><b>${s.topics}</b><span>past topics</span></button>
+    </div>
+  </section>
+
+  <div class="home">
+    ${resumeHTML(lastPlaces()[spec.view])}
+
+    <section class="atl-guide" aria-label="How every theme is built">
+      <h3 class="hb-t">How every theme is built</h3>
+      <ol class="atl-steps">${THEME_PARTS.map((p, i) => `
+        <li><span class="atl-step-ico">${ico(p[0])}</span>
+            <b><i>${i + 1}</i>${esc(p[1])}</b><span>${esc(p[2])}</span></li>`).join("")}
+      </ol>
+    </section>
+
+    <section class="hblock">
+      <div class="hb-head">
+        <div><h3 class="hb-t">Where the paper asks most</h3>
+          <p class="hb-s">Past essay topics under each theme, ${span}, by the section of the paper they were set in.
+             Open a bar to go to its theme.</p></div>
+        <button class="hb-link" data-view="pyq">All ${s.topics} topics ${ico("arrow")}</button>
+      </div>
+      <div class="schart-card">${stackChartHTML(rows, "Section A topic|Section A topics", "Section B topic|Section B topics", "Theme")}</div>
+    </section>
+
+    <section class="hblock">
+      <div class="hb-head">
+        <div><h3 class="hb-t">The ${ESSAY_THEMES.length} themes</h3>
+          <p class="hb-s">Each card shows what the theme holds, the years it was asked, and its latest topic.</p></div>
+      </div>
+      <div class="scards">${ESSAY_THEMES.map((t, i) => themeCardHTML(t, i, years)).join("")}</div>
+    </section>
+  </div>`;
+}
+
+/* The first page of a map: every heading, what is inside it and how much of it
+   has been read, so the whole paper can be seen before any of it is opened. */
+function mapIndexHTML(spec){
+  return spec.view === "syllabus" ? sylIndexHTML(spec) : themeIndexHTML(spec);
 }
 
 /* Every item in the open map, in reading order, so that previous and next can
@@ -1961,7 +2038,13 @@ function mapPageHTML(spec){
         <p class="rd-stats">${ico(SYL_ICON[x.t] || "book")}
           <span><b>${st.concepts.length}</b> ${cases ? "case patterns" : "concepts"}</span>
           <span><b>${st.questions}</b> ${cases ? "cases" : "past questions"}</span>
-          <span><b>${st.thinkers}</b> thinkers</span></p>`; })() : ""}
+          <span><b>${st.thinkers}</b> thinkers</span></p>`; })() : (() => {
+          const es = (x.essays || []).filter(k => (typeof ESSAYS !== "undefined") && ESSAYS[k]).length; return `
+        <p class="rd-stats">${ico(x.ic || "target")}
+          <span><b>${themeStats(x).list.length}</b> model paragraphs</span>
+          <span><b>${es}</b> full essays</span>
+          <span><b>${themeStories(x).length}</b> stories</span>
+          <span><b>${themeQuestions(x)}</b> past topics</span></p>`; })()}
         <div class="rd-where">
           ${kind ? `<span class="rd-kind">${esc(kind)}</span>` : "<span></span>"}
           ${stepHTML(walk, at)}
