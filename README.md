@@ -25,6 +25,20 @@ all its text work exactly the same and show lettered monograms in place of photo
 | **Stories and Models** | The Human Thought Atlas: stories, thought experiments and models, arrangeable by essay theme |
 | **Past Questions** | 72 questions from nine Mains papers, grouped by what each one asks of you |
 
+### The home page and finding your way
+
+The header carries five sections: **Home**, **Thinkers**, **GS-IV** and **Essay** (each with a menu of
+what is in it) and **PYQs**, whose page switches between essay topics and GS-IV questions. The
+sidebar lists the same sections, then ways to browse: all thinkers, Indian, Western and
+contemporary thinkers, works in depth, and three groups that fold open (schools and traditions,
+the GS-IV headings, the essay themes), with case studies, quotes and stories below.
+
+The home page opens with one search box for the whole site, a row of shortcuts and a quotation
+from the quote bank that changes daily. Below it: where you stopped, with how much of that heading
+or theme is read; the two papers, whose numbers are links to what they count; six thinkers; and
+the six essay themes the paper has asked most. The photographs are public-domain and CC0 images
+from Wikimedia Commons.
+
 ### Reading the maps
 
 Both maps, and the atlas, read the same way. A map opens on an **index** of every heading,
@@ -133,11 +147,11 @@ in `ESSAY_THEMES` (app.js); an essay's is its `atlas` field in `essays.js`.
 Essays live in `essays.js`, keyed by their own title: `et` the title, `ep` the paragraphs,
 `serves` the questions it answers, `note` how it relates to its pair. `**double asterisks**`
 render as bold and nothing else is treated as markup. Open one from the radio buttons under
-the model paragraphs, or from **Model Essays** in the sidebar.
+the model paragraphs, or from **Model essays** in the Essay menu.
 
 ### Past questions, classified
 
-Its own view, listed under Model Essays in the sidebar: every essay set in the last nine
+Its own view, under **PYQs** in the header: every essay set in the last nine
 Mains papers — **2018 to 2026, 72 questions** — grouped by what the question asks you to do
 rather than by subject.
 
@@ -227,7 +241,8 @@ These live in `profiles.js`, keyed by thinker id:
 A thinker with no entry there simply shows no toggle, so you can add or rewrite them freely.
 
 ### Shortcuts
-- `/` — jump to search (searches names, ideas, quotations and themes)
+- `/` or `Ctrl+K` — open the site search. Every word must match; results come grouped as
+  thinkers, GS-IV concepts, stories and models, model essays, past questions and quotations
 - `Esc` — close a thinker page
 - Sun/moon button — light / dark mode, remembered between visits
 - `Ctrl+P` on an open thinker page — prints just that page, clean, for revision notes

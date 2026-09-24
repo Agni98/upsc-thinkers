@@ -43,47 +43,47 @@ const SYLLABUS = [
    (essays.js) written for it, and the stories from the Thought Atlas (atlas.js)
    that suit it, the ones its essays actually use listed first. */
 const ESSAY_THEMES = [
-  { t:"Ends, Means and the Ethics of Decision",
+  { t:"Ends, Means and the Ethics of Decision", n:"Ends and Means", ic:"scale",
     s:"How to decide, when to act, whether the means matter, and the gap between ideal and real",
     ids:["gandhi","machiavelli","kautilya","kant","bentham","mill","simon","barnard","goleman","weber","arendt","drucker","aristotle","socrates","ambedkar","periyar","thoreau","rawls","nehru","hegel","aurobindo"],
     essays:["The file that nobody moved","A standard nobody meets is still a standard"],
     atlas:["bystander","campbell","gyges","noblelie","trolley","cobra","principalagent","burninghouse","dissonance","rentseeking","fineprice"] },
-  { t:"Knowledge, Education and the Doubting Mind",
+  { t:"Knowledge, Education and the Doubting Mind", n:"Knowledge and Education", ic:"book",
     s:"What knowing is for, and why the educated mind ends with more questions",
     ids:["socrates","plato","aristotle","tagore","freire","nussbaum","vivekananda","kalam","mill","einstein","habermas","ambedkar","gandhi"],
     essays:["The certificate and the question","The romantic man was never the enemy"],
     atlas:["goodhart","meno","zeno","staghunt","cave","gettier","raft","babel","framing","lemons"] },
-  { t:"Character, Adversity and the Test of Power",
+  { t:"Character, Adversity and the Test of Power", n:"Character and Adversity", ic:"mountain",
     s:"What pressure reveals — failure, risk, time and authority as examinations",
     ids:["marcus-aurelius","epictetus","nietzsche","camus","mandela","malala","aristotle","kalam","gandhi","arendt","thoreau","laozi","buddha","machiavelli","bose","vivekananda","ambedkar","hegel","tagore","weber"],
     essays:["We examine for endurance and promote for compliance","The straight line is the least likely path"],
     atlas:["asch","dictator","theseus","ooda","milgram","stanfordprison","tacitus","gadfly","angulimala","groupthink"] },
-  { t:"The Good Life: Contentment, Simplicity and Being Humane",
+  { t:"The Good Life: Contentment, Simplicity and Being Humane", n:"The Good Life", ic:"sun",
     s:"What a life should aim at, argued against the economy of accumulation",
     ids:["epicurus","buddha","mahavira","laozi","gandhi","thiruvalluvar","gibran","marcus-aurelius","epictetus","aristotle","camus","schumacher","amartya-sen","kabir","guru-nanak","vivekananda","mother-teresa","gilligan","deendayal","kohlberg"],
     essays:["The country is richer. Ask it whether it is better","The inner life is not a private matter"],
     atlas:["hedonic","nachiketa","gorilla","samaritan","epicurus","kisagotami","chariot","twobirds","threepoisons","midas"] },
-  { t:"Culture, Memory and the Making of Meaning",
+  { t:"Culture, Memory and the Making of Meaning", n:"Culture and Memory", ic:"landmark",
     s:"How a society carries its past and makes sense — art, history, language, perception",
     ids:["tagore","gibran","tolstoy","plato","aurobindo","gandhi","nehru","burke","azad","marx","hegel","orwell","socrates","camus","nietzsche","laozi","kabir","kant","shankara","sartre"],
     essays:["The argument a country has with itself","The most confident account is rarely the true one"],
     atlas:["panopticon","anekanta","dunningkruger","blindmen","butterflydream","maya","nasreddin","babel","framing","robberscave"] },
-  { t:"Justice, Equality and the Excluded",
+  { t:"Justice, Equality and the Excluded", n:"Justice and Equality", ic:"users",
     s:"What a society owes its weakest members, and why patriarchy is a structure not a sentiment",
     ids:["rawls","ambedkar","amartya-sen","nozick","deendayal","gandhi","mother-teresa","lohia","nussbaum","jyotirao-phule","savitribai-phule","beauvoir","wollstonecraft","pandita-ramabai","periyar","gilligan","mill","bentham","tocqueville"],
     essays:["A country should not need this much kindness","Educated, and still not counted","Somebody always pays for the public good"],
     atlas:["marshmallow","collectiveaction","freerider","omelas","veil","heinz","samaritan","noblelie","scarcity","womenleaders","fineprice"] },
-  { t:"Democracy, the State and India in the World",
+  { t:"Democracy, the State and India in the World", n:"Democracy and the State", ic:"globe",
     s:"Leadership, media, plural identity, borders and the ethics of asymmetric power",
     ids:["ambedkar","tocqueville","habermas","montesquieu","nehru","kautilya","patel","orwell","gandhi","mandela","tagore","azad","aurobindo","mill","rousseau","jp-narayan","machiavelli","barnard"],
     essays:["Between two elections","Autonomy is a capability, not a posture"],
     atlas:["generalwill","focal","securitydilemma","dictator","gadfly","beforelaw","pd","chicken","mad","groupthink","robberscave","womenleaders"] },
-  { t:"Nature, Development and Civilisation",
+  { t:"Nature, Development and Civilisation", n:"Nature and Development", ic:"leaf",
     s:"Whether nature is a resource, a teacher or a moral limit — and what growth is for",
     ids:["schumacher","ostrom","gandhi","thoreau","mahavira","burke","deendayal","amartya-sen","tagore","aurobindo","gibran","nussbaum","kalam","einstein"],
     essays:["The bill arrives in a different currency","We stopped being taught by anything we did not make"],
     atlas:["commons","uselesstree","aesop","midas","butterfly","prometheus","icarus","rentseeking"] },
-  { t:"Technology and the Modern Self",
+  { t:"Technology and the Modern Self", n:"Technology and the Self", ic:"cpu",
     s:"What a tool does to the person, the worker and the state that uses it",
     ids:["foucault","orwell","einstein","schumacher","habermas","drucker","bentham","maslow","allport","festinger","marx","amartya-sen","mcgregor","buddha","marcus-aurelius","kautilya","nehru","ambedkar"],
     essays:["We built the rails without asking where they go","The jobs question is the wrong question"],
@@ -256,74 +256,362 @@ function resumeHTML(x){
 
 const plural = (n, one, many) => n + " " + (n === 1 ? one : many);
 
-function paperCard(o){
+/* ================= ICONS =================
+   Line icons drawn in the text colour, so one set serves both themes. */
+const ICONS = {
+  home:     '<path d="M3 11 12 4l9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-6h4v6"/>',
+  user:     '<circle cx="12" cy="8" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/>',
+  users:    '<circle cx="9" cy="8.5" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M15.5 5.2a3.5 3.5 0 0 1 0 6.6"/><path d="M17.5 14.3A6.5 6.5 0 0 1 21.5 20"/>',
+  scale:    '<path d="M12 3v18M7 21h10M4 7h16"/><path d="M4 7 1.5 13a2.5 2.5 0 0 0 5 0z"/><path d="m20 7-2.5 6a2.5 2.5 0 0 0 5 0z"/>',
+  nib:      '<path d="M12 3 6 13l6 8 6-8z"/><path d="M12 3v8.3"/><circle cx="12" cy="13" r="1.7"/>',
+  calendar: '<rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
+  quote:    '<path d="M20 15a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"/><path d="M8.5 9h7M8.5 12.5h4.5"/>',
+  compass:  '<circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/>',
+  book:     '<path d="M3 5.5c2.5-1.3 5.5-1.3 9 .5v14c-3.5-1.8-6.5-1.8-9-.5z"/><path d="M21 5.5c-2.5-1.3-5.5-1.3-9 .5v14c3.5-1.8 6.5-1.8 9-.5z"/>',
+  landmark: '<path d="M3 21h18M4 10h16M12 3l9 5H3z"/><path d="M6.5 10v8M10.2 10v8M13.8 10v8M17.5 10v8"/>',
+  bulb:     '<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.8 10.6c.5.5.8 1.2.8 1.9V16h6v-.5c0-.7.3-1.4.8-1.9A6 6 0 0 0 12 3z"/>',
+  target:   '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+  case:     '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 12.5h18"/>',
+  globe:    '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/>',
+  mountain: '<path d="M2.5 20 9.5 7.5l4 7 2.5-4 5.5 9.5z"/>',
+  sun:      '<circle cx="12" cy="12" r="4"/><path d="M12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/>',
+  leaf:     '<path d="M5 19C5 11 10 5 20 4c-1 10-7 15-15 15z"/><path d="M5 19c3-4 6-7 10-10"/>',
+  cpu:      '<rect x="6" y="6" width="12" height="12" rx="1.5"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/>',
+  file:     '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/>',
+  search:   '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+  arrow:    '<path d="M5 12h14M13 6l6 6-6 6"/>',
+  chev:     '<path d="m9 6 6 6-6 6"/>'
+};
+const ico = (name, cls) =>
+  `<svg class="ic${cls ? " " + cls : ""}" viewBox="0 0 24 24" aria-hidden="true">${ICONS[name] || ""}</svg>`;
+
+/* Three broad groupings of the schools, for readers who browse by region. The
+   keys must not repeat a category id, or the category would answer first. */
+const REGIONS = {
+  indian:       { name:"Indian Thinkers", label:"Indian", cats:["indian-class", "indian-modern", "reform"],
+                  blurb:"From Kautilya, Thiruvalluvar and the Bhakti poets to the freedom movement and the social reformers." },
+  western:      { name:"Western Thinkers", label:"Western", cats:["classical", "west-political"],
+                  blurb:"From Socrates and Aristotle to Machiavelli, Kant, Mill and Marx." },
+  voices:       { name:"Contemporary Voices", label:"Contemporary", cats:["contemporary"],
+                  blurb:"Twentieth-century and living thinkers, from Arendt and Rawls to Sen and Nussbaum." }
+};
+const CAT_SHORT = { eastern:"Eastern", "ethics-psych":"Moral psychology", admin:"Administration", humanist:"Humanist" };
+function regionOf(t){
+  for (const k in REGIONS) if (REGIONS[k].cats.includes(t.cat)) return REGIONS[k].label;
+  return CAT_SHORT[t.cat] || (catById[t.cat] ? catById[t.cat].name : "");
+}
+
+/* The years the site's questions come from, e.g. "2013–2026". */
+function yearSpan(){
+  const ys = [];
+  if (typeof GS4_PYQ !== "undefined") GS4_PYQ.forEach(q => ys.push(q.y));
+  if (typeof PYQ_PAPERS !== "undefined") PYQ_PAPERS.forEach(p => ys.push(p.y));
+  return ys.length ? Math.min.apply(null, ys) + "–" + Math.max.apply(null, ys) : "";
+}
+
+/* A short quotation from the quote bank, the same one all day. */
+function quoteOfDay(){
+  const pool = [];
+  THINKERS.forEach(t => t.quotes.forEach(q => { if (q.length <= 90) pool.push([t, q]); }));
+  return pool.length ? pool[Math.floor(Date.now() / 864e5) % pool.length] : null;
+}
+
+/* The page itself: search first, then the reader's own place, then the two
+   papers, the thinkers and the themes the paper asks most. */
+function heroHTML(){
+  const qd = quoteOfDay();
+  const theme = w => ESSAY_THEMES.findIndex(t => t.t.startsWith(w)) + 1;
+  const cs = SYLLABUS.findIndex(r => r.t === "Case Studies") + 1;
+  const pop = [
+    ["Gandhi", `data-open="gandhi"`],
+    ["Ambedkar", `data-open="ambedkar"`],
+    ["Justice", `data-to="themes|${theme("Justice")}|"`],
+    ["Sisyphus", `data-to="atlas|0|sisyphus"`],
+    ["Happiness", `data-to="themes|${theme("The Good Life")}|"`],
+    ["Technology", `data-to="themes|${theme("Technology")}|"`],
+    cs && ["Ethics case studies", `data-to="syllabus|${cs}|method"`],
+    ["Emotional intelligence", `data-find="emotional intelligence"`]
+  ].filter(Boolean);
   return `
-    <section class="paper">
-      <div class="paper-h">
-        <span class="paper-mark">${o.mark}</span>
-        <div class="paper-t">
-          <h3>${o.t}<em>${o.marks}</em></h3>
-          <p>${o.d}</p>
-        </div>
+  <section class="hero">
+    <div class="hero-art art-thinker" aria-hidden="true"></div>
+    <div class="hero-body">
+      <h2 class="hero-t">Thinkers for UPSC Mains</h2>
+      <p class="hero-s">Ideas from thinkers. Structured around UPSC questions.</p>
+      ${searchBoxHTML("")}
+      <div class="hero-pop"><span>Popular:</span>${pop.map(p =>
+        `<button class="pop" ${p[1]}>${esc(p[0])}</button>`).join("")}</div>
+    </div>
+    ${qd ? `
+    <button class="hero-q" data-open="${qd[0].id}" title="Open ${esc(qd[0].name)}">
+      <q>${esc(qd[1])}</q><span>&mdash; ${esc(qd[0].name)}</span>
+    </button>` : ""}
+  </section>`;
+}
+
+function searchBoxHTML(q){
+  return `
+      <form class="hsearch" role="search" data-search>
+        ${ico("search")}
+        <input type="search" name="q" value="${esc(q)}" autocomplete="off"
+               aria-label="Search the site"
+               placeholder="Search thinkers, concepts, PYQs, quotes (e.g. Gandhi, justice, Sisyphus, emotional intelligence)">
+        <button class="cta" type="submit">Search</button>
+      </form>`;
+}
+
+/* The last place read, with how much of its heading, theme or section is done.
+   Before anything has been read, the card offers the first heading of each paper. */
+function continueHTML(){
+  const x = Object.values(lastPlaces()).sort((a, b) => b.at - a.at)[0];
+  if (!x || !x.to) return `
+  <section class="hblock">
+    <div class="hb-head"><h3 class="hb-t">Start Studying</h3></div>
+    <div class="cont">
+      <span class="cont-art art-thinker" aria-hidden="true"></span>
+      <div class="cont-body">
+        <div class="cont-t"><b>Begin with the first heading of either paper</b></div>
+        <p class="cont-w">Your place and progress are kept in this browser, so this card will
+           bring you back to where you stopped.</p>
       </div>
-      <ul class="paper-stats">
-        ${o.stats.map(x => `<li><b>${x[0]}</b><span>${x[1]}</span></li>`).join("")}
-      </ul>
-      <div class="paper-jl">${o.jumpLabel}</div>
-      <ol class="paper-jump">${o.jump.map((x, i) => `
-        <li><button data-to="${o.view}|${i + 1}|"><i>${i + 1}</i>${esc(x.t)}</button></li>`).join("")}
-      </ol>
-      <div class="paper-go">
-        ${o.go.map((g, i) => `<button class="gobtn ${i ? "" : "primary"}" data-view="${g[0]}">${
-          g[1]}${i ? "" : " <i>&rarr;</i>"}</button>`).join("")}
+      <div class="cont-go">
+        <button class="cta" data-to="syllabus|1|">GS-IV ${ico("arrow")}</button>
+        <button class="obtn" data-to="themes|1|">Essay ${ico("arrow")}</button>
       </div>
+    </div>
+  </section>`;
+
+  const bits = x.to.split("|"), view = bits[0], page = +bits[1] || 0, id = bits[2];
+  let done = 0, total = 0, unit = "", kind = "", art = "thinker";
+  if ((view === "syllabus" || view === "themes") && page) {
+    const spec = mapSpec(view), h = spec.list[page - 1];
+    if (h) {
+      const items = spec.items(h), it = items.find(i => i.id === id);
+      total = items.length;
+      done = items.filter(i => isRead(readKey(view, page, i.id))).length;
+      unit = view === "syllabus" ? "heading" : "theme";
+      kind = it ? (it.k || it.lab || it.g) : "";
+    }
+    art = view === "syllabus" ? "aristotle" : "pen";
+  } else if (view === "atlas" && typeof ATLAS !== "undefined") {
+    const e = atlasById()[id];
+    const list = e ? ATLAS.filter(a => a.sec === e.sec) : [];
+    total = list.length;
+    done = list.filter(a => isRead("atlas|0|" + a.id)).length;
+    unit = "section";
+    kind = e ? e.form : "";
+  }
+  const pct = total ? Math.round(done / total * 100) : 0;
+  return `
+  <section class="hblock">
+    <div class="hb-head">
+      <h3 class="hb-t">Continue Studying</h3>
+      <button class="hb-link" data-to="${esc(view)}|0|">Go to my reading ${ico("arrow")}</button>
+    </div>
+    <div class="cont">
+      <span class="cont-art art-${art}" aria-hidden="true"></span>
+      <div class="cont-body">
+        <div class="cont-t"><b>${esc(x.t || "")}</b>${kind ? `<span class="cont-tag">${esc(kind)}</span>` : ""}</div>
+        <p class="cont-w">${esc(x.where || "")}${x.h ? " &middot; " + esc(x.h) : ""}</p>
+        ${total ? `
+        <div class="cont-bar" role="progressbar" aria-label="Read in this ${unit}"
+             aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><i style="width:${pct}%"></i></div>
+        <div class="cont-n"><span>${done} of ${total} read in this ${unit}</span><b>${pct}%</b></div>` : ""}
+      </div>
+      <div class="cont-go"><button class="cta" data-to="${esc(x.to)}">Continue ${ico("arrow")}</button></div>
+    </div>
+  </section>`;
+}
+
+/* The numbers on a paper's card are links: each opens what it counts. */
+function paperCardHTML(o){
+  return `
+    <section class="pcard">
+      <span class="pcard-art art-${o.art}" aria-hidden="true"></span>
+      <div class="pcard-h">
+        <span class="pcard-ico">${ico(o.icon)}</span>
+        <div><h4>${o.t}</h4><p>${o.d}</p></div>
+      </div>
+      <div class="pcard-stats">${o.stats.map(s => `
+        <button data-to="${s[2]}"><b>${s[0]}</b><span>${s[1]}</span></button>`).join("")}
+      </div>
+      <button class="obtn" data-to="${o.to}">${o.go} ${ico("arrow")}</button>
     </section>`;
+}
+
+const HOME_THINKERS = ["gandhi", "ambedkar", "aristotle", "kant", "nietzsche", "camus"];
+
+function thinkerTileHTML(t){
+  const ideas = t.ideas.map(i => splitIdea(i).h.replace(/\s*\(.*?\)\s*/g, " ").trim())
+    .filter(h => h && h.length <= 24).slice(0, 3);
+  return `
+    <button class="tcard" data-open="${t.id}">
+      <div class="tcard-top">
+        ${portraitHTML(t)}
+        <div class="tcard-id"><b>${esc(t.name.split(" ").pop())}</b><span>${esc(regionOf(t))}</span></div>
+      </div>
+      <div class="tcard-tags">${ideas.map(h => `<span>${esc(h)}</span>`).join("")}</div>
+    </button>`;
 }
 
 function renderHome(){
   const s = siteStats();
+  const cs = SYLLABUS.findIndex(r => r.t === "Case Studies") + 1;
+  const topics = ESSAY_THEMES.map((t, i) => ({ t, i, q:themeQuestions(t) }))
+    .sort((a, b) => b.q - a.q || a.i - b.i).slice(0, 6);
   return `
-    <div class="home-lead">
-      <h2>Two papers, prepared from the questions backwards</h2>
-      <p>Every concept note, model paragraph and essay here is built from what the
-         Commission has actually asked between 2013 and 2025, and carries the
-         questions it answers. Start with a paper, or go straight to a heading.</p>
-    </div>
+    ${heroHTML()}
+    <div class="home">
+    ${continueHTML()}
 
-    ${resumeHTML(Object.values(lastPlaces()).sort((a, b) => b.at - a.at)[0])}
+    <section class="hblock">
+      <div class="hb-head">
+        <div><h3 class="hb-t">Study by Paper</h3>
+          <p class="hb-s">Structured around the questions UPSC has actually set, ${yearSpan()}.</p></div>
+      </div>
+      <div class="pcards">
+        ${paperCardHTML({
+          t:"GS-IV: Ethics", d:"Concepts, thinkers, case studies and PYQs", icon:"scale", art:"aristotle",
+          to:"syllabus|0|", go:"Explore GS-IV",
+          stats:[[s.headings, "Syllabus topics", "syllabus|0|"], [s.gsq, "Past questions", "gs4pyq|0|"],
+                 [s.concepts, "Concept notes", "syllabus|1|"],
+                 [s.cases, "Case studies", cs ? "syllabus|" + cs + "|pyq" : "gs4pyq|0|"]]
+        })}
+        ${paperCardHTML({
+          t:"Essay Paper", d:"Themes, model essays, arguments and examples", icon:"nib", art:"pen",
+          to:"themes|0|", go:"Explore Essays",
+          stats:[[s.themes, "Essay themes", "themes|0|"], [s.essays, "Model essays", "essays|0|"],
+                 [s.paras, "Model paragraphs", "themes|1|p:0"], [s.stories, "Stories & examples", "atlas|0|"]]
+        })}
+      </div>
+    </section>
 
-    <div class="papers">
-      ${paperCard({
-        mark:"\u2696\uFE0F", t:"GS-IV Ethics", marks:"250 marks",
-        d:"The syllabus, heading by heading. Under each, the ideas the paper keeps returning to, written plainly, with the questions that asked them.",
-        stats:[[s.headings, "syllabus headings"], [s.concepts, "concept notes"],
-               [s.gsq, "past questions mapped"], [s.cases, "case studies"]],
-        view:"syllabus", jump:SYLLABUS, jumpLabel:"Go to a heading",
-        go:[["syllabus", "Open the syllabus map"], ["gs4pyq", "Past questions"], ["ethics", "Thinkers for Ethics"]]
-      })}
-      ${paperCard({
-        mark:"\u270D\uFE0F", t:"Essay Paper", marks:"250 marks",
-        d:"Nine themes covering every past topic. Each carries model paragraphs you can adapt, full essays, and stories and thought experiments to open an essay with.",
-        stats:[[s.themes, "essay themes"], [s.paras, "model paragraphs"],
-               [s.essays, "full model essays"], [s.stories, "stories and models"]],
-        view:"themes", jump:ESSAY_THEMES, jumpLabel:"Go to a theme",
-        go:[["themes", "Open the theme map"], ["essays", "Model essays"],
-            ["atlas", "Stories and models"], ["pyq", s.topics + " past topics"]]
-      })}
-    </div>
+    <section class="hblock">
+      <div class="hb-head">
+        <div><h3 class="hb-t">Explore Thinkers</h3>
+          <p class="hb-s">Browse thinkers, their key ideas, and how they appear in UPSC questions.</p></div>
+        <button class="hb-link" data-view="all">View all ${s.thinkers} thinkers ${ico("arrow")}</button>
+      </div>
+      <div class="tcards">${HOME_THINKERS.map(id => byId[id]).filter(Boolean).map(thinkerTileHTML).join("")}</div>
+    </section>
 
-    <div class="home-sec">Reference</div>
-    <div class="ref-row">
-      ${[["all", "\u{1F4DA}", "Thinkers", s.thinkers, "profiles, each with ideas, quotations and how to use them"],
-         ["quotes", "\u{1F4AC}", "Quote bank", s.quotes, "quotations, attributed and searchable"],
-         ["worklab", "\u{1F4D6}", "Works in depth", s.works, "books read closely, chapter by chapter"]]
-        .map(r => `
-        <button class="refcard" data-view="${r[0]}">
-          <span class="ref-ico">${r[1]}</span>
-          <b>${r[2]}</b>
-          <span class="ref-n">${r[3]}</span>
-          <span class="ref-d">${r[4]}</span>
+    <section class="hblock">
+      <div class="hb-head">
+        <div><h3 class="hb-t">High-yield Topics</h3>
+          <p class="hb-s">The essay themes the paper has asked most, with their thinkers and model material.</p></div>
+        <button class="hb-link" data-to="themes|0|">View all ${s.themes} themes ${ico("arrow")}</button>
+      </div>
+      <div class="topics">${topics.map((r, k) => `
+        <button class="topic" data-to="themes|${r.i + 1}|">
+          <span class="topic-ico tone-${k}">${ico(r.t.ic)}</span>
+          <span class="topic-t"><b>${esc(r.t.n)}</b>
+            <small>${plural(r.q, "PYQ", "PYQs")} &middot; ${plural(r.t.ids.length, "thinker", "thinkers")}</small></span>
         </button>`).join("")}
+      </div>
+    </section>
+    </div>`;
+}
+
+/* ================= SEARCH =================
+   One box for the whole site. Every word of the query has to appear, in any
+   order, so "emotional intelligence" finds the concept rather than every page
+   that mentions emotion. Matches in a title come before matches in the text. */
+const SEARCH_SHOW = 8;
+function searchHits(q){
+  const words = atlasFold(q).split(/\s+/).filter(Boolean);
+  const has = s => { const h = atlasFold(s); return words.every(w => h.includes(w)); };
+  const out = { thinkers:[], concepts:[], stories:[], essays:[], questions:[], quotes:[] };
+  if (!words.length) return out;
+  const titled = (list, title, body) => {
+    const a = [], b = [];
+    list.forEach(x => { if (has(title(x))) a.push(x); else if (body && has(body(x))) b.push(x); });
+    return a.concat(b);
+  };
+
+  out.thinkers = titled(THINKERS, t => t.name + " " + t.school, haystack);
+
+  if (typeof GS4_CONCEPTS !== "undefined") {
+    const all = [];
+    SYLLABUS.forEach((r, p) => (GS4_CONCEPTS[r.t] || []).forEach((c, i) =>
+      all.push({ t:c.t, h:r.t, to:"syllabus|" + (p + 1) + "|c:" + i, d:(c.d || []).join(" ") })));
+    out.concepts = titled(all, c => c.t, c => c.d);
+  }
+  if (typeof ATLAS !== "undefined") {
+    const secName = {};
+    ATLAS_SECTIONS.forEach(s => { secName[s.id] = s.t; });
+    out.stories = titled(ATLAS, x => x.t + " " + x.q, x => {
+      const e = ATLAS_ENTRIES[x.id] || {};
+      return [x.src].concat(e.setup || [], [e.reveals || ""]).join(" ");
+    }).map(x => ({ t:x.t, h:secName[x.sec] || "", to:"atlas|0|" + x.id }));
+  }
+  if (typeof ESSAYS !== "undefined") {
+    out.essays = titled(Object.keys(ESSAYS), k => k + " " + (ESSAYS[k].et || ""))
+      .map(k => ({ t:k, h:themeOfEssay(k) || "", essay:k }));
+  }
+  if (typeof PYQ_PAPERS !== "undefined")
+    PYQ_PAPERS.forEach(p => p.a.concat(p.b).forEach(q => {
+      if (has(q)) out.questions.push({ t:q, h:"Essay " + p.y, y:p.y, to:"pyq|0|" });
+    }));
+  if (typeof GS4_PYQ !== "undefined")
+    GS4_PYQ.forEach(q => {
+      if (has(q.q)) out.questions.push({ t:q.q, h:"GS-IV " + q.y + (q.sec === "B" ? " · case study" : ""), y:q.y, to:"gs4pyq|0|" });
+    });
+  out.questions.sort((a, b) => b.y - a.y);
+  THINKERS.forEach(t => t.quotes.forEach(q => { if (has(q)) out.quotes.push({ t:q, h:t.name, open:t.id }); }));
+  return out;
+}
+
+function renderSearch(){
+  const q = state.q.trim();
+  const hits = searchHits(q);
+  const more = state.more || {};
+  const groups = [
+    ["thinkers", "Thinkers"], ["concepts", "GS-IV concepts"], ["stories", "Stories and models"],
+    ["essays", "Model essays"], ["questions", "Past questions"], ["quotes", "Quotations"]
+  ].filter(g => hits[g[0]].length);
+  const total = groups.reduce((n, g) => n + hits[g[0]].length, 0);
+  const row = x => {
+    const act = x.open ? `data-open="${x.open}"` : x.essay ? `data-essay="${esc(x.essay)}"` : `data-to="${esc(x.to)}"`;
+    return `<button class="srow" ${act}><b>${esc(x.t)}</b><span>${esc(x.h)}</span></button>`;
+  };
+  return `
+    <div class="srch">
+      ${searchBoxHTML(q)}
+      <p class="srch-sum">${q
+        ? (total ? `${plural(total, "result", "results")} for &ldquo;${esc(q)}&rdquo;`
+                 : `Nothing found for &ldquo;${esc(q)}&rdquo;. Try fewer words, or another spelling.`)
+        : "Type a thinker, an idea, a word from a question or a line from a quotation."}</p>
+      ${groups.map(g => {
+        const list = hits[g[0]], all = more[g[0]] || list.length <= SEARCH_SHOW;
+        const shown = all ? list : list.slice(0, SEARCH_SHOW);
+        return `
+      <section class="hblock srch-g">
+        <div class="hb-head"><h3 class="hb-t">${g[1]} <small>${list.length}</small></h3></div>
+        ${g[0] === "thinkers"
+          ? `<div class="grid">${shown.map(cardHTML).join("")}</div>`
+          : `<div class="srows">${shown.map(row).join("")}</div>`}
+        ${all ? "" : `<button class="obtn srch-more" data-more="${g[0]}">Show all ${list.length}</button>`}
+      </section>`;
+      }).join("")}
+    </div>`;
+}
+
+function runSearch(q){
+  state.q = q.trim();
+  state.more = {};
+  const box = document.getElementById("search");
+  if (box) box.value = state.q;
+  state.view = state.q ? "search" : "home";
+  state.nav = "views";
+  render();
+}
+
+/* The two past-question pages sit under one section, with a switch between them. */
+function pyqSwitchHTML(on){
+  return `
+    <div class="pyq-switch" role="group" aria-label="Which paper">
+      <button class="${on === "pyq" ? "on" : ""}" data-view="pyq" aria-pressed="${on === "pyq"}">Essay topics</button>
+      <button class="${on === "gs4pyq" ? "on" : ""}" data-view="gs4pyq" aria-pressed="${on === "gs4pyq"}">GS-IV questions</button>
     </div>`;
 }
 
@@ -335,35 +623,26 @@ function topSections(){
   const s = siteStats();
   const tagged = x => THINKERS.filter(t => t.tag.includes(x)).length;
   const cs = SYLLABUS.findIndex(r => r.t === "Case Studies") + 1;
-  const span = (typeof PYQ_PAPERS !== "undefined" && PYQ_PAPERS.length)
-    ? PYQ_PAPERS[PYQ_PAPERS.length - 1].y + " to " + PYQ_PAPERS[0].y : "";
   const g4y = (typeof GS4_PYQ !== "undefined") ? GS4_PYQ.map(q => q.y) : [];
   const g4span = g4y.length ? Math.min.apply(null, g4y) + " to " + Math.max.apply(null, g4y) : "";
   return [
     { id:"home", t:"Home", to:"home|0|" },
-    { id:"map", t:"Syllabus Map", to:"syllabus|0|", items:[
-      ["syllabus|0|", "GS-IV Ethics", s.headings + " syllabus headings, and the ideas under each"],
-      ["themes|0|", "Essay", s.themes + " themes that cover every past topic"],
-      cs && ["syllabus|" + cs + "|method", "Case Studies", "six moves for answering one"]
+    { id:"thinkers", t:"Thinkers", to:"all|0|" },
+    { id:"gs4", t:"GS-IV", to:"syllabus|0|", items:[
+      ["syllabus|0|", "Syllabus map", s.headings + " headings, with the concepts, thinkers and questions under each"],
+      ["gs4pyq|0|", "Past questions", s.gsq + " questions" + (g4span ? ", " + g4span : "") + ", by topic"],
+      cs && ["syllabus|" + cs + "|method", "Case studies", "six moves for answering one, and " + s.cases + " past cases"],
+      ["ethics|0|", "Thinkers for Ethics", tagged("Ethics") + " named in or serving the syllabus"]
     ]},
-    { id:"essays", t:"Model Essays", to:"essays|0|", items:[
-      ["essays|0|", "Full model essays", s.essays + " essays, written out in full"],
+    { id:"essay", t:"Essay", to:"themes|0|", items:[
+      ["themes|0|", "Theme map", s.themes + " themes that cover every past topic"],
+      ["essays|0|", "Model essays", s.essays + " essays, written out in full"],
       ["themes|1|p:0", "Model paragraphs", s.paras + " paragraphs to adapt, arranged by theme"],
       typeof ATLAS !== "undefined" &&
-        ["atlas|0|", "Stories and models", ATLAS.length + " stories and thought experiments to open an essay with"]
+        ["atlas|0|", "Stories and models", ATLAS.length + " stories and thought experiments to open an essay with"],
+      ["essay|0|", "Thinkers for Essay", tagged("Essay") + " who open, carry or answer an essay"]
     ]},
-    { id:"pyq", t:"Past Year Questions", to:"pyq|0|", items:[
-      ["pyq|0|", "Essay topics", s.topics + " topics" + (span ? ", " + span : "") + ", by theme and by year"],
-      ["gs4pyq|0|", "GS-IV questions", s.gsq + " questions" + (g4span ? ", " + g4span : "") + ", classified by topic"],
-      cs && ["syllabus|" + cs + "|pyq", "GS-IV case studies", s.cases + " cases from past papers"]
-    ]},
-    { id:"thinkers", t:"Thinkers & Quotes", to:"all|0|", items:[
-      ["all|0|", "All thinkers", s.thinkers + " profiles, with ideas and quotations"],
-      ["ethics|0|", "Thinkers for Ethics", tagged("Ethics") + " named in or serving the GS-IV syllabus"],
-      ["essay|0|", "Thinkers for Essay", tagged("Essay") + " who open, carry or answer an essay"],
-      ["quotes|0|", "Quote bank", s.quotes + " quotations, attributed and searchable"],
-      ["worklab|0|", "Works in depth", s.works + " books read closely"]
-    ]}
+    { id:"pyq", t:"PYQs", to:"pyq|0|" }
   ];
 }
 
@@ -386,9 +665,10 @@ function renderTopNav(){
 
 function topSectionOf(v){
   if (v === "home") return "home";
-  if (v === "syllabus" || v === "themes") return "map";
-  if (v === "essays" || v.startsWith("essay:") || v === "atlas") return "essays";
+  if (v === "syllabus" || v === "ethics") return "gs4";
+  if (v === "themes" || v === "essays" || v.startsWith("essay:") || v === "atlas" || v === "essay") return "essay";
   if (v === "pyq" || v === "gs4pyq") return "pyq";
+  if (v === "search") return "";
   return "thinkers";
 }
 
@@ -487,62 +767,63 @@ function treeHTML(spec, page, items){
     </div>`;
 }
 
+/* The sidebar everywhere outside a map: the five sections, then ways to browse.
+   The three browse groups fold open one at a time; the one holding the page
+   being read opens by itself. */
+let sideOpen = null;
 function renderNav(){
   if (state.view === "syllabus" && state.nav === "syllabus") return renderMapNav(mapSpec("syllabus"));
   if (state.view === "themes"   && state.nav === "themes")   return renderMapNav(mapSpec("themes"));
   if (state.view === "atlas"    && state.nav === "atlas" && typeof ATLAS !== "undefined") return renderAtlasNav();
   const lab = document.getElementById("catLabel");
-  if (lab) lab.hidden = false;
-  const tagged = x => THINKERS.filter(t => t.tag.includes(x)).length;
-  const groups = [
-    { label:"", items:[
-      { id:"home", ico:"\u{1F3E0}", name:"Start here" }
-    ]},
-    { label:"GS-IV Ethics", items:[
-      { id:"syllabus", ico:"\u{1F5FA}\uFE0F", name:"Syllabus Map", n:SYLLABUS.length },
-      { id:"gs4pyq",   ico:"\u{1F5C3}\uFE0F", name:"Past Questions",
-        n:(typeof GS4_PYQ !== "undefined") ? GS4_PYQ.length : 0 },
-      { id:"ethics",   ico:"\u2696\uFE0F",    name:"Thinkers for Ethics", n:tagged("Ethics") }
-    ]},
-    { label:"Essay Paper", items:[
-      { id:"themes", ico:"\u{1F3AF}", name:"Theme Map", n:ESSAY_THEMES.length },
-      { id:"essays", ico:"\u{1F4DD}", name:"Model Essays",
-        n:(typeof ESSAYS !== "undefined") ? Object.keys(ESSAYS).length : 0 },
-      { id:"pyq",    ico:"\u{1F5C3}\uFE0F", name:"Past Topics",
-        n:(typeof PYQ_PAPERS !== "undefined")
-            ? PYQ_PAPERS.reduce((a, p) => a + p.a.length + p.b.length, 0) : 0 },
-      { id:"atlas",  ico:"\u{1F9ED}",       name:"Stories and Models",
-        n:(typeof ATLAS !== "undefined") ? ATLAS.length : 0 },
-      { id:"essay",  ico:"\u270D\uFE0F",    name:"Thinkers for Essay", n:tagged("Essay") }
-    ]},
-    { label:"Reference", items:[
-      { id:"all",     ico:"\u{1F4DA}", name:"All Thinkers", n:THINKERS.length },
-      { id:"quotes",  ico:"\u{1F4AC}", name:"Quote Bank",
-        n:THINKERS.reduce((a, t) => a + t.quotes.length, 0) },
-      { id:"worklab", ico:"\u{1F4D6}", name:"Works in Depth",
-        n:(typeof WORKLAB !== "undefined") ? Object.keys(WORKLAB).length : 0 }
-    ]}
-  ];
-  const on = id => state.view === id ||
-    (id === "worklab" && state.view.startsWith("work:")) ||
-    (id === "essays"  && state.view.startsWith("essay:"));
-  // the sections are the header band's job on a wide screen; the drawer on a
-  // narrow one still needs them, so they are drawn and the stylesheet decides
-  document.getElementById("viewNav").innerHTML = `<div class="nav-sections">${groups.map(g => `
-    ${g.label ? `<div class="side-label">${g.label}</div>` : ""}
-    ${g.items.map(v => `
-      <button class="nav-item ${on(v.id) ? "active" : ""}" data-view="${v.id}"
-              title="${esc(v.name)}">
-        <span class="nav-ico">${v.ico}</span><span class="nav-name">${v.name}</span>
-        ${v.n === undefined ? "" : `<span class="nav-count">${v.n}</span>`}
-      </button>`).join("")}`).join("")}</div>`;
+  if (lab) lab.hidden = true;
+  document.getElementById("catNav").innerHTML = "";
 
-  document.getElementById("catNav").innerHTML = CATEGORIES.map(c => `
-    <button class="nav-item ${state.view === c.id ? "active" : ""}" data-view="${c.id}"
-            title="${esc(c.name)}">
-      <span class="nav-ico">${c.icon}</span><span class="nav-name">${c.name}</span>
-      <span class="nav-count">${THINKERS.filter(t => t.cat === c.id).length}</span>
-    </button>`).join("");
+  const v = state.view, sec = topSectionOf(v);
+  const cs = SYLLABUS.findIndex(r => r.t === "Case Studies") + 1;
+  const open = sideOpen === "none" ? null : (sideOpen || (catById[v] ? "cats" : null));
+  const item = (o, on, cls) => `
+    <button class="nav-item${on ? " active" : ""}${cls ? " " + cls : ""}" ${o[2]} title="${esc(o[1])}">
+      ${ico(o[0], "nav-ico")}<span class="nav-name">${esc(o[1])}</span>
+    </button>`;
+  const fold = (key, icon, name, kids) => `
+    <button class="nav-item nav-fold" data-sidefold="${key}" aria-expanded="${String(open === key)}" title="${esc(name)}">
+      ${ico(icon, "nav-ico")}<span class="nav-name">${esc(name)}</span>${ico("chev", "nav-chev")}
+    </button>
+    ${open === key ? `<div class="nav-kids">${kids}</div>` : ""}`;
+  const kid = (attr, name, n, on) => `
+    <button class="nav-kid${on ? " on" : ""}" ${attr}><span>${esc(name)}</span>${n === undefined ? "" : `<i>${n}</i>`}</button>`;
+
+  document.getElementById("viewNav").innerHTML = `
+    <button class="side-search" data-sidesearch title="Search the site">
+      ${ico("search")}<span>Search&hellip;</span><kbd>Ctrl K</kbd>
+    </button>
+    ${item(["home", "Home", `data-view="home"`], sec === "home")}
+    ${item(["user", "Thinkers", `data-view="all"`], sec === "thinkers")}
+    ${item(["scale", "GS-IV", `data-view="syllabus"`], sec === "gs4")}
+    ${item(["nib", "Essay", `data-view="themes"`], sec === "essay")}
+    ${item(["calendar", "Past Year Questions", `data-view="pyq"`], sec === "pyq")}
+
+    <div class="side-label">Explore</div>
+    ${item(["users", "All Thinkers", `data-view="all"`], v === "all", "sub")}
+    ${Object.keys(REGIONS).map(k => item(["user", REGIONS[k].name, `data-view="${k}"`], v === k, "sub")).join("")}
+    ${item(["book", "Works in Depth", `data-view="worklab"`], v === "worklab" || v.startsWith("work:"), "sub")}
+
+    <div class="side-label">Browse by theme</div>
+    ${fold("cats", "landmark", "Schools & Traditions", CATEGORIES.map(c =>
+      kid(`data-view="${c.id}"`, c.name, THINKERS.filter(t => t.cat === c.id).length, v === c.id)).join(""))}
+    ${fold("concepts", "bulb", "Key Concepts", SYLLABUS.map((r, i) =>
+      kid(`data-to="syllabus|${i + 1}|"`, r.t, (typeof GS4_CONCEPTS !== "undefined" && GS4_CONCEPTS[r.t]) ? GS4_CONCEPTS[r.t].length : undefined)).join(""))}
+    ${fold("themes", "target", "Essay Themes", ESSAY_THEMES.map((t, i) =>
+      kid(`data-to="themes|${i + 1}|"`, t.n || t.t)).join(""))}
+    ${cs ? item(["case", "Case Studies", `data-to="syllabus|${cs}|method"`], false, "sub") : ""}
+    ${item(["quote", "Quotes", `data-view="quotes"`], v === "quotes", "sub")}
+    ${typeof ATLAS !== "undefined" ? item(["compass", "Stories & Examples", `data-view="atlas"`], v === "atlas", "sub") : ""}
+
+    <div class="side-foot">
+      ${ico("book")}
+      <p>Built from ${yearSpan()} UPSC questions.<br>Read less. Think deeper. Write better.</p>
+    </div>`;
 }
 
 /* ================= FILTERING ================= */
@@ -555,10 +836,12 @@ function currentList(){
   if (state.view === "essay")  list = list.filter(t => t.tag.includes("Essay"));
   else if (state.view === "ethics") list = list.filter(t => t.tag.includes("Ethics"));
   else if (catById[state.view]) list = list.filter(t => t.cat === state.view);
+  else if (REGIONS[state.view]) list = list.filter(t => REGIONS[state.view].cats.includes(t.cat));
 
   if (state.tag) list = list.filter(t => t.tag.includes(state.tag));
 
-  const q = state.q.trim().toLowerCase();
+  // the site search has its own page; only the quote bank filters in place
+  const q = state.view === "quotes" ? state.q.trim().toLowerCase() : "";
   if (q) list = list.filter(t => haystack(t).includes(q));
   return list;
 }
@@ -584,8 +867,8 @@ function renderGrid(){
   const list = currentList();
   const cat = catById[state.view];
   let head;
-  if (state.q) head = { h:`Results for “${esc(state.q)}”`, p:`${list.length} thinker${list.length === 1 ? "" : "s"} matched.` };
-  else if (cat) head = { h:cat.name, p:cat.blurb };
+  if (cat) head = { h:cat.name, p:cat.blurb };
+  else if (REGIONS[state.view]) head = { h:REGIONS[state.view].name, p:REGIONS[state.view].blurb };
   else if (state.view === "essay") head = { h:"Essay Paper", p:"Thinkers who give an essay its opening quotation, its philosophical spine or its counter-argument." };
   else if (state.view === "ethics") head = { h:"GS Paper IV — Ethics, Integrity & Aptitude", p:"Thinkers named in or directly serving the GS-IV syllabus." };
   else head = { h:"All Thinkers", p:"Sorted by tradition. Use the sidebar to narrow by school, or search across every idea and quotation." };
@@ -1579,6 +1862,7 @@ function render(){
   else if (state.view === "quotes")   main.innerHTML = renderQuotes();
   else if (state.view === "syllabus") main.innerHTML = renderSyllabus();
   else if (state.view === "themes")   main.innerHTML = renderThemes();
+  else if (state.view === "search")   main.innerHTML = renderSearch();
   else                                main.innerHTML = renderGrid();
   glossHide(true);
   renderNav();
@@ -1826,6 +2110,7 @@ function renderPYQ(){
 
   return `
   <section class="pyq page" id="pyq">
+    ${pyqSwitchHTML("pyq")}
     <div class="sec-head">
       <h3>Past Questions, Classified</h3>
       <p>Every essay set in the last ${papers} Mains papers &mdash; ${span}, ${total} questions &mdash;
@@ -1934,6 +2219,7 @@ function renderGS4PYQ(){
 
   return `
   <section class="pyq page g4pyq" id="gs4pyq">
+    ${pyqSwitchHTML("gs4pyq")}
     <div class="sec-head">
       <h3>GS-IV Past Questions, by Topic</h3>
       <p>All ${GS4_PYQ.length} questions from the ${papers} GS Paper IV papers, ${span}:
@@ -2135,6 +2421,29 @@ document.addEventListener("click", e => {
   const side = document.getElementById("sidebar");
   if (side.classList.contains("open") && !e.target.closest("#sidebar, #menuBtn, [data-toc]"))
     side.classList.remove("open");
+
+  if (e.target.closest("[data-sidesearch]")) {
+    document.getElementById("sidebar").classList.remove("open");
+    openSearch();
+    return;
+  }
+  const sf = e.target.closest("[data-sidefold]");
+  if (sf) {
+    const key = sf.dataset.sidefold;
+    sideOpen = sf.getAttribute("aria-expanded") === "true" ? "none" : key;
+    renderNav();
+    return;
+  }
+  const find = e.target.closest("[data-find]");
+  if (find) { runSearch(find.dataset.find); return; }
+  const more = e.target.closest("[data-more]");
+  if (more) {
+    state.more = Object.assign({}, state.more, { [more.dataset.more]:true });
+    const y = window.scrollY;
+    render();
+    window.scrollTo({ top:y, behavior:"instant" });
+    return;
+  }
 
   const to = e.target.closest("[data-to]");
   if (to) {
@@ -2365,8 +2674,19 @@ document.addEventListener("click", e => {
 
 document.getElementById("search").addEventListener("input", e => {
   state.q = e.target.value;
-  if (state.q && state.view !== "quotes") state.view = "all";
+  state.more = {};
+  if (state.view !== "quotes") {
+    if (state.q.trim()) { state.view = "search"; state.nav = "views"; }
+    else if (state.view === "search") state.view = "home";
+  }
   render();
+});
+/* the search boxes on the front page and the results page */
+document.addEventListener("submit", e => {
+  const f = e.target.closest("[data-search]");
+  if (!f) return;
+  e.preventDefault();
+  runSearch(f.elements.q.value);
 });
 
 /* The panel collapses to a rail. The control lives in the panel, where a reader
@@ -2458,6 +2778,10 @@ document.addEventListener("keydown", e => {
       x = walk[mapWhere(walk, n, mapSel(spec.items(spec.list[n - 1]))) + (back ? -1 : 1)];
     }
     if (x) { state.page = x.p; state.sel = x.id; state.fold = false; render(); }
+  }
+  if ((e.ctrlKey || e.metaKey) && !e.altKey && e.key.toLowerCase() === "k") {
+    e.preventDefault();
+    openSearch();
   }
   if (e.key === "/" && document.activeElement.id !== "search"
       && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) {
