@@ -62,6 +62,27 @@ The site remembers what has been read and where you stopped, in this browser onl
 page offers **Continue where you left off**, and each map's index offers its own. On a narrow
 screen the contents live in the drawer, opened from **Contents** at the top of the column.
 
+### Reading the atlas
+
+The atlas opens on an **overview**. It first shows how every entry is built, in eight numbered
+parts: the story, the question it forces, what it reveals, interpretations, where it breaks,
+where it shows up, how to use it in the exam, and where to go further. Below that come a search
+box, six ways to arrange the entries (section, essay theme, idea, tradition, form, A to Z), a
+tile for each group with how much of it has been read, and every entry as a card showing the
+question it asks. Colour marks the kind of entry throughout: imagined cases, stories, findings and
+models, and ideas and images.
+
+An entry opens with a summary (kind, reading time, themes, and what it is about, with source,
+period, tradition and type). A strip of its eight parts stays at the top while you read, marks
+the part you are in, and jumps to any other. Each part has its own look:
+- the question: a blue call-out
+- the insight: a saffron box
+- interpretations: cards
+- limits: flagged items
+- cases: labelled blocks
+- exam use: split into GS-IV and Essay rows, with the essay themes and model essays that use it
+- related entries: cards
+
 Each thinker page has: a collapsed **Read full introduction** toggle → **Core Ideas** →
 **Key Quotations** → **Major Works** → **Where to Use It** (split into Essay themes and
 GS-IV syllabus hooks).

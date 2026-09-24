@@ -578,9 +578,6 @@ html[data-theme="dark"] .cont-art{filter:grayscale(.4) brightness(.85)}
   color:var(--accent)}
 .essay-doc .essay-stories p{
   font-family:var(--read);font-size:14.5px;line-height:1.6;color:var(--ink-2);margin:6px 0 12px}
-.atl-uses{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 12px}
-.atl-uses:last-child{margin-bottom:0}
-.atl-uses b{flex:0 0 100%;font:600 12.5px/1.4 var(--sans);color:var(--ink-2)}
 @media print{ .essay-stories{break-inside:avoid} }
 
 /* ---------------- Thinker cards ----------------
@@ -1674,8 +1671,10 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 }
 
 /* ================= HUMAN THOUGHT ATLAS =================
-   Its contents live in the sidebar like a map's: a search box and six ways to
-   arrange the entries above the list, and one entry at a time in the column. */
+   An overview page shows how every entry is built and lays all of them out as
+   cards; the sidebar keeps the same list for moving between entries. Every
+   entry carries its eight parts as a numbered strip, and each part has a look
+   of its own, so a reader always knows what they are reading and what is next. */
 .atl-side{display:flex;flex-direction:column;gap:9px;padding:0 2px 6px}
 .atl-tree{margin:0;padding:0;border:0}
 .atl-search{
@@ -1707,38 +1706,137 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   padding-top:3px;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.8px;
   text-transform:uppercase;color:var(--ink-3);white-space:nowrap}
 .atl-meta dd{font-family:var(--read);font-size:14.5px;line-height:1.55;color:var(--read-ink)}
-.atl-tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 28px}
-.atl-tags span{
-  font-family:var(--sans);font-size:11.5px;font-weight:600;padding:4px 10px;
-  border-radius:20px;background:var(--line-2);color:var(--ink-2)}
-.atl-f{margin:0 0 30px}
-.atl-f h6{
-  font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.9px;
-  text-transform:uppercase;color:var(--ink-3);margin:0 0 11px}
-.atl-f p,.atl-list li,.atl-readings dd{
-  font-family:var(--read);font-size:17px;font-weight:400;line-height:1.78;
-  color:var(--read-ink);text-align:left}
-.atl-f p{margin:0 0 1.05em}
-.atl-f p:last-child{margin-bottom:0}
-.atl-f .atl-q{font-size:21px;font-weight:500;line-height:1.45;color:var(--ink)}
-.atl-readings div{padding:13px 0;border-top:1px solid var(--line-2)}
-.atl-readings div:first-child{padding-top:0;border-top:0}
-.atl-readings dt{
-  font-family:var(--read);font-size:15.5px;font-weight:600;line-height:1.4;
-  color:var(--ink);margin-bottom:3px}
-.atl-list{list-style:none;display:grid;gap:10px}
-.atl-list li{position:relative;padding-left:20px}
-.atl-list li::before{
-  content:"";position:absolute;left:3px;top:.8em;width:6px;height:6px;
-  background:var(--accent);opacity:.75;transform:rotate(45deg)}
-.atl-list li b{font-weight:600;color:var(--ink)}
-.atl-list li.atl-exam{
-  margin-top:6px;padding:12px 16px;border-radius:8px;background:var(--accent-soft);
-  font-size:15.5px;line-height:1.66}
-.atl-list li.atl-exam::before{display:none}
-.atl-list li.atl-exam b{
-  display:block;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.8px;
-  text-transform:uppercase;color:var(--accent)}
+/* ---- Kinds of entry: one colour each, wherever an entry appears ---- */
+.fam-imagined{--fam:#2f4b80;--fam-bg:#e9eef7}
+.fam-story{--fam:#9a5514;--fam-bg:#fdefe0}
+.fam-finding{--fam:#2e6b40;--fam-bg:#e7f3ea}
+.fam-idea{--fam:#5b3f8a;--fam-bg:#efeaf6}
+html[data-theme="dark"] .fam-imagined{--fam:#b6c8ee;--fam-bg:rgba(159,181,227,.16)}
+html[data-theme="dark"] .fam-story{--fam:#f0b672;--fam-bg:rgba(232,165,90,.16)}
+html[data-theme="dark"] .fam-finding{--fam:#9ad3aa;--fam-bg:rgba(126,196,146,.16)}
+html[data-theme="dark"] .fam-idea{--fam:#c8b4ea;--fam-bg:rgba(178,152,222,.16)}
+.akind{
+  display:inline-flex;align-items:center;gap:6px;padding:4px 9px 4px 7px;border-radius:6px;
+  font:600 11.5px/1.2 var(--sans);white-space:nowrap;color:var(--fam);background:var(--fam-bg)}
+.akind .ic{width:14px;height:14px}
+
+/* ---- The overview: how an entry is built, then every entry as a card ---- */
+.atl-ix{max-width:1180px}
+.atl-guide{margin:4px 0 28px}
+.atl-guide .hb-t{font-size:18px;margin-bottom:14px}
+.atl-steps{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,215px),1fr));gap:10px;margin:0;padding:0}
+.atl-steps li{
+  display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:11px;align-items:start;
+  padding:12px 14px;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+.atl-step-ico{
+  grid-row:1 / span 2;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+  background:var(--saffron-soft);color:var(--saffron-ink)}
+.atl-steps b{font:600 14px/1.35 var(--read);color:var(--head)}
+.atl-steps b i{font-style:normal;margin-right:6px;color:var(--saffron-ink)}
+.atl-steps li > span:last-child{margin-top:2px;font:12.5px/1.45 var(--sans);color:var(--ink-3)}
+.atl-bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.atl-bar .hsearch{flex:1 1 320px;max-width:none}
+.atl-arrange{flex-wrap:wrap}
+.atl-legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:16px 0 0}
+.akey{display:inline-flex;align-items:center;gap:7px;font:500 12.5px/1.3 var(--sans);color:var(--ink-2);cursor:help}
+.akey i{width:11px;height:11px;border-radius:3px;background:var(--fam)}
+.akey em{font-style:normal;color:var(--ink-3)}
+.atl-tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,205px),1fr));gap:10px;margin-top:16px}
+.atile{
+  display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:10px;row-gap:2px;align-items:center;
+  padding:12px 14px;text-align:left;background:var(--panel);border:1px solid var(--line);
+  border-radius:10px;cursor:pointer;transition:.13s}
+.atile:hover{border-color:var(--saffron)}
+.atile > .ic{grid-row:1 / span 2;width:22px;height:22px;color:var(--saffron-ink)}
+.atile b{font:600 13.5px/1.3 var(--read);color:var(--head)}
+.atile > span{font:12px/1.3 var(--sans);color:var(--ink-3)}
+.atile-bar{grid-column:1 / -1;height:4px;margin-top:8px;border-radius:4px;background:var(--line-2);overflow:hidden}
+.atile-bar i{display:block;height:100%;background:var(--saffron)}
+.atile[hidden],.atl-group[hidden],.acard[hidden]{display:none}
+.atl-group{scroll-margin-top:84px}
+.acards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:12px}
+.acard{
+  display:flex;flex-direction:column;gap:8px;padding:14px 15px;text-align:left;
+  background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--fam);
+  border-radius:10px;box-shadow:var(--shadow);cursor:pointer;transition:.15s}
+.acard:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+.acard-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.acard-tick{flex:0 0 auto;width:18px;height:18px;border-radius:50%;border:1.5px solid var(--line)}
+.acard.done .acard-tick{
+  border-color:var(--accent);background:var(--accent) center/12px no-repeat
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E")}
+.acard b{font:600 16px/1.3 var(--read);color:var(--head)}
+.acard-q{flex:1;font:14px/1.55 var(--read);color:var(--ink-2)}
+.acard-foot{font:12px/1.4 var(--sans);color:var(--ink-3)}
+.acard:focus-visible,.atile:focus-visible,.arel:focus-visible,
+.atl-jump button:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
+
+/* ---- One entry: a summary, a strip of its eight parts, then the parts ---- */
+.atl-crumbs{margin-bottom:14px}
+.atl-top-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:-6px 0 16px}
+.atl-time{font:500 12px/1 var(--sans);color:var(--ink-3)}
+.atl-theme{font:600 11.5px/1 var(--sans);padding:5px 10px;border-radius:20px;background:var(--line-2);color:var(--ink-2)}
+/* the strip stays in view, and marks the part being read */
+.atl-jump{
+  position:sticky;top:64px;z-index:5;display:flex;gap:4px;overflow-x:auto;
+  margin:0 -40px 26px;padding:10px 40px;background:var(--panel);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);scrollbar-width:none}
+.atl-jump::-webkit-scrollbar{display:none}
+.atl-jump button{
+  flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;padding:6px 11px 6px 7px;
+  border:0;border-radius:20px;background:none;cursor:pointer;white-space:nowrap;
+  font:600 12.5px/1 var(--sans);color:var(--ink-3)}
+.atl-jump button i{
+  display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;
+  font-style:normal;font-size:10.5px;background:var(--line-2);color:var(--ink-2)}
+.atl-jump button:hover{color:var(--head)}
+.atl-jump button.on{background:var(--saffron-soft);color:var(--saffron-ink)}
+.atl-jump button.on i{background:var(--saffron);color:#fff}
+.apart{margin:0 0 36px;scroll-margin-top:132px}
+.apart-h{display:flex;align-items:center;gap:10px;margin:0 0 14px;font:600 19px/1.3 var(--read);color:var(--head)}
+.apart-h .ic{width:20px;height:20px;color:var(--saffron-ink)}
+.apart-n{
+  display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--saffron-soft);color:var(--saffron-ink);font:700 12.5px/1 var(--sans)}
+.apart p,.abreaks li{font-family:var(--read);font-size:17px;line-height:1.78;color:var(--read-ink)}
+.apart > p{margin:0 0 1.05em}
+.apart > p:last-child{margin-bottom:0}
+/* the question stands out as a question; the insight as the thing to keep */
+.ap-question .atl-q{
+  margin:0;padding:18px 22px;border-left:4px solid var(--accent);border-radius:0 10px 10px 0;
+  background:var(--accent-soft);font-size:21px;font-weight:500;line-height:1.45;color:var(--head)}
+.abox{padding:18px 22px;border-radius:0 10px 10px 0;background:var(--saffron-soft);border-left:4px solid var(--saffron)}
+.abox p{margin:0;color:var(--ink)}
+.areadings{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px}
+.areading{padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.areading b{display:block;margin-bottom:6px;font:600 15px/1.35 var(--read);color:var(--head)}
+.apart .areading p{margin:0;font-size:15px;line-height:1.65}
+.abreaks{list-style:none;display:grid;gap:10px;margin:0;padding:0}
+.abreaks li{
+  position:relative;padding:12px 16px 12px 46px;border:1px solid var(--line);border-radius:10px;
+  background:var(--bg);font-size:16px;line-height:1.7}
+.abreaks li::before{
+  content:"!";position:absolute;left:15px;top:14px;width:20px;height:20px;border-radius:50%;
+  background:#f6e3de;color:#a33a26;font:700 12px/20px var(--sans);text-align:center}
+html[data-theme="dark"] .abreaks li::before{background:rgba(221,128,100,.2);color:#eba08a}
+.auses{display:grid;gap:12px}
+.ause{padding:14px 16px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 10px 10px 0}
+.ause b{display:block;margin-bottom:4px;font:700 11px/1.4 var(--sans);letter-spacing:.7px;text-transform:uppercase;color:var(--accent)}
+.apart .ause p{margin:0;font-size:16px;line-height:1.7}
+.aexam{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel)}
+.aexam-row{display:grid;grid-template-columns:130px minmax(0,1fr);gap:14px;align-items:start;padding:13px 16px;border-top:1px solid var(--line)}
+.aexam-row:first-child{border-top:0;background:var(--saffron-soft)}
+.aexam-row > b{font:700 12px/1.6 var(--sans);letter-spacing:.4px;color:var(--saffron-ink)}
+.aexam-row > span{font:15.5px/1.65 var(--read);color:var(--read-ink)}
+.aexam-row > span.pills{display:flex}
+.arelated{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:10px;margin-bottom:24px}
+.arel{
+  display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:12px 14px;text-align:left;
+  background:var(--panel);border:1px solid var(--line);border-radius:10px;cursor:pointer;transition:.13s}
+.arel:hover{border-color:var(--saffron)}
+.arel b{font:600 15px/1.3 var(--read);color:var(--head)}
+.arel > span:last-child{font:12.5px/1.45 var(--sans);color:var(--ink-3)}
+.apart-sub{margin:0 0 10px;font:700 10.5px/1.4 var(--sans);letter-spacing:.9px;text-transform:uppercase;color:var(--ink-3)}
 .atl-refs{list-style:none;display:grid;gap:12px}
 .atl-refs li{font-family:var(--read);font-size:15px;line-height:1.55;color:var(--read-ink)}
 .atl-refs a{
@@ -1747,10 +1845,12 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 .atl-refs span{display:block;font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--ink-3)}
 @media (max-width:700px){
   .sm-pane.atl-entry h5{font-size:23px}
-  .atl-f p,.atl-list li,.atl-readings dd{font-size:16px;line-height:1.72}
-  .atl-f .atl-q{font-size:18.5px}
+  .apart p,.abreaks li{font-size:16px;line-height:1.72}
+  .ap-question .atl-q{font-size:18.5px;padding:14px 16px}
   .atl-meta{grid-template-columns:minmax(0,1fr);gap:2px}
   .atl-meta dd{margin-bottom:8px}
+  .atl-jump{margin:0 -18px 20px;padding:8px 18px}
+  .aexam-row{grid-template-columns:minmax(0,1fr);gap:4px}
 }
 
 /* ================= ESSAY THEME MAP: TILES ================= */

@@ -276,6 +276,16 @@ const ICONS = {
   leaf:     '<path d="M5 19C5 11 10 5 20 4c-1 10-7 15-15 15z"/><path d="M5 19c3-4 6-7 10-10"/>',
   cpu:      '<rect x="6" y="6" width="12" height="12" rx="1.5"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/>',
   file:     '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/>',
+  help:     '<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6"/><path d="M12 17h.01"/>',
+  infinity: '<path d="M12 12c-2-2.7-3.7-4-5.5-4a4 4 0 0 0 0 8c1.8 0 3.5-1.3 5.5-4zm0 0c2 2.7 3.7 4 5.5 4a4 4 0 0 0 0-8c-1.8 0-3.5 1.3-5.5 4z"/>',
+  flame:    '<path d="M12 21c-4 0-6.5-2.6-6.5-6 0-3.5 3-5.5 3.5-9 2 1.5 3 3.5 3 5.5 1-1 1.5-2.5 1.5-4 2.5 2 5 4.8 5 7.5 0 3.4-2.5 6-6.5 6z"/>',
+  flask:    '<path d="M9 3h6M10 3v6L4.5 18.5A1.8 1.8 0 0 0 6 21h12a1.8 1.8 0 0 0 1.5-2.5L14 9V3"/><path d="M7.5 15h9"/>',
+  layers:   '<path d="M12 3 2 8l10 5 10-5z"/><path d="m2 13 10 5 10-5"/>',
+  link:     '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',
+  chart:    '<path d="M4 20V11M10 20V5M16 20v-8M21 20H3"/>',
+  atom:     '<circle cx="12" cy="12" r="1.6"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(120 12 12)"/>',
+  eye:      '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+  alert:    '<path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.2h.01"/>',
   search:   '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
   arrow:    '<path d="M5 12h14M13 6l6 6-6 6"/>',
   chev:     '<path d="m9 6 6 6-6 6"/>'
@@ -1974,6 +1984,8 @@ function render(){
   markTopNav();
   applyPortraits(main);
   applyThinkerFilter();
+  atlasApplyFilter();
+  atlasWatch();
   window.scrollTo({ top:0, behavior:"instant" });
 }
 
@@ -2399,17 +2411,20 @@ function atlasListHTML(sel){
 function atlasRefreshList(top){
   const box = document.getElementById("atlasList");
   if (!box) return;
-  box.innerHTML = atlasListHTML(atlasById()[state.sel] ? state.sel : ATLAS[0].id);
+  box.innerHTML = atlasListHTML(atlasById()[state.sel] ? state.sel : "");
   if (top) document.getElementById("sidebar").scrollTop = 0;
 }
 
 /* The sidebar while the atlas is open: a search box, the ways to arrange the
    entries, and the entries themselves. */
 function renderAtlasNav(){
-  const x = atlasById()[state.sel] || ATLAS[0];
+  const x = atlasById()[state.sel];
   document.getElementById("viewNav").innerHTML = `
     <button class="nav-item nav-back" data-nav="views" title="All views">
       <span class="nav-ico">&larr;</span><span class="nav-name">All views</span>
+    </button>
+    <button class="nav-item nav-intro ${x ? "" : "active"}" data-to="atlas|0|" title="Every entry on one page">
+      <span class="nav-ico">&#9776;</span><span class="nav-name">All ${ATLAS.length} entries</span>
     </button>
     <div class="atl-side">
       <input class="atl-search" id="atlasQ" type="search" placeholder="Search ${ATLAS.length} entries"
@@ -2418,27 +2433,170 @@ function renderAtlasNav(){
         `<button class="atl-mode${state.amode === m[0] ? " on" : ""}" data-amode="${m[0]}"
                  aria-pressed="${state.amode === m[0]}">${m[1]}</button>`).join("")}</div>
     </div>
-    <div class="tree atl-tree" id="atlasList">${atlasListHTML(x.id)}</div>`;
+    <div class="tree atl-tree" id="atlasList">${atlasListHTML(x ? x.id : "")}</div>`;
   document.getElementById("catNav").innerHTML = "";
   const lab = document.getElementById("catLabel");
   if (lab) lab.hidden = true;
 }
 
-/* Where an entry earns its place in the Essay paper: the themes it suits, each
-   opening it inside the theme map, and the model essays that draw on it. */
+/* ---- How the atlas is read ----
+   Every entry answers the same eight questions in the same order. The overview
+   shows the order once, and each entry carries it as a strip of numbered parts,
+   so a reader always knows what comes next and can jump to it. */
+const ATLAS_PARTS = [
+  ["story",    "book",    "The story",         "What happened, or the case to imagine"],
+  ["question", "help",    "The question",      "The problem it forces you to face"],
+  ["reveals",  "bulb",    "What it reveals",   "The insight, in plain words"],
+  ["readings", "layers",  "Interpretations",   "Different ways to read it"],
+  ["breaks",   "alert",   "Where it breaks",   "Its limits and its critics"],
+  ["uses",     "globe",   "Where it shows up", "Cases from public life today"],
+  ["exam",     "target",  "Use it in the exam","Where it fits in GS-IV and the Essay"],
+  ["more",     "compass", "Go further",        "Related entries and reading"]
+];
+
+/* Four kinds of entry, told apart by colour everywhere they appear. */
+const ATLAS_KINDS = {
+  imagined: ["Imagined cases", "Thought experiments and paradoxes: situations built to test an idea"],
+  story:    ["Stories", "Myths, parables, anecdotes, dialogues and literature"],
+  finding:  ["Findings and models", "Experiments and models from the sciences"],
+  idea:     ["Ideas and images", "Concepts and metaphors"]
+};
+const ATLAS_FORM_LOOK = {
+  te:["imagined", "bulb"], paradox:["imagined", "infinity"],
+  parable:["story", "nib"], myth:["story", "flame"], anecdote:["story", "file"],
+  literary:["story", "book"], dialogue:["story", "quote"],
+  experiment:["finding", "flask"], model:["finding", "layers"],
+  concept:["idea", "compass"], metaphor:["idea", "link"]
+};
+const ATLAS_SECTION_ICON = {
+  existence:"sun", knowledge:"book", morality:"scale", politics:"landmark", economics:"chart",
+  science:"atom", psychology:"eye", strategy:"target", traditions:"globe", literature:"nib"
+};
+const atlasLook = x => ATLAS_FORM_LOOK[x.fg] || ["idea", "compass"];
+const atlasKindHTML = x =>
+  `<span class="akind fam-${atlasLook(x)[0]}">${ico(atlasLook(x)[1])}${esc(ATLAS_FORMS[x.fg] || x.form)}</span>`;
+function atlasMinutes(e){
+  const words = [].concat(e.setup, [e.question, e.reveals], e.readings.map(r => r[1]), e.breaks, e.uses)
+    .join(" ").split(/\s+/).length;
+  return Math.max(2, Math.round(words / 220));
+}
+
+/* A card on the overview: what kind of entry it is, and the question it asks,
+   which says more about what is inside than the title does. */
+function atlasCardHTML(x){
+  const e = ATLAS_ENTRIES[x.id];
+  return `
+      <button class="acard fam-${atlasLook(x)[0]}${isRead("atlas|0|" + x.id) ? " done" : ""}" data-sel="${x.id}">
+        <span class="acard-top">${atlasKindHTML(x)}<i class="acard-tick" title="Read"></i></span>
+        <b>${esc(x.t)}</b>
+        <span class="acard-q">${esc(e.question)}</span>
+        <span class="acard-foot">${esc(x.src)} &middot; ${atlasMinutes(e)} min</span>
+      </button>`;
+}
+
+/* The overview: how an entry is built, then every entry as a card, grouped by
+   whichever arrangement is chosen, with a tile per group to jump to it. */
+function atlasIndexHTML(){
+  const groups = atlasGroups(ATLAS).filter(g => g.items.length);
+  const read = ATLAS.filter(x => isRead("atlas|0|" + x.id)).length;
+  const secIcon = t => { const s = ATLAS_SECTIONS.find(y => y.t === t); return s ? ATLAS_SECTION_ICON[s.id] : ""; };
+  return `
+    <div class="rd atl-ix">
+      <header class="rd-head">
+        <div class="rd-crumbs">
+          <button class="rd-toc" data-toc aria-label="Show the contents">&#9776;<span>Contents</span></button>
+          <span>Essay Paper</span><span class="rd-sep" aria-hidden="true">/</span><span>Stories and models</span>
+        </div>
+        <h2 class="rd-title">Human Thought Atlas</h2>
+        <p class="rd-sub">${ATLAS.length} stories, thought experiments, paradoxes and models to open an
+           essay or support a GS-IV answer. Every entry answers the same eight questions in the same
+           order, so you always know where to look.${read ? ` You have read ${read} of ${ATLAS.length}.` : ""}</p>
+      </header>
+
+      <section class="atl-guide" aria-label="How every entry is built">
+        <h3 class="hb-t">How every entry is built</h3>
+        <ol class="atl-steps">${ATLAS_PARTS.map((p, i) => `
+          <li><span class="atl-step-ico">${ico(p[1])}</span>
+              <b><i>${i + 1}</i>${esc(p[2])}</b><span>${esc(p[3])}</span></li>`).join("")}
+        </ol>
+      </section>
+
+      <section class="atl-browse">
+        <div class="atl-bar">
+          <form class="hsearch" role="search" data-afilter>
+            ${ico("search")}
+            <input id="atlasIdxQ" type="search" autocomplete="off" value="${esc(state.aq)}"
+                   aria-label="Find an entry" placeholder="Find an entry by name, idea or source">
+          </form>
+          <div class="t-regions atl-arrange" role="group" aria-label="Arrange the entries by">${ATLAS_MODES.map(m => `
+            <button class="${state.amode === m[0] ? "on" : ""}" data-amode="${m[0]}"
+                    aria-pressed="${state.amode === m[0]}">${m[1]}</button>`).join("")}
+          </div>
+        </div>
+        <div class="atl-legend" aria-label="Kinds of entry">${Object.keys(ATLAS_KINDS).map(k => `
+          <span class="akey fam-${k}" title="${esc(ATLAS_KINDS[k][1])}"><i></i>${esc(ATLAS_KINDS[k][0])}
+            <em>${ATLAS.filter(x => atlasLook(x)[0] === k).length}</em></span>`).join("")}
+        </div>
+        <div class="atl-tiles">${groups.map((g, i) => {
+          const done = g.items.filter(x => isRead("atlas|0|" + x.id)).length;
+          const icon = state.amode === "section" ? secIcon(g.t)
+            : { essay:"nib", theme:"bulb", tradition:"globe", form:"layers", az:"book" }[state.amode] || "book";
+          return `
+          <button class="atile" data-jumpto="ag-${i}">
+            ${ico(icon)}<b>${esc(g.t)}</b>
+            <span>${plural(g.items.length, "entry", "entries")}${done ? " &middot; " + done + " read" : ""}</span>
+            <i class="atile-bar"><i style="width:${Math.round(done / g.items.length * 100)}%"></i></i>
+          </button>`; }).join("")}
+        </div>
+      </section>
+
+      ${groups.map((g, i) => `
+      <section class="hblock atl-group" id="ag-${i}">
+        <div class="hb-head"><h3 class="hb-t">${esc(g.t)} <small>${g.items.length}</small></h3></div>
+        <div class="acards">${g.items.map(atlasCardHTML).join("")}</div>
+      </section>`).join("")}
+      <div class="empty" id="atlasNone" hidden><b>No entry matches</b>Try one word, or part of a name.</div>
+    </div>`;
+}
+
+/* Filtering the overview in place keeps the box in focus while the reader types. */
+let atlasHay = null;
+function atlasApplyFilter(){
+  const ix = document.querySelector(".atl-ix");
+  if (!ix) return;
+  if (!atlasHay) atlasHay = Object.fromEntries(ATLAS.map(x =>
+    [x.id, atlasFold([x.t, x.src, x.q, x.form, ATLAS_ENTRIES[x.id].question].join(" "))]));
+  const q = atlasFold(state.aq.trim());
+  let shown = 0;
+  ix.querySelectorAll(".atl-group").forEach((g, i) => {
+    let n = 0;
+    g.querySelectorAll(".acard").forEach(c => {
+      const ok = !q || atlasHay[c.dataset.sel].includes(q);
+      c.hidden = !ok;
+      if (ok) n++;
+    });
+    g.hidden = !n;
+    const tile = ix.querySelector(`[data-jumpto="ag-${i}"]`);
+    if (tile) tile.hidden = !n;
+    shown += n;
+  });
+  const none = document.getElementById("atlasNone");
+  if (none) none.hidden = shown > 0;
+}
+
+/* Where an entry earns its place in the Essay paper on this site: the themes it
+   suits, each opening it inside the theme map, and the model essays that use it. */
 function atlasEssayHTML(id){
   const themes = ESSAY_THEMES.map((t, i) => ({ t, i })).filter(o => (o.t.atlas || []).includes(id));
   const essays = (typeof ESSAYS === "undefined") ? []
     : Object.keys(ESSAYS).filter(k => (ESSAYS[k].atlas || []).includes(id));
-  if (!themes.length && !essays.length) return "";
   const home = k => ESSAY_THEMES.findIndex(t => (t.essays || []).includes(k)) + 1;
-  return `
-    <section class="atl-f atl-essay"><h6>In the Essay paper</h6>
-      ${themes.length ? `<div class="atl-uses"><b>Suits these themes</b>${themes.map(o =>
-        `<button class="pill" data-to="themes|${o.i + 1}|a:${id}">${esc(o.t.t)}</button>`).join("")}</div>` : ""}
-      ${essays.length ? `<div class="atl-uses"><b>Used in these model essays</b>${essays.map(k =>
-        `<button class="pill" data-to="themes|${home(k)}|e:${esc(k)}">${esc(ESSAYS[k].et || ESSAYS[k].t)}</button>`).join("")}</div>` : ""}
-    </section>`;
+  return (themes.length ? `
+        <div class="aexam-row"><b>Essay themes</b><span class="pills">${themes.map(o =>
+          `<button class="pill" data-to="themes|${o.i + 1}|a:${id}">${esc(o.t.t)}</button>`).join("")}</span></div>` : "")
+    + (essays.length ? `
+        <div class="aexam-row"><b>Model essays</b><span class="pills">${essays.map(k =>
+          `<button class="pill" data-to="themes|${home(k)}|e:${esc(k)}">${esc(ESSAYS[k].et || ESSAYS[k].t)}</button>`).join("")}</span></div>` : "");
 }
 
 /* One entry. Inside a theme (theme given) an entry the theme lists opens beside
@@ -2449,15 +2607,22 @@ function atlasEntryHTML(x, theme){
   const sec = ATLAS_SECTIONS.find(s => s.id === x.sec);
   const open = id => !theme ? `data-sel="${id}"`
     : (theme.atlas || []).includes(id) ? `data-sel="a:${id}"` : `data-to="atlas|0|${id}"`;
-  const use = u => {
-    const exam = u.match(/^Exam use:\s*(.*)$/);
-    if (exam) return `<li class="atl-exam"><b>Exam use</b>${esc(exam[1])}</li>`;
-    const lead = u.match(/^([^:]{3,48}):\s(.*)$/);
-    return lead ? `<li><b>${esc(lead[1])}:</b> ${esc(lead[2])}</li>` : `<li>${esc(u)}</li>`;
+  const uses = e.uses.slice(0, -1), examText = e.uses[e.uses.length - 1].replace(/^Exam use:\s*/, "");
+  const examRows = examText.split(/\.\s+(?=In )/).map(s => {
+    const m = s.match(/^In (GS-[IVX]+|the Essay paper)[^,]*, (use it .*?)\.?$/);
+    return m ? [m[1] === "the Essay paper" ? "Essay" : m[1], m[2].charAt(0).toUpperCase() + m[2].slice(1) + "."] : null;
+  });
+  const lead = u => {
+    const m = u.match(/^([^:]{3,48}):\s(.*)$/);
+    return m ? `<div class="ause"><b>${esc(m[1])}</b><p>${esc(m[2])}</p></div>` : `<div class="ause"><p>${esc(u)}</p></div>`;
   };
   const ref = r => `<li>${r[2]
     ? `<a href="${esc(r[2])}" target="_blank" rel="noopener">${esc(r[0])}</a>` : esc(r[0])}${
     r[1] ? `<span>${esc(r[1])}</span>` : ""}</li>`;
+  const head = n => {
+    const p = ATLAS_PARTS[n];
+    return `<h6 class="apart-h"><span class="apart-n">${n + 1}</span>${ico(p[1])}${esc(p[2])}</h6>`;
+  };
   let pager = "";
   if (!theme) {
     const i = ATLAS.indexOf(x), prev = ATLAS[i - 1], next = ATLAS[i + 1];
@@ -2468,30 +2633,58 @@ function atlasEntryHTML(x, theme){
   }
   return `
     <article class="sm-pane atl-entry">
-      <p class="atl-eyebrow">${theme ? "From the Thought Atlas &middot; " : ""}${esc(sec ? sec.t : "")}</p>
-      <h5>${esc(x.t)}</h5>
-      <dl class="atl-meta">
-        <dt>Source</dt><dd>${esc(e.source)}</dd>
-        <dt>Period</dt><dd>${esc(e.period)}</dd>
-        <dt>Tradition</dt><dd>${esc(e.tradition)}</dd>
-        <dt>Type</dt><dd>${esc(e.type)}</dd>
-      </dl>
-      <div class="atl-tags">${x.th.map(k => `<span>${esc(ATLAS_THEMES[k])}</span>`).join("")}</div>
-      <section class="atl-f"><h6>The story</h6>${e.setup.map(p => `<p>${esc(p)}</p>`).join("")}</section>
-      <section class="atl-f"><h6>The question it forces</h6><p class="atl-q">${esc(e.question)}</p></section>
-      <section class="atl-f"><h6>What it reveals</h6><p>${esc(e.reveals)}</p></section>
-      <section class="atl-f"><h6>Competing interpretations</h6>
-        <dl class="atl-readings">${e.readings.map(r =>
-          `<div><dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd></div>`).join("")}</dl></section>
-      <section class="atl-f"><h6>Where it breaks</h6>
-        <ul class="atl-list">${e.breaks.map(b => `<li>${esc(b)}</li>`).join("")}</ul></section>
-      <section class="atl-f"><h6>Modern applications</h6>
-        <ul class="atl-list">${e.uses.map(use).join("")}</ul></section>
-      ${atlasEssayHTML(x.id)}
-      <section class="atl-f"><h6>Related entries</h6>
-        <div class="pills">${e.related.filter(id => ix[id]).map(id =>
-          `<button class="pill" ${open(id)}>${esc(ix[id].t)}</button>`).join("")}</div></section>
-      <section class="atl-f"><h6>Primary source and reading</h6>
+      <header class="atl-top">
+        <p class="atl-eyebrow">${theme ? "From the Thought Atlas &middot; " : ""}${esc(sec ? sec.t : "")}</p>
+        <h5>${esc(x.t)}</h5>
+        <div class="atl-top-row">
+          ${atlasKindHTML(x)}
+          <span class="atl-time">${plural(atlasMinutes(e), "minute", "minutes")} to read</span>
+          ${x.th.map(k => `<span class="atl-theme">${esc(ATLAS_THEMES[k])}</span>`).join("")}
+        </div>
+        <dl class="atl-meta">
+          <dt>About</dt><dd>${esc(x.q)}</dd>
+          <dt>Source</dt><dd>${esc(e.source)}</dd>
+          <dt>Period</dt><dd>${esc(e.period)}</dd>
+          <dt>Tradition</dt><dd>${esc(e.tradition)}</dd>
+          <dt>Type</dt><dd>${esc(e.type)}</dd>
+        </dl>
+      </header>
+
+      <nav class="atl-jump" aria-label="Parts of this entry">${ATLAS_PARTS.map((p, i) => `
+        <button data-apart="ap-${p[0]}"><i>${i + 1}</i>${esc(p[2])}</button>`).join("")}
+      </nav>
+
+      <section class="apart ap-story" id="ap-story">${head(0)}
+        ${e.setup.map(p => `<p>${esc(p)}</p>`).join("")}</section>
+
+      <section class="apart ap-question" id="ap-question">${head(1)}
+        <p class="atl-q">${esc(e.question)}</p></section>
+
+      <section class="apart ap-reveals" id="ap-reveals">${head(2)}
+        <div class="abox"><p>${esc(e.reveals)}</p></div></section>
+
+      <section class="apart" id="ap-readings">${head(3)}
+        <div class="areadings">${e.readings.map(r =>
+          `<div class="areading"><b>${esc(r[0])}</b><p>${esc(r[1])}</p></div>`).join("")}</div></section>
+
+      <section class="apart" id="ap-breaks">${head(4)}
+        <ul class="abreaks">${e.breaks.map(b => `<li>${esc(b)}</li>`).join("")}</ul></section>
+
+      <section class="apart" id="ap-uses">${head(5)}
+        <div class="auses">${uses.map(lead).join("")}</div></section>
+
+      <section class="apart" id="ap-exam">${head(6)}
+        <div class="aexam">${examRows.every(Boolean)
+          ? examRows.map(r => `<div class="aexam-row"><b>${esc(r[0])}</b><span>${esc(r[1])}</span></div>`).join("")
+          : `<div class="aexam-row"><span>${esc(examText)}</span></div>`}
+          ${atlasEssayHTML(x.id)}
+        </div></section>
+
+      <section class="apart" id="ap-more">${head(7)}
+        <div class="arelated">${e.related.filter(id => ix[id]).map(id => `
+          <button class="arel" ${open(id)}>${atlasKindHTML(ix[id])}<b>${esc(ix[id].t)}</b><span>${esc(ix[id].q)}</span></button>`).join("")}
+        </div>
+        <h6 class="apart-sub">Primary source and reading</h6>
         <ol class="atl-refs">${e.reading.map(ref).join("")}</ol></section>
       ${pager}
     </article>`;
@@ -2500,23 +2693,33 @@ function atlasEntryHTML(x, theme){
 function renderAtlas(){
   if (typeof ATLAS === "undefined" || typeof ATLAS_ENTRIES === "undefined")
     return `<div class="empty"><b>Not available</b>The atlas could not be loaded.</div>`;
-  const x = atlasById()[state.sel] || ATLAS[0];
+  const x = atlasById()[state.sel];
+  if (!x) return atlasIndexHTML();
   const sec = ATLAS_SECTIONS.find(s => s.id === x.sec);
   markRead("atlas|0|" + x.id, { t:x.t, h:sec ? sec.t : "", where:"Human Thought Atlas" });
   return `
     <div class="rd">
-      <header class="rd-head">
-        <div class="rd-crumbs">
-          <button class="rd-toc" data-toc aria-label="Show the contents">&#9776;<span>Contents</span></button>
-          <span>Essay Paper</span><span class="rd-sep" aria-hidden="true">/</span><span>Stories and models</span>
-        </div>
-        <h2 class="rd-title">Human Thought Atlas</h2>
-        <p class="rd-sub">${ATLAS.length} stories, thought experiments, paradoxes and models, each told
-           in the same eleven parts. To find the ones that suit an essay question, arrange the
-           contents by essay theme.</p>
-      </header>
+      <div class="rd-crumbs atl-crumbs">
+        <button class="rd-toc" data-toc aria-label="Show the contents">&#9776;<span>Contents</span></button>
+        <button class="rd-up" data-to="atlas|0|">Human Thought Atlas</button>
+        <span class="rd-sep" aria-hidden="true">/</span>
+        <span>Entry ${ATLAS.indexOf(x) + 1} of ${ATLAS.length}</span>
+      </div>
       ${atlasEntryHTML(x, null)}
     </div>`;
+}
+
+/* The numbered strip marks the part being read. */
+let atlasObs = null;
+function atlasWatch(){
+  if (atlasObs) { atlasObs.disconnect(); atlasObs = null; }
+  const nav = document.querySelector(".atl-jump");
+  if (!nav || !("IntersectionObserver" in window)) return;
+  const btns = [...nav.querySelectorAll("[data-apart]")];
+  atlasObs = new IntersectionObserver(list => list.forEach(en => {
+    if (en.isIntersecting) btns.forEach(b => b.classList.toggle("on", b.dataset.apart === en.target.id));
+  }), { rootMargin:"-140px 0px -55% 0px" });
+  document.querySelectorAll(".apart").forEach(s => atlasObs.observe(s));
 }
 
 /* ================= EVENTS ================= */
@@ -2697,6 +2900,16 @@ document.addEventListener("click", e => {
       b.setAttribute("aria-pressed", String(b === am));
     });
     atlasRefreshList(true);
+    if (document.querySelector(".atl-ix")) render();   // the overview is arranged the same way
+    return;
+  }
+
+  // jump to a part of an entry, or to a group on the overview
+  const jp = e.target.closest("[data-apart], [data-jumpto]");
+  if (jp) {
+    const el = document.getElementById(jp.dataset.apart || jp.dataset.jumpto);
+    if (el) el.scrollIntoView({ behavior:"smooth", block:"start" });
+    if (jp.dataset.apart) jp.parentNode.querySelectorAll("[data-apart]").forEach(b => b.classList.toggle("on", b === jp));
     return;
   }
 
@@ -2794,7 +3007,7 @@ document.getElementById("search").addEventListener("input", e => {
 });
 /* the search boxes on the front page and the results page */
 document.addEventListener("submit", e => {
-  if (e.target.closest("[data-tfilter]")) { e.preventDefault(); return; }
+  if (e.target.closest("[data-tfilter], [data-afilter]")) { e.preventDefault(); return; }
   const f = e.target.closest("[data-search]");
   if (!f) return;
   e.preventDefault();
@@ -2911,9 +3124,12 @@ document.addEventListener("input", e => {
 
 /* the atlas search filters its contents in place, so the box keeps focus */
 document.addEventListener("input", e => {
-  if (e.target.id !== "atlasQ") return;
+  if (e.target.id !== "atlasQ" && e.target.id !== "atlasIdxQ") return;
   state.aq = e.target.value;
-  atlasRefreshList(true);
+  const other = document.getElementById(e.target.id === "atlasQ" ? "atlasIdxQ" : "atlasQ");
+  if (other) other.value = state.aq;
+  atlasRefreshList(e.target.id === "atlasQ");
+  atlasApplyFilter();
 });
 
 /* ================= BOOT ================= */
