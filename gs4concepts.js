@@ -112,69 +112,152 @@ const GS4_CONCEPTS = {
       src:"The phrase is from the GS-IV syllabus itself; normative positions as set out in open philosophy references" },
     { t:"Universal values against changing values",
       qs:["Q022", "Q002"],
-      d:["**The question is whether moral standards hold everywhere and always, or whether they vary with time, place and circumstance.** The defensible answer distinguishes the principle from its application: a small core of commitments appears across societies and periods, while who is covered by them and what counts as satisfying them changes enormously.",
-         "The recurring core is narrow but real. Prohibitions on gratuitous cruelty, on betraying those who have trusted you, on taking what belongs to another, and obligations of care towards the young appear in societies with no contact with one another. **What varies is not usually the principle but its boundary**, meaning who is recognised as a person to whom the duty is owed.",
-         "This is what makes moral change legible rather than arbitrary. Sati and untouchability were defended as custom and are now prohibited. Read as values changing, that is baffling, because it would mean the society simply reversed itself. Read as extension, it is coherent: the commitment to human dignity held constant while the class of people acknowledged to possess it widened. **The reform was not the invention of a new value but the removal of an exception to an old one.**",
-         "The same distinction handles the claim that justice is contextual. What justice requires plainly depends on circumstance, since the same allocation can be fair in one setting and unfair in another. But the underlying demand, that like cases be treated alike and that differences in treatment be justified by relevant reasons, does not itself vary. **Context determines what justice requires, not whether it is required.**",
-         "The position to avoid is unqualified relativism, that a practice is right if a society approves it. It is self-defeating, since it would make reform impossible to justify and would have obliged every reformer in history to defer to the practice they opposed. **Values are not arbitrary because they are historically situated; the argument that ended a cruel custom was usually made from within the society's own deeper commitments.**"],
+      d:["The central question is whether moral standards hold everywhere and always, or whether they vary with time, place and circumstance. A useful answer separates the **core principle** from its **application**: some basic commitments recur across societies, while their scope and expression change."],
+      secs:[
+        ["What appears to be universal?", [
+          "The recurring core is narrow but identifiable. Prohibitions on gratuitous cruelty, on betraying trust and on taking what belongs to another, and obligations of care towards children, appear in societies with very different histories.",
+          "**What usually changes is not the principle but its boundary**: who counts as a person to whom the duty is owed."]],
+        ["Moral change as expansion of the moral circle", [
+          "Practices such as sati and untouchability were defended as custom and later prohibited. If this is read as one value simply replacing another, moral reform looks arbitrary.",
+          "A better reading is that an existing commitment to human dignity was extended to people who had been excluded from its protection. **The reform removed an exception to an old value. It did not invent a new one.**"]],
+        ["Universal values do not eliminate context", [
+          "Justice is sensitive to circumstances. The same allocation may be fair in one setting and unfair in another. Yet the underlying demand, that like cases be treated alike and that differences be justified by relevant reasons, does not disappear.",
+          "**Context determines what justice requires, not whether justice is required at all.**"]],
+        ["Why unqualified relativism is hard to sustain", [
+          "The claim that a practice is right simply because a society approves of it makes reform almost impossible to justify. Every reformer would have had to defer to the practice they were trying to change.",
+          "Moral criticism has usually worked from within a society's deeper commitments, by showing that an accepted practice contradicts principles the society already claims to value."]]
+      ],
+      take:"Values are not arbitrary merely because their application changes across time and cultures. A strong answer separates the underlying moral principle from the people and circumstances to which it is applied.",
       src:"Moral universalism and descriptive relativism as set out in open philosophy references" },
     { t:"Personal against professional ethics",
       qs:["Q015", "Q019"],
-      d:["**Personal ethics is what a person holds as an individual; professional ethics is what a role requires of whoever occupies it.** The second binds not because the holder agrees with it but because the role was accepted, and it continues to bind on days when the holder disagrees.",
-         "The two usually coincide, and the distinction earns its keep where they do not. A doctor's disapproval of a patient's conduct does not release them from treating the patient. A lawyer defends a client they privately believe guilty, because the adversarial system only protects the innocent if representation is unconditional. **A civil servant's personal opinion of a lawful policy does not release them from implementing it faithfully**, and an officer who implements it half-heartedly has substituted their judgement for the one the system authorised.",
-         "Professional ethics is therefore simultaneously narrower and more demanding. It is narrower because it sets aside preferences a private person may freely indulge, including sympathies, dislikes and religious or political commitments. It is more demanding because it imposes duties the holder never personally chose, such as confidentiality, impartiality between people one likes and dislikes, and continuing to serve those who are hostile.",
-         "Two failure modes follow. The first is importing personal ethics into the role, which is how favouritism, moralising about applicants and selective enforcement begin. The second is hiding behind the role, treating *I was only following the rules* as a complete answer, which is the disposition Arendt described when responsibility is dissolved into procedure.",
-         "The resolution is that a role has limits. Within them, professional duty governs and personal preference yields. **Where a role would require what is plainly wrong, the honourable route is to record the objection, use the channels available, and if the conflict cannot be resolved, to leave the post rather than to hold it and not discharge it.** Occupying an office while refusing its duties is the one option that is not open."],
+      d:["**Personal ethics** is what an individual holds to be right or wrong. **Professional ethics** is what a role requires of whoever occupies it. Professional obligations bind because the person accepted the role, not because they agree with every requirement."],
+      secs:[
+        ["The conflict appears where private judgement and role duty diverge", [
+          "A doctor may disapprove of a patient's conduct and still has a duty to treat them. A lawyer may privately believe a client is guilty and still defend them, because the adversarial system protects the innocent only if representation is available to all.",
+          "Likewise, **a civil servant's personal opinion of a lawful policy does not release them from implementing it faithfully.** Selective or half-hearted implementation puts the officer's private judgement in place of the decision the system authorised."]],
+        ["Professional ethics is narrower, and more demanding", [
+          "It is narrower because it excludes preferences a private person may legitimately exercise. Sympathy, dislike, political preference and personal loyalty cannot decide a professional matter.",
+          "It is more demanding because the role imposes duties the individual may never have chosen: confidentiality, impartiality, consistency, and service to people they may personally dislike."]],
+        ["Two opposite failure modes", [
+          ["**Importing personal ethics into the role** produces favouritism, moralising about applicants and selective enforcement.",
+           "**Hiding behind the role**, with *I was only following the rules*, turns procedure into a substitute for personal responsibility. Hannah Arendt described this as responsibility dissolving into procedure."]]],
+        ["When professional duty itself becomes ethically problematic", [
+          "A professional role has limits. Within a lawful and legitimate framework, professional duty governs and private preference yields. **Where a role appears to require what is plainly wrong, the disciplined response is to record the objection, use the institutional channels available and, if the conflict cannot be resolved, give up the role** rather than occupy it while refusing its duties."]]
+      ],
+      take:"Personal conscience matters, but public roles cannot function if each official treats private preference as a substitute for professional duty. The ethical task is to discharge the role faithfully while using lawful channels to challenge requirements that are genuinely wrong.",
       src:"Standard treatment in professional ethics literature; Arendt on responsibility dissolved into procedure" },
     { t:"Happiness and the good life",
       qs:["Q017", "Q011"],
-      d:["**Happiness understood as pleasure is a passing state; the good life is a life going well as a whole, judged over its full course rather than at any moment in it.** Confusing the two is what produces the narrow perception of the good life that ethical criticism keeps returning to.",
-         "Aristotle's term is **eudaimonia**, usually translated as flourishing rather than happiness. It is not a feeling to be sought directly but the condition of a life in which a person exercises their characteristic capacities well: reasoning, judging, relating to others, contributing. On this account happiness is a by-product of living well rather than a target, which is why pursuing it directly so often fails.",
-         "The empirical work broadly supports the distinction. Well-being rises steeply with income while basic security is being achieved and much more slowly afterwards, because deprivation blocks nearly every other good while surplus adds little. **People also adapt to improvements in circumstance far faster than they expect**, so each attainment resets the baseline and the anticipated transformation does not arrive. What resists adaptation is relationships, purposeful work and self-respect, none of which can be purchased.",
-         "The narrow perception, then, is the reduction of a life to consumption, status and measurable achievement. Its cost is not only personal. A society that indexes worth to rank and income produces measurable achievement alongside unmeasured distress, and it treats those who do not accumulate as having failed rather than as having chosen differently.",
-         "The counter-argument deserves its weight: this critique is almost always made by those who have enough. **For a household without secure food, shelter or medical care, the destination is not an illusion that disappoints on arrival but a floor whose absence blocks everything else.** Contentment preached without asking to whom is preached to the wrong audience. The claim is not that material conditions do not matter, but that past a threshold they stop being what is missing."],
+      d:["Happiness understood as pleasure is a passing state. **The good life is a life going well as a whole.** Ethical thought therefore separates momentary feeling from longer-term flourishing."],
+      secs:[
+        ["Aristotle: eudaimonia as flourishing", [
+          "Aristotle's term **eudaimonia** is better translated as flourishing than as happiness. A flourishing life is one in which a person exercises their characteristic capacities well: reasoning, judging, relating to others and contributing to a community.",
+          "On this view, **happiness is a by-product of living well rather than a target to chase directly**, which is why pursuing it directly so often fails."]],
+        ["Why more consumption does not simply mean more well-being", [
+          "Material resources matter greatly while basic security is being achieved. Food, shelter, health care and financial security make the other parts of a good life possible.",
+          "Beyond a threshold, extra income adds much less to well-being, and **people adapt to improvements far faster than they expect.** Relationships, purposeful work and self-respect resist that adaptation, and none of them can be bought."]],
+        ["The narrow definition of the good life", [
+          "A life measured only by consumption, status and visible achievement can look successful while other parts of well-being go unmeasured. A society that equates worth with rank and income treats people who accumulate less as failures, rather than as people who chose a different kind of worthwhile life."]],
+        ["The necessary qualification", [
+          "The critique of materialism has a clear limit. It is easiest to dismiss material gains when basic needs are already secure. **For a household without reliable food, shelter or medical care, material improvement is not an illusion. It is the foundation on which every other good depends.**",
+          "The point is not that material conditions are unimportant. It is that once basic security is achieved, they stop being what is missing."]]
+      ],
+      take:"A good life is broader than pleasant moments or measurable consumption. Material security is the foundation, but flourishing also depends on relationships, purpose, capability and self-respect.",
       src:"Aristotle, Nicomachean Ethics, on eudaimonia; hedonic adaptation from well-being research" },
     { t:"Moral intuition and moral reasoning",
       qs:["Q004"],
-      d:["**Moral intuition is the immediate sense that something is right or wrong, arriving before any argument; moral reasoning is the deliberate working out of what follows from a principle.** Psychologists describe these as two systems: one fast, automatic and effortless, the other slow, controlled and effortful.",
-         "Intuition is what makes a person recoil at a cruelty before they can say why, and it is not irrational. It is compressed experience, a judgement formed from upbringing, culture and everything previously encountered, delivered too quickly to be inspected. Reasoning is what allows a principle to be stated, applied to a case never met before, and defended to someone who disagrees.",
-         "Jonathan Haidt's social intuitionist model makes the stronger claim that in most cases **the intuition comes first and the reasoning is constructed afterwards to justify a conclusion already reached.** On this account the real work of reasoning happens between people rather than inside one head, when someone must defend a position aloud and cannot simply assert it.",
-         "Each fails in a characteristic way, and each corrects the other. Intuition is fast, but because it is formed by whatever surrounded a person, it faithfully reproduces inherited prejudice. Somebody raised in a segregated setting will feel the wrongness of contact as immediately as they feel the wrongness of cruelty, and the feeling carries no marker distinguishing the two. Reasoning is examinable, but it is also the instrument of rationalisation, and a clever person can construct a justification for almost anything.",
-         "For an administrator the working rule is practical. **A strong intuition is evidence that something deserves examination, never the examination itself.** Discomfort at a file is a reason to look harder; it is not a finding. And where reasoning arrives at a conclusion that still feels plainly wrong, that persistent discomfort is often a signal that a premise has been quietly assumed. Neither faculty is trustworthy alone."],
+      d:["**Moral intuition** is the immediate sense that something is right or wrong, often arriving before any conscious argument. **Moral reasoning** is the deliberate process of examining principles, evidence and consequences in order to justify a moral judgement."],
+      secs:[
+        ["The two processes", [
+          "Intuition is fast, automatic and hard to inspect. It reflects compressed experience: upbringing, culture and everything previously encountered. Reasoning is slower and deliberate. It lets a person state a principle, apply it to an unfamiliar case and explain the conclusion to someone who disagrees."]],
+        ["Haidt: intuition often comes first", [
+          "Jonathan Haidt's **social intuitionist model** argues that in many moral judgements the intuitive response comes before the explicit reasoning. The reasoning may then work partly as a justification for a conclusion already reached.",
+          "This moves much of the real work of moral reasoning into discussion with other people, because disagreement forces a person to state and defend premises that intuition leaves hidden."]],
+        ["How each can fail", [
+          ["**Intuition can reproduce inherited prejudice**, because it reflects the environment in which it was formed. Someone raised in a segregated setting may feel that contact across caste is wrong as immediately as they feel that cruelty is wrong, and the feeling carries no marker to tell the two apart.",
+           "**Reasoning can become rationalisation.** A clever person can build arguments for a conclusion they reached for other reasons."]]],
+        ["The administrative rule", [
+          "**A strong intuition should trigger examination, not replace it.** Discomfort with a file may be a useful warning, but it is not itself evidence.",
+          "Conversely, when a carefully reasoned conclusion still feels deeply wrong, that persistent discomfort can signal a hidden premise or a missing consideration. The practical answer is not to choose one faculty over the other, but to examine intuitions and use reasoning to test them."]]
+      ],
+      take:"Treat moral intuition as an alert and moral reasoning as the examination. Neither is fully reliable on its own.",
       src:"Haidt, The Emotional Dog and Its Rational Tail (2001); dual-process framing from cognitive psychology" },
     { t:"Dimensions of ethics",
       qs:["Q001"],
-      d:["**The dimensions of ethics are the distinct kinds of question that can be asked about right and wrong, each requiring a different sort of answer.** Ethics is not one enquiry but several, and most confusion in an argument comes from two people answering different ones.",
-         "**Descriptive ethics** asks what people actually believe to be right, and it is empirical: a matter of survey, history and anthropology. **Normative ethics** asks how one ought to act, and divides into consequentialism, deontology and virtue ethics. **Meta-ethics** asks what moral words mean and whether moral claims can be true at all. **Applied ethics** takes the normative positions into a particular field, producing medical ethics, business ethics and administrative ethics.",
-         "The practical value of the distinction is that it prevents a common error. Establishing that a practice is widely accepted is a descriptive finding and settles nothing normative, since widespread practices have often been wrong. **That something is done is not an argument that it should be.**",
-         "In administrative usage the same phrase names the arenas in which conduct is judged rather than the branches of enquiry: the **personal** dimension of individual integrity, the **professional** dimension of role obligations, the **organisational** dimension of the culture and incentives a body creates, the **social** dimension of obligations to the wider public, and increasingly the **environmental** dimension of obligations extending to those not yet born.",
-         "Both usages are legitimate and a decision usually engages several dimensions at once. An officer clearing a project weighs a personal conviction, a professional duty of impartiality, an organisational expectation, a social consequence for those displaced and an environmental consequence lasting decades. **Ethics is not a single rule to be applied but a set of distinct questions that a serious decision has to answer separately.**"],
-      src:"Branches of ethics as set out in the Internet Encyclopedia of Philosophy" },
+      d:["The dimensions of ethics are the different kinds of question that can be asked about right and wrong. Each needs a different kind of answer, and **confusion arises when a descriptive observation is used as if it were a normative justification.**"],
+      secs:[
+        ["Four branches of ethical enquiry", [
+          ["**Descriptive ethics**: what people actually believe or practise, studied through history, surveys and anthropology.",
+           "**Normative ethics**: how people ought to act, including consequentialist, deontological and virtue-ethical approaches.",
+           "**Meta-ethics**: what moral concepts mean, and whether moral claims can be true.",
+           "**Applied ethics**: how ethical reasoning works in particular fields such as medicine, business or public administration."]]],
+        ["The is-ought distinction matters", [
+          "Showing that a practice is widespread establishes a descriptive fact, not a moral justification. Many practices once widely accepted were later rejected as unjust.",
+          "**\"People do this\" cannot, by itself, establish \"people should do this.\"**"]],
+        ["Dimensions as fields of administrative responsibility", [
+          "The same phrase is also used for the arenas in which conduct is judged: **personal** integrity, **professional** duties, **organisational** culture, **social** obligations and **environmental** consequences.",
+          "A major administrative decision may involve all of them at once: the officer's own integrity, the obligations of the post, the incentives of the institution, the consequences for citizens and the effects on future generations."]]
+      ],
+      take:"Ethics is not one question. Separate what people believe, what they ought to do, what moral language means, and how a principle applies in a particular field.",
+      src:"Branches of ethics as set out in the Internet Encyclopedia of Philosophy; administrative dimensions as used in GS-IV questions" },
     { t:"Discrimination and preferential treatment",
       qs:["Q015"],
-      d:["**Both discrimination and preferential treatment depart from identical treatment; what separates them is whether the ground of distinction is relevant and whether the effect entrenches disadvantage or reduces it.** Treating everyone the same is not automatically fair, and treating people differently is not automatically unfair.",
-         "**Discrimination** distinguishes on a ground irrelevant to the matter at hand, such as caste in a recruitment, gender in a promotion, or religion in an allotment. It is objectionable on two counts at once: the ground has no bearing on the decision, and its effect is to deepen a disadvantage the person did not choose and cannot escape.",
-         "**Preferential treatment** distinguishes on a ground that is relevant precisely because of a history of exclusion, and it aims at reducing that disadvantage. Its justification is that formal equality applied to substantively unequal starting positions preserves the inequality: an open competition between a candidate with generations of schooling behind them and one whose family was denied it does not measure ability, it measures inheritance.",
-         "The Indian constitutional scheme is built on exactly this distinction. **Article 15(1) prohibits discrimination on grounds of religion, race, caste, sex or place of birth, while Article 15(4) and Article 16(4) permit special provision for backward classes.** The same act of treating two people differently is forbidden under one clause and authorised under another, and what separates them is the ground and the direction of effect.",
-         "The objections deserve their weight. Preference can attach to those least in need within a disadvantaged group, which is why the creamy layer exclusion exists. It can harden the identity it was meant to make irrelevant. And it has no natural end point, which is why the question of when it should cease remains genuinely open. **The test is whether a measure moves people towards a position where the distinction would no longer be needed, or settles into permanently managing a hierarchy it never dismantles.**"],
+      d:["Both discrimination and preferential treatment involve treating people differently. **The ethical difference lies in whether the ground of distinction is relevant, and whether the measure entrenches disadvantage or is designed to reduce it.**"],
+      secs:[
+        ["What makes discrimination objectionable?", [
+          "Discrimination uses a ground that is irrelevant to the decision, such as caste in recruitment, gender in promotion or religion in an allotment. Two problems arise. The ground has no legitimate bearing on the decision, and the different treatment reinforces a disadvantage the person did not choose and cannot easily escape."]],
+        ["Why preferential treatment is treated differently", [
+          "Preferential treatment uses a distinction precisely because a history of exclusion has made apparently equal treatment unequal in substance.",
+          "If two candidates start from very different educational and social conditions, formal equality may preserve inherited inequality rather than neutralise it. **An open competition between them measures inheritance as much as ability.** A corrective measure distinguishes between them in order to reduce a relevant disadvantage."]],
+        ["The constitutional framework in India", [
+          "The Constitution makes the distinction explicit. **Article 15(1) prohibits discrimination on grounds only of religion, race, caste, sex or place of birth.** Article 15(4) allows special provisions for socially and educationally backward classes, Scheduled Castes and Scheduled Tribes, and Article 16(4) allows reservation in public appointments for backward classes not adequately represented. Since 2019, Articles 15(6) and 16(6) also allow up to 10 percent reservation for economically weaker sections, which the Supreme Court upheld in 2022.",
+          "The point for an ethics answer is that treating two people differently is not in itself discriminatory. The questions are: why are they being treated differently, what disadvantage is being addressed, and is the distinction connected to that purpose?"]],
+        ["Limits and objections", [
+          "Preferential measures raise hard questions of their own. Benefits may go mainly to the relatively advantaged members of a group, which is why the Supreme Court in **Indra Sawhney (1992)** required the creamy layer to be excluded from OBC reservation. A distinction may also harden the identity it was meant to make irrelevant, or turn a temporary corrective into a permanent category.",
+          "So the ethical test is not simply whether a measure is preferential. **It is whether the distinction is connected to reducing an identifiable disadvantage, and whether it moves society towards a point where the distinction is no longer needed.**"]]
+      ],
+      take:"Equality does not always mean identical treatment. The ethical question is whether different treatment rests on a relevant justification, and whether it reduces disadvantage rather than entrenching it.",
       src:"Constitution of India, Articles 15 and 16; Indra Sawhney on the creamy layer" },
   ],
   "Human Values":[
     { t:"Social capital and trust",
       qs:["Q126", "Q028"],
-      d:["**Social capital is the stock of trust, shared norms and networks in a society that allows people to act together, so that cooperation does not have to be separately negotiated or enforced each time.** Robert Putnam defined it as those features of social organisation that improve a society's efficiency by making coordinated action possible; the OECD puts it as networks with shared norms and understandings that make cooperation easier.",
-         "Three forms are distinguished and they do different work. **Bonding** capital is the tie among people already alike, such as family, caste or neighbourhood, and it is what helps a household get by. **Bridging** capital connects groups that would not otherwise meet, and it is what allows people to get ahead, because opportunity usually arrives from outside one's own circle. **Linking** capital connects citizens to institutions above them in the power hierarchy, and it determines whether an ordinary person can actually reach an official who can decide their case.",
-         "The governance payoff is concrete. Where trust is high, compliance is largely voluntary, information reaches officials because people bother to report, disputes settle without litigation, and schemes need less policing. Where it is low, every interaction requires verification, and verification is slow, expensive and itself vulnerable to capture. **A trust deficit is paid for in procedure, and the procedure does not restore the trust.**",
-         "The complication that a careful answer includes is that more social capital is not automatically better. **Strong bonding capital without bridging capital produces cohesive groups that function well internally and exclude everyone else**, which is what caste networks, closed professional circles and captured local bodies all are. Social capital is a capacity for collective action, and collective action can be directed at excluding people as readily as at including them.",
-         "For an individual officer the question becomes narrower and answerable: trustworthiness is built by being predictable, by deciding on stated criteria, by giving reasons that can be checked, by making the same decision whether or not anyone influential is watching, and by keeping small commitments. **Trust is not claimed; it is the residue of a record.**"],
+      d:["Social capital is the stock of **trust, shared norms and networks** that makes coordinated action easier. It lets people cooperate without separately negotiating or enforcing every interaction. Robert Putnam described it as the features of social organisation that improve a society's efficiency by making coordinated action possible."],
+      secs:[
+        ["Three forms of social capital", [
+          ["**Bonding capital**: ties among people who already share a strong identity or background, such as family, caste or neighbourhood. It helps people get by.",
+           "**Bridging capital**: connections across different groups. It widens access to information, relationships and opportunity, and helps people get ahead.",
+           "**Linking capital**: connections between citizens and institutions, or people higher in a power hierarchy. It decides whether an ordinary person can reach an official who can decide their case."]]],
+        ["Why trust matters in governance", [
+          "Where trust is high, people are more likely to comply voluntarily, report information, settle disputes without litigation and cooperate with public programmes. Where trust is low, every interaction needs verification, which makes administration slower, costlier and more open to capture.",
+          "**A trust deficit shows up as procedure**: more forms, more checks and more supervision."]],
+        ["Social capital can also exclude", [
+          "More social capital is not automatically better. Strong bonding within a group can coexist with weak links across groups. **Closed networks may work very well for their members while excluding everyone else**, as caste networks, closed professional circles and captured local bodies show.",
+          "Social capital should therefore be judged by the kind of collective action it enables. Cooperation can produce inclusion, but it can also protect privilege."]],
+        ["Building institutional trust", [
+          "For an individual officer, trustworthiness is built through predictable conduct: using stated criteria, giving reasons that can be checked, applying the same standard whether or not anyone influential is watching, and keeping small commitments.",
+          "**Trust is not a declaration. It accumulates as a record of consistent conduct.**"]]
+      ],
+      take:"Social capital lowers the friction of collective action. But trust within a closed group is not enough. Lasting public trust also needs bridging and linking connections across social and institutional boundaries.",
       src:"Putnam, Bowling Alone; OECD definition of social capital; World Bank on linking social capital" },
     { t:"Education and the inculcation of values",
       qs:["Q025"],
-      d:["**Values are transmitted in a school far more by how it operates than by what it teaches**, which is why a curriculum on justice, equality and non-discrimination can coexist with a setting that demonstrates their opposite.",
-         "The formal channel is the syllabus: civics, moral instruction, the constitutional values named in the National Education Policy 2020. The stronger channel is the hidden curriculum, meaning everything a child learns from the arrangement itself. Whether children of different castes and incomes sit together and eat together. Whether a teacher's attention is distributed evenly or tracks a family's standing. Whether rules apply to the influential child as to others. Whether a girl's opinion is invited as readily as a boy's. **A moral science period beside a segregated playground teaches the playground.**",
-         "This is why the mid-day meal argument was never mainly about nutrition. Children of different castes eating food cooked by someone from a community whose touch was once thought polluting is a demonstration no lesson can substitute for, which is exactly why it was resisted.",
-         "The critical half of the question is that schooling reproduces existing structure at least as reliably as it changes it. **Where school choice tracks income and caste, the system can deliver the curriculum on equality while the child learns from the sorting itself who belongs where.** A system stratified into elite private, ordinary private and government schooling teaches its hierarchy before it teaches anything else.",
-         "Family and society are the other two transmitters and they usually arrive first. A child's earliest standards come from home, and where home and school teach opposite things the school rarely wins outright. This is why value education understood as an add-on subject disappoints, and why the interventions that work are structural: common schooling, mixed classrooms, teachers who model what is being claimed. **Values are caught more than taught, and what is caught is the arrangement rather than the lesson.**"],
+      d:["Values are passed on in schools not only through what is taught, but through how the institution behaves. **The school's rules, relationships and daily arrangements form a hidden curriculum** that can reinforce or contradict the formal one."],
+      secs:[
+        ["The formal curriculum and the hidden curriculum", [
+          "Civics, moral instruction and the constitutional values named in the **National Education Policy 2020** are the explicit channel. The hidden curriculum is everything students learn from the institution itself: who sits with whom, whose voice is heard, whether rules apply equally, whether a family's standing draws a teacher's attention, and whether caste, class or gender shape everyday interaction.",
+          "A lesson on equality can therefore be undone by an institution that visibly runs on hierarchy. **A moral science period beside a segregated playground teaches the playground.**"]],
+        ["Why everyday arrangements teach more than lectures", [
+          "The mid-day meal shows the point. Children from different communities eating together, including food cooked by someone from a community once treated as untouchable, communicate social equality in a way no single lesson can. That is also why the practice has sometimes been resisted.",
+          "**Values are strengthened when the structure of everyday life makes the stated value normal.**"]],
+        ["Schools can reproduce inequality", [
+          "Education does not automatically transform social structures. Where school choice tracks income and caste, students may learn the hierarchy from the sorting itself, even while the syllabus teaches equality.",
+          "Family and society also pass on values, before school and alongside it. When the messages conflict, the school cannot assume that a lesson will override lived experience."]],
+        ["What value education therefore requires", [
+          "Value education works better when it is built into institutional practice: mixed classrooms, equal treatment, teachers who model the values they teach, and settings where fairness and dignity are experienced rather than merely described."]]
+      ],
+      take:"Values are caught as much as taught. The strongest value education is an institution in which the desired values are experienced, again and again, as normal behaviour.",
       src:"National Education Policy 2020; the hidden curriculum as used in education research" },
     { t:"Social values against economic values",
       qs:["Q027"],
