@@ -1881,7 +1881,7 @@ function conceptBody(c){
   const para = x => Array.isArray(x)
     ? `<ul>${x.map(li => `<li>${g(li)}</li>`).join("")}</ul>` : `<p>${g(x)}</p>`;
   return `
-      <div class="gc-def"><b class="gc-lab">Definition</b>${c.d.map(para).join("")}</div>
+      <div class="gc-def"><b class="gc-lab">${esc(c.dlab || "Definition")}</b>${c.d.map(para).join("")}</div>
       ${c.secs.map((sec, k) => `
       <section class="gc-sec">
         <h6><span>${k + 1}</span>${esc(sec[0])}</h6>

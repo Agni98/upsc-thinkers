@@ -45,8 +45,8 @@ Each concept in `gs4concepts.js` has a definition (`d`), the questions that aske
 source line (`src`). Every concept under headings 1 to 15 is written as structured reading notes:
 `d` holds the definition, `secs` the numbered sections, each `[heading, paragraphs]`, and `take` the
 key takeaway. The page shows a definition box, the numbered sections and a takeaway box. A paragraph
-that is itself a list of strings becomes bullets. The case-study patterns under heading 16 keep the
-plain paragraph form.
+that is itself a list of strings becomes bullets. The nine case-study patterns under heading 16 use
+the same form, with the opening box labelled *The situation* (`dlab`) instead of *Definition*.
 
 ### Reading the maps
 

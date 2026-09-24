@@ -17,6 +17,8 @@
            a paragraph that is itself a list of strings is shown as bullets.
            With secs, d holds only the definition.
      take: (optional) the key takeaway, shown in its own box
+     dlab: (optional) the label on the opening box, if not "Definition"; the case
+           patterns open with "The situation"
      src : where the definition comes from
    ===================================================================== */
 const GS4_CONCEPTS = {
@@ -1956,75 +1958,147 @@ const GS4_CONCEPTS = {
   "Case Studies":[
     { t:"Duty against pressure from above",
       qs:["Q145", "Q161", "Q166", "Q167", "Q178", "Q187", "Q213"],
-      d:["**Your senior wants a decision you believe is wrong.** He has the rank, the longer service, and a say in your next posting. You have the file and your own judgement.",
-         "Both duties are real. **You owe obedience to lawful orders**, because an office cannot run if every junior may refuse one. **You also owe the public an honest decision**, because the office exists for them and not for your senior.",
-         "What settles most of these is simple. **Ask for the instruction in writing.** That is not defiance. It keeps the matter inside the chain of command, and it puts the facts on record. Most improper instructions are never written down.",
-         "The trap is the brave gesture. Resigning, going to the press, or jumping three levels up may feel right. **It usually removes the one person who could still fix the problem.** Try the record first.",
-         "Concede the cost. Your senior may turn out to be right. The delay is real. Saying so makes the answer stronger, not weaker."],
+      d:["**Your senior wants a decision you believe is wrong.** He has the rank, the longer service, and a say in your next posting. You have the file and your own judgement."],
+      dlab:"The situation",
+      secs:[
+        ["Obedience, and an honest decision", [
+          "Both duties are real. **You owe obedience to lawful orders**, because an office cannot run if every junior may refuse one. **You also owe the public an honest decision**, because the office exists for them and not for your senior."]],
+        ["Ask for the instruction in writing", [
+          "What settles most of these is simple. **Ask for the instruction in writing.** That is not defiance. It keeps the matter inside the chain of command, and it puts the facts on record. Most improper instructions are never written down."]],
+        ["The trap: the brave gesture", [
+          "The trap is the brave gesture. Resigning, going to the press, or jumping three levels up may feel right. **It usually removes the one person who could still fix the problem.** Try the record first."]],
+        ["Concede the cost", [
+          "Concede the cost. Your senior may turn out to be right. The delay is real. Saying so makes the answer stronger, not weaker."]]
+      ],
+      take:"Keep the matter inside the chain of command and on the record. Ask for the instruction in writing before any brave gesture.",
       src:"Seven cases, 2013 to 2025" },
     { t:"Duty against a personal tie",
       qs:["Q052", "Q055", "Q163", "Q171", "Q183", "Q188"],
-      d:["**Someone close to you gains if you bend.** A friend, a relative, a colleague you like and respect.",
-         "The pull is real, and the paper knows it. **You owe the person kindness. You owe the office fairness.** These are not the same thing, and only one of them is your job.",
-         "Disclosure settles it. **Say that you know the person, and step out of the decision.** A conflict of interest is a situation, not a crime. It exists before you have done anything wrong. Declaring it early costs you nothing. Hiding it costs you everything.",
-         "The trap is thinking you can be fair anyway. You may well be. **But nobody watching can tell the difference**, and public trust turns on what can be seen, not on what you know about yourself.",
-         "You can still help the person as a private individual. What you cannot do is help them with the office."],
+      d:["**Someone close to you gains if you bend.** A friend, a relative, a colleague you like and respect."],
+      dlab:"The situation",
+      secs:[
+        ["Kindness to the person, fairness from the office", [
+          "The pull is real, and the paper knows it. **You owe the person kindness. You owe the office fairness.** These are not the same thing, and only one of them is your job."]],
+        ["Declare it and step out", [
+          "Disclosure settles it. **Say that you know the person, and step out of the decision.** A conflict of interest is a situation, not a crime. It exists before you have done anything wrong. Declaring it early costs you nothing. Hiding it costs you everything."]],
+        ["The trap: believing you can be fair anyway", [
+          "The trap is thinking you can be fair anyway. You may well be. **But nobody watching can tell the difference**, and public trust turns on what can be seen, not on what you know about yourself."]],
+        ["Help as a private person, not through the office", [
+          "You can still help the person as a private individual. What you cannot do is help them with the office."]]
+      ],
+      take:"Declare the tie and step out of the decision. You may help the person privately, but never with the office.",
       src:"Six cases, 2013 to 2023" },
     { t:"Silence against speaking up",
       qs:["Q151", "Q173", "Q179", "Q180", "Q204", "Q225"],
-      d:["**You find out about harm that is already happening.** You did not cause it. You can prove it. Speaking up may cost you the job.",
-         "The two duties are these. **You owe your employer loyalty.** **You owe the people being harmed a warning.** Loyalty is owed to an organisation. Safety is owed to people who cannot see the danger coming.",
-         "Work the ladder in order. **Raise it inside first, in writing.** Then the level above. Then the regulator or the auditor. Going outside comes last, not first, because it removes every chance of a quiet fix.",
-         "Keep the record as you go. Dates, documents, what you said and to whom. **The note written before the harm protects you. The explanation after it does not.**",
-         "The trap is treating silence as neutral. It is not. Once you know, staying quiet is itself a choice you have made."],
+      d:["**You find out about harm that is already happening.** You did not cause it. You can prove it. Speaking up may cost you the job."],
+      dlab:"The situation",
+      secs:[
+        ["Loyalty to the employer, a warning to the people at risk", [
+          "The two duties are these. **You owe your employer loyalty.** **You owe the people being harmed a warning.** Loyalty is owed to an organisation. Safety is owed to people who cannot see the danger coming."]],
+        ["Work the ladder in order", [
+          "Work the ladder in order. **Raise it inside first, in writing.** Then the level above. Then the regulator or the auditor. Going outside comes last, not first, because it removes every chance of a quiet fix."]],
+        ["Keep the record as you go", [
+          "Keep the record as you go. Dates, documents, what you said and to whom. **The note written before the harm protects you. The explanation after it does not.**"]],
+        ["The trap: treating silence as neutral", [
+          "The trap is treating silence as neutral. It is not. Once you know, staying quiet is itself a choice you have made."]]
+      ],
+      take:"Once you know, silence is a choice. Raise it inside first, in writing, and go outside only when the ladder has failed.",
       src:"Six cases, 2013 to 2024" },
     { t:"Enforcement against the people it lands on",
       qs:["Q113", "Q119", "Q220", "Q238"],
-      d:["**Doing your job by the book hurts people who are already poor.** The still, the mine, the small workshop is illegal. It is also what the village lives on.",
-         "The duties: **you owe the law even-handed enforcement**, and **you owe the people you govern a way to live**. The second is not softness. A drive that leaves a village with no income simply creates the next offence.",
-         "The answer is usually sequence, not exception. **Act first against the people who profit most**, not the people at the bottom. Give notice. Offer the alternative before you remove the living. Enforce hardest where there was a real choice.",
-         "The trap is suspending the law out of sympathy. That is not compassion. It is a favour, and the next officer has to undo it.",
-         "Concede that some hardship cannot be avoided. Say who will bear it, and what you did to soften it."],
+      d:["**Doing your job by the book hurts people who are already poor.** The still, the mine, the small workshop is illegal. It is also what the village lives on."],
+      dlab:"The situation",
+      secs:[
+        ["Even-handed law, and a way to live", [
+          "The duties: **you owe the law even-handed enforcement**, and **you owe the people you govern a way to live**. The second is not softness. A drive that leaves a village with no income simply creates the next offence."]],
+        ["Sequence, not exception", [
+          "The answer is usually sequence, not exception. **Act first against the people who profit most**, not the people at the bottom. Give notice. Offer the alternative before you remove the living. Enforce hardest where there was a real choice."]],
+        ["The trap: suspending the law out of sympathy", [
+          "The trap is suspending the law out of sympathy. That is not compassion. It is a favour, and the next officer has to undo it."]],
+        ["Say who bears the hardship", [
+          "Concede that some hardship cannot be avoided. Say who will bear it, and what you did to soften it."]]
+      ],
+      take:"Enforce the law in sequence: those who profit most come first, and notice and an alternative come before a livelihood is removed.",
       src:"Four cases, 2013 to 2024" },
     { t:"Profit against the cost nobody counted",
       qs:["Q165", "Q184", "Q205", "Q223"],
-      d:["**The gain is clear, near and measured. The harm is spread out, far away, or years off.** A plant, a data centre, a target met by cutting a corner.",
-         "The duties: **you owe the firm and its workers a going concern**, and **you owe the people downstream a life not damaged by it**. The second group is not in the room and never agreed to the trade.",
-         "Test it two ways. **Would you accept this if you lived downwind?** And would the decision survive being published? A cost you would want to hide is usually a cost you should not impose.",
-         "What settles it is that consent is missing. **People who cannot say no cannot be traded against a deadline.**",
-         "The trap is the false choice between jobs and safety. There is nearly always a third path: fix it, phase it, or pay for the damage. Look for that before accepting the trade."],
+      d:["**The gain is clear, near and measured. The harm is spread out, far away, or years off.** A plant, a data centre, a target met by cutting a corner."],
+      dlab:"The situation",
+      secs:[
+        ["A going concern, and the people downstream", [
+          "The duties: **you owe the firm and its workers a going concern**, and **you owe the people downstream a life not damaged by it**. The second group is not in the room and never agreed to the trade."]],
+        ["Two tests", [
+          "Test it two ways. **Would you accept this if you lived downwind?** And would the decision survive being published? A cost you would want to hide is usually a cost you should not impose."]],
+        ["Consent is missing", [
+          "What settles it is that consent is missing. **People who cannot say no cannot be traded against a deadline.**"]],
+        ["The trap: jobs against safety", [
+          "The trap is the false choice between jobs and safety. There is nearly always a third path: fix it, phase it, or pay for the damage. Look for that before accepting the trade."]]
+      ],
+      take:"A cost you would want to hide is one you should not impose. Look for the third path: fix it, phase it, or pay for the damage.",
       src:"Four cases, 2017 to 2024" },
     { t:"Few resources, many claimants",
       qs:["Q112", "Q116", "Q120", "Q144"],
-      d:["**There is not enough, and you must decide who gets it first.** Beds, boats, relief, money, or your own time.",
-         "Here the ranking is the ethical act. **You owe every claimant equal consideration**, and **you owe the whole group the best use of what little you have.**",
-         "State your rule before you apply it. **Save the most lives. Treat the most urgent first. Help those who cannot help themselves.** Any of these can be defended in an answer. What cannot be defended is deciding case by case with no rule at all.",
-         "Then apply it to everyone, including the people you know. **A rule you bend once was never a rule.**",
-         "The trap is refusing to rank at all. Refusing is also a decision, and it is the one that helps nobody."],
+      d:["**There is not enough, and you must decide who gets it first.** Beds, boats, relief, money, or your own time."],
+      dlab:"The situation",
+      secs:[
+        ["Ranking is the ethical act", [
+          "Here the ranking is the ethical act. **You owe every claimant equal consideration**, and **you owe the whole group the best use of what little you have.**"]],
+        ["State the rule first", [
+          "State your rule before you apply it. **Save the most lives. Treat the most urgent first. Help those who cannot help themselves.** Any of these can be defended in an answer. What cannot be defended is deciding case by case with no rule at all."]],
+        ["Apply it to everyone", [
+          "Then apply it to everyone, including the people you know. **A rule you bend once was never a rule.**"]],
+        ["The trap: refusing to rank", [
+          "The trap is refusing to rank at all. Refusing is also a decision, and it is the one that helps nobody."]]
+      ],
+      take:"State a rule you can defend before you apply it, then apply it to everyone. Refusing to rank helps nobody.",
       src:"Four cases, 2015 to 2025" },
     { t:"Duty against your own interest",
       qs:["Q162", "Q168", "Q174"],
-      d:["**Your job hands you something you could profit from.** A policy not yet announced. A tender you help decide. A contract your family could win.",
-         "There is no real clash of duties here, and that is the point. **The gain would be yours. The loss is public trust.** This is the easiest group to get right and the easiest to answer badly.",
-         "The rule is short. **Declare it, and step away.** Do not use the information. Do not pass it on. Do not act on it later through somebody else.",
-         "The trap is delay: telling yourself you will decide once you see whether it matters. By then you have already used it.",
-         "Note the timing. **A conflict of interest exists before anything wrong is done.** That is why the answer is disclosure, not a claim of innocence."],
+      d:["**Your job hands you something you could profit from.** A policy not yet announced. A tender you help decide. A contract your family could win."],
+      dlab:"The situation",
+      secs:[
+        ["No real clash of duties", [
+          "There is no real clash of duties here, and that is the point. **The gain would be yours. The loss is public trust.** This is the easiest group to get right and the easiest to answer badly."]],
+        ["Declare it and step away", [
+          "The rule is short. **Declare it, and step away.** Do not use the information. Do not pass it on. Do not act on it later through somebody else."]],
+        ["The trap: waiting to see if it matters", [
+          "The trap is delay: telling yourself you will decide once you see whether it matters. By then you have already used it."]],
+        ["The conflict comes before any wrong", [
+          "Note the timing. **A conflict of interest exists before anything wrong is done.** That is why the answer is disclosure, not a claim of innocence."]]
+      ],
+      take:"Declare the interest and step away at once. The answer is disclosure, not a claim of innocence.",
       src:"Three cases, 2013 to 2024" },
     { t:"The rule against the deserving case",
       qs:["Q210", "Q226", "Q232"],
-      d:["**The rule gives a hard answer to someone who clearly deserves better.** A widow, a displaced family, a man at fault who is still suffering.",
-         "The duties: **you owe this person compassion**, and **you owe every other claimant the same rule you applied to them**. Bending it here is a kindness paid for by people you will never meet.",
-         "Split it into two questions. **Can the rule be read so that it helps them?** Often it can, and finding that is your first job. If it truly cannot, **is there another route** — a relief fund, a scheme, a power that exists for exactly this?",
-         "What you may not do is quietly ignore the rule. **Recommend the change instead.** Say plainly that the rule is wrong, and ask for it to be amended.",
-         "The trap is either extreme. A cold refusal and an unexplained favour are failures of the same job."],
+      d:["**The rule gives a hard answer to someone who clearly deserves better.** A widow, a displaced family, a man at fault who is still suffering."],
+      dlab:"The situation",
+      secs:[
+        ["Compassion, and the same rule for everyone", [
+          "The duties: **you owe this person compassion**, and **you owe every other claimant the same rule you applied to them**. Bending it here is a kindness paid for by people you will never meet."]],
+        ["Read the rule, then look for another route", [
+          "Split it into two questions. **Can the rule be read so that it helps them?** Often it can, and finding that is your first job. If it truly cannot, **is there another route** — a relief fund, a scheme, a power that exists for exactly this?"]],
+        ["Recommend the change; do not ignore the rule", [
+          "What you may not do is quietly ignore the rule. **Recommend the change instead.** Say plainly that the rule is wrong, and ask for it to be amended."]],
+        ["The trap: either extreme", [
+          "The trap is either extreme. A cold refusal and an unexplained favour are failures of the same job."]]
+      ],
+      take:"Look first for a reading of the rule, or another route, that helps. If there is none, say the rule is wrong and ask for it to be changed.",
       src:"Three cases, 2016 to 2022" },
     { t:"Equal treatment against local custom",
       qs:["Q235", "Q236"],
-      d:["**The community wants you to treat some people as lesser.** Caste at a school meal. Girls kept out of the classroom.",
-         "There is no real balance to strike. **The Constitution has settled the question, and your job is to carry it out.** What is genuinely hard is not what to do, but how to do it without a riot.",
-         "So the answer is about method. **Do not argue the principle in public first.** Talk to the elders. Find the people inside the community who already agree with you. Keep the school running while you do it.",
-         "Use the law as backing, not as your opening move. **Move first, explain second, prosecute last** — but do not leave a child out of school while you persuade.",
-         "Concede that this takes time and that you may fail at first. Say what you would do if persuasion does not work."],
+      d:["**The community wants you to treat some people as lesser.** Caste at a school meal. Girls kept out of the classroom."],
+      dlab:"The situation",
+      secs:[
+        ["The Constitution has settled it", [
+          "There is no real balance to strike. **The Constitution has settled the question, and your job is to carry it out.** What is genuinely hard is not what to do, but how to do it without a riot."]],
+        ["The answer is about method", [
+          "So the answer is about method. **Do not argue the principle in public first.** Talk to the elders. Find the people inside the community who already agree with you. Keep the school running while you do it."]],
+        ["The law as backing, not the opening move", [
+          "Use the law as backing, not as your opening move. **Move first, explain second, prosecute last** — but do not leave a child out of school while you persuade."]],
+        ["Concede that it takes time", [
+          "Concede that this takes time and that you may fail at first. Say what you would do if persuasion does not work."]]
+      ],
+      take:"The principle is settled; the skill is in the method. Persuade through the community, keep the school running, and hold the law in reserve.",
       src:"Two cases, both 2015" },
   ],
 };
