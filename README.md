@@ -16,7 +16,7 @@ all its text work exactly the same and show lettered monograms in place of photo
 
 | View | What it gives you |
 |---|---|
-| **All Thinkers** | Every entry, grouped by tradition |
+| **All Thinkers** | Every entry, grouped by school; narrow by region, school or paper, or filter by any word |
 | **Essay Paper** | Thinkers who supply an opening quote, a spine, or a counter-argument |
 | **GS-IV Ethics** | Thinkers named in or directly serving the Ethics syllabus |
 | **Quote Bank** | All 316 quotations in one scannable column, searchable |
@@ -38,6 +38,14 @@ from the quote bank that changes daily. Below it: where you stopped, with how mu
 or theme is read; the two papers, whose numbers are links to what they count; six thinkers; and
 the six essay themes the paper has asked most. The photographs are public-domain and CC0 images
 from Wikimedia Commons.
+
+### GS-IV concept notes
+
+Each concept in `gs4concepts.js` has a definition (`d`), the questions that asked it (`qs`) and a
+source line (`src`). The first five, under *Ethics & Human Interface*, are also written as structured
+reading notes: `secs` holds numbered sections, each `[heading, paragraphs]`, and `take` the key
+takeaway. The page shows them as a definition box, numbered sections and a takeaway box. A
+paragraph that is itself a list of strings becomes bullets. Notes without `secs` keep the plain form.
 
 ### Reading the maps
 

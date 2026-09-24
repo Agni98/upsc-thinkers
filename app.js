@@ -212,8 +212,6 @@ const splitIdea = s => {
   const i = s.indexOf(" — ");
   return i === -1 ? { h:"", d:s } : { h:s.slice(0, i), d:s.slice(i + 3) };
 };
-const tagsHTML = t => (t.tag || []).map(x =>
-  `<span class="tag ${x.toLowerCase()}">${x}</span>`).join("");
 
 /* ================= THE FRONT PAGE =================
    Counts are read out of the data rather than written down, so the page cannot
@@ -533,7 +531,8 @@ function searchHits(q){
   if (typeof GS4_CONCEPTS !== "undefined") {
     const all = [];
     SYLLABUS.forEach((r, p) => (GS4_CONCEPTS[r.t] || []).forEach((c, i) =>
-      all.push({ t:c.t, h:r.t, to:"syllabus|" + (p + 1) + "|c:" + i, d:(c.d || []).join(" ") })));
+      all.push({ t:c.t, h:r.t, to:"syllabus|" + (p + 1) + "|c:" + i,
+                 d:[].concat(c.d || [], ...(c.secs || []).map(x => [x[0]].concat(...x[1])), c.take || "").join(" ") })));
     out.concepts = titled(all, c => c.t, c => c.d);
   }
   if (typeof ATLAS !== "undefined") {
@@ -588,7 +587,7 @@ function renderSearch(){
       <section class="hblock srch-g">
         <div class="hb-head"><h3 class="hb-t">${g[1]} <small>${list.length}</small></h3></div>
         ${g[0] === "thinkers"
-          ? `<div class="grid">${shown.map(cardHTML).join("")}</div>`
+          ? `<div class="tgrid">${shown.map(cardHTML).join("")}</div>`
           : `<div class="srows">${shown.map(row).join("")}</div>`}
         ${all ? "" : `<button class="obtn srch-more" data-more="${g[0]}">Show all ${list.length}</button>`}
       </section>`;
@@ -838,7 +837,8 @@ function currentList(){
   else if (catById[state.view]) list = list.filter(t => t.cat === state.view);
   else if (REGIONS[state.view]) list = list.filter(t => REGIONS[state.view].cats.includes(t.cat));
 
-  if (state.tag) list = list.filter(t => t.tag.includes(state.tag));
+  if (state.tag && state.view !== "essay" && state.view !== "ethics")
+    list = list.filter(t => t.tag.includes(state.tag));
 
   // the site search has its own page; only the quote bank filters in place
   const q = state.view === "quotes" ? state.q.trim().toLowerCase() : "";
@@ -847,42 +847,130 @@ function currentList(){
 }
 
 /* ================= VIEWS ================= */
+/* A thinker's card: who they were, the one line to remember, three ideas to
+   name in an answer, and which paper they serve. */
 function cardHTML(t){
+  const ideas = t.ideas.map(i => splitIdea(i).h.replace(/\s*\(.*?\)\s*/g, " ").trim())
+    .filter(h => h && h.length <= 26).slice(0, 3);
   return `
-  <button class="card" data-open="${t.id}">
-    <div class="card-top">
+  <button class="tk" data-open="${t.id}">
+    <div class="tk-top">
       ${portraitHTML(t)}
-      <div class="card-id">
-        <h4>${esc(t.name)}</h4>
-        <div class="yrs">${esc(t.years)} &middot; ${esc(t.place)}</div>
-        <div class="sch">${esc(t.school)}</div>
+      <div class="tk-id">
+        <b>${esc(t.name)}</b>
+        <span class="tk-meta">${esc(t.years)} &middot; ${esc(t.place)}</span>
+        <span class="tk-school">${esc(t.school)}</span>
       </div>
     </div>
-    <p class="card-gist">${esc(t.gist)}</p>
-    <div class="card-foot">${tagsHTML(t)}</div>
+    <p class="tk-gist">${esc(t.gist)}</p>
+    ${ideas.length ? `<div class="tk-tags">${ideas.map(h => `<span>${esc(h)}</span>`).join("")}</div>` : ""}
+    <div class="tk-foot">
+      ${t.tag.map(x => `<span class="tk-paper">${x === "Ethics" ? "GS-IV" : esc(x)}</span>`).join("")}
+      <span class="tk-go">Open ${ico("arrow")}</span>
+    </div>
   </button>`;
 }
 
+/* The thinkers page: one header band for every way into the list (all, a
+   region, a school, or one paper), then the list itself, grouped by school
+   whenever it holds more than one. The box filters the cards in place. */
 function renderGrid(){
+  const v = state.view;
+  const paper = v === "essay" ? "Essay" : v === "ethics" ? "Ethics" : state.tag;
   const list = currentList();
-  const cat = catById[state.view];
-  let head;
-  if (cat) head = { h:cat.name, p:cat.blurb };
-  else if (REGIONS[state.view]) head = { h:REGIONS[state.view].name, p:REGIONS[state.view].blurb };
-  else if (state.view === "essay") head = { h:"Essay Paper", p:"Thinkers who give an essay its opening quotation, its philosophical spine or its counter-argument." };
-  else if (state.view === "ethics") head = { h:"GS Paper IV — Ethics, Integrity & Aptitude", p:"Thinkers named in or directly serving the GS-IV syllabus." };
-  else head = { h:"All Thinkers", p:"Sorted by tradition. Use the sidebar to narrow by school, or search across every idea and quotation." };
+  const cat = catById[v], reg = REGIONS[v];
+  const regionKey = reg ? v : cat ? (Object.keys(REGIONS).find(k => REGIONS[k].cats.includes(v)) || "") : "";
+  const head = cat ? { h:cat.name, p:cat.blurb, k:"Schools & traditions" }
+    : reg ? { h:reg.name, p:reg.blurb, k:"Thinkers by region" }
+    : v === "essay" ? { h:"Thinkers for the Essay Paper", k:"Essay",
+        p:"Thinkers who give an essay its opening quotation, its argument or its counter-argument." }
+    : v === "ethics" ? { h:"Thinkers for GS-IV Ethics", k:"GS-IV",
+        p:"Thinkers named in the GS-IV syllabus or serving one of its headings." }
+    : { h:"All Thinkers", k:"Thinkers",
+        p:THINKERS.length + " thinkers from " + CATEGORIES.length + " traditions, each with core ideas, quotations and where UPSC uses them." };
+  const s = siteStats();
+  const count = id => THINKERS.filter(t => t.cat === id).length;
+  const scopeCats = regionKey ? REGIONS[regionKey].cats : CATEGORIES.map(c => c.id);
+  const groups = CATEGORIES.map(c => ({ c, list:list.filter(t => t.cat === c.id) })).filter(g => g.list.length);
 
   return `
-    <div class="sec-head"><h3>${head.h}</h3><p>${head.p}</p></div>
-    <div class="chips">
-      <button class="chip ${state.tag === "" ? "on" : ""}" data-tag="">All papers</button>
-      <button class="chip ${state.tag === "Essay" ? "on" : ""}" data-tag="Essay">Essay</button>
-      <button class="chip ${state.tag === "Ethics" ? "on" : ""}" data-tag="Ethics">Ethics</button>
+  <section class="hero hero-sm">
+    <div class="hero-art art-athens" aria-hidden="true"></div>
+    <div class="hero-body">
+      <p class="hero-k">${esc(head.k)}</p>
+      <h2 class="hero-t">${esc(head.h)}</h2>
+      <p class="hero-s">${esc(head.p)}</p>
+      <form class="hsearch" role="search" data-tfilter>
+        ${ico("search")}
+        <input id="thinkerQ" type="search" autocomplete="off" value="${esc(state.tq || "")}"
+               aria-label="Filter the thinkers"
+               placeholder="Filter by name, idea or quotation (e.g. Kant, trusteeship, the absurd)">
+      </form>
+      <div class="t-paper" role="group" aria-label="Which paper">
+        ${[["", "All papers"], ["Essay", "Essay"], ["Ethics", "GS-IV Ethics"]].map(p => `
+        <button class="${paper === p[0] ? "on" : ""}" data-tag="${p[0]}" aria-pressed="${paper === p[0]}">${p[1]}</button>`).join("")}
+      </div>
     </div>
-    ${ list.length
-        ? `<div class="grid">${list.map(cardHTML).join("")}</div>`
-        : `<div class="empty"><b>Nothing found</b>Try a different word — search covers names, ideas, quotations and themes.</div>` }`;
+    <div class="hero-aside">
+      <button data-view="all"><b>${s.thinkers}</b><span>thinkers</span></button>
+      <button data-view="quotes"><b>${s.quotes}</b><span>quotations</span></button>
+      <button data-view="worklab"><b>${s.works}</b><span>works read closely</span></button>
+    </div>
+  </section>
+
+  <div class="home">
+    <div class="t-scope">
+      <div class="t-regions" role="group" aria-label="Region">
+        <button class="${!regionKey && !cat ? "on" : ""}" data-view="all">All</button>
+        ${Object.keys(REGIONS).map(k => `
+        <button class="${regionKey === k ? "on" : ""}" data-view="${k}">${esc(REGIONS[k].label)}</button>`).join("")}
+      </div>
+      <div class="t-cats">${scopeCats.map(id => `
+        <button class="pop${v === id ? " on" : ""}" data-view="${id}">${esc(catById[id].name)} <i>${count(id)}</i></button>`).join("")}
+      </div>
+    </div>
+    <p class="t-count" id="thinkerCount"></p>
+    ${list.length ? groups.map(g => `
+    <section class="hblock t-group" data-cat="${g.c.id}">
+      ${groups.length > 1 ? `
+      <div class="hb-head">
+        <div><h3 class="hb-t">${esc(g.c.name)} <small>${g.list.length}</small></h3>
+          <p class="hb-s">${esc(g.c.blurb)}</p></div>
+        <button class="hb-link" data-view="${g.c.id}">Open this school ${ico("arrow")}</button>
+      </div>` : ""}
+      <div class="tgrid">${g.list.map(cardHTML).join("")}</div>
+    </section>`).join("") : ""}
+    <div class="empty" id="thinkerNone"${list.length ? " hidden" : ""}><b>No thinker matches</b>Try one word, a shorter name, or a different paper.</div>
+  </div>`;
+}
+
+/* Filtering in place keeps the box in focus while the reader types. Every word
+   has to appear somewhere in the thinker's name, ideas, quotations or uses. */
+let thinkerHay = null;
+function applyThinkerFilter(){
+  const box = document.getElementById("thinkerQ");
+  if (!box) return;
+  if (!thinkerHay) thinkerHay = Object.fromEntries(THINKERS.map(t => [t.id, atlasFold(haystack(t))]));
+  const words = atlasFold(state.tq || "").split(/\s+/).filter(Boolean);
+  let shown = 0;
+  document.querySelectorAll(".t-group").forEach(g => {
+    let n = 0;
+    g.querySelectorAll(".tk").forEach(c => {
+      const ok = words.every(w => thinkerHay[c.dataset.open].includes(w));
+      c.hidden = !ok;
+      if (ok) n++;
+    });
+    g.hidden = !n;
+    const sm = g.querySelector(".hb-t small");
+    if (sm) sm.textContent = n;
+    shown += n;
+  });
+  const cnt = document.getElementById("thinkerCount");
+  if (cnt) cnt.textContent = words.length
+    ? plural(shown, "thinker matches", "thinkers match") + " “" + state.tq.trim() + "”"
+    : "Showing " + plural(shown, "thinker", "thinkers");
+  const none = document.getElementById("thinkerNone");
+  if (none) none.hidden = shown > 0;
 }
 
 function renderQuotes(){
@@ -1775,6 +1863,23 @@ function conceptFreq(title, c, byQ){
   return n + (a === b ? " in " + a : ", " + a + " to " + b);
 }
 
+/* A note written as structured reading notes gets a definition box, numbered
+   sections and a key takeaway; an older note is plain paragraphs. */
+function conceptBody(c){
+  const g = x => gloss2(x, gs4Skip(c.t));
+  if (!c.secs) return c.d.map(x => `<p>${g(x)}</p>`).join("");
+  const para = x => Array.isArray(x)
+    ? `<ul>${x.map(li => `<li>${g(li)}</li>`).join("")}</ul>` : `<p>${g(x)}</p>`;
+  return `
+      <div class="gc-def"><b class="gc-lab">Definition</b>${c.d.map(para).join("")}</div>
+      ${c.secs.map((sec, k) => `
+      <section class="gc-sec">
+        <h6><span>${k + 1}</span>${esc(sec[0])}</h6>
+        ${sec[1].map(para).join("")}
+      </section>`).join("")}
+      ${c.take ? `<div class="gc-take"><b class="gc-lab">Key takeaway</b><p>${g(c.take)}</p></div>` : ""}`;
+}
+
 function conceptPane(title, i){
   const list = (typeof GS4_CONCEPTS !== "undefined" && GS4_CONCEPTS[title]) || [];
   const c = list[i];
@@ -1788,7 +1893,7 @@ function conceptPane(title, i){
   return `
     <article class="gc-item sm-pane">
       <h5><span class="gc-no">${i + 1}</span>${esc(c.t)}${f ? `<em>${esc(f)}</em>` : ""}</h5>
-      ${c.d.map(x => `<p>${gloss2(x, gs4Skip(c.t))}</p>`).join("")}
+      ${conceptBody(c)}
       ${qs.length ? `<div class="gc-qs"><b>${
           title === "Case Studies" ? "The cases" : "Where it was asked"}</b>${
           qs.map(q => gcQuestion(q, c.t, byHead)).join("")}</div>` : ""}
@@ -1868,6 +1973,7 @@ function render(){
   renderNav();
   markTopNav();
   applyPortraits(main);
+  applyThinkerFilter();
   window.scrollTo({ top:0, behavior:"instant" });
 }
 
@@ -2667,7 +2773,12 @@ document.addEventListener("click", e => {
   }
 
   const chip = e.target.closest("[data-tag]");
-  if (chip) { state.tag = chip.dataset.tag; render(); return; }
+  if (chip) {
+    if (state.view === "essay" || state.view === "ethics") state.view = "all";
+    state.tag = chip.dataset.tag;
+    render();
+    return;
+  }
 
   if (e.target.id === "closeBtn" || e.target.id === "overlay") closeSheet();
 });
@@ -2683,6 +2794,7 @@ document.getElementById("search").addEventListener("input", e => {
 });
 /* the search boxes on the front page and the results page */
 document.addEventListener("submit", e => {
+  if (e.target.closest("[data-tfilter]")) { e.preventDefault(); return; }
   const f = e.target.closest("[data-search]");
   if (!f) return;
   e.preventDefault();
@@ -2788,6 +2900,13 @@ document.addEventListener("keydown", e => {
     e.preventDefault();
     openSearch();
   }
+});
+
+/* the thinkers page filters its cards in place, so the box keeps focus */
+document.addEventListener("input", e => {
+  if (e.target.id !== "thinkerQ") return;
+  state.tq = e.target.value;
+  applyThinkerFilter();
 });
 
 /* the atlas search filters its contents in place, so the box keeps focus */

@@ -13,50 +13,102 @@
      t   : concept
      qs  : question ids in gs4pyq.js that turn on it
      d   : the definition, in plain paragraphs
+     secs: (optional) the note as numbered sections, each [heading, paragraphs];
+           a paragraph that is itself a list of strings is shown as bullets.
+           With secs, d holds only the definition.
+     take: (optional) the key takeaway, shown in its own box
      src : where the definition comes from
    ===================================================================== */
 const GS4_CONCEPTS = {
   "Ethics & Human Interface":[
     { t:"Conscience",
       qs:["Q005", "Q009", "Q024", "Q020", "Q008"],
-      d:["**Conscience is the inner moral faculty through which a person judges their own conduct as right or wrong and feels an internal obligation to act accordingly.** The **voice of conscience** is that inner impulse telling us *I ought to* or *I ought not to* do something. A **crisis of conscience** arises when two moral obligations pull in opposite directions, most often when official duty conflicts with personal moral conviction. Conscience produces the voice; a sustained conflict between competing moral demands produces the crisis.",
-         "Conscience differs from **laws, rules and regulations** in where it comes from. Law is externally imposed and enforceable, and sets an objective, uniform floor of acceptable conduct. Rules and regulations give an institution consistency and accountability. Conscience operates internally, and can move a person to act rightly when nobody is watching. An officer follows anti-corruption rules because they are binding; conscience makes them refuse a bribe when the chance of detection is negligible. **Law establishes the outer boundary of permissible conduct; conscience determines the morally right course within that boundary.**",
-         "But **conscience is not automatically more reliable than law.** It is subjective and can be distorted by prejudice, ideology, upbringing, ignorance, self-interest or loyalty to one's group. A person may sincerely believe that excluding a community is justified and call that belief conscience. **A strong conscience is not the same as a good conscience.** It has to be formed, through reason, empathy, constitutional values and honest self-examination.",
-         "Rigid rule-following fails in the other direction. Laws are incomplete, rules are ambiguous, and procedure cannot anticipate every human circumstance. Conscience is what prevents **legalism**, where following the procedure matters more than the person it was written for. A welfare officer who reads an ambiguous requirement reasonably, so that a genuinely eligible applicant is not refused over a technical defect, is exercising precisely this.",
-         "The resolution is that conscience should work as a moral compass, not as a private licence to set aside law. Stay within the constitutional and legal framework, and use conscience where rules are silent, ambiguous or leave real discretion. Where a law or order seems fundamentally unjust, the answer is lawful dissent, written objection and constitutional remedy, not quiet disobedience.",
-         "**Law tells us what we must not do, rules tell us how we are expected to act, and conscience asks whether what we are doing is right.** Ethical decision-making needs the discipline of the first two and the moral awareness of the third."],
+      d:["Conscience is the inner moral faculty through which a person judges their conduct as right or wrong and feels an obligation to act accordingly. It is the inner voice saying *I ought to* or *I ought not to*. A **crisis of conscience** arises when competing moral obligations pull in opposite directions, especially when official duty conflicts with personal moral conviction."],
+      secs:[
+        ["Conscience is different from law", [
+          "Law, rules and regulations operate externally. Law is imposed and enforceable. Rules create consistency and accountability within institutions. Conscience operates internally and can influence conduct even when there is little chance of detection.",
+          "An officer may follow an anti-corruption rule because it is binding. Conscience is what makes the officer refuse a bribe even when nobody is likely to discover it. **Law sets the outer boundary of permissible conduct. Conscience helps find the morally right course within that boundary.**"]],
+        ["A strong conscience is not automatically a good conscience", [
+          "Conscience is subjective. It can be shaped or distorted by prejudice, ideology, upbringing, ignorance, self-interest or group loyalty. A person may sincerely believe that excluding another community is justified and still describe that belief as conscience.",
+          "So conscience has to be formed, through reason, empathy, constitutional values and honest self-examination. **Sincerity alone does not make a moral judgement sound.**"]],
+        ["Conscience prevents legalism", [
+          "Rules cannot anticipate every circumstance. They may be incomplete or ambiguous, and rigid rule-following can turn procedure into an end in itself. That is **legalism**: the procedure comes to matter more than the person it was written for.",
+          "Conscience supplies the moral awareness needed when a legitimate claim is threatened by a technicality. An officer who reads an ambiguous welfare requirement reasonably, so that an eligible applicant is not rejected over a minor procedural defect, is using discretion in the service of the rule's purpose."]],
+        ["Conscience is not a private licence to break the law", [
+          "Conscience should operate within the constitutional and legal framework. Where rules are silent or ambiguous, conscience can guide discretion. Where an order or law appears fundamentally unjust, the right response is **lawful dissent, written objection and constitutional remedy**, not arbitrary disobedience."]]
+      ],
+      take:"Law tells us what we must not do. Rules tell us how we are expected to act. Conscience asks whether what we are doing is right. Ethical administration needs all three.",
       src:"Stanford Encyclopedia of Philosophy, entry on Conscience" },
     { t:"Ethics, morals, values and law",
       qs:["Q015", "Q019", "Q005", "Q012"],
-      d:["**Values are what a person or society treats as worth pursuing; morals are the standards of right conduct a person actually holds; ethics is the reasoned examination of those standards and the codes it produces; law is the portion society has decided to enforce.** The four are layers of the same thing, moving from the personal and unexamined towards the public and enforceable.",
-         "A value is a preference with weight behind it, such as honesty, security or equality. Morals convert values into standards of conduct, usually absorbed from family, faith and community rather than argued for. Ethics is what happens when those standards are examined: made explicit, tested for consistency, defended with reasons another person can inspect, and written into a code for a role. **The move from morals to ethics is the move from holding a conviction to being able to justify it.**",
-         "Law is the narrowest layer and the only one backed by force. It is deliberately narrower than ethics, because a state that legislated every moral obligation would be intolerable. This produces the two gaps that matter in administration. **Much that is unethical is perfectly legal**, such as an officer who never breaks a rule but does the minimum, or a firm that meets every disclosure requirement while designing a product to mislead. And **occasionally what is legal is indefensible**, which is why colonial-era statutes were repealed and why some rules are challenged rather than obeyed.",
-         "For a public servant the practical consequence is that legality is a floor rather than an achievement. Conduct that satisfies the rulebook may still fail the public it was written for, and the reverse case, where the ethical course is obstructed by a rule, calls for lawful correction of the rule rather than its private suspension.",
-         "**Values tell us what matters, morals tell us what we hold to be right, ethics asks whether we can justify it, and law tells us what will be enforced.** An answer that keeps these apart will not confuse a legal defence with an ethical one."],
+      d:["**Values** are what a person or society treats as worth pursuing. **Morals** are the standards of right conduct a person actually holds. **Ethics** is the reasoned examination and justification of those standards. **Law** is the part of social conduct that society has decided to enforce."],
+      secs:[
+        ["Values → morals → ethics → law", [
+          "A value gives importance to something, such as honesty, security, equality or dignity. Morals turn such values into standards of conduct, often absorbed from family, faith and community.",
+          "Ethics begins when those standards are examined. It asks whether a moral conviction is consistent, defensible and capable of being justified to others. **The move from morals to ethics is the move from holding a conviction to being able to justify it.**",
+          "Law is narrower still. It is the part of conduct that the state has chosen to enforce. It is kept narrow on purpose, because a state that enforced every moral duty would be intolerable."]],
+        ["Why legality is not the same as ethical conduct", [
+          "**A large area of conduct is unethical without being illegal.** An official may follow every rule while deliberately doing the minimum for citizens. A business may meet every disclosure requirement while designing information to mislead consumers.",
+          "The reverse also happens. A legal rule can become ethically indefensible and then needs reform, repeal or constitutional challenge. Section 377 of the Indian Penal Code, read down by the Supreme Court in 2018, is one example."]],
+        ["The administrative implication", [
+          "For a public servant, **legality is a floor rather than an achievement.** Following the rulebook is necessary, but it does not exhaust the ethical responsibility of public office.",
+          "When a rule seems to block the ethical course, the answer is lawful correction of the rule, not private suspension of it. That keeps both the ethical purpose and institutional accountability."]]
+      ],
+      take:"Values tell us what matters. Morals tell us what we hold to be right. Ethics asks whether we can justify it. Law tells us what will be enforced.",
       src:"Standard usage in normative ethics; the four-way distinction is set in the 2013 and 2015 papers" },
     { t:"What ethics seeks to promote",
       qs:["Q006", "Q111", "Q014"],
-      d:["**Ethics seeks to promote a shared standard of conduct that allows people to rely on one another without having to verify or supervise every interaction.** That reliance is what makes cooperation, exchange and public administration possible at any scale.",
-         "The function is easiest to see by removing it. Where expectations hold, a contract is signed without an escort, a queue is joined without a marshal, a certificate is accepted without re-verification and a payment is released against a bill. Where they do not, each of those needs a check, and each check needs a checker. **The cost of distrust is paid in procedure**, which is why systems with low ethical confidence become simultaneously slower, costlier and no more honest.",
-         "Ethics also does work inside the person. It supplies a way of resolving conflicts between competing demands, so that a decision can be reasoned rather than merely felt, and it gives a settled sense of self-respect that does not depend on being observed. This is why the same standards are described sometimes as social lubricant and sometimes as personal integrity: they are one mechanism seen from outside and from within.",
-         "**The requirement is stronger in public administration for a structural reason.** A private actor risks their own resources and their counterparty can walk away. An official spends money that is not theirs, exercises power over people who have no alternative supplier, and makes decisions whose consequences are borne by strangers. The scope for harm is larger, the victim is usually less able to resist, and the discretion is often invisible. Conduct that would be merely poor practice in a private firm becomes a breach of trust in office.",
-         "**Ethics is not an ornament on administration; it is the condition that lets administration function without unlimited supervision.**"],
+      d:["Ethics seeks to create standards of conduct that allow people to rely on one another without having to verify or supervise every interaction. That trust makes cooperation, exchange and public administration possible at scale."],
+      secs:[
+        ["Ethics reduces the cost of distrust", [
+          "The role of ethics becomes visible when it disappears. A contract can be signed without an escort, a certificate can be accepted without repeated verification, a queue can work without constant policing, and a payment can be released against a bill.",
+          "Where trust is absent, every interaction needs a check, and every check needs someone to perform it. **The cost of distrust is paid in procedure.** Low ethical confidence makes systems slower and more expensive without necessarily making them more honest."]],
+        ["Ethics also works within the individual", [
+          "Ethical standards help a person resolve conflicts between competing demands. They give a basis for acting on reasons rather than impulse, and a stable self-respect that does not depend on being watched or approved.",
+          "Seen from outside, the same mechanism is social trust. Seen from within, it is personal integrity."]],
+        ["Why ethics matters more in public administration", [
+          "A public official spends resources that are not their own, exercises authority over people who may have no alternative, and makes decisions whose consequences are often borne by strangers.",
+          "The potential for harm is larger, while the person affected may have little ability to resist or even to see how the decision was made. **Conduct that would be poor practice in a private firm becomes a breach of public trust in office.**"]]
+      ],
+      take:"Ethics is not an ornament added to administration. It is part of the infrastructure that lets administration function without unlimited supervision.",
       src:"Set verbatim in the 2014 and 2022 papers, eight years apart" },
     { t:"The individual good and the common good",
       qs:["Q021", "Q012", "Q014"],
-      d:["**The common good is that set of conditions which no individual can secure alone and from which none can easily be excluded, so that an individual's own good is partly constituted by the good of the society they live in.** This is the claim behind Gandhi's **sarvodaya**, the welfare of all, and behind the proposition that the good of the individual is contained in the good of all.",
-         "The structure is concrete rather than sentimental. Clean air, an epidemic contained, a court that functions, a currency people accept, a road that is safe to drive on: none of these can be bought by one person for themselves at any price. A wealthy household can buy a private guard but not a low-crime city, private schooling but not an educated workforce, bottled water but not a clean river.",
-         "The same logic explains why law and the market rest on something they cannot themselves manufacture. **A contract is enforceable only because most contracts are kept without anyone suing**, since the courts could not absorb the volume otherwise. A democracy works only because losers accept results. A market functions because most sellers describe goods honestly. Where that stock of shared expectation is exhausted, enforcement costs rise faster than any state can fund.",
-         "The honest objection is that the common good has often been invoked to override individuals, and that a majority's benefit is not a licence to impose an uncompensated loss on a particular person or community. Displacement for a public project is the standing Indian example. **The common good justifies the project and does not by itself settle who should bear its cost**, which is a separate question of compensation and consent.",
-         "**A person's welfare is not merely added to society's; a great deal of it can only exist in the form of shared conditions.** Which is why serving the common good is not altruism at the individual's expense so much as the only way certain goods can exist at all."],
+      d:["The common good consists of conditions that individuals cannot secure alone and from which society benefits collectively. Individual welfare is therefore partly made up of the quality of the society in which a person lives. This is the idea behind Gandhi's **sarvodaya**, the welfare of all, and behind the lesson he took from Ruskin's *Unto This Last*: the good of the individual is contained in the good of all."],
+      secs:[
+        ["Some goods are inherently shared", [
+          "Clean air, epidemic control, functioning courts, a trusted currency, safe roads and a clean river cannot be fully bought by one person for themselves.",
+          "A wealthy household can buy private security, but not a low-crime city. It can buy bottled water, but not a clean river. It can buy private schooling, but not the benefits of a broadly educated population."]],
+        ["Trust is itself a common good", [
+          "Markets, contracts and democratic institutions depend on shared expectations. **Most contracts are kept without anyone going to court**, or the courts could not handle the volume. Markets depend on most sellers being broadly honest. Democracy depends on losers accepting the result.",
+          "When this stock of shared expectation runs out, enforcement costs rise and institutions become harder to run."]],
+        ["The common good cannot automatically override individuals", [
+          "The phrase \"common good\" can be misused to justify imposing costs on particular people or communities. Displacement for a public project shows the distinction.",
+          "A project may serve a legitimate public purpose, but that does not by itself answer who should bear the cost. **Compensation, consent and procedural fairness remain separate questions.**"]]
+      ],
+      take:"Individual welfare is not merely added to social welfare. Many of the conditions that make individual flourishing possible exist only as shared goods.",
       src:"Gandhi on sarvodaya; the individual-and-collective framing is from the 2013 and 2017 papers" },
     { t:"Essence, determinants and consequences",
       qs:["Q006", "Q007", "Q008"],
-      d:["**The essence of ethics is what makes conduct right or wrong; its determinants are the forces that actually shape how a person behaves; its consequences are what follows from that behaviour for the person and the society.** The syllabus phrase is really three questions and they have different answers.",
-         "On **essence**, the three classical positions each locate rightness differently. Consequentialism locates it in outcomes, so an act is right if it produces the most good. Deontology locates it in the act itself, so some things are forbidden whatever the result. Virtue ethics locates it in character, asking what a person of integrity would do. Most real decisions draw on all three, and naming which one an argument is using is what makes it examinable.",
-         "**Determinants are where most accounts are thin, and they are entirely concrete.** Family and upbringing supply the first standards. Education and religion shape what is thought worth pursuing. Peer group and workplace culture determine what is normal, which matters more than what is taught. Law and its enforcement set the cost of deviating. And the incentive structure decides whether honesty is expensive. **A person's conduct is a product of their formation and of the situation they are placed in**, which is why an office where shortcuts are rewarded will corrupt capable people and an office with clear accountability will hold ordinary ones.",
-         "**Consequences run in both directions and compound.** Ethical conduct builds the trust that lowers the cost of every subsequent transaction, attracts investment, and makes voluntary compliance possible. Its absence raises enforcement costs, drives out the honest, deters those who would otherwise participate, and, as one paper put it, can poison a nation's spirit. The damage is rarely a single dramatic failure; it is the slow normalisation of a lower standard.",
-         "**The practical lesson from the determinants is that ethical outcomes are engineered as much as they are taught.** Exhortation without changing the incentives produces the appearance of reform and not the substance."],
+      d:["The **essence** of ethics concerns what makes conduct right or wrong. **Determinants** are the forces that shape actual behaviour. **Consequences** are the effects of that behaviour on individuals and society."],
+      secs:[
+        ["Essence: what makes an act right?", [
+          "Three major approaches give different answers.",
+          ["**Consequentialism** judges conduct by its outcomes: an act is right when it produces the best consequences.",
+           "**Deontology** judges the act itself: some actions are wrong even when they appear useful.",
+           "**Virtue ethics** judges conduct through character: it asks what a person of good character would do."],
+          "Real administrative decisions may draw on all three. Naming the basis of a judgement makes the ethical reasoning clearer."]],
+        ["Determinants: why do people actually behave ethically or unethically?", [
+          "Ethical behaviour is shaped by more than personal belief. Family and upbringing set early standards. Education and religion influence what is considered valuable. Peer groups and workplace cultures set what feels normal. Law and enforcement change the cost of deviating. Incentives decide whether honesty is rewarded or punished.",
+          "**A person's conduct is a product of both their moral formation and the situation they work in.** An office where shortcuts are rewarded will corrupt capable people. An office with clear accountability will hold ordinary ones."]],
+        ["Consequences: ethical behaviour compounds", [
+          "Ethical conduct builds trust, lowers the cost of transactions, encourages voluntary compliance and can attract participation and investment.",
+          "Unethical conduct has the opposite cumulative effect. It raises enforcement costs, drives out honest participants, discourages cooperation and normalises lower standards. The damage is usually gradual rather than spectacular: **a small lowering of standards becomes the new baseline.**"]],
+        ["The administrative lesson", [
+          "Ethical outcomes cannot be produced by moral exhortation alone. If an organisation rewards shortcuts, punishes candour or leaves misconduct undetected, even well-meaning employees face pressure to adapt.",
+          "Ethical administration therefore needs both ethical individuals and ethical institutional design. Incentives, accountability, transparency and norms must reinforce the values being demanded."]]
+      ],
+      take:"Ethical outcomes are shaped as much by institutions and incentives as by individual instruction. Teaching ethics without changing the environment that rewards unethical behaviour produces little reform.",
       src:"The phrase is from the GS-IV syllabus itself; normative positions as set out in open philosophy references" },
     { t:"Universal values against changing values",
       qs:["Q022", "Q002"],
