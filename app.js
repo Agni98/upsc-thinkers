@@ -564,7 +564,8 @@ function searchHits(q){
     }));
   if (typeof GS4_PYQ !== "undefined")
     GS4_PYQ.forEach(q => {
-      if (has(q.q)) out.questions.push({ t:q.q, h:"GS-IV " + q.y + (q.sec === "B" ? " · case study" : ""), y:q.y, to:"gs4pyq|0|" });
+      if (has(q.q)) out.questions.push({ t:q.q, h:"GS-IV " + q.y + (q.sec === "B" ? " · case study" : ""), y:q.y,
+        to:q.sec === "B" && caseAnswer(q.id) ? "syllabus|" + casePage() + "|q:" + q.id : "gs4pyq|0|" });
     });
   out.questions.sort((a, b) => b.y - a.y);
   THINKERS.forEach(t => t.quotes.forEach(q => { if (has(q)) out.quotes.push({ t:q, h:t.name, open:t.id }); }));
@@ -670,7 +671,7 @@ function topSections(){
     { id:"gs4", t:"GS-IV", to:"syllabus|0|", items:[
       ["syllabus|0|", "Syllabus map", s.headings + " headings, with the concepts, thinkers and questions under each"],
       ["gs4pyq|0|", "Past questions", s.gsq + " questions" + (g4span ? ", " + g4span : "") + ", by topic"],
-      cs && ["syllabus|" + cs + "|method", "Case studies", "six moves for answering one, and " + s.cases + " past cases"],
+      cs && ["syllabus|" + cs + "|method", "Case studies", "five boxes for answering one, and a model answer for each of " + s.cases + " past cases"],
       ["ethics|0|", "Thinkers for Ethics", tagged("Ethics") + " named in or serving the syllabus"]
     ]},
     { id:"essay", t:"Essay", to:"themes|0|", items:[
@@ -1944,72 +1945,205 @@ function gcQuestion(q, title, byHead){
       ? `${body.lead ? `<span class="gq-lead">${mark(body.lead)}</span>` : ""}
          ${body.parts.map(p => `<span class="gq-part"><em>${p.k}</em>${mark(p.t)}</span>`).join("")}`
       : `<span class="gq-lead">${mark(q.q)}</span>`}
+    ${q.sec === "B" ? caseLinkHTML(q.id) : ""}
     ${also.length ? `<span class="gq-also"><b>Also under</b>${also.map(x =>
         `<button class="gq-link" data-concept="${esc(x)}">${esc(x)}</button>`).join("")}</span>` : ""}
   </span>`;
 }
 
-/* ---- How to answer a case study ----
-   Thirty-nine of the seventy-five case studies ask the same thing in different
-   words: decide, and say why. The six moves are those demands deduplicated and
-   put in an order that holds whichever subset a given case asks for. */
-const CASE_MOVES = [
-  { n:"Frame",    w:"25", x:"Say what you must decide, in one sentence. Name the pressure you are deciding against. Do not retell the story." },
-  { n:"Collide",  w:"41", x:"Name the two sides of the dilemma. Then name what else matters but cannot override them." },
-  { n:"Cost",     w:"51", x:"Weigh each course. What it saves, who pays, and whether the damage can be undone." },
-  { n:"Choose",   w:"50", x:"Decide, and say what you would actually do, in order. Give the one reason that settles it." },
-  { n:"Concede",  w:"25", x:"Admit what your choice costs. Then say why it is still right." },
-  { n:"Close",    w:"42", x:"Fix responsibility and strengthen the system. The aim is to prevent a repeat, not just to settle this case." }
-];
-const CASE_TRAPS = [
-  ["Frame",   "Retelling the case eats half your words before you begin."],
-  ["Collide", "Listing every value in the syllabus. Name the two that clash."],
-  ["Cost",    "The brave option \u2014 resign, call the press \u2014 chosen without counting its cost."],
-  ["Choose",  "Forming a committee. That is a way of not deciding."],
-  ["Concede", "The clean win. No real dilemma ends with nobody losing."],
-  ["Close",   "Stopping at the choice, when the case asked what prevents a repeat."]
-];
-const CASE_SAMPLE = [
-  ["Frame", "As Executive Engineer, I must decide whether to permit opening of the flyover despite safety-related deviations, contrary to my Chief Engineer's instruction to ignore them."],
-  ["Collide", "The dilemma is between obedience to a superior and institutional hierarchy on one hand, and public safety, professional integrity and duty of care on the other. The contractor's interests and project timelines also have to be considered, but cannot override safety."],
-  ["Cost", "Ignoring the deviations may prevent delay and financial loss to the contractor but could expose the public to structural risk and make me personally and institutionally accountable. Stopping the opening may delay an important road project and impose financial costs, but these are reversible whereas loss of life may be irreversible."],
-  ["Choose", "I would not permit opening until the safety concerns are independently examined and resolved. I would document the deviations, seek the Chief Engineer's instructions in writing and escalate the matter to the competent authority if necessary. Seeking written directions is not insubordination; it ensures accountability within the chain of command."],
-  ["Concede", "This may delay public infrastructure, inconvenience commuters and invite allegations of insubordination. However, administrative efficiency cannot justify knowingly exposing citizens to an avoidable safety risk."],
-  ["Close", "I would order an independent structural assessment, examine the conduct of the Junior Engineers who submitted inaccurate reports, fix responsibility for supervisory failure, and strengthen inspection and reporting mechanisms. The objective is not merely to stop this opening but to prevent recurrence."]
-];
+/* ---- GS-IV case studies ----
+   The Case Studies heading of the syllabus map holds three things: the answer
+   architecture (CASE_METHOD in cases.js), the case patterns in gs4concepts.js,
+   each with the common architecture of its answer, and a model answer for
+   every past case (CASE_ANSWERS), filed under its pattern. All of it is read in
+   the map, so the contents tree, the read ticks and previous and next work as
+   they do everywhere else. */
+const casePatterns = () => (typeof GS4_CONCEPTS !== "undefined" && GS4_CONCEPTS["Case Studies"]) || [];
+const caseAnswer = id => (typeof CASE_ANSWERS !== "undefined" && CASE_ANSWERS[id]) || null;
+const casePage = () => SYLLABUS.findIndex(r => r.t === "Case Studies") + 1;
+const caseThemeOf = id => casePatterns().findIndex(c => c.qs.indexOf(id) >= 0);
+let gs4Ix = null;
+const gs4ById = () => gs4Ix || (gs4Ix = Object.fromEntries(
+  (typeof GS4_PYQ !== "undefined" ? GS4_PYQ : []).map(q => [q.id, q])));
+const firstSentence = s => { const m = String(s || "").match(/^.*?[.?!](?=\s|$)/); return m ? m[0] : String(s || ""); };
+const CASE_BOX = [["alert", "Ethical conflict"], ["users", "Stakeholders"], ["layers", "Options"],
+                  ["scale", "Decision criteria"], ["target", "Action sequence"]];
 
+/* A link from any list of past questions to the model answer for a case. */
+function caseLinkHTML(id){
+  const p = casePage();
+  return p && caseAnswer(id)
+    ? `<button class="ca-link" data-to="syllabus|${p}|q:${id}">Model answer ${ico("arrow")}</button>` : "";
+}
+
+/* The five boxes, filled: for one case, or, for a pattern, in general terms. */
+function caseBoxesHTML(x, pre){
+  const box = (n, inner) => `
+      <section class="cbox" id="${pre}${n}">
+        <h6 class="cbox-h"><span class="cbox-n">${n}</span>${ico(CASE_BOX[n - 1][0])}${CASE_BOX[n - 1][1]}</h6>
+        ${inner}
+      </section>`;
+  return box(1, `<ul class="cbox-list">${x.conflict.map(s => `<li>${rich(s)}</li>`).join("")}</ul>`)
+    + box(2, `<div class="cbox-stake">${x.stake.map(s => `<span>${esc(s)}</span>`).join("")}</div>`)
+    + box(3, `<div class="copt" role="table" aria-label="Options, with their merit and their problem">
+          <div class="copt-row copt-head" role="row"><span role="columnheader">Option</span><span role="columnheader">Merit</span><span role="columnheader">Problem or risk</span></div>
+          ${x.options.map(o => `
+          <div class="copt-row" role="row"><b role="cell">${esc(o[0])}</b><span role="cell"><i>Merit</i>${esc(o[1])}</span><span role="cell"><i>Problem</i>${esc(o[2])}</span></div>`).join("")}
+        </div>`)
+    + box(4, x.criteria.map(p => `<p>${rich(p)}</p>`).join(""))
+    + box(5, `<ol class="cbox-seq">${x.sequence.map(s => `<li>${rich(s)}</li>`).join("")}</ol>`);
+}
+
+const caseEngineHTML = c => (c && c.engine && c.engine.length)
+  ? `<ol class="cpat-engine">${c.engine.map(s => `<li>${esc(s)}</li>`).join("")}</ol>` : "";
+
+/* How to answer one: the method, the five boxes, and every theme's engine. */
 function caseMethodHTML(title){
-  if (title !== "Case Studies") return "";
+  if (title !== "Case Studies" || typeof CASE_METHOD === "undefined") return "";
+  const M = CASE_METHOD, pats = casePatterns(), sample = caseAnswer(M.sample);
   return `
-    <div class="cm">
-      <div class="ans-head">
-        <b>How to answer one</b>
-        <span>Thirty-nine of these ask the same thing in different words: decide, and say why.
-          Six moves answer all of them. Word counts are what the worked answer below actually uses</span>
-      </div>
-      <ol class="cm-moves">
-        ${CASE_MOVES.map((m, i) => `
-          <li>
-            <span class="cm-n">${i + 1}</span>
-            <span class="cm-name">${m.n}</span>
-            <span class="cm-x">${esc(m.x)}</span>
-            <span class="cm-w">${m.w}<i>w</i></span>
-          </li>`).join("")}
+    <article class="sm-pane cm2">
+      <div class="ans-head"><b>How to answer a case study</b>
+        <span>One method and five boxes, used in every model answer under this heading</span></div>
+      <ol class="cm2-chain" aria-label="The method">${M.chain.map(s => `<li>${esc(s)}</li>`).join("")}</ol>
+
+      <h6 class="cm2-h">The five boxes</h6>
+      <ol class="cm2-boxes">${M.boxes.map((b, i) => `
+        <li><span class="cm2-ico">${ico(b[0])}</span>
+          <b><i>${i + 1}</i>${esc(b[1])}</b>
+          <em>${esc(b[2])}</em>
+          <span>${esc(b[3])}</span></li>`).join("")}
       </ol>
-      <div class="cm-traps">
-        <b>Six ways it goes wrong</b>
-        <ul>${CASE_TRAPS.map(t => `<li><em>${t[0]}</em>${esc(t[1])}</li>`).join("")}</ul>
+
+      <div class="cm2-pair">
+        <div class="cm2-cmp"><h6>Make the conflict specific</h6>
+          <p class="cm2-weak"><i>Weak</i>${esc(M.specific.weak)}</p>
+          <p class="cm2-strong"><i>Better</i>${esc(M.specific.better)}</p></div>
+        <div class="cm2-cmp"><h6>Write a sequence, not a slogan</h6>
+          <p class="cm2-weak"><i>Weak</i>${esc(M.sequence.weak)}</p>
+          <p class="cm2-strong"><i>Strong</i>${esc(M.sequence.strong)}</p></div>
       </div>
-      <details class="cm-eg">
-        <summary><span class="chev">&#9656;</span>One written out in full
-          <em>2013 &middot; the flyover with the deviations</em></summary>
-        <div class="cm-eg-body">
-          ${CASE_SAMPLE.map(x => `
-            <div class="cm-slot"><span class="cm-tag">${x[0]}</span><p>${esc(x[1])}</p></div>`).join("")}
-          <p class="cm-note">Shorter answer? Compress Cost to one sentence and fold Concede into Choose.</p>
-        </div>
-      </details>
-    </div>`;
+
+      <div class="cm2-pair">
+        <div><h6 class="cm2-h">Six tests for every option</h6>
+          <div class="cm2-tests">${M.criteria.map(c => `<span>${esc(c)}</span>`).join("")}</div></div>
+        <div><h6 class="cm2-h">Stakeholders to check for</h6>
+          <ul class="cm2-stake">${M.stakeholders.map(s => `<li><b>${esc(s[0])}</b>${esc(s[1])}</li>`).join("")}</ul></div>
+      </div>
+
+      <h6 class="cm2-h">How the model answers are written</h6>
+      <ul class="cm2-rules">${M.rules.map(r => `<li>${esc(r)}</li>`).join("")}</ul>
+
+      <h6 class="cm2-h">What the cases teach</h6>
+      <p class="cm2-pattern">${esc(M.pattern)}</p>
+      <dl class="cm2-lessons">${M.lessons.map(l => `<div><dt>${esc(l[0])}</dt><dd>${esc(l[1])}</dd></div>`).join("")}</dl>
+
+      <h6 class="cm2-h">${pats.length} themes, each with its own answer engine</h6>
+      <p class="cm2-note">${esc(M.concepts)}</p>
+      <div class="cm2-engines">${pats.map((c, i) => `
+        <button class="cm2-eng" data-sel="c:${i}">
+          <span class="cm2-eng-top"><span class="cm2-eng-n">${i + 1}</span><b>${esc(c.t)}</b><small>${plural(c.qs.length, "case", "cases")}</small></span>
+          <em>${esc(c.core || "")}</em>
+          ${caseEngineHTML(c)}
+        </button>`).join("")}
+      </div>
+
+      ${sample ? `<button class="cm2-sample" data-sel="q:${M.sample}">
+        <i>A complete model answer</i><b>${esc(sample.t)}</b><span>${esc(firstSentence(sample.brief))}</span></button>` : ""}
+      <p class="cm2-bottom"><b>Bottom line</b>${esc(M.bottom)}</p>
+    </article>`;
+}
+
+/* One theme: what the situation is, its answer engine, the common architecture
+   of an answer, the concepts to reason with, and its cases. */
+function casePatternPane(i){
+  const c = casePatterns()[i];
+  if (!c) return "";
+  const byQ = gs4ById();
+  const qs = c.qs.map(id => byQ[id]).filter(Boolean);
+  const f = conceptFreq("Case Studies", c, byQ);
+  const a = c.arch;
+  const link = l => {
+    const h = SYLLABUS.findIndex(r => r.t === l[0]) + 1;
+    const k = ((typeof GS4_CONCEPTS !== "undefined" && GS4_CONCEPTS[l[0]]) || []).findIndex(x => x.t === l[1]);
+    return h && k >= 0 ? `<button class="pill" data-to="syllabus|${h}|c:${k}">${esc(l[1])}</button>` : "";
+  };
+  return `
+    <article class="gc-item sm-pane cpat">
+      <h5><span class="gc-no">${i + 1}</span>${esc(c.t)}${f ? `<em>${esc(f)}</em>` : ""}</h5>
+      <nav class="atl-jump gc-jump" aria-label="Parts of this theme">
+        <button data-apart="cp-def"><i>${ico("book")}</i>The situation</button>
+        ${a ? `<button data-apart="cp-arch"><i>${ico("layers")}</i>Common architecture</button>` : ""}
+        <button data-apart="cp-qs"><i>${qs.length}</i>The cases</button>
+      </nav>
+      ${c.core ? `<div class="cpat-core"><b>Core conflict</b><span>${esc(c.core)}</span>${caseEngineHTML(c)}</div>` : ""}
+      ${conceptBody(c)}
+      ${a ? `
+      <section class="cpat-arch" id="cp-arch">
+        <h6 class="cpat-h">The common architecture<span>Fill each box with the facts of the case</span></h6>
+        ${caseBoxesHTML(a, "cp-b")}
+        ${a.traps && a.traps.length ? `<div class="cpat-traps"><b>Traps</b><ul>${a.traps.map(t => `<li>${esc(t)}</li>`).join("")}</ul></div>` : ""}
+      </section>` : ""}
+      ${(c.links || []).length ? `<div class="cpat-links"><b>Concepts to reason with</b><span class="pills">${c.links.map(link).join("")}</span></div>` : ""}
+      <div class="cpat-cases" id="cp-qs"><b>The cases, newest first</b>
+        ${qs.map(q => { const ans = caseAnswer(q.id); return `
+        <button class="cpat-case" data-sel="q:${q.id}">
+          <i>${q.y}</i>
+          <b>${esc(ans ? ans.t : firstSentence(q.q))}</b>
+          <span>${esc(firstSentence(ans ? ans.brief : q.q))}</span>
+          <em>${ans ? "Model answer" : "The question"} ${ico("arrow")}</em>
+        </button>`; }).join("")}
+      </div>
+      ${c.src ? `<p class="gc-src">${esc(c.src)}</p>` : ""}
+    </article>`;
+}
+
+/* One case: the question as set, the model answer in its five boxes, the parts
+   of the question the boxes do not already answer, and the conclusion. */
+function caseAnswerPane(id){
+  const q = gs4ById()[id];
+  if (!q) return `<div class="empty"><b>Not found</b>No such case.</div>`;
+  const a = caseAnswer(id), ti = caseThemeOf(id), c = casePatterns()[ti];
+  const parts = qParts(q.q);
+  const para = x => Array.isArray(x) ? `<ul class="cbox-list">${x.map(li => `<li>${rich(li)}</li>`).join("")}</ul>` : `<p>${rich(x)}</p>`;
+  const question = parts
+    ? `${parts.lead ? `<p>${esc(parts.lead)}</p>` : ""}<ol class="ca-parts">${parts.parts.map(p => `<li><em>(${p.k})</em>${esc(p.t)}</li>`).join("")}</ol>`
+    : `<p>${esc(q.q)}</p>`;
+  const theme = c ? `<button class="ca-theme" data-sel="c:${ti}"><i>Theme ${ti + 1}</i>${esc(c.t)}</button>` : "";
+  if (!a) return `
+    <article class="sm-pane ca">
+      <p class="ca-meta"><span>${q.y} &middot; Section B</span>${theme}</p>
+      <div class="ca-case" id="ca-case">${question}</div>
+      <p class="g4-note">The model answer for this case is still to come. The theme's common architecture shows how to build it.</p>
+    </article>`;
+  const also = a.also || [];
+  const others = c ? c.qs.filter(x => x !== id) : [];
+  return `
+    <article class="sm-pane ca">
+      <h5>${esc(a.t)}</h5>
+      <p class="ca-meta"><span>${q.y} &middot; Section B${q.m ? " &middot; " + esc(q.m) : ""}</span>${theme}</p>
+      ${caseEngineHTML(c)}
+      <nav class="atl-jump gc-jump" aria-label="Parts of this answer">
+        <button data-apart="ca-case"><i>${ico("file")}</i>The case</button>${CASE_BOX.map((b, k) => `
+        <button data-apart="ca-b${k + 1}"><i>${k + 1}</i>${b[1]}</button>`).join("")}
+        ${also.length ? `<button data-apart="ca-also"><i>+</i>Also asked</button>` : ""}
+        <button data-apart="ca-close"><i>${ico("bulb")}</i>Conclusion</button>
+      </nav>
+      <section class="ca-case" id="ca-case">
+        <p class="ca-brief">${esc(a.brief)}</p>
+        <details class="ca-q"><summary>The question as set in ${q.y}</summary><div class="ca-q-body">${question}</div></details>
+      </section>
+      ${caseBoxesHTML(a, "ca-b")}
+      ${also.length ? `<div id="ca-also">${also.map(s => `
+      <section class="cbox cbox-also"><h6 class="cbox-h"><span class="cbox-n">+</span>${esc(s[0])}</h6>${s[1].map(para).join("")}</section>`).join("")}
+      </div>` : ""}
+      <div class="ca-close" id="ca-close"><b>Model conclusion</b><p>${rich(a.close)}</p></div>
+      ${c ? `<div class="ca-more"><b>More on this theme</b><span class="pills">
+        <button class="pill ca-arch" data-sel="c:${ti}">The common architecture</button>${others.map(x => {
+          const o = caseAnswer(x), oq = gs4ById()[x];
+          return `<button class="pill" data-sel="q:${x}">${oq ? oq.y + " &middot; " : ""}${esc(o ? o.t : x)}</button>`; }).join("")}
+      </span></div>` : ""}
+    </article>`;
 }
 
 /* ---- GS-IV past questions under their syllabus heading ----
@@ -2031,7 +2165,7 @@ function gs4Rows(qs){
       <span class="g4-yr">${q.y}<i>${esc(q.sec)}</i></span>
       <span class="g4-body">
         <span class="g4-text">${esc(q.q)}</span>
-        <span class="g4-meta">${esc(q.syl || "")}${q.m ? " &middot; " + esc(q.m) : ""}</span>
+        <span class="g4-meta">${esc(q.syl || "")}${q.m ? " &middot; " + esc(q.m) : ""}${q.sec === "B" ? caseLinkHTML(q.id) : ""}</span>
       </span>
     </li>`).join("");
 }
@@ -2103,7 +2237,8 @@ function sylCardHTML(r, i){
   const s = sylStats(r), items = sylItems(r);
   const done = items.filter(it => isRead(readKey("syllabus", i + 1, it.id))).length;
   const cases = r.t === "Case Studies";
-  const top = s.concepts.slice(0, 3).map(c => c.t);
+  const top = (cases ? s.concepts.slice().sort((a, b) => b.qs.length - a.qs.length) : s.concepts)
+    .slice(0, 3).map(c => c.t);
   return `
       <button class="scard" data-open-at="${i + 1}|">
         <span class="scard-top">
@@ -2113,11 +2248,11 @@ function sylCardHTML(r, i){
         <b>${esc(r.t)}</b>
         <span class="scard-s">${esc(r.s)}</span>
         <span class="scard-stats">
-          <span><b>${s.concepts.length}</b>${cases ? "patterns" : "concepts"}</span>
+          <span><b>${s.concepts.length}</b>${cases ? "themes" : "concepts"}</span>
           <span><b>${s.questions}</b>${cases ? "cases" : "questions"}</span>
           <span><b>${s.thinkers}</b>thinkers</span>
         </span>
-        ${top.length ? `<span class="scard-top-c"><i>Most asked</i>${top.map(esc).join(" &middot; ")}</span>` : ""}
+        ${top.length ? `<span class="scard-top-c"><i>${cases ? "Largest themes" : "Most asked"}</i>${top.map(esc).join(" &middot; ")}</span>` : ""}
         <i class="atile-bar"><i style="width:${items.length ? Math.round(done / items.length * 100) : 0}%"></i></i>
       </button>`;
 }
@@ -2401,8 +2536,9 @@ function mapPageHTML(spec){
         <p class="rd-sub">${spec.sub(x)}</p>
         ${spec.view === "syllabus" ? (() => { const st = sylStats(x), cases = x.t === "Case Studies"; return `
         <p class="rd-stats">${ico(SYL_ICON[x.t] || "book")}
-          <span><b>${st.concepts.length}</b> ${cases ? "case patterns" : "concepts"}</span>
+          <span><b>${st.concepts.length}</b> ${cases ? "themes" : "concepts"}</span>
           <span><b>${st.questions}</b> ${cases ? "cases" : "past questions"}</span>
+          ${cases && typeof CASE_ANSWERS !== "undefined" ? `<span><b>${Object.keys(CASE_ANSWERS).length}</b> model answers</span>` : ""}
           <span><b>${st.thinkers}</b> thinkers</span></p>`; })() : (() => {
           const es = (x.essays || []).filter(k => (typeof ESSAYS !== "undefined") && ESSAYS[k]).length; return `
         <p class="rd-stats">${ico(x.ic || "target")}
@@ -2454,16 +2590,28 @@ function moveHTML(walk, at, here){
     </nav>`;
 }
 
-/* What a heading contains, in the order it should be read. */
+/* What a heading contains, in the order it should be read. Under Case Studies:
+   the method, then each theme followed by the model answers filed under it. */
 function sylItems(r){
   const items = [];
-  const cases = r.t === "Case Studies";
-  if (cases) items.push({ id:"method", g:"How to answer one", lab:"How to answer a case study",
-                          t:"The six moves", n:0 });
   const list = (typeof GS4_CONCEPTS !== "undefined" && GS4_CONCEPTS[r.t]) || [];
-  const g = cases ? "Sorted by what collides" : "Concepts that repeat";
-  const k = cases ? "Case pattern" : "Concept";
-  list.forEach((c, i) => items.push({ id:"c:" + i, g:g, k:k, t:c.t, n:c.qs.length }));
+  if (r.t === "Case Studies") {
+    items.push({ id:"method", g:"How to answer one", lab:"How to answer a case study",
+                 t:"The five boxes", n:0 });
+    list.forEach((c, i) => {
+      const g = "Theme " + (i + 1);
+      items.push({ id:"c:" + i, g:g, lab:g + " of " + list.length + " \u00b7 the common architecture",
+                   t:c.t, n:c.qs.length });
+      c.qs.forEach((id, k) => {
+        const a = caseAnswer(id), q = gs4ById()[id];
+        items.push({ id:"q:" + id, g:g, n:0,
+                     lab:g + " \u00b7 case " + (k + 1) + " of " + c.qs.length + (q ? " \u00b7 " + q.y : ""),
+                     t:a ? a.t : (q ? q.y + ": " + firstSentence(q.q) : id) });
+      });
+    });
+  } else {
+    list.forEach((c, i) => items.push({ id:"c:" + i, g:"Concepts that repeat", k:"Concept", t:c.t, n:c.qs.length }));
+  }
   const th = r.ids.filter(id => byId[id]).length;
   if (th) items.push({ id:"thinkers", g:"Also on this heading", lab:"Thinkers on this heading",
                        t:"Thinkers", n:th });
@@ -2569,7 +2717,9 @@ function sylRead(r, sel){
   if (sel === "method")   return caseMethodHTML(r.t);
   if (sel === "thinkers") return thinkerPane(r);
   if (sel === "pyq")      return questionPane(r.t);
-  if (sel && sel.charAt(0) === "c") return conceptPane(r.t, +sel.slice(2));
+  if (sel && sel.indexOf("q:") === 0) return caseAnswerPane(sel.slice(2));
+  if (sel && sel.charAt(0) === "c")
+    return r.t === "Case Studies" ? casePatternPane(+sel.slice(2)) : conceptPane(r.t, +sel.slice(2));
   return `<div class="empty"><b>Nothing here yet</b>No notes written for this heading.</div>`;
 }
 
@@ -2947,7 +3097,7 @@ function renderGS4PYQ(){
         ${a.length ? `<h5 class="g4-sub">Section A &middot; theory<span>${a.length}</span></h5>
         <ol class="pyq-list">${a.map(q => `<li>${chip(q)}${text(q)}</li>`).join("")}</ol>` : ""}
         ${b.length ? `<h5 class="g4-sub">Section B &middot; case studies<span>${b.length}</span></h5>
-        <ol class="pyq-list">${b.map(q => `<li>${chip(q)}${text(q)}</li>`).join("")}</ol>` : ""}
+        <ol class="pyq-list">${b.map(q => `<li>${chip(q)}${text(q)}${caseLinkHTML(q.id)}</li>`).join("")}</ol>` : ""}
         ${heads.length ? `<div class="pyq-foot">
           <div class="pyq-row"><b>Concept notes</b>${heads.map(h =>
             `<button class="pyq-link" data-to="syllabus|${page(h)}|">${esc(h)}</button>`).join("")}</div>
@@ -2966,7 +3116,7 @@ function renderGS4PYQ(){
         return list.length ? `
         <div class="pyq-sec">
           <b>Section ${sec} &middot; ${sec === "A" ? "theory" : "case studies"}</b>
-          <ol>${list.map(q => `<li>${text(q)}
+          <ol>${list.map(q => `<li>${text(q)}${q.sec === "B" ? caseLinkHTML(q.id) : ""}
             <button class="pyq-tag" data-jump="${rank[q.th]}">${esc(name[q.th] || "")}</button></li>`).join("")}</ol>
         </div>` : "";
       }).join("")}

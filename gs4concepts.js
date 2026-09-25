@@ -1957,148 +1957,423 @@ const GS4_CONCEPTS = {
   ],
   "Case Studies":[
     { t:"Duty against pressure from above",
-      qs:["Q145", "Q161", "Q166", "Q167", "Q178", "Q187", "Q213"],
+      qs:["Q145", "Q115", "Q052", "Q208", "Q174", "Q213"],
       d:["**Your senior wants a decision you believe is wrong.** He has the rank, the longer service, and a say in your next posting. You have the file and your own judgement."],
       dlab:"The situation",
       secs:[
-        ["Obedience, and an honest decision", [
-          "Both duties are real. **You owe obedience to lawful orders**, because an office cannot run if every junior may refuse one. **You also owe the public an honest decision**, because the office exists for them and not for your senior."]],
-        ["Ask for the instruction in writing", [
-          "What settles most of these is simple. **Ask for the instruction in writing.** That is not defiance. It keeps the matter inside the chain of command, and it puts the facts on record. Most improper instructions are never written down."]],
-        ["The trap: the brave gesture", [
-          "The trap is the brave gesture. Resigning, going to the press, or jumping three levels up may feel right. **It usually removes the one person who could still fix the problem.** Try the record first."]],
-        ["Concede the cost", [
-          "Concede the cost. Your senior may turn out to be right. The delay is real. Saying so makes the answer stronger, not weaker."]]
+        ["Obedience, and an honest decision", ["Both duties are real. **You owe obedience to lawful orders**, because an office cannot run if every junior may refuse one. **You also owe the public an honest decision**, because the office exists for them and not for your senior."]],
+        ["Ask for the instruction in writing", ["What settles most of these is simple. **Ask for the instruction in writing.** That is not defiance. It keeps the matter inside the chain of command, and it puts the facts on record. Most improper instructions are never written down."]],
+        ["The trap: the brave gesture", ["The trap is the brave gesture. Resigning, going to the press, or jumping three levels up may feel right. **It usually removes the one person who could still fix the problem.** Try the record first."]],
+        ["Concede the cost", ["Concede the cost. Your senior may turn out to be right. The delay is real. Saying so makes the answer stronger, not weaker."]]
       ],
       take:"Keep the matter inside the chain of command and on the record. Ask for the instruction in writing before any brave gesture.",
-      src:"Seven cases, 2013 to 2025" },
+      core:"Hierarchy against a lawful or public duty",
+      engine:["Record the facts", "Seek the order in writing", "Escalate through the channel", "Act lawfully"],
+      arch:{
+        conflict:["Obedience to a superior against your own legal and professional responsibility.", "The public interest against a personal cost: a posting, an ACR, a promotion.", "Keeping the chain of command intact against letting a wrong decision stand.", "Speed and convenience against procedure and safety."],
+        stake:["You", "The superior giving the instruction", "Officials below you who carry it out", "Citizens or users affected by the decision", "The organisation and its record", "Whoever bears the harm if the decision is wrong"],
+        options:[
+          ["Follow the instruction", "Avoids confrontation and delay.", "Leaves the public exposed and makes you answerable for a decision you believed was wrong."],
+          ["Refuse orally and carry on", "Keeps your position.", "Leaves no record: your word against your superior's in the ACR or an inquiry."],
+          ["Put the facts in writing and seek written orders", "Protects the public interest and keeps the matter inside the hierarchy.", "Creates friction and may cause some delay."],
+          ["Escalate above the superior", "Brings independent oversight.", "Premature before the facts are on record and the superior has had a chance to reconsider."],
+          ["Seek a transfer or go on leave", "Protects you.", "Leaves the problem for someone else, and the public still at risk."]],
+        criteria:["An instruction binds you only if it is lawful. The test is not whether your superior is displeased but whether the decision is legal, safe and fair to the people it affects. The personal cost is real and should be admitted, but it does not change the duty. Proportion matters: record and ask first, and escalate only if the problem remains."],
+        sequence:["Establish the facts and the rule that applies: the procedure, the delegated power, the technical standard.", "Put your view on file with reasons, and give it to the superior formally.", "If the instruction stands and you still believe it is unlawful or unsafe, ask for it in writing.", "If a written order would still cause serious harm, take the file to the next competent authority through the prescribed channel.", "Carry out a lawful decision once it is made, even if you disagreed. Never certify or sign what you believe to be false or unsafe.", "If you are penalised for it, use the formal remedy: a representation against the ACR, an appeal, the service tribunal."],
+        traps:["The brave gesture: resigning, going to the press or jumping three levels up before the record exists.", "The slogan: \"I will act with courage and integrity\" is not an action.", "Accusing the superior of corruption when you can only show a breach of procedure."] },
+      links:[["Public / Civil Service Values & Ethics in Public Administration", "Discipline, obedience and their limits"], ["Aptitude & Foundational Values for Civil Service", "Courage of conviction"], ["Ethics in Science, Technology & Media", "Safety against schedule in engineering"]],
+      src:"Six cases, 2013 to 2025" },
     { t:"Duty against a personal tie",
-      qs:["Q052", "Q055", "Q163", "Q171", "Q183", "Q188"],
+      qs:["Q163", "Q183", "Q185"],
       d:["**Someone close to you gains if you bend.** A friend, a relative, a colleague you like and respect."],
       dlab:"The situation",
       secs:[
-        ["Kindness to the person, fairness from the office", [
-          "The pull is real, and the paper knows it. **You owe the person kindness. You owe the office fairness.** These are not the same thing, and only one of them is your job."]],
-        ["Declare it and step out", [
-          "Disclosure settles it. **Say that you know the person, and step out of the decision.** A conflict of interest is a situation, not a crime. It exists before you have done anything wrong. Declaring it early costs you nothing. Hiding it costs you everything."]],
-        ["The trap: believing you can be fair anyway", [
-          "The trap is thinking you can be fair anyway. You may well be. **But nobody watching can tell the difference**, and public trust turns on what can be seen, not on what you know about yourself."]],
-        ["Help as a private person, not through the office", [
-          "You can still help the person as a private individual. What you cannot do is help them with the office."]]
+        ["Kindness to the person, fairness from the office", ["The pull is real, and the paper knows it. **You owe the person kindness. You owe the office fairness.** These are not the same thing, and only one of them is your job."]],
+        ["Declare it and step out", ["Disclosure settles it. **Say that you know the person, and step out of the decision.** A conflict of interest is a situation, not a crime. It exists before you have done anything wrong. Declaring it early costs you nothing. Hiding it costs you everything."]],
+        ["The trap: believing you can be fair anyway", ["The trap is thinking you can be fair anyway. You may well be. **But nobody watching can tell the difference**, and public trust turns on what can be seen, not on what you know about yourself."]],
+        ["Help as a private person, not through the office", ["You can still help the person as a private individual. What you cannot do is help them with the office."]]
       ],
       take:"Declare the tie and step out of the decision. You may help the person privately, but never with the office.",
-      src:"Six cases, 2013 to 2023" },
+      core:"A relationship against impartiality",
+      engine:["Disclose the tie", "Step out of the decision", "Let the process run", "Help privately, never through the office"],
+      arch:{
+        conflict:["Loyalty or gratitude to a person against fairness to everyone else.", "Kindness to someone in trouble against the duty to report or decide honestly.", "Your discomfort in acting against a friend against the harm that silence allows."],
+        stake:["You", "The person you are close to", "People harmed or disadvantaged by the favour or the wrong", "The institution whose rules are at stake", "Others judged by the same rule"],
+        options:[
+          ["Stay silent to protect the relationship", "Spares the person and yourself.", "Makes you complicit; the harm or the irregularity continues."],
+          ["Act formally at once, without speaking to the person", "Upholds the rule.", "Can be harsh and may miss facts the person could explain."],
+          ["Speak to the person first, then take the formal step", "Gives them the chance to put it right and keeps your conduct fair.", "Must not become a delay that lets evidence or harm grow."],
+          ["Disclose the tie and step out of any decision about them", "Protects the process and your credibility.", "You lose control over the outcome."]],
+        criteria:["The test is whether the relationship would change what you do in your role. If it would, disclose it and step out. Where someone is being harmed, the victim's safety comes before the comfort of the relationship. Sympathy for the person does not cancel the rule; it shapes how you apply it."],
+        sequence:["Get the facts straight without accusing anyone.", "Where it is safe and useful, speak to the person and urge them to put it right themselves.", "Disclose your relationship to whoever must decide, and take no part in that decision.", "Report the wrong through the proper channel if it is not corrected. Protect any victim first.", "Offer personal support that does not use your office: advice, time, a lawful source of help."],
+        traps:["Believing you can be fair anyway. Nobody watching can tell.", "Treating the matter as private when a third person is being harmed."] },
+      links:[["Public / Civil Service Values & Ethics in Public Administration", "Duty against personal obligation"], ["Corporate Governance & Workplace Ethics", "Loyalty to a person against duty to the institution"], ["Corporate Governance & Workplace Ethics", "Witnessing wrongdoing outside your remit"]],
+      src:"Three cases, 2016 to 2023" },
     { t:"Silence against speaking up",
-      qs:["Q151", "Q173", "Q179", "Q180", "Q204", "Q225"],
+      qs:["Q204", "Q179", "Q220", "Q169", "Q225", "Q173"],
       d:["**You find out about harm that is already happening.** You did not cause it. You can prove it. Speaking up may cost you the job."],
       dlab:"The situation",
       secs:[
-        ["Loyalty to the employer, a warning to the people at risk", [
-          "The two duties are these. **You owe your employer loyalty.** **You owe the people being harmed a warning.** Loyalty is owed to an organisation. Safety is owed to people who cannot see the danger coming."]],
-        ["Work the ladder in order", [
-          "Work the ladder in order. **Raise it inside first, in writing.** Then the level above. Then the regulator or the auditor. Going outside comes last, not first, because it removes every chance of a quiet fix."]],
-        ["Keep the record as you go", [
-          "Keep the record as you go. Dates, documents, what you said and to whom. **The note written before the harm protects you. The explanation after it does not.**"]],
-        ["The trap: treating silence as neutral", [
-          "The trap is treating silence as neutral. It is not. Once you know, staying quiet is itself a choice you have made."]]
+        ["Loyalty to the employer, a warning to the people at risk", ["The two duties are these. **You owe your employer loyalty.** **You owe the people being harmed a warning.** Loyalty is owed to an organisation. Safety is owed to people who cannot see the danger coming."]],
+        ["Work the ladder in order", ["Work the ladder in order. **Raise it inside first, in writing.** Then the level above. Then the regulator or the auditor. Going outside comes last, not first, because it removes every chance of a quiet fix."]],
+        ["Keep the record as you go", ["Keep the record as you go. Dates, documents, what you said and to whom. **The note written before the harm protects you. The explanation after it does not.**"]],
+        ["The trap: treating silence as neutral", ["The trap is treating silence as neutral. It is not. Once you know, staying quiet is itself a choice you have made."]]
       ],
       take:"Once you know, silence is a choice. Raise it inside first, in writing, and go outside only when the ladder has failed.",
-      src:"Six cases, 2013 to 2024" },
+      core:"Loyalty and job security against people at risk",
+      engine:["Verify", "Document", "Raise it inside, in writing", "Go to the regulator", "Go outside last"],
+      arch:{
+        conflict:["Loyalty to the employer against a warning owed to the people at risk.", "Your livelihood and your family's security against harm to others.", "Confidentiality against disclosure in the public interest.", "Colleagues' advice to keep quiet against your own professional judgement."],
+        stake:["You and your family", "The people harmed or at risk", "Colleagues who know", "Managers who ordered or allowed the wrong", "The regulator", "The organisation's owners and customers"],
+        options:[
+          ["Keep quiet", "Protects the job for now.", "The harm continues, and once you know, you become part of it."],
+          ["Raise it inside, in writing", "Gives the organisation a chance to fix it and creates a record.", "May be ignored, or lead to retaliation."],
+          ["Report to the regulator or a designated authority", "Brings independent power to stop the harm.", "Needs evidence; may cost you the job."],
+          ["Go to the media first", "Fast and public.", "Removes the chance of a quiet fix, may breach the law or confidentiality, and weakens your own protection."],
+          ["Resign quietly", "Keeps your hands clean.", "The harm continues and the evidence leaves with you."]],
+        criteria:["Once you know of serious harm, silence is a choice. The response should be proportionate: the most effective step that goes no further than needed. Internal channels come first, unless they are the source of the harm, the harm is imminent, or evidence may be destroyed. Legal channels, such as the regulator or the designated whistleblower authority, protect both the public and you better than a leak."],
+        sequence:["Check the facts and make sure you understand them. Keep the copies you are allowed to keep.", "Write down what you saw, when, and whom you told.", "Raise it formally with the responsible manager, then the level above.", "If nothing changes, go to the ethics committee, the board or the designated whistleblower channel.", "Then go to the regulator or the authority with legal power to act.", "Seek legal advice and protection, and plan for the financial risk to your family."],
+        traps:["Treating silence as neutral.", "Going public before trying the channels, unless lives are at immediate risk."] },
+      links:[["Corruption, Whistleblowing & Conflict of Interest", "Whistleblowing"], ["Environmental & Development Ethics", "Speaking up about hidden harm"], ["Ethics in Science, Technology & Media", "Research integrity in drug trials"]],
+      src:"Six cases, 2014 to 2024" },
     { t:"Enforcement against the people it lands on",
-      qs:["Q113", "Q119", "Q220", "Q238"],
+      qs:["Q113", "Q221", "Q233", "Q118", "Q119", "Q223", "Q238"],
       d:["**Doing your job by the book hurts people who are already poor.** The still, the mine, the small workshop is illegal. It is also what the village lives on."],
       dlab:"The situation",
       secs:[
-        ["Even-handed law, and a way to live", [
-          "The duties: **you owe the law even-handed enforcement**, and **you owe the people you govern a way to live**. The second is not softness. A drive that leaves a village with no income simply creates the next offence."]],
-        ["Sequence, not exception", [
-          "The answer is usually sequence, not exception. **Act first against the people who profit most**, not the people at the bottom. Give notice. Offer the alternative before you remove the living. Enforce hardest where there was a real choice."]],
-        ["The trap: suspending the law out of sympathy", [
-          "The trap is suspending the law out of sympathy. That is not compassion. It is a favour, and the next officer has to undo it."]],
-        ["Say who bears the hardship", [
-          "Concede that some hardship cannot be avoided. Say who will bear it, and what you did to soften it."]]
+        ["Even-handed law, and a way to live", ["The duties: **you owe the law even-handed enforcement**, and **you owe the people you govern a way to live**. The second is not softness. A drive that leaves a village with no income simply creates the next offence."]],
+        ["Sequence, not exception", ["The answer is usually sequence, not exception. **Act first against the people who profit most**, not the people at the bottom. Give notice. Offer the alternative before you remove the living. Enforce hardest where there was a real choice."]],
+        ["The trap: suspending the law out of sympathy", ["The trap is suspending the law out of sympathy. That is not compassion. It is a favour, and the next officer has to undo it."]],
+        ["Say who bears the hardship", ["Concede that some hardship cannot be avoided. Say who will bear it, and what you did to soften it."]]
       ],
       take:"Enforce the law in sequence: those who profit most come first, and notice and an alternative come before a livelihood is removed.",
-      src:"Four cases, 2013 to 2024" },
+      core:"The law against livelihoods",
+      engine:["Enforce", "Target the profiteers first", "Soften the impact", "Offer a way out", "Fix the causes"],
+      arch:{
+        conflict:["Even-handed enforcement against the survival of poor people who break the law.", "Short-term hardship from enforcement against long-term harm from letting it continue.", "Punishing the visible offender against reaching the people who profit and protect the trade.", "Public health or safety against jobs."],
+        stake:["People whose living depends on the illegal activity", "Its victims: children, patients, residents, addicts", "Organisers and financiers", "Officials and politicians who protect them", "Law-abiding businesses", "The administration and police"],
+        options:[
+          ["Enforce strictly across the board", "Upholds the law quickly.", "Hits the poorest hardest, leaves the organisers untouched, and the activity returns."],
+          ["Suspend enforcement out of sympathy", "Avoids hardship now.", "A favour, not a policy; the harm continues and the next officer inherits it."],
+          ["Enforce in sequence: organisers first, then notice and an alternative for the rest", "Keeps the law and reduces harm.", "Slower, and needs other departments to deliver the alternatives."],
+          ["Treat it only as a development problem", "Addresses the causes.", "Leaves the immediate harm and the criminal network in place."]],
+        criteria:["The law must be enforced, but how and against whom is a matter of judgement. The first targets are those with a real choice: organisers, financiers and colluding officials. Those without a choice need notice, protection and an alternative. The test is whether the illegal activity ends without pushing people into the next one."],
+        sequence:["Map the problem: who profits, who protects, who works in it, who is harmed.", "Act first against the organisers, the money trail and colluding officials.", "Rescue and protect the most vulnerable: children, victims, addicts.", "Give notice and time to those who can comply, and enforce strictly after that.", "Bring in the alternative: jobs, schemes, credit, schooling, treatment.", "Work with the community, and check that the activity has really ended."],
+        traps:["Suspending the law out of sympathy.", "Raids that only catch the poorest workers."] },
+      links:[["Social Justice, Gender & the Weaker Sections", "Child labour and the family-enterprise loophole"], ["Environmental & Development Ethics", "Pollution against employment"], ["Environmental & Development Ethics", "Illegal extraction and the protected nexus"], ["Public / Civil Service Values & Ethics in Public Administration", "Police ethics: force, community and legitimacy"]],
+      src:"Seven cases, 2013 to 2024" },
     { t:"Profit against the cost nobody counted",
-      qs:["Q165", "Q184", "Q205", "Q223"],
+      qs:["Q205", "Q180", "Q198", "Q222", "Q212"],
       d:["**The gain is clear, near and measured. The harm is spread out, far away, or years off.** A plant, a data centre, a target met by cutting a corner."],
       dlab:"The situation",
       secs:[
-        ["A going concern, and the people downstream", [
-          "The duties: **you owe the firm and its workers a going concern**, and **you owe the people downstream a life not damaged by it**. The second group is not in the room and never agreed to the trade."]],
-        ["Two tests", [
-          "Test it two ways. **Would you accept this if you lived downwind?** And would the decision survive being published? A cost you would want to hide is usually a cost you should not impose."]],
-        ["Consent is missing", [
-          "What settles it is that consent is missing. **People who cannot say no cannot be traded against a deadline.**"]],
-        ["The trap: jobs against safety", [
-          "The trap is the false choice between jobs and safety. There is nearly always a third path: fix it, phase it, or pay for the damage. Look for that before accepting the trade."]]
+        ["A going concern, and the people downstream", ["The duties: **you owe the firm and its workers a going concern**, and **you owe the people downstream a life not damaged by it**. The second group is not in the room and never agreed to the trade."]],
+        ["Two tests", ["Test it two ways. **Would you accept this if you lived downwind?** And would the decision survive being published? A cost you would want to hide is usually a cost you should not impose."]],
+        ["Consent is missing", ["What settles it is that consent is missing. **People who cannot say no cannot be traded against a deadline.**"]],
+        ["The trap: jobs against safety", ["The trap is the false choice between jobs and safety. There is nearly always a third path: fix it, phase it, or pay for the damage. Look for that before accepting the trade."]]
       ],
       take:"A cost you would want to hide is one you should not impose. Look for the third path: fix it, phase it, or pay for the damage.",
-      src:"Four cases, 2017 to 2024" },
+      core:"Commercial interest against public or environmental cost",
+      engine:["Name who bears the cost", "Prevent the harm", "Disclose", "Compensate", "Change the model"],
+      arch:{
+        conflict:["Profit and shareholder value against harm to people outside the firm.", "Jobs and growth against health, safety and the environment.", "Legal compliance against doing right where the law is silent.", "The company's reputation now against honesty about a fault."],
+        stake:["Owners and shareholders", "Employees", "Customers and patients", "Communities near the plant or downstream", "Future generations", "Regulators", "Competitors who play fair"],
+        options:[
+          ["Carry on and absorb the risk", "Protects profit now.", "Imposes costs on people who never agreed; legal and reputational risk grows."],
+          ["Stop the activity at once", "Ends the harm.", "May destroy jobs and supply without need, if a fix exists."],
+          ["Fix, phase or pay: correct the process, set a timetable, compensate", "Keeps the business and ends the harm.", "Costs money and time, and needs honest disclosure."],
+          ["Meet only the letter of the law", "Defensible in court.", "Leaves harm that the law has not yet caught up with."]],
+        criteria:["A cost you would want to hide is a cost you should not impose. Ask who bears it and whether they agreed. Look for the third path that keeps the business viable while ending the harm. Legality is the floor, not the ceiling."],
+        sequence:["Find out the facts, and who is affected.", "Stop or reduce the harm at once where it is serious.", "Tell the regulator and those affected honestly.", "Compensate those already harmed.", "Change the process or the product for good.", "Report publicly on progress, so the change can be checked."],
+        traps:["The false choice between jobs and safety.", "Using CSR spending to cover a harm the business itself causes."] },
+      links:[["Corporate Governance & Workplace Ethics", "Business under pressure: ends and means"], ["Ethics in Science, Technology & Media", "Corporate responsibility for product safety"], ["Environmental & Development Ethics", "Corporate social responsibility"], ["Ethics in Science, Technology & Media", "Access to medicine and the unprofitable cure"]],
+      src:"Five cases, 2015 to 2024" },
     { t:"Few resources, many claimants",
-      qs:["Q112", "Q116", "Q120", "Q144"],
+      qs:["Q146", "Q209", "Q120"],
       d:["**There is not enough, and you must decide who gets it first.** Beds, boats, relief, money, or your own time."],
       dlab:"The situation",
       secs:[
-        ["Ranking is the ethical act", [
-          "Here the ranking is the ethical act. **You owe every claimant equal consideration**, and **you owe the whole group the best use of what little you have.**"]],
-        ["State the rule first", [
-          "State your rule before you apply it. **Save the most lives. Treat the most urgent first. Help those who cannot help themselves.** Any of these can be defended in an answer. What cannot be defended is deciding case by case with no rule at all."]],
-        ["Apply it to everyone", [
-          "Then apply it to everyone, including the people you know. **A rule you bend once was never a rule.**"]],
-        ["The trap: refusing to rank", [
-          "The trap is refusing to rank at all. Refusing is also a decision, and it is the one that helps nobody."]]
+        ["Ranking is the ethical act", ["Here the ranking is the ethical act. **You owe every claimant equal consideration**, and **you owe the whole group the best use of what little you have.**"]],
+        ["State the rule first", ["State your rule before you apply it. **Save the most lives. Treat the most urgent first. Help those who cannot help themselves.** Any of these can be defended in an answer. What cannot be defended is deciding case by case with no rule at all."]],
+        ["Apply it to everyone", ["Then apply it to everyone, including the people you know. **A rule you bend once was never a rule.**"]],
+        ["The trap: refusing to rank", ["The trap is refusing to rank at all. Refusing is also a decision, and it is the one that helps nobody."]]
       ],
       take:"State a rule you can defend before you apply it, then apply it to everyone. Refusing to rank helps nobody.",
-      src:"Four cases, 2015 to 2025" },
+      core:"Competing legitimate claims on too little",
+      engine:["State the criterion", "Apply it to everyone", "Record the reasons", "Review as facts change"],
+      arch:{
+        conflict:["Equal consideration for every claimant against the need to rank them.", "The most urgent need against the greatest number helped.", "Status and pressure against need.", "Care for the people you serve against the safety of the people you send."],
+        stake:["Every claimant and their families", "The most vulnerable, who cannot press their claim", "Staff or responders who carry the risk", "The institution making the decision", "The public watching how it is done"],
+        options:[
+          ["First come, first served", "Simple.", "Rewards the strongest or the nearest, not those most in need."],
+          ["Priority by status or pressure", "Avoids trouble with the powerful.", "Unfair and indefensible."],
+          ["Priority by a stated rule of need and urgency", "Fair and explainable.", "Some will still lose, and must be told why."],
+          ["Refuse to rank", "Avoids a hard choice.", "Wastes time and helps nobody."]],
+        criteria:["Ranking is the ethical act. The rule should rest on need, urgency and the chance of doing good, with special care for those who cannot help themselves. It must be stated before it is used, applied to everyone including the powerful, and recorded so it can be checked."],
+        sequence:["Assess the resources you have and the claims on them.", "Set the criterion and say it openly.", "Apply it without exception for status.", "Protect the people who deliver the service, so the service can go on.", "Record every decision and its reason.", "Review the ranking as the situation changes, and seek more resources at once."],
+        traps:["Bending the rule once for someone you know.", "Refusing to rank at all."] },
+      links:[["Probity in Governance", "Competing legitimate claims on a scarce resource"], ["Public / Civil Service Values & Ethics in Public Administration", "Crisis, triage and prioritising in a disaster"], ["Ethics in Science, Technology & Media", "Medical ethics: autonomy, consent and triage"]],
+      src:"Three cases, 2015 to 2024" },
     { t:"Duty against your own interest",
-      qs:["Q162", "Q168", "Q174"],
+      qs:["Q161", "Q162", "Q168", "Q151"],
       d:["**Your job hands you something you could profit from.** A policy not yet announced. A tender you help decide. A contract your family could win."],
       dlab:"The situation",
       secs:[
-        ["No real clash of duties", [
-          "There is no real clash of duties here, and that is the point. **The gain would be yours. The loss is public trust.** This is the easiest group to get right and the easiest to answer badly."]],
-        ["Declare it and step away", [
-          "The rule is short. **Declare it, and step away.** Do not use the information. Do not pass it on. Do not act on it later through somebody else."]],
-        ["The trap: waiting to see if it matters", [
-          "The trap is delay: telling yourself you will decide once you see whether it matters. By then you have already used it."]],
-        ["The conflict comes before any wrong", [
-          "Note the timing. **A conflict of interest exists before anything wrong is done.** That is why the answer is disclosure, not a claim of innocence."]]
+        ["No real clash of duties", ["There is no real clash of duties here, and that is the point. **The gain would be yours. The loss is public trust.** This is the easiest group to get right and the easiest to answer badly."]],
+        ["Declare it and step away", ["The rule is short. **Declare it, and step away.** Do not use the information. Do not pass it on. Do not act on it later through somebody else."]],
+        ["The trap: waiting to see if it matters", ["The trap is delay: telling yourself you will decide once you see whether it matters. By then you have already used it."]],
+        ["The conflict comes before any wrong", ["Note the timing. **A conflict of interest exists before anything wrong is done.** That is why the answer is disclosure, not a claim of innocence."]]
       ],
       take:"Declare the interest and step away at once. The answer is disclosure, not a claim of innocence.",
-      src:"Three cases, 2013 to 2024" },
+      core:"Private interest against the public role",
+      engine:["Declare the interest", "Step away", "Let an independent person decide", "Keep a record"],
+      arch:{
+        conflict:["Your own or your family's gain against the trust placed in your office.", "Confidential information against private use.", "Self-protection against honest disclosure.", "Pressure from a powerful person against an impartial decision."],
+        stake:["You and your family", "The institution", "Competitors or other bidders", "The public whose money or information is at stake", "The person seeking the benefit"],
+        options:[
+          ["Use the position and hope nobody notices", "A gain for you or your family.", "Corrupt; destroys trust once known; often a criminal offence."],
+          ["Refuse, but stay in charge of the decision", "Avoids the direct misuse.", "The conflict stays unmanaged and your decision will be suspected."],
+          ["Declare the interest and recuse", "Protects the decision and your integrity.", "You lose control of an outcome you care about."],
+          ["Put the matter to an independent authority, with safeguards", "Creates an auditable process.", "Requires admitting the conflict openly."]],
+        criteria:["A conflict of interest exists before any wrong is done. The answer is disclosure, not a claim of innocence. The test is whether a fair observer who knew the facts would doubt the decision. If so, step away."],
+        sequence:["Refuse any use of official information or authority for private benefit.", "Say so plainly to the person asking, whoever they are.", "Declare the interest in writing to the competent authority.", "Step out of every decision where the interest could matter.", "Make sure the process is open and the same for everyone.", "Record any pressure you receive."],
+        traps:["Waiting to see whether it matters before declaring.", "Thinking a lawful purchase makes an insider advantage acceptable."] },
+      links:[["Corruption, Whistleblowing & Conflict of Interest", "Conflict of interest"], ["Corruption, Whistleblowing & Conflict of Interest", "Insider information and its misuse"], ["Ethics in Science, Technology & Media", "Conflict of interest in procurement"], ["Probity in Governance", "RTI, transparency and its misuse"]],
+      src:"Four cases, 2013 to 2025" },
     { t:"The rule against the deserving case",
-      qs:["Q210", "Q226", "Q232"],
+      qs:["Q232", "Q053", "Q210", "Q184"],
       d:["**The rule gives a hard answer to someone who clearly deserves better.** A widow, a displaced family, a man at fault who is still suffering."],
       dlab:"The situation",
       secs:[
-        ["Compassion, and the same rule for everyone", [
-          "The duties: **you owe this person compassion**, and **you owe every other claimant the same rule you applied to them**. Bending it here is a kindness paid for by people you will never meet."]],
-        ["Read the rule, then look for another route", [
-          "Split it into two questions. **Can the rule be read so that it helps them?** Often it can, and finding that is your first job. If it truly cannot, **is there another route** — a relief fund, a scheme, a power that exists for exactly this?"]],
-        ["Recommend the change; do not ignore the rule", [
-          "What you may not do is quietly ignore the rule. **Recommend the change instead.** Say plainly that the rule is wrong, and ask for it to be amended."]],
-        ["The trap: either extreme", [
-          "The trap is either extreme. A cold refusal and an unexplained favour are failures of the same job."]]
+        ["Compassion, and the same rule for everyone", ["The duties: **you owe this person compassion**, and **you owe every other claimant the same rule you applied to them**. Bending it here is a kindness paid for by people you will never meet."]],
+        ["Read the rule, then look for another route", ["Split it into two questions. **Can the rule be read so that it helps them?** Often it can, and finding that is your first job. If it truly cannot, **is there another route** — a relief fund, a scheme, a power that exists for exactly this?"]],
+        ["Recommend the change; do not ignore the rule", ["What you may not do is quietly ignore the rule. **Recommend the change instead.** Say plainly that the rule is wrong, and ask for it to be amended."]],
+        ["The trap: either extreme", ["The trap is either extreme. A cold refusal and an unexplained favour are failures of the same job."]]
       ],
       take:"Look first for a reading of the rule, or another route, that helps. If there is none, say the rule is wrong and ask for it to be changed.",
-      src:"Three cases, 2016 to 2022" },
+      core:"Consistency against compassion",
+      engine:["Read the rule fully", "Find the lawful discretion", "Offer another route", "Recommend reform"],
+      arch:{
+        conflict:["Compassion for one person against fairness to everyone judged by the same rule.", "The letter of the rule against its purpose.", "Strictness against proportion.", "Sympathy for a family against the fault of the person they lost."],
+        stake:["The person or family asking", "Others who meet or fail the same rule", "The institution and its budget", "Staff or unions watching the precedent", "The public who fund the scheme"],
+        options:[
+          ["Refuse flatly", "Consistent.", "Cold, and may miss a lawful way to help."],
+          ["Bend the rule quietly", "Helps this person.", "Unfair to others, sets a precedent, and may be illegal."],
+          ["Use the discretion the rule allows", "Helps within the law.", "Needs a careful reading and a recorded reason."],
+          ["Find another route: another scheme, a fund, a charity", "Helps without breaking the rule.", "Takes effort, and may be slower."],
+          ["Recommend a change in the rule", "Fixes the problem for everyone.", "Does not help this person today."]],
+        criteria:["Two questions settle most cases. Can the rule be read, within its purpose, so that it helps? If not, is there another lawful route? What is not allowed is quietly ignoring the rule. Where the rule gives an unjust result, say so and ask for it to be changed."],
+        sequence:["Read the rule and its purpose in full, and check what discretion it gives.", "Separate what the law requires from what is only policy or practice.", "Apply the rule honestly and explain the decision.", "Use every other lawful route to help: schemes, funds, statutory dues, voluntary bodies.", "Record the reasons, so the next case is decided the same way.", "Recommend a reform if the rule produces an unjust result."],
+        traps:["A cold refusal and an unexplained favour are failures of the same job."] },
+      links:[["Public / Civil Service Values & Ethics in Public Administration", "Substance over form"], ["Social Justice, Gender & the Weaker Sections", "Compassion when the claimant is at fault"], ["Public / Civil Service Values & Ethics in Public Administration", "Law, rules and ethics in administration"]],
+      src:"Four cases, 2017 to 2022" },
     { t:"Equal treatment against local custom",
       qs:["Q235", "Q236"],
       d:["**The community wants you to treat some people as lesser.** Caste at a school meal. Girls kept out of the classroom."],
       dlab:"The situation",
       secs:[
-        ["The Constitution has settled it", [
-          "There is no real balance to strike. **The Constitution has settled the question, and your job is to carry it out.** What is genuinely hard is not what to do, but how to do it without a riot."]],
-        ["The answer is about method", [
-          "So the answer is about method. **Do not argue the principle in public first.** Talk to the elders. Find the people inside the community who already agree with you. Keep the school running while you do it."]],
-        ["The law as backing, not the opening move", [
-          "Use the law as backing, not as your opening move. **Move first, explain second, prosecute last** — but do not leave a child out of school while you persuade."]],
-        ["Concede that it takes time", [
-          "Concede that this takes time and that you may fail at first. Say what you would do if persuasion does not work."]]
+        ["The Constitution has settled it", ["There is no real balance to strike. **The Constitution has settled the question, and your job is to carry it out.** What is genuinely hard is not what to do, but how to do it without a riot."]],
+        ["The answer is about method", ["So the answer is about method. **Do not argue the principle in public first.** Talk to the elders. Find the people inside the community who already agree with you. Keep the school running while you do it."]],
+        ["The law as backing, not the opening move", ["Use the law as backing, not as your opening move. **Move first, explain second, prosecute last** — but do not leave a child out of school while you persuade."]],
+        ["Concede that it takes time", ["Concede that this takes time and that you may fail at first. Say what you would do if persuasion does not work."]]
       ],
       take:"The principle is settled; the skill is in the method. Persuade through the community, keep the school running, and hold the law in reserve.",
+      core:"Constitutional values against social pressure",
+      engine:["Apply the law", "Protect the vulnerable person", "Engage the community", "Change attitudes over time"],
+      arch:{
+        conflict:["Equality and dignity against custom and the elders' authority.", "Protecting a girl or a Dalit worker now against peace in the village.", "Using the law against persuading the community."],
+        stake:["The girls, the Dalit cook and their families", "Children and their right to education", "Parents and elders", "The younger generation", "Teachers and the school", "Panchayat, police and administration"],
+        options:[
+          ["Give in to the custom to keep the peace", "Avoids conflict.", "Unconstitutional; abandons the vulnerable."],
+          ["Enforce the law alone", "Upholds rights at once.", "May harden opposition and leave the victims exposed once officials leave."],
+          ["Enforce the law and work with the community", "Protects rights and builds acceptance.", "Slow; needs patience and allies."]],
+        criteria:["The Constitution has settled the principle: untouchability is abolished, and girls have an equal right to education. What is hard is the method. Protect the vulnerable person at once, keep the school running, and use persuasion backed by the law."],
+        sequence:["Protect the people at risk: their safety, their schooling, their job.", "Make clear that the law will be enforced, and act against anyone who threatens or boycotts.", "Talk to the elders and find allies inside the community.", "Use the school, self-help groups, the panchayat and role models to change attitudes.", "Follow up until the change holds."],
+        traps:["Leaving a child out of school while you persuade."] },
+      links:[["Social Justice, Gender & the Weaker Sections", "Caste, purity and the shared meal"], ["Social Justice, Gender & the Weaker Sections", "Gender inequality and patriarchy"], ["Public / Civil Service Values & Ethics in Public Administration", "Constitutional morality"]],
       src:"Two cases, both 2015" },
+    { t:"Discipline against speaking the truth",
+      qs:["Q164", "Q147", "Q117"],
+      d:["**You must advise people who have the power to decide.** A minister, a board, a political chairman. They want an answer that suits them. Your job is to tell them what is true."],
+      dlab:"The situation",
+      secs:[
+        ["Frank advice, then loyal execution", ["The civil servant's duty has two halves. **Advise frankly before the decision.** Then **carry out the lawful decision loyally**, even if you argued against it. Both halves matter."]],
+        ["Put the dissent on file", ["Put the dissent on file. A note that sets out the law, the cost and the alternatives protects the public and the officer. **Oral advice leaves no trace.**"]],
+        ["Serve the office, not a party", ["Serve the office, not a party. An offer of protection or promotion from one side is an attempt to recruit you. **Neutrality is what lets the next government trust you.**"]],
+        ["The trap: resigning or leaking", ["The trap is resigning or leaking because you lost an argument. Resignation is for orders that are illegal or immoral, not for decisions you disagree with."]]
+      ],
+      take:"Advise frankly and on file before the decision, carry out the lawful decision after it, and take no side.",
+      core:"Obedience against honest professional advice",
+      engine:["Advise frankly before the decision", "Record the dissent", "Carry out the lawful decision", "Stay non-partisan"],
+      arch:{
+        conflict:["Loyalty to the political executive against professional honesty.", "Speed and political convenience against legality and financial propriety.", "Your own security (postings, promotion) against neutrality.", "Acting on evidence of wrongdoing against being used by one party."],
+        stake:["You", "The minister or political head", "The government as an institution", "Parliament or the legislature", "Citizens affected by the decision", "Opposition parties", "The civil service as a whole"],
+        options:[
+          ["Give the advice that is wanted", "Keeps relations smooth.", "Fails the public and, in the end, the government itself."],
+          ["Advise frankly, record it, then carry out the lawful decision", "The civil service's proper role.", "May cost goodwill or a posting."],
+          ["Refuse to carry it out", "Keeps your conscience clear.", "Justified only if the order is illegal."],
+          ["Resign or go public", "A strong signal.", "Usually removes the one honest voice; justified only for illegal or immoral orders."],
+          ["Side with a political rival", "May bring rewards later.", "Destroys neutrality."]],
+        criteria:["The test is whether the decision is lawful and whether you have given full, frank advice. If both are true, the decision belongs to the political executive. If the order is illegal, decline it in writing. Neutrality is judged by whether you would act the same way whichever party asked."],
+        sequence:["Examine the proposal against the law, the rules and the facts.", "Put your advice on file, with the options and their costs.", "Discuss it with the political head and your seniors, in person and in writing.", "If the decision is lawful, carry it out properly and help reduce its costs.", "If it is illegal, decline in writing and escalate through the proper channel.", "Send evidence of wrongdoing to the vigilance agencies, not to a party."],
+        traps:["Treating every disagreement as a matter of conscience."] },
+      links:[["Probity in Governance", "Politicisation of the bureaucracy"], ["Public / Civil Service Values & Ethics in Public Administration", "Ethics and politics"], ["Aptitude & Foundational Values for Civil Service", "Impartiality, non-partisanship and objectivity"], ["Public / Civil Service Values & Ethics in Public Administration", "Discipline, obedience and their limits"]],
+      src:"Three cases, 2019 to 2023" },
+    { t:"Duty against threats and inducements",
+      qs:["Q165", "Q166", "Q167", "Q186", "Q187", "Q172", "Q171"],
+      d:["**Someone with power offers you a reward or threatens you with harm.** Money, a job, funds for your institution. Or a threat to your life, your family, or your good name."],
+      dlab:"The situation",
+      secs:[
+        ["Change the method, not the objective", ["Courage is not recklessness. **Keep the objective and change the method**: protection, coordination, a record. The duty stays the same; the way you carry it out gets safer."]],
+        ["Record the approach at once", ["Record the approach at once: who, when, what was said. **A bribe offer or a threat that is written down and reported loses most of its power.**"]],
+        ["Keep separate processes separate", ["A threat of a false complaint is not a reason to drop your work. **Nor is it a reason to prejudge the complaint.** Let the proper process deal with it on its merits."]],
+        ["The trap: bargaining", ["The trap is bargaining: a small concession to buy peace. It tells the other side that pressure works, and it will come back."]]
+      ],
+      take:"Refuse and record the approach, protect people and evidence, and keep the job going by a safer method.",
+      core:"Integrity against fear and temptation",
+      engine:["Refuse", "Record the approach", "Protect people and evidence", "Move it to an independent level", "Keep doing the job by a safer method"],
+      arch:{
+        conflict:["Integrity against personal gain, or your institution's gain.", "Public duty against the safety of yourself and your family.", "The rule of law against an entrenched network or a political patron.", "Due process against pressure to act, or back off, quickly."],
+        stake:["You and your family", "The person making the offer or the threat", "Honest colleagues", "Victims of the wrong being covered up", "The institution", "Police and vigilance agencies", "The public"],
+        options:[
+          ["Give in: take the offer or back off", "Ends the pressure.", "Corrupt or cowardly; the wrong continues and the pressure will return."],
+          ["Carry on alone, as before", "Shows resolve.", "Unnecessary risk; easy to isolate you."],
+          ["Refuse, record and report, and carry on with protection and support", "Keeps the duty and reduces the risk.", "Needs institutional backing, and time."],
+          ["Seek a transfer", "Removes you from danger.", "Rewards intimidation; the network wins."],
+          ["Go public at once", "Puts pressure on the wrongdoers.", "Can prejudice an inquiry and put people at greater risk."]],
+        criteria:["The duty does not change because of a threat or an offer. What changes is the method. The response must keep the objective, reduce avoidable risk, protect evidence and people, and move the matter to a level the pressure cannot reach."],
+        sequence:["Refuse the offer clearly, without negotiation.", "Record the approach or the threat: who, when, what was said.", "Report it to the competent authority, the police or the vigilance agency.", "Seek protection for yourself and your family where there is a threat.", "Secure the evidence, and keep compromised people away from it.", "Carry on with the work in a coordinated, documented way, under senior or independent oversight."],
+        traps:["Personal heroics.", "A quiet compromise to buy peace."] },
+      links:[["Aptitude & Foundational Values for Civil Service", "Courage of conviction"], ["Corruption, Whistleblowing & Conflict of Interest", "Bribery in business, and the third way"], ["Corporate Governance & Workplace Ethics", "Coercion against undue influence"], ["Aptitude & Foundational Values for Civil Service", "Trustworthiness, fortitude and perseverance"]],
+      src:"Seven cases, 2013 to 2022" },
+    { t:"The crisis that will not wait",
+      qs:["Q197", "Q114", "Q206", "Q234", "Q116"],
+      d:["**People's lives depend on what you decide in the next hour.** There is no time for the file, and often no way to reach your superiors."],
+      dlab:"The situation",
+      secs:[
+        ["The duty is to decide", ["In a crisis the duty is to decide. **Waiting for instructions is itself a decision**, and often the worst one."]],
+        ["Life first, within the law", ["Life comes first. The law usually provides for emergencies. **Find the lawful emergency power**, use it, and use no more force than you need."]],
+        ["Protect the responders", ["Protect the people who do the work. **A rescue team that breaks down saves nobody.**"]],
+        ["Report and account", ["Tell your superiors as soon as you can, and write down what you did and why. **The record turns an emergency choice into an accountable one.**"]]
+      ],
+      take:"Save life first, act within the law's emergency powers, use minimum force, and account for every decision afterwards.",
+      core:"Saving life now against rules, orders and safety",
+      engine:["Save life first", "Use the lawful emergency power", "Minimum force, full dignity", "Tell your superiors at the first chance", "Record and review"],
+      arch:{
+        conflict:["Saving life now against the rule or procedure that normally applies.", "The duty to act against the lack of instructions.", "Firmness with a hostile crowd against restraint and dignity.", "The safety of your team against the needs of the people you serve.", "Humanitarian duty against security and the law."],
+        stake:["The people in danger, and the most vulnerable among them", "Your team and other responders", "Local communities", "Your superiors and the government", "Other agencies", "The institutions that will review your decision"],
+        options:[
+          ["Wait for instructions", "Avoids personal risk.", "Lives may be lost while you wait."],
+          ["Act beyond the law", "Fast.", "May cause new harm and leaves you and others exposed."],
+          ["Act at once within the law's emergency powers, with minimum force", "Saves lives and stays accountable.", "Needs judgement under pressure."],
+          ["Withdraw", "Protects your team.", "Abandons the people in danger."]],
+        criteria:["The test is whether the action saves life or prevents grave harm, is the least drastic that will work, can be justified afterwards, and treats every person with dignity. Status gives no priority; need does."],
+        sequence:["Stabilise: medical help for the injured, safety for the team.", "Assess the situation and set priorities by need.", "Act with the powers you have, and the least force needed.", "Keep trying to reach your superiors, and act on your own authority until you do.", "Speak honestly to the people affected.", "Record every decision and its reason, and review it afterwards."],
+        traps:["Treating the lack of orders as a reason to do nothing.", "Treating the emergency as a licence to ignore the law."] },
+      links:[["Public / Civil Service Values & Ethics in Public Administration", "Crisis, triage and prioritising in a disaster"], ["Emotional Intelligence", "Emotional intelligence and the ethical decision"], ["Accountability & Ethical Governance", "Human rights of non-citizens"], ["Public / Civil Service Values & Ethics in Public Administration", "Police ethics: force, community and legitimacy"]],
+      src:"Five cases, 2019 to 2025" },
+    { t:"The job against the rest of your life",
+      qs:["Q112", "Q177", "Q207", "Q181"],
+      d:["**The job asks for more than you can give without harm at home.** A death in the family during a disaster. Small children who need you. A boss who makes every day a strain. A private matter that goes viral."],
+      dlab:"The situation",
+      secs:[
+        ["Both duties are real", ["Both duties are real. **A public servant is also a son, a mother, a person with limits.** Pretending otherwise leads to burnout, not better service."]],
+        ["Secure the task, then attend to yourself", ["The answer is to secure the public task, not to abandon it: **hand it over properly, delegate, ask for relief**. Then attend to the family."]],
+        ["Use the support that exists", ["Use the support that exists: leave rules, counselling, grievance channels, colleagues. **Asking for help is part of doing the job well.**"]],
+        ["The trap: the private fight", ["The trap is using the office, or a public platform, for a private fight, or letting private anger spill into public conduct."]]
+      ],
+      take:"Secure the public task by handing it over properly, then attend to yourself and your family, and never use the office for a private fight.",
+      core:"Duty to the office against duty to yourself and your family",
+      engine:["Name both duties", "Secure the public task", "Use the support that exists", "Set a boundary you can defend", "Keep private disputes out of official acts"],
+      arch:{
+        conflict:["Duty to the public in an emergency against duty to family.", "Commitment to work against health, children and relationships.", "Respect for a superior against self-respect and mental health.", "Defending your family's name against the restraint expected of a public servant."],
+        stake:["You", "Your family", "The people who depend on your work", "Your superiors and team", "Colleagues who will cover for you", "The institution's culture"],
+        options:[
+          ["Put the job first, always", "Keeps the work going.", "Damages health and family; cannot last."],
+          ["Put the family first, without arranging cover", "Meets the personal duty.", "Leaves the public task unprotected."],
+          ["Secure the task, then attend to the family", "Meets both duties as far as possible.", "Needs planning, honesty and help from others."],
+          ["Confront or retaliate", "Feels right in the moment.", "Makes things worse and can breach the conduct rules."]],
+        criteria:["The test is whether the public task is protected, and whether you are acting in a way you could explain openly. Personal limits are legitimate; leaving a post without a handover is not. Private disputes must not use public office, or public platforms, in a way that breaches the conduct rules."],
+        sequence:["Recognise the conflict early and speak to your superior.", "Arrange a proper handover or cover for the urgent public task.", "Use the leave, counselling and grievance channels open to you.", "Set clear boundaries and agree them with your team.", "Settle private disputes through private or legal channels.", "Build habits and office practices that make the balance normal."],
+        traps:["Martyrdom: treating exhaustion as proof of dedication."] },
+      links:[["Public / Civil Service Values & Ethics in Public Administration", "Duty against personal obligation"], ["Corporate Governance & Workplace Ethics", "Workplace bullying and belittlement"], ["Corporate Governance & Workplace Ethics", "Efficiency, workload and who pays for it"], ["Ethics in Science, Technology & Media", "Media, social media and viral harm"]],
+      src:"Four cases, 2021 to 2025" },
+    { t:"Dignity at work against the valued offender",
+      qs:["Q178", "Q182", "Q188"],
+      d:["**A valued employee harms a colleague.** He brings in the sales, or has thirty years of service. She is new, junior, or alone. The organisation is tempted to protect the one it values more."],
+      dlab:"The situation",
+      secs:[
+        ["Dignity is not traded for performance", ["Dignity at work is not traded for performance. **Harassment is misconduct whoever commits it**, and a star who harasses costs the organisation its honest people."]],
+        ["Process, not settlement", ["The law sets the process. **A complaint of sexual harassment goes to the Internal Committee**, which must inquire fairly and in time. The POSH Act bars a monetary settlement as the basis of conciliation."]],
+        ["Protect first", ["Protect the complainant first: from retaliation, from pressure, from being forced to leave."]],
+        ["The trap: the quiet deal", ["The trap is the quiet deal. It saves the offender and teaches everyone else that complaining does not work."]]
+      ],
+      take:"Send the complaint to the proper process, protect the complainant, and act whatever the offender's value.",
+      core:"Performance and seniority against a colleague's dignity",
+      engine:["Take the complaint seriously", "Protect the complainant", "Due process through the Internal Committee", "Act whatever the offender's value", "Fix the culture"],
+      arch:{
+        conflict:["A star performer's value against a colleague's dignity and safety.", "The company's image against the victim's right to justice.", "Loyalty to a long-serving senior against fairness to a newcomer.", "A quick settlement against due process."],
+        stake:["The complainant", "The person accused", "Colleagues and the team", "The management", "The Internal Committee", "Women employees as a group", "The organisation's customers and reputation"],
+        options:[
+          ["Ignore or delay", "Keeps the performer.", "Contrary to the POSH Act, and tells every employee that harassment pays."],
+          ["Pay the complainant to withdraw", "Makes it go away.", "Unethical, contrary to the law, and may itself be an offence."],
+          ["Refer to the Internal Committee, protect the complainant, act on its findings", "Lawful and fair to both sides.", "The organisation may lose a valued person."],
+          ["Counsel the offender informally", "Can work for mild incivility.", "Not enough for harassment, and must not replace an inquiry."]],
+        criteria:["The test is the law and human dignity, not the offender's value. The complaint must be inquired into fairly, the complainant protected, and the finding acted on. The person accused is also entitled to a fair hearing."],
+        sequence:["Meet the complainant, listen, and assure her of protection and confidentiality.", "Refer the complaint to the Internal Committee at once. Do not investigate privately.", "Take interim steps: separate reporting lines, or leave or a transfer if she asks for it.", "Give the person accused a fair hearing.", "Act on the Committee's findings, whatever the person's value.", "Train staff, publicise the policy, and check the culture."],
+        traps:["Waiting for a formal complaint when the pattern is already known."] },
+      links:[["Corporate Governance & Workplace Ethics", "Sexual harassment at work"], ["Corporate Governance & Workplace Ethics", "Workplace bullying and belittlement"], ["Corporate Governance & Workplace Ethics", "Moral integrity and professional efficiency"]],
+      src:"Three cases, 2013 to 2023" },
+    { t:"Fixing the system, not just the case",
+      qs:["Q144", "Q148", "Q054", "Q149", "Q211", "Q150", "Q170", "Q055"],
+      d:["**The problem is bigger than one person.** A programme that leaks money. A file with a vested interest buried in it. Rules that punish the honest and help the dishonest."],
+      dlab:"The situation",
+      secs:[
+        ["Fix the process, not only the person", ["Fix the process, not only the person. **A punishment without a new process just waits for the next offender.**"]],
+        ["Honest mistakes are not corruption", ["Separate the honest mistake from the corrupt one. **Punishing decisions taken in good faith teaches officers to decide nothing.**"]],
+        ["Make it visible", ["Transparency does much of the work. **Money that citizens can track is hard to steal.**"]],
+        ["The trap: cynicism", ["The trap is cynicism: \"everyone does it, so one honest officer makes no difference\". Systems change because some people refuse to join in."]]
+      ],
+      take:"Find out why the system fails, fix responsibility, and change the process so the failure cannot repeat. An honest mistake is not corruption.",
+      core:"Individual integrity against a failing system",
+      engine:["Diagnose the causes", "Stop the loss now", "Fix responsibility", "Change the process", "Make it visible to citizens"],
+      arch:{
+        conflict:["Accepting the system as it is against the effort and risk of changing it.", "Punishing wrongdoers against protecting honest officers who made mistakes.", "Control and scrutiny against the speed and freedom citizens need.", "Transparency against the misuse of transparency."],
+        stake:["Citizens who depend on the service", "Honest officers", "Those who profit from the failure", "The institution", "Oversight bodies: audit, vigilance, courts", "Civil society"],
+        options:[
+          ["Carry on and ignore the inherited problem", "Easy.", "The loss continues and you become part of it."],
+          ["Punish individuals only", "Visible action.", "The system produces new offenders."],
+          ["Diagnose, fix responsibility, and redesign the process", "Lasting change.", "Takes time and meets resistance."],
+          ["Add more controls everywhere", "Feels safe.", "Slows honest work and creates new chances for bribes."]],
+        criteria:["The response should stop the immediate harm, hold the guilty to account through due process, protect honest officials, and remove the conditions that made the failure possible. Technology, transparency and citizen participation usually work better than extra layers of approval."],
+        sequence:["Establish the facts and the scale of the problem.", "Stop the immediate loss or harm.", "Fix responsibility through due process, with recovery and prosecution where the law requires.", "Redesign the process: simpler rules, time limits, digital records, audits.", "Put information in the public domain and involve citizens.", "Protect honest officers who decide in good faith."],
+        traps:["Treating an inherited mess as \"not my problem\"."] },
+      links:[["Probity in Governance", "Accountability in public service"], ["Probity in Governance", "Protecting the honest decision-maker"], ["Corruption, Whistleblowing & Conflict of Interest", "Why anti-corruption measures fail"], ["Corruption, Whistleblowing & Conflict of Interest", "Vested interests behind an ordinary file"], ["Aptitude & Foundational Values for Civil Service", "The four standard objections to ethical conduct"]],
+      src:"Eight cases, 2014 to 2025" },
+    { t:"Development against the people who pay for it",
+      qs:["Q219", "Q224", "Q226", "Q227", "Q237"],
+      d:["**A project or a policy will make most people better off, but a few will pay for it.** Forest dwellers, displaced farmers, a quiet town, the rural young."],
+      dlab:"The situation",
+      secs:[
+        ["Who pays, and did they agree?", ["Development and the people who pay for it are both real. **The question is not whether to develop, but who bears the cost and whether they agreed.**"]],
+        ["Count the costs honestly", ["Count the costs honestly: the environment, livelihoods, culture, the future. **A cost left off the balance sheet does not disappear.**"]],
+        ["A say and a share", ["Those who bear the cost should have a say and a share: **consent, fair compensation, and a part of the benefit**, not a one-time cheque."]],
+        ["The trap: the false choice", ["The trap is the false choice between development and the environment. There is usually a better site, a better design, or a better deal."]]
+      ],
+      take:"Count every cost, consult those who bear it, and give them a fair share of the gain, not a one-time cheque.",
+      core:"Growth for many against costs borne by a few",
+      engine:["Count every cost", "Consult the people who bear it", "Avoid, then reduce the harm", "Compensate beyond cash", "Share the benefits", "Monitor"],
+      arch:{
+        conflict:["Economic growth against the environment.", "The welfare of the many against the rights of the few who are displaced.", "Present needs against future generations.", "The speed of projects against consent and due process."],
+        stake:["Local and tribal communities", "Displaced families", "Workers and migrants", "Industry and investors", "The state and its agencies", "Future generations", "The ecosystem itself"],
+        options:[
+          ["Proceed as planned", "Fast growth.", "Costs fall on people who did not agree; conflict and litigation follow."],
+          ["Stop the project", "Protects the environment and residents.", "Loses jobs and development the region may badly need."],
+          ["Redesign: change the site, reduce the footprint, share the benefits", "Keeps the gain and cuts the cost.", "Slower and more expensive."]],
+        criteria:["The test is whether the benefits are real and fairly shared, whether the costs were avoided where possible and compensated where not, and whether those affected had a real say. Irreversible harm needs the strongest justification."],
+        sequence:["Assess the full costs: social, environmental and economic.", "Consult the people affected, and seek consent where the law requires it.", "Look for alternatives that avoid the harm.", "Compensate fairly: land, livelihood and housing, not only cash.", "Give the local community a share in the benefits.", "Monitor independently and fix what goes wrong."],
+        traps:["Treating CSR as a substitute for consent and fair compensation."] },
+      links:[["Environmental & Development Ethics", "Development against the environment"], ["Environmental & Development Ethics", "Displacement, land and rehabilitation"], ["Social Justice, Gender & the Weaker Sections", "Migration and the invisible workforce"], ["Social Justice, Gender & the Weaker Sections", "Growth that does not reach"], ["Environmental & Development Ethics", "Environmental ethics: what is owed to nature"]],
+      src:"Five cases, 2014 to 2025" },
   ],
 };
