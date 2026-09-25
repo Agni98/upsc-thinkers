@@ -1817,5 +1817,904 @@ const GUIDES = {
    "stepsIntro": "Use the following sequence when a question concerns argument, dissent, deliberation or truth.",
    "formula": "Seek truth through honest contest. Build opposition into institutions, hear the strongest version of the other side, and be willing to lose an argument, because an idea that has never been challenged has never been tested."
   }
+ ],
+ "Character, Adversity and the Test of Power": [
+  {
+   "thinkers": [
+    [
+     "Epictetus",
+     "what is up to us",
+     [
+      "Epictetus was born into slavery and was lame for life. From that position he built the most usable ethics in the Stoic tradition. His central distinction is between what is up to us and what is not. Our judgments, intentions and responses belong to us. Our bodies, reputations and circumstances do not.",
+      "On this reading, suffering is not instructive by itself, because much of it simply causes damage. Hardship forces attention back onto the only territory a person actually governs. Bitter experience teaches where the boundary lies, and a comfortable life has no reason to reveal it."
+     ],
+     "the answer needs to explain how hardship redirects attention to what a person can control."
+    ],
+    [
+     "Marcus Aurelius",
+     "the obstacle becomes the way",
+     [
+      "Marcus Aurelius reached the same conclusion from the opposite end of fortune, as a Roman emperor. He added a more demanding claim: the obstacle to action advances the action, and what stands in the way becomes the way.",
+      "For Marcus, the obstacle is not an interruption of the work. The obstacle is material for the work. A setback becomes a lesson when a person uses it to practise patience, courage or justice."
+     ],
+     "the question asks how a setback can be turned into an opportunity for growth."
+    ],
+    [
+     "Nietzsche",
+     "absorbing suffering, and the danger of resentment",
+     [
+      "Nietzsche pushed the idea further. He argued that suffering should not be explained away but absorbed, and that a person who has a reason to live can bear almost any conditions.",
+      "His warning matters just as much. Hardship does not automatically ennoble anyone. A resentment that never becomes anything else corrodes the person carrying it. Suffering can produce strength or bitterness, and the result is not guaranteed."
+     ],
+     "the answer needs to show both the potential and the danger of hardship."
+    ],
+    [
+     "Mandela",
+     "a decision taken inside the sentence",
+     [
+      "Nelson Mandela spent twenty-seven years in prison. The imprisonment did not make him generous by itself. What turned the sentence into an education was a decision taken inside it. He learned the language of his jailers, Afrikaans, and prepared to govern alongside his opponents rather than over them.",
+      "A thorn becomes a changed bud only where something did the changing. The experience supplied the pressure. What the pressure produced was still chosen."
+     ],
+     "the question concerns resilience, reconciliation or leadership formed in adversity."
+    ],
+    [
+     "Malala",
+     "adversity amplifies what already exists",
+     [
+      "Malala Yousafzai’s case sharpens the same distinction. She had been writing and campaigning for girls’ education for years before she was shot in October 2012. The attack that nearly killed her did not give her convictions. The attack gave her a platform, not a purpose.",
+      "Adversity amplified something already formed. The same pattern appears in most lives cited as proof that hardship is good for people. An essay should therefore resist the comfortable claim that suffering creates character on its own."
+     ],
+     "the answer needs to separate the role of prior commitment from the role of hardship."
+    ]
+   ],
+   "examples": [
+    [
+     "Post-traumatic growth: what the evidence supports",
+     [
+      "Research on post-traumatic growth, developed by Richard Tedeschi and Lawrence Calhoun, finds that some people report meaningful positive change after severe adversity. They describe changed priorities, closer relationships and a greater sense of strength. The findings are real, and they are often overstated.",
+      "Much of the evidence rests on people reporting how much they have changed, which measures the story they tell rather than a measured difference. Growth is also not the typical outcome. Recovery to the earlier baseline is more common, and lasting harm is common too. Adversity can occasion growth for some people under some conditions. Adversity is not a reliable mechanism for turning suffering into strength."
+     ],
+     "Does the evidence show that hardship strengthens people, or only that some people grow after it? Separate a possible outcome from a general rule."
+    ],
+    [
+     "Failure in a one-attempt examination system",
+     [
+      "An examination system can compress a decade of effort into a few hours. Where seats are scarce, the margin between outcomes is narrow and the consequence enormous. The National Crime Records Bureau recorded more than 13,000 student suicides in 2022.",
+      "The structural feature to name is the absence of a second route. A system with lateral entry, credit transfer and several assessment points spreads risk across attempts. A system with one ranked examination concentrates it into a single day. Failure teaches only when a person can recover from it. A system that makes recovery nearly impossible turns a lesson into a catastrophe."
+     ],
+     "Is failure survivable in this system? Ask whether there is a second chance, and what failing costs."
+    ],
+    [
+     "Bankruptcy law and the right to fail and return",
+     [
+      "Before 2016, India had no unified insolvency process. A failing firm could stay in limbo for years while its assets decayed. The Insolvency and Bankruptcy Code of 2016 set a time limit, now 330 days, and shifted control to creditors.",
+      "The results are mixed. Average resolution time has stretched well beyond the limit, and overall recovery in resolved cases is about a third of admitted claims. Yet the code established that failure can be concluded rather than endured. A society that lets entrepreneurs fail, close the matter and start again allows failure to become experience rather than a permanent mark."
+     ],
+     "Does the system let people learn from failure and try again? Look at how quickly and cleanly failure can be concluded."
+    ],
+    [
+     "Odisha: a community that learned from disaster",
+     [
+      "The super cyclone of 1999 struck the Odisha coast with winds near 250 kilometres an hour and killed about ten thousand people. Warnings had been issued, but evacuation was slow. Odisha then created India’s first state disaster management authority and spent years building cyclone shelters, running drills and planning evacuation routes.",
+      "When Cyclone Phailin arrived in 2013 with comparable force, about a million people were evacuated and fewer than fifty died. The storm was not milder. The difference was the lesson drawn from 1999 and turned into investment, made when no cyclone was visible."
+     ],
+     "What turns a disaster into a lesson? Look for the investment and institutions built after the event."
+    ],
+    [
+     "Chronic deprivation as damage, not curriculum",
+     [
+      "The romantic view of hardship does real harm when it is applied to chronic poverty. Adversity that teaches is bounded, survivable and followed by recovery. Chronic deprivation has none of those features.",
+      "Research on scarcity by Sendhil Mullainathan and Eldar Shafir found that the constant mental load of managing too little reduces the capacity available for other decisions. Poverty consumes the very faculty a person would need to escape it. Childhood malnutrition and chronic stress leave effects that no later resilience undoes. Calling such hardship a teacher flatters the observer and misdescribes the person living it."
+     ],
+     "Is the hardship something a person passes through or lives inside? Separate bounded adversity from chronic deprivation."
+    ]
+   ],
+   "topics": [
+    [
+     "2025A4",
+     [
+      "Comfortable experiences rarely force us to examine ourselves. Bitter experiences do. Failure, loss and humiliation expose the limits of our control and the weaknesses we preferred not to see. Epictetus built his ethics on the distinction between what is up to us and what is not, and hardship is often what makes the distinction clear. Odisha learned from the super cyclone of 1999 what no calm year could have taught, and Phailin in 2013 showed the result.",
+      "Yet bitter experiences teach only when certain conditions are met. The person must survive the experience, have the room to reflect on it and have the support to act differently afterwards. Mandela turned prison into preparation through a deliberate choice. Nietzsche warned that the same suffering can produce resentment instead. Post-traumatic growth research shows that growth is possible but not typical.",
+      "The best lessons may come from bitter experiences, but bitter experiences do not always produce lessons. Chronic deprivation, as research on scarcity shows, can destroy the capacity to learn. The ethical conclusion is to help people pass through adversity in ways that allow reflection and recovery: second chances in education, fair bankruptcy laws and support after disaster. A society should make bitter experience survivable, not celebrate it."
+     ]
+    ],
+    [
+     "2026A3",
+     [
+      "A thorn is a changed bud. The image suggests that what protects us, or wounds others, may have grown from something tender that was forced to change. Hardship can harden a person. The hardening can become strength and protection, or it can become the sharpness that hurts others. Marcus Aurelius taught that the obstacle can become the way, and Epictetus found in slavery the ground of his philosophy.",
+      "The change is not automatic, and its direction is not fixed. Mandela entered prison as a militant and left it ready to reconcile with his jailers. The change was his choice inside the sentence. Nietzsche warned that suffering can also turn into resentment, a thorn that wounds the person who carries it. Malala’s example shows that adversity often sharpens a purpose that already existed.",
+      "The image also carries a warning for society. Many people become thorns because their buds were damaged by poverty, humiliation or violence. Understanding the history of a thorn does not excuse harm, but it explains it and points to prevention. The better response is to protect buds from the pressures that deform them, and to help people who have been hardened find ways to turn protection into strength."
+     ]
+    ]
+   ],
+   "intro": [
+    "Almost every biography of a great person includes a period of hardship: prison, exile, illness or failure. Readers draw the lesson that suffering builds character. Yet for every person strengthened by hardship, many more are simply damaged by it. The question is what adversity can actually teach, under what conditions, and who decides what a painful experience becomes."
+   ],
+   "claim": "Suffering is not a teacher by itself. Hardship teaches only when a person has the room and the resources to reflect on it and to choose a response. Bitter experience can reveal what lies within our control, but what it produces is still decided by the person who lives through it. A society should support people through adversity rather than praise hardship as good for them.",
+   "problem": [
+    "The belief that suffering builds character is comforting for those who have come through hardship and convenient for those who have not faced it. The belief can turn a failure into a story of growth and a struggle into a source of pride. At its best, the belief gives people courage to face difficulty rather than to avoid it.",
+    "At its worst, the same belief excuses neglect. If hardship is good for people, then poverty, harsh examination systems and chronic stress can be described as training rather than as harm. Much adversity does not teach. Much adversity only wounds, and the wound limits the capacity to learn. The ethical question is how to recognise the conditions under which bitter experience becomes a lesson, and how to avoid romanticising suffering that should be prevented."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Adversity that a person passes through, such as a failed venture or an examination not cleared, can teach because it is bounded and followed by recovery. Deprivation that a person lives inside, such as chronic poverty or malnutrition, consumes the capacities needed to learn from it. Calling the second a teacher misdescribes it."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of adversity",
+   "together": [
+    "Putting the five together",
+    "Epictetus shows that hardship reveals the boundary of what we control. Marcus Aurelius shows how an obstacle can become material for action. Nietzsche warns that suffering can breed resentment as easily as strength. Mandela shows that a choice made inside hardship decides what it produces. Malala shows that adversity often amplifies what was already there. Together they turn “suffering teaches” into “suffering can teach, under conditions”."
+   ],
+   "examplesIntro": "The examples below test the claim against evidence and against real systems. They are most useful when the answer asks what conditions turned hardship into learning.",
+   "models": [
+    [
+     "Suffering does not teach by itself.",
+     "Epictetus showed that hardship can reveal the boundary between what is up to us and what is not. But much suffering only damages. The lesson depends on reflection, support and the chance to act differently."
+    ],
+    [
+     "The response is chosen.",
+     "Mandela spent twenty-seven years in prison. What turned the sentence into preparation was a decision to learn his jailers’ language and to govern with his opponents. Adversity supplies pressure. The person decides what it produces."
+    ],
+    [
+     "Hardship can breed resentment.",
+     "Nietzsche warned that suffering which never becomes anything else corrodes the person carrying it. An honest essay should admit that hardship can make people bitter as easily as it can make them strong."
+    ],
+    [
+     "Systems must make failure survivable.",
+     "A one-attempt examination and a slow insolvency process turn failure into catastrophe. Second chances, lateral entry and quick resolution of bankruptcy let failure become experience."
+    ],
+    [
+     "Deprivation is damage, not a curriculum.",
+     "Research on scarcity shows that chronic poverty consumes the mental capacity needed to escape it. Praising hardship for its lessons misdescribes the lives of people who live inside deprivation."
+    ]
+   ],
+   "steps": [
+    [
+     "Acknowledge what hardship can teach.",
+     "Use Epictetus or Marcus Aurelius to show how adversity reveals what is within our control."
+    ],
+    [
+     "Set the conditions.",
+     "Explain that learning depends on survival, reflection, support and the chance to try again."
+    ],
+    [
+     "Show the choice inside hardship.",
+     "Use Mandela or Malala to show that the response, not the suffering, shapes the outcome."
+    ],
+    [
+     "Admit the risk of resentment.",
+     "Bring in Nietzsche’s warning that hardship can corrode as well as strengthen."
+    ],
+    [
+     "Distinguish adversity from deprivation.",
+     "Separate bounded setbacks from chronic poverty and use the research on scarcity."
+    ],
+    [
+     "Apply to institutions.",
+     "Discuss examinations, bankruptcy law or disaster management as systems that make failure survivable or not."
+    ],
+    [
+     "Conclude with responsibility.",
+     "Argue that society should make hardship survivable rather than praise it."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns failure, hardship or the lessons of adversity.",
+   "formula": "Treat adversity as a possible teacher, not a guaranteed one. The lesson depends on the response a person chooses and on the support that makes recovery possible, so build systems that make failure survivable and never mistake deprivation for education."
+  },
+  {
+   "thinkers": [
+    [
+     "Vivekananda",
+     "strength as a practice",
+     [
+      "Vivekananda told Indians to arise, awake and stop not till the goal is reached. He was addressing a people he believed had been made timid by circumstance. His diagnosis was blunt: the greatest sin is to think yourself weak.",
+      "For Vivekananda, strength was a practice rather than a temperament. A life organised around avoiding risk trains exactly the weakness it fears. A ship kept in harbour is preserved and, at the same time, prevented from being a ship."
+     ],
+     "the answer needs an Indian voice on courage, self-belief and purpose."
+    ],
+    [
+     "Nietzsche",
+     "the last man and the conditions of creation",
+     [
+      "Nietzsche criticised what he called the last man, who is comfortable and cautious and believes he has invented happiness. His objection was not that comfort is wrong. His objection was that a life arranged to remove all danger also removes the conditions under which anything is created.",
+      "When Nietzsche wrote about living dangerously, he meant creative work, not recklessness. The danger he valued was the risk of attempting something new."
+     ],
+     "the question concerns creativity, ambition or the cost of complacency."
+    ],
+    [
+     "Kalam",
+     "institutions that can absorb failure",
+     [
+      "Kalam’s account of the SLV-3 programme shows the same principle inside an institution. The first launch, in 1979, ended in the sea. The programme continued, and the next launch in 1980 succeeded.",
+      "A launch that fails is a cost that serious technological ambition must be able to absorb. An organisation that cannot absorb such a cost will never attempt anything worth the risk."
+     ],
+     "the answer concerns institutions, innovation or research."
+    ],
+    [
+     "Bose",
+     "the contested gamble",
+     [
+      "Subhas Chandra Bose is the harder case, and he is useful because his example cuts both ways. He chose to raise an army abroad rather than wait for a negotiated transfer of power. The decision accepted risks that a cautious reading of the situation would have refused.",
+      "The historical verdict on Bose is still contested. His case shows that boldness is not self-justifying. A risk can be admired for its courage and questioned for its judgment at the same time."
+     ],
+     "the question needs an example of bold risk whose wisdom remains debated."
+    ],
+    [
+     "Camus",
+     "acting without guarantees",
+     [
+      "Albert Camus described the absurd hero, who acts fully in a universe that guarantees nothing. For Camus, the value lies in the acting, not in any promise of arrival.",
+      "Purpose, on this account, is not a prediction of success. Purpose is a reason to leave the harbour that survives the discovery that the sea is indifferent. Camus keeps the argument for risk from becoming mere adventure."
+     ],
+     "the answer needs to show how purpose can justify effort even when success is uncertain."
+    ]
+   ],
+   "examples": [
+    [
+     "Startup failure and the second chance",
+     [
+      "Most new ventures fail. In a working risk economy, failure is expected: capital is spread across many attempts in the expectation that a few will more than cover the rest. What matters is not the failure rate but what failure costs the person.",
+      "Where a failed founder becomes unemployable, where family credit was pledged, and where insolvency carries lasting stigma, the rational choice is not to try. India’s attitudes have shifted as venture capital has come to expect failures in its portfolio, as the insolvency process has begun to conclude cases, and as founders have become visible making second and third attempts. Attitudes follow the availability of a second chance more than they precede it."
+     ],
+     "What does failure cost the person who tries? Look at stigma, debt and the chance to try again."
+    ],
+    [
+     "The civil service as harbour",
+     [
+      "A secure career with tenure, defined progression and protection from dismissal produces exactly the behaviour it is designed to produce. Where promotion runs largely on seniority, and the penalty for a failed decision is far larger than the reward for a successful one, the rational officer minimises exposure.",
+      "The claim is about incentives, not character. The loss is hard to see: not visible failures, but initiatives never attempted, which appear in no record. Reform has to address the imbalance directly, by protecting honest decisions that fail and by making a record of initiative count at promotion."
+     ],
+     "Does the institution punish failed attempts more than it rewards successful ones? Ask what initiatives are never tried."
+    ],
+    [
+     "Non-linear careers and the straight line",
+     [
+      "A non-linear career is punished twice. Formal systems ask for continuous service and treat a gap as a defect. Family expectation treats a change of path as a risk borne by everyone. Both responses were rational when one secure job supported an extended household and a lost year could not be recovered.",
+      "Both are less rational when work changes faster than a syllabus and the ability to retrain matters more than unbroken tenure. The freedom to wander is also unequally shared. A gap year is an investment for a family with savings and a gamble for one without. An essay that celebrates wandering should say who can afford it."
+     ],
+     "Who can afford to wander? Consider the safety net that makes exploration possible."
+    ],
+    [
+     "Regulatory sandboxes: permission to fail safely",
+     [
+      "A regulator faces a real dilemma. Approving an untested product risks harm to consumers, and refusing everything untested prevents innovation. A sandbox resolves the dilemma by limiting the possible failure rather than preventing it.",
+      "The Reserve Bank’s sandbox framework, introduced in 2019, lets a small group of firms test products with real customers under supervision, with limits on scale and duration. The first group, on retail payments, began in November 2019, and six firms completed testing. Safety and experiment stop being opposites once the size of the possible loss is capped in advance."
+     ],
+     "Can the risk be bounded so that failure is affordable? Look for limits on scale, duration and harm."
+    ],
+    [
+     "Recklessness with other people’s money and lives",
+     [
+      "The argument for risk has a boundary. Risk-taking is admirable when the person taking it bears the downside. Risk-taking becomes something else when the gain is private and the loss falls on people who never agreed to it.",
+      "A trader with a bonus that pays on gains but not losses, a builder saving money on structural steel, or a firm running a plant beyond its safety limits all take risks whose costs land on others. The financial crisis of 2008 is the standing example of private gains and public losses. The test is not whether an actor is bold, but whether the person taking the risk pays if it fails."
+     ],
+     "Who pays if the risk fails? Separate courage that bears its own cost from recklessness that shifts it."
+    ]
+   ],
+   "topics": [
+    [
+     "2022A4",
+     [
+      "A ship in harbour is safe, but it has stopped being a ship. The saying applies to people and institutions alike. A life organised only to avoid failure never discovers what it could have done. Vivekananda warned that thinking oneself weak is the greatest error, and Nietzsche argued that a life with all danger removed also loses the conditions for creation. Kalam’s SLV-3 programme succeeded because the institution could absorb the failure of its first launch.",
+      "Institutions often reward the harbour. A civil servant who takes no risk rarely suffers, while one who attempts something new and fails may be punished. The resulting loss is invisible, because nobody records the initiative never attempted. Regulatory sandboxes and fair insolvency laws show how systems can make purposeful risk affordable by limiting the possible loss.",
+      "The saying does not justify every departure from safety. A ship that sails without purpose, charts or seaworthiness is not fulfilling its function but endangering its crew. The 2008 financial crisis showed what happens when risks are taken with other people’s money. A ship is for voyages, and a voyage has a destination and a responsible captain. Purposeful risk, borne by those who take it, is what the ship is for."
+     ]
+    ],
+    [
+     "2023A3",
+     [
+      "Wandering is often treated as failure: a gap in a career, a change of subject or an unplanned journey. Yet many discoveries have come from paths that were not planned. A person exploring different fields may find a combination nobody else has seen. A career with turns may produce wider judgment than a straight line. Camus described a way of acting fully without a guarantee of arrival, and Nietzsche valued the risk of attempting something new.",
+      "Not all who wander are lost, but some are. The distinction lies in purpose. A wanderer who can say what they are looking for, even if they do not know where they will find it, is exploring. A wanderer who moves only to avoid commitment is drifting. The test is whether the person could have explained, before setting out, what the journey was for.",
+      "The freedom to wander is also unequally distributed. A gap year is an investment for a family with a cushion and a gamble for one without. Social and institutional systems that punish any departure from the straight line waste talent, but a society that praises wandering must also provide the safety net that makes it possible. Otherwise the freedom to explore belongs only to those who can afford to be lost."
+     ]
+    ]
+   ],
+   "intro": [
+    "Every person and institution faces a choice between safety and purpose. Staying safe avoids loss, but it can also mean never attempting what one exists to do. Taking risks can create, discover and lead, but it can also waste resources or endanger others. The question is when exposure to risk fulfils a purpose, and when it becomes recklessness or aimless wandering."
+   ],
+   "claim": "A life or institution organised only to avoid risk loses its purpose. A ship kept in harbour is preserved but prevented from being a ship. Yet risk is admirable only when it serves a purpose that could be stated in advance and when the person taking it bears its cost. Wandering can be exploration or drift. The difference lies in whether the traveller knows what the voyage is for.",
+   "problem": [
+    "Security is valuable. Families seek stable careers, governments seek safe policies, and institutions seek to avoid scandal. The preference for safety is rational, because the cost of failure is visible while the cost of never trying is hidden. Nobody records the initiative never attempted, the business never started or the research never funded.",
+    "Risk-taking has its own dangers. A bold decision with other people’s money, safety or lives is not courage. The financial crisis of 2008 showed how gains can be kept private while losses are shifted onto the public. The ethical question is how to encourage exposure that serves a purpose, while making sure that the person taking the risk is the person who pays if it fails."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Exposure undertaken for a purpose is voyage: it can say, before setting out, what it seeks. Movement mistaken for progress is drift: it has direction only in hindsight. Risk borne by the person taking it is courage. Risk shifted onto others is recklessness."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of risk and purpose",
+   "together": [
+    "Putting the five together",
+    "Vivekananda makes strength a practice. Nietzsche shows that removing all danger removes creation. Kalam shows that institutions must be able to absorb failure. Bose shows that bold risk remains open to judgment. Camus explains why purpose, not a guarantee of success, justifies leaving the harbour. Together they define courage as purposeful exposure, not mere daring."
+   ],
+   "examplesIntro": "The examples below show systems that encourage purposeful risk, systems that discourage it, and the limit where risk becomes recklessness. They are most useful when the answer asks who bears the cost of failure.",
+   "models": [
+    [
+     "Safety can defeat purpose.",
+     "A ship kept in harbour is preserved but prevented from being a ship. Vivekananda taught that a life organised around avoiding risk trains the weakness it fears. Purpose requires exposure."
+    ],
+    [
+     "Institutions must absorb failure.",
+     "Kalam’s SLV-3 programme succeeded after its first launch failed. An organisation that cannot absorb such losses will never attempt anything worth the risk."
+    ],
+    [
+     "Risk must be borne by the risk-taker.",
+     "Courage means accepting the downside of one’s own decision. Risk that places gains in private hands and losses on others, as in the 2008 financial crisis, is recklessness."
+    ],
+    [
+     "Bounded failure makes innovation possible.",
+     "Regulatory sandboxes limit the scale and duration of experiments so that failure is affordable. Safety and innovation stop being opposites once the possible loss is capped in advance."
+    ],
+    [
+     "Wandering needs purpose and a safety net.",
+     "Exploration differs from drift because it can say what it seeks. Yet the freedom to wander is unequally shared, so a society that values exploration must make it affordable."
+    ]
+   ],
+   "steps": [
+    [
+     "Name the purpose.",
+     "State what the person or institution exists to do."
+    ],
+    [
+     "Identify the cost of safety.",
+     "Show what is lost when risk is avoided, including initiatives never attempted."
+    ],
+    [
+     "Identify the cost of risk.",
+     "Show what could be lost if the attempt fails."
+    ],
+    [
+     "Ask who bears the cost.",
+     "Separate risks borne by the risk-taker from those shifted onto others."
+    ],
+    [
+     "Bound the risk.",
+     "Suggest ways to cap possible losses, such as pilots, sandboxes or phased decisions."
+    ],
+    [
+     "Protect honest failure.",
+     "Recommend institutional support for failed attempts made in good faith."
+    ],
+    [
+     "Conclude with purpose.",
+     "Argue for exposure that serves a stated purpose and is borne responsibly."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns risk, safety, exploration or purpose.",
+   "formula": "Leave the harbour when the voyage has a purpose, the risk is bounded, and the person taking it bears the cost. Build institutions that absorb honest failure, and do not mistake drift or recklessness for courage."
+  },
+  {
+   "thinkers": [
+    [
+     "Gandhi",
+     "experiments with truth",
+     [
+      "Gandhi described his life as a series of experiments with truth. The phrase was about self-audit rather than modesty. He published his failures, his obsessions and his errors of judgment. He believed that a public life not continually examined from the inside will be corrupted from the inside.",
+      "His clearest demonstration came in February 1922. After a crowd at Chauri Chaura set fire to a police station and killed the policemen inside, he suspended the Non-Cooperation Movement at enormous political cost. The threat he acted against was internal to his own side."
+     ],
+     "the answer needs an example of self-correction by a leader, or of acting against a fault within one’s own movement."
+    ],
+    [
+     "Marcus Aurelius",
+     "the emperor who corrected himself",
+     [
+      "Marcus Aurelius wrote the Meditations to himself, at night, on military campaign. He was an emperor with nobody left who could safely correct him, which is exactly the condition under which internal decay begins.",
+      "His method was to question his own impressions before acting on them. He believed that the judgment a person adds to an event does more harm than the event itself. Self-examination was his substitute for the correction that power had removed."
+     ],
+     "the question concerns self-discipline, reflection or leadership without external checks."
+    ],
+    [
+     "Aristotle",
+     "virtue as habit",
+     [
+      "Aristotle explains why integrity has to be a habit rather than an occasional effort. Virtue is a settled disposition built by repetition. We become just by doing just acts and brave by doing brave acts.",
+      "The courage to accept a fault is therefore a practised capacity, not a mood that arrives when needed. A person who has never practised admitting small errors will not suddenly admit a large one."
+     ],
+     "the answer needs to show that integrity is built by repeated practice."
+    ],
+    [
+     "Ambedkar",
+     "hero-worship as the road to degradation",
+     [
+      "Ambedkar completes the picture from the side of institutions. In his speech to the Constituent Assembly on 25 November 1949, he warned that hero-worship in politics is a sure road to degradation and eventual dictatorship.",
+      "Devotion to a person removes the correction that keeps an organisation honest. An institution whose members cannot criticise its leader has lost its ability to find its own faults."
+     ],
+     "the question concerns democratic institutions, personality cults or the need for internal criticism."
+    ],
+    [
+     "Thoreau",
+     "an inventory of conscience",
+     [
+      "Thoreau gives the individual version of the discipline. His withdrawal to Walden Pond was an experiment in reducing life to its essentials to find out what he was actually living for.",
+      "His refusal to pay a poll tax to a government that supported slavery followed from the same audit. A conscience that has never been examined cannot be relied on under pressure."
+     ],
+     "the answer needs to show personal self-examination as the basis of integrity."
+    ]
+   ],
+   "examples": [
+    [
+     "Integrity institutions and their dependence",
+     [
+      "India has built a substantial structure for integrity. The Central Vigilance Commission received statutory status in 2003. The Lokpal and Lokayuktas Act was passed in 2013 after the anti-corruption movement of 2011. Every department has vigilance officers.",
+      "The recurring weakness is not the absence of institutions but their dependence. A body whose appointments, budget and staff are controlled by the executive it examines is constrained, however capable its members. The useful questions are practical. Who appoints the members? Is the budget secure? Can the body investigate without prior sanction? The answers predict performance better than any mandate."
+     ],
+     "Is the watchdog independent of the body it watches? Examine appointments, budget and powers."
+    ],
+    [
+     "Whistleblowers and a law never brought into force",
+     [
+      "Satyendra Dubey, an engineer with the National Highways Authority of India, wrote to the Prime Minister’s Office about corruption in a highway project and asked that his identity be protected. His letter was circulated with his name attached, and he was murdered in November 2003.",
+      "Parliament passed the Whistle Blowers Protection Act in 2014. The Act has never been brought into force, because the government said it needed amendment first. An amendment bill introduced in 2015 passed the Lok Sabha and then lapsed. The result is a law that exists, is cited and protects nobody."
+     ],
+     "Can people inside the system report a breach safely? Look at whether protections operate, not only whether they exist."
+    ],
+    [
+     "Corporate failures seen early from inside",
+     [
+      "Corporate collapses are rarely sudden to the people closest to them. Satyam Computer Services collapsed in January 2009 when its chairman admitted that the accounts had been falsified for years. The company had well-regarded independent directors and a large external auditor.",
+      "IL&FS defaulted in 2018 and triggered a wider credit freeze, yet it carried high credit ratings until shortly before it failed. In both cases, the people positioned to raise the alarm were paid, appointed or rated by the entity they were assessing. Independence written into a charter is not the same as independence created by structure."
+     ],
+     "Are the people who check an organisation paid or appointed by it? Look for conflicts in the structure of oversight."
+    ],
+    [
+     "Reform recommended but not adopted",
+     [
+      "The Second Administrative Reforms Commission submitted its fourth report, on ethics in governance, in January 2007. Parts were adopted. The Lokpal Act drew on its blueprint, and the Whistle Blowers Protection Act echoed its call to protect those who report wrongdoing.",
+      "Many other recommendations were not implemented, especially those on security of tenure for officers and discretion in transfers and postings. The pattern is worth naming. Recommendations that create new bodies tend to be adopted. Recommendations that limit the discretion of those who would have to adopt them tend not to be."
+     ],
+     "Which reforms are adopted and which are ignored? Ask whether a reform limits the power of those who must approve it."
+    ],
+    [
+     "External shocks and internal condition",
+     [
+      "Not every failure is a failure of character. A pandemic, a war or a sudden reversal in global capital flows comes from outside, whatever an institution’s internal condition. Treating every disaster as proof of internal decay is unfair.",
+      "Internal condition, however, decides what a shock does. The super cyclone of 1999 killed about ten thousand people in Odisha. Cyclone Phailin in 2013, of comparable force, killed fewer than fifty. The storm was external. The difference was internal preparation. Integrity does not prevent a shock, but it decides the size of the hole the shock makes."
+     ],
+     "How much of the damage came from the shock and how much from internal weakness? Compare similar shocks in different conditions."
+    ]
+   ],
+   "topics": [
+    [
+     "2020A3",
+     [
+      "Ships are built to live in water. The water around them is not a threat but a condition of their work. A ship sinks when water gets inside through a breach that was not repaired. The same is true of people and institutions. Pressure, competition and criticism are permanent conditions. What destroys a career, a company or a republic is usually a compromise tolerated from within: a falsified account, an ignored warning or a leader nobody dares to correct.",
+      "Satyam and IL&FS failed not because of the market around them but because of what was hidden inside them. The Whistle Blowers Protection Act, passed in 2014 but never brought into force, shows how a society can build a pump and never switch it on. Ambedkar warned that hero-worship removes the correction that keeps institutions honest, and Gandhi suspended his own movement after Chauri Chaura because he saw the breach on his own side.",
+      "External shocks are still real, and a fair essay should say so. Yet even then, internal condition decides how much damage a shock can do. Odisha’s preparation after 1999 turned a similar storm in 2013 into a far smaller disaster. The lesson is to keep watch on the hull, to protect those who report leaks and to repair small breaches before they become fatal."
+     ]
+    ],
+    [
+     "2019A4",
+     [
+      "Success is often attributed to talent or luck. Yet a large part of it depends on two moral capacities: the courage to accept one’s own faults and the dedication to correct them. Without the first, a person cannot see what must change. Without the second, the recognition produces only regret. Gandhi published his errors and called his life a series of experiments with truth. Marcus Aurelius examined his own judgments each night.",
+      "Aristotle explains why these capacities must be practised. Virtue is a habit, and a person who never admits small mistakes will not admit large ones. Institutions need the same habits. An organisation that hides failures, punishes whistleblowers or worships its leader cannot improve. Kalam’s ISRO learned from the first SLV-3 failure because it reviewed the failure openly.",
+      "Acceptance must not become resignation. Accepting a fault means acknowledging it honestly, not deciding it cannot change. Dedication must also be sustained, because improvement is slow and setbacks are common. Together, the two capacities turn failure into learning. They are keys to success because they allow a person or institution to find the leak in the hull and repair it before it sinks the ship."
+     ]
+    ]
+   ],
+   "intro": [
+    "When institutions, careers or nations fail, the first explanation offered is usually external: an enemy, a crisis, the market or bad luck. Yet the decisive weakness is often internal. A small compromise is tolerated, a warning is ignored, and a flaw that everyone can see goes unnamed. The question is why internal decay is so dangerous, and what habits and institutions allow a person or organisation to find and repair the leak in time."
+   ],
+   "claim": "External pressure is a permanent condition. What decides whether a ship, a person or a republic survives is the breach that gets inside. Integrity therefore depends on continuous self-examination and on institutions that can name faults without fear. The courage to accept a fault and the dedication to improve are the two halves of naming a breach in time. External shocks are real, but internal condition decides how much damage they do.",
+   "problem": [
+    "Internal decay is hard to see because it grows slowly and because naming it is costly. A junior officer who reports wrongdoing risks a career. An auditor paid by the firm being audited has reasons to look away. A leader surrounded by admirers hears fewer corrections. Each small compromise seems too minor to justify a fight, and the pattern becomes visible only when it is too late.",
+    "The opposite error is to blame every failure on character. Pandemics, wars and market crashes come from outside and would arrive whatever the internal condition of an institution. An argument that treats every disaster as evidence of internal rot is unfair and useless for analysis. The task is to separate the shock from the damage and to ask what internal condition made the damage worse."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Water around the hull is the external condition: pressure, competition and crisis. Water inside the hull is internal failure: a tolerated compromise, an ignored warning or a captured regulator. The first cannot be removed. The second can be found and repaired, if someone is allowed to name it."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of integrity",
+   "together": [
+    "Putting the five together",
+    "Gandhi and Marcus Aurelius show leaders examining themselves when nobody else can. Aristotle explains that the capacity to admit fault is built by habit. Ambedkar shows how hero-worship removes an institution’s ability to correct itself. Thoreau shows the personal inventory on which conscience rests. Together they explain why the leak must be found from inside."
+   ],
+   "examplesIntro": "The examples below show institutions built to find internal breaches and the reasons they often fail. They are most useful when the answer asks who is allowed, and protected, to name the fault.",
+   "models": [
+    [
+     "Internal breaches sink ships.",
+     "External pressure is a permanent condition, and no ship sinks because of the water around it. Failure usually comes from a tolerated compromise inside: a falsified account, an ignored warning or an unchecked leader."
+    ],
+    [
+     "Self-examination is a discipline.",
+     "Gandhi published his failures and suspended his movement after Chauri Chaura. Marcus Aurelius examined his own judgments nightly. Leaders who cannot be corrected by others must learn to correct themselves."
+    ],
+    [
+     "Integrity is a habit.",
+     "Aristotle held that virtue is formed by repeated action. The courage to admit a fault is practised in small matters before it is needed in large ones."
+    ],
+    [
+     "Oversight must be independent.",
+     "Watchdogs controlled by those they watch, and auditors paid by those they audit, cannot name a breach reliably. The Whistle Blowers Protection Act, never brought into force, shows the gap between enacting a safeguard and operating it."
+    ],
+    [
+     "Internal condition decides the damage of a shock.",
+     "Odisha’s preparation after the 1999 super cyclone greatly reduced deaths from Cyclone Phailin in 2013. External shocks cannot always be prevented, but internal strength decides how much harm they do."
+    ]
+   ],
+   "steps": [
+    [
+     "Separate external pressure from internal breach.",
+     "Identify what comes from outside and what is a weakness within."
+    ],
+    [
+     "Name the breach.",
+     "State the compromise, conflict of interest or ignored warning."
+    ],
+    [
+     "Ask why it went unnamed.",
+     "Examine fear, dependence, hero-worship or conflicts in oversight."
+    ],
+    [
+     "Show the value of self-examination.",
+     "Use Gandhi, Marcus Aurelius or Thoreau."
+    ],
+    [
+     "Examine institutional safeguards.",
+     "Discuss whistleblower protection, vigilance bodies and independent audit."
+    ],
+    [
+     "Acknowledge external shocks.",
+     "Show that internal condition decides the size of the damage."
+    ],
+    [
+     "Conclude with habits of correction.",
+     "Recommend the personal and institutional habits that find and repair breaches early."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns integrity, internal decay or self-improvement.",
+   "formula": "Treat external pressure as a condition and internal compromise as the real danger. Build the habit of self-examination, protect those who name faults, make oversight independent, and repair small breaches before they sink the ship."
+  },
+  {
+   "thinkers": [
+    [
+     "Aristotle",
+     "power removes the restraint that habit relied on",
+     [
+      "Aristotle explains why the test is uneven. Character is formed by habit, and adversity pushes a person towards restraint, because circumstances supply the restraint. Power removes it.",
+      "A person holding office faces fewer consequences for self-indulgence, hears fewer corrections and meets more reasons to believe flattery. The disposition that survived adversity may never have been tested where it matters. Practical wisdom is the capacity to judge rightly in particular circumstances, and its absence becomes visible under power, where nothing external forces the right answer."
+     ],
+     "the answer needs to explain why power tests character more deeply than hardship."
+    ],
+    [
+     "Machiavelli",
+     "the demands of office",
+     [
+      "Machiavelli refuses the comfortable reading. He observed that a ruler who judges every act by the standards of private morality may be indulging his own conscience at the public’s expense. The demands of office are genuinely different from the demands of private life.",
+      "Machiavelli makes the question harder, not easier. A person in power is not merely tempted. A person in power is supplied with reasons that sound legitimate. The task is to tell a real public necessity from a self-serving excuse."
+     ],
+     "the question involves the tension between public duty and private morality, or the justifications offered for power."
+    ],
+    [
+     "Arendt",
+     "power without thinking",
+     [
+      "Hannah Arendt identified the modern form of failure. At his trial in Jerusalem in 1961, Adolf Eichmann struck her as frighteningly ordinary. He was not a monster but a man who had stopped thinking, who processed and complied and never asked what he was doing.",
+      "The banality of evil describes power exercised without the inner examination that would have interrupted it. Arendt’s warning applies to administrators as much as to rulers."
+     ],
+     "the answer concerns bureaucratic power, obedience or the failure to reflect on routine decisions."
+    ],
+    [
+     "Mandela",
+     "restraint at the height of power",
+     [
+      "Nelson Mandela’s first acts as President ran the other way. He kept many of his predecessors’ staff, formed a Government of National Unity and declined the retribution his mandate could easily have carried.",
+      "He served a single term and stepped down in 1999 while fully capable of winning again. Mandela passed the examination of power by using it with restraint and giving it up voluntarily."
+     ],
+     "the question needs an example of power used with restraint and surrendered willingly."
+    ],
+    [
+     "Weber",
+     "the ethic of responsibility",
+     [
+      "Max Weber gives the administrator a usable form of the argument. An ethic of conviction judges an act by the purity of the intention behind it. An ethic of responsibility judges it by its foreseeable consequences, including the ones the actor would rather not foresee.",
+      "Office demands the second ethic. Power tempts a person to be satisfied with good intentions, and Weber insists that the holder of power must answer for results."
+     ],
+     "the answer needs to show how a public official should judge their own decisions."
+    ]
+   ],
+   "examples": [
+    [
+     "Constitutional checks and their timing",
+     [
+      "The test of a check is what happens when it is used against a government with a large majority. The Comptroller and Auditor General is a constitutional office with security of tenure, and its reports have started national debates. But its work is retrospective. A report that arrives three years after the money is spent constrains a successor more than the incumbent.",
+      "Judicial review is the strongest check, and it works on the court’s timetable. A matter that takes years to reach hearing may be decided after the policy has done its work. Timing, not authority, is where these checks usually weaken."
+     ],
+     "Does the check operate while power is being used, or only afterwards? Look at timing as well as legal authority."
+    ],
+    [
+     "Milgram, Zimbardo and situational obedience",
+     [
+      "Two famous studies stand very differently. Stanley Milgram’s obedience findings have held up reasonably well. Jerry Burger’s partial replication in 2009, stopped at the 150-volt point, found obedience only slightly lower than Milgram had recorded decades earlier.",
+      "Philip Zimbardo’s Stanford prison experiment has not held up. Archival work shows guards were coached towards harshness, and the BBC prison study of 2002 found participants reluctant to assert authority at all. The safe use is to cite Milgram for situational obedience and Zimbardo as a caution about how a compelling story can outlive its evidence."
+     ],
+     "How strongly do situations shape the use of power? Use evidence that has survived replication."
+    ],
+    [
+     "Electoral bonds and power that need not explain itself",
+     [
+      "On 15 February 2024, a five-judge Constitution Bench unanimously struck down the electoral bonds scheme. The Court held that anonymous political funding violated the voter’s right to information under Article 19(1)(a). The Court directed the State Bank of India to disclose purchases made since 12 April 2019, and the Election Commission to publish the data.",
+      "The reasoning is the useful part. The right at stake was the voter’s capacity to judge. A voter who cannot see who funded a party cannot assess whose interest a policy serves. Opacity is not a neutral administrative choice. Opacity moves power away from the people entitled to judge its use."
+     ],
+     "Does power have to disclose where it comes from? Ask who can evaluate its use and with what information."
+    ],
+    [
+     "Discretion in transfers, postings and licences",
+     [
+      "Discretion is where power is exercised with the least visibility. A transfer, a posting, an allotment, a licence or a clearance is a small decision, rarely reasoned in writing, seldom challenged and almost never aggregated into a record anyone examines.",
+      "No single decision is large enough to attract scrutiny, while the pattern across hundreds of decisions can be decisive. The remedy is well understood. Publish criteria in advance, record reasons, fix tenure so that transfers cannot be used as punishment, and make the overall pattern visible. Discretion cannot be abolished without paralysing administration, but it can be made to leave a trace."
+     ],
+     "Does the use of discretion leave a record? Look for published criteria, recorded reasons and visible patterns."
+    ],
+    [
+     "Leaders who gave up power",
+     [
+      "Cincinnatus is the founding story. Appointed dictator of Rome to meet a military emergency, he is said to have resigned and returned to his farm once the crisis passed. George Washington declined a third term, setting a limit by practice. Nelson Mandela served one term as President of South Africa and stepped down in 1999.",
+      "Each surrendered power before being required to. Adversity tests whether a person can endure. Office tests whether they can stop, and the second test is failed far more often."
+     ],
+     "Can the holder of power let it go? Treat voluntary surrender of power as the clearest evidence of character."
+    ]
+   ],
+   "topics": [
+    [
+     "2024B2",
+     [
+      "Adversity is hard, but it offers few choices. A person in hardship is restrained by circumstance: there is little to abuse and little room to indulge. Aristotle’s account of character as habit explains why restraint in adversity may prove little. The restraint was supplied from outside. Power removes those external limits. The person in office faces fewer corrections, more flattery and many private opportunities, and each choice can be justified as necessary.",
+      "Machiavelli shows why the test is subtle. Power supplies reasons as well as temptations, and some of those reasons are real. The demands of office do differ from private life. Arendt shows a different failure: power exercised by people who stop thinking about what their routines do. Weber offers the standard: an official must judge actions by their foreseeable consequences and not only by good intentions. Milgram’s findings on obedience show how readily ordinary people follow authority, which is why the character of those who hold authority matters.",
+      "Character alone is not a sufficient safeguard, however. Institutions must test power continuously. Disclosure rules, such as those upheld in the electoral bonds judgment, make power explain its sources. Recorded reasons make discretion leave a trace. Independent audit and judicial review make it answerable, though timing often weakens them. The final test is surrender. Cincinnatus, Washington and Mandela gave up power before they were required to. Nearly all can stand adversity, but the character revealed by power is the one that was really there."
+     ]
+    ]
+   ],
+   "intro": [
+    "Adversity is often called the great test of character. Yet adversity limits choice: a person in hardship often has little room to behave badly. Power removes those limits. The person in office can act on impulse, reward flatterers, punish critics and hide mistakes, often with plausible reasons. The question is why power is the more revealing test, and what habits and institutions help people pass it."
+   ],
+   "claim": "Power is the real examination of character because it offers choices that adversity does not. Adversity supplies restraint from outside. Power removes restraint and supplies justifications. The character that emerges under power is the one that was actually there. Passing the test requires both personal virtue and institutions that make power explain itself, leave a trace and give way when its time is over.",
+   "problem": [
+    "Many people behave well when they have little power. They are restrained by rules, by scarcity and by the judgment of others. When they gain power, the restraints loosen. Fewer people correct them, more people flatter them, and many decisions can be taken in private. Small indulgences become easy, and each can be justified as necessary for the public good.",
+    "The difficulty is that the demands of office are also real. A leader must sometimes act in ways that private morality would question, and must accept responsibility for consequences that nobody could fully foresee. The ethical question is how to distinguish legitimate exercise of power from self-serving use of it, and how to build institutions that test power continuously rather than trusting character alone."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Adversity tests endurance: whether a person can bear what they cannot change. Power tests restraint: whether a person will refrain from what they could easily do. The second test is harder because it is taken repeatedly, in private, with reasons available for failing it."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of power",
+   "together": [
+    "Putting the five together",
+    "Aristotle explains why power removes the restraint adversity supplied. Machiavelli shows that power also supplies plausible reasons. Arendt shows how power can be exercised without thought. Mandela shows restraint and voluntary surrender. Weber gives the ethic that office requires. Together they explain why power, not adversity, reveals character."
+   ],
+   "examplesIntro": "The examples below show checks on power, the evidence on obedience, and leaders who passed the test. They are most useful when the answer asks whether power must explain itself.",
+   "models": [
+    [
+     "Adversity restrains and power releases.",
+     "Adversity supplies restraint from outside, so good behaviour under hardship may prove little. Power removes external limits and reveals the character that was actually there."
+    ],
+    [
+     "Power supplies justifications.",
+     "Machiavelli showed that the demands of office differ from private morality. The danger is not only temptation but plausible reasons for self-serving acts. A leader must tell public necessity from personal convenience."
+    ],
+    [
+     "Thoughtless power is dangerous.",
+     "Arendt found Eichmann ordinary: a man who stopped thinking about what he did. Power exercised without reflection can produce great harm without dramatic wickedness."
+    ],
+    [
+     "Institutions must make power explain itself.",
+     "The electoral bonds judgment held that voters have a right to know who funds parties. Disclosure, recorded reasons and timely review keep power answerable."
+    ],
+    [
+     "Surrender is the final test.",
+     "Cincinnatus, Washington and Mandela gave up power before they were required to. The willingness to stop is the clearest evidence that power has not captured the person holding it."
+    ]
+   ],
+   "steps": [
+    [
+     "Contrast adversity and power.",
+     "Explain why adversity restrains and power releases."
+    ],
+    [
+     "Identify the temptations and justifications.",
+     "Show how power supplies both opportunity and plausible reasons."
+    ],
+    [
+     "Apply the ethic of responsibility.",
+     "Judge decisions by their foreseeable consequences."
+    ],
+    [
+     "Bring in evidence on obedience.",
+     "Use Milgram carefully, and note the weakness of Zimbardo’s study."
+    ],
+    [
+     "Examine institutional checks.",
+     "Discuss disclosure, audit, judicial review and recorded discretion."
+    ],
+    [
+     "Give an example of restraint.",
+     "Use Mandela, Washington or Cincinnatus."
+    ],
+    [
+     "Conclude with character and institutions together.",
+     "Argue that virtue and checks are both needed."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns power, authority and character.",
+   "formula": "Test character where power removes restraint. Judge the use of power by its consequences, make it explain its sources and reasons, check it while it acts, and honour those who use it with restraint and give it up willingly."
+  },
+  {
+   "thinkers": [
+    [
+     "The Buddha",
+     "impermanence",
+     [
+      "The Buddha gives the most economical statement of the problem. Everything that arises passes away. Nothing has a fixed essence, and suffering comes largely from insisting otherwise. What a person calls a self is a process rather than a thing.",
+      "For this reason, you cannot step twice into the same river. The water has moved, and the person stepping has also changed. The insight is not meant to console. The insight is an instruction to stop treating the present arrangement as permanent."
+     ],
+     "the answer needs to show change and impermanence as the basic condition of life."
+    ],
+    [
+     "Laozi",
+     "acting without forcing",
+     [
+      "Laozi draws the practical consequence. His idea of acting without forcing holds that the softest thing in the world overcomes the hardest, and that much of what people do to speed up an outcome actually delays it.",
+      "Mencius told the matching story of a farmer who pulled his seedlings upward to help them grow, and killed them. Time, on this reading, is not an obstacle to be defeated. Time is a medium with its own rate."
+     ],
+     "the question concerns patience, gradual change or the harm of forcing outcomes."
+    ],
+    [
+     "Marcus Aurelius",
+     "ambition in perspective",
+     [
+      "Marcus Aurelius applied the same thought to ambition. He noted how quickly everything vanishes, and how little the reputations people exhaust themselves acquiring will finally matter.",
+      "His conclusion was not that effort is pointless. His conclusion was that effort should be spent on what survives that perspective: justice, service and good character."
+     ],
+     "the answer needs to put ambition or reputation in a long-term perspective."
+    ],
+    [
+     "Hegel",
+     "development and understanding after the fact",
+     [
+      "Hegel supplies the counterweight, because his dialectic denies that change is only loss. Contradiction drives development forward.",
+      "Hegel also wrote that the owl of Minerva flies only at dusk. Understanding arrives after the process it explains has finished. The years teach what the days cannot, because only the years contain the pattern, and the pattern is where the meaning lies."
+     ],
+     "the question concerns historical change, progress or why understanding comes late."
+    ],
+    [
+     "Tagore",
+     "reading the current",
+     [
+      "Tagore’s image of the river current holds both claims together. A river is not the enemy of the boat. The river carries the boat, and the boatman’s skill lies in reading the flow rather than fighting it.",
+      "The years teach how to read the current. The days only supply the water."
+     ],
+     "the answer needs an image of working with change rather than against it."
+    ]
+   ],
+   "examples": [
+    [
+     "Policy horizons longer than electoral cycles",
+     [
+      "Some problems have a physics that does not match the electoral calendar. Emissions decided now determine temperatures decades later. A demographic transition unfolds across generations, and an aquifer drawn down over thirty years cannot be refilled within one.",
+      "A government elected for five years faces costs inside its term and benefits outside it. The result is a structural bias towards delay, not merely a failing of individual politicians. The institutional responses remove decisions from the annual cycle: an independent central bank, a statutory fiscal rule, a long-range commission or a target written into law. Each trades some democratic responsiveness for the ability to keep a promise that outlives its author."
+     ],
+     "How can a democracy make commitments that outlast one term? Look at institutions that bind future governments."
+    ],
+    [
+     "Institutional memory and frequent transfers",
+     [
+      "Institutional memory is knowledge of why a rule exists, which case caused a procedure to be written, and which local arrangement makes a scheme work in one district and fail in the next. Almost none of it is in the file. Institutional memory sits with people and leaves when they do.",
+      "Frequent transfers therefore impose a cost that appears in no budget. An officer arrives, spends months learning what the previous officer knew and is moved before applying it. An official who expects to leave within eighteen months will prefer work that finishes within eighteen months, which starves the projects that take longer."
+     ],
+     "What knowledge is lost when tenure is short? Ask which projects become impossible under frequent transfers."
+    ],
+    [
+     "Compounding: the arithmetic of patience",
+     [
+      "Compounding makes patience measurable. A quantity growing at a steady rate does little that is visible for a long time and then a great deal quickly. Early action is therefore worth far more than the same action later, and the difference is invisible while it builds.",
+      "Compounding works in savings, where an early contribution outweighs a much larger late one. Compounding works in skills, where daily practice produces a capability no short burst can match. Compounding works in infrastructure, where a network becomes more valuable as it connects. The same arithmetic runs in reverse for neglect, which is why deferred maintenance costs many times what it saved."
+     ],
+     "What grows or decays slowly but decisively? Show how small steady actions accumulate over years."
+    ],
+    [
+     "When delay is itself the harm",
+     [
+      "Patience can disguise avoidance. Some processes are irreversible on the timescale of deliberation. An epidemic doubling every few days makes a fortnight of consultation more costly than the decision it improves. Emissions accumulate, so a tonne not reduced this decade is locked into a stock that persists for centuries.",
+      "Species loss and aquifer depletion allow no later correction at any price. The test is whether the option remains available. Where waiting preserves the choice, patience is a virtue. Where waiting destroys the choice, patience is a decision taken without admitting it."
+     ],
+     "Does waiting keep the options open or close them? Separate reversible situations from irreversible ones."
+    ],
+    [
+     "Longitudinal studies and long-form journalism",
+     [
+      "Some things are invisible at any single moment and obvious across time. A longitudinal study follows the same people for decades and can separate a genuine effect from a difference that was already present. Birth cohort studies have produced much of what is known about how early childhood shapes adult health.",
+      "Long-form journalism does something similar for institutions. The reporter returns to a scheme years after its launch, when the announcement is forgotten and the outcome is finally visible. Both methods are slow, expensive and poorly rewarded, and both show a society what daily reporting cannot."
+     ],
+     "What can only be seen over time? Use methods that follow the same subject across years."
+    ]
+   ],
+   "topics": [
+    [
+     "2025B2",
+     [
+      "A day contains events: a decision, a success or a failure. Only the years reveal patterns: which decisions mattered, which successes lasted and which failures taught. Hegel wrote that the owl of Minerva flies only at dusk, meaning that understanding comes after the process it explains. A longitudinal study can show how childhood shapes adult health, and long-form journalism can show what a scheme achieved years after its launch. Neither insight is available on the first day.",
+      "The years also teach through accumulation. Compounding shows how small steady actions become large over time, in savings, skills and infrastructure. Institutional memory holds the knowledge of why rules exist and what works locally. Frequent transfers destroy that memory, because an officer is moved before the years can teach. Laozi warned against forcing outcomes, and Mencius’s farmer killed his seedlings by pulling them upward to help them grow.",
+      "The lesson has a limit. Some matters cannot wait for the years. An epidemic or rising emissions punish delay, because waiting destroys the choice. The wisdom of the years includes knowing when patience is a virtue and when it is avoidance. Long experience teaches both the value of waiting and the recognition of the moment when waiting has become the harm."
+     ]
+    ],
+    [
+     "2022B2",
+     [
+      "Heraclitus said that you cannot step twice into the same river, because new waters are always flowing. The person stepping has also changed. The Buddha taught the same truth as impermanence: everything that arises passes away, and suffering comes from insisting that things stay fixed.",
+      "The insight has practical force. Policies designed for one decade may fail in the next, because the society they serve has changed. A demographic transition, a shift in technology or a change in the climate alters the river. Leaders who treat the present arrangement as permanent will be surprised by change. Hegel adds that change is not only loss but development, as contradictions push societies forward.",
+      "Recognising change is not the same as surrendering to it. Tagore’s boatman reads the current rather than fighting it, and uses the flow to move where he intends. Marcus Aurelius drew from impermanence the lesson of spending effort on what lasts. A wise person accepts that the river changes, adapts methods to new conditions and holds to values that give direction amid the flow."
+     ]
+    ]
+   ],
+   "intro": [
+    "Most decisions are made within a day, a week or a term of office. Yet the most important patterns in life and society unfold over years or decades. A single day shows an event. The years show what the event meant. The question is how to see and act on patterns that a day cannot reveal, and how to balance patience with the urgency that some problems demand."
+   ],
+   "claim": "Understanding requires time. Change is constant, and its meaning appears only across years, as a pattern rather than an event. Patience, institutional memory and long-term thinking are therefore forms of wisdom. But patience is a virtue only where waiting keeps the options open. Where delay destroys the choice, as with emissions or epidemics, urgency is the wiser course.",
+   "problem": [
+    "Public life is organised around short cycles: daily news, annual budgets and five-year elections. Short cycles reward visible results and punish costs that fall within the term while benefits arrive later. Officers are transferred before they learn a district, and projects that take longer than a tenure are starved. The knowledge that comes only with time is lost as people move on.",
+    "The opposite danger is using long-term thinking as an excuse. Some processes are irreversible. An epidemic that doubles every few days or emissions that stay in the atmosphere for centuries punish delay. The ethical question is how to build patience into institutions without letting it become a disguise for avoiding decisions."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "A day contains the event. The years contain the pattern. Patience is wise where waiting preserves the choice and lets the pattern appear. Patience is avoidance where waiting destroys the choice."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of time",
+   "together": [
+    "Putting the five together",
+    "The Buddha shows that change is constant. Laozi and Mencius show the harm of forcing outcomes. Marcus Aurelius puts ambition in perspective. Hegel shows that change can be development and that understanding comes late. Tagore shows how to work with the current. Together they explain what the years teach that the days never know."
+   ],
+   "examplesIntro": "The examples below show long time horizons in policy, the cost of short tenures, the arithmetic of patience and the limits of waiting. They are most useful when the answer asks whether waiting keeps or destroys the choice.",
+   "models": [
+    [
+     "Change is the basic condition.",
+     "The Buddha taught that everything that arises passes away. You cannot step twice into the same river because both the river and the person have changed. Policies and plans must expect change rather than assume permanence."
+    ],
+    [
+     "The pattern appears only over years.",
+     "Hegel’s owl of Minerva flies at dusk: understanding comes after the process it explains. A day shows an event. The years show the pattern and its meaning."
+    ],
+    [
+     "Forcing growth defeats it.",
+     "Laozi taught acting without forcing, and Mencius told of the farmer who killed his seedlings by pulling them upward. Some outcomes have their own rate, and impatience destroys them."
+    ],
+    [
+     "Institutions need memory.",
+     "Frequent transfers remove the knowledge that sits with people rather than files. Officials who expect to move soon prefer short projects, starving the long work that matters most."
+    ],
+    [
+     "Patience has a limit.",
+     "Where waiting destroys the choice, as with epidemics or emissions, patience becomes avoidance. The wisdom of the years includes knowing when to act quickly."
+    ]
+   ],
+   "steps": [
+    [
+     "Establish the fact of change.",
+     "Use the Buddha or Heraclitus to show that nothing stays fixed."
+    ],
+    [
+     "Separate event from pattern.",
+     "Explain what a day shows and what only the years reveal."
+    ],
+    [
+     "Show the value of patience.",
+     "Use Laozi, compounding or institutional memory."
+    ],
+    [
+     "Examine institutional short-termism.",
+     "Discuss electoral cycles, transfers and budgets."
+    ],
+    [
+     "Suggest long-horizon mechanisms.",
+     "Point to fiscal rules, independent bodies and long-term studies."
+    ],
+    [
+     "Mark the limits of patience.",
+     "Show where delay destroys the choice."
+    ],
+    [
+     "Conclude with direction amid change.",
+     "Argue for adapting methods while holding to lasting values."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns time, change, patience or long-term thinking.",
+   "formula": "Expect change, read the pattern across years, and build institutions with memory and long horizons. Be patient where waiting keeps the choice open, and act quickly where waiting destroys it."
+  }
  ]
 };
