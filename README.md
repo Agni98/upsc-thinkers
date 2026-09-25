@@ -19,7 +19,7 @@ all its text work exactly the same and show lettered monograms in place of photo
 | **All Thinkers** | Every entry, grouped by school; narrow by region, school or paper, or filter by any word |
 | **Essay Paper** | Thinkers who supply an opening quote, a spine, or a counter-argument |
 | **GS-IV Ethics** | Thinkers named in or directly serving the Ethics syllabus |
-| **Quote Bank** | All 316 quotations in one scannable column, searchable |
+| **Quote Bank** | All 317 quotations, one card per thinker, arranged by tradition, essay theme or GS-IV heading |
 | **GS-IV Syllabus Map** | Each syllabus heading → its recurring concepts, the thinkers who answer it, its past questions |
 | **Essay Theme Map** | The nine themes the paper keeps asking → five sub-theme paragraphs, full essays, stories to use |
 | **Stories and Models** | The Human Thought Atlas: stories, thought experiments and models, arrangeable by essay theme |
@@ -114,6 +114,21 @@ name, a bar for its share of all the questions, and a strip with one cell for ea
 cell is light when the paper set one question from the group, and dark when it set two or more.
 The Essay page also keeps its notes on what the papers show. *By theme* and *By year* are a
 segmented control, and a label under each question in By year jumps back to its group.
+
+### The Quote Bank
+
+The Quote Bank has the same header band, with Cesare Maccari's fresco of Cicero speaking in the
+Roman Senate (1889, public domain). The band holds a box that filters the quotations as you type
+and the paper switch. Every word you type has to appear in the quotation or in the thinker's name.
+
+Below it come four short steps on using a quotation, then a switch that arranges the quotations
+by tradition, essay theme or GS-IV heading. A thinker listed under two themes or headings appears
+under both. Thinkers not listed under any appear in a last group, so every quotation is shown. A
+chart shows how many quotations each group holds, split into one-liners of 12 words or fewer and
+longer lines. Open a bar to go to its group. *One-liners only* hides the longer lines.
+
+Each thinker is one card with their quotations. Click the name to open the thinker. The sidebar
+search now searches the whole site on this page too, as it does everywhere else.
 
 ### Reading the atlas
 

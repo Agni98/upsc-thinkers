@@ -898,20 +898,35 @@ html[data-theme="dark"] .cont-art{filter:grayscale(.4) brightness(.85)}
 }
 .wiki-link:hover{color:var(--accent)}
 
-/* ---------------- Quote bank ---------------- */
-.qbank{columns:2;column-gap:16px}
-.qcard{
-  break-inside:avoid;background:var(--panel);border:1px solid var(--line);
-  border-radius:var(--radius);padding:18px 20px;margin-bottom:16px;
-}
-.qcard p{
-  font-family:var(--quote);font-size:15.5px;font-weight:400;font-style:normal;
-  color:var(--quote-ink);line-height:1.72;letter-spacing:.1px;margin-bottom:12px;
-}
-.qcard footer{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--ink-3)}
-.qcard footer b{color:var(--accent);font-weight:600;font-size:13px}
-.qmini{width:26px;height:26px;border-radius:50%;overflow:hidden;background:var(--accent-soft);flex-shrink:0}
-.qmini img{width:100%;height:100%;object-fit:cover}
+/* ---------------- Quote bank ----------------
+   The thinkers page's look, with Maccari's fresco of Cicero speaking in the
+   Senate (1889, public domain) in the band. Each thinker is a card holding their
+   quotations; the cards flow in columns because they differ in length. */
+.art-cicero{background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Cicero_Denounces_Catiline_in_the_Roman_Senate_by_Cesare_Maccari_-_3.jpg/960px-Cicero_Denounces_Catiline_in_the_Roman_Senate_by_Cesare_Maccari_-_3.jpg")}
+.hero-sm .hero-art.art-cicero{background-position:30% 40%}
+.q-tools{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:26px;scroll-margin-top:84px}
+.q-short[aria-pressed="true"]{border-color:var(--saffron);background:var(--saffron-soft);color:var(--saffron-ink)}
+.q-group{scroll-margin-top:84px}
+.q-group[hidden],.qk[hidden],.qk-q[hidden]{display:none}
+.qgrid{columns:2 320px;column-gap:14px}
+.qk{
+  break-inside:avoid;margin:0 0 14px;padding:14px 18px 6px;
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+.qk-top{display:flex;align-items:center;gap:12px;padding-bottom:10px;border-bottom:1px solid var(--line-2)}
+.qk-top .portrait{width:40px;height:40px;border-radius:50%}
+.qk-top .portrait .mono{font-size:14px}
+.qk-name{display:flex;flex-direction:column;gap:2px;min-width:0;padding:0;border:0;background:none;text-align:left;cursor:pointer}
+.qk-name b{font:600 15.5px/1.25 var(--read);color:var(--head)}
+.qk-name span{font:12px/1.35 var(--sans);color:var(--ink-3)}
+.qk-name:hover b{color:var(--saffron-ink)}
+.qk-name:focus-visible{outline:2px solid var(--saffron);outline-offset:3px;border-radius:4px}
+.qk-list{list-style:none;margin:0;padding:0}
+.qk-q{position:relative;padding:11px 0 11px 24px;border-top:1px solid var(--line-2)}
+.qk-q:first-child{border-top:0}
+.qk-q::before{
+  content:"\201C";position:absolute;left:0;top:7px;
+  font:700 28px/1 var(--read);color:var(--saffron)}
+.qk-q p{font-family:var(--quote);font-size:15px;line-height:1.62;color:var(--quote-ink)}
 
 /* ---------------- Syllabus map ---------------- */
 .map-card{
@@ -1082,7 +1097,6 @@ html[data-theme="dark"] .cont-art{filter:grayscale(.4) brightness(.85)}
 }
 
 /* ---------------- Responsive ---------------- */
-@media (max-width:1080px){ .qbank{columns:1} }
 @media (max-width:880px){
   .menu-btn{display:grid}
   .rail-btn{display:none}   /* the drawer has nothing to collapse into */

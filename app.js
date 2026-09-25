@@ -92,7 +92,8 @@ const ESSAY_THEMES = [
 
 /* ---- State ---- */
 const state = { view:"home", q:"", tag:"", mode:"thinker", page:0,
-                sel:null, nav:"views", fold:false, amode:"section", aq:"" };
+                sel:null, nav:"views", fold:false, amode:"section", aq:"",
+                qq:"", qmode:"school", qshort:false };
 const byId = Object.fromEntries(THINKERS.map(t => [t.id, t]));
 const catById = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));
 
@@ -878,10 +879,6 @@ function currentList(){
 
   if (state.tag && state.view !== "essay" && state.view !== "ethics")
     list = list.filter(t => t.tag.includes(state.tag));
-
-  // the site search has its own page; only the quote bank filters in place
-  const q = state.view === "quotes" ? state.q.trim().toLowerCase() : "";
-  if (q) list = list.filter(t => haystack(t).includes(q));
   return list;
 }
 
@@ -1012,33 +1009,183 @@ function applyThinkerFilter(){
   if (none) none.hidden = shown > 0;
 }
 
-function renderQuotes(){
-  const q = state.q.trim().toLowerCase();
-  const rows = [];
-  currentList().forEach(t => t.quotes.forEach(quote => {
-    if (!q || quote.toLowerCase().includes(q) || t.name.toLowerCase().includes(q)) rows.push([t, quote]);
-  }));
+/* ---- The Quote Bank ----
+   The thinkers page's look: a header band with a box that filters in place and
+   the paper switch, how to use a quotation, where the quotations are, and then
+   the quotations, one card per thinker, arranged by tradition, essay theme or
+   GS-IV heading. The box, the paper and the one-liner switch work in every
+   arrangement. */
+const QUOTE_MODES = [["school", "Tradition"], ["theme", "Essay theme"], ["syl", "GS-IV heading"]];
+const QUOTE_STEPS = [
+  ["quote",  "Pick a short one",       "One sentence opens an essay or an answer best. Keep longer lines for the body"],
+  ["user",   "Name the thinker",       "Say who said it. Open the name for the thinker's years and ideas"],
+  ["bulb",   "Tie it to the question", "Follow it with a sentence on what it means for the question asked"],
+  ["target", "Use it sparingly",       "One to open and one to close is enough. The argument does the rest"]
+];
+const QUOTE_SHORT = 12;   // a one-liner: twelve words or fewer
+const QCAT_ICON = { classical:"landmark", eastern:"sun", "indian-class":"indian", "west-political":"scale",
+  contemporary:"voices", "indian-modern":"flame", reform:"users", "ethics-psych":"heart", admin:"case", humanist:"globe" };
+const quoteWords = q => q.trim().split(/\s+/).length;
+
+/* The groups for one arrangement. A thinker listed under two themes or two
+   headings appears under both; one listed under none goes to a last group, so
+   every quotation is somewhere. */
+function quoteGroups(list, mode){
+  const inList = new Set(list.map(t => t.id));
+  const pick = ids => (ids || []).filter(id => inList.has(id)).map(id => byId[id]);
+  const rest = (sets, t, s) => {
+    const used = new Set(sets.flat());
+    const left = list.filter(x => !used.has(x.id));
+    return left.length ? [{ id:"qg-x", t, s, ic:"users", list:left }] : [];
+  };
+  let groups;
+  if (mode === "theme") {
+    groups = ESSAY_THEMES.map((x, i) => ({ id:"qg-t" + i, t:x.t, s:x.s, ic:x.ic || "target",
+      link:`data-to="themes|${i + 1}|"`, linkT:"Open the theme", list:pick(x.ids) }))
+      .concat(rest(ESSAY_THEMES.map(x => x.ids), "Not listed under a theme",
+        "Thinkers the Essay Theme Map does not name under any one theme."));
+  } else if (mode === "syl") {
+    groups = SYLLABUS.map((r, i) => ({ id:"qg-s" + i, t:r.t, s:r.s, ic:SYL_ICON[r.t] || "book",
+      link:`data-to="syllabus|${i + 1}|"`, linkT:"Open the heading", list:pick(r.ids) }))
+      .concat(rest(SYLLABUS.map(r => r.ids || []), "Not listed under a heading",
+        "Thinkers the GS-IV syllabus map does not name under any one heading."));
+  } else {
+    groups = CATEGORIES.map(c => ({ id:"qg-" + c.id, t:c.name, s:c.blurb, ic:QCAT_ICON[c.id] || "users",
+      link:`data-view="${c.id}"`, linkT:"Open this school", list:list.filter(t => t.cat === c.id) }));
+  }
+  return groups.filter(g => g.list.length);
+}
+
+function quoteCardHTML(t){
   return `
-    <div class="sec-head">
-      <h3>Quote Bank</h3>
-      <p>${rows.length} quotations, ready for an introduction or a conclusion. Click a name to open that thinker.</p>
+        <article class="qk" data-name="${esc(t.name)}">
+          <div class="qk-top">
+            ${portraitHTML(t)}
+            <button class="qk-name" data-open="${t.id}"><b>${esc(t.name)}</b><span>${esc(t.years)} &middot; ${esc(t.place)}</span></button>
+          </div>
+          <ul class="qk-list">${t.quotes.map((q, i) => `
+            <li class="qk-q" data-k="${t.id}:${i}" data-w="${quoteWords(q)}"><p>${esc(q)}</p></li>`).join("")}
+          </ul>
+        </article>`;
+}
+
+/* The chart and the groups: the part of the page that changes when the
+   arrangement does, redrawn on its own so the reader keeps their place. */
+function quoteBodyHTML(list){
+  const mode = state.qmode || "school";
+  const groups = quoteGroups(list, mode);
+  const first = { school:"Tradition", theme:"Essay theme", syl:"GS-IV heading" }[mode];
+  const rows = groups.map(g => {
+    const qs = g.list.flatMap(t => t.quotes);
+    const a = qs.filter(q => quoteWords(q) <= QUOTE_SHORT).length;
+    return { t:g.t, at:`data-jumpto="${g.id}"`, a, b:qs.length - a };
+  });
+  return `
+    <section class="hblock">
+      <div class="hb-head">
+        <div><h3 class="hb-t">Where the quotations are</h3>
+          <p class="hb-s">Quotations under each ${first.toLowerCase()}, split into one-liners of ${QUOTE_SHORT} words
+             or fewer and longer lines.${mode === "school" ? "" : " A thinker listed in two places counts in both."}
+             Open a bar to go to its group.</p></div>
+      </div>
+      <div class="schart-card">${stackChartHTML(rows, "one-liner|one-liners", "longer line|longer lines", first)}</div>
+    </section>
+    ${groups.map(g => `
+    <section class="hblock q-group" id="${g.id}">
+      <div class="hb-head">
+        <div><h3 class="hb-t es-theme">${ico(g.ic)}${esc(g.t)} <small>${g.list.reduce((n, t) => n + t.quotes.length, 0)}</small></h3>
+          <p class="hb-s">${esc(g.s)}</p></div>
+        ${g.link ? `<button class="hb-link" ${g.link}>${g.linkT} ${ico("arrow")}</button>` : ""}
+      </div>
+      <div class="qgrid">${g.list.map(quoteCardHTML).join("")}</div>
+    </section>`).join("")}`;
+}
+
+function renderQuotes(){
+  const list = currentList();
+  const paper = state.tag;
+  const all = list.flatMap(t => t.quotes);
+  const short = all.filter(q => quoteWords(q) <= QUOTE_SHORT).length;
+  const mode = state.qmode || "school";
+  return `
+  <section class="hero hero-sm">
+    <div class="hero-art art-cicero" aria-hidden="true"></div>
+    <div class="hero-body">
+      <p class="hero-k">Thinkers</p>
+      <h2 class="hero-t">Quote Bank</h2>
+      <p class="hero-s">${all.length} quotations from ${plural(list.length, "thinker", "thinkers")}, for the opening
+         of an essay, a turn in its argument, or the last line of an answer.</p>
+      <form class="hsearch" role="search" data-qfilter>
+        ${ico("search")}
+        <input id="quoteQ" type="search" autocomplete="off" value="${esc(state.qq || "")}"
+               aria-label="Filter the quotations"
+               placeholder="Filter by a word or a name (e.g. freedom, truth, Gandhi)">
+      </form>
+      <div class="t-paper" role="group" aria-label="Which paper">
+        ${[["", "All papers"], ["Essay", "Essay"], ["Ethics", "GS-IV Ethics"]].map(p => `
+        <button class="${paper === p[0] ? "on" : ""}" data-tag="${p[0]}" aria-pressed="${paper === p[0]}">${p[1]}</button>`).join("")}
+      </div>
     </div>
-    <div class="chips">
-      <button class="chip ${state.tag === "" ? "on" : ""}" data-tag="">All papers</button>
-      <button class="chip ${state.tag === "Essay" ? "on" : ""}" data-tag="Essay">Essay</button>
-      <button class="chip ${state.tag === "Ethics" ? "on" : ""}" data-tag="Ethics">Ethics</button>
+    <div class="hero-aside">
+      <button data-qshort="1"><b>${short}</b><span>one-liners of ${QUOTE_SHORT} words or fewer</span></button>
+      <button data-qmode="theme"><b>${ESSAY_THEMES.length}</b><span>essay themes to arrange them by</span></button>
+      <button data-qmode="syl"><b>${SYLLABUS.length}</b><span>GS-IV headings to arrange them by</span></button>
     </div>
-    <div class="qbank">
-      ${rows.map(([t, quote]) => `
-        <div class="qcard">
-          <p>&ldquo;${esc(quote)}&rdquo;</p>
-          <footer>
-            <span class="qmini portrait" data-tid="${t.id}"></span>
-            <b data-open="${t.id}" style="cursor:pointer">${esc(t.name)}</b>
-            <span>&middot; ${esc(t.years)}</span>
-          </footer>
-        </div>`).join("")}
-    </div>`;
+  </section>
+
+  <div class="home">
+    <section class="atl-guide" aria-label="How to use a quotation">
+      <h3 class="hb-t">How to use a quotation</h3>
+      <ol class="atl-steps">${QUOTE_STEPS.map((p, i) => `
+        <li><span class="atl-step-ico">${ico(p[0])}</span>
+            <b><i>${i + 1}</i>${esc(p[1])}</b><span>${esc(p[2])}</span></li>`).join("")}
+      </ol>
+    </section>
+
+    <div class="q-tools" id="qtools">
+      <div class="t-regions" role="group" aria-label="Arrange the quotations by">
+        ${QUOTE_MODES.map(m => `<button class="${mode === m[0] ? "on" : ""}" data-qmode="${m[0]}" aria-pressed="${mode === m[0]}">${m[1]}</button>`).join("")}
+      </div>
+      <button class="pop q-short${state.qshort ? " on" : ""}" data-qshort="" aria-pressed="${!!state.qshort}">One-liners only</button>
+    </div>
+    <p class="t-count" id="quoteCount"></p>
+    <div id="qbody">${quoteBodyHTML(list)}</div>
+    <div class="empty" id="quoteNone" hidden><b>No quotation matches</b>Try one word, a shorter name, or a different paper.</div>
+  </div>`;
+}
+
+/* Filtering in place keeps the box in focus while the reader types. Every word
+   has to appear in the quotation or in the thinker's name. */
+function applyQuoteFilter(){
+  const body = document.getElementById("qbody");
+  if (!body) return;
+  const words = atlasFold(state.qq || "").split(/\s+/).filter(Boolean);
+  const seen = new Set(), who = new Set();
+  body.querySelectorAll(".q-group").forEach(g => {
+    let n = 0;
+    g.querySelectorAll(".qk").forEach(c => {
+      const name = c._name || (c._name = atlasFold(c.dataset.name));
+      let m = 0;
+      c.querySelectorAll(".qk-q").forEach(li => {
+        const text = li._text || (li._text = atlasFold(li.textContent));
+        const ok = (!state.qshort || +li.dataset.w <= QUOTE_SHORT) && words.every(w => text.includes(w) || name.includes(w));
+        li.hidden = !ok;
+        if (ok) { m++; seen.add(li.dataset.k); }
+      });
+      c.hidden = !m;
+      if (m) who.add(c.dataset.name);
+      n += m;
+    });
+    g.hidden = !n;
+    const sm = g.querySelector(".hb-t small");
+    if (sm) sm.textContent = n;
+  });
+  const cnt = document.getElementById("quoteCount");
+  if (cnt) cnt.textContent = (words.length || state.qshort ? "Showing " : "All ")
+    + plural(seen.size, "quotation", "quotations") + " from " + plural(who.size, "thinker", "thinkers")
+    + (state.qshort ? ", one-liners only" : "") + (words.length ? ", matching “" + state.qq.trim() + "”" : "");
+  const none = document.getElementById("quoteNone");
+  if (none) none.hidden = seen.size > 0;
 }
 
 /* **double asterisks** become bold. Everything is escaped first, so the
@@ -1964,7 +2111,8 @@ function vizTip(el, x, y){
 }
 
 /* A stacked bar per row, two series, sorted by total: used by both maps'
-   first pages. rows: [{ t, open, a, b }]; open is a data-open-at value. A
+   first pages and the Quote Bank. rows: [{ t, open, a, b }]; open is a
+   data-open-at value, or a row can carry its own attribute in at. A
    series label is "one|many", so a count of one reads correctly. */
 const nLab = (lab, n) => { const p = lab.split("|"); return n === 1 ? p[0] : (p[1] || p[0]); };
 function stackChartHTML(rows, la, lb, first){
@@ -1977,7 +2125,7 @@ function stackChartHTML(rows, la, lb, first){
       <span><i class="sw-b"></i>${esc(cap(lb))}</span>
     </div>
     <ol class="schart">${rows.map(r => `
-      <li><button class="schart-row" data-open-at="${r.open}" data-tip="${esc(r.t)}" data-a="${r.a}" data-b="${r.b}"
+      <li><button class="schart-row" ${r.at || `data-open-at="${r.open}"`} data-tip="${esc(r.t)}" data-a="${r.a}" data-b="${r.b}"
                   data-la="${esc(la)}" data-lb="${esc(lb)}"
                   aria-label="${esc(r.t)}: ${r.a} ${esc(nLab(la, r.a))}, ${r.b} ${esc(nLab(lb, r.b))}, ${r.a + r.b} in all">
         <span class="schart-t">${esc(r.t)}</span>
@@ -2363,6 +2511,7 @@ function render(){
   markTopNav();
   applyPortraits(main);
   applyThinkerFilter();
+  applyQuoteFilter();
   atlasApplyFilter();
   atlasWatch();
   vizTip(null);
@@ -3239,6 +3388,32 @@ document.addEventListener("click", e => {
     return;
   }
 
+  // the quote bank: its arrangement and the one-liner switch redraw in place
+  const qm = e.target.closest("[data-qmode]");
+  if (qm) {
+    state.qmode = qm.dataset.qmode;
+    const body = document.getElementById("qbody");
+    body.innerHTML = quoteBodyHTML(currentList());
+    applyPortraits(body);
+    document.querySelectorAll("#qtools [data-qmode]").forEach(b => {
+      b.classList.toggle("on", b.dataset.qmode === state.qmode);
+      b.setAttribute("aria-pressed", b.dataset.qmode === state.qmode);
+    });
+    applyQuoteFilter();
+    if (qm.closest(".hero-aside")) document.getElementById("qtools").scrollIntoView({ behavior:"smooth", block:"start" });
+    return;
+  }
+  const qsh = e.target.closest("[data-qshort]");
+  if (qsh) {
+    state.qshort = qsh.dataset.qshort ? true : !state.qshort;
+    const b = document.querySelector("#qtools [data-qshort]");
+    b.classList.toggle("on", state.qshort);
+    b.setAttribute("aria-pressed", state.qshort);
+    applyQuoteFilter();
+    if (qsh.closest(".hero-aside")) document.getElementById("qtools").scrollIntoView({ behavior:"smooth", block:"start" });
+    return;
+  }
+
   const pgo = e.target.closest("[data-pyqgo]");
   if (pgo) {
     const box = pgo.closest(".pyq");
@@ -3415,15 +3590,13 @@ document.addEventListener("click", e => {
 document.getElementById("search").addEventListener("input", e => {
   state.q = e.target.value;
   state.more = {};
-  if (state.view !== "quotes") {
-    if (state.q.trim()) { state.view = "search"; state.nav = "views"; }
-    else if (state.view === "search") state.view = "home";
-  }
+  if (state.q.trim()) { state.view = "search"; state.nav = "views"; }
+  else if (state.view === "search") state.view = "home";
   render();
 });
 /* the search boxes on the front page and the results page */
 document.addEventListener("submit", e => {
-  if (e.target.closest("[data-tfilter], [data-afilter]")) { e.preventDefault(); return; }
+  if (e.target.closest("[data-tfilter], [data-qfilter], [data-afilter]")) { e.preventDefault(); return; }
   const f = e.target.closest("[data-search]");
   if (!f) return;
   e.preventDefault();
@@ -3551,6 +3724,13 @@ document.addEventListener("input", e => {
   if (e.target.id !== "thinkerQ") return;
   state.tq = e.target.value;
   applyThinkerFilter();
+});
+
+/* so does the quote bank */
+document.addEventListener("input", e => {
+  if (e.target.id !== "quoteQ") return;
+  state.qq = e.target.value;
+  applyQuoteFilter();
 });
 
 /* the atlas search filters its contents in place, so the box keeps focus */
