@@ -73,7 +73,6 @@ screen the contents live in the drawer, opened from **Contents** at the top of t
 
 Its first page has the home page's header band, with shortcuts to the concept notes, past
 questions and case studies. Below that come:
-- a guide to how every heading is built
 - **Where the paper asks most**: a stacked bar per heading of theory and case-study questions,
   2013 to 2025, sorted by total, with a tooltip and a table view. The two moral-thinkers headings
   share one pool and appear once. The Case Studies heading is left out, since its cases are
@@ -88,8 +87,8 @@ each one.
 
 Case studies have a front page of their own, in the same style as the other pages. Its header
 band shows Annibale Carracci's *The Choice of Hercules* (1596, public domain): Hercules at the
-crossroads between Virtue and Vice. Below the band:
-- the five boxes, with a link to the full method
+crossroads between Virtue and Vice. The first number in the band opens the full five-box method.
+Below the band:
 - a switch between two arrangements. **By theme** shows sixteen cards. Each gives the theme's
   core conflict, its answer engine, a strip of the years its cases were set, the latest case and
   your progress. **By year** lists every paper's cases, newest first, so a whole paper can be
@@ -139,7 +138,6 @@ question id). The themes are the Case Studies entries in `gs4concepts.js`, with 
 
 Its first page follows the same pattern:
 - the header band
-- a guide to how every theme is built
 - the same stacked chart, splitting each theme's past topics by the section of the paper they were
   set in (A or B)
 - a card per theme with its counts, a strip of the years the paper asked it, and its latest topic
@@ -150,7 +148,7 @@ A theme page shows what the theme holds. Both maps' charts come from one functio
 ### Model essays
 
 The Model Essays page has the same header band, with Dürer's *Saint Jerome in His Study* (CC0).
-It shows a guide to how every essay is built, then the essays grouped by theme. Each card
+It shows the essays grouped by theme. Each card
 opens with the essay's own first sentence, followed by its word count, the topics it answers
 (with the first one quoted), the stories it uses, and whether you have read it.
 
@@ -167,7 +165,7 @@ papers sits in the band. The three numbers beside it lead somewhere. The paper c
 By-year view. On the Essay page the other two open the By-theme view and the model paragraphs.
 On the GS-IV page they open the case studies and the concept notes.
 
-Below the band, a guide says how to read a group. Each group is a card. It shows its rank and
+Below the band, each group is a card. It shows its rank and
 name, a bar for its share of all the questions, and a strip with one cell for each paper. A
 cell is light when the paper set one question from the group, and dark when it set two or more.
 The Essay page also keeps its notes on what the papers show. *By theme* and *By year* are a
@@ -179,7 +177,7 @@ The Quote Bank has the same header band, with Cesare Maccari's fresco of Cicero 
 Roman Senate (1889, public domain). The band holds a box that filters the quotations as you type
 and the paper switch. Every word you type has to appear in the quotation or in the thinker's name.
 
-Below it come four short steps on using a quotation, then a switch that arranges the quotations
+Below it comes a switch that arranges the quotations
 by tradition, essay theme or GS-IV heading. A thinker listed under two themes or headings appears
 under both. Thinkers not listed under any appear in a last group, so every quotation is shown.
 *One-liners only* hides every quotation longer than 12 words.
@@ -200,11 +198,8 @@ Janaka's court, from the cows to Shakalya).
 
 The atlas opens on an **overview**, with the same header band as the other pages. The picture is
 the Flammarion engraving (1888, public domain). The three numbers in the band open the first
-entry, arrange the entries by essay theme, and jump to the key of kinds. The overview then shows
-how every entry is built, in eight numbered
-parts: the story, the question it forces, what it reveals, interpretations, where it breaks,
-where it shows up, how to use it in the exam, and where to go further. Below that come a search
-box, six ways to arrange the entries (section, essay theme, idea, tradition, form, A to Z), a
+entry, arrange the entries by essay theme, and jump to the key of kinds. Below the band come a
+search box, six ways to arrange the entries (section, essay theme, idea, tradition, form, A to Z), a
 tile for each group with how much of it has been read, and every entry as a card showing the
 question it asks. Colour marks the kind of entry throughout: imagined cases, stories, findings and
 models, and ideas and images.
@@ -300,6 +295,10 @@ Guides live in `guides.js`, keyed by theme title with one entry per paragraph (`
 paragraph has none). A paragraph without a guide falls back to the plain paragraph view. The
 writing follows the site's plain-English rules: normal word order, no semicolons, no sentence
 that opens with a bare "This" or "It", and no sentence over forty words.
+
+**No commentary about the site itself.** Pages carry content only. There are no "how every page
+is built" strips, no notes saying how to read a chart or a card, and no lines such as "the
+examples below show". The numbers in a header band carry plain labels.
 
 ### Model essays
 
@@ -398,8 +397,8 @@ Every work carries two classification tags, because the second turns out to be h
   in 1932*, *self-published after the conference was cancelled*, *rejected by four publishers*.
 
 **Three levels.** The index page has the same header band as the other pages, with Carl
-Spitzweg's *The Bookworm* (about 1850, public domain). Below it come four short steps on how
-every piece is built, then all 16 works on one timeline, oldest first. Where more than two
+Spitzweg's *The Bookworm* (about 1850, public domain). Below it come all 16 works on one
+timeline, oldest first. Where more than two
 centuries pass between two works, the line breaks and says how long. Then comes a shelf for
 each thinker, with a portrait, the reason they were picked, and a card for each work. A card
 shows the cover, date, one-line gist, form, fate and reading time.

@@ -134,7 +134,6 @@ const GUIDES = {
     "Putting the four together",
     "Gandhi asks what kind of end the means can produce. Machiavelli asks who will suffer if responsible action is refused. Kautilya asks whether force is truly the last available instrument. Kant asks whether people are being treated as ends in themselves. Together, these tests encourage moral seriousness without pretending that difficult choices are simple."
    ],
-   "examplesIntro": "The examples below show how the same ethical tension appears in security, diplomacy, public health and law. They are most useful when the answer explains the tension rather than merely naming an event.",
    "models": [
     [
      "Means shape the end.",
@@ -187,7 +186,6 @@ const GUIDES = {
      "State what cannot be made harmless, how that burden will be limited, and what accountability follows."
     ]
    ],
-   "stepsIntro": "Use the following sequence to move from a broad ethical theme to a reasoned conclusion. It works for essay questions and for case studies where the decision-maker faces competing duties.",
    "formula": "Pursue the legitimate end; choose the least harmful means capable of achieving it; preserve human dignity and independent accountability; and be candid about the harm that remains. If every option appears wrong, examine whether the choice itself can be widened before accepting the least bad route."
   },
   {
@@ -323,7 +321,6 @@ const GUIDES = {
     "Putting the five together",
     "Mill and Bentham remove the idea that inaction is neutral. Arendt shows how harm follows when people stop thinking about what their routines do. Simon explains why certainty never arrives and why institutions teach officers to avoid decisions. Weber asks the decision-maker to own the foreseeable consequences of whichever course is chosen, including delay."
    ],
-   "examplesIntro": "The examples below show how delay can be a hidden cost, a hidden danger, or a genuine protection. Each is most useful when the answer asks who bears the cost of waiting.",
    "models": [
     [
      "Inaction is a decision.",
@@ -376,7 +373,6 @@ const GUIDES = {
      "Record the reasons, protect decisions taken in good faith, and accept responsibility for the consequences of the course chosen."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question turns on delay, omission or the choice between acting now and waiting.",
    "formula": "Treat delay as a decision. Wait only for a reason that can be stated, for a period that is fixed, and for information that would change the choice. Otherwise decide, record the reasons and own the consequences, remembering that the cost of drift falls on those least able to bear it."
   },
   {
@@ -504,7 +500,6 @@ const GUIDES = {
     "Putting the five together",
     "Simon shows that calculation is always bounded and that novel problems need judgment. Barnard shows that decisions succeed only if people will carry them out. Aristotle names practical wisdom as the faculty that applies principles to particular cases. Goleman shows that this faculty can be trained. Drucker makes judgment testable, so that intuition and evidence correct each other over time."
    ],
-   "examplesIntro": "The examples below show evidence and judgment working well, working badly, and needing each other. They are most useful when the answer explains what the evidence could and could not establish.",
    "models": [
     [
      "Calculation is always bounded.",
@@ -557,7 +552,6 @@ const GUIDES = {
      "State in advance what would count as failure and review the decision against it."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question turns on evidence, judgment, expertise or best practice.",
    "formula": "Let evidence discipline intuition, and let judgment interpret evidence. Classify the problem before choosing the method. Adapt practices rather than adopting them. Watch the outcome, not only the measure. Build in the feedback that shows when you are wrong."
   },
   {
@@ -693,7 +687,6 @@ const GUIDES = {
     "Putting the five together",
     "Ambedkar asks whose interests a custom protects. Mill asks whether individuals are free to question it. Socrates shows the discipline of conscience against authority. Periyar asks whether the beliefs behind a custom can survive rational scrutiny. Thoreau marks the point at which refusal becomes a duty. Together they judge custom by principle rather than by age."
    ],
-   "examplesIntro": "The examples below show custom meeting constitutional principle in the courts, in communities and in the history of reform. They are most useful when the answer explains how change was achieved and where it stopped.",
    "models": [
     [
      "Age is not justification.",
@@ -746,7 +739,6 @@ const GUIDES = {
      "Plan for education and dialogue so that reform becomes part of social belief rather than only law."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question turns on custom, tradition, conscience or social reform.",
    "formula": "Give custom a hearing but not automatic obedience. Ask whose interests it serves and whether it can be justified to those it burdens. Retain its wisdom and reform its injustice. Protect those who dissent. Remember that lasting change requires acceptance as well as law."
   },
   {
@@ -873,7 +865,6 @@ const GUIDES = {
     "Putting the four together",
     "Kant establishes that an ideal is a standard, not a description. Rawls shows that an unreachable device can still correct real judgment. Gandhi treats the ideal as a direction of travel. Nehru shows how a nation can admit its shortfall while holding to its pledge. Together they explain why reality confirms the ideal by revealing how far it falls short."
    ],
-   "examplesIntro": "The examples below show ideals shaping law, measurement and preparation, and the cynic’s objection that an unreachable ideal can excuse underperformance. They are most useful when the answer measures the distance honestly.",
    "models": [
     [
      "A standard is not a description.",
@@ -926,7 +917,6 @@ const GUIDES = {
      "Where the ideal concerns the future, show what must be done now, before a crisis makes it urgent."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question turns on ideals, values, foresight or the gap between promise and performance.",
    "formula": "Hold the ideal as a standard, not a description. Measure reality against it honestly. Treat the gap as work to be done rather than proof of failure. Turn the ideal into laws, timelines and measures. Act in good times on the foresight that bad times will demand."
   }
  ],
@@ -1047,7 +1037,6 @@ const GUIDES = {
     "Putting the four together",
     "Tagore shows that the lasting product of education is a disposition. Freire shows why a transmission model produces passive citizens. Nussbaum explains what a democracy loses when it trains only for employment. Vivekananda gives the Indian statement of education as drawing out what is already present. Together they explain why a good education leaves a person with more questions, and better ones."
    ],
-   "examplesIntro": "The examples below test the argument against real policy and real limits. They are most useful when the answer admits both what structure can change and what it cannot.",
    "models": [
     [
      "Education leaves a disposition.",
@@ -1100,7 +1089,6 @@ const GUIDES = {
      "Suggest changes in assessment, teacher preparation and foundational learning, not only in structure."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns the purpose, methods or outcomes of education.",
    "formula": "Build the foundations that must be retained, then educate for the disposition that remains after the details fade. Judge a system by the curiosity, judgment and capacity to question that it leaves behind, not only by the marks it records."
   },
   {
@@ -1219,7 +1207,6 @@ const GUIDES = {
     "Putting the four together",
     "Socrates shows that enquiry starts from admitted ignorance. Einstein shows that progress often comes from questioning the assumption everyone else accepts. Mill explains why institutions need challenges, even wrong ones. Kalam shows how an institution can treat failure as information. Together they make doubt a method with rules, not a mood."
    ],
-   "examplesIntro": "The examples below show where institutions protect doubt, where they fail to, and where doubt turns into denial. They are most useful when the answer asks what the institution rewards.",
    "models": [
     [
      "Doubt begins enquiry.",
@@ -1272,7 +1259,6 @@ const GUIDES = {
      "Link scientific temper to Article 51A(h) and to public reasoning."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns science, research, expertise or scepticism.",
    "formula": "Doubt is the method of science when it is disciplined and answerable. Protect doubt in institutions by rewarding replication, recording dissent and treating failure as information, and reject doubt that no evidence could ever satisfy."
   },
   {
@@ -1408,7 +1394,6 @@ const GUIDES = {
     "Putting the five together",
     "Plato and Aristotle show that reason has its own beauty and its own pleasure. Einstein shows that elegance can guide discovery. Tagore reminds us that beauty is how a human mind recognises coherence. Ambedkar shows that a simple statement can change a society because people can carry and demand it. Together they explain why rigour, pursued far enough, produces its own kind of wonder."
    ],
-   "examplesIntro": "The examples below show elegance guiding discovery, elegance misleading, and simplicity as a discipline in design and policy. They are most useful when the answer separates compression from omission.",
    "models": [
     [
      "Reason has its own beauty.",
@@ -1461,7 +1446,6 @@ const GUIDES = {
      "Present rigour and imagination as partners in discovery."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns mathematics, science, simplicity or the relation of reason and beauty.",
    "formula": "Value simplicity when it is the product of understanding, and treat elegance as a guide rather than a proof. Let intuition propose and evidence decide, so that rigour and wonder work together."
   },
   {
@@ -1580,7 +1564,6 @@ const GUIDES = {
     "Putting the four together",
     "Ambedkar shows that control over knowledge is control over people, and that education is the first step to freedom. Kalam treats knowledge and technology as national capital and sovereignty. Vivekananda adds the need for confidence in one’s own thought. Nye explains how ideas and culture become influence abroad. Together they show that the empire of the mind is built at home, in schools and laboratories, before it is felt abroad."
    ],
-   "examplesIntro": "The examples below show the foundations, the gaps and the limits of India’s knowledge power. They are most useful when the answer separates capacity from reputation.",
    "models": [
     [
      "Knowledge is the new capital.",
@@ -1633,7 +1616,6 @@ const GUIDES = {
      "Argue for knowledge power that widens access and remains answerable to evidence and citizens."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns knowledge, power, education or the knowledge economy.",
    "formula": "Build the empire of the mind at home, through foundations of learning, research and skill, before seeking influence abroad. Keep knowledge open and accountable, so that it frees people rather than controls them."
   },
   {
@@ -1761,7 +1743,6 @@ const GUIDES = {
     "Putting the five together",
     "Socrates shows that truth emerges from dialogue. Mill shows that silencing any view harms everyone. Habermas sets out the conditions for real debate. Ambedkar warns that democratic forms need cultivated habits of scrutiny. Tagore and Gandhi show principled disagreement between allies. Together they explain why thinking needs an opposite team."
    ],
-   "examplesIntro": "The examples below show institutions that build contest into decision-making and those that avoid it. They are most useful when the answer asks whether disagreement can change the outcome.",
    "models": [
     [
      "Dialogue exposes hidden assumptions.",
@@ -1814,7 +1795,6 @@ const GUIDES = {
      "Emphasise humility, honesty and willingness to lose an argument."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns argument, dissent, deliberation or truth.",
    "formula": "Seek truth through honest contest. Build opposition into institutions, hear the strongest version of the other side, and be willing to lose an argument, because an idea that has never been challenged has never been tested."
   }
  ],
@@ -1944,7 +1924,6 @@ const GUIDES = {
     "Putting the five together",
     "Epictetus shows that hardship reveals the boundary of what we control. Marcus Aurelius shows how an obstacle can become material for action. Nietzsche warns that suffering can breed resentment as easily as strength. Mandela shows that a choice made inside hardship decides what it produces. Malala shows that adversity often amplifies what was already there. Together they turn “suffering teaches” into “suffering can teach, under conditions”."
    ],
-   "examplesIntro": "The examples below test the claim against evidence and against real systems. They are most useful when the answer asks what conditions turned hardship into learning.",
    "models": [
     [
      "Suffering does not teach by itself.",
@@ -1997,7 +1976,6 @@ const GUIDES = {
      "Argue that society should make hardship survivable rather than praise it."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns failure, hardship or the lessons of adversity.",
    "formula": "Treat adversity as a possible teacher, not a guaranteed one. The lesson depends on the response a person chooses and on the support that makes recovery possible, so build systems that make failure survivable and never mistake deprivation for education."
   },
   {
@@ -2125,7 +2103,6 @@ const GUIDES = {
     "Putting the five together",
     "Vivekananda makes strength a practice. Nietzsche shows that removing all danger removes creation. Kalam shows that institutions must be able to absorb failure. Bose shows that bold risk remains open to judgment. Camus explains why purpose, not a guarantee of success, justifies leaving the harbour. Together they define courage as purposeful exposure, not mere daring."
    ],
-   "examplesIntro": "The examples below show systems that encourage purposeful risk, systems that discourage it, and the limit where risk becomes recklessness. They are most useful when the answer asks who bears the cost of failure.",
    "models": [
     [
      "Safety can defeat purpose.",
@@ -2178,7 +2155,6 @@ const GUIDES = {
      "Argue for exposure that serves a stated purpose and is borne responsibly."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns risk, safety, exploration or purpose.",
    "formula": "Leave the harbour when the voyage has a purpose, the risk is bounded, and the person taking it bears the cost. Build institutions that absorb honest failure, and do not mistake drift or recklessness for courage."
   },
   {
@@ -2306,7 +2282,6 @@ const GUIDES = {
     "Putting the five together",
     "Gandhi and Marcus Aurelius show leaders examining themselves when nobody else can. Aristotle explains that the capacity to admit fault is built by habit. Ambedkar shows how hero-worship removes an institution’s ability to correct itself. Thoreau shows the personal inventory on which conscience rests. Together they explain why the leak must be found from inside."
    ],
-   "examplesIntro": "The examples below show institutions built to find internal breaches and the reasons they often fail. They are most useful when the answer asks who is allowed, and protected, to name the fault.",
    "models": [
     [
      "Internal breaches sink ships.",
@@ -2359,7 +2334,6 @@ const GUIDES = {
      "Recommend the personal and institutional habits that find and repair breaches early."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns integrity, internal decay or self-improvement.",
    "formula": "Treat external pressure as a condition and internal compromise as the real danger. Build the habit of self-examination, protect those who name faults, make oversight independent, and repair small breaches before they sink the ship."
   },
   {
@@ -2479,7 +2453,6 @@ const GUIDES = {
     "Putting the five together",
     "Aristotle explains why power removes the restraint adversity supplied. Machiavelli shows that power also supplies plausible reasons. Arendt shows how power can be exercised without thought. Mandela shows restraint and voluntary surrender. Weber gives the ethic that office requires. Together they explain why power, not adversity, reveals character."
    ],
-   "examplesIntro": "The examples below show checks on power, the evidence on obedience, and leaders who passed the test. They are most useful when the answer asks whether power must explain itself.",
    "models": [
     [
      "Adversity restrains and power releases.",
@@ -2532,7 +2505,6 @@ const GUIDES = {
      "Argue that virtue and checks are both needed."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns power, authority and character.",
    "formula": "Test character where power removes restraint. Judge the use of power by its consequences, make it explain its sources and reasons, check it while it acts, and honour those who use it with restraint and give it up willingly."
   },
   {
@@ -2660,7 +2632,6 @@ const GUIDES = {
     "Putting the five together",
     "The Buddha shows that change is constant. Laozi and Mencius show the harm of forcing outcomes. Marcus Aurelius puts ambition in perspective. Hegel shows that change can be development and that understanding comes late. Tagore shows how to work with the current. Together they explain what the years teach that the days never know."
    ],
-   "examplesIntro": "The examples below show long time horizons in policy, the cost of short tenures, the arithmetic of patience and the limits of waiting. They are most useful when the answer asks whether waiting keeps or destroys the choice.",
    "models": [
     [
      "Change is the basic condition.",
@@ -2713,7 +2684,6 @@ const GUIDES = {
      "Argue for adapting methods while holding to lasting values."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns time, change, patience or long-term thinking.",
    "formula": "Expect change, read the pattern across years, and build institutions with memory and long horizons. Be patient where waiting keeps the choice open, and act quickly where waiting destroys it."
   }
  ],
@@ -2843,7 +2813,6 @@ const GUIDES = {
     "Putting the five together",
     "Aristotle defines happiness as an activity. The Buddha explains why arrival does not satisfy. Epicurus shows the value of simple pleasures that create no new wants. Camus finds meaning in the effort itself. Epictetus makes satisfaction available now. Together they explain why happiness is the path rather than the end of it."
    ],
-   "examplesIntro": "The examples below test the claim against research, policy and the lives of people who have not yet reached a secure floor. They are most useful when the answer asks for whom the claim is true.",
    "models": [
     [
      "Happiness is an activity.",
@@ -2896,7 +2865,6 @@ const GUIDES = {
      "Recommend goals as directions and daily life as the place of satisfaction."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns happiness, the good life or the journey and the destination.",
    "formula": "Find happiness in the practice of living, not at the end of a road. Hold goals as directions, rebuild daily purpose after arrival, and secure the basic floor that lets everyone travel the journey with dignity."
   },
   {
@@ -3024,7 +2992,6 @@ const GUIDES = {
     "Putting the five together",
     "Gandhi and Mahavira supply the ideal of non-possession. Schumacher turns it into an economics of well-being with minimum consumption. Sen redefines the goal as freedom, which explains why the poor need more and the rich may not. Thiruvalluvar defines enough by the needs of the household. Together they give the third answer: sufficiency."
    ],
-   "examplesIntro": "The examples below show sufficiency in policy, the evidence of manufactured wants, and the limits of the argument in a developing economy. They are most useful when the answer asks whose consumption should change.",
    "models": [
     [
      "Sufficiency is the third answer.",
@@ -3077,7 +3044,6 @@ const GUIDES = {
      "Discuss Mission LiFE, producer responsibility and per capita fairness."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns consumption, simplicity, contentment or materialism.",
    "formula": "Seek sufficiency rather than renunciation or accumulation. Define enough by what a good life requires, raise the floor for the poor, restrain the manufactured wants of the rich, and measure progress by freedom and well-being rather than by consumption."
   },
   {
@@ -3197,7 +3163,6 @@ const GUIDES = {
     "Putting the five together",
     "Laozi shows that simplicity is effort concealed. Thiruvalluvar shows that compression requires mastery. Gandhi shows how a simple symbol or rule can carry a complex argument. Kabir shows how complexity can protect experts. Schumacher shows simplicity as design that empowers users. Together they explain why simplicity is harder to reach than complexity and more useful once reached."
    ],
-   "examplesIntro": "The examples below show simplicity succeeding in public design, complexity serving as armour, and the limits of simplifying a complex reality. They are most useful when the answer asks who benefits from the complexity.",
    "models": [
     [
      "Simplicity is effort concealed.",
@@ -3250,7 +3215,6 @@ const GUIDES = {
      "Judge simplicity by whether the intended user can act without help."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns simplicity, clarity or complexity.",
    "formula": "Pursue simplicity that comes from understanding and serves the user. Remove complexity that protects gatekeepers, and where reality is complex, simplify the interface rather than the problem."
   },
   {
@@ -3378,7 +3342,6 @@ const GUIDES = {
     "Putting the five together",
     "Marcus Aurelius shows gratitude as a way of orienting attention. Epictetus shows that disturbance lies in our opinions. The Buddha supplies mindfulness as the technique. Guru Nanak joins remembrance to work and sharing. Gibran shows that tranquillity does not mean the end of feeling. Together they describe an inner economy that circumstances do not control."
    ],
-   "examplesIntro": "The examples below show the external pressures on attention, the evidence for inner practices, and the danger of using them to avoid change. They are most useful when the answer separates individual practice from structural causes.",
    "models": [
     [
      "Gratitude orients attention.",
@@ -3431,7 +3394,6 @@ const GUIDES = {
      "Argue that tranquillity should support, not replace, efforts to change what is unjust."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns gratitude, mindfulness or tranquillity.",
    "formula": "Cultivate gratitude and attention so that circumstances do not rule the mind. Keep the distinction between what can and cannot be changed, and let inner calm support action against what should be changed."
   },
   {
@@ -3559,7 +3521,6 @@ const GUIDES = {
     "Putting the five together",
     "Gandhi gives a test centred on the poorest. Vivekananda makes service a form of worship. Mother Teresa shows the importance of presence. Gilligan explains humaneness as a change in what one notices. Deendayal Upadhyaya turns the idea into a governance criterion. Together they show that becoming humane joins feeling, attention and systems."
    ],
-   "examplesIntro": "The examples below show compassion built into policy, care that remains invisible, and the limits of compassion without systems. They are most useful when the answer asks whether care reaches the last person.",
    "models": [
     [
      "The poorest are the test.",
@@ -3612,7 +3573,6 @@ const GUIDES = {
      "Argue that compassion needs understanding and systems to be reliable."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns compassion, service or the good life.",
    "formula": "Become humane by learning to notice the weakest and to respond with care. Join love with knowledge, build rights that do not depend on kindness, support those who serve, and judge every system by the condition of the last person."
   }
  ],
@@ -3742,7 +3702,6 @@ const GUIDES = {
     "Putting the five together",
     "Tagore shows the artist keeping imagination larger than politics. Tolstoy explains how art transmits feeling. Plato agrees that art shapes the soul and warns of its danger. Gibran locates creativity in the ordinary. Aurobindo argues that consciousness changes before institutions. Together they explain why poets legislate without being acknowledged."
    ],
-   "examplesIntro": "The examples below show art shifting sentiment, the state regulating art, art organised for politics, and the objection that art’s influence is unaccountable. They are most useful when the answer separates persuasion from compulsion.",
    "models": [
     [
      "Art changes feeling before law.",
@@ -3795,7 +3754,6 @@ const GUIDES = {
      "Argue for independent art answerable to its own truthfulness."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns art, creativity or the influence of artists.",
    "formula": "Recognise that artists shape what a society can feel and imagine, often before law follows. Protect art’s independence, answer unwelcome art with argument rather than control, and expect art to stay answerable to its own truthfulness."
   },
   {
@@ -3915,7 +3873,6 @@ const GUIDES = {
     "Putting the five together",
     "Gandhi separates civilisation as machinery from civilisation as conduct. Tagore shows that a living culture absorbs what it meets. Nehru describes culture as layered continuity. Burke warns that tradition holds wisdom nobody can easily rebuild. Kabir shows that argument from within keeps a culture alive. Together they explain why culture is what we are, and why it is not a possession."
    ],
-   "examplesIntro": "The examples below show culture being listed, commodified, counted, defended and carried abroad. They are most useful when the answer asks whether culture is treated as a possession or a practice.",
    "models": [
     [
      "Civilisation is possession, culture is practice.",
@@ -3968,7 +3925,6 @@ const GUIDES = {
      "Argue for adopting useful instruments while keeping culture alive through practice."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns culture, civilisation, tradition or modernity.",
    "formula": "Treat culture as what a people is and does, not as a possession to be guarded. Adopt useful instruments, keep traditions alive by practising and arguing with them, and protect the wisdom that change can destroy."
   },
   {
@@ -4105,7 +4061,6 @@ const GUIDES = {
     "Putting the six together",
     "Marx explains repetition as the borrowing of old scripts. Hegel shows that understanding comes late. Burke describes the past as a trust across generations. Orwell warns that control of the past is control of the future. Azad defends a shared past, and Nehru models honest examination. Together they show how to hold the past without being ruled by it."
    ],
-   "examplesIntro": "The examples below show how a society narrates, commemorates, archives and settles its past. They are most useful when the answer asks who decides and whether the process is open.",
    "models": [
     [
      "Repetition comes from borrowed scripts.",
@@ -4158,7 +4113,6 @@ const GUIDES = {
      "Argue for open archives, honest teaching and closure without silencing."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns history, memory or the uses of the past.",
    "formula": "Hold the past as a record to be examined, not a script to be borrowed. Keep the archive open, name what was ugly with what was admirable, and seek closure through truth rather than silence."
   },
   {
@@ -4286,7 +4240,6 @@ const GUIDES = {
     "Putting the five together",
     "Socrates uses irony to reveal what direct statement cannot. Laozi and Kabir use paradox to break settled categories. Camus asks us to hold contradiction rather than resolve it falsely. Nietzsche warns that suspicion of language must still aim at truth. Together they explain why oxymorons reflect life, and why ambiguity must be used honestly."
    ],
-   "examplesIntro": "The examples below show ambiguity as a diplomatic tool, a legal defect, a political weapon, a problem of translation and a form of evasion. They are most useful when the answer asks whether ambiguity opens or closes meaning.",
    "models": [
     [
      "Contradiction can be accurate.",
@@ -4339,7 +4292,6 @@ const GUIDES = {
      "Argue that ambiguity is honest when it opens meaning and dishonest when it hides an act."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns paradox, irony or ambiguity.",
    "formula": "Accept contradiction where life truly contains both terms, and use ambiguity when it opens meaning. Demand precision where others must act on the words, and translate every euphemism back into the plain act it hides."
   },
   {
@@ -4467,7 +4419,6 @@ const GUIDES = {
     "Putting the five together",
     "Hegel argues that reality has a rational structure. Kant shows that the mind shapes experience. Shankara explains how we mistake our constructions for reality. Sartre shows how others’ perceptions reveal us to ourselves. Plato’s cave shows the path from shadows to clearer sight. Together they explain why perception reflects the perceiver while reason still seeks what is real."
    ],
-   "examplesIntro": "The examples below show perception shaped by bias, framing, standpoint and memory, and the evidence that reality still constrains us. They are most useful when the answer keeps both the construction and the world in view.",
    "models": [
     [
      "Perception reveals the perceiver.",
@@ -4520,7 +4471,6 @@ const GUIDES = {
      "Argue for knowing one’s standpoint while seeking truth."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns perception, reality or reason.",
    "formula": "Accept that perception reflects the perceiver, and use your reactions to know yourself. Keep reality in view, test perceptions against evidence, and move from shadows towards clearer sight."
   }
  ],
@@ -4641,7 +4591,6 @@ const GUIDES = {
     "Putting the four together",
     "Rawls locates justice in institutions. Ambedkar insists on rights rather than relief. Nozick raises the entitlement objection, which rectification answers. Gandhi offers trusteeship, which still depends on conscience. Together they explain why justice reduces the need for charity, and why charity cannot replace justice."
    ],
-   "examplesIntro": "The examples below show giving made compulsory, help turned into rights, the effect of cash, the limits of philanthropy and the real strengths of charity. They are most useful when the answer asks whether the recipient can claim or only hope.",
    "models": [
     [
      "Charity arrives after justice has failed.",
@@ -4694,7 +4643,6 @@ const GUIDES = {
      "Argue for rights as the base and charity as a supplement."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns charity, philanthropy, poverty or justice.",
    "formula": "Build justice into institutions so that fewer people need rescue. Turn help into rights that can be claimed, keep charity for emergencies and the gaps rights cannot yet reach, and never let generosity replace the duty to change the structure."
   },
   {
@@ -4822,7 +4770,6 @@ const GUIDES = {
     "Putting the five together",
     "Sen shows that development and income can diverge. Nozick warns that there must be something to distribute. Ambedkar shows that inequality threatens democracy. Lohia joins caste and class. Deendayal Upadhyaya gives a measurable test. Together they show that growth and justice are conditions for each other, not rivals."
    ],
-   "examplesIntro": "The examples below show inequality, human development, jobs, taxation and the sequencing of reform. They are most useful when the answer asks who gains from growth and how.",
    "models": [
     [
      "Development is freedom, not income.",
@@ -4875,7 +4822,6 @@ const GUIDES = {
      "Use antyodaya to judge whether growth is just."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns growth, prosperity and social justice.",
    "formula": "Treat growth and justice as conditions for each other. Grow to create the means, distribute capabilities early so that growth includes everyone, and judge the economy by the condition of the last person."
   },
   {
@@ -4995,7 +4941,6 @@ const GUIDES = {
     "Putting the five together",
     "Sen shifts attention from income to capabilities. Nussbaum sets a threshold for every person. The Phules and Ambedkar show education as the key to equality. Deendayal Upadhyaya judges a system by its last person. Together they explain why neglect of primary health and education is the root of backwardness."
    ],
-   "examplesIntro": "The examples below show the state of health spending, learning, nutrition, insurance and fiscal capacity. They are most useful when the answer measures outcomes rather than inputs.",
    "models": [
     [
      "Capability, not income.",
@@ -5048,7 +4993,6 @@ const GUIDES = {
      "Judge the system by its least served citizen."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns health, education or human development.",
    "formula": "Measure progress by what people can do and be, not by average income. Secure health, education and nutrition to a threshold for everyone, early and publicly, because every other opportunity depends on them."
   },
   {
@@ -5193,7 +5137,6 @@ const GUIDES = {
     "Putting them together",
     "Beauvoir and Wollstonecraft show that gender is produced by treatment that then justifies itself. Savitribai Phule and Pandita Ramabai built institutions against it. Periyar and Ambedkar show that caste and gender are bound together. Gilligan shows bias hidden in the standard itself. Together they explain why patriarchy is a structure that sentiment alone cannot change."
    ],
-   "examplesIntro": "The examples below show patriarchy in work, time, property, birth and masculinity. They are most useful when the answer asks what the structure allocates, not only what people believe.",
    "models": [
     [
      "Patriarchy is a structure, not a sentiment.",
@@ -5246,7 +5189,6 @@ const GUIDES = {
      "Recommend redistribution of care, property and power."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns gender, patriarchy or social roles.",
    "formula": "Treat patriarchy as a structure that allocates property, time and power. Change laws and attitudes, but also redistribute care work, enforce women’s property rights and open decisions to women, while freeing both sexes from rigid roles."
   },
   {
@@ -5374,7 +5316,6 @@ const GUIDES = {
     "Putting the five together",
     "Bentham offers impartial aggregate welfare. Mill warns of majority tyranny. Rawls insists that persons cannot be traded off. Ambedkar builds constitutional safeguards. Tocqueville shows that even a kind majority can crush a minority it never hears. Together they explain why the common good must protect the individual it asks to sacrifice."
    ],
-   "examplesIntro": "The examples below show the common good pressing on individuals through land, health, representation and clearance, and the libertarian objection. They are most useful when the answer asks who bears the cost.",
    "models": [
     [
      "Aggregate gain can hide individual loss.",
@@ -5427,7 +5368,6 @@ const GUIDES = {
      "Argue that every trade between individual and society must be justified to the person bearing it."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns the individual and society, majority and minority, or impartiality.",
    "formula": "Pursue the common good without treating any person as a resource. Limit liberty only to prevent harm, compensate and protect those who bear public costs, safeguard minorities, and judge every claim on its merits, whoever makes it."
   }
  ],
@@ -5558,7 +5498,6 @@ const GUIDES = {
     "Putting the six together",
     "Gandhi reads and disciplines public mood. Barnard shows that authority is conferred by acceptance. Habermas tests decisions by whether they survive explanation. Mandela leads through restraint. Tocqueville warns against making citizens dependent. Nehru shows leadership as continuous explanation. Together they explain how a good leader follows the followers without surrendering judgment."
    ],
-   "examplesIntro": "The examples below show leadership by consent in coalitions and local government, its corruption in populism, its support in a neutral civil service and its hardest test in crisis. They are most useful when the answer asks how authority is renewed.",
    "models": [
     [
      "Authority is conferred by acceptance.",
@@ -5611,7 +5550,6 @@ const GUIDES = {
      "Argue that good leaders listen, explain and supply judgment."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns leadership, authority or legitimacy.",
    "formula": "Draw authority from consent, supply judgment within it, and explain every decision so that consent can be renewed. Protect the institutions through which people speak, and in a crisis act lawfully, for a limited time, and give reasons afterwards."
   },
   {
@@ -5731,7 +5669,6 @@ const GUIDES = {
     "Putting the five together",
     "Mill shows that silencing any view harms everyone. Orwell shows how language and memory are corrupted. Habermas explains how the public sphere decays into spectacle. Ambedkar warns against media built around personality. Tagore shows that dissent matters only if it can circulate. Together they explain why biased media threaten democracy."
    ],
-   "examplesIntro": "The examples below show the structural causes of bias, the risks in regulating truth, the use of shutdowns and the places where independent reporting survives. They are most useful when the answer asks who can afford to report what.",
    "models": [
     [
      "A free press lets democracy correct itself.",
@@ -5784,7 +5721,6 @@ const GUIDES = {
      "Recommend structural reforms that do not give the state control of truth."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns the media, bias or democracy.",
    "formula": "Protect a plural media by fixing the structures that produce bias: revenue, ownership, ratings and legal pressure. Never let the interested party decide what is true, and make sure criticism can circulate, because democracy corrects itself only through what its citizens can see and hear."
   },
   {
@@ -5913,7 +5849,6 @@ const GUIDES = {
     "Putting the six together",
     "Tagore opposes the uniform nation. Nehru describes layered history and secular neutrality. Azad defends composite nationhood from within faith. Ambedkar warns that plural culture contains hierarchy and grounds unity in the Constitution. Gandhi shows coexistence as daily practice. Aurobindo sees unity expressed through variety. Together they explain why plural culture holds society together, and why constitutional rights must protect those at the bottom."
    ],
-   "examplesIntro": "The examples below show how India built pluralism into institutions, where the arrangement is contested, and why shared culture alone does not produce regional cooperation. They are most useful when the answer asks how difference is accommodated.",
    "models": [
     [
      "Plural culture is the fabric of society.",
@@ -5966,7 +5901,6 @@ const GUIDES = {
      "Argue that plural culture and constitutional rights sustain unity together."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns diversity, identity or national unity.",
    "formula": "Build unity by accommodating difference rather than demanding uniformity. Let the plural cultural weave hold society together, and let constitutional rights protect every person within it, especially those the weave has placed at the bottom."
   },
   {
@@ -6094,7 +6028,6 @@ const GUIDES = {
     "Putting the five together",
     "Kautilya gives the weaker party a doctrine of choices. Nehru shows the value and limits of autonomy. Patel shows negotiation backed by strength. Machiavelli warns that neutrality without leverage fails. Gandhi explains why imposed settlements do not last. Together they show that a state caught between elephants has options, if it builds the capability to use them."
    ],
-   "examplesIntro": "The examples below show India’s strategic choices, its border disputes, its neighbourhood relations, modern dependencies and the lessons of small states. They are most useful when the answer asks what gives a state leverage.",
    "models": [
     [
      "A state is not grass.",
@@ -6147,7 +6080,6 @@ const GUIDES = {
      "Argue that India must resist being trampled and avoid trampling its neighbours."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns geopolitics, small states or border management.",
    "formula": "Build capability, become useful to many partners and keep more than one door open, so that rivals find you expensive to trample. Manage borders with strength, patience and practical arrangements, and treat smaller neighbours as partners rather than grass."
   },
   {
@@ -6286,7 +6218,6 @@ const GUIDES = {
     "Putting the six together",
     "Ambedkar shows that constitutional morality must be cultivated. Montesquieu arranges power to check power. Rousseau and Tocqueville show that structure needs civic spirit and daily habits. Jayaprakash Narayan shows citizens reclaiming institutions. Mill warns that a state which weakens its citizens loses the capacity to use its own machinery. Together they explain why constitutions survive on habits, not paper."
    ],
-   "examplesIntro": "The examples below show ways the text can be observed while its purpose is defeated, and the everyday tools that keep constitutional morality alive. They are most useful when the answer asks whether a rule has a clock and an independent enforcer.",
    "models": [
     [
      "Constitutional morality must be cultivated.",
@@ -6339,7 +6270,6 @@ const GUIDES = {
      "Recommend deadlines, independent appointments and an alert public."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns constitutional morality, institutions or democratic conventions.",
    "formula": "Treat constitutional morality as a habit that officeholders and citizens must keep. Give every rule a clock and an independent enforcer, use every power for its intended purpose, and keep information open so that citizens can see and answer every breach."
   }
  ],
@@ -6461,7 +6391,6 @@ const GUIDES = {
     "Putting the five together",
     "Schumacher shows natural capital being spent as income. Gandhi warns that greed has no limit. Ostrom shows that commons can be governed well. Burke includes the unborn in present decisions. Thoreau reminds us that civilisation depends on what it did not make. Together they explain why deserts follow civilisations that forget their inheritance."
    ],
-   "examplesIntro": "The examples below show institutions for governing forests, the weakness of substitution, the problem of measurement, the evidence of collapse and the politics of protection. They are most useful when the answer asks whether nature is treated as capital.",
    "models": [
     [
      "Nature is capital, not income.",
@@ -6514,7 +6443,6 @@ const GUIDES = {
      "Argue for measures and institutions that treat nature as capital."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns ecology, civilisation or natural resources.",
    "formula": "Treat nature as capital, not income. Measure its loss honestly, give communities rights and a stake in its future, and remember that the unborn are partners in every decision that spends it."
   },
   {
@@ -6634,7 +6562,6 @@ const GUIDES = {
     "Putting the five together",
     "Ostrom shows that forests can be managed efficiently by communities. Schumacher shows that market prices omit most of a forest’s value. Sen shows the forest as the capability of those who depend on it. Gandhi explains why conversion always seems profitable. Burke adds the claims of future generations. Together they explain why the forest is a model of economic excellence that conventional accounts cannot see."
    ],
-   "examplesIntro": "The examples below show fiscal rewards for forests, community management, valuation, forest livelihoods and the problem of pricing. They are most useful when the answer asks who receives the value and who bears the cost.",
    "models": [
     [
      "Commons can be managed efficiently.",
@@ -6687,7 +6614,6 @@ const GUIDES = {
      "Define excellence as sustainable, shared and lasting value."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns forests, commons or the economics of nature.",
    "formula": "Measure forests by everything they do, not only by what can be sold. Give communities real rights and fair returns, reward those who protect forests, and count the future in every decision about them."
   },
   {
@@ -6798,7 +6724,6 @@ const GUIDES = {
     "Putting the four together",
     "Tagore sees nature as a relationship that teaches proportion. Thoreau uses nature for self-knowledge. Mahavira extends moral standing to all life. Aurobindo sees spirit working through matter. Together they explain why nature can be the symbol of the spirit: it is the thing a person did not make and cannot improve."
    ],
-   "examplesIntro": "The examples below show legal personhood, belief-based conservation, deep ecology, access to nature in cities and the objection that reverence has not stopped destruction. They are most useful when the answer joins spiritual regard with enforceable protection.",
    "models": [
     [
      "Nature teaches proportion.",
@@ -6851,7 +6776,6 @@ const GUIDES = {
      "Argue for joining spiritual regard with enforceable protection."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns nature, spirit or the ethics of the environment.",
    "formula": "Learn from nature as the thing we did not make and cannot improve. Respect all life, keep traditions of reverence alive, and join them to enforceable law, so that the symbol of the spirit is protected in practice."
   },
   {
@@ -6971,7 +6895,6 @@ const GUIDES = {
     "Putting the five together",
     "Schumacher sets criteria of accessibility, repairability and scale. Gandhi shows technology that households can own. Kalam shows self-reliance as resilience. Einstein shows that capability does not settle whether to build. Deendayal Upadhyaya judges technology by whether it serves the whole person. Together they define appropriate technology as fit, control and reversibility."
    ],
-   "examplesIntro": "The examples below show decentralised energy, resilient agriculture, the case for scale, the politics of technology transfer and traditional water systems. They are most useful when the answer asks whether a technology fits the task and who controls it.",
    "models": [
     [
      "Technology must fit the task.",
@@ -7024,7 +6947,6 @@ const GUIDES = {
      "Argue for technology chosen by fit, control and resilience."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns technology, climate resilience or development.",
    "formula": "Choose technology by its fit to the task, its resilience to failure and the control it gives to those who depend on it. Decentralise where local repair and ownership matter, build at scale where the task demands it, and keep reversibility among the design requirements."
   },
   {
@@ -7163,7 +7085,6 @@ const GUIDES = {
     "Putting the six together",
     "Sen defines development as freedom. Nussbaum sets a threshold for every person. Gandhi and Deendayal Upadhyaya test policy by the poorest and the last. Schumacher adds ecological sustainability. Tagore insists that people are the point of the economy. Together they show that growth is a means whose purpose must be specified from the start."
    ],
-   "examplesIntro": "The examples below show poverty measures, the Kerala contrast, jobless growth, state differences and the case for growth. They are most useful when the answer asks whether growth reached people.",
    "models": [
     [
      "Development is freedom.",
@@ -7216,7 +7137,6 @@ const GUIDES = {
      "Argue that growth should be specified by what it makes possible and for whom."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns growth, development or well-being.",
    "formula": "Pursue growth as a means, and specify at the outset what it is for and for whom. Judge the economy by the capabilities of its least advantaged people, by its care for natural capital, and by whether people remain its purpose rather than its instruments."
   }
  ],
@@ -7346,7 +7266,6 @@ const GUIDES = {
     "Putting the five together",
     "Foucault shows that platforms have become techniques of the self owned by others. James and Allport show how feedback reshapes the self it observes. Festinger explains the comparison that fuels FOMO. Maslow asks whether growth is autonomous. Marcus Aurelius shows reflection without an audience. Together they explain what it means for self-discovery to be outsourced."
    ],
-   "examplesIntro": "The examples below show the evidence on mental health, the design of recommendation systems, data protection, attempted correctives and the value of online community. They are most useful when the answer separates what is proven from what is claimed.",
    "models": [
     [
      "The tools of self-discovery are leased.",
@@ -7399,7 +7318,6 @@ const GUIDES = {
      "Recommend changes to design and habits of reflection without an audience."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns identity, social media or self-discovery.",
    "formula": "Recognise that the tools of self-discovery have been leased to platforms built for engagement. Reclaim reflection without an audience, change the design and defaults that turn connection into comparison, and protect the online communities that give isolated people a place to belong."
   },
   {
@@ -7528,7 +7446,6 @@ const GUIDES = {
     "Putting the six together",
     "Bentham and Foucault show how observation reshapes conduct without intent. The Buddha and Marcus Aurelius show attention as the faculty of inner freedom. Habermas links attention to democratic reasoning. Drucker shows attention as the scarce asset of the knowledge economy. Together they explain why attention is the resource most consumed and least counted."
    ],
-   "examplesIntro": "The examples below show how interruption is engineered, what it does to learning, how business models discourage depth, how regulation is changing, and why warnings about new media must meet a burden of proof. They are most useful when the answer identifies what is structurally new.",
    "models": [
     [
      "Attention is the scarce resource.",
@@ -7581,7 +7498,6 @@ const GUIDES = {
      "Recommend changes in defaults, regulation and personal practice."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns attention, distraction or the information economy.",
    "formula": "Treat sustained attention as the scarce resource that turns information into understanding. Change the defaults and designs that consume it, regulate manipulation rather than speech, and protect spaces where attention can rest."
   },
   {
@@ -7701,7 +7617,6 @@ const GUIDES = {
     "Putting the five together",
     "Marx asks who captures the gains and whether work returns anything to the worker. Schumacher defines good work beyond income. Drucker makes learning lifelong. Sen judges the transition by what people can do. McGregor shows that job design decides whether automation degrades or improves work. Together they show that the future of work is a choice."
    ],
-   "examplesIntro": "The examples below show India’s exposure, the record of skilling, the rise of gig work, the income-support debate and cases where AI augments human work. They are most useful when the answer asks who gains and who is protected.",
    "models": [
     [
      "Work is more than income.",
@@ -7754,7 +7669,6 @@ const GUIDES = {
      "Argue that the outcome depends on policy and distribution."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns automation, AI or the future of work.",
    "formula": "Treat the future of work as a choice, not a fate. Deploy AI to augment and extend human work, tie training to real jobs, protect workers in transition, and share the gains of productivity so that automation removes drudgery rather than dignity."
   },
   {
@@ -7893,7 +7807,6 @@ const GUIDES = {
     "Putting the six together",
     "Foucault shows that classification is power. Orwell shows the control of records. Bentham shows that humane intent does not prevent harm. Habermas sets the test of free consent. Ambedkar insists on rights that can be exercised. Schumacher shows why systems must be small enough to understand. Together they define the safeguards that make data systems legitimate."
    ],
-   "examplesIntro": "The examples below show the legal test for privacy, the cost of failed authentication, facial recognition without law, function creep and unpublished restrictions. They are most useful when the answer asks whether the person affected can challenge the system.",
    "models": [
     [
      "Classification is power.",
@@ -7946,7 +7859,6 @@ const GUIDES = {
      "Argue that those classified must be able to see and challenge decisions."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns privacy, surveillance or data.",
    "formula": "Treat every data system as an exercise of power. Ground it in law, collect only what is needed, keep it to its purpose, publish its orders and give every person classified the means to see, question and appeal the category applied to them."
   },
   {
@@ -8075,7 +7987,6 @@ const GUIDES = {
     "Putting the six together",
     "Einstein shows that capability does not decide use. Kautilya shows that capability sets the menu of choices. Nehru shows the long work of building a scientific base. Schumacher shows dependency as a lever. Orwell shows power exercised without announcement. Ambedkar shows the gap between formal and practical sovereignty. Together they explain why technology is the silent factor in international relations."
    ],
-   "examplesIntro": "The examples below show chokepoints, digital public infrastructure, cyber operations, critical minerals and dual-use space capability. They are most useful when the answer asks whether a substitute exists at any price.",
    "models": [
     [
      "Capability sets the menu.",
@@ -8128,7 +8039,6 @@ const GUIDES = {
      "Argue for building capability while keeping judgment over its use."
     ]
    ],
-   "stepsIntro": "Use the following sequence when a question concerns technology and international relations.",
    "formula": "Treat technology as the silent factor that sets the terms of international relations. Build the capabilities that turn formal independence into practical autonomy, share technology in ways that build partnership rather than dependence, and keep ethical judgment over how capability is used."
   }
  ]

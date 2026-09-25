@@ -380,8 +380,6 @@ function continueHTML(){
       <span class="cont-art art-thinker" aria-hidden="true"></span>
       <div class="cont-body">
         <div class="cont-t"><b>Begin with the first heading of either paper</b></div>
-        <p class="cont-w">Your place and progress are kept in this browser, so this card will
-           bring you back to where you stopped.</p>
       </div>
       <div class="cont-go">
         <button class="cta" data-to="syllabus|1|">GS-IV ${ico("arrow")}</button>
@@ -488,8 +486,7 @@ function renderHome(){
 
     <section class="hblock">
       <div class="hb-head">
-        <div><h3 class="hb-t">Study by Paper</h3>
-          <p class="hb-s">Structured around the questions UPSC has actually set, ${yearSpan()}.</p></div>
+        <div><h3 class="hb-t">Study by Paper</h3></div>
       </div>
       <div class="pcards">
         ${paperCardHTML({
@@ -510,8 +507,7 @@ function renderHome(){
 
     <section class="hblock">
       <div class="hb-head">
-        <div><h3 class="hb-t">Explore Thinkers</h3>
-          <p class="hb-s">Browse thinkers, their key ideas, and how they appear in UPSC questions.</p></div>
+        <div><h3 class="hb-t">Explore Thinkers</h3></div>
         <button class="hb-link" data-view="all">View all ${s.thinkers} thinkers ${ico("arrow")}</button>
       </div>
       <div class="tcards">${HOME_THINKERS.map(id => byId[id]).filter(Boolean).map(thinkerTileHTML).join("")}</div>
@@ -519,8 +515,7 @@ function renderHome(){
 
     <section class="hblock">
       <div class="hb-head">
-        <div><h3 class="hb-t">High-yield Topics</h3>
-          <p class="hb-s">The essay themes the paper has asked most, with their thinkers and model material.</p></div>
+        <div><h3 class="hb-t">High-yield Topics</h3></div>
         <button class="hb-link" data-to="themes|0|">View all ${s.themes} themes ${ico("arrow")}</button>
       </div>
       <div class="topics">${topics.map((r, k) => `
@@ -647,17 +642,6 @@ function pyqHeroHTML(on, t, s, aside){
     </section>`;
 }
 
-/* What each group on a past-question page shows, in the order it shows it. */
-function pyqGuideHTML(steps){
-  return `
-    <section class="atl-guide" aria-label="How to read a group">
-      <h3 class="hb-t">How to read a group</h3>
-      <ol class="atl-steps">${steps.map((p, i) => `
-        <li><span class="atl-step-ico">${ico(p[0])}</span>
-            <b><i>${i + 1}</i>${esc(p[1])}</b><span>${esc(p[2])}</span></li>`).join("")}
-      </ol>
-    </section>`;
-}
 
 /* The two past-question pages sit under one section, with a switch between them. */
 function pyqSwitchHTML(on){
@@ -1035,12 +1019,6 @@ function applyThinkerFilter(){
    GS-IV heading. The box, the paper and the one-liner switch work in every
    arrangement. */
 const QUOTE_MODES = [["school", "Tradition"], ["theme", "Essay theme"], ["syl", "GS-IV heading"]];
-const QUOTE_STEPS = [
-  ["quote",  "Pick a short one",       "One sentence opens an essay or an answer best. Keep longer lines for the body"],
-  ["user",   "Name the thinker",       "Say who said it. Open the name for the thinker's years and ideas"],
-  ["bulb",   "Tie it to the question", "Follow it with a sentence on what it means for the question asked"],
-  ["target", "Use it sparingly",       "One to open and one to close is enough. The argument does the rest"]
-];
 const QUOTE_SHORT = 12;   // a one-liner: twelve words or fewer
 const QCAT_ICON = { classical:"landmark", eastern:"sun", "indian-class":"indian", "west-political":"scale",
   contemporary:"voices", "indian-modern":"flame", reform:"users", "ethics-psych":"heart", admin:"case", humanist:"globe" };
@@ -1116,8 +1094,7 @@ function renderQuotes(){
     <div class="hero-body">
       <p class="hero-k">Thinkers</p>
       <h2 class="hero-t">Quote Bank</h2>
-      <p class="hero-s">${all.length} quotations from ${plural(list.length, "thinker", "thinkers")}, for the opening
-         of an essay, a turn in its argument, or the last line of an answer.</p>
+      <p class="hero-s">${all.length} quotations from ${plural(list.length, "thinker", "thinkers")}.</p>
       <form class="hsearch" role="search" data-qfilter>
         ${ico("search")}
         <input id="quoteQ" type="search" autocomplete="off" value="${esc(state.qq || "")}"
@@ -1130,20 +1107,13 @@ function renderQuotes(){
       </div>
     </div>
     <div class="hero-aside">
-      <button data-qshort="1"><b>${short}</b><span>one-liners of ${QUOTE_SHORT} words or fewer</span></button>
-      <button data-qmode="theme"><b>${ESSAY_THEMES.length}</b><span>essay themes to arrange them by</span></button>
-      <button data-qmode="syl"><b>${SYLLABUS.length}</b><span>GS-IV headings to arrange them by</span></button>
+      <button data-qshort="1"><b>${short}</b><span>one-liners</span></button>
+      <button data-qmode="theme"><b>${ESSAY_THEMES.length}</b><span>essay themes</span></button>
+      <button data-qmode="syl"><b>${SYLLABUS.length}</b><span>GS-IV headings</span></button>
     </div>
   </section>
 
   <div class="home">
-    <section class="atl-guide" aria-label="How to use a quotation">
-      <h3 class="hb-t">How to use a quotation</h3>
-      <ol class="atl-steps">${QUOTE_STEPS.map((p, i) => `
-        <li><span class="atl-step-ico">${ico(p[0])}</span>
-            <b><i>${i + 1}</i>${esc(p[1])}</b><span>${esc(p[2])}</span></li>`).join("")}
-      </ol>
-    </section>
 
     <div class="q-tools" id="qtools">
       <div class="t-regions" role="group" aria-label="Arrange the quotations by">
@@ -1540,14 +1510,8 @@ function wlCard(id, w){
 }
 
 /* ---- The Works in Depth page ----
-   The other pages' look: a header band, how every piece is built, all the
-   works on one line of time, then a shelf for each thinker. */
-const WL_PARTS = [
-  ["book",    "The form",  "What kind of book it is: a poem, a manual, a pamphlet, a speech, a novel"],
-  ["compass", "The fate",  "How it reached us, which is often the more interesting half"],
-  ["file",    "The piece", "About a thousand words on what is actually in the book"],
-  ["link",    "The shelf", "The author's other works in depth, and the thinker's full page"]
-];
+   A header band, all the works on one line of time, then a shelf for each
+   thinker. */
 
 /* Every work, oldest first, on one rail. Where more than two centuries pass
    between two works, the rail breaks and says how long. */
@@ -1583,33 +1547,20 @@ function renderWorkLabList(){
       <p class="hero-k">Thinkers</p>
       <h2 class="hero-t">Works in Depth</h2>
       <p class="hero-s">${all.length} works by ${word(people)} thinkers${texts ? ` and ${word(texts)} ${texts === 1 ? "text" : "texts"}
-         with no single author` : ""}, about a thousand words on each: what is actually in the book,
-         and what happened to it.</p>
-      <p class="hero-note">The thinkers are chosen to be as unlike each other as the roster allows: an
-         aphoristic poem, a manual of statecraft, an unfinished economics, a sequence of interventions,
-         two novels and a body of hymns.</p>
+         with no single author` : ""}: what is in each book, and what happened to it.</p>
     </div>
     <div class="hero-aside">
-      <button data-jumpto="wl-g0"><b>${ids.length}</b><span>shelves, one for each thinker or text</span></button>
-      <button data-work="${esc(all[0].id)}:${esc(all[0].w.t)}"><b>${all.length}</b><span>works, from the first</span></button>
-      <button data-jumpto="wl-time"><b>${span.toLocaleString("en-IN")}</b><span>years from the oldest to the newest</span></button>
+      <button data-jumpto="wl-g0"><b>${ids.length}</b><span>shelves</span></button>
+      <button data-work="${esc(all[0].id)}:${esc(all[0].w.t)}"><b>${all.length}</b><span>works</span></button>
+      <button data-jumpto="wl-time"><b>${span.toLocaleString("en-IN")}</b><span>years spanned</span></button>
     </div>
   </section>
 
   <div class="home">
-    <section class="atl-guide" aria-label="How every piece is built">
-      <h3 class="hb-t">How every piece is built</h3>
-      <ol class="atl-steps">${WL_PARTS.map((p, i) => `
-        <li><span class="atl-step-ico">${ico(p[0])}</span>
-            <b><i>${i + 1}</i>${esc(p[1])}</b><span>${esc(p[2])}</span></li>`).join("")}
-      </ol>
-    </section>
 
     <section class="hblock" id="wl-time">
       <div class="hb-head">
-        <div><h3 class="hb-t">${span.toLocaleString("en-IN")} years on one shelf</h3>
-          <p class="hb-s">Every work, oldest first. The rail breaks where more than two centuries pass.
-             Open a title to read the piece.</p></div>
+        <div><h3 class="hb-t">${span.toLocaleString("en-IN")} years on one shelf</h3></div>
       </div>
       <div class="wlt-card">${wlLineHTML(all)}</div>
     </section>
@@ -1738,14 +1689,8 @@ function essayStoriesHTML(e){
 }
 
 /* ---- The Model Essays page ----
-   The maps' look: a header band, how an essay is built, then the essays by
-   theme, each card opening with the essay's own first sentence. */
-const ESSAY_PARTS = [
-  ["file",    "Written to answer", "The past topics the essay is written for; together the essays cover every one"],
-  ["layers",  "The argument",      "1,500 to 1,900 words: evidence, counter-argument and the turn to a conclusion"],
-  ["bulb",    "The conclusion",    "The last paragraph, set apart, says where the argument lands"],
-  ["compass", "Stories it uses",   "Atlas entries the essay draws on, each told in full"]
-];
+   A header band, then the essays by theme, each card opening with the
+   essay's own first sentence. */
 
 function essayCardHTML(k, ti){
   const e = ESSAYS[k], body = essayBody(e);
@@ -1772,8 +1717,6 @@ function renderEssayList(){
   if (typeof ESSAYS === "undefined" || !essayOrder().length)
     return `<div class="empty"><b>Nothing yet</b>Essays are added per theme in essays.js.</div>`;
   const s = siteStats(), order = essayOrder();
-  const words = order.map(k => essayBody(ESSAYS[k]).join(" ").split(/\s+/).length);
-  const lo = Math.min.apply(null, words), hi = Math.max.apply(null, words);
   const answered = order.reduce((a, k) => a + (ESSAYS[k].serves || []).length, 0);
   const read = ESSAY_THEMES.reduce((a, t, i) => a + (t.essays || []).filter(k => isRead(readKey("themes", i + 1, "e:" + k))).length, 0);
   return `
@@ -1782,28 +1725,18 @@ function renderEssayList(){
     <div class="hero-body">
       <p class="hero-k">Essay Paper</p>
       <h2 class="hero-t">Model Essays</h2>
-      <p class="hero-s">${order.length} full essays, two for each theme and three where a theme needs it.
-         Each is built from its theme's model paragraphs and written to answer named past topics:
-         between them, all ${answered}.</p>
-      <p class="hero-note">${lo.toLocaleString("en-IN")} to ${hi.toLocaleString("en-IN")} words each, in one
-         editorial register: the argument is carried by evidence, and a thinker appears only where the idea
-         does real work.${read ? ` You have read ${read} of ${order.length}.` : ""}</p>
+      <p class="hero-s">${order.length} full essays, two for each theme and three for one, answering all
+         ${answered} past topics.</p>
+      ${read ? `<p class="hero-note">You have read ${read} of ${order.length}.</p>` : ""}
     </div>
     <div class="hero-aside">
-      <button data-essay="${esc(order[0])}"><b>${order.length}</b><span>essays, from the first</span></button>
-      <button data-view="pyq"><b>${s.topics}</b><span>past topics answered</span></button>
-      <button data-to="themes|1|p:0"><b>${s.paras}</b><span>model paragraphs behind them</span></button>
+      <button data-essay="${esc(order[0])}"><b>${order.length}</b><span>essays</span></button>
+      <button data-view="pyq"><b>${s.topics}</b><span>past topics</span></button>
+      <button data-to="themes|1|p:0"><b>${s.paras}</b><span>model paragraphs</span></button>
     </div>
   </section>
 
   <div class="home">
-    <section class="atl-guide" aria-label="How every essay is built">
-      <h3 class="hb-t">How every essay is built</h3>
-      <ol class="atl-steps">${ESSAY_PARTS.map((p, i) => `
-        <li><span class="atl-step-ico">${ico(p[0])}</span>
-            <b><i>${i + 1}</i>${esc(p[1])}</b><span>${esc(p[2])}</span></li>`).join("")}
-      </ol>
-    </section>
 
     ${ESSAY_THEMES.map((t, i) => {
       const ks = (t.essays || []).filter(k => ESSAYS[k]);
@@ -1900,7 +1833,7 @@ function guideHTML(t, i, x, g){
   return `
     <article class="ans sm-pane gd">
       <h5><span class="ans-no">${i + 1}</span>${esc(x.h)}</h5>
-      <p class="ans-for">A revision and answer-building guide. ${esc(x.s || "")}</p>
+      ${x.s ? `<p class="ans-for">${esc(x.s)}</p>` : ""}
       <nav class="atl-jump gc-jump" aria-label="Parts of this guide">${parts.map((p, k) => `
         <button data-apart="gd-${k + 1}"><i>${k + 1}</i>${p}</button>`).join("")}
       </nav>
@@ -1925,7 +1858,6 @@ function guideHTML(t, i, x, g){
       </section>
 
       <section class="gd-sec">${head(3, "Applying the framework")}
-        ${g.examplesIntro ? `<p>${glossText(g.examplesIntro)}</p>` : ""}
         ${g.examples.map(ex => `
         <div class="gd-ex">
           <h6>${esc(ex[0])}</h6>
@@ -1948,7 +1880,6 @@ function guideHTML(t, i, x, g){
       </section>
 
       <section class="gd-sec">${head(6, "Build a defensible answer")}
-        ${g.stepsIntro ? `<p>${glossText(g.stepsIntro)}</p>` : ""}
         <ol class="cbox-seq gd-steps">${g.steps.map(s => `<li><b>${esc(s[0])}</b> ${glossText(s[1])}</li>`).join("")}</ol>
         ${box("Conclusion formula", g.formula, "gd-formula")}
       </section>
@@ -2304,40 +2235,25 @@ function renderCasesHome(){
       <h2 class="hero-t">Case Studies</h2>
       <p class="hero-s">Every case the paper has set from ${span}, ${all.length} in all, each with a model
          answer in the same five boxes, sorted into ${pats.length} themes.</p>
-      <p class="hero-note">Read a theme's common architecture first, then its cases. Each case is ticked
-         once you have opened it, and your place is kept.</p>
     </div>
     <div class="hero-aside">
-      <button data-to="syllabus|${cs}|method"><b>${boxes.length || 5}</b><span>boxes in every answer, and how to fill them</span></button>
-      <button data-jumpto="cs-list"><b>${pats.length}</b><span>themes, each with a common architecture</span></button>
-      <button data-cstab="year"><b>${years.length}</b><span>papers, ${span}, case by case</span></button>
+      <button data-to="syllabus|${cs}|method"><b>${boxes.length || 5}</b><span>answer boxes</span></button>
+      <button data-jumpto="cs-list"><b>${pats.length}</b><span>themes</span></button>
+      <button data-cstab="year"><b>${years.length}</b><span>papers</span></button>
     </div>
   </section>
 
   <div class="home">
     ${resumeHTML(here)}
-    ${boxes.length ? `
-    <section class="atl-guide cs-guide" aria-label="The five boxes">
-      <div class="hb-head"><h3 class="hb-t">The five boxes</h3>
-        <button class="hb-link" data-to="syllabus|${cs}|method">The full method ${ico("arrow")}</button></div>
-      <ol class="atl-steps">${boxes.map((b, i) => `
-        <li><span class="atl-step-ico">${ico(b[0])}</span>
-            <b><i>${i + 1}</i>${esc(b[1])}</b><span>${esc(b[2])}</span></li>`).join("")}
-      </ol>
-    </section>` : ""}
 
     <div class="t-regions cs-tabs" id="cs-list" role="group" aria-label="Arrange the cases">
       <button class="on" data-cstab="theme" aria-pressed="true">By theme</button>
       <button data-cstab="year" aria-pressed="false">By year</button>
     </div>
     <div class="cs-pane" data-cspane="theme">
-      <p class="cs-note">Each card gives the theme's core conflict, its answer engine, and the years its
-         cases were set. A darker cell marks two or more cases in one paper.</p>
       <div class="scards">${pats.map((c, i) => caseCardHTML(c, i, years, cs)).join("")}</div>
     </div>
     <div class="cs-pane" data-cspane="year" hidden>
-      <p class="cs-note">The cases as each paper set them, newest paper first: practise one paper's
-         cases together.</p>
       ${byYear}
     </div>
   </div>`;
@@ -2407,12 +2323,6 @@ const SYL_ICON = {
   "Environmental & Development Ethics":"leaf", "Social Justice, Gender & the Weaker Sections":"users",
   "Case Studies":"layers"
 };
-const SYL_PARTS = [
-  ["layers",  "Concepts that repeat", "The ideas the paper keeps returning to, most asked first"],
-  ["book",    "Inside each concept",  "A definition, numbered sections and a key takeaway"],
-  ["file",    "Where it was asked",   "Every past question that turns on the concept"],
-  ["users",   "Thinkers and questions", "Who to quote on the heading, and its full question list"]
-];
 
 /* Where the paper asks most: theory and case questions per heading. The case
    studies are counted under the heading they test, so the Case Studies heading,
@@ -2465,33 +2375,22 @@ function sylIndexHTML(spec){
     <div class="hero-body">
       <p class="hero-k">GS Paper IV</p>
       <h2 class="hero-t">GS-IV Syllabus Map</h2>
-      <p class="hero-s">The whole syllabus in ${SYLLABUS.length} headings. Under each: the concepts the paper
-         keeps coming back to, the thinkers worth quoting, and every question set on it from ${span}.</p>
-      <p class="hero-note">Open a heading to begin. Its contents stay in the panel beside you, each item
-         is ticked once you have opened it, and your place is kept.</p>
+      <p class="hero-s">The whole syllabus in ${SYLLABUS.length} headings, with every question set from ${span}.</p>
     </div>
     <div class="hero-aside">
       <button data-open-at="1|"><b>${s.concepts}</b><span>concept notes</span></button>
       <button data-view="gs4pyq"><b>${s.gsq}</b><span>past questions</span></button>
-      ${cs ? `<button data-view="cases"><b>${s.cases}</b><span>case studies, each with a model answer</span></button>` : ""}
+      ${cs ? `<button data-view="cases"><b>${s.cases}</b><span>case studies</span></button>` : ""}
     </div>
   </section>
 
   <div class="home">
     ${resumeHTML(lastPlaces()[spec.view])}
 
-    <section class="atl-guide" aria-label="How every heading is built">
-      <h3 class="hb-t">How every heading is built</h3>
-      <ol class="atl-steps">${SYL_PARTS.map((p, i) => `
-        <li><span class="atl-step-ico">${ico(p[0])}</span>
-            <b><i>${i + 1}</i>${esc(p[1])}</b><span>${esc(p[2])}</span></li>`).join("")}
-      </ol>
-    </section>
 
     <section class="hblock">
       <div class="hb-head">
-        <div><h3 class="hb-t">Where the paper asks most</h3>
-          <p class="hb-s">Past questions under each heading, ${span}. Open a bar to go to its heading.</p></div>
+        <div><h3 class="hb-t">Where the paper asks most</h3></div>
         <button class="hb-link" data-view="gs4pyq">All ${s.gsq} questions ${ico("arrow")}</button>
       </div>
       <div class="schart-card">${sylChartHTML()}</div>
@@ -2499,8 +2398,7 @@ function sylIndexHTML(spec){
 
     <section class="hblock">
       <div class="hb-head">
-        <div><h3 class="hb-t">The ${SYLLABUS.length} headings</h3>
-          <p class="hb-s">In syllabus order. Each card shows what the heading holds and its most asked concepts.</p></div>
+        <div><h3 class="hb-t">The ${SYLLABUS.length} headings</h3></div>
       </div>
       <div class="scards">${SYLLABUS.map(sylCardHTML).join("")}</div>
     </section>
@@ -2573,14 +2471,8 @@ function stackChartHTML(rows, la, lb, first){
 }
 
 /* ---- The Essay Theme Map's first page ----
-   The same look as the syllabus map: a header band, how a theme is built,
-   where the paper asks most, and every theme as a card. */
-const THEME_PARTS = [
-  ["layers",  "Model paragraphs", "Five per theme, one for each kind of question the theme throws up"],
-  ["nib",     "Full essays",      "Complete essays written from those paragraphs"],
-  ["compass", "Stories to use",   "Atlas entries that can open or carry an essay on the theme"],
-  ["file",    "The topics it answers", "Each paragraph names the past topics it serves"]
-];
+   The same look as the syllabus map: a header band, where the paper asks
+   most, and every theme as a card. */
 
 /* The past topics a theme has been set, as parsed keys: 2023B4 is 2023,
    Section B, topic 4. */
@@ -2640,11 +2532,7 @@ function themeIndexHTML(spec){
     <div class="hero-body">
       <p class="hero-k">Essay Paper</p>
       <h2 class="hero-t">Essay Theme Map</h2>
-      <p class="hero-s">${ESSAY_THEMES.length} themes that cover every essay topic the paper has set, ${span}.
-         Under each: model paragraphs to adapt, full essays written from them, and stories from the
-         Thought Atlas that suit it.</p>
-      <p class="hero-note">Open a theme to begin. Its contents stay in the panel beside you, each item
-         is ticked once you have opened it, and your place is kept.</p>
+      <p class="hero-s">${ESSAY_THEMES.length} themes that cover every essay topic the paper has set, ${span}.</p>
     </div>
     <div class="hero-aside">
       <button data-open-at="1|p:0"><b>${s.paras}</b><span>model paragraphs</span></button>
@@ -2656,19 +2544,10 @@ function themeIndexHTML(spec){
   <div class="home">
     ${resumeHTML(lastPlaces()[spec.view])}
 
-    <section class="atl-guide" aria-label="How every theme is built">
-      <h3 class="hb-t">How every theme is built</h3>
-      <ol class="atl-steps">${THEME_PARTS.map((p, i) => `
-        <li><span class="atl-step-ico">${ico(p[0])}</span>
-            <b><i>${i + 1}</i>${esc(p[1])}</b><span>${esc(p[2])}</span></li>`).join("")}
-      </ol>
-    </section>
 
     <section class="hblock">
       <div class="hb-head">
-        <div><h3 class="hb-t">Where the paper asks most</h3>
-          <p class="hb-s">Past essay topics under each theme, ${span}, by the section of the paper they were set in.
-             Open a bar to go to its theme.</p></div>
+        <div><h3 class="hb-t">Where the paper asks most</h3></div>
         <button class="hb-link" data-view="pyq">All ${s.topics} topics ${ico("arrow")}</button>
       </div>
       <div class="schart-card">${stackChartHTML(rows, "Section A topic|Section A topics", "Section B topic|Section B topics", "Theme")}</div>
@@ -2676,8 +2555,7 @@ function themeIndexHTML(spec){
 
     <section class="hblock">
       <div class="hb-head">
-        <div><h3 class="hb-t">The ${ESSAY_THEMES.length} themes</h3>
-          <p class="hb-s">Each card shows what the theme holds, the years it was asked, and its latest topic.</p></div>
+        <div><h3 class="hb-t">The ${ESSAY_THEMES.length} themes</h3></div>
       </div>
       <div class="scards">${ESSAY_THEMES.map((t, i) => themeCardHTML(t, i, years)).join("")}</div>
     </section>
@@ -2882,7 +2760,7 @@ function thinkerPane(r){
   return `
     <div class="sm-pane">
       <div class="ans-head"><b>Thinkers on this heading</b>
-        <span>${n} profile${n === 1 ? "" : "s"} mapped here &mdash; open one to read it</span></div>
+        <span>${n} profile${n === 1 ? "" : "s"} mapped here</span></div>
       <div class="pills">
         ${r.ids.map(id => byId[id]
             ? `<button class="pill" data-open="${id}">${esc(byId[id].name)}</button>` : "").join("")}
@@ -3000,7 +2878,7 @@ function worksHTML(t){
   return `
   <section class="block">
     <div class="block-h"><span class="dot"></span>Major Works${
-      lab ? `<span class="block-hint">${lab.works.length} of these are explored in depth &mdash; click one</span>` : ""}</div>
+      lab ? `<span class="block-hint">${lab.works.length} of these are explored in depth</span>` : ""}</div>
     <div class="works">
       ${list.map(w => {
         const src = cover(w);
@@ -3204,19 +3082,12 @@ function renderPYQ(){
   return `
   <section class="pyq page" id="pyq">
     ${pyqHeroHTML("pyq", "Essay topics, " + span,
-      `Every essay set in the last ${papers} Mains papers, ${total} topics, grouped by what each one
-       actually asks you to do. Each topic sits in one group only, so the order is a count, not an
-       impression.`,
-      [[papers, "papers, " + span, `data-pyqgo="year"`],
-       [PYQ_THEMES.length, "themes, most asked first", `data-pyqgo="theme"`],
-       [siteStats().paras, "model paragraphs to answer them", `data-to="themes|1|p:0"`]])}
+      `Every essay topic set in the last ${papers} Mains papers, ${total} in all, grouped by theme.`,
+      [[papers, "papers", `data-pyqgo="year"`],
+       [PYQ_THEMES.length, "themes", `data-pyqgo="theme"`],
+       [siteStats().paras, "model paragraphs", `data-to="themes|1|p:0"`]])}
 
     <div class="home">
-    ${pyqGuideHTML([
-      ["chart",    "The bar",    `How many of the ${total} topics the group holds, against the largest`],
-      ["calendar", "The years",  `One cell for each paper, ${span}. Darker cells mark two or more topics`],
-      ["file",     "The topics", "Each with its year and section, and the model paragraph that answers it"],
-      ["nib",      "Write it with", "The model essay for the group and the thinkers to use"]])}
 
     ${ (typeof PYQ_NOTES !== "undefined") ? `<div class="pyq-notes">
       <h4 class="hb-t">What ${papers} papers show</h4>
@@ -3230,8 +3101,6 @@ function renderPYQ(){
 
     <div class="pyq-theme">${byTheme}</div>
     <div class="pyq-year" hidden>
-      <p class="pyq-note">The papers as they were set. The label under each question is the group
-         it belongs to &mdash; click it to jump there.</p>
       ${byYear}
     </div>
     </div>
@@ -3325,18 +3194,12 @@ function renderGS4PYQ(){
   <section class="pyq page g4pyq" id="gs4pyq">
     ${pyqHeroHTML("gs4pyq", "GS-IV questions, " + span,
       `All ${GS4_PYQ.length} questions from the ${papers} GS Paper IV papers: ${GS4_PYQ.length - nCases} theory
-       questions and ${nCases} case studies, filed under the topic each one tests. Open a topic to see its
-       questions, newest first, and go from there to its concept notes.`,
-      [[papers, "papers, " + span, `data-pyqgo="year"`],
-       [nCases, "case studies, each with a model answer", `data-view="cases"`],
-       [siteStats().concepts, "concept notes behind them", `data-view="syllabus"`]])}
+       questions and ${nCases} case studies, filed by topic.`,
+      [[papers, "papers", `data-pyqgo="year"`],
+       [nCases, "case studies", `data-view="cases"`],
+       [siteStats().concepts, "concept notes", `data-view="syllabus"`]])}
 
     <div class="home">
-    ${pyqGuideHTML([
-      ["chart",    "The bar",       `How many of the ${GS4_PYQ.length} questions the topic holds, against the largest`],
-      ["calendar", "The years",     `One cell for each paper, ${span}. Darker cells mark two or more questions`],
-      ["file",     "The questions", "Theory first, then case studies, newest first. Long cases fold after the opening"],
-      ["book",     "Concept notes", "The syllabus headings the topic draws on, one click away"]])}
 
     <div class="pyq-tabs t-regions" role="group" aria-label="Arrange the questions">
       <button class="pyqtab on" data-pyq="theme">By topic</button>
@@ -3345,8 +3208,6 @@ function renderGS4PYQ(){
 
     <div class="pyq-theme">${byTopic}</div>
     <div class="pyq-year" hidden>
-      <p class="pyq-note">The papers as they were set. The label under each question is its topic
-         &mdash; click it to jump there.</p>
       ${byYear}
     </div>
     </div>
@@ -3487,7 +3348,7 @@ function atlasCardHTML(x){
       </button>`;
 }
 
-/* The overview: how an entry is built, then every entry as a card, grouped by
+/* The overview: every entry as a card, grouped by
    whichever arrangement is chosen, with a tile per group to jump to it. */
 function atlasIndexHTML(){
   const groups = atlasGroups(ATLAS).filter(g => g.items.length);
@@ -3500,27 +3361,18 @@ function atlasIndexHTML(){
         <p class="hero-k"><button class="rd-toc" data-toc aria-label="Show the contents">&#9776;<span>Contents</span></button>Essay Paper
            <span class="rd-sep" aria-hidden="true">/</span> Stories and models</p>
         <h2 class="hero-t">Human Thought Atlas</h2>
-        <p class="hero-s">${ATLAS.length} stories, thought experiments, paradoxes and models to open an
-           essay or support a GS-IV answer.</p>
-        <p class="hero-note">Every entry answers the same eight questions in the same order, so you always
-           know where to look.${read ? ` You have read ${read} of ${ATLAS.length}.` : ""}</p>
+        <p class="hero-s">${ATLAS.length} stories, thought experiments, paradoxes and models.</p>
+        ${read ? `<p class="hero-note">You have read ${read} of ${ATLAS.length}.</p>` : ""}
       </div>
       <div class="hero-aside">
-        <button data-sel="${ATLAS[0].id}"><b>${ATLAS.length}</b><span>entries, from the first</span></button>
-        <button data-amode="essay"><b>${ESSAY_THEMES.length}</b><span>essay themes to arrange them by</span></button>
-        <button data-jumpto="atl-kinds"><b>${Object.keys(ATLAS_KINDS).length}</b><span>kinds of entry, told apart by colour</span></button>
+        <button data-sel="${ATLAS[0].id}"><b>${ATLAS.length}</b><span>entries</span></button>
+        <button data-amode="essay"><b>${ESSAY_THEMES.length}</b><span>essay themes</span></button>
+        <button data-jumpto="atl-kinds"><b>${Object.keys(ATLAS_KINDS).length}</b><span>kinds of entry</span></button>
       </div>
     </section>
 
     <div class="rd atl-ix">
 
-      <section class="atl-guide" aria-label="How every entry is built">
-        <h3 class="hb-t">How every entry is built</h3>
-        <ol class="atl-steps">${ATLAS_PARTS.map((p, i) => `
-          <li><span class="atl-step-ico">${ico(p[1])}</span>
-              <b><i>${i + 1}</i>${esc(p[2])}</b><span>${esc(p[3])}</span></li>`).join("")}
-        </ol>
-      </section>
 
       <section class="atl-browse">
         <div class="atl-bar">

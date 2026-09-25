@@ -1254,7 +1254,6 @@ html[data-theme="dark"] .cont-art{filter:grayscale(.4) brightness(.85)}
 .pyq-link:hover{background:var(--accent);color:var(--panel)}
 
 /* --- by year --- */
-.pyq-note{font-size:12.5px;color:var(--ink-3);margin-bottom:14px}
 .pyq-paper{
   background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
   padding:16px 20px 18px;margin-bottom:11px;box-shadow:var(--shadow)}
@@ -1881,20 +1880,8 @@ html[data-theme="dark"] .fam-idea{--fam:#c8b4ea;--fam-bg:rgba(178,152,222,.16)}
   font:600 11.5px/1.2 var(--sans);white-space:nowrap;color:var(--fam);background:var(--fam-bg)}
 .akind .ic{width:14px;height:14px}
 
-/* ---- The overview: how an entry is built, then every entry as a card ---- */
+/* ---- The overview: every entry as a card ---- */
 .atl-ix{max-width:1180px}
-.atl-guide{margin:4px 0 28px}
-.atl-guide .hb-t{font-size:18px;margin-bottom:14px}
-.atl-steps{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,215px),1fr));gap:10px;margin:0;padding:0}
-.atl-steps li{
-  display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:11px;align-items:start;
-  padding:12px 14px;background:var(--panel);border:1px solid var(--line);border-radius:10px}
-.atl-step-ico{
-  grid-row:1 / span 2;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
-  background:var(--saffron-soft);color:var(--saffron-ink)}
-.atl-steps b{font:600 14px/1.35 var(--read);color:var(--head)}
-.atl-steps b i{font-style:normal;margin-right:6px;color:var(--saffron-ink)}
-.atl-steps li > span:last-child{margin-top:2px;font:12.5px/1.45 var(--sans);color:var(--ink-3)}
 .atl-bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
 .atl-bar .hsearch{flex:1 1 320px;max-width:none}
 .atl-arrange{flex-wrap:wrap}
@@ -2448,8 +2435,6 @@ html[data-theme="dark"] .cm2-weak i,html[data-theme="dark"] .cpat-traps > b{colo
 .art-hercules{background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Annibale_Carracci_-_The_Choice_of_Heracles_-_WGA4416.jpg/960px-Annibale_Carracci_-_The_Choice_of_Heracles_-_WGA4416.jpg")}
 .hero-sm .hero-art.art-hercules{background-position:50% 38%}
 .cs-tabs{margin:26px 0 12px;scroll-margin-top:84px}
-.cs-guide .atl-steps{grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr))}
-.cs-note{margin:0 0 14px;font:14px/1.55 var(--read);color:var(--ink-2)}
 .cs-pane[hidden]{display:none}
 .cscard-core{font:italic 14px/1.45 var(--read);color:var(--ink-2)}
 .cscard .tyears{margin-top:2px}
