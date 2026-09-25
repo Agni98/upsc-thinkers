@@ -77,6 +77,45 @@ A heading page shows what the heading holds. Every concept note carries a strip 
 (definition, numbered sections, takeaway, where it was asked) that stays in view and jumps to
 each one.
 
+### GS-IV case studies
+
+The Case Studies heading of the syllabus map is where every Section B case lives: all 75, from
+2013 to 2025, each with a model answer. It holds three things.
+
+**How to answer one: the five boxes.** The method comes from the supplied answer framework.
+It runs: case, ethical conflict, governing principles, options, eliminate the defective ones,
+a defensible course of action. Every answer uses the same five boxes:
+1. Ethical conflict: what exactly pulls in opposite directions
+2. Stakeholders: who gains, who loses, who has a duty
+3. Options: each with its merit and its problem
+4. Decision criteria: legality, public interest, harm, fairness, integrity, feasibility
+5. Action sequence: what happens first, second, third
+
+The method page adds the six tests, a stakeholder checklist, the weak and strong versions of a
+conflict and of a sequence, the rules the answers follow, and what the cases teach.
+
+**Sixteen themes, each with a common architecture.** The first ten are the answer engines in the
+framework; six more cover the cases those ten do not: threats and inducements, crises that will
+not wait, the job against the rest of your life, dignity at work, fixing the system, and
+development against the people who pay for it. Each theme has a core conflict and an engine
+(for example: record the facts, seek the order in writing, escalate through the channel, act
+lawfully). Its common architecture fills the five boxes in general terms and adds the traps. It
+links to the concept notes to reason with, and lists its cases, newest first.
+
+**A model answer for every case.** Each answer opens with the case in brief and the question as
+set, then the five boxes, then any part of the question the boxes do not already answer (the
+laws asked for, the training suggested, the policy measures), and a model conclusion. Five of
+the answers (Rajesh, Subash, Sunil, the Municipal Commissioner, the Executive Engineer) are the
+supplied model answers. The other seventy follow them.
+
+Every case is an item in the heading's contents tree, under its theme, so read ticks and
+previous and next work as they do elsewhere. Wherever a case appears (the GS-IV questions page,
+a heading's question list, a concept note, the site search), it links to its answer.
+
+The data: `cases.js` holds the method (`CASE_METHOD`) and the answers (`CASE_ANSWERS`, keyed by
+question id). The themes are the Case Studies entries in `gs4concepts.js`, with their `core`,
+`engine`, `arch` and `links`.
+
 ### The Essay Theme Map
 
 Its first page follows the same pattern:
@@ -380,6 +419,9 @@ essays.js     19 model essays, two per theme, partitioned across the past questi
 pyq.js        nine years of past essay questions, classified by theme
 portraits.js  pre-resolved portrait URLs (verified to load)
 atlas.js      the Human Thought Atlas: stories, thought experiments and models
+gs4pyq.js     238 GS-IV questions, 2013 to 2025, 75 of them case studies
+gs4concepts.js the GS-IV concept notes, and the 16 case-study themes
+cases.js      the case-study method and a model answer for every case
 app.js        rendering, search, syllabus maps
 ```
 
