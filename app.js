@@ -1878,10 +1878,85 @@ function themeQuestions(t){
   return qs.size;
 }
 
+/* ---- A model paragraph as a revision guide ----
+   guides.js turns a model paragraph into a guide in six parts: the moral
+   problem, the thinkers as tests of judgment, worked examples, the past topics
+   developed, five short model paragraphs, and how to build the answer. The
+   worked examples take the place of the "Open it out with" prompts they grew
+   from. A paragraph without a guide is shown as before. */
+const GD_PARTS = ["The problem", "Thinkers", "Examples", "Past topics", "Model paragraphs", "Build the answer"];
+const guideFor = (t, i) => (typeof GUIDES !== "undefined" && GUIDES[t.t] && GUIDES[t.t][i]) || null;
+
+function guideHTML(t, i, x, g){
+  const Q = pyqText();
+  const P = a => (a || []).map(y => `<p>${glossText(y)}</p>`).join("");
+  const box = (lab, text, cls) => `<div class="gd-box ${cls || ""}"><b>${esc(lab)}</b><p>${glossText(text)}</p></div>`;
+  const head = (n, title) => `<h6 class="gd-h" id="gd-${n}"><span>${n}</span>${esc(title)}</h6>`;
+  const tag = k => Q[k] ? `${Q[k].y} ${Q[k].s}${Q[k].n}` : k;
+  const nw = n => ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven"][n] || n;
+  return `
+    <article class="ans sm-pane gd">
+      <h5><span class="ans-no">${i + 1}</span>${esc(x.h)}</h5>
+      <p class="ans-for">A revision and answer-building guide. ${esc(x.s || "")}</p>
+      <nav class="atl-jump gc-jump" aria-label="Parts of this guide">${GD_PARTS.map((p, k) => `
+        <button data-apart="gd-${k + 1}"><i>${k + 1}</i>${p}</button>`).join("")}
+      </nav>
+      <div class="gd-intro">${P(g.intro)}</div>
+      ${box("The central claim", g.claim, "gd-claim")}
+      ${(x.qs && x.qs.length) ? `<div class="ans-serves"><b>Past topics to connect</b>${x.qs.map(k => Q[k]
+          ? `<span class="ans-q"><i>${tag(k)}</i>${esc(Q[k].q)}</span>` : "").join("")}</div>` : ""}
+
+      <section class="gd-sec">${head(1, "The moral problem")}
+        ${P(g.problem)}
+        ${g.distinction ? box(g.distinction[0], g.distinction[1], "gd-dist") : ""}
+      </section>
+
+      <section class="gd-sec">${head(2, g.thinkersTitle || nw(g.thinkers.length) + " thinkers, " + nw(g.thinkers.length).toLowerCase() + " tests of judgment")}
+        ${g.thinkers.map(th => `
+        <div class="gd-th">
+          <h6>${esc(th[0])}<span>${esc(th[1])}</span></h6>
+          ${P(th[2])}
+          <p class="gd-use"><b>Use ${esc(th[0])} when:</b> ${glossText(th[3])}</p>
+        </div>`).join("")}
+        ${g.together ? box(g.together[0], g.together[1], "gd-together") : ""}
+      </section>
+
+      <section class="gd-sec">${head(3, "Applying the framework")}
+        ${g.examplesIntro ? `<p>${glossText(g.examplesIntro)}</p>` : ""}
+        ${g.examples.map(ex => `
+        <div class="gd-ex">
+          <h6>${esc(ex[0])}</h6>
+          ${P(ex[1])}
+          ${box("What this example tests", ex[2], "gd-tests")}
+        </div>`).join("")}
+      </section>
+
+      <section class="gd-sec">${head(4, g.topics.length === 1 ? "The past topic developed" : nw(g.topics.length) + " past topics developed")}
+        ${g.topics.map(tp => `
+        <div class="gd-topic">
+          <h6><i>${tag(tp[0])}</i>${esc(Q[tp[0]] ? Q[tp[0]].q : tp[0])}</h6>
+          ${P(tp[1])}
+        </div>`).join("")}
+      </section>
+
+      <section class="gd-sec">${head(5, "Five model paragraphs for answer writing")}
+        <div class="gd-models">${g.models.map(m => `<p><b>${esc(m[0])}</b> ${glossText(m[1])}</p>`).join("")}</div>
+      </section>
+
+      <section class="gd-sec">${head(6, "Build a defensible answer")}
+        ${g.stepsIntro ? `<p>${glossText(g.stepsIntro)}</p>` : ""}
+        <ol class="cbox-seq gd-steps">${g.steps.map(s => `<li><b>${esc(s[0])}</b> ${glossText(s[1])}</li>`).join("")}</ol>
+        ${box("Conclusion formula", g.formula, "gd-formula")}
+      </section>
+    </article>`;
+}
+
 function paragraphPane(t, i){
   const list = (typeof ANSWERS !== "undefined") ? (ANSWERS[t.t] || []) : [];
   const x = list[i];
   if (!x) return "";
+  const g = guideFor(t, i);
+  if (g) return guideHTML(t, i, x, g);
   const Q = pyqText();
   const slug = esc(t.t).replace(/[^A-Za-z]/g, "");
   return `

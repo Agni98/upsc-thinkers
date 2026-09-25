@@ -2402,6 +2402,46 @@ html[data-theme="dark"] .cm2-weak i,html[data-theme="dark"] .cpat-traps > b{colo
 }
 @media print{ .ca-link,.ca-more,.cm2-engines{display:none} .ca-q-body{display:block} }
 
+/* ---- A model paragraph as a revision guide ----
+   Six numbered parts under a jump strip. Boxes carry the claims a reader
+   should keep: the central claim, a distinction, what the thinkers add up to,
+   what each example tests, and the conclusion formula. */
+.gd p{font-family:var(--read);font-size:17px;line-height:1.78;color:var(--read-ink);margin:0 0 1em}
+.gd .gd-intro p:first-child{font-size:18px;color:var(--ink)}
+.gd-box{margin:18px 0 22px;padding:14px 18px 15px;border-left:4px solid var(--saffron);border-radius:0 10px 10px 0;background:var(--saffron-soft)}
+.gd-box > b{display:block;margin-bottom:5px;font:700 10.5px/1.4 var(--sans);letter-spacing:.8px;text-transform:uppercase;color:var(--saffron-ink)}
+.gd .gd-box p{margin:0;font-size:16px;line-height:1.65;color:var(--ink)}
+.gd-claim{border-left-color:var(--accent);background:var(--accent-soft)}
+.gd-claim > b{color:var(--accent)}
+.gd .gd-claim p{font-size:17px;font-weight:500;color:var(--head)}
+.gd-tests,.gd-dist{background:var(--bg);border-left-color:var(--line)}
+.gd-tests > b,.gd-dist > b{color:var(--ink-3)}
+.gd-formula{border-left-color:var(--gold);background:var(--gold-soft)}
+.gd-h{
+  display:flex;align-items:center;gap:10px;margin:34px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--line);
+  font:600 20px/1.3 var(--read);color:var(--head);scroll-margin-top:132px}
+.gd-h span{
+  flex:0 0 28px;display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;
+  background:var(--saffron);color:#fff;font:700 13px/1 var(--sans)}
+.gd-th,.gd-topic{margin:0 0 22px}
+.gd-th h6,.gd-ex h6,.gd-topic h6{margin:0 0 10px;font:600 17.5px/1.35 var(--read);color:var(--head)}
+.gd-th h6 span{display:block;margin-top:2px;font:italic 400 15px/1.4 var(--read);color:var(--ink-2)}
+.gd .gd-use{padding:9px 14px;border-radius:8px;background:var(--line-2);font-size:15px;line-height:1.6}
+.gd-use b{font-family:var(--sans);font-size:12.5px;color:var(--saffron-ink)}
+.gd-ex{margin:0 0 16px;padding:18px 20px 4px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.gd-ex .gd-box{margin:6px 0 16px}
+.gd-topic h6 i{display:block;margin-bottom:3px;font:700 11px/1.4 var(--sans);font-style:normal;letter-spacing:.5px;color:var(--saffron-ink)}
+.gd-topic{padding-left:14px;border-left:3px solid var(--line)}
+.gd-models p{margin:0 0 10px;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:var(--panel);font-size:16px}
+.gd-models b{color:var(--head)}
+.gd .gd-steps li{font:16px/1.65 var(--read);color:var(--read-ink)}
+.gd-steps b{color:var(--head)}
+@media (max-width:700px){
+  .gd p{font-size:16px}
+  .gd-ex{padding:14px 14px 2px}
+  .gd-h{font-size:18px}
+}
+
 /* ---- The Case Studies front page ----
    The header band carries Annibale Carracci's The Choice of Hercules (1596,
    public domain): Hercules at the crossroads between Virtue and Vice. */
