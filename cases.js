@@ -18,7 +18,9 @@
    The themes the answers are sorted under, each with its common
    architecture, are the case patterns in gs4concepts.js.
 
-   This file is generated from the source notes; edit those and rebuild.
+   Edit this file directly: each answer is plain JSON under its question id,
+   and the order of the answers follows the themes. A case must also be listed
+   in its theme's qs in gs4concepts.js for it to appear in the contents.
    ===================================================================== */
 const CASE_METHOD = {
   chain:["The case", "Identify the ethical conflict", "Identify the governing principles",
