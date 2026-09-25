@@ -3163,17 +3163,25 @@ function atlasIndexHTML(){
   const read = ATLAS.filter(x => isRead("atlas|0|" + x.id)).length;
   const secIcon = t => { const s = ATLAS_SECTIONS.find(y => y.t === t); return s ? ATLAS_SECTION_ICON[s.id] : ""; };
   return `
+    <section class="hero hero-sm">
+      <div class="hero-art art-flammarion" aria-hidden="true"></div>
+      <div class="hero-body">
+        <p class="hero-k"><button class="rd-toc" data-toc aria-label="Show the contents">&#9776;<span>Contents</span></button>Essay Paper
+           <span class="rd-sep" aria-hidden="true">/</span> Stories and models</p>
+        <h2 class="hero-t">Human Thought Atlas</h2>
+        <p class="hero-s">${ATLAS.length} stories, thought experiments, paradoxes and models to open an
+           essay or support a GS-IV answer.</p>
+        <p class="hero-note">Every entry answers the same eight questions in the same order, so you always
+           know where to look.${read ? ` You have read ${read} of ${ATLAS.length}.` : ""}</p>
+      </div>
+      <div class="hero-aside">
+        <button data-sel="${ATLAS[0].id}"><b>${ATLAS.length}</b><span>entries, from the first</span></button>
+        <button data-amode="essay"><b>${ESSAY_THEMES.length}</b><span>essay themes to arrange them by</span></button>
+        <button data-jumpto="atl-kinds"><b>${Object.keys(ATLAS_KINDS).length}</b><span>kinds of entry, told apart by colour</span></button>
+      </div>
+    </section>
+
     <div class="rd atl-ix">
-      <header class="rd-head">
-        <div class="rd-crumbs">
-          <button class="rd-toc" data-toc aria-label="Show the contents">&#9776;<span>Contents</span></button>
-          <span>Essay Paper</span><span class="rd-sep" aria-hidden="true">/</span><span>Stories and models</span>
-        </div>
-        <h2 class="rd-title">Human Thought Atlas</h2>
-        <p class="rd-sub">${ATLAS.length} stories, thought experiments, paradoxes and models to open an
-           essay or support a GS-IV answer. Every entry answers the same eight questions in the same
-           order, so you always know where to look.${read ? ` You have read ${read} of ${ATLAS.length}.` : ""}</p>
-      </header>
 
       <section class="atl-guide" aria-label="How every entry is built">
         <h3 class="hb-t">How every entry is built</h3>
@@ -3195,7 +3203,7 @@ function atlasIndexHTML(){
                     aria-pressed="${state.amode === m[0]}">${m[1]}</button>`).join("")}
           </div>
         </div>
-        <div class="atl-legend" aria-label="Kinds of entry">${Object.keys(ATLAS_KINDS).map(k => `
+        <div class="atl-legend" id="atl-kinds" aria-label="Kinds of entry">${Object.keys(ATLAS_KINDS).map(k => `
           <span class="akey fam-${k}" title="${esc(ATLAS_KINDS[k][1])}"><i></i>${esc(ATLAS_KINDS[k][0])}
             <em>${ATLAS.filter(x => atlasLook(x)[0] === k).length}</em></span>`).join("")}
         </div>
@@ -3294,8 +3302,8 @@ function atlasEntryHTML(x, theme){
     pager = `<nav class="sm-move" aria-label="Previous and next entry">${move(prev, false)}${move(next, true)}</nav>`;
   }
   return `
-    <article class="sm-pane atl-entry">
-      <header class="atl-top">
+    <article class="${theme ? "sm-pane atl-entry" : "atl-entry atl-cards"}">
+      ${theme ? `<header class="atl-top">
         <p class="atl-eyebrow">${theme ? "From the Thought Atlas &middot; " : ""}${esc(sec ? sec.t : "")}</p>
         <h5>${esc(x.t)}</h5>
         <div class="atl-top-row">
@@ -3310,7 +3318,7 @@ function atlasEntryHTML(x, theme){
           <dt>Tradition</dt><dd>${esc(e.tradition)}</dd>
           <dt>Type</dt><dd>${esc(e.type)}</dd>
         </dl>
-      </header>
+      </header>` : ""}
 
       <nav class="atl-jump" aria-label="Parts of this entry">${ATLAS_PARTS.map((p, i) => `
         <button data-apart="ap-${p[0]}"><i>${i + 1}</i>${esc(p[2])}</button>`).join("")}
@@ -3359,14 +3367,44 @@ function renderAtlas(){
   if (!x) return atlasIndexHTML();
   const sec = ATLAS_SECTIONS.find(s => s.id === x.sec);
   markRead("atlas|0|" + x.id, { t:x.t, h:sec ? sec.t : "", where:"Human Thought Atlas" });
+  const e = ATLAS_ENTRIES[x.id], ix = atlasById();
+  const themes = ESSAY_THEMES.filter(t => (t.atlas || []).includes(x.id)).length;
+  const rel = e.related.filter(id => ix[id]).length;
+  const aside = [
+    [atlasMinutes(e), "minutes to read, from the story", "ap-story"],
+    themes ? [themes, themes === 1 ? "essay theme it suits" : "essay themes it suits", "ap-exam"]
+           : [e.readings.length, "ways to read it", "ap-readings"],
+    [rel, rel === 1 ? "related entry" : "related entries", "ap-more"]
+  ];
   return `
-    <div class="rd">
-      <div class="rd-crumbs atl-crumbs">
-        <button class="rd-toc" data-toc aria-label="Show the contents">&#9776;<span>Contents</span></button>
-        <button class="rd-up" data-to="atlas|0|">Human Thought Atlas</button>
-        <span class="rd-sep" aria-hidden="true">/</span>
-        <span>Entry ${ATLAS.indexOf(x) + 1} of ${ATLAS.length}</span>
+    <section class="hero hero-sm atl-hero">
+      <div class="hero-art art-flammarion" aria-hidden="true"></div>
+      <div class="hero-body">
+        <p class="hero-k"><button class="rd-toc" data-toc aria-label="Show the contents">&#9776;<span>Contents</span></button><button
+           class="rd-up" data-to="atlas|0|">Human Thought Atlas</button>
+           <span class="rd-sep" aria-hidden="true">/</span> ${esc(sec ? sec.t : "")}</p>
+        <h2 class="hero-t">${esc(x.t)}</h2>
+        <p class="hero-s">${esc(x.q)}</p>
+        <div class="atl-top-row">
+          ${atlasKindHTML(x)}
+          <span class="atl-time">Entry ${ATLAS.indexOf(x) + 1} of ${ATLAS.length} &middot; ${plural(atlasMinutes(e), "minute", "minutes")} to read</span>
+          ${x.th.map(k => `<span class="atl-theme">${esc(ATLAS_THEMES[k])}</span>`).join("")}
+        </div>
       </div>
+      <div class="hero-aside">${aside.map(a =>
+        `<button data-apart="${a[2]}"><b>${a[0]}</b><span>${a[1]}</span></button>`).join("")}</div>
+    </section>
+
+    <div class="rd atl-read">
+      <section class="atl-glance" aria-label="At a glance">
+        <h3 class="hb-t">At a glance</h3>
+        <dl>
+          <div class="wide"><dt>Source</dt><dd>${esc(e.source)}</dd></div>
+          <div><dt>Period</dt><dd>${esc(e.period)}</dd></div>
+          <div><dt>Tradition</dt><dd>${esc(e.tradition)}</dd></div>
+          <div class="wide"><dt>Type</dt><dd>${esc(e.type)}</dd></div>
+        </dl>
+      </section>
       ${atlasEntryHTML(x, null)}
     </div>`;
 }

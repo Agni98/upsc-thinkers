@@ -132,7 +132,10 @@ search now searches the whole site on this page too, as it does everywhere else.
 
 ### Reading the atlas
 
-The atlas opens on an **overview**. It first shows how every entry is built, in eight numbered
+The atlas opens on an **overview**, with the same header band as the other pages. The picture is
+the Flammarion engraving (1888, public domain). The three numbers in the band open the first
+entry, arrange the entries by essay theme, and jump to the key of kinds. The overview then shows
+how every entry is built, in eight numbered
 parts: the story, the question it forces, what it reveals, interpretations, where it breaks,
 where it shows up, how to use it in the exam, and where to go further. Below that come a search
 box, six ways to arrange the entries (section, essay theme, idea, tradition, form, A to Z), a
@@ -140,9 +143,13 @@ tile for each group with how much of it has been read, and every entry as a card
 question it asks. Colour marks the kind of entry throughout: imagined cases, stories, findings and
 models, and ideas and images.
 
-An entry opens with a summary (kind, reading time, themes, and what it is about, with source,
-period, tradition and type). A strip of its eight parts stays at the top while you read, marks
-the part you are in, and jumps to any other. Each part has its own look:
+An entry opens on the same band. It gives the entry's section, title and subject, its kind,
+its place (*Entry 15 of 100*), its reading time and its ideas. The numbers beside it jump to the
+story, to the exam use (or the interpretations, if no essay theme lists it) and to the related
+entries. An *At a glance* card follows, with the source, period, tradition and type. A strip of
+the eight parts works like the other pages' segmented controls. It stays at the top while you
+read, marks the part you are in, and jumps to any other. Each part is its own card, with its own
+look inside:
 - the question: a blue call-out
 - the insight: a saffron box
 - interpretations: cards
@@ -150,6 +157,8 @@ the part you are in, and jumps to any other. Each part has its own look:
 - cases: labelled blocks
 - exam use: split into GS-IV and Essay rows, with the essay themes and model essays that use it
 - related entries: cards
+
+Inside the Essay Theme Map, an entry keeps its plain single sheet, so it reads as part of the theme.
 
 Each thinker page has: a collapsed **Read full introduction** toggle → **Core Ideas** →
 **Key Quotations** → **Major Works** → **Where to Use It** (split into Essay themes and
