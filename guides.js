@@ -6342,5 +6342,882 @@ const GUIDES = {
    "stepsIntro": "Use the following sequence when a question concerns constitutional morality, institutions or democratic conventions.",
    "formula": "Treat constitutional morality as a habit that officeholders and citizens must keep. Give every rule a clock and an independent enforcer, use every power for its intended purpose, and keep information open so that citizens can see and answer every breach."
   }
+ ],
+ "Nature, Development and Civilisation": [
+  {
+   "thinkers": [
+    [
+     "Schumacher",
+     "natural capital treated as income",
+     [
+      "E. F. Schumacher turned the aphorism into economics. He objected that modern accounting treats fossil fuels, soil fertility and forest cover as income, when they are actually capital. No business that consumes its capital while reporting it as earnings can be called successful.",
+      "A civilisation living off natural capital is therefore liquidating. The liquidation appears as growth in the years before it appears as desert. When Schumacher wrote that small is beautiful, he meant that a system too large for its users to see its consequences will not correct itself in time."
+     ],
+     "the answer needs an economic argument about natural capital and scale."
+    ],
+    [
+     "Gandhi",
+     "need and greed",
+     [
+      "Gandhi stated the same limit as a moral principle. He said that the earth provides enough for every man’s need but not for every man’s greed.",
+      "His objection to industrialism was that it turns wanting into an engine that cannot be switched off. A civilisation driven by ever-expanding wants will eventually consume the ground it stands on."
+     ],
+     "the question needs an Indian moral argument for limits on consumption."
+    ],
+    [
+     "Ostrom",
+     "commons can be governed",
+     [
+      "Elinor Ostrom supplied the correction that prevents fatalism. Her fieldwork on forests, fisheries and irrigation systems showed that communities do govern shared resources sustainably over centuries.",
+      "Communities succeed where boundaries are clear, rules are made locally, users monitor each other and sanctions increase gradually. The tragedy of the commons is a failure of institutions, not a law of nature. Ostrom received the Nobel Prize in economics in 2009 for this work."
+     ],
+     "the answer needs to show that shared resources can be managed sustainably."
+    ],
+    [
+     "Burke",
+     "a partnership with the unborn",
+     [
+      "Edmund Burke completed the argument from the conservative side. He described society as a partnership between those living, those dead and those yet to be born.",
+      "Burke’s view places the unborn among the parties whose interests bind the present. A generation that destroys a forest settles a question for people who cannot object."
+     ],
+     "the question concerns intergenerational justice or stewardship."
+    ],
+    [
+     "Thoreau",
+     "in wildness is the preservation of the world",
+     [
+      "Henry David Thoreau named what accounting cannot price. He wrote that in wildness is the preservation of the world.",
+      "What is lost when the last uncultivated ground is converted is not only a stock of resources. What is lost is the reminder that a civilisation did not make everything it depends on. A society that forgets this will not notice when it begins to spend its capital."
+     ],
+     "the answer needs to show the value of wild nature beyond economic use."
+    ]
+   ],
+   "examples": [
+    [
+     "The Forest Rights Act and community forests",
+     [
+      "Ostrom showed that commons can be governed sustainably when users have clear rights and their right to organise is recognised by higher authority. The Forest Rights Act of 2006 was India’s attempt to supply that recognition. Community forest resource rights matter most, because they vest management in the gram sabha rather than the forest department.",
+      "Implementation is the weak link. Only a few states have recognised community forest rights at scale, with Maharashtra the clearest case of rights put into practice. Where gram sabhas have gained management rights, as in villages of Gadchiroli, communities have protected forests while earning income from produce such as bamboo."
+     ],
+     "Do communities have real rights to manage their forests? Check whether community forest rights are recognised in practice."
+    ],
+    [
+     "Compensatory afforestation and CAMPA",
+     [
+      "Compensatory afforestation rests on a substitution claim: forest land diverted to a project is offset by planting elsewhere. The Compensatory Afforestation Fund Act of 2016 created the machinery, and in August 2019 the Centre transferred about 47,000 crore rupees to states.",
+      "The objections are ecological. Plantations are often monocultures, which produce canopy without the species that made the original forest work. Replacing an old forest patch with fragmented plantations damages connectivity. An accounting system that counts hectares planted against hectares lost can report success while the forest’s functions are not reproduced."
+     ],
+     "Can planted trees replace a forest? Compare hectares with ecological function."
+    ],
+    [
+     "Green GDP and natural capital accounting",
+     [
+      "National income accounting was designed to measure production. National accounts treat the depletion of a natural asset as income rather than as a drawdown. Cutting a forest adds timber to output and subtracts nothing for the forest.",
+      "Green GDP and natural capital accounting exist to correct the error, and India has published environmental accounts for some years. They remain marginal for three reasons. Valuing a watershed is contestable in a way a market price is not. The correction is always downward, so no government gains from publicising it. No budget or credit rating is calculated on the adjusted figure."
+     ],
+     "Does the measure of progress count the loss of nature? Ask whether natural capital appears in the accounts that guide decisions."
+    ],
+    [
+     "Historical collapse and contested causes",
+     [
+      "Historical examples must be used carefully. Easter Island is the standard illustration of collapse through deforestation. Researchers have challenged the account, arguing that introduced rats destroyed palm seeds and that population decline followed European contact, disease and slavery.",
+      "The decline of the Indus cities has been linked to weakening monsoons and shifting rivers, but the sequence remains unsettled. Degradation in the Sahel involves rainfall variation, grazing pressure and policy together. The defensible claim is that societies can undermine their own resource base, not that any particular collapse has been proved to be self-inflicted."
+     ],
+     "What does history actually show about ecological collapse? State causal claims with the care the evidence allows."
+    ],
+    [
+     "The Western Ghats and the Aravallis",
+     [
+      "The Gadgil panel reported in 2011 and proposed that most of the Western Ghats be treated as ecologically sensitive, with graded restrictions and decisions devolved to gram sabhas. State governments objected. The Kasturirangan committee reported in 2013 and reduced the protected area to about a third.",
+      "Neither report has been implemented in full. The Aravallis show the same problem more bluntly, with mining and construction continuing in a range that holds back the spread of desert. In both cases, the boundary is not a technical question but a decision about whose activity stops."
+     ],
+     "Who decides how much nature is protected? Examine the gap between scientific advice and political decision."
+    ]
+   ],
+   "topics": [
+    [
+     "2024A1",
+     [
+      "The saying compresses a long history. Forests and fertile land allowed settlement, agriculture and cities. When forests were cleared, soils eroded and rivers changed, some civilisations weakened or moved. Schumacher explained the logic: natural resources are capital, not income. A civilisation that consumes its natural capital while calling it growth is liquidating its inheritance, and the desert appears after the prosperity.",
+      "Modern India faces the same choice. Mining in the Aravallis threatens a range that holds back desertification. The Western Ghats reports show how scientific advice about protection meets political resistance. Compensatory afforestation counts hectares planted without restoring the forest’s functions. Gandhi’s warning that the earth cannot satisfy greed applies to a development model that measures success by output alone.",
+      "The saying should not be read as fate. Ostrom showed that communities can govern forests, fisheries and water sustainably when they have clear rights and local rules. The Forest Rights Act, where implemented, has let gram sabhas protect forests and earn from them. Burke reminds us that the unborn are partners in today’s decisions. Deserts follow civilisations only when they forget that nature is capital. A civilisation that keeps its accounts honestly can keep its forests."
+     ]
+    ]
+   ],
+   "intro": [
+    "Civilisations rise on land that nature prepared: fertile soil, forests, rivers and a stable climate. Many civilisations have also degraded that land through deforestation, overgrazing and overuse of water. The saying that forests precede civilisations and deserts follow them is a warning about this pattern. The question is why societies consume the natural base on which they depend, and what institutions allow them to use it without destroying it."
+   ],
+   "claim": "Nature is the capital on which civilisation is built, not its income. A society that treats forests, soil, water and a stable climate as income will report growth in the very years it is spending its inheritance. Collapse is not inevitable. Communities have governed shared resources sustainably for centuries when institutions give users clear rights, local rules and a stake in the future. Deserts follow when a society forgets the difference between capital and income.",
+   "problem": [
+    "Modern accounting rewards the conversion of natural capital into income. Cutting a forest adds timber to GDP and subtracts nothing for the forest lost. Mining a hillside adds output and ignores the watershed it protected. Because the loss is invisible in the accounts, each decision looks profitable, and the damage appears only when it is too late to reverse.",
+    "Yet the answer is not simply to stop all use. Communities depend on forests, fields and rivers for their livelihoods, and fatalism about collapse ignores cases where people have managed resources well. The challenge is to build institutions and measures that treat nature as capital, give users a stake in its future, and recognise that the unborn are also parties to today’s decisions."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Income is what can be spent while leaving the source intact. Capital is the source itself. A civilisation that spends its natural capital while calling it income is not prospering but liquidating."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of natural capital",
+   "together": [
+    "Putting the five together",
+    "Schumacher shows natural capital being spent as income. Gandhi warns that greed has no limit. Ostrom shows that commons can be governed well. Burke includes the unborn in present decisions. Thoreau reminds us that civilisation depends on what it did not make. Together they explain why deserts follow civilisations that forget their inheritance."
+   ],
+   "examplesIntro": "The examples below show institutions for governing forests, the weakness of substitution, the problem of measurement, the evidence of collapse and the politics of protection. They are most useful when the answer asks whether nature is treated as capital.",
+   "models": [
+    [
+     "Nature is capital, not income.",
+     "Schumacher argued that treating fossil fuels, soil and forests as income is a basic accounting error. A civilisation spending its natural capital reports growth until the desert appears."
+    ],
+    [
+     "The commons can be governed.",
+     "Ostrom showed that communities manage forests and water sustainably when boundaries are clear, rules are local and users monitor each other. The tragedy of the commons is an institutional failure, not a law."
+    ],
+    [
+     "Planting is not restoring.",
+     "Compensatory afforestation counts hectares planted against hectares lost. Monoculture plantations do not reproduce the functions of an old forest."
+    ],
+    [
+     "The unborn are partners.",
+     "Burke described society as a partnership between the living, the dead and the unborn. A forest felled today settles a question for people who cannot object."
+    ],
+    [
+     "Collapse is a risk, not a fate.",
+     "Easter Island and the Indus are contested cases. The defensible claim is that societies can undermine their resource base, and that institutions decide whether they do."
+    ]
+   ],
+   "steps": [
+    [
+     "Explain natural capital.",
+     "Use Schumacher to distinguish capital from income."
+    ],
+    [
+     "Add the moral limit.",
+     "Use Gandhi on need and greed."
+    ],
+    [
+     "Use history carefully.",
+     "Discuss collapse cases with their contested causes."
+    ],
+    [
+     "Give Indian examples.",
+     "Use the Western Ghats, the Aravallis and compensatory afforestation."
+    ],
+    [
+     "Show the institutional answer.",
+     "Use Ostrom and the Forest Rights Act."
+    ],
+    [
+     "Consider future generations.",
+     "Use Burke’s partnership with the unborn."
+    ],
+    [
+     "Conclude with honest accounts.",
+     "Argue for measures and institutions that treat nature as capital."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns ecology, civilisation or natural resources.",
+   "formula": "Treat nature as capital, not income. Measure its loss honestly, give communities rights and a stake in its future, and remember that the unborn are partners in every decision that spends it."
+  },
+  {
+   "thinkers": [
+    [
+     "Ostrom",
+     "efficient management without a conventional owner",
+     [
+      "Elinor Ostrom overturned the standard result. Garrett Hardin’s tragedy of the commons predicted that shared resources must be privatised or nationalised. Ostrom examined what actually happens.",
+      "Across forests, pastures and irrigation systems, she found self-governing arrangements that had lasted for centuries. The users know the boundaries, help make the rules, monitor use themselves and apply graduated sanctions, and higher authorities recognise their right to organise. A forest shows that efficient management does not require an owner in the conventional sense."
+     ],
+     "the answer needs an economic model of community management."
+    ],
+    [
+     "Schumacher",
+     "the market’s omission",
+     [
+      "E. F. Schumacher supplied the accounting objection. Treating a forest as a stock of timber values the one output with a market.",
+      "The valuation ignores watershed regulation, soil retention, pollination, the local climate and livelihoods that never generate an invoice. The market’s valuation is therefore not a measurement. The valuation is an omission."
+     ],
+     "the question concerns the limits of market prices in valuing nature."
+    ],
+    [
+     "Sen",
+     "the forest as capability",
+     [
+      "Amartya Sen’s capability approach extends the point. For a forest-dwelling household, the forest is not an asset to be sold. The forest is the basis of what those people are able to do and be.",
+      "Compensation calculated on timber value has not compensated them for their loss. Their food, medicine, culture and income depend on the standing forest."
+     ],
+     "the answer needs to show the human value of forests for dependent communities."
+    ],
+    [
+     "Gandhi",
+     "why conversion always wins",
+     [
+      "Gandhi’s objection is the plainest and anticipates the whole measurement problem. A civilisation that multiplies wants will always find a reason to convert a forest.",
+      "The conversion registers as income, and the loss registers nowhere. Gandhi explains why forests keep losing in economic decisions."
+     ],
+     "the question concerns consumption, development and the loss of forests."
+    ],
+    [
+     "Burke",
+     "excellence across generations",
+     [
+      "Edmund Burke added a correction across time that no discount rate captures. Society is a partnership between the living, the dead and the unborn.",
+      "A forest felled for a present return has settled a question for people who were never consulted. Excellence measured over a single generation is not excellence. Short-term excellence of that kind is a transfer from the future to the present."
+     ],
+     "the answer needs an intergenerational perspective on economic value."
+    ]
+   ],
+   "examples": [
+    [
+     "Finance Commission rewards for forest cover",
+     [
+      "A state that protects forest bears the cost locally, while the benefits in carbon, water and biodiversity spread nationally. Without correction, forests will be under-protected. India’s main correction runs through the Finance Commission’s formula for sharing central taxes. The Fourteenth Finance Commission gave forest cover a weight of 7.5 per cent, and the Fifteenth raised it to 10 per cent.",
+      "The transfer directs large sums towards states with forest wealth, and it is among the largest ecological fiscal transfers anywhere. The limitation is that the transfer is untied. The transfer rewards the state treasury for forest existing, but it does not by itself reach the community that bears the cost of protection."
+     ],
+     "Are those who protect forests rewarded? Trace the money from the Centre to the communities."
+    ],
+    [
+     "Joint Forest Management",
+     [
+      "Joint Forest Management, introduced from 1990, was the first large attempt to make protection a partnership. Village committees received a share of forest produce in return for protection duties.",
+      "The results tracked Ostrom’s conditions closely. Where benefits were significant and reliable, boundaries were clear and committees actually decided, institutions held and forest condition improved. Where shares were small or delayed, membership was captured by the better-off, or the department kept real control, institutions failed. Participation without decision rights is not participation, and communities notice the difference quickly."
+     ],
+     "Do communities have real decision rights? Compare consultation with control."
+    ],
+    [
+     "Valuing ecosystem services",
+     [
+      "The Economics of Ecosystems and Biodiversity project, and Indian studies that followed it, try to put a number on services markets never price: pollination, water regulation, soil formation, storm protection and carbon storage.",
+      "The purpose is often misunderstood. A wetland’s true worth is not a precise figure, since the estimates carry wide uncertainty. The point is that the current implicit value is zero, and zero is certainly wrong. A cost-benefit appraisal that counts a project’s revenue and treats a destroyed wetland as costless has decided the outcome through its accounting. Valuation corrects a default."
+     ],
+     "What value does the decision currently give to nature? Show that ignoring a service values it at zero."
+    ],
+    [
+     "Non-timber forest produce and livelihoods",
+     [
+      "Non-timber forest produce, such as tendu leaves, mahua, honey, gum, bamboo and medicinal plants, is often the larger part of income for forest-dwelling households. The terms of trade have historically been poor, because a collector with no storage, no price information and an urgent need for cash faces a single buyer.",
+      "The minimum support price for minor forest produce and the Van Dhan centres, which add value locally, try to correct the imbalance. The strategic point matters. Produce that requires the forest to stay standing aligns the collector’s interest with conservation, which no enforcement system achieves."
+     ],
+     "Does the livelihood depend on the forest standing? Link income from forest produce to conservation."
+    ],
+    [
+     "The case and the danger of pricing",
+     [
+      "A decision between a mine and a forest is made in a room where the mine arrives with revenue, jobs and taxes, and the forest arrives with an adjective. Where one side is quantified and the other is not, the quantified side wins by default. The practical case for valuation and payment for ecosystem services is about procedure, not metaphysics.",
+      "The objection from the other direction is also serious. Once a forest has a price, it can be bought. Pricing an irreplaceable thing invites the assumption that adequate compensation exists, when some losses cannot be compensated."
+     ],
+     "Does a price protect the forest or make it purchasable? Weigh visibility in decisions against the risk of commodification."
+    ]
+   ],
+   "topics": [
+    [
+     "2022A1",
+     [
+      "Forests are models of efficiency. Forests recycle nutrients without waste, regulate water, store carbon, protect soil and support many forms of life, all powered by sunlight. They sustain the livelihoods of millions through food, fuel, medicine and non-timber produce. Ostrom showed that communities have managed forests sustainably for centuries without private or state ownership. In these senses, forests are excellent case studies of economic excellence.",
+      "They are also case studies in how conventional economics fails. Schumacher pointed out that market prices count timber and ignore everything else, so a forest’s value is systematically understated. Gandhi explained why conversion always seems profitable: the income is counted, the loss is not. Valuation efforts such as TEEB, and the Finance Commission’s reward for forest cover, try to correct the bias. Joint Forest Management and the Forest Rights Act show that communities manage forests best when they hold real decision rights.",
+      "The lesson for economic excellence is broader. True excellence produces value sustainably, shares benefits with those who depend on the resource, and keeps accounts for future generations, as Burke’s partnership with the unborn requires. Growth that consumes its natural capital is not excellence but liquidation. Forests show that the best economy is one that can continue indefinitely while sustaining those who depend on it."
+     ]
+    ]
+   ],
+   "intro": [
+    "Economic excellence is usually measured by output, profit and growth. A forest seems an odd example of it. Yet a forest produces clean water, fertile soil, a stable local climate, food, medicine and livelihoods without waste and without an owner in the usual sense. The question is what forests teach about economic excellence, and why conventional economics so often fails to see it."
+   ],
+   "claim": "Forests are the best case studies of economic excellence because they produce many valuable services efficiently and sustainably, and because communities have managed them well without conventional ownership. Most of what makes a forest valuable has no market price, so conventional accounts treat it as zero. Better valuation, fiscal transfers and community rights can correct the bias. Yet a price can also invite the belief that an irreplaceable thing can be bought.",
+   "problem": [
+    "When a decision is made between a mine and a forest, the mine arrives with revenue, jobs and taxes. The forest arrives with adjectives. The quantified side wins by default. Timber, the one forest product with a clear market, is counted, while watershed protection, pollination, soil retention and tribal livelihoods are ignored.",
+    "Correcting the bias is not simple. Valuing ecosystem services is uncertain, and prices can be manipulated. Paying states to keep forests may not reach the communities who bear the cost. Putting a price on nature may suggest that it can be sold. The challenge is to make the value of forests visible in decisions while protecting what cannot be replaced."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Market value counts what can be sold. Economic value counts everything that contributes to human well-being, including services that are never invoiced. A forest valued at its timber price has been measured by what can be removed from it, not by what it does."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of forest economics",
+   "together": [
+    "Putting the five together",
+    "Ostrom shows that forests can be managed efficiently by communities. Schumacher shows that market prices omit most of a forest’s value. Sen shows the forest as the capability of those who depend on it. Gandhi explains why conversion always seems profitable. Burke adds the claims of future generations. Together they explain why the forest is a model of economic excellence that conventional accounts cannot see."
+   ],
+   "examplesIntro": "The examples below show fiscal rewards for forests, community management, valuation, forest livelihoods and the problem of pricing. They are most useful when the answer asks who receives the value and who bears the cost.",
+   "models": [
+    [
+     "Commons can be managed efficiently.",
+     "Ostrom showed that communities have governed forests for centuries without conventional owners. Clear boundaries, local rules and user monitoring are the conditions of success."
+    ],
+    [
+     "Market prices omit most of a forest’s value.",
+     "Schumacher argued that valuing a forest as timber ignores watershed, soil, pollination and livelihoods. The market’s price is an omission, not a measurement."
+    ],
+    [
+     "An unpriced service is valued at zero.",
+     "Valuation exercises such as TEEB do not give exact figures. They correct the default of treating a wetland or forest as costless in project appraisal."
+    ],
+    [
+     "Rewards must reach those who bear the cost.",
+     "The Fifteenth Finance Commission gave forest cover a 10 per cent weight in tax sharing. Untied transfers reward states, but communities who protect forests may receive nothing."
+    ],
+    [
+     "Livelihoods can align with conservation.",
+     "Non-timber forest produce requires the forest to stay standing. Fair prices through MSP and Van Dhan centres make conservation the collector’s interest."
+    ]
+   ],
+   "steps": [
+    [
+     "Describe the forest’s value.",
+     "List services and livelihoods beyond timber."
+    ],
+    [
+     "Show why markets miss it.",
+     "Use Schumacher and the problem of unpriced services."
+    ],
+    [
+     "Present community management.",
+     "Use Ostrom and Joint Forest Management."
+    ],
+    [
+     "Give policy corrections.",
+     "Discuss Finance Commission transfers, valuation and MSP for forest produce."
+    ],
+    [
+     "State the danger of pricing.",
+     "Explain how a price can make nature purchasable."
+    ],
+    [
+     "Consider future generations.",
+     "Use Burke."
+    ],
+    [
+     "Conclude with a definition of excellence.",
+     "Define excellence as sustainable, shared and lasting value."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns forests, commons or the economics of nature.",
+   "formula": "Measure forests by everything they do, not only by what can be sold. Give communities real rights and fair returns, reward those who protect forests, and count the future in every decision about them."
+  },
+  {
+   "thinkers": [
+    [
+     "Tagore",
+     "nature as relationship",
+     [
+      "Tagore built Santiniketan under trees for a reason. He held that a child educated indoors learns to treat the world as material, while a child educated among seasons and growing things learns to treat it as a relationship.",
+      "His objection to Western modernity was that it had reduced nature to raw material for a productive machine. In Tagore’s writing, nature is not scenery. Nature is where a person discovers proportion: the recognition of being part of something not made for one’s use."
+     ],
+     "the answer needs an Indian view of nature as teacher and of education close to nature."
+    ],
+    [
+     "Thoreau",
+     "nature as a mirror of the self",
+     [
+      "Henry David Thoreau made the claim experimentally. He went to live by Walden Pond to live deliberately and face only the essential facts of life, so that he would not discover at the end that he had not lived.",
+      "His stay was an experiment in using nature as an instrument of self-knowledge. His conclusion that in wildness is the preservation of the world is a claim about human beings as much as about ecosystems."
+     ],
+     "the question concerns simplicity, self-knowledge or the value of wild nature."
+    ],
+    [
+     "Mahavira",
+     "ahimsa towards all life",
+     [
+      "Mahavira gave the Indian ethical form by extending ahimsa, or non-violence, to all living things.",
+      "The restraint is not a conservation policy. The restraint recognises that other lives have standing independent of any use we have for them. Mahavira’s ethics anticipates the idea of intrinsic value in nature."
+     ],
+     "the answer needs an Indian ethical basis for respecting all life."
+    ],
+    [
+     "Aurobindo",
+     "matter and spirit continuous",
+     [
+      "Sri Aurobindo added the metaphysical version. He treated matter and spirit as continuous rather than opposed.",
+      "The evolution visible in nature is, for Aurobindo, the same movement that works towards consciousness. Nature is then not the opposite of spirit but its early expression."
+     ],
+     "the question needs a philosophical account of nature as spirit."
+    ]
+   ],
+   "examples": [
+    [
+     "Rivers as legal persons",
+     [
+      "In March 2017, the Uttarakhand High Court declared the Ganga and Yamuna to be legal persons, with officials appointed as their guardians. Shortly afterwards the Court extended similar status to glaciers and other natural features. The Supreme Court stayed the ruling within months, after the state raised practical difficulties, such as who would be liable if the river flooded.",
+      "The idea is not merely symbolic. Legal personality solves a standing problem, letting a case be brought on the river’s behalf without a human plaintiff showing personal injury. Whether personhood adds anything where environmental laws already exist is the genuine question."
+     ],
+     "Can law give nature standing of its own? Weigh symbolic recognition against practical enforcement."
+    ],
+    [
+     "Sacred groves and the Bishnoi tradition",
+     [
+      "Sacred groves are patches of forest protected by religious prohibition rather than by law. Sacred groves survive across many Indian states and often hold species that surrounding land has lost. The Bishnoi tradition of western Rajasthan protects trees and animals. At Khejarli in 1730, Amrita Devi and hundreds of villagers died resisting the felling of khejri trees.",
+      "The enforcement mechanism is what makes these cases interesting. There is no inspector and no penalty schedule. Compliance rests on belief and community sanction, which is cheaper and more durable than monitoring. The limit is equally clear. Belief binds believers, and it has no hold on an outside firm with a lease."
+     ],
+     "Can belief protect nature? Show both the strength of internal commitment and its limits against outsiders."
+    ],
+    [
+     "Deep ecology and intrinsic value",
+     [
+      "Arne Naess drew the distinction in 1973. Shallow environmentalism opposes pollution and resource depletion because they harm human beings, which leaves nature valuable only as a means. Deep ecology holds that living systems have value independent of any use to us.",
+      "The practical difference appears in hard cases. On a shallow account, a species with no known use is hard to defend. On a deep account, the question of use does not arise. Deep ecology must still answer how competing claims are settled when the interests of a forest and of the people living in it diverge."
+     ],
+     "Does nature have value beyond human use? Consider how intrinsic value guides hard choices."
+    ],
+    [
+     "Nature in Indian cities",
+     [
+      "Urban green space is often treated as an amenity. Urban green space is better understood as infrastructure, since tree cover lowers surface temperature, absorbs particulates, retains stormwater and shapes where a heat wave becomes deadly.",
+      "Most large Indian cities fall below recommended green space per person, and the distribution within cities is unequal. Planned colonies hold parks and mature trees, while dense informal settlements hold least. Access to outdoor space for children is now decided largely by the value of the land their families live on, which makes it a question of distribution."
+     ],
+     "Who has access to nature in cities? Treat green space as infrastructure and ask who receives it."
+    ],
+    [
+     "Reverence without regulation",
+     [
+      "The objection should be conceded before it is answered. India has a rich tradition of reverence for rivers, mountains and trees, and also severely polluted rivers, depleted aquifers and mined hills. Veneration of the Ganga has coexisted with its contamination for decades. What has actually changed outcomes is enforceable regulation: emission standards, clearance conditions and courts willing to halt projects.",
+      "The reply is that regulation depends on enforcement capacity and political will, both scarce. A population that regards a place as sacred supplies monitoring and resistance the state cannot afford. Reverence is not sufficient. Where reverence survives, it is not idle either."
+     ],
+     "What actually protects nature? Combine regulation with the public commitment that supports it."
+    ]
+   ],
+   "topics": [
+    [
+     "2026B1",
+     [
+      "To call nature the symbol of the spirit is to say that the order we see in nature reflects an order we can find within ourselves. Tagore taught children under trees so that they would learn proportion: that they are part of something not made for their use. Thoreau went to the woods to learn what life essentially requires. Aurobindo saw spirit working through matter, so that nature’s evolution is the early expression of consciousness.",
+      "Indian ethics adds a moral dimension. Mahavira extended non-violence to all living things, recognising their standing apart from human use. Sacred groves and the Bishnoi tradition show how reverence can protect nature through belief and community sanction. Deep ecology gives the modern form of the same insight: living systems have value in themselves.",
+      "The symbol has limits in practice. Reverence for the Ganga has not stopped its pollution, and belief does not bind outside firms. The Uttarakhand High Court’s attempt to give rivers legal personhood shows the search for ways to turn reverence into protection. Nature can be the symbol of the spirit only if a society acts on the symbol, joining inner regard with enforceable law and fair access to nature for all."
+     ]
+    ]
+   ],
+   "intro": [
+    "Modern life often treats nature as a resource: timber, minerals, water and land to be used. Many traditions have seen nature differently, as a teacher, a sacred presence or a mirror of the human spirit. The statement that nature is the symbol of the spirit belongs to this second view. The question is what it means to learn from nature, and whether reverence can protect nature in a world driven by production."
+   ],
+   "claim": "Nature teaches by being what we did not make and cannot improve. The order visible in nature and the order a person can achieve within themselves are, in this view, the same order met twice. Reverence for nature can shape conduct, sustain conservation and give ecological ethics a deeper basis. Yet reverence alone has not stopped pollution or mining. Spiritual regard for nature is most powerful when joined to enforceable law.",
+   "problem": [
+    "A civilisation organised around production tends to see nature only as material. Children grow up indoors, cities lose green space, and rivers are revered in ritual while polluted in practice. The loss is not only ecological. Something is lost in human understanding when people no longer meet a world they did not make.",
+    "The spiritual view also faces a hard objection. India has rich traditions of reverence for rivers, mountains and trees, yet also severely polluted rivers and mined hills. Belief binds believers but not outside firms holding leases. The challenge is to show what the spiritual understanding of nature contributes, while recognising that it needs institutions and law to protect nature in practice."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Shallow environmentalism protects nature because harming it harms people. Deep ecology holds that living systems have value independent of their use to us. The first makes nature tradeable against other human interests. The second changes the structure of the argument."
+   ],
+   "thinkersTitle": "Four thinkers, four tests of nature and spirit",
+   "together": [
+    "Putting the four together",
+    "Tagore sees nature as a relationship that teaches proportion. Thoreau uses nature for self-knowledge. Mahavira extends moral standing to all life. Aurobindo sees spirit working through matter. Together they explain why nature can be the symbol of the spirit: it is the thing a person did not make and cannot improve."
+   ],
+   "examplesIntro": "The examples below show legal personhood, belief-based conservation, deep ecology, access to nature in cities and the objection that reverence has not stopped destruction. They are most useful when the answer joins spiritual regard with enforceable protection.",
+   "models": [
+    [
+     "Nature teaches proportion.",
+     "Tagore held that children educated among growing things learn to see the world as a relationship rather than material. Nature is where a person learns to be part of something not made for their use."
+    ],
+    [
+     "Nature is a mirror for self-knowledge.",
+     "Thoreau went to Walden to live deliberately and learn what life essentially requires. In wildness, he wrote, is the preservation of the world."
+    ],
+    [
+     "All life has standing.",
+     "Mahavira extended ahimsa to every living thing. Deep ecology, as described by Arne Naess in 1973, holds that living systems have value independent of human use."
+    ],
+    [
+     "Belief can conserve, within limits.",
+     "Sacred groves and the Bishnoi tradition protect nature through internalised prohibition. Belief binds believers but has no hold on outside firms."
+    ],
+    [
+     "Reverence needs regulation.",
+     "Veneration of the Ganga has coexisted with its pollution. Spiritual regard for nature is most powerful when joined to enforceable law."
+    ]
+   ],
+   "steps": [
+    [
+     "Explain the symbolic view.",
+     "Use Tagore, Thoreau and Aurobindo."
+    ],
+    [
+     "Give the ethical basis.",
+     "Use Mahavira and deep ecology."
+    ],
+    [
+     "Show living traditions.",
+     "Use sacred groves and the Bishnoi example."
+    ],
+    [
+     "Discuss legal experiments.",
+     "Use the rivers as legal persons case."
+    ],
+    [
+     "Include urban life.",
+     "Discuss green space and children’s access to nature."
+    ],
+    [
+     "State the objection.",
+     "Concede that reverence alone has not stopped pollution."
+    ],
+    [
+     "Conclude with symbol and law together.",
+     "Argue for joining spiritual regard with enforceable protection."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns nature, spirit or the ethics of the environment.",
+   "formula": "Learn from nature as the thing we did not make and cannot improve. Respect all life, keep traditions of reverence alive, and join them to enforceable law, so that the symbol of the spirit is protected in practice."
+  },
+  {
+   "thinkers": [
+    [
+     "Schumacher",
+     "intermediate technology",
+     [
+      "E. F. Schumacher’s idea of intermediate technology governs this question. He proposed technology cheap enough to be widely accessible, simple enough to be maintained locally, small enough to be affordable, and suited to human creativity rather than replacing it.",
+      "A plant that a community cannot repair, finance or shut down is a dependency. A dependency imposed in the name of development has transferred control rather than capability."
+     ],
+     "the answer needs criteria for choosing technology in development."
+    ],
+    [
+     "Gandhi",
+     "the charkha as specification",
+     [
+      "Gandhi made the same case through an object. He did not oppose all machinery. He opposed machinery that concentrates ownership and displaces people.",
+      "The charkha was chosen because a household could own it, use it and earn from it. The spinning wheel was a specification, not only a symbol."
+     ],
+     "the question needs an Indian example of technology that empowers users."
+    ],
+    [
+     "Kalam",
+     "self-reliance in critical technology",
+     [
+      "Kalam applied the principle at national scale. His insistence on building launch vehicles and missiles in India came from working under sanctions and technology denial regimes.",
+      "A technology you cannot build is a technology you may lose access to whenever the supplier chooses. Self-reliance in critical technology is a form of resilience."
+     ],
+     "the answer concerns technological self-reliance and strategic resilience."
+    ],
+    [
+     "Einstein",
+     "capability does not settle whether to build",
+     [
+      "Albert Einstein supplied the ethical frame from the other end of the scale. He urged the building of an atomic weapon in 1939, and then spent his later years working for disarmament.",
+      "Einstein’s career shows that technical capability settles nothing about whether a thing should be built. Choosing technology is an ethical decision as well as an engineering one."
+     ],
+     "the question concerns the ethics of technology."
+    ],
+    [
+     "Deendayal Upadhyaya",
+     "technology for the whole person",
+     [
+      "Deendayal Upadhyaya reached the same criteria from Indian political thought. He argued that technology should be judged by whether it serves the whole person and the whole society, not by output alone.",
+      "A Gandhian, a Buddhist economist and an Indian political thinker arrive independently at scale, control and reversibility as the criteria. The convergence suggests the criteria are not sentimental. The criteria decide who benefits."
+     ],
+     "the answer needs an Indian framework for human-centred technology."
+    ]
+   ],
+   "examples": [
+    [
+     "Rooftop and community solar",
+     [
+      "The case for rooftop and community solar is not only that it is renewable. Decentralised solar changes the structure of the energy system. Generation near consumption avoids transmission losses, reduces exposure to single points of failure and can serve places the grid reaches poorly. The PM Surya Ghar scheme for household rooftop solar, launched in 2024, aims at exactly this.",
+      "The qualifications concern intermittency and capital. Solar generates when the sun shines, and demand does not follow the sun, so decentralised systems need storage that remains expensive. A household investment requires subsidy or credit that the poorest cannot easily access."
+     ],
+     "Does decentralisation improve resilience, and who can afford it? Weigh structural gains against storage and credit limits."
+    ],
+    [
+     "Millets and drought-resilient farming",
+     [
+      "The Green Revolution raised output by matching subsidies and procurement to wheat and rice. In semi-arid regions, those crops are grown on irrigation that groundwater cannot sustain. Millets are the counter-example that is not nostalgia. Millets tolerate drought, need far less water, grow in poor soils and carry better micronutrients. The United Nations observed 2023 as the International Year of Millets.",
+      "The constraint is not agronomic. Price support, procurement and consumer demand were built around wheat and rice, so a farmer who switches bears the risk that no buyer will be there."
+     ],
+     "Why do resilient crops struggle to spread? Look at the incentives built around other crops."
+    ],
+    [
+     "Where scale is necessary",
+     [
+      "Appropriate technology is a claim about fit, not a preference for smallness. Steel, cement, fertiliser and long-haul transport need dense and continuous energy, often in chemical form. The National Green Hydrogen Mission, approved in January 2023 with an outlay of 19,744 crore rupees, targets production of five million tonnes a year by 2030.",
+      "Nuclear power makes the same argument for firm low-carbon power that does not depend on weather. Schumacher’s principle is compatible with scale. The test was fitness for the task, and a task that is inherently large is not made appropriate by being attempted small."
+     ],
+     "When is large technology the appropriate one? Match the scale of the technology to the scale of the task."
+    ],
+    [
+     "Technology transfer and climate finance",
+     [
+      "Climate negotiations return repeatedly to three demands from developing countries. Finance covers the cost of mitigation and adaptation for emissions they did not cause. The goal of 100 billion dollars a year was met late, and the new goal agreed at Baku in 2024 remains contested as inadequate.",
+      "Technology transfer addresses the fact that clean technology exists but is owned by others. Intellectual property is where finance and technology meet, because a patent that raises the cost of solar or battery technology slows deployment in countries with the least capital. The equity argument rests on history: emissions accumulated over two centuries caused the warming, while the constraint now falls on those industrialising later."
+     ],
+     "Who pays for and who owns the technology needed for resilience? Consider historical responsibility and access."
+    ],
+    [
+     "Traditional water systems as climate infrastructure",
+     [
+      "Johads in Rajasthan, stepwells across western India, ahar-pyne systems in south Bihar and tank cascades in the south were not primitive dams. They were designed to capture local runoff, recharge groundwater and spread water across a landscape.",
+      "Their revival in the Alwar region, led by Rajendra Singh and Tarun Bharat Sangh, is credited with returning water to seasonal rivers such as the Arvari. The systems are cheap, repairable locally and resilient, since one broken structure does not disable the whole. The claim is not that they replace large infrastructure. The claim is that they address recharge, which large infrastructure does not."
+     ],
+     "Can traditional knowledge supply modern resilience? Show how local systems address problems large projects miss."
+    ]
+   ],
+   "topics": [
+    [
+     "2018A1",
+     [
+      "Climate change will test India’s farms, water systems, energy supply and cities. Resilience means the ability to absorb shocks and recover. Alternative technologies can strengthen resilience where large centralised systems are vulnerable. Rooftop and community solar reduce dependence on a single grid. Millets and drought-tolerant cropping reduce dependence on irrigation. Traditional water systems such as johads and ahar-pyne recharge groundwater and survive local failures.",
+      "Schumacher’s intermediate technology gives the criteria: affordable, repairable and suited to local control. Gandhi’s charkha showed the value of tools that households can own. Kalam’s insistence on self-reliance adds a strategic dimension: technology India cannot build may become unavailable when it is most needed. Deendayal Upadhyaya’s test asks whether a technology serves the whole person and society.",
+      "Alternative does not always mean small. Green hydrogen for heavy industry and firm low-carbon power need scale, and the National Green Hydrogen Mission reflects this. Access to finance and technology also matters, which is why technology transfer and climate finance remain central in negotiations. A climate-resilient India needs technologies chosen for fit: decentralised where local control and repair matter, large where the task demands it, and always designed so that failure in one place does not become failure everywhere."
+     ]
+    ]
+   ],
+   "intro": [
+    "Climate change requires India to adapt its farms, cities, water systems and energy supply. The usual picture of progress favours large, centralised technology: big dams, large power plants and industrial agriculture. Yet large systems can fail at a single point, depend on distant suppliers and leave communities without control. The question is which technologies make India resilient to climate change, and who should control them."
+   ],
+   "claim": "Appropriate technology is judged by fit, not by size. For many needs, resilience comes from technologies that are affordable, repairable and locally controlled: decentralised solar, drought-tolerant crops and traditional water harvesting. For other needs, such as steel or firm power, scale is unavoidable. The test is whether a technology suits the task, can be maintained by those who depend on it, and keeps control and reversibility among its design requirements.",
+   "problem": [
+    "Climate change brings heat waves, droughts, floods and erratic rainfall. Large centralised systems can be vulnerable: a flooded substation can darken a region, and a failed monsoon can empty a reservoir. Technologies imported without local capacity can create dependence on distant suppliers and experts.",
+    "The opposite error is to treat small as always better. Heavy industry needs dense and continuous energy, and some problems require national investment. Decentralised solutions may need storage and credit that the poorest cannot access. The challenge is to choose technology by its fit to the task, its resilience and its effect on who holds control, rather than by a preference for either scale."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Mass production concentrates control in whoever owns the plant. Production by the masses, in Schumacher’s phrase, spreads control to those who use the tools. The difference decides who benefits and who can repair the system when it fails."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of appropriate technology",
+   "together": [
+    "Putting the five together",
+    "Schumacher sets criteria of accessibility, repairability and scale. Gandhi shows technology that households can own. Kalam shows self-reliance as resilience. Einstein shows that capability does not settle whether to build. Deendayal Upadhyaya judges technology by whether it serves the whole person. Together they define appropriate technology as fit, control and reversibility."
+   ],
+   "examplesIntro": "The examples below show decentralised energy, resilient agriculture, the case for scale, the politics of technology transfer and traditional water systems. They are most useful when the answer asks whether a technology fits the task and who controls it.",
+   "models": [
+    [
+     "Technology must fit the task.",
+     "Schumacher’s intermediate technology is accessible, repairable and affordable. Appropriateness is judged by fit to the task and the users, not by size alone."
+    ],
+    [
+     "Ownership decides who benefits.",
+     "Gandhi chose the charkha because a household could own it and earn from it. Technology that concentrates ownership can transfer control rather than capability."
+    ],
+    [
+     "Self-reliance is resilience.",
+     "Kalam’s experience of sanctions showed that a technology you cannot build may be denied when needed. Critical capabilities must be secured at home."
+    ],
+    [
+     "Decentralisation reduces single points of failure.",
+     "Rooftop solar, millets and traditional water systems spread risk across many small units. One failure does not disable the whole system."
+    ],
+    [
+     "Some tasks need scale.",
+     "Heavy industry needs dense, continuous energy. The National Green Hydrogen Mission of 2023 shows that appropriate technology can be large when the task is large."
+    ]
+   ],
+   "steps": [
+    [
+     "Define resilience.",
+     "Explain the ability to absorb shocks and recover."
+    ],
+    [
+     "Set criteria for technology.",
+     "Use Schumacher’s accessibility, repairability and scale."
+    ],
+    [
+     "Give decentralised examples.",
+     "Use rooftop solar, millets and traditional water systems."
+    ],
+    [
+     "Acknowledge the need for scale.",
+     "Discuss green hydrogen and firm power."
+    ],
+    [
+     "Consider control and self-reliance.",
+     "Use Gandhi and Kalam."
+    ],
+    [
+     "Address global equity.",
+     "Discuss climate finance and technology transfer."
+    ],
+    [
+     "Conclude with fit and reversibility.",
+     "Argue for technology chosen by fit, control and resilience."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns technology, climate resilience or development.",
+   "formula": "Choose technology by its fit to the task, its resilience to failure and the control it gives to those who depend on it. Decentralise where local repair and ownership matter, build at scale where the task demands it, and keep reversibility among the design requirements."
+  },
+  {
+   "thinkers": [
+    [
+     "Sen",
+     "development as freedom",
+     [
+      "Amartya Sen provided the foundation. Development is the expansion of substantive freedoms: the capability to be and do what a person has reason to value. Income is a means to that, not the same thing.",
+      "His evidence made the distinction practical. Countries and states at similar income levels differ enormously in literacy, life expectancy and child survival. Converting growth into well-being is a political achievement, and treating growth as the end has a measurable human cost."
+     ],
+     "the answer needs to define development and show how it differs from growth."
+    ],
+    [
+     "Nussbaum",
+     "a threshold for everyone",
+     [
+      "Martha Nussbaum turned the idea into a threshold rather than an average. She listed central capabilities that a decent society must secure for every person, including life, bodily health, bodily integrity, senses and imagination, practical reason, affiliation and relation to other species.",
+      "A country can raise its average while leaving a fifth of its people below the level of a recognisably human life. An average conceals exactly the people development is meant to reach."
+     ],
+     "the question needs a threshold standard for judging development."
+    ],
+    [
+     "Gandhi",
+     "the talisman",
+     [
+      "Gandhi supplied the same test in a form an official can use. Recall the face of the poorest person you have seen, and ask whether the step you are considering will be of any use to that person.",
+      "The talisman asks about the worst-off individual, not the total. The talisman turns a growth figure into a question about a particular life."
+     ],
+     "the answer needs a simple ethical test for development policy."
+    ],
+    [
+     "Schumacher",
+     "the ecological condition",
+     [
+      "E. F. Schumacher added the ecological condition the others assume. Any account of development that ignores the depletion of natural capital is measuring something temporary.",
+      "Growth that consumes forests, soil and water reports prosperity until the base is gone. Development must be sustainable to count as development."
+     ],
+     "the question needs to include environmental sustainability in development."
+    ],
+    [
+     "Deendayal Upadhyaya",
+     "the last person",
+     [
+      "Deendayal Upadhyaya stated the criterion in a form administrators can apply. An arrangement is judged by the condition of the last person, not by the average.",
+      "Antyodaya, the rise of the last, turns the purpose of growth into a measurable test for policy and budgets."
+     ],
+     "the answer needs an Indian governance criterion for inclusive development."
+    ],
+    [
+     "Tagore",
+     "people as the point, not instruments",
+     [
+      "Tagore added the objection that no index reaches. A society can meet every threshold and still be organised so that people are instruments of production rather than its purpose.",
+      "For Tagore, the question of what growth is for must be asked before measurement begins, not after. A civilisation that forgets the answer serves its machinery rather than its people."
+     ],
+     "the question needs a humanist critique of growth-centred development."
+    ]
+   ],
+   "examples": [
+    [
+     "Multidimensional poverty",
+     [
+      "The Multidimensional Poverty Index counts deprivation directly across nutrition, schooling, sanitation, cooking fuel, housing, electricity and assets, rather than inferring poverty from income. NITI Aayog estimated that the share of multidimensionally poor people fell from about 29.17 per cent in 2013-14 to 11.28 per cent in 2022-23. About 24.8 crore people moved out of multidimensional poverty.",
+      "The change is large and genuine. The index measures the crossing of low thresholds, so an answer should be precise. What improved is the floor. The distance from the floor to a decent standard of living is a separate question."
+     ],
+     "What exactly has improved, and how far is it from a decent life? Separate the floor from the goal."
+    ],
+    [
+     "Kerala’s development at moderate income",
+     [
+      "Kerala remains the clearest Indian demonstration that development outcomes are not simply bought with income. Its life expectancy, literacy, infant mortality and school completion have long exceeded those of several richer states.",
+      "The explanation is historical: earlier land reform, an older network of schools and primary health centres, and political competition that made social provision unavoidable. States that grew fast while human development lagged show that converting income into capability is not automatic. Public provision decides whether growth becomes capability, and public provision can come before growth."
+     ],
+     "Can development precede high income? Compare Kerala with richer states."
+    ],
+    [
+     "Jobless growth and household experience",
+     [
+      "Output can rise sharply while the typical household’s experience barely changes. About nine in ten Indian workers are informal. Recent increases in women’s participation are concentrated in self-employment and unpaid family work rather than wage jobs.",
+      "Growth concentrated in capital-intensive and skill-intensive sectors adds value without adding many secure jobs, so gains go to profit and a small salaried group. GDP per head is an average, and where distribution is skewed, the average moves with the top. Household consumption and job quality show whether growth reached anyone."
+     ],
+     "Did growth reach households? Look at jobs and consumption, not only output."
+    ],
+    [
+     "State differences in the SDG India Index",
+     [
+      "The SDG India Index is most useful for the differences between states. The national score rose from 57 in 2018 to 71 in 2023-24 across 113 indicators. State and union territory scores now range from about 57 to 79, with Uttarakhand and Kerala at the top. The 2018 range ran from 42 to 69.",
+      "The floor has risen faster than the ceiling, which is a real finding. A national average still conceals a country in which a person’s prospects in health, schooling and sanitation depend heavily on where they were born. Convergence between states is a more demanding test than improvement of the average."
+     ],
+     "Does the average hide unequal progress? Look at the gap between states."
+    ],
+    [
+     "The case for growth",
+     [
+      "The counter-argument deserves full weight. Growth is not optional. Public health, schooling, nutrition and pensions are funded from a tax base that grows with output. A state that stops growing faces its commitments with shrinking resources.",
+      "Stagnation also falls first on those with no assets, no savings and informal work, the very group redistribution is meant to protect. The defensible position is sequential rather than oppositional. Growth is necessary and not sufficient. The failure to guard against is not growth itself, but treating the means as if it were the end."
+     ],
+     "Is growth being treated as a means or an end? Show why growth is necessary but not sufficient."
+    ]
+   ],
+   "topics": [
+    [
+     "practice",
+     [
+      "Growth increases the resources a society has. Development is what people are able to do with those resources: to be healthy, educated, secure and free. Sen defined development as the expansion of substantive freedoms, and his evidence showed that countries with similar incomes achieve very different outcomes. Kerala’s high human development at moderate income is the clearest Indian example.",
+      "Treating growth as the end hides the people it is supposed to serve. Jobless growth can raise output while most workers remain informal and insecure. National averages can conceal large differences between states, as the SDG India Index shows. Nussbaum’s threshold and Deendayal Upadhyaya’s antyodaya both ask whether every person, especially the last, has gained.",
+      "Growth remains necessary. Without it, public services cannot be funded, and stagnation harms the poor first. Development also requires sustainability, since Schumacher showed that growth consuming natural capital is temporary. The balanced conclusion is that growth should be pursued with its purpose specified at the start: what it is meant to make possible, for whom and for how long."
+     ],
+     "Growth is a means, development is the end."
+    ],
+    [
+     "practice",
+     [
+      "GDP measures total output. People live individual lives. The two can move apart when growth is concentrated among a few, when it creates few secure jobs, or when public services fail to convert income into health and education. India’s large informal workforce shows how output can rise while the median worker’s security changes little.",
+      "The gap is not inevitable. Public provision decides whether growth becomes capability. Kerala built schools and health centres early and reached high human development before high income. The Multidimensional Poverty Index shows that direct measures of deprivation can fall quickly when basic services expand. Gandhi’s talisman asks the right question of any growth strategy: will it help the poorest person you have seen?",
+      "People grow when their capabilities grow. Tagore warned that a society can meet every target and still treat people as instruments of production. An economy should therefore be measured by more than its speed of growth. The test is whether growth widens the freedoms of those at the bottom, sustains the natural base, and keeps people as the purpose of the economy rather than its tools."
+     ],
+     "An economy can grow while its people do not."
+    ]
+   ],
+   "intro": [
+    "Governments, media and markets watch growth figures closely. A rising GDP is celebrated, and a slowdown causes alarm. Yet growth is a measure of output, not of how people live. Two countries with the same income can differ greatly in health, education and freedom. The question is what development is for, and how the difference between an economy growing and people flourishing should shape policy."
+   ],
+   "claim": "Growth is a means, not an end. Development is the expansion of what people are able to do and be. Growth supplies resources for that expansion, but converting growth into well-being is a political achievement, not an automatic process. A good economy is judged by whether every person reaches a threshold of capability, whether the least advantaged gain, and whether natural capital is preserved. Growth is necessary, but treating it as the goal is a costly mistake.",
+   "problem": [
+    "Growth figures are easy to measure and compare. Averages can hide deep inequality: output may rise while jobs remain insecure and informal, and while the poorest see little change. States with similar income differ widely in literacy, life expectancy and child survival, which shows that growth alone does not decide how people live.",
+    "The opposite danger is to treat growth as optional. Health, schooling and pensions are funded from a tax base that grows with the economy. Stagnation harms the poor first. The challenge is to pursue growth as a means while specifying at the outset what it is for and for whom, and to measure progress by outcomes for people rather than output alone."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Growth measures the size of the economy. Development measures the freedoms people enjoy. The first is a means to the second, and treating the means as the end hides the people the economy is supposed to serve."
+   ],
+   "thinkersTitle": "Six thinkers, six tests of development",
+   "together": [
+    "Putting the six together",
+    "Sen defines development as freedom. Nussbaum sets a threshold for every person. Gandhi and Deendayal Upadhyaya test policy by the poorest and the last. Schumacher adds ecological sustainability. Tagore insists that people are the point of the economy. Together they show that growth is a means whose purpose must be specified from the start."
+   ],
+   "examplesIntro": "The examples below show poverty measures, the Kerala contrast, jobless growth, state differences and the case for growth. They are most useful when the answer asks whether growth reached people.",
+   "models": [
+    [
+     "Development is freedom.",
+     "Sen defined development as the expansion of what people can do and be. Growth is a means, and converting it into well-being is a political achievement, not an automatic result."
+    ],
+    [
+     "Thresholds reveal what averages hide.",
+     "Nussbaum requires every person to reach a threshold of central capabilities. A rising average can conceal a fifth of the population below a decent life."
+    ],
+    [
+     "The floor has risen, the goal is further.",
+     "Multidimensional poverty fell from about 29 per cent in 2013-14 to about 11 per cent in 2022-23. The index measures low thresholds, so the distance to a decent life remains."
+    ],
+    [
+     "Public provision converts income into capability.",
+     "Kerala achieved high human development at moderate income through early investment in schools and health. Development can precede high growth."
+    ],
+    [
+     "Growth is necessary but not sufficient.",
+     "Stagnation harms the poor first and shrinks the resources for public services. The error is not pursuing growth but treating it as the end."
+    ]
+   ],
+   "steps": [
+    [
+     "Distinguish growth from development.",
+     "Use Sen."
+    ],
+    [
+     "Set a threshold.",
+     "Use Nussbaum’s list of central capabilities."
+    ],
+    [
+     "Give evidence.",
+     "Use MPI, Kerala and the SDG India Index."
+    ],
+    [
+     "Show where growth fails people.",
+     "Discuss jobless growth and informality."
+    ],
+    [
+     "Add sustainability.",
+     "Use Schumacher on natural capital."
+    ],
+    [
+     "Give the case for growth.",
+     "Explain why stagnation harms the poor."
+    ],
+    [
+     "Conclude with purpose.",
+     "Argue that growth should be specified by what it makes possible and for whom."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns growth, development or well-being.",
+   "formula": "Pursue growth as a means, and specify at the outset what it is for and for whom. Judge the economy by the capabilities of its least advantaged people, by its care for natural capital, and by whether people remain its purpose rather than its instruments."
+  }
  ]
 };
