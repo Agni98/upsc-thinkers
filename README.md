@@ -59,7 +59,10 @@ reading column capped at a comfortable width, under a header that says where you
 bottom. The left and right arrow keys step item by item, across headings.
 
 The site remembers what has been read and where you stopped, in this browser only. The home
-page offers **Continue where you left off**, and each map's index offers its own. On a narrow
+page offers **Continue where you left off**, and each map's index offers its own. The card's
+picture belongs to what was being read. A case study shows the case studies' picture, and an
+essay shows Saint Jerome. A story shows the atlas's engraving, and a model paragraph the pen nib.
+A concept note shows its heading's icon. For a case study, progress is counted within its theme. On a narrow
 screen the contents live in the drawer, opened from **Contents** at the top of the column.
 
 ### The GS-IV syllabus map
@@ -78,6 +81,18 @@ A heading page shows what the heading holds. Every concept note carries a strip 
 each one.
 
 ### GS-IV case studies
+
+Case studies have a front page of their own, in the same style as the other pages. Its header
+band shows Annibale Carracci's *The Choice of Hercules* (1596, public domain): Hercules at the
+crossroads between Virtue and Vice. Below the band:
+- the five boxes, with a link to the full method
+- a switch between two arrangements. **By theme** shows sixteen cards. Each gives the theme's
+  core conflict, its answer engine, a strip of the years its cases were set, the latest case and
+  your progress. **By year** lists every paper's cases, newest first, so a whole paper can be
+  practised at once.
+
+The menus, the sidebar and every "case studies" link lead to this page. The cards and rows open
+the answers, which are read in the syllabus map.
 
 The Case Studies heading of the syllabus map is where every Section B case lives: all 75, from
 2013 to 2025, each with a model answer. It holds three things.

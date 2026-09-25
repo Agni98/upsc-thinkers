@@ -338,7 +338,7 @@ function heroHTML(){
     ["Sisyphus", `data-to="atlas|0|sisyphus"`],
     ["Happiness", `data-to="themes|${theme("The Good Life")}|"`],
     ["Technology", `data-to="themes|${theme("Technology")}|"`],
-    cs && ["Ethics case studies", `data-to="syllabus|${cs}|method"`],
+    cs && ["Ethics case studies", `data-view="cases"`],
     ["Emotional intelligence", `data-find="emotional intelligence"`]
   ].filter(Boolean);
   return `
@@ -391,17 +391,28 @@ function continueHTML(){
   </section>`;
 
   const bits = x.to.split("|"), view = bits[0], page = +bits[1] || 0, id = bits[2];
-  let done = 0, total = 0, unit = "", kind = "", art = "thinker";
+  // The picture is the one from the section being read: a case study shows the
+  // case studies' own picture, an essay Saint Jerome, a story the atlas's
+  // engraving. A concept note has no picture of its own, so it shows its
+  // heading's icon rather than a philosopher who has nothing to do with it.
+  let done = 0, total = 0, unit = "", kind = "", art = "thinker", icon = "", home = view + "|0|";
+  let where = (x.where || "") + (x.h ? " \u00b7 " + x.h : "");
   if ((view === "syllabus" || view === "themes") && page) {
     const spec = mapSpec(view), h = spec.list[page - 1];
     if (h) {
       const items = spec.items(h), it = items.find(i => i.id === id);
-      total = items.length;
-      done = items.filter(i => isRead(readKey(view, page, i.id))).length;
+      let pool = items;
       unit = view === "syllabus" ? "heading" : "theme";
       kind = it ? (it.k || it.lab || it.g) : "";
+      if (view === "syllabus" && h.t === "Case Studies") {
+        art = "hercules"; home = "cases|0|";
+        const n = it && /^Theme \d+$/.test(it.g) ? +it.g.slice(6) : 0, c = n ? casePatterns()[n - 1] : null;
+        if (c) { pool = items.filter(y => y.g === it.g); unit = "theme"; where = "Case Studies \u00b7 " + c.t; }
+      } else if (view === "syllabus") { art = ""; icon = SYL_ICON[h.t] || "book"; }
+      else art = /^e:/.test(id) ? "jerome" : /^a:/.test(id) ? "flammarion" : "pen";
+      total = pool.length;
+      done = pool.filter(y => isRead(readKey(view, page, y.id))).length;
     }
-    art = view === "syllabus" ? "aristotle" : "pen";
   } else if (view === "atlas" && typeof ATLAS !== "undefined") {
     const e = atlasById()[id];
     const list = e ? ATLAS.filter(a => a.sec === e.sec) : [];
@@ -409,19 +420,21 @@ function continueHTML(){
     done = list.filter(a => isRead("atlas|0|" + a.id)).length;
     unit = "section";
     kind = e ? e.form : "";
+    art = "flammarion";
   }
   const pct = total ? Math.round(done / total * 100) : 0;
   return `
   <section class="hblock">
     <div class="hb-head">
       <h3 class="hb-t">Continue Studying</h3>
-      <button class="hb-link" data-to="${esc(view)}|0|">Go to my reading ${ico("arrow")}</button>
+      <button class="hb-link" data-to="${esc(home)}">Go to my reading ${ico("arrow")}</button>
     </div>
     <div class="cont">
-      <span class="cont-art art-${art}" aria-hidden="true"></span>
+      ${art ? `<span class="cont-art art-${art}" aria-hidden="true"></span>`
+            : `<span class="cont-art cont-ico" aria-hidden="true">${ico(icon)}</span>`}
       <div class="cont-body">
         <div class="cont-t"><b>${esc(x.t || "")}</b>${kind ? `<span class="cont-tag">${esc(kind)}</span>` : ""}</div>
-        <p class="cont-w">${esc(x.where || "")}${x.h ? " &middot; " + esc(x.h) : ""}</p>
+        <p class="cont-w">${esc(where)}</p>
         ${total ? `
         <div class="cont-bar" role="progressbar" aria-label="Read in this ${unit}"
              aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><i style="width:${pct}%"></i></div>
@@ -484,7 +497,7 @@ function renderHome(){
           to:"syllabus|0|", go:"Explore GS-IV",
           stats:[[s.headings, "Syllabus topics", "syllabus|0|"], [s.gsq, "Past questions", "gs4pyq|0|"],
                  [s.concepts, "Concept notes", "syllabus|1|"],
-                 [s.cases, "Case studies", cs ? "syllabus|" + cs + "|pyq" : "gs4pyq|0|"]]
+                 [s.cases, "Case studies", cs ? "cases|0|" : "gs4pyq|0|"]]
         })}
         ${paperCardHTML({
           t:"Essay Paper", d:"Themes, model essays, arguments and examples", icon:"nib", art:"pen",
@@ -671,7 +684,7 @@ function topSections(){
     { id:"gs4", t:"GS-IV", to:"syllabus|0|", items:[
       ["syllabus|0|", "Syllabus map", s.headings + " headings, with the concepts, thinkers and questions under each"],
       ["gs4pyq|0|", "Past questions", s.gsq + " questions" + (g4span ? ", " + g4span : "") + ", by topic"],
-      cs && ["syllabus|" + cs + "|method", "Case studies", "five boxes for answering one, and a model answer for each of " + s.cases + " past cases"],
+      cs && ["cases|0|", "Case studies", "a model answer for each of " + s.cases + " past cases, in " + casePatterns().length + " themes"],
       ["ethics|0|", "Thinkers for Ethics", tagged("Ethics") + " named in or serving the syllabus"]
     ]},
     { id:"essay", t:"Essay", to:"themes|0|", items:[
@@ -705,7 +718,7 @@ function renderTopNav(){
 
 function topSectionOf(v){
   if (v === "home") return "home";
-  if (v === "syllabus" || v === "ethics") return "gs4";
+  if (v === "syllabus" || v === "ethics" || v === "cases") return "gs4";
   if (v === "themes" || v === "essays" || v.startsWith("essay:") || v === "atlas" || v === "essay") return "essay";
   if (v === "pyq" || v === "gs4pyq") return "pyq";
   if (v === "search") return "";
@@ -856,7 +869,7 @@ function renderNav(){
       kid(`data-to="syllabus|${i + 1}|"`, r.t, (typeof GS4_CONCEPTS !== "undefined" && GS4_CONCEPTS[r.t]) ? GS4_CONCEPTS[r.t].length : undefined)).join(""))}
     ${fold("themes", "target", "Essay Themes", ESSAY_THEMES.map((t, i) =>
       kid(`data-to="themes|${i + 1}|"`, t.n || t.t)).join(""))}
-    ${cs ? item(["case", "Case Studies", `data-to="syllabus|${cs}|method"`], false, "sub") : ""}
+    ${cs ? item(["case", "Case Studies", `data-view="cases"`], v === "cases", "sub") : ""}
     ${item(["quote", "Quotes", `data-view="quotes"`], v === "quotes", "sub")}
     ${typeof ATLAS !== "undefined" ? item(["compass", "Stories & Examples", `data-view="atlas"`], v === "atlas", "sub") : ""}
 
@@ -1994,8 +2007,9 @@ function caseBoxesHTML(x, pre){
     + box(5, `<ol class="cbox-seq">${x.sequence.map(s => `<li>${rich(s)}</li>`).join("")}</ol>`);
 }
 
-const caseEngineHTML = c => (c && c.engine && c.engine.length)
-  ? `<ol class="cpat-engine">${c.engine.map(s => `<li>${esc(s)}</li>`).join("")}</ol>` : "";
+const caseEngineHTML = (c, inline) => (c && c.engine && c.engine.length)
+  ? (inline ? `<span class="cpat-engine">${c.engine.map(s => `<span>${esc(s)}</span>`).join("")}</span>`
+            : `<ol class="cpat-engine">${c.engine.map(s => `<li>${esc(s)}</li>`).join("")}</ol>`) : "";
 
 /* How to answer one: the method, the five boxes, and every theme's engine. */
 function caseMethodHTML(title){
@@ -2005,6 +2019,7 @@ function caseMethodHTML(title){
     <article class="sm-pane cm2">
       <div class="ans-head"><b>How to answer a case study</b>
         <span>One method and five boxes, used in every model answer under this heading</span></div>
+      <button class="ca-home" data-view="cases">${ico("layers")}All the cases, by theme and by year ${ico("arrow")}</button>
       <ol class="cm2-chain" aria-label="The method">${M.chain.map(s => `<li>${esc(s)}</li>`).join("")}</ol>
 
       <h6 class="cm2-h">The five boxes</h6>
@@ -2044,7 +2059,7 @@ function caseMethodHTML(title){
         <button class="cm2-eng" data-sel="c:${i}">
           <span class="cm2-eng-top"><span class="cm2-eng-n">${i + 1}</span><b>${esc(c.t)}</b><small>${plural(c.qs.length, "case", "cases")}</small></span>
           <em>${esc(c.core || "")}</em>
-          ${caseEngineHTML(c)}
+          ${caseEngineHTML(c, true)}
         </button>`).join("")}
       </div>
 
@@ -2085,7 +2100,7 @@ function casePatternPane(i){
         ${a.traps && a.traps.length ? `<div class="cpat-traps"><b>Traps</b><ul>${a.traps.map(t => `<li>${esc(t)}</li>`).join("")}</ul></div>` : ""}
       </section>` : ""}
       ${(c.links || []).length ? `<div class="cpat-links"><b>Concepts to reason with</b><span class="pills">${c.links.map(link).join("")}</span></div>` : ""}
-      <div class="cpat-cases" id="cp-qs"><b>The cases, newest first</b>
+      <div class="cpat-cases" id="cp-qs"><b>The cases, newest first <button class="ca-home" data-view="cases">All ${casePatterns().reduce((n, x) => n + x.qs.length, 0)} cases ${ico("arrow")}</button></b>
         ${qs.map(q => { const ans = caseAnswer(q.id); return `
         <button class="cpat-case" data-sel="q:${q.id}">
           <i>${q.y}</i>
@@ -2139,11 +2154,109 @@ function caseAnswerPane(id){
       </div>` : ""}
       <div class="ca-close" id="ca-close"><b>Model conclusion</b><p>${rich(a.close)}</p></div>
       ${c ? `<div class="ca-more"><b>More on this theme</b><span class="pills">
-        <button class="pill ca-arch" data-sel="c:${ti}">The common architecture</button>${others.map(x => {
+        <button class="pill ca-arch" data-sel="c:${ti}">The common architecture</button>
+        <button class="pill" data-view="cases">All the cases</button>${others.map(x => {
           const o = caseAnswer(x), oq = gs4ById()[x];
           return `<button class="pill" data-sel="q:${x}">${oq ? oq.y + " &middot; " : ""}${esc(o ? o.t : x)}</button>`; }).join("")}
       </span></div>` : ""}
     </article>`;
+}
+
+/* ---- The Case Studies front page ----
+   The other pages' look: a header band with Carracci's Choice of Hercules
+   (1596, public domain), the five boxes, then the cases arranged by theme, each
+   theme a card with the years its cases were set, or paper by paper. Every card
+   and row opens in the syllabus map, where the answers are read. */
+function caseCardHTML(c, i, years, cs){
+  const qs = c.qs.map(id => gs4ById()[id]).filter(Boolean);
+  const items = ["c:" + i].concat(c.qs.map(id => "q:" + id));
+  const done = items.filter(id => isRead(readKey("syllabus", cs, id))).length;
+  const latest = qs[0], la = latest && caseAnswer(latest.id);
+  return `
+      <button class="scard cscard" data-to="syllabus|${cs}|c:${i}">
+        <span class="scard-top"><span class="scard-no">${i + 1}</span>
+          <em>${done ? done + " of " + items.length + " read" : plural(qs.length, "case", "cases")}</em></span>
+        <b>${esc(c.t)}</b>
+        ${c.core ? `<span class="cscard-core">${esc(c.core)}</span>` : ""}
+        ${caseEngineHTML(c, true)}
+        ${yearStripHTML(years, qs.map(q => q.y), "case", "cases")}
+        ${la ? `<span class="scard-top-c"><i>Latest case, ${latest.y}</i>${esc(la.t)}</span>` : ""}
+        <i class="atile-bar"><i style="width:${Math.round(done / items.length * 100)}%"></i></i>
+      </button>`;
+}
+
+function renderCasesHome(){
+  const cs = casePage(), pats = casePatterns();
+  if (!cs || !pats.length) return `<div class="empty"><b>Not available</b>The case studies could not be loaded.</div>`;
+  const byQ = gs4ById();
+  const all = pats.flatMap(c => c.qs).map(id => byQ[id]).filter(Boolean);
+  const years = [...new Set(all.map(q => q.y))].sort((a, b) => a - b);
+  const span = years[0] + " to " + years[years.length - 1];
+  const last = lastPlaces().syllabus;
+  const here = last && String(last.to).indexOf("syllabus|" + cs + "|") === 0 ? last : null;
+  const boxes = (typeof CASE_METHOD !== "undefined") ? CASE_METHOD.boxes : [];
+  const row = q => {
+    const a = caseAnswer(q.id), ti = caseThemeOf(q.id), c = pats[ti];
+    return `
+        <button class="cs-row${isRead(readKey("syllabus", cs, "q:" + q.id)) ? " done" : ""}" data-to="syllabus|${cs}|q:${q.id}">
+          <b>${esc(a ? a.t : firstSentence(q.q))}</b>
+          <span>${c ? "Theme " + (ti + 1) + " &middot; " + esc(c.t) : ""}</span>
+          <em>${a ? "Model answer" : "The question"} ${ico("arrow")}</em>
+        </button>`;
+  };
+  const byYear = years.slice().reverse().map(y => {
+    const list = all.filter(q => q.y === y).sort((a, b) => a.id.localeCompare(b.id));
+    return `
+      <section class="pyq-paper cs-paper">
+        <h4>${y}<span>${plural(list.length, "case", "cases")}</span></h4>
+        <div class="cs-rows">${list.map(row).join("")}</div>
+      </section>`;
+  }).join("");
+  return `
+  <section class="hero hero-sm">
+    <div class="hero-art art-hercules" aria-hidden="true"></div>
+    <div class="hero-body">
+      <p class="hero-k">GS Paper IV &middot; Section B</p>
+      <h2 class="hero-t">Case Studies</h2>
+      <p class="hero-s">Every case the paper has set from ${span}, ${all.length} in all, each with a model
+         answer in the same five boxes, sorted into ${pats.length} themes.</p>
+      <p class="hero-note">Read a theme's common architecture first, then its cases. Each case is ticked
+         once you have opened it, and your place is kept.</p>
+    </div>
+    <div class="hero-aside">
+      <button data-to="syllabus|${cs}|method"><b>${boxes.length || 5}</b><span>boxes in every answer, and how to fill them</span></button>
+      <button data-jumpto="cs-list"><b>${pats.length}</b><span>themes, each with a common architecture</span></button>
+      <button data-cstab="year"><b>${years.length}</b><span>papers, ${span}, case by case</span></button>
+    </div>
+  </section>
+
+  <div class="home">
+    ${resumeHTML(here)}
+    ${boxes.length ? `
+    <section class="atl-guide cs-guide" aria-label="The five boxes">
+      <div class="hb-head"><h3 class="hb-t">The five boxes</h3>
+        <button class="hb-link" data-to="syllabus|${cs}|method">The full method ${ico("arrow")}</button></div>
+      <ol class="atl-steps">${boxes.map((b, i) => `
+        <li><span class="atl-step-ico">${ico(b[0])}</span>
+            <b><i>${i + 1}</i>${esc(b[1])}</b><span>${esc(b[2])}</span></li>`).join("")}
+      </ol>
+    </section>` : ""}
+
+    <div class="t-regions cs-tabs" id="cs-list" role="group" aria-label="Arrange the cases">
+      <button class="on" data-cstab="theme" aria-pressed="true">By theme</button>
+      <button data-cstab="year" aria-pressed="false">By year</button>
+    </div>
+    <div class="cs-pane" data-cspane="theme">
+      <p class="cs-note">Each card gives the theme's core conflict, its answer engine, and the years its
+         cases were set. A darker cell marks two or more cases in one paper.</p>
+      <div class="scards">${pats.map((c, i) => caseCardHTML(c, i, years, cs)).join("")}</div>
+    </div>
+    <div class="cs-pane" data-cspane="year" hidden>
+      <p class="cs-note">The cases as each paper set them, newest paper first: practise one paper's
+         cases together.</p>
+      ${byYear}
+    </div>
+  </div>`;
 }
 
 /* ---- GS-IV past questions under their syllabus heading ----
@@ -2240,7 +2353,7 @@ function sylCardHTML(r, i){
   const top = (cases ? s.concepts.slice().sort((a, b) => b.qs.length - a.qs.length) : s.concepts)
     .slice(0, 3).map(c => c.t);
   return `
-      <button class="scard" data-open-at="${i + 1}|">
+      <button class="scard" ${cases ? `data-view="cases"` : `data-open-at="${i + 1}|"`}>
         <span class="scard-top">
           <span class="scard-no">${i + 1}</span>${ico(SYL_ICON[r.t] || "book")}
           <em>${done ? done + " of " + items.length + " read" : "Not started"}</em>
@@ -2276,7 +2389,7 @@ function sylIndexHTML(spec){
     <div class="hero-aside">
       <button data-open-at="1|"><b>${s.concepts}</b><span>concept notes</span></button>
       <button data-view="gs4pyq"><b>${s.gsq}</b><span>past questions</span></button>
-      ${cs ? `<button data-open-at="${cs}|pyq"><b>${s.cases}</b><span>case studies</span></button>` : ""}
+      ${cs ? `<button data-view="cases"><b>${s.cases}</b><span>case studies, each with a model answer</span></button>` : ""}
     </div>
   </section>
 
@@ -2746,6 +2859,7 @@ function render(){
   }
   else if (state.view === "worklab")  main.innerHTML = renderWorkLabList();
   else if (state.view === "quotes")   main.innerHTML = renderQuotes();
+  else if (state.view === "cases")    main.innerHTML = renderCasesHome();
   else if (state.view === "syllabus") main.innerHTML = renderSyllabus();
   else if (state.view === "themes")   main.innerHTML = renderThemes();
   else if (state.view === "search")   main.innerHTML = renderSearch();
@@ -3130,7 +3244,7 @@ function renderGS4PYQ(){
        questions and ${nCases} case studies, filed under the topic each one tests. Open a topic to see its
        questions, newest first, and go from there to its concept notes.`,
       [[papers, "papers, " + span, `data-pyqgo="year"`],
-       [nCases, "case studies", `data-to="syllabus|${SYLLABUS.findIndex(r => r.t === "Case Studies") + 1}|pyq"`],
+       [nCases, "case studies, each with a model answer", `data-view="cases"`],
        [siteStats().concepts, "concept notes behind them", `data-view="syllabus"`]])}
 
     <div class="home">
@@ -3667,6 +3781,19 @@ document.addEventListener("click", e => {
     closeSheet();
     state.view = "work:" + id + (title ? ":" + title : "");
     render();
+    return;
+  }
+
+  // the case studies: by theme or by year, switched in place
+  const cst = e.target.closest("[data-cstab]");
+  if (cst) {
+    const k = cst.dataset.cstab;
+    document.querySelectorAll(".cs-tabs [data-cstab]").forEach(b => {
+      b.classList.toggle("on", b.dataset.cstab === k);
+      b.setAttribute("aria-pressed", String(b.dataset.cstab === k));
+    });
+    document.querySelectorAll("[data-cspane]").forEach(p => { p.hidden = p.dataset.cspane !== k; });
+    if (cst.closest(".hero-aside")) document.getElementById("cs-list").scrollIntoView({ behavior:"smooth", block:"start" });
     return;
   }
 
