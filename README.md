@@ -101,6 +101,20 @@ reading time, topics answered and stories used. The conclusion is set apart in a
 stories it uses are cards, and previous and next move through the essays in theme order. An
 essay read here counts as read in its theme on the Essay Theme Map.
 
+### Past year questions
+
+Both past-question pages, Essay topics and GS-IV questions, have the same header band, with a
+marble head of Socrates from the Vatican Museums (public domain). The switch between the two
+papers sits in the band. The three numbers beside it lead somewhere. The paper count opens the
+By-year view. On the Essay page the other two open the By-theme view and the model paragraphs.
+On the GS-IV page they open the case studies and the concept notes.
+
+Below the band, a guide says how to read a group. Each group is a card. It shows its rank and
+name, a bar for its share of all the questions, and a strip with one cell for each paper. A
+cell is light when the paper set one question from the group, and dark when it set two or more.
+The Essay page also keeps its notes on what the papers show. *By theme* and *By year* are a
+segmented control, and a label under each question in By year jumps back to its group.
+
 ### Reading the atlas
 
 The atlas opens on an **overview**. It first shows how every entry is built, in eight numbered

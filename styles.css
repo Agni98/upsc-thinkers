@@ -1128,53 +1128,63 @@ html[data-theme="dark"] .cont-art{filter:grayscale(.4) brightness(.85)}
   .quiz{break-inside:avoid}
 }
 
-/* ================= PAST QUESTIONS ================= */
-/* questions are read, so both question pages use the reading face */
+/* ================= PAST QUESTIONS =================
+   The maps' look: a header band with Socrates (public domain, Vatican Museums)
+   holding the switch between the papers, then the groups as cards, each with a
+   bar for its share and a strip of the years it was asked. Questions are read,
+   so both pages use the reading face. */
+.art-socrates{background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Socrates_Pio-Clementino_Inv314.jpg/500px-Socrates_Pio-Clementino_Inv314.jpg")}
+.hero-sm .hero-art.art-socrates{background-position:50% 25%}
+.hero-body .pyq-switch{margin:18px 0 0;background:var(--panel);border:1px solid var(--line)}
+.hero-body .pyq-switch button.on{background:var(--saffron-soft);color:var(--saffron-ink);box-shadow:none}
 .pyq.page{margin-top:0;padding-top:0;border-top:0}
 .pyq .sec-head{margin-bottom:16px}
 
 .pyq-notes{
-  background:var(--gold-soft);border:1px solid var(--line);border-radius:var(--radius);
-  padding:16px 20px 14px;margin-bottom:20px}
-.pyq-notes h4{
-  font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.9px;
-  text-transform:uppercase;color:var(--ink-3);margin-bottom:9px}
+  background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--saffron);
+  border-radius:0 12px 12px 0;padding:16px 20px 14px;margin:26px 0 22px;box-shadow:var(--shadow)}
+.pyq-notes h4.hb-t{font-size:17px;border:0;padding:0;margin-bottom:10px}
 .pyq-notes ul{list-style:none;display:grid;gap:9px}
 .pyq-notes li{
   font-size:13.5px;line-height:1.62;color:var(--ink-2);padding-left:15px;position:relative}
 .pyq-notes li::before{
   content:"";position:absolute;left:0;top:.63em;width:5px;height:5px;border-radius:50%;
-  background:var(--gold)}
+  background:var(--saffron)}
 .pyq-notes li b{color:var(--ink);font-weight:600}
 
-.pyq-tabs{display:flex;gap:8px;margin-bottom:14px}
-.pyqtab{
-  font-family:var(--sans);font-size:12.5px;font-weight:600;padding:7px 15px;
-  border:1px solid var(--line);border-radius:999px;background:var(--panel);
-  color:var(--ink-2);cursor:pointer;transition:.15s}
-.pyqtab:hover{border-color:var(--accent);color:var(--accent)}
-.pyqtab.on{background:var(--accent);border-color:var(--accent);color:var(--panel)}
+/* the two views are a segmented control, as elsewhere */
+.pyq-tabs.t-regions{margin:24px 0 14px}
+.pyq-tabs .pyqtab:focus-visible{outline:2px solid var(--saffron);outline-offset:1px}
 
 /* --- by theme --- */
 .pyqt{
   background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
   padding:0 18px;margin-bottom:9px;box-shadow:var(--shadow)}
-.pyqt > summary{padding:14px 0;gap:11px;flex-wrap:wrap}
+.pyqt > summary{
+  display:grid;grid-template-columns:26px minmax(0,1fr) auto 14px;column-gap:12px;row-gap:10px;
+  align-items:center;padding:14px 0}
+.pyqt .pyq-rank{grid-column:1;grid-row:1}
+.pyqt .pyq-name{grid-column:2;grid-row:1}
+.pyqt > summary .foldhint{grid-column:3;grid-row:1}
+.pyqt > summary .chev{grid-column:4;grid-row:1}
+.pyq-viz{
+  grid-column:2 / 4;grid-row:2;display:grid;grid-template-columns:minmax(80px,1fr) minmax(0,1.7fr);
+  gap:18px;align-items:center}
+.pyq-viz .pyq-bar{margin:0;min-width:0;height:6px}
 .pyqt[open] > summary{border-bottom:1px solid var(--line)}
 .pyqt[open] > summary .chev{transform:rotate(90deg)}
 .pyq-rank{
-  flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--accent-soft);
-  color:var(--accent);font-family:var(--sans);font-size:11px;font-weight:700;
+  flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--saffron-soft);
+  color:var(--saffron-ink);font-family:var(--sans);font-size:12px;font-weight:700;
   display:grid;place-items:center;order:0}
 .pyq-name{
-  order:0;font-family:var(--read);font-size:16.5px;font-weight:500;color:var(--ink);
+  order:0;font-family:var(--read);font-size:16.5px;font-weight:600;color:var(--head);
   letter-spacing:-.2px}
 .pyq-bar{
-  order:1;flex:1 1 60px;min-width:44px;height:5px;border-radius:3px;
+  min-width:44px;height:5px;border-radius:3px;
   background:var(--line);overflow:hidden;margin:0 2px}
-.pyq-bar i{display:block;height:100%;border-radius:3px;background:var(--accent);opacity:.75}
-.pyqt .foldhint{order:2;white-space:nowrap}
-.pyqt .chev{order:3}
+.pyq-bar i{display:block;height:100%;border-radius:3px;background:var(--viz-a)}
+.pyqt .foldhint{white-space:nowrap}
 
 .pyq-body{padding:15px 0 19px}
 .pyq-why{
@@ -1210,8 +1220,9 @@ html[data-theme="dark"] .cont-art{filter:grayscale(.4) brightness(.85)}
   background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
   padding:16px 20px 18px;margin-bottom:11px;box-shadow:var(--shadow)}
 .pyq-paper > h4{
-  font-family:var(--read);font-size:19px;font-weight:500;color:var(--accent);
-  display:flex;align-items:baseline;gap:10px;margin-bottom:11px}
+  font-family:var(--read);font-size:19px;font-weight:600;color:var(--head);
+  display:flex;align-items:baseline;gap:10px;margin-bottom:11px;
+  border-left:4px solid var(--saffron);padding-left:12px}
 .pyq-paper > h4 span{
   font-family:var(--sans);font-size:11px;font-weight:600;color:var(--ink-3);letter-spacing:.3px}
 .pyq-sec{margin-top:12px}
@@ -1255,10 +1266,10 @@ html[data-theme="dark"] .cont-art{filter:grayscale(.4) brightness(.85)}
 @media (max-width:700px){ .g4pyq .pyqt .foldhint{white-space:normal} }
 
 @media (max-width:700px){
-  .pyq-name{flex:1 1 100%;order:0}
-  .pyq-bar{order:2;flex:1 1 40px}
-  .pyqt .foldhint{order:3;font-size:11px}
-  .pyqt .chev{order:4}
+  .pyqt > summary{grid-template-columns:26px minmax(0,1fr) 14px}
+  .pyqt > summary .foldhint{grid-column:2;grid-row:2;white-space:normal;font-size:11px}
+  .pyqt > summary .chev{grid-column:3}
+  .pyq-viz{grid-column:2 / 4;grid-row:3;grid-template-columns:minmax(0,1fr);gap:8px}
   .pyq-also{padding-left:0}
 }
 

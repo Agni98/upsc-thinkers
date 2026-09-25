@@ -615,6 +615,35 @@ function runSearch(q){
   render();
 }
 
+/* The past-question pages open like the maps: a header band with the switch
+   between the two papers and three numbers that lead somewhere. The picture is
+   Socrates, who taught by asking questions (public domain, Vatican Museums). */
+function pyqHeroHTML(on, t, s, aside){
+  return `
+    <section class="hero hero-sm">
+      <div class="hero-art art-socrates" aria-hidden="true"></div>
+      <div class="hero-body">
+        <p class="hero-k">Past Year Questions</p>
+        <h2 class="hero-t">${t}</h2>
+        <p class="hero-s">${s}</p>
+        ${pyqSwitchHTML(on)}
+      </div>
+      <div class="hero-aside">${aside.map(a => `<button ${a[2]}><b>${a[0]}</b><span>${a[1]}</span></button>`).join("")}</div>
+    </section>`;
+}
+
+/* What each group on a past-question page shows, in the order it shows it. */
+function pyqGuideHTML(steps){
+  return `
+    <section class="atl-guide" aria-label="How to read a group">
+      <h3 class="hb-t">How to read a group</h3>
+      <ol class="atl-steps">${steps.map((p, i) => `
+        <li><span class="atl-step-ico">${ico(p[0])}</span>
+            <b><i>${i + 1}</i>${esc(p[1])}</b><span>${esc(p[2])}</span></li>`).join("")}
+      </ol>
+    </section>`;
+}
+
 /* The two past-question pages sit under one section, with a switch between them. */
 function pyqSwitchHTML(on){
   return `
@@ -1987,14 +2016,22 @@ function themeTopics(t){
   return [...keys].map(k => ({ k, y:+k.slice(0, 4), s:k.charAt(4) }));
 }
 
+/* A strip of the paper's years: pale where something was asked once, full
+   saffron where more than once. ys holds one year per question. */
+function yearStripHTML(years, ys, one, many){
+  const per = y => ys.filter(v => v === y).length;
+  const asked = years.filter(per).map(y => y + (per(y) > 1 ? " (" + per(y) + ")" : ""));
+  return `<span class="tyears" aria-label="Asked in ${esc(asked.join(", ") || "no year yet")}">
+          <i class="tyears-l">${years[0]}</i>${years.map(y => `<i class="ty${per(y) > 1 ? " ty2" : per(y) ? " ty1" : ""}" title="${y}: ${per(y)} ${per(y) === 1 ? one : many}"></i>`).join("")}<i class="tyears-l">${years[years.length - 1]}</i>
+        </span>`;
+}
+
 function themeCardHTML(t, i, years){
   const items = themeItems(t), st = themeStats(t), tp = themeTopics(t);
   const done = items.filter(it => isRead(readKey("themes", i + 1, it.id))).length;
   const essays = (t.essays || []).filter(k => (typeof ESSAYS !== "undefined") && ESSAYS[k]).length;
   const Q = pyqText();
   const latest = tp.slice().sort((a, b) => b.y - a.y || a.k.localeCompare(b.k))[0];
-  const per = y => tp.filter(x => x.y === y).length;
-  const asked = years.filter(y => per(y)).map(y => y + (per(y) > 1 ? " (" + per(y) + ")" : ""));
   return `
       <button class="scard" data-open-at="${i + 1}|">
         <span class="scard-top">
@@ -2009,9 +2046,7 @@ function themeCardHTML(t, i, years){
           <span><b>${themeStories(t).length}</b>stories</span>
           <span><b>${tp.length}</b>topics</span>
         </span>
-        <span class="tyears" aria-label="Asked in ${esc(asked.join(", ") || "no year yet")}">
-          <i class="tyears-l">${years[0]}</i>${years.map(y => `<i class="ty${per(y) > 1 ? " ty2" : per(y) ? " ty1" : ""}" title="${y}: ${plural(per(y), "topic", "topics")}"></i>`).join("")}<i class="tyears-l">${years[years.length - 1]}</i>
-        </span>
+        ${yearStripHTML(years, tp.map(x => x.y), "topic", "topics")}
         ${latest && Q[latest.k] ? `<span class="scard-top-c"><i>Latest topic, ${latest.y}</i>${esc(Q[latest.k].q)}</span>` : ""}
         <i class="atile-bar"><i style="width:${items.length ? Math.round(done / items.length * 100) : 0}%"></i></i>
       </button>`;
@@ -2526,6 +2561,7 @@ function renderPYQ(){
   const span   = PYQ_PAPERS[PYQ_PAPERS.length - 1].y + " to " + PYQ_PAPERS[0].y;
   const chip   = k => `<span class="pyq-yr">${Q[k].y}<i>${Q[k].s}${Q[k].n}</i></span>`;
 
+  const allYears = PYQ_PAPERS.map(p => p.y).sort();
   const byTheme = PYQ_THEMES.map((t, i) => {
     const yrs = new Set(t.qs.map(k => Q[k].y)).size;
     return `
@@ -2533,9 +2569,12 @@ function renderPYQ(){
       <summary>
         <span class="pyq-rank">${i + 1}</span>
         <span class="pyq-name">${esc(t.t)}</span>
-        <span class="pyq-bar"><i style="width:${Math.round(t.qs.length / max * 100)}%"></i></span>
         <span class="foldhint">${t.qs.length} question${t.qs.length > 1 ? "s" : ""} &middot; ${yrs} of ${papers} papers</span>
         <span class="chev" aria-hidden="true">&#9656;</span>
+        <span class="pyq-viz">
+          <span class="pyq-bar" title="${t.qs.length} of the ${total} topics"><i style="width:${Math.round(t.qs.length / max * 100)}%"></i></span>
+          ${yearStripHTML(allYears, t.qs.map(k => Q[k].y), "topic", "topics")}
+        </span>
       </summary>
       <div class="pyq-body">
         <p class="pyq-why">${esc(t.why)}</p>
@@ -2573,21 +2612,27 @@ function renderPYQ(){
 
   return `
   <section class="pyq page" id="pyq">
-    ${pyqSwitchHTML("pyq")}
-    <div class="sec-head">
-      <h3>Past Questions, Classified</h3>
-      <p>Every essay set in the last ${papers} Mains papers &mdash; ${span}, ${total} questions &mdash;
-         grouped by what the question actually asks you to do. Most repeated theme first, least
-         repeated last. Each question sits in one group only, so the order is a count rather
-         than an impression.</p>
-    </div>
+    ${pyqHeroHTML("pyq", "Essay topics, " + span,
+      `Every essay set in the last ${papers} Mains papers, ${total} topics, grouped by what each one
+       actually asks you to do. Each topic sits in one group only, so the order is a count, not an
+       impression.`,
+      [[papers, "papers, " + span, `data-pyqgo="year"`],
+       [PYQ_THEMES.length, "themes, most asked first", `data-pyqgo="theme"`],
+       [siteStats().paras, "model paragraphs to answer them", `data-to="themes|1|p:0"`]])}
+
+    <div class="home">
+    ${pyqGuideHTML([
+      ["chart",    "The bar",    `How many of the ${total} topics the group holds, against the largest`],
+      ["calendar", "The years",  `One cell for each paper, ${span}. Darker cells mark two or more topics`],
+      ["file",     "The topics", "Each with its year and section, and the model paragraph that answers it"],
+      ["nib",      "Write it with", "The model essay for the group and the thinkers to use"]])}
 
     ${ (typeof PYQ_NOTES !== "undefined") ? `<div class="pyq-notes">
-      <h4>What ${papers} papers show</h4>
+      <h4 class="hb-t">What ${papers} papers show</h4>
       <ul>${PYQ_NOTES.map(x => `<li>${rich(x)}</li>`).join("")}</ul>
     </div>` : "" }
 
-    <div class="pyq-tabs">
+    <div class="pyq-tabs t-regions" role="group" aria-label="Arrange the topics">
       <button class="pyqtab on" data-pyq="theme">By theme</button>
       <button class="pyqtab" data-pyq="year">By year</button>
     </div>
@@ -2597,6 +2642,7 @@ function renderPYQ(){
       <p class="pyq-note">The papers as they were set. The label under each question is the group
          it belongs to &mdash; click it to jump there.</p>
       ${byYear}
+    </div>
     </div>
   </section>`;
 }
@@ -2636,6 +2682,7 @@ function renderGS4PYQ(){
       </details>`;
   };
 
+  const allYears = years.slice().sort((a, b) => a - b);
   const byTopic = topics.map((x, i) => {
     const a = x.qs.filter(q => q.sec === "A"), b = x.qs.filter(q => q.sec === "B");
     const yrs = new Set(x.qs.map(q => q.y)).size;
@@ -2645,10 +2692,13 @@ function renderGS4PYQ(){
       <summary>
         <span class="pyq-rank">${i + 1}</span>
         <span class="pyq-name">${esc(x.t.t)}</span>
-        <span class="pyq-bar"><i style="width:${Math.round(x.qs.length / max * 100)}%"></i></span>
         <span class="foldhint">${plural(x.qs.length, "question", "questions")}${
           b.length ? " &middot; " + plural(b.length, "case", "cases") : ""} &middot; ${yrs} of ${papers} papers</span>
         <span class="chev" aria-hidden="true">&#9656;</span>
+        <span class="pyq-viz">
+          <span class="pyq-bar" title="${x.qs.length} of the ${GS4_PYQ.length} questions"><i style="width:${Math.round(x.qs.length / max * 100)}%"></i></span>
+          ${yearStripHTML(allYears, x.qs.map(q => q.y), "question", "questions")}
+        </span>
       </summary>
       <div class="pyq-body">
         ${a.length ? `<h5 class="g4-sub">Section A &middot; theory<span>${a.length}</span></h5>
@@ -2682,16 +2732,22 @@ function renderGS4PYQ(){
 
   return `
   <section class="pyq page g4pyq" id="gs4pyq">
-    ${pyqSwitchHTML("gs4pyq")}
-    <div class="sec-head">
-      <h3>GS-IV Past Questions, by Topic</h3>
-      <p>All ${GS4_PYQ.length} questions from the ${papers} GS Paper IV papers, ${span}:
-         ${GS4_PYQ.length - nCases} theory questions and ${nCases} case studies, filed under the
-         topic each one tests. Most asked topic first. Open a topic to see its questions, newest
-         first, and go from there to its concept notes.</p>
-    </div>
+    ${pyqHeroHTML("gs4pyq", "GS-IV questions, " + span,
+      `All ${GS4_PYQ.length} questions from the ${papers} GS Paper IV papers: ${GS4_PYQ.length - nCases} theory
+       questions and ${nCases} case studies, filed under the topic each one tests. Open a topic to see its
+       questions, newest first, and go from there to its concept notes.`,
+      [[papers, "papers, " + span, `data-pyqgo="year"`],
+       [nCases, "case studies", `data-to="syllabus|${SYLLABUS.findIndex(r => r.t === "Case Studies") + 1}|pyq"`],
+       [siteStats().concepts, "concept notes behind them", `data-view="syllabus"`]])}
 
-    <div class="pyq-tabs">
+    <div class="home">
+    ${pyqGuideHTML([
+      ["chart",    "The bar",       `How many of the ${GS4_PYQ.length} questions the topic holds, against the largest`],
+      ["calendar", "The years",     `One cell for each paper, ${span}. Darker cells mark two or more questions`],
+      ["file",     "The questions", "Theory first, then case studies, newest first. Long cases fold after the opening"],
+      ["book",     "Concept notes", "The syllabus headings the topic draws on, one click away"]])}
+
+    <div class="pyq-tabs t-regions" role="group" aria-label="Arrange the questions">
       <button class="pyqtab on" data-pyq="theme">By topic</button>
       <button class="pyqtab" data-pyq="year">By year</button>
     </div>
@@ -2701,6 +2757,7 @@ function renderGS4PYQ(){
       <p class="pyq-note">The papers as they were set. The label under each question is its topic
          &mdash; click it to jump there.</p>
       ${byYear}
+    </div>
     </div>
   </section>`;
 }
@@ -3179,6 +3236,14 @@ document.addEventListener("click", e => {
     closeSheet();
     state.view = "work:" + id + (title ? ":" + title : "");
     render();
+    return;
+  }
+
+  const pgo = e.target.closest("[data-pyqgo]");
+  if (pgo) {
+    const box = pgo.closest(".pyq");
+    box.querySelector(`.pyqtab[data-pyq="${pgo.dataset.pyqgo}"]`).click();
+    box.querySelector(".pyq-tabs").scrollIntoView({ behavior:"smooth", block:"start" });
     return;
   }
 
