@@ -5430,5 +5430,917 @@ const GUIDES = {
    "stepsIntro": "Use the following sequence when a question concerns the individual and society, majority and minority, or impartiality.",
    "formula": "Pursue the common good without treating any person as a resource. Limit liberty only to prevent harm, compensate and protect those who bear public costs, safeguard minorities, and judge every claim on its merits, whoever makes it."
   }
+ ],
+ "Democracy, the State and India in the World": [
+  {
+   "thinkers": [
+    [
+     "Gandhi",
+     "reading and disciplining a public mood",
+     [
+      "A line often credited to Gandhi, though it goes back to the French politician Ledru-Rollin in 1848, says that a leader must follow the passing crowd because he is its leader. The line reads better as theory than as a joke.",
+      "Gandhi’s own leadership worked by reading a public mood, giving it a disciplined form, and withdrawing when that discipline broke. Suspending the Non-Cooperation Movement after Chauri Chaura in 1922 was the costliest instance. Consent was the source of his authority, and his judgment was what that consent was placed in."
+     ],
+     "the answer needs an example of leadership that follows the people and still disciplines their direction."
+    ],
+    [
+     "Barnard",
+     "authority conferred by acceptance",
+     [
+      "Chester Barnard gave the idea an administrative structure. Authority, in his account, does not come down from a position. Authority is conferred by acceptance: an instruction is authoritative only if the person receiving it treats it as such.",
+      "The executive’s real work is securing the cooperation that makes acceptance routine. What Barnard called the zone of indifference widens with trust and narrows with every order that seems arbitrary."
+     ],
+     "the question concerns authority in organisations, or why orders fail without trust."
+    ],
+    [
+     "Habermas",
+     "decisions that survive explanation",
+     [
+      "Jürgen Habermas supplied the democratic test. Legitimacy comes from discussion in which those affected can question any claim without being coerced.",
+      "A decision is therefore authoritative to the degree that it could survive being explained. A leader who cannot give reasons that others could accept has power, but not legitimacy."
+     ],
+     "the answer needs a test of democratic legitimacy."
+    ],
+    [
+     "Mandela",
+     "leading by restraint",
+     [
+      "Nelson Mandela is the working example. As President he kept many of his predecessors’ officials, formed a Government of National Unity and served a single term.",
+      "Mandela led by showing restraint where his mandate allowed domination. His authority grew because his opponents could see that he would not use it against them."
+     ],
+     "the question needs an example of inclusive leadership after conflict."
+    ],
+    [
+     "Tocqueville",
+     "the danger of soft despotism",
+     [
+      "Alexis de Tocqueville completed the picture from the other side. He warned that democracy can produce a soft despotism. A benevolent power provides for citizens while gradually relieving them of the trouble of thinking for themselves.",
+      "The warning applies to leaders who follow the people only to manage them. A leader who makes citizens dependent has weakened the very consent on which democratic authority rests."
+     ],
+     "the answer needs to warn against paternalism or dependence in democratic leadership."
+    ],
+    [
+     "Nehru",
+     "explaining decisions across a federation",
+     [
+      "Jawaharlal Nehru wrote fortnightly letters to the chief ministers of the states for most of his sixteen years as Prime Minister. The letters were not formal consultation and carried no legal authority.",
+      "The letters built a shared understanding of why decisions were being taken, across a federation that could easily have fragmented. Nehru’s practice shows leadership as continuous explanation."
+     ],
+     "the question concerns communication, federalism or building shared understanding."
+    ]
+   ],
+   "examples": [
+    [
+     "Coalition politics and aggregated consent",
+     [
+      "A coalition leader cannot simply instruct. Agreement must be assembled before every significant decision, because any partner can withdraw and end the government. India’s coalition decades are therefore a natural test of what listening does to policy.",
+      "The output was slower and often less coherent. The output was also more consultative, since a proposal had to satisfy partners with different regional bases before it reached Parliament. One reading sees paralysis and small parties holding disproportionate leverage. Another sees a form of federal consent that single-party majorities do not need and therefore do not seek. Both readings are defensible, and an answer should choose deliberately."
+     ],
+     "Does the need for consent improve or paralyse decisions? Weigh consultation against coherence and speed."
+    ],
+    [
+     "Panchayati Raj and devolved authority",
+     [
+      "The 73rd and 74th Amendments, in force from 1993, gave panchayats and municipalities constitutional status, elections every five years, and reservation for women, Scheduled Castes and Scheduled Tribes. The Eleventh Schedule lists 29 subjects that states may devolve to panchayats.",
+      "The test of devolution is the three Fs: functions, funds and functionaries. Elections happen reliably, which is a real achievement. Devolution of funds and staff is uneven and largely at state discretion. The gram sabha is the only body in Indian government where citizens decide directly, and its powers are real chiefly where a state has chosen to make them so."
+     ],
+     "Does local leadership have real authority? Check functions, funds and functionaries."
+    ],
+    [
+     "Populism and the dismantling of institutions",
+     [
+      "The populist claim has a distinctive structure. The claim is not that the leader represents a majority, which is ordinary democratic politics. The claim is that the leader embodies the people directly, so anything standing between them is an obstruction.",
+      "Courts, a professional press, the permanent civil service, opposition parties and independent regulators then appear as elite interference. The sign is institutional posture rather than policy. Ask whether the leader argues that an institution decided wrongly, which is normal politics, or that it has no business deciding at all, which dismantles democracy."
+     ],
+     "Does the leader dispute an institution’s decision or its right to decide? Separate disagreement from dismantling."
+    ],
+    [
+     "Civil service neutrality and honest advice",
+     [
+      "Civil service neutrality is often misunderstood as having no view. Its actual content is narrower and harder. The officer must give honest advice, including advice the minister does not want, record it, and then implement the lawful decision faithfully.",
+      "Both halves are duties. An officer who suppresses an objection to stay in favour has failed, and so has an officer who obstructs a lawful decision. The incentives run one way, because contrary advice is remembered and transfers are discretionary. Security of tenure and a documented file are therefore the conditions of honest advice, not bureaucratic comforts."
+     ],
+     "Can advisers disagree with leaders safely? Look for recorded advice and protection from arbitrary transfer."
+    ],
+    [
+     "Crisis leadership and legitimacy recovered afterwards",
+     [
+      "Some decisions cannot wait for consent: an epidemic, a cyclone landfall or a run on a bank. Crisis leadership is the hardest case, because the procedures that produce legitimacy are exactly what the situation does not allow.",
+      "The resolution is that legitimacy is recovered afterwards rather than abandoned. Three conditions make recovery possible. The decision is taken under a defined legal power, it carries an expiry date, and its reasoning is disclosed once the emergency passes. Measures that meet none of these conditions may still be correct, but nobody can establish that they were."
+     ],
+     "How does a leader keep legitimacy when there is no time to consult? Look for legal basis, time limits and later disclosure."
+    ]
+   ],
+   "topics": [
+    [
+     "2026B4",
+     [
+      "The statement seems to reverse the usual idea of leadership. Yet in a democracy, a leader’s authority does come from those who follow. Barnard showed that authority is conferred by acceptance: an order works only if people accept it. Habermas held that decisions are legitimate only if they could survive explanation to those affected. Gandhi’s leadership read the public mood and gave it form, and Nehru explained his decisions in regular letters to chief ministers.",
+      "Following the followers does not mean obeying every mood. A leader who only follows polls is a weathervane, and a populist who claims to embody the people may dismantle the institutions through which they speak. Gandhi suspended the Non-Cooperation Movement after Chauri Chaura, against the wishes of many followers, because the movement had broken its discipline. Mandela restrained his supporters’ desire for retribution. Both followed their people’s deeper purpose rather than their immediate demand.",
+      "A good leader therefore follows the followers in two senses. The leader takes direction from their consent and their real interests, and keeps listening through institutions such as panchayats, a neutral civil service and a free press. The leader also supplies judgment, explains it, and accepts correction. Tocqueville warned that a leader who provides everything may make citizens dependent. The best leader follows the people towards their own capacity to govern themselves."
+     ]
+    ]
+   ],
+   "intro": [
+    "Leadership is often imagined as command: the leader decides and others follow. In a democracy, the relationship is more complicated. A leader’s authority comes from the consent of those led, yet a leader who only echoes the crowd provides no direction. The question is how a leader can follow the followers without becoming a weathervane, and how authority is earned, kept and lost."
+   ],
+   "claim": "Good democratic leadership rests on consent but supplies judgment. Followers authorise the direction, and the leader gives it a disciplined form, explains it, and withdraws when it goes wrong. Authority is conferred by acceptance, not by position, and it lasts only as long as decisions can survive being explained. A leader who supplies no judgment has not followed the people anywhere, and a leader who ignores them has become a ruler.",
+   "problem": [
+    "Two failures of leadership are common. The first is the leader who follows polls and moods, promising whatever is popular and avoiding every difficult choice. The second is the leader who claims to embody the people while dismantling the institutions through which they speak: courts, the press, the civil service and the opposition. Both claim to serve the people, and both betray them.",
+    "Democratic institutions add further complexity. Coalition leaders must assemble agreement before every decision. Civil servants must advise honestly and then implement lawful decisions they may dislike. In a crisis, there may be no time to consult at all. The challenge is to describe a leadership that listens without surrendering judgment, and that acts decisively without losing legitimacy."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "A weathervane follows the crowd and supplies no judgment. A ruler ignores the crowd and supplies only will. A democratic leader draws authority from consent and supplies judgment within it, and explains the judgment so that consent can be renewed."
+   ],
+   "thinkersTitle": "Six thinkers, six tests of leadership",
+   "together": [
+    "Putting the six together",
+    "Gandhi reads and disciplines public mood. Barnard shows that authority is conferred by acceptance. Habermas tests decisions by whether they survive explanation. Mandela leads through restraint. Tocqueville warns against making citizens dependent. Nehru shows leadership as continuous explanation. Together they explain how a good leader follows the followers without surrendering judgment."
+   ],
+   "examplesIntro": "The examples below show leadership by consent in coalitions and local government, its corruption in populism, its support in a neutral civil service and its hardest test in crisis. They are most useful when the answer asks how authority is renewed.",
+   "models": [
+    [
+     "Authority is conferred by acceptance.",
+     "Barnard showed that an instruction is authoritative only if those who receive it accept it. Trust widens the zone of acceptance, and arbitrary orders narrow it."
+    ],
+    [
+     "Legitimacy survives explanation.",
+     "Habermas held that a decision is legitimate if those affected could accept it after free discussion. A leader who cannot give acceptable reasons has power without legitimacy."
+    ],
+    [
+     "Following is not obeying.",
+     "Gandhi suspended the Non-Cooperation Movement after Chauri Chaura against the wishes of many followers. A good leader follows the people’s deeper purpose, not every passing demand."
+    ],
+    [
+     "Populism dismantles the channels of consent.",
+     "A leader who claims to embody the people treats courts, the press and the opposition as obstacles. Disputing an institution’s decision is politics. Denying its right to decide is dismantling."
+    ],
+    [
+     "Crisis legitimacy is recovered afterwards.",
+     "In an emergency, decisions must be taken under legal powers, with expiry dates and later disclosure. Legal basis, expiry and disclosure let citizens judge whether the decisions were right."
+    ]
+   ],
+   "steps": [
+    [
+     "Define democratic authority.",
+     "Explain that authority rests on consent and acceptance."
+    ],
+    [
+     "Distinguish the three types.",
+     "Separate the weathervane, the ruler and the democratic leader."
+    ],
+    [
+     "Use thinkers.",
+     "Bring in Barnard, Habermas and Gandhi."
+    ],
+    [
+     "Give Indian institutional examples.",
+     "Discuss coalitions, panchayats and civil service neutrality."
+    ],
+    [
+     "Warn against distortions.",
+     "Discuss populism and soft despotism."
+    ],
+    [
+     "Address crisis leadership.",
+     "Show how legitimacy is recovered after emergencies."
+    ],
+    [
+     "Conclude with judgment and consent.",
+     "Argue that good leaders listen, explain and supply judgment."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns leadership, authority or legitimacy.",
+   "formula": "Draw authority from consent, supply judgment within it, and explain every decision so that consent can be renewed. Protect the institutions through which people speak, and in a crisis act lawfully, for a limited time, and give reasons afterwards."
+  },
+  {
+   "thinkers": [
+    [
+     "Mill",
+     "silencing robs everyone",
+     [
+      "John Stuart Mill’s defence of free expression is the foundation, and it is an argument about error rather than rights. Silencing an opinion robs everyone. If the opinion is right, we lose the correction. If it is wrong, we lose the clearer grasp of truth that comes from defending against it.",
+      "On this reasoning, a biased press is not merely unpleasant. A biased press is dangerous, because it removes the mechanism by which a society discovers its own mistakes."
+     ],
+     "the answer needs a principled defence of free and plural media."
+    ],
+    [
+     "Orwell",
+     "the corruption of language",
+     [
+      "George Orwell described what replaces an honest press. His concern was not censorship alone but the corruption of language. Euphemism makes lying respectable, and a vocabulary can be built that prevents a thought from forming.",
+      "His observation that whoever controls the past controls the future applies directly to an information system in which the record is continuously revised and the archive is privately owned."
+     ],
+     "the question concerns propaganda, euphemism or the manipulation of public memory."
+    ],
+    [
+     "Habermas",
+     "the decay of the public sphere",
+     [
+      "Jürgen Habermas gave the institutional diagnosis. The public sphere emerged as a space where private people reasoned together about common affairs.",
+      "The public sphere decays when communication becomes a managed display of opinion produced for consumption rather than an exchange of arguments. Television debates designed for conflict are a modern example."
+     ],
+     "the answer needs to explain how media change from a forum of reasoning to a spectacle."
+    ],
+    [
+     "Ambedkar",
+     "hero-worship and judgment",
+     [
+      "Ambedkar warned the Constituent Assembly in 1949 that hero-worship in politics is a sure road to degradation and eventual dictatorship.",
+      "A media environment organised around a personality has no remaining capacity to evaluate a policy. Coverage that celebrates a leader cannot ask whether the leader’s decisions worked."
+     ],
+     "the question concerns personality politics, media and accountability."
+    ],
+    [
+     "Tagore",
+     "the critic’s voice must circulate",
+     [
+      "Tagore insisted that a society must be able to hear its critics. He returned his knighthood after the Jallianwala Bagh massacre in a public letter, and the act mattered because the letter could be printed.",
+      "A dissent that cannot circulate is a private feeling rather than a political fact. Nelson Mandela made the same point from office, defending a press that attacked his own government. A democracy without a critical press is a contradiction."
+     ],
+     "the answer needs an example of the value of dissent reaching the public."
+    ]
+   ],
+   "examples": [
+    [
+     "Ownership, advertising and cross-holdings",
+     [
+      "Editorial independence depends on the revenue model. Indian outlets rely heavily on advertising rather than subscriptions, and governments at central and state level are among the largest advertisers. The dependency works without any instruction being issued.",
+      "Cross-holdings add to the problem. Where a media group belongs to a conglomerate with interests in regulated sectors, coverage of the regulator affects the parent company. The useful question is not who is biased but who can afford to lose a particular advertiser. The answer predicts coverage better than any statement of editorial policy."
+     ],
+     "Who pays for the news, and what can the outlet afford to report? Look at advertising, ownership and cross-holdings."
+    ],
+    [
+     "Ratings and the economics of heat",
+     [
+      "A channel funded by advertising sells audience attention, and ratings set the price. The operative question becomes what holds viewers through the break, not what they need to know. Conflict formats deliver attention efficiently: a panel assembled for disagreement, a topic chosen for outrage and a presenter whose job is escalation.",
+      "The result is a market failure, not a moral failing of journalists. Careful reporting is expensive, slow and less watched, while studio argument is cheap and rates well. Appeals to responsibility will not survive the revenue model. Serious proposals concern ownership disclosure, ratings methods and funding for public-interest journalism."
+     ],
+     "What does the business model reward? Separate individual responsibility from market incentives."
+    ],
+    [
+     "Who decides what is false",
+     [
+      "The 2023 amendment to the IT Rules allowed the government to create a fact-check unit. Its finding that content about the government was false or misleading would have required platforms to act, or lose their legal protection. In Kunal Kamra v Union of India, the Bombay High Court was split, and in September 2024 the deciding judge held the rule unconstitutional.",
+      "The objection was not that fact-checking is worthless. The objection was that the government was made the sole judge of the truth of statements about itself, with no appeal. Misinformation is real, but a remedy that makes the interested party the judge is not a remedy."
+     ],
+     "Who should decide what is false? Check whether the judge has an interest in the answer."
+    ],
+    [
+     "Internet shutdowns",
+     [
+      "India recorded 84 internet shutdowns in 2024, according to Access Now, the highest of any democracy and second in the world. Manipur accounted for 21, and Haryana and Jammu and Kashmir for 12 each. In Anuradha Bhasin v Union of India in 2020, the Supreme Court held that indefinite suspension is impermissible, and that orders must be reasoned, proportionate, reviewed and published.",
+      "The gap between the ruling and practice is the problem. Orders often go unpublished, which makes the legal remedy unusable, because a citizen cannot challenge an order they cannot see. A safeguard that depends on disclosure fails silently when disclosure does not happen."
+     ],
+     "Can citizens challenge a restriction on information? Look at whether orders are published and time-limited."
+    ],
+    [
+     "Vernacular and local reporting",
+     [
+      "Much of India’s most important journalism is not in English and not national. Vernacular newspapers carry district reporting that national outlets have largely abandoned. Community radio works at a scale where the audience knows the broadcaster. Digital outlets funded by subscriptions have grown because subscriptions remove the dependency that advertising creates.",
+      "The danger for local reporters is different. A district reporter is often poorly paid, working on a stringer contract without institutional protection, and is physically reachable by anyone displeased. National coverage is shaped by revenue. Local coverage is shaped by proximity, which is more dangerous for the individual reporter."
+     ],
+     "Where does independent reporting survive, and who protects it? Consider revenue models and the safety of local journalists."
+    ]
+   ],
+   "topics": [
+    [
+     "2019B3",
+     [
+      "Democracy depends on citizens who know what is happening and can hear competing arguments. Elections aggregate preferences, and courts settle disputes, but neither tells citizens what their government is doing. The media perform that function. Mill argued that silencing any view robs everyone of the chance to correct error. A biased media system removes that chance and leaves a democracy unable to see its own mistakes.",
+      "In India, bias is mostly structural. Dependence on advertising, including government advertising, cross-holdings with regulated businesses and ratings incentives shape coverage without any order being issued. Habermas described how the public sphere decays into a managed spectacle, and television debates built for outrage fit the description. Ambedkar warned that hero-worship degrades politics, and media built around a personality cannot evaluate policy. Internet shutdowns and proposals to let the government declare what is false add legal pressures.",
+      "The threat is real, but the response must be careful. Giving the state power to decide what is true, as the Kunal Kamra judgment recognised, can worsen the problem. Better remedies include disclosure of ownership, reform of ratings, support for subscription and public-interest journalism, protection for local reporters and published, time-limited shutdown orders. Tagore’s letter after Jallianwala Bagh mattered because it could be printed. A democracy stays healthy when criticism can circulate."
+     ]
+    ]
+   ],
+   "intro": [
+    "Citizens cannot see most of what their government does. They rely on newspapers, television, radio and digital platforms to learn what is happening and to hear arguments about it. When the media inform accurately and allow disagreement, democracy can correct its mistakes. When the media become biased or captured, citizens vote, protest and judge on a distorted picture. The question is why biased media threaten democracy, and what makes media biased."
+   ],
+   "claim": "A free and plural media is democracy’s nervous system: it carries information and criticism that no other institution supplies. Bias becomes a threat not because it is unusual but because a public that hears only one account cannot correct anything, including that account. Bias today is mostly structural, produced by revenue models, ownership and incentives rather than by orders. Remedies must address those structures while protecting independent reporting.",
+   "problem": [
+    "Every outlet has a perspective, and some bias is unavoidable. The danger arises when a media system as a whole leans one way, excludes inconvenient facts or replaces reporting with managed spectacle. Elections then aggregate preferences formed on partial information, and courts cannot supply what citizens were never told.",
+    "The causes are often invisible. Advertising revenue, government advertising budgets, cross-holdings with other businesses, ratings incentives and legal pressures shape coverage without anyone issuing an instruction. The remedies also carry risks. When a government claims the power to declare what is false, the cure can be worse than the disease. The challenge is to strengthen independent reporting without handing control of truth to the powerful."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Perspective is the angle every account takes and can be answered by other accounts. Structural bias is a system in which some accounts cannot be afforded, printed or heard. Democracy can live with the first. The second removes its capacity to correct itself."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of an informed public",
+   "together": [
+    "Putting the five together",
+    "Mill shows that silencing any view harms everyone. Orwell shows how language and memory are corrupted. Habermas explains how the public sphere decays into spectacle. Ambedkar warns against media built around personality. Tagore shows that dissent matters only if it can circulate. Together they explain why biased media threaten democracy."
+   ],
+   "examplesIntro": "The examples below show the structural causes of bias, the risks in regulating truth, the use of shutdowns and the places where independent reporting survives. They are most useful when the answer asks who can afford to report what.",
+   "models": [
+    [
+     "A free press lets democracy correct itself.",
+     "Mill argued that silencing any opinion robs everyone of correction or clarity. A biased media system removes the mechanism by which a society discovers its errors."
+    ],
+    [
+     "Bias is often structural.",
+     "Dependence on advertising, including government advertising, and cross-holdings with regulated businesses shape coverage without any instruction. The question is who can afford to lose which advertiser."
+    ],
+    [
+     "Spectacle replaces reasoning.",
+     "Habermas described the public sphere decaying into a managed display of opinion. Ratings reward conflict formats over careful reporting."
+    ],
+    [
+     "The interested party cannot judge truth.",
+     "In Kunal Kamra in 2024, the Bombay High Court struck down a rule that let the government decide what was false about itself. Remedies for misinformation must not hand truth to the powerful."
+    ],
+    [
+     "Dissent must circulate.",
+     "Tagore’s letter returning his knighthood mattered because it could be printed. A criticism that cannot reach the public is a private feeling, not a political fact."
+    ]
+   ],
+   "steps": [
+    [
+     "Explain the media’s democratic function.",
+     "Show why no other institution tells citizens what is happening."
+    ],
+    [
+     "Define bias carefully.",
+     "Separate perspective from structural bias."
+    ],
+    [
+     "Identify structural causes.",
+     "Discuss advertising, ownership and ratings."
+    ],
+    [
+     "Examine legal pressures.",
+     "Use the IT Rules case and internet shutdowns."
+    ],
+    [
+     "Show the decay of debate.",
+     "Use Habermas and Orwell."
+    ],
+    [
+     "Point to resilience.",
+     "Discuss vernacular, local and subscription-funded journalism."
+    ],
+    [
+     "Conclude with careful remedies.",
+     "Recommend structural reforms that do not give the state control of truth."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns the media, bias or democracy.",
+   "formula": "Protect a plural media by fixing the structures that produce bias: revenue, ownership, ratings and legal pressure. Never let the interested party decide what is true, and make sure criticism can circulate, because democracy corrects itself only through what its citizens can see and hear."
+  },
+  {
+   "thinkers": [
+    [
+     "Tagore",
+     "against the nation as machine",
+     [
+      "Tagore’s objection to nationalism is the sharpest Indian starting point, and it is often misread. He was not indifferent to freedom. He opposed the nation understood as an organised political machine that demands uniformity.",
+      "Tagore argued that India’s genius had been the accommodation of difference rather than its resolution. On his account, plural identity is not a problem the state must manage. Plural identity is the material the society is made of."
+     ],
+     "the answer needs a critique of uniform nationalism or a defence of cultural plurality."
+    ],
+    [
+     "Nehru",
+     "the palimpsest and secular neutrality",
+     [
+      "Nehru gave the idea a historical form with his image of India as a palimpsest, in which layer is written upon layer and none wholly erases what came before.",
+      "His insistence that secularism means state neutrality rather than irreligion followed from the same idea. A state that belongs to no single faith can belong to all."
+     ],
+     "the question concerns secularism, composite culture or Indian history."
+    ],
+    [
+     "Azad",
+     "composite nationhood from within faith",
+     [
+      "Maulana Abul Kalam Azad argued from inside a religious tradition. He held that composite nationhood was a principled position, not merely a political convenience.",
+      "His opposition to partition rested on the conviction that Hindus and Muslims shared a common Indian inheritance. Azad shows that pluralism can be defended from within religion, not only against it."
+     ],
+     "the answer needs an Indian Muslim voice for composite nationalism."
+    ],
+    [
+     "Ambedkar",
+     "a society still to be made",
+     [
+      "Ambedkar provides the necessary corrective, and an answer that leaves him out is sentimental. He doubted that Indian society was a society at all, calling it a collection of castes without a shared sense of kinship.",
+      "He located unity in constitutional guarantees rather than cultural inheritance. The cultural weave contains hierarchy, and it is the constitutional layer that gives the person at the bottom a claim."
+     ],
+     "the question needs to acknowledge caste hierarchy within plural culture, or the role of the Constitution in unity."
+    ],
+    [
+     "Gandhi",
+     "coexistence performed daily",
+     [
+      "Gandhi supplied the everyday mechanism that theory needs. His prayer meetings included readings from several religious traditions. His fasts against communal violence, including in Calcutta in 1947, treated coexistence as something performed continuously rather than declared once.",
+      "For Gandhi, unity was a practice, renewed by each community’s conduct towards the other."
+     ],
+     "the answer needs an example of practical work for communal harmony."
+    ],
+    [
+     "Aurobindo",
+     "unity through variety",
+     [
+      "Sri Aurobindo took the longer view. He argued that Indian civilisation typically absorbed what arrived rather than eliminating it, and that its unity was expressed through variety rather than in spite of it.",
+      "The claim is generous about the past. The claim is not a description of how the past treated everyone living inside it, which is why Ambedkar’s corrective is needed alongside it."
+     ],
+     "the question concerns civilisational continuity or unity in diversity."
+    ]
+   ],
+   "examples": [
+    [
+     "Federalism, linguistic states and the Sixth Schedule",
+     [
+      "India’s answer to diversity was to build accommodation into its institutions. Linguistic reorganisation from 1956 redrew states so that a language community would not have to fight for standing where it was permanently outnumbered.",
+      "The Sixth Schedule went further for tribal areas of the north-east. The Schedule created autonomous district councils with authority over land, forests, inheritance and customary law, on the reasoning that some communities need a protected sphere, not only representation. Unity was pursued by conceding difference institutionally rather than by requiring assimilation."
+     ],
+     "How can institutions accommodate difference? Look at federal design and autonomy for distinct communities."
+    ],
+    [
+     "Minority rights under Articles 29 and 30",
+     [
+      "Article 29 protects the right of any section of citizens with a distinct language, script or culture to conserve it. Article 30 gives religious and linguistic minorities the right to establish and administer educational institutions.",
+      "The design logic is that a majority can preserve its culture through ordinary democratic means, while a minority cannot. In T. M. A. Pai Foundation v State of Karnataka in 2002, an eleven-judge bench held that regulation for excellence is allowed, while regulation that destroys an institution’s character is not. The line has been litigated ever since."
+     ],
+     "How should the state protect minority cultures? Balance autonomy with public standards."
+    ],
+    [
+     "The three-language formula",
+     [
+      "The three-language formula, framed in the 1960s, asked each region to teach three languages so that the burden of learning across the linguistic divide would be shared. In practice it was one-sided. Hindi-speaking states rarely took up a southern language, while non-Hindi states were asked to add Hindi to their own language and English.",
+      "Tamil Nadu’s refusal, dating back to agitations in the 1930s and 1960s, has rested on that asymmetry. NEP 2020 keeps a three-language structure while stating that no language will be imposed. The unresolved question is not how many languages are taught, but who must learn whose."
+     ],
+     "Is the policy shared or imposed? Ask who bears the burden of learning."
+    ],
+    [
+     "Internal migration and regional identity",
+     [
+      "India has hundreds of millions of internal migrants, and their movement produces friction the Constitution anticipated. Article 19 guarantees the right to move and reside anywhere in India. Regional movements have periodically demanded job preference for local people.",
+      "Migration lets workers from poorer regions reach higher wages elsewhere, and it also changes a region’s linguistic and cultural composition without anyone deciding it should. Domicile-based reservation in private jobs has repeatedly run into constitutional difficulty, because a right to move without a right to work where one moves is not a real right to move."
+     ],
+     "How can regional identity coexist with national mobility? Weigh local claims against the right to move."
+    ],
+    [
+     "SAARC and ASEAN: culture is not enough",
+     [
+      "South Asia shares language families, cuisine, religions and history more deeply than Southeast Asia does, yet it is one of the least economically integrated regions in the world. Trade within the region is about five per cent of members’ total trade, against roughly a quarter within ASEAN.",
+      "SAARC has not held a summit since 2014. The 2016 summit collapsed after India withdrew following the Uri attack. SAARC contains one member larger than all the others combined, and its charter requires unanimity. ASEAN has no dominant member and proceeds by gradual consensus. Cultural affinity does not substitute for a workable decision rule."
+     ],
+     "Does shared culture produce cooperation? Compare cultural ties with institutional design."
+    ]
+   ],
+   "topics": [
+    [
+     "2019B1",
+     [
+      "South Asian societies existed long before modern states. Communities, languages, religions and trade networks wove a social fabric across shifting political borders. Tagore argued that India’s genius lay in accommodating difference, and Nehru described India as a palimpsest of layers that never wholly erased one another. Azad defended a composite nationhood grounded in shared inheritance. The statement captures this truth: people’s everyday loyalties are often to language, faith, region and community before the state.",
+      "The plural weave is also why attempts at uniformity have caused conflict. Language agitations and ethnic struggles in the region show that a state imposing one identity weakens itself. India’s constitutional answer was to accommodate difference through linguistic states, the Sixth Schedule and minority rights. Gandhi’s prayer meetings and fasts showed coexistence as a daily practice.",
+      "The statement must be qualified. The plural cultures of South Asia contain hierarchy, as Ambedkar insisted, and a woven society can still leave some at the bottom without rights. Constitutional guarantees give them a claim that culture alone does not. Shared culture also does not guarantee cooperation, as SAARC’s weakness shows. South Asian societies are woven around plural cultures, but a just and stable weave needs the state to protect every thread."
+     ]
+    ]
+   ],
+   "intro": [
+    "South Asia is one of the most diverse regions in the world. Languages, religions, castes, tribes and regional cultures overlap and interweave. States in the region have often tried to create unity through a single language, religion or identity, sometimes with violent results. The question is what actually holds such societies together, and whether the state or the plural culture is the stronger thread."
+   ],
+   "claim": "South Asian societies are held together more by plural cultures and overlapping identities than by the state alone. The weave of shared practices, exchange and coexistence is durable because it does not depend on one authority. Yet the weave also contains hierarchy, and it is the constitutional layer, with its rights and institutions, that gives the person at the bottom a claim. Durable unity needs both the cultural weave and constitutional guarantees.",
+   "problem": [
+    "Modern states often seek unity through uniformity. A single national language, a dominant religion or a standard culture can seem the quickest way to build a nation. In diverse societies, such projects provoke resistance and conflict, as language agitations and ethnic struggles in the region have shown.",
+    "Yet celebrating plurality can also mislead. Cultural traditions contain caste hierarchy, gender inequality and exclusion. A society woven around plural cultures may still leave many at the bottom without rights. The challenge is to protect diversity while ensuring that plural culture does not become an excuse for inequality, and to design institutions that accommodate difference without dividing the nation."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Unity through uniformity requires everyone to share one identity. Unity through accommodation lets many identities coexist within shared institutions. India’s constitutional settlement chose the second, and it is better described as an arrangement between communities than as a single national identity."
+   ],
+   "thinkersTitle": "Six thinkers, six tests of plural unity",
+   "together": [
+    "Putting the six together",
+    "Tagore opposes the uniform nation. Nehru describes layered history and secular neutrality. Azad defends composite nationhood from within faith. Ambedkar warns that plural culture contains hierarchy and grounds unity in the Constitution. Gandhi shows coexistence as daily practice. Aurobindo sees unity expressed through variety. Together they explain why plural culture holds society together, and why constitutional rights must protect those at the bottom."
+   ],
+   "examplesIntro": "The examples below show how India built pluralism into institutions, where the arrangement is contested, and why shared culture alone does not produce regional cooperation. They are most useful when the answer asks how difference is accommodated.",
+   "models": [
+    [
+     "Plural culture is the fabric of society.",
+     "Tagore argued that India’s genius was the accommodation of difference. Plural identity is not a problem to be managed but the material of which the society is made."
+    ],
+    [
+     "Accommodation, not uniformity.",
+     "Linguistic states, the Sixth Schedule and minority rights built difference into India’s institutions. Unity was pursued by conceding difference rather than demanding assimilation."
+    ],
+    [
+     "Culture contains hierarchy.",
+     "Ambedkar called Indian society a collection of castes and located unity in constitutional guarantees. The cultural weave needs rights to protect those at the bottom."
+    ],
+    [
+     "Coexistence must be practised.",
+     "Gandhi’s prayer meetings and fasts against communal violence treated harmony as something performed daily, not declared once."
+    ],
+    [
+     "Shared culture does not ensure cooperation.",
+     "South Asia shares deep cultural ties yet trades far less within the region than ASEAN. Institutions and decision rules matter as much as affinity."
+    ]
+   ],
+   "steps": [
+    [
+     "Describe the plural weave.",
+     "Use Tagore, Nehru and Aurobindo."
+    ],
+    [
+     "Contrast uniformity and accommodation.",
+     "Explain India’s constitutional choice."
+    ],
+    [
+     "Give institutional examples.",
+     "Use linguistic states, the Sixth Schedule and Articles 29 and 30."
+    ],
+    [
+     "Show contested areas.",
+     "Discuss language policy and internal migration."
+    ],
+    [
+     "Bring in the corrective.",
+     "Use Ambedkar on hierarchy and constitutional guarantees."
+    ],
+    [
+     "Look at the region.",
+     "Use SAARC and ASEAN."
+    ],
+    [
+     "Conclude with culture and constitution together.",
+     "Argue that plural culture and constitutional rights sustain unity together."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns diversity, identity or national unity.",
+   "formula": "Build unity by accommodating difference rather than demanding uniformity. Let the plural cultural weave hold society together, and let constitutional rights protect every person within it, especially those the weave has placed at the bottom."
+  },
+  {
+   "thinkers": [
+    [
+     "Kautilya",
+     "a doctrine for the weaker party",
+     [
+      "Kautilya’s Arthashastra was written for a state surrounded by stronger neighbours. His mandala theory arranges the world in circles of interest. The immediate neighbour is a natural rival, and the neighbour’s neighbour is a natural ally.",
+      "His sixfold policy of peace, war, neutrality, preparation, alliance and dual policy is chosen according to relative strength, not sentiment. His fourfold means put conciliation and inducement before division and force, because force is the most expensive and least reliable instrument. The doctrine still reads as contemporary because it was written for the weaker party."
+     ],
+     "the answer needs an Indian framework for foreign policy and strategic choice."
+    ],
+    [
+     "Nehru",
+     "non-alignment and its limits",
+     [
+      "Nehru applied Kautilya’s logic to a world divided into two blocs. Non-alignment refused bloc membership in order to keep the freedom to decide each issue on its merits.",
+      "The war with China in 1962 is the honest evidence that autonomy without capability is a posture rather than a policy. Nehru’s legacy is the goal of strategic autonomy. His lesson is that the goal needs military and economic strength."
+     ],
+     "the question concerns non-alignment, strategic autonomy or the lessons of 1962."
+    ],
+    [
+     "Patel",
+     "negotiation backed by force",
+     [
+      "Sardar Patel supplied the counterweight. The integration of the princely states combined negotiation with the clear availability of force.",
+      "Hyderabad in 1948 shows what the combination achieved that neither element could have achieved alone. Patel’s approach shows that diplomacy works best when the other side knows the alternative."
+     ],
+     "the answer needs an example of combining diplomacy with credible strength."
+    ],
+    [
+     "Machiavelli",
+     "neutrality without leverage",
+     [
+      "Niccolò Machiavelli warned weaker states directly. A prince who allows two stronger neighbours to fight over his ground will find that the winner’s victory is his own defeat.",
+      "Neutrality without leverage buys nothing. A weak state that stays out of a conflict may still be crushed by its result."
+     ],
+     "the question concerns small states caught between great powers."
+    ],
+    [
+     "Gandhi",
+     "what a nation is willing to endure",
+     [
+      "Gandhi’s contribution should not be dismissed as naive. He argued that a nation’s strength lies in what it is willing to endure rather than in what it can inflict. A settlement imposed by force must be maintained by force indefinitely.",
+      "As a complete strategy, the view has limits. As an explanation of why occupations end and why borders stay disputed for decades, it is uncomfortably accurate."
+     ],
+     "the answer needs to explain why imposed settlements fail, or the moral dimension of conflict."
+    ]
+   ],
+   "examples": [
+    [
+     "Strategic autonomy and issue-based alignment",
+     [
+      "India’s position is best described as issue-based alignment rather than neutrality. India participates in the Quad with the United States, Japan and Australia, while continuing defence and energy relations with Russia. India declines to join blocs that would require choosing.",
+      "The doctrine continues non-alignment’s refusal to subordinate national judgment to an alliance. The cost must be stated. Autonomy of this kind is available only to a state large enough that partners tolerate ambiguity. Autonomy also requires constant renegotiation and gives up the security guarantees an alliance provides."
+     ],
+     "Can a state keep its options open without alliances? Weigh flexibility against the absence of guarantees."
+    ],
+    [
+     "India’s border disputes",
+     [
+      "Border disputes persist because settlement requires a government to formally concede something, which is costly at home even when the practical arrangement is stable. Along the Line of Actual Control with China, the boundary is not jointly mapped, so patrols operate on different perceptions, and infrastructure on either side changes facts on the ground.",
+      "Sir Creek, with Pakistan, is a tidal channel where the boundary decides a maritime zone far beyond the creek. Kachchatheevu, ceded to Sri Lanka by agreement in 1974, still produces friction over fishing access. The three disputes are sustained less by their substance than by the political cost of closing them."
+     ],
+     "Why do border disputes last? Separate the substance of the dispute from the political cost of settlement."
+    ],
+    [
+     "Neighbourhood First and the view from smaller states",
+     [
+      "Neighbourhood First rests on a sound premise: a stable and prosperous neighbourhood serves India better than a weak one. The policy keeps meeting the same difficulty. India’s size means that its help and its interests are read unevenly. What Delhi sees as support, a smaller neighbour may see as management.",
+      "Relations with Nepal, the Maldives and Sri Lanka have cycled through cooperation and resentment, often with an election as the trigger. Alternatives now exist, so a neighbour dissatisfied with India’s terms can seek Chinese finance. The policy question is the speed and conditions of delivery, not the intent."
+     ],
+     "How does a large neighbour avoid being the elephant? Look at delivery, respect and the alternatives available to smaller states."
+    ],
+    [
+     "Supply chains as modern asymmetry",
+     [
+      "Formal sovereignty coexists with practical dependence wherever a state cannot make, repair or replace what its economy runs on. Semiconductors are the clearest case. A handful of firms and countries control advanced chip manufacturing and the equipment needed for it.",
+      "The India Semiconductor Mission, approved in December 2021, targets assembly, testing and a first commercial fabrication plant at a mature node, which is a strategy of supply security rather than frontier leadership. The same point applies to pharmaceutical ingredients, rare earths and specialised machinery. Leverage now lies less in territory than in position within production chains."
+     ],
+     "Where does modern dependence lie? Identify the goods a country cannot make or replace."
+    ],
+    [
+     "Small states that played asymmetry well",
+     [
+      "Singapore and Vietnam are standing examples of small states that turned position into leverage. Singapore made itself indispensable: a port and financial centre whose functioning benefits everyone, backed by credible defence spending and a diplomacy that takes positions on rules rather than sides.",
+      "Vietnam diversified. Vietnam normalised relations with the United States while keeping ties with China and Russia, and made itself valuable to supply chains seeking alternatives. The common element is not neutrality. Both built specific capabilities, so partners had positive reasons to include them, and both avoided dependence on any single relationship."
+     ],
+     "How can a small state avoid being trampled? Show how usefulness and diversification create leverage."
+    ]
+   ],
+   "topics": [
+    [
+     "2026A4",
+     [
+      "The proverb describes a hard truth of international politics. When great powers compete, smaller states and ordinary people pay the cost: trade disrupted, neighbours pressured to choose sides and conflicts fought on others’ ground. Machiavelli warned that a weak state which lets two stronger neighbours fight over it will find that the winner’s victory is its own defeat. Neutrality without leverage buys nothing.",
+      "Yet a state is not grass. Kautilya’s Arthashastra was written for a state surrounded by stronger neighbours, and its sixfold policy gives the weaker party choices. Singapore made itself indispensable, and Vietnam diversified its partnerships. India’s issue-based alignment, working with the Quad while keeping ties with Russia, is an attempt to avoid being trampled by any single rivalry. Nehru’s experience in 1962 shows that such autonomy needs capability behind it.",
+      "The proverb also carries a lesson for India as a large power in its own neighbourhood. To Nepal, Sri Lanka and the Maldives, India can appear as the elephant. Gandhi’s insight that imposed settlements must be maintained by force applies here too. The better course is to be the kind of large neighbour whose strength protects the grass rather than tramples it: reliable, respectful and quick to deliver."
+     ]
+    ],
+    [
+     "2018A4",
+     [
+      "India’s borders are among the most complex in the world. The Line of Actual Control with China has never been jointly mapped, so patrols operate on different perceptions, and infrastructure building changes facts on the ground. The boundary with Pakistan includes the Line of Control and disputes such as Sir Creek, where the land boundary decides a large maritime zone. Even settled arrangements, such as Kachchatheevu with Sri Lanka, produce friction over fishing.",
+      "The difficulty is political as much as geographical. Settlement requires a government to concede something formally, which is costly at home even when the practical situation is stable. Gandhi’s insight that settlements imposed by force must be maintained by force explains why disputes last for decades. Kautilya’s advice to prefer conciliation and inducement before force applies directly to border management.",
+      "Management therefore combines several tools. Capability, including border infrastructure and military preparedness, prevents unilateral change. Confidence-building measures and agreed patrol arrangements reduce the risk of clashes. Local livelihoods, such as fishing, need practical arrangements that do not wait for final settlement. Patel’s method of negotiation backed by strength remains relevant. Border management is complex because it must keep peace, protect territory and preserve options at once."
+     ]
+    ]
+   ],
+   "intro": [
+    "When great powers compete, smaller states and ordinary people often bear the cost. Wars are fought on their territory, sanctions disrupt their trade and rivalries divide their neighbourhoods. India itself sits between powerful rivals and manages long, disputed borders. The question is how weaker states can protect themselves in a world of stronger ones, and why border disputes are so difficult to settle."
+   ],
+   "claim": "When two elephants fight, the grass is trampled, but a state is not grass: it has options. Weaker states can build capability, make themselves expensive to trample, become useful to many partners and keep more than one door open. Border disputes persist less because of their substance than because settlement requires a government to concede something publicly. Managing them requires strength, patience and stable arrangements that do not depend on final resolution.",
+   "problem": [
+    "Great power rivalry can impose costs on those who did not choose it. Supply chains are disrupted, neighbours are pressured to take sides, and conflicts spill over borders. Neutrality offers little protection without leverage, and alignment can bring dependence. Smaller states face a choice among bad options.",
+    "India faces both sides of the problem. India is a large power to its smaller neighbours and a smaller power beside China. Its borders with China and Pakistan remain disputed, and its neighbourhood relations cycle between cooperation and resentment. The challenge is to protect national interests amid rivalry, to manage borders without war, and to treat smaller neighbours in ways that do not make India the elephant they fear."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "A posture is a declared position, such as non-alignment or neutrality. A policy is a position backed by the capability to sustain it. Autonomy without capability is a posture, as 1962 showed."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of statecraft",
+   "together": [
+    "Putting the five together",
+    "Kautilya gives the weaker party a doctrine of choices. Nehru shows the value and limits of autonomy. Patel shows negotiation backed by strength. Machiavelli warns that neutrality without leverage fails. Gandhi explains why imposed settlements do not last. Together they show that a state caught between elephants has options, if it builds the capability to use them."
+   ],
+   "examplesIntro": "The examples below show India’s strategic choices, its border disputes, its neighbourhood relations, modern dependencies and the lessons of small states. They are most useful when the answer asks what gives a state leverage.",
+   "models": [
+    [
+     "A state is not grass.",
+     "When great powers fight, the weak suffer, but states have options. Kautilya’s sixfold policy gives the weaker party a range of choices based on relative strength."
+    ],
+    [
+     "Autonomy needs capability.",
+     "Nehru’s non-alignment preserved freedom of choice, but 1962 showed that autonomy without military and economic strength is only a posture."
+    ],
+    [
+     "Neutrality without leverage fails.",
+     "Machiavelli warned that a weak state standing aside while stronger neighbours fight will lose whoever wins. Leverage must be built, not assumed."
+    ],
+    [
+     "Borders persist because settlement is costly.",
+     "The LAC, Sir Creek and Kachchatheevu disputes last because a government must concede something publicly. Stable practical arrangements can reduce conflict without final settlement."
+    ],
+    [
+     "Usefulness creates leverage.",
+     "Singapore and Vietnam made themselves valuable to many partners. Small states avoid being trampled by building capabilities others need and avoiding single dependence."
+    ]
+   ],
+   "steps": [
+    [
+     "Describe the asymmetry.",
+     "Explain the costs that great power rivalry imposes on others."
+    ],
+    [
+     "Present the strategic options.",
+     "Use Kautilya’s sixfold policy and fourfold means."
+    ],
+    [
+     "Show the need for capability.",
+     "Use Nehru and 1962, and Patel’s combination of negotiation and force."
+    ],
+    [
+     "Give Indian examples.",
+     "Discuss strategic autonomy, borders and Neighbourhood First."
+    ],
+    [
+     "Include modern dependence.",
+     "Discuss supply chains and semiconductors."
+    ],
+    [
+     "Learn from small states.",
+     "Use Singapore and Vietnam."
+    ],
+    [
+     "Conclude with India’s dual role.",
+     "Argue that India must resist being trampled and avoid trampling its neighbours."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns geopolitics, small states or border management.",
+   "formula": "Build capability, become useful to many partners and keep more than one door open, so that rivals find you expensive to trample. Manage borders with strength, patience and practical arrangements, and treat smaller neighbours as partners rather than grass."
+  },
+  {
+   "thinkers": [
+    [
+     "Ambedkar",
+     "constitutional morality must be cultivated",
+     [
+      "Ambedkar told the Constituent Assembly in November 1948 that constitutional morality is not a natural sentiment and has to be cultivated. He added that democracy in India was only a top-dressing on a soil that was essentially undemocratic.",
+      "His three warnings in the final address of 25 November 1949 remain a checklist. Abandon the grammar of anarchy in favour of constitutional methods. Refuse hero-worship. Make political democracy a social democracy too, because political equality cannot survive deep social inequality for ever."
+     ],
+     "the answer needs the Indian foundation of constitutional morality."
+    ],
+    [
+     "Montesquieu",
+     "power checking power",
+     [
+      "Montesquieu supplied the mechanism. In The Spirit of the Laws in 1748, he argued that the separation of powers works not because each branch is virtuous but because power is arranged to check power.",
+      "Liberty survives on structure rather than on the character of officeholders. Montesquieu explains why independence of appointments and fixed procedures matter."
+     ],
+     "the question concerns separation of powers, checks and balances or institutional design."
+    ],
+    [
+     "Rousseau",
+     "the general will",
+     [
+      "Jean-Jacques Rousseau named what structure cannot supply. The general will is not the sum of private interests. The general will is what citizens want when they think as members of a whole.",
+      "No institution can manufacture that disposition if citizens do not hold it. Structure can check power, but it cannot create public spirit."
+     ],
+     "the answer needs to show the limits of institutional design without civic virtue."
+    ],
+    [
+     "Tocqueville",
+     "habits of the heart",
+     [
+      "Alexis de Tocqueville located the answer in what he called the habits of the heart. Associations, local self-government, a free press and jury service make up the daily practice of self-rule.",
+      "Daily practice produces citizens rather than subjects. For Tocqueville, democracy lives in daily habits more than in its written charter."
+     ],
+     "the question concerns civic culture, participation or local democracy."
+    ],
+    [
+     "Jayaprakash Narayan",
+     "institutions reclaimed by citizens",
+     [
+      "Jayaprakash Narayan argued the same case in India. His call for total revolution in 1974, and his refusal of office, rested on the view that institutions not continuously reclaimed by citizens do not survive on paper alone.",
+      "His movement against corruption and the Emergency showed citizens acting to defend constitutional democracy when institutions failed."
+     ],
+     "the answer needs an Indian example of citizen action to defend democracy."
+    ],
+    [
+     "Mill",
+     "the danger of dwarfing citizens",
+     [
+      "John Stuart Mill completed the account at the end of On Liberty. A state that dwarfs its citizens to make them more docile instruments will find that with small men no great thing can be accomplished.",
+      "The machinery survives, and the capacity to use it does not. Constitutional morality is a habit that citizens hold on the document’s behalf, and no institution can supply it for them."
+     ],
+     "the question concerns the relation between citizen capacity and state power."
+    ]
+   ],
+   "examples": [
+    [
+     "The Speaker and the anti-defection law",
+     [
+      "The Tenth Schedule makes the Speaker the authority who decides whether a member has defected. The Speaker is usually a member of the governing party. The design flaw is timing as well as partiality. No deadline was written in, so a Speaker who does not decide leaves defectors voting as members until the term ends.",
+      "In Keisham Meghachandra Singh v Speaker, Manipur Legislative Assembly, in 2020, the Supreme Court said that petitions should ordinarily be decided within three months, and suggested that Parliament consider an independent tribunal. Neither step binds the discretion in question. A rule without a clock is a rule the holder can suspend by inaction."
+     ],
+     "Can the rule be defeated by delay? Look for deadlines and independent decision-makers."
+    ],
+    [
+     "Appointments to independent bodies",
+     [
+      "Independence is decided at appointment more than by tenure clauses. In Anoop Baranwal v Union of India in March 2023, a Constitution Bench ruled on how Election Commissioners are appointed. Until Parliament legislated, a committee of the Prime Minister, the Leader of the Opposition and the Chief Justice of India would advise.",
+      "Parliament then passed a law in 2023 that replaced the Chief Justice with a Union Minister nominated by the Prime Minister, giving the executive two of three votes. The same question arises for the Central Information Commission and the CBI. The test is whether the appointing body can produce an appointment the government does not want."
+     ],
+     "Can the appointing body choose someone the government would not? Examine who holds the majority on the selection committee."
+    ],
+    [
+     "Ordinances and money bills",
+     [
+      "Two provisions designed for narrow purposes have become general routes. The ordinance power exists so that a government can act when Parliament is not sitting. Re-issuing ordinances repeatedly turns a temporary tool into a way of legislating without a vote.",
+      "The money bill route exists so that the directly elected House controls taxation and spending. Certification as a money bill removes the Rajya Sabha’s power to amend. Where a bill with substantial non-financial content is certified as a money bill, a whole chamber is bypassed. The text is complied with while its purpose is defeated."
+     ],
+     "Is the power being used for its purpose? Compare the provision’s purpose with its use."
+    ],
+    [
+     "Governors and cooperative federalism",
+     [
+      "The Governor is appointed by the Union, holds office at its pleasure and exercises functions within a state. The Constitution manages the resulting tension mainly by convention. Friction arises over how long assent to a bill may be withheld, when a bill is reserved for the President, who is invited to form a government, and when the assembly is summoned.",
+      "The text says little about time limits, which is where discretion expands. Ambedkar expected the office to be largely ceremonial and restrained by convention. Where the state and Union governments are politically opposed, convention is exactly what erodes, and the disputes now reach the courts routinely."
+     ],
+     "What restrains an office when conventions weaken? Look for time limits and reasons."
+    ],
+    [
+     "RTI and social audit as everyday constitutional morality",
+     [
+      "The everyday form of constitutional morality is whether an ordinary person can find out what was decided about them and why. The Right to Information Act of 2005 made access to information a legal claim rather than a favour. Its strength depends on the independence of the information commissions, which is why the 2019 amendment giving the central government control over their tenure and salaries mattered.",
+      "Social audit under MGNREGA works on the same principle, requiring spending to be read out before the people it was meant for. Disclosure constrains power only where someone independent can compel it."
+     ],
+     "Can citizens find out what was decided and why? Check whether disclosure is enforceable by an independent body."
+    ]
+   ],
+   "topics": [
+    [
+     "practice",
+     [
+      "A constitution is a set of rules, but rules do not enforce themselves. Ambedkar warned that constitutional morality is not a natural sentiment and must be cultivated. Montesquieu arranged power to check power. Yet even the best arrangement depends on conventions the text does not spell out: a Speaker deciding petitions promptly, a Governor giving assent without delay, a government using ordinances only when Parliament cannot meet.",
+      "When habits weaken, the text can be observed while its purpose is defeated. Disqualification petitions can be left undecided, bills can be certified as money bills to bypass a chamber, and appointments can be controlled by the executive. Each step may be legal, and together they hollow out the checks the Constitution intended. Tocqueville located democracy in the habits of the heart, and Jayaprakash Narayan argued that citizens must continuously reclaim their institutions.",
+      "Structure still matters. Deadlines, independent appointments and enforceable disclosure make habits easier to keep and failures easier to see. The Right to Information Act and social audits show how citizens can hold officials to account between elections. A constitution survives when its rules are clear and its citizens and officeholders share the habit of using power for the purposes it was given."
+     ],
+     "Constitutions survive on habits, not on paper."
+    ],
+    [
+     "practice",
+     [
+      "Elections decide who holds power, but they do not decide how power is used between elections. Much of that depends on conventions: unwritten expectations that officeholders will act fairly, give reasons and respect other institutions. A Governor’s restraint, a Speaker’s neutrality and an executive’s respect for independent bodies are rarely enforceable in detail. They rely on habit and on public expectation.",
+      "Conventions are fragile when political rivalry is intense. Where the Union and a state are opposed, Governors’ discretion over bills and summoning becomes contested. Where a party holds a majority, appointments to the Election Commission can be shaped by the executive. Rousseau warned that institutions cannot create public spirit, and Mill warned that a state which weakens its citizens loses the capacity to use its own machinery.",
+      "The honesty of a republic between elections depends on three things. Rules must have clocks and independent enforcers, so that inaction cannot defeat them. Information must be available through RTI, social audit and a free press, so that citizens can notice when conventions are broken. Citizens must care enough to object. A republic stays honest when conventions are observed, and when their breach is seen and answered."
+     ],
+     "Between elections, a republic is only as honest as its conventions."
+    ]
+   ],
+   "intro": [
+    "A constitution sets out institutions and rules. Yet the written text cannot anticipate every situation, and many of its protections depend on how officeholders choose to behave. A Speaker can delay a decision, a Governor can sit on a bill, and a government can use emergency powers routinely. The question is what keeps a republic honest between elections, when the text is observed but its purpose may be defeated."
+   ],
+   "claim": "Constitutional morality is a habit, not a document. The separation of powers and written rules matter, but they depend on conventions that officeholders choose to observe and on citizens who notice when they stop. A rule without a clock can be suspended by inaction, an appointment controlled by the executive cannot produce independence, and a provision used beyond its purpose defeats the text while obeying it. Institutions survive only when citizens and officials cultivate the habits that make them work.",
+   "problem": [
+    "Democracies can decay without any formal breach of the constitution. Each step may be legal: an ordinance re-issued, a bill certified as a money bill, a disqualification petition left undecided, or an appointment made by a committee the government controls. Individually, each step can be defended. Together, they hollow out the checks the constitution was meant to provide.",
+    "The remedy cannot be more text alone, because any rule can be evaded by someone determined to evade it. Nor can it be trust in the virtue of officeholders, since power tempts everyone. The challenge is to combine structure, which arranges power to check power, with a public culture that expects conventions to be observed and holds officeholders to them."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Constitutional form is the text: the rules, powers and procedures. Constitutional morality is the habit of using those powers for the purposes they were given. The form can be observed while the morality drains away."
+   ],
+   "thinkersTitle": "Six thinkers, six tests of constitutional morality",
+   "together": [
+    "Putting the six together",
+    "Ambedkar shows that constitutional morality must be cultivated. Montesquieu arranges power to check power. Rousseau and Tocqueville show that structure needs civic spirit and daily habits. Jayaprakash Narayan shows citizens reclaiming institutions. Mill warns that a state which weakens its citizens loses the capacity to use its own machinery. Together they explain why constitutions survive on habits, not paper."
+   ],
+   "examplesIntro": "The examples below show ways the text can be observed while its purpose is defeated, and the everyday tools that keep constitutional morality alive. They are most useful when the answer asks whether a rule has a clock and an independent enforcer.",
+   "models": [
+    [
+     "Constitutional morality must be cultivated.",
+     "Ambedkar warned that constitutional morality is not a natural sentiment and that Indian democracy was a top-dressing on undemocratic soil. The habit of using power for its intended purpose must be built."
+    ],
+    [
+     "A rule without a clock can be suspended.",
+     "The Tenth Schedule set no deadline for the Speaker’s decision on defection. In 2020 the Supreme Court suggested three months and an independent tribunal. Deadlines turn discretion into duty."
+    ],
+    [
+     "Independence begins at appointment.",
+     "Anoop Baranwal in 2023 required a balanced committee for Election Commissioners. The 2023 law gave the executive two of three votes. An appointing body that the government controls cannot produce independence."
+    ],
+    [
+     "The text can be obeyed while its purpose is defeated.",
+     "Re-issued ordinances and bills certified as money bills comply with the Constitution’s words while bypassing its checks. Constitutional morality asks whether powers serve their purpose."
+    ],
+    [
+     "Citizens hold the habit.",
+     "Tocqueville located democracy in the habits of the heart, and RTI and social audit let citizens see decisions. A constitution survives when citizens notice and object when conventions break."
+    ]
+   ],
+   "steps": [
+    [
+     "Define constitutional morality.",
+     "Use Ambedkar to distinguish it from the text."
+    ],
+    [
+     "Explain structure.",
+     "Use Montesquieu on power checking power."
+    ],
+    [
+     "Show the limits of structure.",
+     "Use Rousseau, Tocqueville and Mill."
+    ],
+    [
+     "Give Indian examples of erosion.",
+     "Discuss anti-defection delays, appointments, ordinances and money bills."
+    ],
+    [
+     "Discuss federal conventions.",
+     "Use the role of Governors."
+    ],
+    [
+     "Show citizen tools.",
+     "Use RTI, social audit and Jayaprakash Narayan."
+    ],
+    [
+     "Conclude with habits and safeguards.",
+     "Recommend deadlines, independent appointments and an alert public."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns constitutional morality, institutions or democratic conventions.",
+   "formula": "Treat constitutional morality as a habit that officeholders and citizens must keep. Give every rule a clock and an independent enforcer, use every power for its intended purpose, and keep information open so that citizens can see and answer every breach."
+  }
  ]
 };

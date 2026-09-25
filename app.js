@@ -1892,13 +1892,16 @@ function guideHTML(t, i, x, g){
   const P = a => (a || []).map(y => `<p>${glossText(y)}</p>`).join("");
   const box = (lab, text, cls) => `<div class="gd-box ${cls || ""}"><b>${esc(lab)}</b><p>${glossText(text)}</p></div>`;
   const head = (n, title) => `<h6 class="gd-h" id="gd-${n}"><span>${n}</span>${esc(title)}</h6>`;
-  const tag = k => Q[k] ? `${Q[k].y} ${Q[k].s}${Q[k].n}` : k;
+  // a topic is a past question id, or ["practice", paras, statement] where a paragraph serves none
+  const tag = k => k === "practice" ? "Practice topic" : Q[k] ? `${Q[k].y} ${Q[k].s}${Q[k].n}` : k;
+  const past = g.topics.some(tp => tp[0] !== "practice");
+  const parts = past ? GD_PARTS : GD_PARTS.map((p, k) => k === 3 ? "Practice topics" : p);
   const nw = n => ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven"][n] || n;
   return `
     <article class="ans sm-pane gd">
       <h5><span class="ans-no">${i + 1}</span>${esc(x.h)}</h5>
       <p class="ans-for">A revision and answer-building guide. ${esc(x.s || "")}</p>
-      <nav class="atl-jump gc-jump" aria-label="Parts of this guide">${GD_PARTS.map((p, k) => `
+      <nav class="atl-jump gc-jump" aria-label="Parts of this guide">${parts.map((p, k) => `
         <button data-apart="gd-${k + 1}"><i>${k + 1}</i>${p}</button>`).join("")}
       </nav>
       <div class="gd-intro">${P(g.intro)}</div>
@@ -1931,10 +1934,11 @@ function guideHTML(t, i, x, g){
         </div>`).join("")}
       </section>
 
-      <section class="gd-sec">${head(4, g.topics.length === 1 ? "The past topic developed" : nw(g.topics.length) + " past topics developed")}
+      <section class="gd-sec">${head(4, !past ? nw(g.topics.length) + (g.topics.length === 1 ? " topic" : " topics") + " to practise"
+          : g.topics.length === 1 ? "The past topic developed" : nw(g.topics.length) + " past topics developed")}
         ${g.topics.map(tp => `
         <div class="gd-topic">
-          <h6><i>${tag(tp[0])}</i>${esc(Q[tp[0]] ? Q[tp[0]].q : tp[0])}</h6>
+          <h6><i>${tag(tp[0])}</i>${esc(tp[2] || (Q[tp[0]] ? Q[tp[0]].q : tp[0]))}</h6>
           ${P(tp[1])}
         </div>`).join("")}
       </section>
