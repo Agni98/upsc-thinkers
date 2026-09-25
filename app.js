@@ -47,12 +47,12 @@ const ESSAY_THEMES = [
     s:"How to decide, when to act, whether the means matter, and the gap between ideal and real",
     ids:["gandhi","machiavelli","kautilya","kant","bentham","mill","simon","barnard","goleman","weber","arendt","drucker","aristotle","socrates","ambedkar","periyar","thoreau","rawls","nehru","hegel","aurobindo"],
     essays:["The file that nobody moved","A standard nobody meets is still a standard"],
-    atlas:["bystander","campbell","gyges","noblelie","trolley","cobra","principalagent","burninghouse","dissonance","rentseeking","fineprice"] },
+    atlas:["bystander","campbell","gyges","noblelie","trolley","cobra","principalagent","burninghouse","dissonance","rentseeking","fineprice","nudge"] },
   { t:"Knowledge, Education and the Doubting Mind", n:"Knowledge and Education", ic:"book",
     s:"What knowing is for, and why the educated mind ends with more questions",
     ids:["socrates","plato","aristotle","tagore","freire","nussbaum","vivekananda","kalam","mill","einstein","habermas","ambedkar","gandhi"],
     essays:["The certificate and the question","The romantic man was never the enemy"],
-    atlas:["goodhart","meno","zeno","staghunt","cave","gettier","raft","babel","framing","lemons"] },
+    atlas:["goodhart","meno","zeno","staghunt","cave","gettier","raft","babel","framing","lemons","signalling","pygmalion"] },
   { t:"Character, Adversity and the Test of Power", n:"Character and Adversity", ic:"mountain",
     s:"What pressure reveals — failure, risk, time and authority as examinations",
     ids:["marcus-aurelius","epictetus","nietzsche","camus","mandela","malala","aristotle","kalam","gandhi","arendt","thoreau","laozi","buddha","machiavelli","bose","vivekananda","ambedkar","hegel","tagore","weber"],
@@ -67,27 +67,27 @@ const ESSAY_THEMES = [
     s:"How a society carries its past and makes sense — art, history, language, perception",
     ids:["tagore","gibran","tolstoy","plato","aurobindo","gandhi","nehru","burke","azad","marx","hegel","orwell","socrates","camus","nietzsche","laozi","kabir","kant","shankara","sartre"],
     essays:["The argument a country has with itself","The most confident account is rarely the true one"],
-    atlas:["panopticon","anekanta","dunningkruger","blindmen","butterflydream","maya","nasreddin","babel","framing","robberscave"] },
+    atlas:["panopticon","anekanta","dunningkruger","blindmen","butterflydream","maya","nasreddin","babel","framing","robberscave","greattradition"] },
   { t:"Justice, Equality and the Excluded", n:"Justice and Equality", ic:"users",
     s:"What a society owes its weakest members, and why patriarchy is a structure not a sentiment",
     ids:["rawls","ambedkar","amartya-sen","nozick","deendayal","gandhi","mother-teresa","lohia","nussbaum","jyotirao-phule","savitribai-phule","beauvoir","wollstonecraft","pandita-ramabai","periyar","gilligan","mill","bentham","tocqueville"],
     essays:["A country should not need this much kindness","Educated, and still not counted","Somebody always pays for the public good"],
-    atlas:["marshmallow","collectiveaction","freerider","omelas","veil","heinz","samaritan","noblelie","scarcity","womenleaders","fineprice"] },
+    atlas:["marshmallow","collectiveaction","freerider","omelas","veil","heinz","samaritan","noblelie","scarcity","womenleaders","fineprice","justworld","entitlements"] },
   { t:"Democracy, the State and India in the World", n:"Democracy and the State", ic:"globe",
     s:"Leadership, media, plural identity, borders and the ethics of asymmetric power",
     ids:["ambedkar","tocqueville","habermas","montesquieu","nehru","kautilya","patel","orwell","gandhi","mandela","tagore","azad","aurobindo","mill","rousseau","jp-narayan","machiavelli","barnard"],
     essays:["Between two elections","Autonomy is a capability, not a posture"],
-    atlas:["generalwill","focal","securitydilemma","dictator","gadfly","beforelaw","pd","chicken","mad","groupthink","robberscave","womenleaders"] },
+    atlas:["generalwill","focal","securitydilemma","dictator","gadfly","beforelaw","pd","chicken","mad","groupthink","robberscave","womenleaders","entitlements","nudge","resourcecurse"] },
   { t:"Nature, Development and Civilisation", n:"Nature and Development", ic:"leaf",
     s:"Whether nature is a resource, a teacher or a moral limit — and what growth is for",
     ids:["schumacher","ostrom","gandhi","thoreau","mahavira","burke","deendayal","amartya-sen","tagore","aurobindo","gibran","nussbaum","kalam","einstein"],
     essays:["The bill arrives in a different currency","We stopped being taught by anything we did not make"],
-    atlas:["commons","uselesstree","aesop","midas","butterfly","prometheus","icarus","rentseeking"] },
+    atlas:["commons","uselesstree","aesop","midas","butterfly","prometheus","icarus","rentseeking","jevons","coase","resourcecurse","digitalprovide"] },
   { t:"Technology and the Modern Self", n:"Technology and the Self", ic:"cpu",
     s:"What a tool does to the person, the worker and the state that uses it",
     ids:["foucault","orwell","einstein","schumacher","habermas","drucker","bentham","maslow","allport","festinger","marx","amartya-sen","mcgregor","buddha","marcus-aurelius","kautilya","nehru","ambedkar"],
     essays:["We built the rails without asking where they go","The jobs question is the wrong question"],
-    atlas:["experience","apprentice","sisyphus","skinner","panopticon","vat","prometheus","laplace","lemons"] }
+    atlas:["experience","apprentice","sisyphus","skinner","panopticon","vat","prometheus","laplace","lemons","digitalprovide","jevons"] }
 ];
 
 /* ---- State ---- */
@@ -695,8 +695,11 @@ function topSections(){
         ["atlas|0|", "Stories and models", ATLAS.length + " stories and thought experiments to open an essay with"],
       ["essay|0|", "Thinkers for Essay", tagged("Essay") + " who open, carry or answer an essay"]
     ]},
-    { id:"pyq", t:"PYQs", to:"pyq|0|" }
-  ];
+    { id:"pyq", t:"PYQs", to:"pyq|0|" },
+    typeof ATLAS !== "undefined" &&
+      { id:"atlas", t:"Thought Atlas", to:"atlas|0|", feature:true,
+        title:"Human Thought Atlas: " + ATLAS.length + " stories, thought experiments and models" }
+  ].filter(Boolean);
 }
 
 function renderTopNav(){
@@ -705,8 +708,9 @@ function renderTopNav(){
   nav.innerHTML = `<ul class="tn-list">${topSections().map(x => {
     const items = (x.items || []).filter(Boolean);
     return `
-    <li class="tn" data-sec="${x.id}">
-      <button class="tn-btn" data-to="${x.to}"${items.length ? ` aria-expanded="false"` : ""}>${
+    <li class="tn${x.feature ? " tn-feature" : ""}" data-sec="${x.id}">
+      <button class="tn-btn" data-to="${x.to}"${items.length ? ` aria-expanded="false"` : ""}${
+        x.title ? ` title="${esc(x.title)}"` : ""}>${x.feature ? ico("compass") : ""}${
         esc(x.t)}${items.length ? `<i class="tn-caret" aria-hidden="true"></i>` : ""}</button>
       ${items.length ? `
       <div class="dd"><ul>${items.map(it => `
@@ -719,7 +723,8 @@ function renderTopNav(){
 function topSectionOf(v){
   if (v === "home") return "home";
   if (v === "syllabus" || v === "ethics" || v === "cases") return "gs4";
-  if (v === "themes" || v === "essays" || v.startsWith("essay:") || v === "atlas" || v === "essay") return "essay";
+  if (v === "atlas") return "atlas";
+  if (v === "themes" || v === "essays" || v.startsWith("essay:") || v === "essay") return "essay";
   if (v === "pyq" || v === "gs4pyq") return "pyq";
   if (v === "search") return "";
   return "thinkers";

@@ -43,6 +43,12 @@
   --read-ink:#3a3835;
   --band:#1f2a44;      /* the header; white on it is 14.3:1 */
   --band-ink:#c9cfdc;  /* the sections you are not in, 9.1:1 on the header */
+  /* the masthead: the page's own paper, navy type, the mark in navy and saffron */
+  --mast:#fbf7f0;
+  --mast-line:#e6ddcd;
+  --mast-ink:#586072;  /* the sections you are not in, 6.3:1 on the masthead */
+  --mark-bg:#1f2a44;
+  --mark-ink:#f0a54d;
 }
 
 html[data-theme="dark"]{
@@ -72,6 +78,11 @@ html[data-theme="dark"]{
   --quote-ink:#eeeae4;
   --read-ink:#dcd8d2;
   --band:#182033;
+  --mast:#1f1d1b;
+  --mast-line:#35312c;
+  --mast-ink:#b1aca4;
+  --mark-bg:#e0902f;
+  --mark-ink:#1f2a44;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -88,14 +99,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 ::selection{background:var(--accent);color:var(--panel)}
 
 /* ---------------- Header ----------------
-   One ink-blue bar across the whole width: the name at the left, the sections
-   at the right, a saffron underline under the section you are in. */
+   A paper masthead: the page's own warm off-white, the name in navy at the
+   left, the sections at the right with a saffron underline under the one you
+   are in, and the Thought Atlas as a saffron pill of its own. The colour on the
+   page comes from the pictures in the header bands below it. */
 .topbar{
   position:sticky;top:0;z-index:60;
   display:flex;align-items:center;gap:12px;
   height:64px;padding:0 0 0 18px;
-  background:var(--band);color:#fff;
-  box-shadow:0 1px 0 rgba(0,0,0,.18),0 2px 10px rgba(20,28,48,.12);
+  background:var(--mast);color:var(--head);
+  box-shadow:0 1px 0 var(--mast-line),0 4px 14px rgba(60,45,30,.05);
 }
 .skip{
   position:absolute;left:12px;top:-52px;z-index:90;
@@ -107,22 +120,22 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .brand:focus-visible{outline:2px solid var(--saffron);outline-offset:3px;border-radius:8px}
 .brand-mark{
   width:38px;height:38px;border-radius:50%;flex-shrink:0;
-  background:var(--saffron);color:var(--band);
+  background:var(--mark-bg);color:var(--mark-ink);
   display:grid;place-items:center;
   font-family:var(--serif);font-size:20px;font-weight:700;
-  box-shadow:0 0 0 3px rgba(224,144,47,.22);
+  box-shadow:0 0 0 3px rgba(224,144,47,.25);
 }
 .brand-text h1{
   font-family:var(--read);font-size:19px;font-weight:500;letter-spacing:-.1px;
-  line-height:1.15;color:#fff;white-space:nowrap}
+  line-height:1.15;color:var(--head);white-space:nowrap}
 .brand-text p{
-  font-size:10.5px;color:var(--band-ink);letter-spacing:.6px;text-transform:uppercase;
+  font-size:10.5px;color:var(--ink-3);letter-spacing:.6px;text-transform:uppercase;
   margin-top:3px;white-space:nowrap}
 
 .band{
   position:relative;align-self:stretch;margin-left:auto;
   display:flex;align-items:center;gap:8px;
-  padding:0 18px 0 24px;color:#fff}
+  padding:0 18px 0 24px;color:var(--head)}
 
 .topnav{align-self:stretch;margin-right:6px}
 .tn-list{display:flex;height:100%;list-style:none}
@@ -130,15 +143,25 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .tn-btn{
   position:relative;display:flex;align-items:center;gap:8px;height:100%;
   padding:0 14px;font-family:var(--read);font-size:15.5px;font-weight:400;
-  letter-spacing:.1px;color:var(--band-ink);white-space:nowrap;transition:color .15s}
-.tn:hover .tn-btn,.tn:focus-within .tn-btn,.tn.open .tn-btn,.tn.on .tn-btn{color:#fff}
+  letter-spacing:.1px;color:var(--mast-ink);white-space:nowrap;transition:color .15s}
+.tn:hover .tn-btn,.tn:focus-within .tn-btn,.tn.open .tn-btn,.tn.on .tn-btn{color:var(--head)}
 /* a saffron bar under the section you are in; a fainter one under the menu you are in */
 .tn-btn::after{
   content:"";position:absolute;left:14px;right:14px;bottom:0;height:3px;
   border-radius:3px 3px 0 0;background:var(--saffron);opacity:0;transition:opacity .15s}
 .tn:hover .tn-btn::after,.tn:focus-within .tn-btn::after,.tn.open .tn-btn::after{opacity:.5}
 .tn.on .tn-btn::after{opacity:1}
-.tn-btn:focus-visible{outline:2px solid #fff;outline-offset:-8px;border-radius:10px}
+.tn-btn:focus-visible{outline:2px solid var(--saffron);outline-offset:-8px;border-radius:10px}
+/* the Thought Atlas: a saffron pill with a compass, set apart from the sections */
+.tn-feature{align-items:center;margin:0 4px 0 8px}
+.tn-feature .tn-btn{
+  height:auto;gap:7px;padding:7px 15px 7px 11px;border-radius:20px;
+  border:1px solid rgba(224,144,47,.45);background:var(--saffron-soft);color:var(--saffron-ink);font-weight:500}
+.tn-feature .tn-btn .ic{width:17px;height:17px}
+.tn-feature .tn-btn::after{display:none}
+.tn-feature:hover .tn-btn,.tn-feature:focus-within .tn-btn{border-color:var(--saffron);color:var(--saffron-ink)}
+.tn-feature.on .tn-btn{background:var(--saffron);border-color:var(--saffron);color:#fff}
+.tn-feature .tn-btn:focus-visible{outline-offset:2px;border-radius:20px}
 .tn-caret{
   width:0;height:0;margin-top:2px;opacity:.85;
   border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor}
@@ -165,8 +188,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
 .band-btn{
   width:38px;height:38px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;
-  border:1.5px solid rgba(255,255,255,.35);color:#fff;font-size:16px;transition:.15s}
-.band-btn:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.8)}
+  border:1.5px solid var(--mast-line);color:var(--head);font-size:16px;transition:.15s}
+.band-btn:hover{background:var(--saffron-soft);border-color:var(--saffron);color:var(--saffron-ink)}
+/* on a narrow screen the sections leave for the drawer, but the atlas keeps a button */
+.band-atlas{display:none;border-color:rgba(224,144,47,.5);background:var(--saffron-soft);color:var(--saffron-ink)}
 .band-btn:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 
 /* search drops out of the band's end, and stays open while it holds a query */
@@ -201,7 +226,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 /* the menu button collapses the sidebar on a wide screen and opens the drawer
    on a narrow one, so one control means one thing: show me the navigation */
 .menu-btn{display:grid}
-.topbar .menu-btn{background:transparent;border-color:rgba(255,255,255,.3);color:#fff}
+.topbar .menu-btn{background:transparent;border-color:var(--mast-line);color:var(--head)}
 .topbar .menu-btn:hover{border-color:var(--saffron);color:var(--saffron)}
 .topbar .menu-btn:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 
@@ -213,7 +238,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .band{padding-left:16px}
 }
 @media (max-width:1260px) and (min-width:1001px){ .brand-text{display:none} }
-@media (max-width:1000px){ .topnav{display:none} }
+@media (max-width:1000px){ .topnav{display:none} .band-atlas{display:grid} }
 
 /* ---------------- Layout ---------------- */
 .shell{display:flex;align-items:flex-start;max-width:1560px;margin:0 auto}

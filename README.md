@@ -27,8 +27,12 @@ all its text work exactly the same and show lettered monograms in place of photo
 
 ### The home page and finding your way
 
-The header carries five sections: **Home**, **Thinkers**, **GS-IV** and **Essay** (each with a menu of
-what is in it) and **PYQs**, whose page switches between essay topics and GS-IV questions. The
+The header is a paper masthead: the page's own warm off-white, the name in navy beside a navy
+and saffron mark, and a saffron underline under the section you are in. It carries five sections:
+**Home**, **Thinkers**, **GS-IV** and **Essay** (each with a menu of what is in it) and **PYQs**,
+whose page switches between essay topics and GS-IV questions. The **Thought Atlas** has its own
+saffron pill with a compass at the end, and keeps a compass button on a narrow screen, where
+the sections move into the drawer. The
 sidebar lists the same sections, then ways to browse: all thinkers, Indian, Western and
 contemporary thinkers, works in depth, and three groups that fold open (schools and traditions,
 the GS-IV headings, the essay themes), with case studies, quotes and stories below.
@@ -185,6 +189,15 @@ search now searches the whole site on this page too, as it does everywhere else.
 
 ### Reading the atlas
 
+The atlas holds 110 entries. The ten most recent are models and findings from the social
+sciences: job market signalling, the digital provide (Kerala's fishermen and mobile phones), Sen
+on famine and entitlements, the Jevons paradox, Coase and the problem of social cost, the resource
+curse, defaults and nudges, the belief in a just world, the Pygmalion effect, and the great and
+little traditions. Three Upanishad stories are told in full: Uddalaka and Shvetaketu (all nine
+of the "that you are" examples, with the fast and the ordeal of the hot axe), Indra and Virochana
+(each of Indra's four returns to Prajapati), and Gargi and Yajnavalkya (the whole contest at
+Janaka's court, from the cows to Shakalya).
+
 The atlas opens on an **overview**, with the same header band as the other pages. The picture is
 the Flammarion engraving (1888, public domain). The three numbers in the band open the first
 entry, arrange the entries by essay theme, and jump to the key of kinds. The overview then shows
@@ -197,7 +210,7 @@ question it asks. Colour marks the kind of entry throughout: imagined cases, sto
 models, and ideas and images.
 
 An entry opens on the same band. It gives the entry's section, title and subject, its kind,
-its place (*Entry 15 of 100*), its reading time and its ideas. The numbers beside it jump to the
+its place (*Entry 15 of 110*), its reading time and its ideas. The numbers beside it jump to the
 story, to the exam use (or the interpretations, if no essay theme lists it) and to the related
 entries. An *At a glance* card follows, with the source, period, tradition and type. A strip of
 the eight parts works like the other pages' segmented controls. It stays at the top while you

@@ -57,6 +57,12 @@ const ATLAS = [
   {"id": "lemons", "t": "The Market for Lemons", "src": "George Akerlof", "form": "Economic model", "fg": "model", "tr": "science", "q": "How hidden quality drives good goods out of a market", "sec": "economics", "th": ["incentives", "knowledge", "cooperation"]},
   {"id": "rentseeking", "t": "Rent-Seeking", "src": "Anne Krueger", "form": "Economic concept", "fg": "concept", "tr": "science", "q": "Wealth from capturing favours instead of creating value", "sec": "economics", "th": ["incentives", "power", "justice"]},
   {"id": "fineprice", "t": "A Fine Is a Price", "src": "Uri Gneezy and Aldo Rustichini", "form": "Field experiment", "fg": "experiment", "tr": "science", "q": "When money crowds out duty", "sec": "economics", "th": ["incentives", "unintended", "cooperation"]},
+  {"id": "signalling", "t": "Job Market Signalling", "src": "Michael Spence", "form": "Economic model", "fg": "model", "tr": "science", "q": "How to prove what cannot be seen", "sec": "economics", "th": ["knowledge", "incentives", "uncertainty"]},
+  {"id": "digitalprovide", "t": "The Digital Provide: Kerala’s Fishermen", "src": "Robert Jensen", "form": "Natural experiment", "fg": "experiment", "tr": "science", "q": "What cheap information does to a market", "sec": "economics", "th": ["knowledge", "cooperation", "incentives"]},
+  {"id": "entitlements", "t": "Sen on Famine and Entitlements", "src": "Amartya Sen", "form": "Concept from a historical study", "fg": "concept", "tr": "science", "q": "Why people starve in the midst of food", "sec": "economics", "th": ["justice", "power", "death"]},
+  {"id": "jevons", "t": "Jevons Paradox", "src": "William Stanley Jevons", "form": "Paradox", "fg": "paradox", "tr": "science", "q": "When efficiency raises consumption", "sec": "economics", "th": ["unintended", "incentives"]},
+  {"id": "coase", "t": "Coase and the Problem of Social Cost", "src": "Ronald Coase", "form": "Economic model", "fg": "model", "tr": "science", "q": "Who should give way when uses collide", "sec": "economics", "th": ["cooperation", "incentives", "justice"]},
+  {"id": "resourcecurse", "t": "The Resource Curse", "src": "Richard Auty / Jeffrey Sachs and Andrew Warner", "form": "Economic model", "fg": "model", "tr": "science", "q": "Why natural wealth can make a place poorer", "sec": "economics", "th": ["power", "unintended", "incentives"]},
   {"id": "maxwell", "t": "Maxwell's Demon", "src": "James Clerk Maxwell", "form": "Thought experiment", "fg": "te", "tr": "science", "q": "Information, entropy and thermodynamics", "sec": "science", "th": ["knowledge", "uncertainty"]},
   {"id": "schrodinger", "t": "Schrödinger's Cat", "src": "Erwin Schrödinger", "form": "Thought experiment", "fg": "te", "tr": "science", "q": "Quantum superposition and measurement", "sec": "science", "th": ["uncertainty", "knowledge"]},
   {"id": "laplace", "t": "Laplace's Demon", "src": "Pierre-Simon Laplace", "form": "Thought experiment", "fg": "te", "tr": "science", "q": "Determinism and predictability", "sec": "science", "th": ["uncertainty", "freedom"]},
@@ -80,6 +86,9 @@ const ATLAS = [
   {"id": "robberscave", "t": "Robbers Cave and the Minimal Group", "src": "Muzafer Sherif / Henri Tajfel", "form": "Experiment", "fg": "experiment", "tr": "science", "q": "How groups turn hostile, and what brings them back together", "sec": "psychology", "th": ["identity", "cooperation", "power"]},
   {"id": "framing", "t": "Framing and Loss Aversion", "src": "Amos Tversky and Daniel Kahneman", "form": "Experiment", "fg": "experiment", "tr": "science", "q": "Why the same choice, worded differently, gets a different answer", "sec": "psychology", "th": ["knowledge", "uncertainty", "incentives"]},
   {"id": "scarcity", "t": "The Scarcity Mindset", "src": "Mani, Mullainathan, Shafir and Zhao", "form": "Experiment", "fg": "experiment", "tr": "science", "q": "How poverty uses up mental bandwidth", "sec": "psychology", "th": ["justice", "freedom", "incentives"]},
+  {"id": "nudge", "t": "Defaults and Nudges", "src": "Richard Thaler and Cass Sunstein", "form": "Finding and policy idea", "fg": "experiment", "tr": "science", "q": "Who chooses the option people end up with", "sec": "psychology", "th": ["freedom", "incentives"]},
+  {"id": "justworld", "t": "Belief in a Just World", "src": "Melvin Lerner", "form": "Experiment and theory", "fg": "experiment", "tr": "science", "q": "Why people blame those who suffer", "sec": "psychology", "th": ["justice", "identity"]},
+  {"id": "pygmalion", "t": "The Pygmalion Effect", "src": "Robert Rosenthal and Lenore Jacobson", "form": "Field experiment", "fg": "experiment", "tr": "science", "q": "Whether expectations make people what is expected", "sec": "psychology", "th": ["identity", "knowledge", "justice"]},
   {"id": "chicken", "t": "Chicken Game", "src": "Game theory", "form": "Strategic model", "fg": "model", "tr": "science", "q": "Brinkmanship and commitment", "sec": "strategy", "th": ["power", "cooperation"]},
   {"id": "battlesexes", "t": "Battle of the Sexes", "src": "Game theory", "form": "Strategic model", "fg": "model", "tr": "science", "q": "Coordination under preference conflict", "sec": "strategy", "th": ["cooperation"]},
   {"id": "focal", "t": "Schelling's Focal Point", "src": "Thomas Schelling", "form": "Concept / example", "fg": "model", "tr": "science", "q": "Coordination without communication", "sec": "strategy", "th": ["cooperation"]},
@@ -106,6 +115,7 @@ const ATLAS = [
   {"id": "maya", "t": "Maya", "src": "Vedantic traditions", "form": "Metaphor / concept", "fg": "concept", "tr": "indian", "q": "Appearance, cognition and reality", "sec": "traditions", "th": ["knowledge"]},
   {"id": "netineti", "t": "Neti Neti", "src": "Upanishadic tradition", "form": "Method / formula", "fg": "concept", "tr": "indian", "q": "Knowledge through negation; limits of concepts", "sec": "traditions", "th": ["knowledge", "identity"]},
   {"id": "atman", "t": "Atman and Brahman", "src": "Upanishadic / Vedantic traditions", "form": "Philosophical concept", "fg": "concept", "tr": "indian", "q": "Self, reality and metaphysical identity", "sec": "traditions", "th": ["identity"]},
+  {"id": "greattradition", "t": "Great Tradition and Little Tradition", "src": "Robert Redfield / McKim Marriott", "form": "Concept", "fg": "concept", "tr": "science", "q": "How a civilisation’s texts meet its villages", "sec": "traditions", "th": ["identity", "knowledge"]},
   {"id": "prometheus", "t": "Prometheus", "src": "Greek myth", "form": "Myth", "fg": "myth", "tr": "greek", "q": "Technology, rebellion and punishment", "sec": "literature", "th": ["power", "knowledge", "unintended"]},
   {"id": "icarus", "t": "Icarus", "src": "Greek myth", "form": "Myth", "fg": "myth", "tr": "greek", "q": "Overreach and limits", "sec": "literature", "th": ["freedom", "unintended"]},
   {"id": "midas", "t": "Midas", "src": "Greek myth", "form": "Myth", "fg": "myth", "tr": "greek", "q": "Desire and unintended consequences", "sec": "literature", "th": ["incentives", "unintended"]},
@@ -1924,7 +1934,9 @@ const ATLAS_ENTRIES = {
       "collectiveaction",
       "pd",
       "staghunt",
-      "invisiblehand"
+      "invisiblehand",
+      "coase",
+      "resourcecurse"
     ],
     "reading": [
       [
@@ -1988,7 +2000,8 @@ const ATLAS_ENTRIES = {
       "noblelie",
       "panopticon",
       "tacitus",
-      "milgram"
+      "milgram",
+      "entitlements"
     ],
     "reading": [
       [
@@ -2226,7 +2239,8 @@ const ATLAS_ENTRIES = {
       "cobra",
       "principalagent",
       "beauty",
-      "collectiveaction"
+      "collectiveaction",
+      "digitalprovide"
     ],
     "reading": [
       [
@@ -2291,7 +2305,8 @@ const ATLAS_ENTRIES = {
       "moralhazard",
       "butterfly",
       "midas",
-      "fineprice"
+      "fineprice",
+      "jevons"
     ],
     "reading": [
       [
@@ -2731,7 +2746,8 @@ const ATLAS_ENTRIES = {
       "goodhart",
       "invisiblehand",
       "rentseeking",
-      "staghunt"
+      "staghunt",
+      "signalling"
     ],
     "reading": [
       [
@@ -2791,7 +2807,8 @@ const ATLAS_ENTRIES = {
       "collectiveaction",
       "freerider",
       "dictator",
-      "lemons"
+      "lemons",
+      "resourcecurse"
     ],
     "reading": [
       [
@@ -2863,6 +2880,351 @@ const ATLAS_ENTRIES = {
         "Michael J. Sandel, What Money Can’t Buy: The Moral Limits of Markets (2012)",
         "Discusses the day-care study and the argument about blood.",
         ""
+      ]
+    ]
+  },
+  "signalling": {
+    "source": "Michael Spence, “Job Market Signaling”, Quarterly Journal of Economics (1973)",
+    "period": "United States, 1973",
+    "tradition": "Economics",
+    "type": "A model. A model is a simple picture of how something works.",
+    "setup": [
+      "An employer hiring a young graduate faces a problem. Ability does not show on a face, and a short interview reveals little. The employer needs some sign of ability that a weaker candidate cannot easily copy.",
+      "In 1973 the economist Michael Spence offered an answer. Suppose education adds nothing at all to a worker’s skill. Even so, able people find study easier and cheaper, in effort and in time, so they are the ones who choose a long degree. The degree then tells the employer something true about ability, not because of what it taught but because of what it cost to earn.",
+      "Spence called such a costly act a signal. A signal works only when it costs the weak more than the strong. If anyone could get the degree cheaply, the degree would stop telling employers anything.",
+      "The idea reached far beyond jobs. A firm that offers a long warranty signals that its product is sound, because a warranty on a bad product would ruin the firm. In biology, a peacock’s huge tail signals a healthy bird, because only a healthy one can carry such a burden.",
+      "In 2001 Spence shared the Nobel Prize in economics with George Akerlof and Joseph Stiglitz, for their work on markets where one side knows more than the other."
+    ],
+    "question": "When ability and honesty cannot be seen, how do people prove them?",
+    "reveals": "Signalling explains why people spend heavily on things that seem to add little: degrees, brands, certificates, grand offices. A signal is valuable because it is costly and hard to fake, not because it is useful in itself. The idea also warns of waste. When everyone chases the same signal, the price of standing out keeps rising, and years of study or money go into the race instead of into real skill.",
+    "readings": [
+      [
+        "Education as a filter",
+        "On this reading, much of the reward for a degree comes from what the degree shows, not what it teaches. Employers use degrees to sort candidates, and students know it."
+      ],
+      [
+        "Human capital",
+        "The older view, from economists such as Gary Becker, is that education raises skill, and pay rises with skill. Most economists think both views are partly right."
+      ],
+      [
+        "Costly honesty",
+        "Honest signals must be expensive. A promise costs nothing, so buyers and employers look for acts that would be foolish for anyone who was lying."
+      ]
+    ],
+    "breaks": [
+      "Education clearly does build skills. Doctors and engineers use what they learned every day, so a degree is not only a signal.",
+      "Signals can be faked when checking is weak. Forged certificates and bought degrees exploit exactly the trust that signals create.",
+      "A race for signals can shut out the poor. Where the costly signal is a private college or years of coaching, the able but poor cannot send it."
+    ],
+    "uses": [
+      "Degrees and coaching: As more graduates compete for the same jobs, employers ask for higher degrees and famous colleges. Students spend more years and money only to keep their place in the queue.",
+      "Public recruitment: An open examination such as the civil services examination is itself a signal. Leaks and malpractice destroy its value for every honest candidate, which is why the integrity of examinations matters so much.",
+      "Business: Warranties, hallmarks and ratings help honest firms prove their quality. Signalling is the other side of the market for lemons.",
+      "Exam use: In GS-IV, use it for integrity, trust and honest credentials. In the Essay paper, use it for topics on education, merit and competition."
+    ],
+    "related": [
+      "lemons",
+      "goodhart",
+      "campbell",
+      "beauty",
+      "principalagent"
+    ],
+    "reading": [
+      [
+        "Michael Spence, “Job Market Signaling”, Quarterly Journal of Economics (1973)",
+        "",
+        "https://doi.org/10.2307/1882010"
+      ],
+      [
+        "“Signalling (economics)”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/Signalling_(economics)"
+      ]
+    ]
+  },
+  "digitalprovide": {
+    "source": "Robert Jensen, “The Digital Provide: Information (Technology), Market Performance, and Welfare in the South Indian Fisheries Sector”, Quarterly Journal of Economics (2007)",
+    "period": "Northern Kerala, 1997 to 2001",
+    "tradition": "Development economics",
+    "type": "A natural experiment. A natural experiment uses a change that happened in real life, instead of one set up by researchers.",
+    "setup": [
+      "Along the coast of northern Kerala, fishermen go out at night and come back in the morning with sardines. Until the late 1990s, a boat had to choose one beach market to land at without knowing the prices there. Fish spoils within hours, so once a boat landed, it had to sell at whatever price that market offered.",
+      "Prices therefore swung widely from one market to the next on the same morning. A market with too many boats might have no buyers left, and fish would be thrown back into the sea. A few kilometres away, another market might have buyers and no fish.",
+      "Between 1997 and 2001, mobile phone towers went up along the coast, one area after another. Fishermen took phones to sea and called the markets while still on the water. They could now choose the market with the best price before landing.",
+      "The economist Robert Jensen studied the change. Because the towers reached different areas at different times, he could compare markets before and after phones arrived. Where phones arrived, the gap in prices between nearby markets fell sharply, and the waste of unsold fish disappeared.",
+      "Both sides gained. Fishermen’s profits rose by about 8 percent, and the price that consumers paid fell by about 4 percent. The phones cost little. The gains came from information alone."
+    ],
+    "question": "What happens to a market when information becomes cheap?",
+    "reveals": "The Kerala story shows that a market works only as well as the information that flows through it. Before phones, the same fish was wasted on one beach and scarce on the next. A cheap technology that let people talk to each other raised incomes more than many subsidies could. The lesson reaches beyond fish. Poor people often lose out not for lack of effort but for lack of information.",
+    "readings": [
+      [
+        "Prices as information",
+        "Adam Smith’s invisible hand coordinates buyers and sellers only when they can see prices. The phones gave the fish market the information it had lacked."
+      ],
+      [
+        "Technology as livelihood",
+        "For the fishermen, a phone was not a luxury but a working tool, as important as a net or a boat."
+      ],
+      [
+        "A bigger pie",
+        "Unusually, both producers and consumers gained at once, because less fish was wasted. Better information can create wealth, not just move it around."
+      ]
+    ],
+    "breaks": [
+      "Not every information service works as well. A study of a text-message price service for farmers in Maharashtra found little effect on the prices they received, because they faced other limits such as transport and credit.",
+      "The gains depend on roads, boats and cold storage. Information cannot help a farmer who cannot reach the better market.",
+      "Access to phones and data is unequal. People left out of the network may fall further behind."
+    ],
+    "uses": [
+      "Digital India: Mobile phones, UPI payments and direct benefit transfers now reach people who were once cut off from markets and services.",
+      "Agriculture: The electronic National Agricultural Market, e-NAM, launched in 2016, aims to let farmers see prices across mandis and sell beyond their local market.",
+      "The digital divide: The story is an argument for phones and broadband in villages, not as a luxury but as infrastructure.",
+      "Exam use: In GS-III, use it for agricultural marketing, digital infrastructure and inclusive growth. In the Essay paper, use it for topics on technology and development, and on information as power."
+    ],
+    "related": [
+      "lemons",
+      "invisiblehand",
+      "scarcity",
+      "womenleaders"
+    ],
+    "reading": [
+      [
+        "Robert Jensen, “The Digital Provide”, Quarterly Journal of Economics (2007)",
+        "",
+        "https://doi.org/10.1162/qjec.122.3.879"
+      ]
+    ]
+  },
+  "entitlements": {
+    "source": "Amartya Sen, Poverty and Famines: An Essay on Entitlement and Deprivation (1981)",
+    "period": "Bengal, 1943, and Sen’s study of the famine, published in 1981",
+    "tradition": "Development economics",
+    "type": "A concept, built from a historical study",
+    "setup": [
+      "In 1943, in the middle of the Second World War, famine struck Bengal. Between two and three million people died. Amartya Sen, then a boy of nine at Santiniketan, saw the starving on the roads. Decades later he set out to explain what had happened.",
+      "The usual explanation was that Bengal had run out of food. Sen checked the figures. The rice available in Bengal in 1943 was not unusually low. There was more of it than in 1941, a year with no famine. Food had not disappeared. What had changed was who could buy it.",
+      "The war had brought a boom to Calcutta and a flood of military spending. The price of rice rose far faster than wages. Farm labourers, fishermen, craftsmen and others who lived by selling their labour or their goods found that their earnings bought much less food. Some groups in Calcutta were protected by special supplies. People without protection starved in the midst of food.",
+      "Sen called a person’s command over food an entitlement. An entitlement is what a person can obtain through what they own, what they earn, what they can trade, and what the state provides. A famine, he argued, is a collapse of entitlements for some groups, not simply a fall in the total supply of food.",
+      "He later added a political point. No major famine, he wrote, has ever happened in a functioning democracy with a free press. Governments that face elections and newspapers cannot ignore mass starvation. Sen received the Nobel Prize in economics in 1998."
+    ],
+    "question": "Do people starve because there is no food, or because they cannot get it?",
+    "reveals": "Sen moved the question from food to people’s power to obtain it. A famine can happen beside full granaries if wages collapse, prices soar and no one steps in. The remedy lies in work, relief and fair prices, and in a political system that cannot look away. Hunger is as much a failure of rights and institutions as a failure of harvests.",
+    "readings": [
+      [
+        "The entitlement approach",
+        "Ask not how much food exists but who can command it, through land, labour, trade or state support. Starvation follows when these routes fail for a group."
+      ],
+      [
+        "Democracy and famine",
+        "Elections and a free press act as an early warning. Rulers who must answer to voters and newspapers act before hunger becomes famine."
+      ],
+      [
+        "From entitlements to capabilities",
+        "Sen later widened the idea. Development, he argued, means expanding what people are able to do and be, not only raising incomes."
+      ]
+    ],
+    "breaks": [
+      "Some historians argue that the food supply did fall in 1943, after a cyclone in 1942 and a crop disease, and that Sen understated the shortage.",
+      "Others put more weight on colonial policy: boats and rice removed from coastal Bengal for fear of a Japanese invasion, priority for Calcutta and the war effort, and slow relief.",
+      "Democracy prevents famine but not chronic hunger. India has had no major famine since independence, yet child malnutrition remains high."
+    ],
+    "uses": [
+      "Food security: The public distribution system, the National Food Security Act, 2013 and the midday meal protect entitlements, not just supply.",
+      "Employment guarantee: MGNREGA gives rural workers a right to earn in bad years, which is the entitlement approach in practice.",
+      "The pandemic: During the lockdown of 2020, food was available but migrant workers lost their earnings overnight. The crisis was a collapse of entitlements.",
+      "Exam use: In GS-IV, use it for the caring state and accountability for public welfare. In GS-I and GS-III, use it for the Bengal famine and food security. In the Essay paper, use it for topics on hunger, democracy and development."
+    ],
+    "related": [
+      "scarcity",
+      "dictator",
+      "womenleaders",
+      "invisiblehand",
+      "commons"
+    ],
+    "reading": [
+      [
+        "“Bengal famine of 1943”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/Bengal_famine_of_1943"
+      ],
+      [
+        "“Amartya Sen”, Wikipedia",
+        "His life, the entitlement approach and the argument about democracy and famine.",
+        "https://en.wikipedia.org/wiki/Amartya_Sen"
+      ]
+    ]
+  },
+  "jevons": {
+    "source": "William Stanley Jevons, The Coal Question (1865)",
+    "period": "Britain, 1865",
+    "tradition": "Economics",
+    "type": "A paradox. A paradox is a result that seems to go against common sense.",
+    "setup": [
+      "In 1865 the young economist William Stanley Jevons published a book called The Coal Question. Britain’s industry ran on coal, and many people hoped that more efficient engines would make the country’s coal last longer.",
+      "Jevons argued the opposite. James Watt’s steam engine used coal far more efficiently than the older engines before it. Yet Britain now burned much more coal than ever. Cheaper power made steam engines worth using in mines, mills, railways and ships where they had never paid before. Efficiency had not saved coal. Efficiency had multiplied its uses.",
+      "He wrote that it was a confusion of ideas to suppose that using fuel economically means using less of it. The very opposite, he said, is the truth.",
+      "Economists now call the process the rebound effect. When an improvement makes a resource cheaper to use, people use more of it. Often the rebound takes back only part of the saving. Sometimes, as Jevons claimed for coal, it takes back all of the saving and more."
+    ],
+    "question": "Does using a resource more efficiently mean using less of it?",
+    "reveals": "Efficiency lowers the cost of using a resource, and a lower cost invites more use. So efficiency alone does not guarantee savings. To turn efficiency into lower consumption, it has to be paired with limits, prices or changed habits. The paradox is a warning against technical fixes that ignore how people respond.",
+    "readings": [
+      [
+        "The rebound effect",
+        "Part of every efficiency gain is spent on more use. The size of the rebound decides whether total use falls, stays level or rises."
+      ],
+      [
+        "Induced demand",
+        "A wider road makes driving quicker, so more people drive, and the traffic returns. The same logic as Jevons, applied to roads."
+      ],
+      [
+        "Efficiency and growth",
+        "Efficiency makes an economy richer, and a richer economy uses more of everything. Whether total use falls depends on growth as much as on engineering."
+      ]
+    ],
+    "breaks": [
+      "Full backfire, where efficiency raises total use, is rare in modern studies. For most household energy uses, the rebound takes back only part of the saving.",
+      "Efficiency still has value even when use rises, because people get more light, heat or travel for the same resources.",
+      "The paradox is hard to measure, because prices, incomes and technology all change at once."
+    ],
+    "uses": [
+      "Energy policy: LED bulbs under schemes such as UJALA save power per bulb. The savings last only if total demand is also managed, through pricing and standards.",
+      "Roads and traffic: Widening roads to cut congestion often draws more cars, until the jams return.",
+      "Technology: As computers and data centres grow more efficient per task, total computing and its energy use keep rising.",
+      "Exam use: In GS-III, use it for energy efficiency, climate policy and sustainable development. In GS-IV, use it for environmental ethics and responsible consumption. In the Essay paper, use it for topics on technology, consumption and the limits of technical fixes."
+    ],
+    "related": [
+      "cobra",
+      "commons",
+      "apprentice",
+      "goodhart",
+      "midas"
+    ],
+    "reading": [
+      [
+        "“Jevons paradox”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/Jevons_paradox"
+      ],
+      [
+        "“The Coal Question”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/The_Coal_Question"
+      ]
+    ]
+  },
+  "coase": {
+    "source": "Ronald Coase, “The Problem of Social Cost”, Journal of Law and Economics (1960)",
+    "period": "England, 1879, and the United States, 1960",
+    "tradition": "Law and economics",
+    "type": "A model, built on real legal cases",
+    "setup": [
+      "In 1879 an English court heard a dispute between two neighbours on Wigmore Street in London. A confectioner had used heavy pestles and mortars in his kitchen for many years. A doctor next door then built a consulting room against the kitchen wall and found that the noise and shaking made his work impossible. The court ordered the confectioner to stop.",
+      "The usual view was that the confectioner caused the harm and should bear the cost. In 1960 the economist Ronald Coase pointed out that the harm ran both ways. The noise hurt the doctor only because the doctor built his room there. Stopping the noise would hurt the confectioner. The real question was which harm to avoid.",
+      "Coase then argued something surprising. Suppose the right to make noise, or the right to quiet, is clearly assigned, and the two sides can bargain cheaply. Then they will reach the best outcome whoever holds the right. If quiet is worth more to the doctor than noise is to the confectioner, the doctor keeps his right or buys it. If not, the confectioner pays the doctor to put up with the noise. The law decides who pays whom, not what gets done.",
+      "The argument became known as the Coase theorem. Coase himself stressed its condition. In real life bargaining is costly, above all when many people are affected, as with smoke from a factory. There, the choice of rules and institutions matters a great deal. Coase received the Nobel Prize in economics in 1991."
+    ],
+    "question": "When one person’s activity harms another, who should give way, and does the law decide what happens?",
+    "reveals": "Coase showed that pollution, noise and other harms are conflicts between uses, not simply stories of wrongdoers and victims. Clear rights and cheap bargaining can settle some of them privately. Where many people are affected and bargaining is impossible, the state has to step in, through regulation, taxes or markets in permits. The lesson is to weigh the costs on both sides before assigning blame.",
+    "readings": [
+      [
+        "Pigou and Coase",
+        "The economist Arthur Pigou had proposed taxing the activity that causes harm. Coase asked instead what each remedy would cost, and whether the parties could settle it themselves."
+      ],
+      [
+        "Transaction costs",
+        "The deeper lesson is that bargaining is costly. Firms, laws and courts exist to reduce those costs."
+      ],
+      [
+        "Clear property rights",
+        "When rights are clear, people can trade and cooperate. When rights are vague, disputes and waste follow."
+      ]
+    ],
+    "breaks": [
+      "Bargaining fails when many people are involved, when information is hidden, or when one side is much poorer or weaker than the other.",
+      "An outcome can be efficient but unfair. Who holds the right decides who pays, and that matters to the people involved.",
+      "Some goods, such as health or a clean river for future generations, are hard to trade at any price."
+    ],
+    "uses": [
+      "Pollution markets: In 2019 Gujarat launched in Surat the world’s first market in permits for particulate pollution from factories. India notified a Carbon Credit Trading Scheme in 2023.",
+      "Water sharing: Disputes between upstream and downstream users, from villages to states, turn on who holds the right and how the loser is compensated.",
+      "Urban planning: Zoning and building rules settle in advance which uses may sit side by side, which saves costly disputes later.",
+      "Exam use: In GS-III, use it for pollution control and market-based environmental policy. In GS-IV, use it for environmental ethics and fairness in sharing costs. In the Essay paper, use it for topics on development and the environment."
+    ],
+    "related": [
+      "commons",
+      "freerider",
+      "collectiveaction",
+      "invisiblehand",
+      "pd"
+    ],
+    "reading": [
+      [
+        "Ronald Coase, “The Problem of Social Cost”, Journal of Law and Economics (1960)",
+        "",
+        "https://doi.org/10.1086/466560"
+      ],
+      [
+        "“Coase theorem”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/Coase_theorem"
+      ]
+    ]
+  },
+  "resourcecurse": {
+    "source": "Richard Auty, Sustaining Development in Mineral Economies (1993), and Jeffrey Sachs and Andrew Warner, “Natural Resource Abundance and Economic Growth” (1995)",
+    "period": "The Netherlands, 1959, and studies of many countries, 1970 to 1995",
+    "tradition": "Development economics",
+    "type": "A model and a historical pattern",
+    "setup": [
+      "In 1959 a huge field of natural gas was found at Groningen in the Netherlands. Gas exports soared. But the flood of foreign money raised the value of the Dutch currency, and Dutch factories found it harder to sell abroad. In 1977 the magazine The Economist called the problem the Dutch disease.",
+      "Economists then noticed a wider pattern. In 1993 Richard Auty named it the resource curse. Two years later Jeffrey Sachs and Andrew Warner compared growth across many countries from 1970 onwards and found that countries rich in natural resources had, on average, grown more slowly than those without them.",
+      "Several causes were proposed. Resource exports crowd out other industries. The prices of oil and minerals swing wildly, so budgets boom and bust. Easy money from the ground lets rulers govern without taxing their citizens, and so without answering to them. Rich deposits invite rent-seeking, corruption and, at worst, armed conflict, as with the diamonds that paid for civil war in Sierra Leone.",
+      "Yet the curse is not fate. Norway saved its oil revenue in a fund for future generations. Botswana, rich in diamonds, spent its revenue on schools, roads and clinics and grew fast for decades. Institutions, not rocks, made the difference."
+    ],
+    "question": "Why can a country, or a district, be poorer because it is rich in natural wealth?",
+    "reveals": "Natural wealth is a temptation as much as an asset. Without strong institutions, it rewards whoever controls it rather than whoever creates value, and it loosens the bond between rulers and taxpayers. With accountable institutions, fair sharing and saving for the future, the same wealth can pay for development. The curse lies in governance, not in geology.",
+    "readings": [
+      [
+        "Dutch disease",
+        "A resource boom raises the currency and wages, and other exporting industries shrink. When the resource runs out or its price falls, little else is left."
+      ],
+      [
+        "The rentier state",
+        "A state that lives on resource rents does not need its citizens’ taxes, so it need not listen to them. Accountability weakens."
+      ],
+      [
+        "Institutions first",
+        "Rule of law, clean public finances and saving for the future decide whether resources become a blessing or a curse."
+      ]
+    ],
+    "breaks": [
+      "Later research questions the curse. Some studies find that resources do not slow growth once the quality of institutions is taken into account.",
+      "Many rich countries, such as the United States, Canada and Australia, grew on natural resources.",
+      "Cause and effect are hard to separate. Poor countries may depend on resources because other industries failed, and not the other way round."
+    ],
+    "uses": [
+      "India’s mineral belt: Many districts of Jharkhand, Odisha and Chhattisgarh are rich in coal and iron ore yet among the poorest in the country, and some have been hit by left-wing extremism.",
+      "Sharing the wealth: District Mineral Foundations, set up under the mining law amendment of 2015, take a share of royalties for the welfare of people affected by mining.",
+      "Illegal mining: The mining scandals of Goa and Bellary show how mineral wealth breeds collusion between business, officials and politicians.",
+      "Exam use: In GS-IV, use it for corruption, rent-seeking and fair sharing of benefits. In GS-III, use it for mining, inclusive growth and internal security. In the Essay paper, use it for topics on development, natural wealth and governance."
+    ],
+    "related": [
+      "rentseeking",
+      "midas",
+      "aesop",
+      "commons",
+      "dictator"
+    ],
+    "reading": [
+      [
+        "Jeffrey Sachs and Andrew Warner, “Natural Resource Abundance and Economic Growth”, NBER Working Paper 5398 (1995)",
+        "",
+        "https://www.nber.org/papers/w5398"
+      ],
+      [
+        "“Resource curse”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/Resource_curse"
       ]
     ]
   },
@@ -3706,7 +4068,8 @@ const ATLAS_ENTRIES = {
       "nachiketa",
       "principalagent",
       "dunningkruger",
-      "scarcity"
+      "scarcity",
+      "pygmalion"
     ],
     "reading": [
       [
@@ -3766,7 +4129,8 @@ const ATLAS_ENTRIES = {
       "milgram",
       "collectiveaction",
       "freerider",
-      "brokenwindows"
+      "brokenwindows",
+      "justworld"
     ],
     "reading": [
       [
@@ -4207,7 +4571,8 @@ const ATLAS_ENTRIES = {
       "dunningkruger",
       "beauty",
       "noblelie",
-      "scarcity"
+      "scarcity",
+      "nudge"
     ],
     "reading": [
       [
@@ -4284,6 +4649,184 @@ const ATLAS_ENTRIES = {
         "Leandro S. Carvalho, Stephan Meier and Stephanie W. Wang, “Poverty and Economic Decision-Making: Evidence from Changes in Financial Resources at Payday”, American Economic Review (2016)",
         "The payday study that found no effect.",
         "https://doi.org/10.1257/aer.20140481"
+      ]
+    ]
+  },
+  "nudge": {
+    "source": "Richard Thaler and Cass Sunstein, Nudge (2008), and Eric Johnson and Daniel Goldstein, “Do Defaults Save Lives?”, Science (2003)",
+    "period": "Europe and the United States, 2001 to 2008",
+    "tradition": "Behavioural economics",
+    "type": "A finding and a policy idea",
+    "setup": [
+      "Across Europe, the share of people registered as organ donors differs hugely between neighbouring countries with similar cultures. In 2003 the psychologists Eric Johnson and Daniel Goldstein pointed to the reason. In some countries, people become donors only if they tick a box to opt in. In others, everyone is a donor unless they tick a box to opt out.",
+      "Where people had to opt in, the donor rate in their data was low. In Germany it was about 12 percent. Where people had to opt out, nearly everyone was a donor. In Austria the rate was above 99 percent. Most people simply stayed with whatever had been chosen for them.",
+      "Economists found the same pattern in pensions. When American firms enrolled new workers in their savings plans automatically, while letting them leave if they wished, many more stayed in than had joined when they had to sign up themselves.",
+      "In 2008 the economist Richard Thaler and the legal scholar Cass Sunstein called such a design a nudge. A nudge changes the way a choice is presented without forbidding any option or changing the costs much. They called their approach libertarian paternalism: people stay free to choose, but the default is set to what most would want on reflection. Thaler received the Nobel Prize in economics in 2017.",
+      "Governments took up the idea. Britain set up a Behavioural Insights Team in 2010. In India, the Give It Up campaign of 2015 asked better-off households to give up their LPG subsidy, and more than a crore of them did."
+    ],
+    "question": "If people usually stay with the option already chosen for them, who should choose it, and how?",
+    "reveals": "The default is never neutral. Someone designs every form, menu and process, and most people accept what they find. Good design can help people save, stay healthy or give, without forcing anyone. The same power can steer people towards choices that serve the designer, so the default needs to be chosen openly and in the chooser’s interest.",
+    "readings": [
+      [
+        "Libertarian paternalism",
+        "Thaler and Sunstein argue that since some default must exist, it should be the one people would pick if they thought carefully, with every option left open."
+      ],
+      [
+        "Inertia and effort",
+        "People keep the default because changing takes effort, because they assume it is recommended, and because they fear a loss more than they value a gain."
+      ],
+      [
+        "Choice architecture",
+        "Every organisation that designs a form or a website shapes choices. The question is not whether to influence people but how, and for whose benefit."
+      ]
+    ],
+    "breaks": [
+      "Critics say that nudges manipulate people and bypass their reason. A government that steers citizens quietly is less accountable than one that argues openly.",
+      "Effects are often small and fade. A nudge cannot fix a problem whose real cause is poverty, lack of access or bad incentives.",
+      "Firms use the same tools against customers, through pre-ticked boxes and subscriptions that are hard to cancel. India’s consumer protection authority issued guidelines against such dark patterns in 2023."
+    ],
+    "uses": [
+      "Public policy: Automatic enrolment in pensions or insurance, clear defaults on forms and reminders by text message are cheap ways to raise participation in welfare schemes.",
+      "Health and sanitation: Campaigns such as Swachh Bharat relied on social norms and messages as well as on building toilets.",
+      "Consumer protection: Rules against pre-ticked boxes and hidden charges protect people from nudges used against them.",
+      "Exam use: In GS-IV, use it for the ethics of persuasion, autonomy and public policy. In the Essay paper, use it for topics on freedom, the state and human behaviour."
+    ],
+    "related": [
+      "framing",
+      "scarcity",
+      "fineprice",
+      "skinner",
+      "cobra"
+    ],
+    "reading": [
+      [
+        "Eric Johnson and Daniel Goldstein, “Do Defaults Save Lives?”, Science (2003)",
+        "",
+        "https://doi.org/10.1126/science.1091721"
+      ],
+      [
+        "“Nudge theory”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/Nudge_theory"
+      ]
+    ]
+  },
+  "justworld": {
+    "source": "Melvin Lerner and Carolyn Simmons, “Observer’s reaction to the ‘innocent victim’”, Journal of Personality and Social Psychology (1966), and Melvin Lerner, The Belief in a Just World (1980)",
+    "period": "United States, 1966 to 1980",
+    "tradition": "Social psychology",
+    "type": "An experiment and a theory",
+    "setup": [
+      "The psychologist Melvin Lerner noticed something troubling in his students. When they heard about people who were poor or suffering, many assumed that the victims had somehow brought it on themselves.",
+      "In 1966 Lerner and Carolyn Simmons tested the idea. Students watched what they believed was a live experiment in which a young woman received painful electric shocks whenever she made a mistake. She was really an actor, and no shocks were given.",
+      "Some students were told that they could not help her. Others were told that she would suffer again in a second session. When the students could neither stop her suffering nor make up for it, they rated her as less likable and less worthy. Where she seemed most innocent, the rejection was strongest. Students who could reward her for her pain did not look down on her.",
+      "Lerner explained the result as a belief in a just world. People need to believe that the world is fair, that good people are rewarded and bad people punished. Undeserved suffering threatens the belief. When people cannot end the suffering, they protect the belief by deciding that the victim deserved it.",
+      "The belief is comforting. The belief lets people plan for the future and feel safe. Its cost is blame for those who suffer through no fault of their own."
+    ],
+    "question": "When people cannot explain or end suffering, do they blame the sufferer?",
+    "reveals": "The need to see the world as fair can make people unfair. Blaming the victim protects the observer’s sense of safety, at the victim’s expense. The finding explains a great deal of everyday cruelty towards the poor, the sick and victims of crime, and shows why compassion sometimes needs to be chosen deliberately against a comfortable belief.",
+    "readings": [
+      [
+        "Victim-blaming",
+        "The belief turns sympathy into judgement. The more helpless we feel, the more we look for the victim’s fault."
+      ],
+      [
+        "A useful illusion",
+        "Believing that the world will be fair to oneself helps people work towards long-term goals and cope with stress. The same belief turned on others becomes blame."
+      ],
+      [
+        "Fate and deserts",
+        "Many cultures explain misfortune as the result of past deeds. Beliefs of this kind can inspire good conduct, but they have also been used to treat the poor, the sick or lower castes as deserving their lot."
+      ]
+    ],
+    "breaks": [
+      "The belief is not always harmful. People who believe the world is fair to them tend to plan ahead and persevere.",
+      "Measures of the belief vary across cultures, and not everyone who holds it blames victims.",
+      "Some outcomes really are the result of choices, so not every judgement of responsibility is a bias."
+    ],
+    "uses": [
+      "Sexual violence: Questions about a victim’s clothes or movements are just-world thinking that moves blame from the offender to the victim.",
+      "Poverty and welfare: Calling help for the poor mere handouts often rests on the belief that people get what they deserve.",
+      "Public service: An officer who meets victims of disaster or crime should guard against quiet contempt, and treat need, not blame, as the basis for help.",
+      "Exam use: In GS-IV, use it for empathy, compassion towards the weaker sections, and prejudice in attitudes. In the Essay paper, use it for topics on justice, poverty and suffering."
+    ],
+    "related": [
+      "dissonance",
+      "samaritan",
+      "bystander",
+      "kisagotami",
+      "veil"
+    ],
+    "reading": [
+      [
+        "Melvin Lerner and Carolyn Simmons, “Observer’s reaction to the ‘innocent victim’: Compassion or rejection?”, Journal of Personality and Social Psychology (1966)",
+        "",
+        "https://doi.org/10.1037/h0023562"
+      ],
+      [
+        "“Just-world fallacy”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/Just-world_fallacy"
+      ]
+    ]
+  },
+  "pygmalion": {
+    "source": "Robert Rosenthal and Lenore Jacobson, Pygmalion in the Classroom (1968)",
+    "period": "San Francisco, the 1960s",
+    "tradition": "Educational psychology",
+    "type": "A field experiment",
+    "setup": [
+      "In a myth told by the Roman poet Ovid, the sculptor Pygmalion carves a statue of a woman so beautiful that he falls in love with it, and the goddess Venus brings it to life. In George Bernard Shaw’s play Pygmalion, a professor turns a flower seller into a lady by treating her as one.",
+      "In the 1960s the psychologist Robert Rosenthal and the school principal Lenore Jacobson tested whether expectations shape children in the same way. At an elementary school in San Francisco, which they called Oak School, they gave the pupils an intelligence test. They told the teachers that the test could pick out children who were about to bloom.",
+      "They then named about one child in five as a likely bloomer. The names were chosen at random. Nothing marked these children out except what the teachers had been told.",
+      "When the children were tested again months later, the named children had gained more in IQ than their classmates. The gap was largest in the first and second grades. Rosenthal and Jacobson concluded that the teachers’ higher expectations had changed how they treated these children, with more warmth, attention and challenge, and that the children had risen to meet them.",
+      "The finding became known as the Pygmalion effect. Its reverse, where low expectations pull performance down, is sometimes called the Golem effect."
+    ],
+    "question": "Do other people’s expectations make us what they expect?",
+    "reveals": "Expectations are not only predictions. They change behaviour: a teacher who expects more gives more, and a child who is expected to succeed tries harder. The process also works in reverse. Children, workers and whole communities can be held down by what others expect of them, which makes low expectations a hidden form of injustice.",
+    "readings": [
+      [
+        "The self-fulfilling prophecy",
+        "The sociologist Robert Merton described in 1948 how a false belief can make itself come true, as when rumours of a bank’s failure cause a run on the bank."
+      ],
+      [
+        "Labelling",
+        "Labels such as slow learner or backward shape how people are treated and how they see themselves."
+      ],
+      [
+        "Leadership",
+        "Managers who expect good work tend to get it. The effect is used in training leaders and teachers."
+      ]
+    ],
+    "breaks": [
+      "Later studies found the effect smaller than first reported, and sometimes absent. A major review in 2005 concluded that teachers’ expectations do matter, but modestly, and that the effect often fades.",
+      "The original study had flaws, such as unreliable test scores for the youngest children.",
+      "Expectations cannot replace resources. High hopes without books, teachers or food do not raise results."
+    ],
+    "uses": [
+      "First-generation learners: Children from poor or marginalised families are often expected to do less. Teachers who expect a great deal of every child help close the gap.",
+      "Girls and science: Low expectations of girls in mathematics can come true through discouragement.",
+      "The history of labelling: The colonial Criminal Tribes Act of 1871 branded whole communities as criminal by birth. The Act was repealed after independence and the communities were denotified in 1952, but the stigma has lasted.",
+      "Public service: Officers who expect citizens to cheat design suspicious processes, and citizens respond in kind. Trust is self-fulfilling too.",
+      "Exam use: In GS-IV, use it for attitude, prejudice, leadership and the role of educational institutions. In the Essay paper, use it for topics on education, human potential and social justice."
+    ],
+    "related": [
+      "marshmallow",
+      "meno",
+      "robberscave",
+      "dunningkruger",
+      "noblelie"
+    ],
+    "reading": [
+      [
+        "Robert Rosenthal and Lenore Jacobson, “Teachers’ expectancies: Determinants of pupils’ IQ gains”, Psychological Reports (1966), and Pygmalion in the Classroom (1968)",
+        "",
+        ""
+      ],
+      [
+        "“Pygmalion effect”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/Pygmalion_effect"
       ]
     ]
   },
@@ -4711,17 +5254,23 @@ const ATLAS_ENTRIES = {
     "tradition": "Indian philosophy (Upanishads)",
     "type": "A philosophical debate",
     "setup": [
-      "At a great sacrifice, King Janaka of Videha offered a prize of a thousand cows, with gold tied to their horns, to the scholar who knew the most about Brahman (ब्रह्मन्), the ultimate reality. The sage Yajnavalkya (याज्ञवल्क्य) told his student to drive the cows home. The other scholars challenged him. Only one of them, the woman philosopher Gargi Vachaknavi (गार्गी वाचक्नवी), challenged him twice.",
-      "In those days, people used a picture from weaving to describe the world. Just as cloth is woven on long threads, the whole world was believed to be woven on water.",
-      "Gargi started from this belief. She asked, “If the world is woven on water, what is water woven on?” Yajnavalkya answered, “On air.” Every time he answered, she asked the same question about his new answer. He named higher and higher bases: the sky, the sun, the moon, the stars, the gods and Prajapati (प्रजापति), the creator. At last he said that all of these rest on the worlds of Brahman.",
-      "Gargi then asked what the worlds of Brahman are woven on. Yajnavalkya stopped her. He warned, “Gargi, do not ask too much, or your head will fall off.” He added that no further question can be asked about Brahman. Gargi fell silent.",
-      "Later in the debate, Gargi rose again. She compared herself to a warrior holding two sharp arrows, and said that she had two questions for Yajnavalkya.",
-      "Her first question was, “What is the base of everything above the sky and below the earth, and of the past, the present and the future?” Yajnavalkya answered, “Space.” Her second question was, “Then what is space woven on?”",
-      "Yajnavalkya said that space is woven on the Imperishable, the reality that never decays. The Imperishable has no size, shape, colour or taste. By its command, the sun and the moon keep their places, and days, months and years follow their order. No one can see the Imperishable, yet it is what sees through every eye.",
-      "Gargi was satisfied. She told the other scholars that none of them would ever defeat Yajnavalkya in a debate about Brahman."
+      "King Janaka (जनक) of Videha held a great sacrifice, and learned Brahmins from the lands of the Kurus and the Panchalas came to it. Janaka wanted to know which of them knew Brahman (ब्रह्मन्), the ultimate reality, best. He had a thousand cows penned, and to the horns of each he tied ten padas of gold. “Venerable Brahmins,” he said, “let the one among you who knows Brahman best drive these cows away.”",
+      "None of the Brahmins dared. Then the sage Yajnavalkya (याज्ञवल्क्य) told his student Samashravas, “My dear, drive them home,” and the student did. The other Brahmins were angry. “How can he call himself the most learned of us?” they said.",
+      "Janaka’s own priest, Ashvala, questioned him first. “Yajnavalkya, are you the most learned among us?” Yajnavalkya replied, “We bow to the most learned. We only want the cows.” One after another, the scholars questioned him on the sacrifice, death, the breath, the Self and the world. Among them was a woman philosopher, Gargi Vachaknavi (गार्गी वाचक्नवी), the daughter of Vachaknu.",
+      "In those days, people used a picture from weaving to describe the world. Cloth is woven on long threads, the warp and the woof. In the same way, the whole world was said to be woven on water.",
+      "Gargi started from this belief. “If all this is woven on water,” she asked, “what is water woven on?” “On air, Gargi,” he said. “And air?” “On the worlds of the sky.” Every time he answered, she asked the same question about his new answer. He named higher and higher worlds, each resting on the next: the worlds of the gandharvas, the sun, the moon, the stars, the gods, Indra and Prajapati (प्रजापति), the creator. At last he said that all of these rest on the worlds of Brahman.",
+      "“Then on what are the worlds of Brahman woven?” Gargi asked. Yajnavalkya stopped her. “Gargi, do not ask too much, or your head will fall off. You are asking too much about a deity beyond whom no question should be asked.” Gargi fell silent.",
+      "The debate went on. Uddalaka Aruni, the teacher of the Chandogya story, questioned Yajnavalkya about the inner controller of all things, and lost. Then Gargi rose again. She asked the assembly for leave. “Venerable Brahmins, I will ask him two questions. If he answers them, none of you will ever defeat him in talk about Brahman.” The Brahmins told her to ask.",
+      "She turned to Yajnavalkya. “As a warrior of Kashi or Videha strings his bow and rises with two sharp arrows in his hand, so I rise against you with two questions. Answer them.”",
+      "Her first question asked about everything above the sky and below the earth, everything between them, and what people call the past, the present and the future. On what is all this woven? Yajnavalkya answered, “On space.” Gargi said, “I bow to you, Yajnavalkya, for answering this. Now be ready for the second.” Her second question was, “On what is space woven?”",
+      "Yajnavalkya said that space is woven on the Imperishable, the akshara (अक्षर), which never decays. The Brahmins describe the Imperishable only by what it is not. The Imperishable is neither coarse nor fine, neither short nor long. Shadow and darkness, taste and smell do not belong to it, and neither do eyes, ears, speech or mind. Nothing is inside the Imperishable and nothing is outside it.",
+      "By the command of the Imperishable, he said, the sun and the moon stand apart and keep their places. Heaven and earth stand apart. Moments, days, nights, months, seasons and years keep their order. Some rivers flow east from the snowy mountains, and others flow west.",
+      "A person may offer sacrifices and do penance in this world for many thousands of years. If he does not know the Imperishable, all of it comes to an end. Whoever leaves this world without knowing the Imperishable is to be pitied, and whoever leaves knowing it is a true Brahmin. The Imperishable is never seen, but it is the one who sees. Unheard, it hears. Unthought, it thinks. Unknown, it knows. “On the Imperishable, Gargi,” Yajnavalkya said, “space is woven, warp and woof.”",
+      "Gargi turned to the assembly. “Venerable Brahmins,” she said, “count yourselves lucky if you get away by bowing to him. None of you will ever defeat him in talk about Brahman.” Then she fell silent.",
+      "One scholar, Vidagdha Shakalya, ignored her advice and challenged Yajnavalkya anyway. He could not answer Yajnavalkya’s last question, and the Upanishad says that his head fell off."
     ],
     "question": "Can we keep asking what everything rests on, or must the questioning stop somewhere?",
-    "reveals": "The debate shows how far careful questioning can go. Gargi used one simple question again and again: what does this rest on? Every answer led to a new question, until the chain reached Brahman. Yajnavalkya’s first reply stopped the chain with a warning. His second reply gave a real answer. He pointed to the Imperishable, which is not one more thing in the chain but the reality on which every thing rests. The debate also shows a woman leading the questioning in the most important philosophical contest of her time, and announcing its result.",
+    "reveals": "The debate shows how far careful questioning can go. Gargi used one simple question again and again: what does this rest on? Every answer led to a new question, until the chain reached Brahman. Yajnavalkya’s first reply stopped the chain with a warning. His second reply gave a real answer. He pointed to the Imperishable, which is not one more thing in the chain but the ground on which everything rests, the seer that is never seen. The debate also shows a woman leading the questioning in the most important philosophical contest of her time. She asks with courage, thanks her opponent for a good answer, and is the one who announces the result.",
     "readings": [
       [
         "Vedanta reading",
@@ -4734,6 +5283,10 @@ const ATLAS_ENTRIES = {
       [
         "Gargi as a thinker",
         "Gargi and Maitreyi (मैत्रेयी) are the only two women who take part in philosophical discussion in the Upanishads. Gargi was the only scholar who challenged Yajnavalkya twice, and at the end she was the one who declared the result of the debate."
+      ],
+      [
+        "Debate as a way of knowing",
+        "The contest at Janaka’s court is an early example of the Indian tradition of public debate, later called shastrartha (शास्त्रार्थ). Ideas were tested in open argument before an assembly, and the loser was expected to accept the result. Gargi’s courtesy to her opponent is part of that tradition."
       ]
     ],
     "breaks": [
@@ -4745,6 +5298,7 @@ const ATLAS_ENTRIES = {
       "Freedom of inquiry: Universities and research depend on the right to ask difficult questions, even about established ideas.",
       "Scientific thinking: Science also keeps asking what each explanation depends on, from atoms, to particles, to fields.",
       "Accountability: Public officials should welcome hard questions from citizens, the media and legislators, instead of silencing them.",
+      "Women in public life: Gargi speaks in the king’s assembly, asks for its leave, and declares its result. She is a ready example for essays on women’s place in knowledge and public debate.",
       "Exam use: In GS-IV, use it for the spirit of inquiry, accountability and Indian moral thinkers. In the Essay paper, use it for topics on questioning, knowledge and the role of women in Indian thought."
     ],
     "related": [
@@ -4773,14 +5327,18 @@ const ATLAS_ENTRIES = {
     "tradition": "Indian philosophy (Upanishads)",
     "type": "A teaching story",
     "setup": [
-      "Prajapati (प्रजापति), the creator, announced that there is a Self, called the atman (आत्मन्), which never grows old or dies and feels no sorrow, hunger or thirst. He promised that whoever understands this Self gains everything worth having. The gods sent their king, Indra, to learn about this Self, and the demons sent their king, Virochana (विरोचन).",
-      "The two kings came to Prajapati carrying firewood in their hands, which was how a student asked a teacher to accept him. They lived with Prajapati as students for thirty-two years.",
-      "Then Prajapati told them to look into a pan of water, first as they were and then in fine clothes and jewellery. Each time, they saw their own bodies reflected. Prajapati said, “That is the Self.” Both kings went away satisfied. But as they left, Prajapati said that they had not found the Self.",
-      "Virochana told the demons that the body is the Self, so a person should serve and please only his own body. The Upanishad says that for this reason, selfish people who do not give to others and have no faith are called demons. The same people even dress their dead in fine clothes, because they believe that the dressed body will win the next world.",
-      "Indra saw a problem on his way home. The reflection is well dressed when the body is well dressed. But the reflection is also blind when the body is blind, and lame when the body is lame. When the body dies, the reflection disappears. So Indra went back, and Prajapati taught him for thirty-two more years.",
-      "Next, Prajapati said that the Self is the one who wanders happily in dreams. The dreaming self is not harmed when the body is blind or lame. But Indra saw that in dreams a person can still feel chased or attacked, feel pain and even weep. He returned again for thirty-two more years.",
-      "Then Prajapati said that the Self is what remains in deep sleep, when a person is calm and has no dreams. Nothing hurts a person in deep sleep. But Indra saw that in deep sleep a person knows nothing, not even that he exists, and such a state seems close to being destroyed. He returned once more and studied for five more years, making a hundred and one years in all.",
-      "At last, Prajapati gave the full teaching. The body is mortal and belongs to death, but the body is only the home of the Self, which has no body and never dies. As long as a person thinks that he is the body, he is caught by pleasure and pain. The eyes, the ears and the mind are only tools. The Self is the one who uses them, the one who knows, “Let me see,” “Let me hear” and “Let me think.”"
+      "Prajapati (प्रजापति), the creator, made an announcement. “The Self, the atman (आत्मन्), is free from evil, old age, death, grief, hunger and thirst. Its desires come true and its intentions come true. The Self must be sought and understood. Whoever finds it and knows it gains all worlds and all desires.”",
+      "Both the gods and the demons heard him. The gods sent their king, Indra, and the demons sent their king, Virochana (विरोचन). The two rivals set out separately, without a word to each other. Each came to Prajapati carrying firewood in his hands, which was how a student asked a teacher to accept him. They lived with Prajapati as students for thirty-two years.",
+      "Then Prajapati asked them what they wanted. They repeated his announcement and said that they had come to learn about the Self. Prajapati answered that the person seen in the eye is the Self, the immortal and fearless Brahman. They asked who, then, is the one seen in water and in a mirror. He said that the same one is seen in all of them.",
+      "He told them to look into a pan of water. They saw their whole selves, down to the hair and the nails. Then he told them to groom themselves, put on their finest clothes and ornaments, and look again. They saw themselves well groomed and well dressed. “That is the Self,” Prajapati said, and both kings went away content.",
+      "As they left, Prajapati said to himself, “They go without having found the Self. Whoever follows this teaching, god or demon, will perish.”",
+      "Virochana went home to the demons and taught them that the body is the Self. “Only the body is to be made happy here,” he said, “and only the body is to be served. Whoever pleases and serves the body gains both this world and the next.” The Upanishad says that for this reason, a person who does not give, has no faith and makes no offering is still called a demon. Followers of the teaching dress the bodies of their dead in fine clothes and ornaments, believing that the dressed body will win the next world.",
+      "Indra saw a problem before he reached the gods. The reflection is well dressed when the body is well dressed. But the reflection is also blind when the body is blind, and lame when the body is lame. When the body dies, the reflection dies with it. “I see nothing good in this,” he said, and went back with firewood in his hands. Prajapati asked, “Maghavan, you left content. Why have you come back?” Indra told him his doubt, and Prajapati kept him for thirty-two more years.",
+      "Next, Prajapati said that the Self is the one who moves about happily in dreams. The dreaming self is not blind when the body is blind, and is not hurt when the body is hurt. But Indra saw that in dreams a person can still feel chased or struck, feel pain and even weep. He went back again, and studied for thirty-two more years.",
+      "Then Prajapati said that the Self is what remains in deep sleep, when a person is calm and has no dreams. Nothing hurts a person in deep sleep. But Indra saw that in deep sleep a person knows nothing, not even that he exists, and such a state seems close to being destroyed. He returned once more and studied for five more years. In all, Indra lived with Prajapati as a student for a hundred and one years.",
+      "At last, Prajapati gave the full teaching. “The body is mortal and held by death. But the body is the home of the Self, which has no body and never dies. As long as a person takes himself to be the body, he is held by pleasure and pain. Pleasure and pain do not touch one who is free of the body.”",
+      "Wind, clouds, lightning and thunder have no bodies, Prajapati said. They rise from the sky, reach the highest light and appear in their own form. In the same way, the calm Self rises from the body, reaches the highest light and appears in its own form.",
+      "The eye, the ear and the mind are only tools. The Self is the one who knows, “Let me see,” “Let me hear” and “Let me think.” The mind is its divine eye. The gods, the Upanishad says, worship this Self, and so they gained all worlds and all desires."
     ],
     "question": "Are you your body, or something more?",
     "reveals": "The story tests four answers to the question “What am I?” The first answer is the body. The second is the mind that dreams. The third is deep sleep, where there is peace but no awareness. The final answer is the awareness that uses the body and the mind but is not limited to them. Virochana stopped at the first answer because it suited him. Indra tested each answer against ordinary experience and kept asking until he reached the truth. The story also shows that a person’s belief about the self shapes how he lives. Someone who believes that he is only a body will live for his own comfort and display.",
@@ -4835,19 +5393,26 @@ const ATLAS_ENTRIES = {
     "tradition": "Indian philosophy (Upanishads)",
     "type": "A teaching dialogue between a father and his son",
     "setup": [
-      "Uddalaka Aruni (उद्दालक आरुणि) sent his son Shvetaketu (श्वेतकेतु) away to study the Vedas. Shvetaketu left home at the age of twelve. He studied for twelve years and learned all the Vedas. When he came home at twenty-four, he was proud and thought that he was very learned.",
-      "His father asked him, “Did you ask your teachers for the teaching by which the unheard becomes heard, the unthought becomes thought, and the unknown becomes known?” Shvetaketu did not know any such teaching. He asked his father to explain it.",
-      "Uddalaka said, “By knowing one lump of clay, you know everything that is made of clay. The things made from it differ only in name. The truth is that they are all clay.” He gave similar examples with metal ornaments and iron tools. In the same way, he said, there is one reality behind everything. In the beginning, there was only Being, one without a second.",
-      "Then Uddalaka gave more examples. He asked his son to bring a fruit from a banyan tree and break it open. Inside were tiny seeds. He asked him to break one seed. Shvetaketu said, “I see nothing.” His father said, “From this fine essence that you cannot see, this great banyan tree grows.”",
-      "Next, he told his son to put some salt in water and leave it overnight. In the morning, the salt could not be seen. But the water tasted salty at the top, in the middle and at the bottom. The salt was present everywhere, though it could not be seen.",
-      "After each example, Uddalaka said, “That fine essence is the Self of the whole world. That is the truth. That is the Self. That you are, Shvetaketu.” In Sanskrit, the last words are tat tvam asi (तत्त्वमसि). The father repeats them nine times."
+      "Uddalaka Aruni (उद्दालक आरुणि) had a son named Shvetaketu (श्वेतकेतु). When the boy was twelve, his father told him, “Go and live as a student. No one in our family has ever been a Brahmin by birth alone, without learning.” So Shvetaketu went to a teacher and studied the Vedas for twelve years.",
+      "He came home at twenty-four, proud of his learning and sure that he was wise. His father saw the pride and asked him, “Did you ask your teachers for the teaching by which the unheard becomes heard, the unthought becomes thought, and the unknown becomes known?” Shvetaketu had never heard of such a teaching. “My teachers cannot have known it,” he said, “or they would have told me. Please, sir, teach it to me yourself.”",
+      "Uddalaka began with three examples. By knowing one lump of clay, you know everything made of clay. A pot and a plate differ only in name and shape, and the truth is that both are clay. In the same way, by knowing one metal ornament you know every ornament of that metal, and by knowing one iron nail-cutter you know everything made of iron.",
+      "Then he spoke of the one thing behind everything. “In the beginning,” he said, “there was only Being, one without a second.” Some people taught that the world began from non-being, and Uddalaka rejected the idea. “How could being come from non-being?” he asked. Being thought, “May I become many.” Being then produced heat, heat produced water, and water produced food. Everything in the world is a mixture of these three.",
+      "He showed how the three make up a person. What we eat becomes flesh, and its finest part becomes the mind. What we drink becomes blood, and its finest part becomes breath. So the mind is made of food. To prove it, he told his son to eat nothing for fifteen days and to drink only water. When Shvetaketu came back, he could not recall the Vedas. His father told him to eat, and after eating he remembered everything. Uddalaka compared the mind to a great fire burned down to one ember the size of a firefly. Fed with straw, the ember blazes again. Fed with food, the mind comes back to life.",
+      "Then Uddalaka gave a series of examples, and after each one he said the same words. Bees gather nectar from many trees and make it into one honey. In the honey, no drop can say, “I came from this tree.” Rivers flowing east and west enter the ocean and become the ocean. There, no river knows, “I am this river.” In the same way, all creatures come from Being, but they do not know it.",
+      "A great tree struck at its root, its middle or its top bleeds sap but lives on, because life fills it. When life leaves one branch, that branch dries up. “The body dies when life leaves it,” Uddalaka said, “but life itself does not die.”",
+      "He asked his son to bring a fruit from a banyan tree and break it open. Inside were tiny seeds. He asked him to break one seed. “What do you see?” “Nothing at all, sir.” His father said, “From this fine essence that you cannot see, this great banyan grows. Believe me, my son.”",
+      "Next, he told his son to put some salt in water and leave it overnight. In the morning the salt could not be seen, yet the water tasted salty at the top, in the middle and at the bottom. The salt was present everywhere, though no one could see it.",
+      "Uddalaka then spoke of the teacher. Suppose robbers bring a man from Gandhara with his eyes covered and leave him in a lonely place. He wanders and cries for help. If someone uncovers his eyes and tells him the way, he asks from village to village and reaches home. In the same way, a person who has a teacher finds the way to the truth.",
+      "At a deathbed, relatives gather and ask, “Do you know me?” The dying man knows them until his speech merges into his mind, his mind into his breath, his breath into heat, and heat into the highest Being. After that he knows no one.",
+      "The last example was an old trial by ordeal. A man accused of theft is brought in, and an axe is heated for him. If he is guilty and denies it, he covers himself with untruth, grasps the axe and is burned. If he is innocent, he covers himself with truth, grasps the axe, is not burned and goes free. The whole world, Uddalaka said, rests on truth in the same way.",
+      "After each of these examples, Uddalaka said, “That fine essence is the Self of the whole world. That is the truth. That is the Self. That you are, Shvetaketu.” In Sanskrit the last words are tat tvam asi (तत्त्वमसि). The father says them nine times, and at the end Shvetaketu understood."
     ],
     "question": "What is the one reality behind all the different things we see, and how are you related to it?",
-    "reveals": "Uddalaka teaches that the many things of the world are different forms of one reality, just as pots are forms of clay. This reality is subtle, like the essence in a seed or salt in water. It cannot be seen, but it is everywhere. The final teaching is personal. That reality is not somewhere far away. It is your own deepest Self. The story also teaches humility. A proud young man who knew many texts had not yet learned the one thing that explains them all.",
+    "reveals": "Uddalaka teaches that the many things of the world are different forms of one reality, just as pots are forms of clay. The reality is subtle, like the essence in a seed or salt in water, and present everywhere. The final teaching is personal: that reality is not far away but is your own deepest Self. The story also teaches humility. A proud young man who knew many texts had not yet learned the one thing that explains them all. And Uddalaka ends his lesson with truth, not doctrine: the world rests on truth as the innocent man is saved by it.",
     "readings": [
       [
         "Advaita Vedanta (Shankaracharya, शंकराचार्य)",
-        "Tat tvam asi means that the individual self and Brahman (ब्रह्मन्) are completely identical. It is one of the four great sayings, the mahavakyas, of Vedanta."
+        "Tat tvam asi means that the individual self and Brahman (ब्रह्मन्) are completely identical. The phrase is one of the four great sayings, the mahavakyas, of Vedanta."
       ],
       [
         "Vishishtadvaita (Ramanuja, रामानुज)",
@@ -4856,6 +5421,10 @@ const ATLAS_ENTRIES = {
       [
         "Dvaita (Madhva)",
         "Madhva read the phrase differently, as atat tvam asi, which means “you are not that”. For him, the individual self and God are always distinct."
+      ],
+      [
+        "A teacher’s method",
+        "Uddalaka never asks his son to accept a claim on authority alone. He sets small experiments: break the seed, taste the water, go without food. The son learns by testing, and the refrain ties every test to the same conclusion."
       ],
       [
         "Ethical reading",
@@ -4869,10 +5438,11 @@ const ATLAS_ENTRIES = {
     ],
     "uses": [
       "Compassion and service: If the same Self is in all, then serving others is a natural duty. Swami Vivekananda used this idea to call for service to the poor.",
-      "Unity in diversity: The idea supports respect for all communities as expressions of one humanity.",
-      "Education: Uddalaka teaches principles, not only facts. Good education helps students understand the idea that explains many facts.",
-      "Humility: A person with many degrees may still lack real understanding, as Shvetaketu did.",
-      "Exam use: In GS-IV, use it for compassion, humility, tolerance and Indian moral thinkers. In the Essay paper, use it for topics on unity in diversity, knowledge and wisdom, and education."
+      "Merit over birth: Uddalaka sends his son to study because no one in their family has been a Brahmin by birth alone. Standing has to be earned by learning.",
+      "Unity in diversity: The idea supports respect for all communities as expressions of one humanity, as rivers become one ocean.",
+      "Education: Uddalaka teaches principles and proves them by experiment. Good education helps students grasp the idea that explains many facts.",
+      "Truthfulness: The ordeal of the hot axe makes truth the ground of the world, and gives an Indian source for integrity in public life.",
+      "Exam use: In GS-IV, use it for compassion, humility, truthfulness, tolerance and Indian moral thinkers. In the Essay paper, use it for topics on unity in diversity, knowledge and wisdom, and education."
     ],
     "related": [
       "indra",
@@ -5002,7 +5572,8 @@ const ATLAS_ENTRIES = {
       "butterflydream",
       "raft",
       "cave",
-      "nasreddin"
+      "nasreddin",
+      "greattradition"
     ],
     "reading": [
       [
@@ -5864,6 +6435,64 @@ const ATLAS_ENTRIES = {
         "“Vedanta, Advaita”, Internet Encyclopedia of Philosophy",
         "",
         "https://iep.utm.edu/advaita-vedanta/"
+      ]
+    ]
+  },
+  "greattradition": {
+    "source": "Robert Redfield, Peasant Society and Culture (1956), and McKim Marriott, “Little Communities in an Indigenous Civilization”, in Village India (1955)",
+    "period": "The United States and India, the 1950s",
+    "tradition": "Social anthropology and sociology",
+    "type": "A concept. A concept is a way of seeing and naming a pattern.",
+    "setup": [
+      "The American anthropologist Robert Redfield studied villages in Mexico and elsewhere. In 1956 he proposed that every great civilisation holds two kinds of culture at once.",
+      "The great tradition is the culture of the reflective few, kept in texts, temples, schools and cities by priests, scholars and teachers. The little tradition is the culture of the many who live in villages, kept in local gods, festivals, songs, stories and customs passed on by word of mouth.",
+      "The two are not separate. Ideas flow down from the great tradition into the villages, and village practices rise up into the great tradition. Redfield saw a civilisation as the constant exchange between the two.",
+      "The American anthropologist McKim Marriott applied the idea to India. He studied a village in Uttar Pradesh that he called Kishan Garhi, and named the two directions of flow. Universalisation is the rise of a local practice into the great tradition. He found, for example, that a local festival called Saluno was coming to be identified with Raksha Bandhan. Parochialisation is the opposite: a Sanskritic god or ritual takes on a local form, a local name and local meanings.",
+      "Milton Singer carried the idea into a city, in his studies of Madras. Among Indian sociologists, Yogendra Singh used it in Modernization of Indian Tradition (1973). The concept sits beside M. N. Srinivas’s idea of Sanskritisation, in which lower castes adopt the customs of higher castes in order to rise in status."
+    ],
+    "question": "How do a civilisation’s scriptures and scholars relate to the beliefs and customs of ordinary villagers?",
+    "reveals": "The idea explains how India can be one civilisation and many cultures at once. The shared epics, gods and festivals of the great tradition are lived in thousands of local forms, and local practices keep feeding the shared stock. Neither level is complete without the other. The concept also raises a question of power: which traditions count as great, and who decides.",
+    "readings": [
+      [
+        "Universalisation and parochialisation",
+        "Marriott’s two processes describe the traffic between village and civilisation, upward and downward, so that neither stays fixed."
+      ],
+      [
+        "Sanskritisation",
+        "Srinivas showed how groups use the customs of the great tradition to claim higher status. The great tradition is also a ladder of prestige."
+      ],
+      [
+        "A critique from below",
+        "Dalit, tribal and feminist scholars argue that the great tradition often meant the Brahmanical, text-based one, and that calling folk cultures little belittles them."
+      ]
+    ],
+    "breaks": [
+      "The two labels are too neat. Real traditions form a continuum, and many regional traditions, such as Tamil literature or Bhakti poetry, are great in their own right.",
+      "The word little can suggest that folk culture is lower or less valuable than the culture of texts.",
+      "The model says little about power. Absorbing local gods into a great tradition can erase a community’s own identity, as critics argue has happened to some tribal religions."
+    ],
+    "uses": [
+      "Unity in diversity: The Ramayana and the Mahabharata live in hundreds of regional and folk versions, from the Tamil Kamba Ramayanam to village Ramlilas and tribal retellings.",
+      "Cultural policy: Protecting folk arts, languages and oral traditions matters as much as protecting classical ones.",
+      "Tribal identity: Debates over whether tribal faiths are part of Hinduism turn on the flow between great and little traditions.",
+      "Exam use: In GS-I, use it for Indian society, culture and the unity of Indian civilisation. In GS-IV, use it for tolerance and respect for diversity. In the Essay paper, use it for topics on culture, tradition and modernity."
+    ],
+    "related": [
+      "anekanta",
+      "blindmen",
+      "nasreddin",
+      "raft"
+    ],
+    "reading": [
+      [
+        "“Robert Redfield”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/Robert_Redfield"
+      ],
+      [
+        "“Sanskritisation”, Wikipedia",
+        "",
+        "https://en.wikipedia.org/wiki/Sanskritisation"
       ]
     ]
   },
