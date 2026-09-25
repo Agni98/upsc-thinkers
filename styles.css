@@ -1010,17 +1010,26 @@ html[data-theme="dark"] .cont-art{filter:grayscale(.4) brightness(.85)}
 }
 .backlink:hover{border-color:var(--accent);background:var(--accent-soft)}
 
-.essay-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
-.essay-card{
-  text-align:left;padding:18px 20px;border:1px solid var(--line);border-radius:var(--radius);
-  background:var(--panel);transition:.18s;display:flex;flex-direction:column;gap:5px;
-}
-.essay-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:var(--accent)}
-.ec-theme{
-  font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--accent);
-}
-.essay-card b{font-family:var(--serif);font-size:16px;font-weight:600;line-height:1.3;color:var(--ink)}
-.ec-meta{font-size:11.5px;color:var(--ink-3)}
+/* ---------------- The Model Essays page ----------------
+   The maps' look: a header band with Durer's Saint Jerome in His Study (1514,
+   CC0, National Gallery of Art), then the essays by theme as cards. */
+.art-jerome{background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Albrecht_D%C3%BCrer%2C_Saint_Jerome_in_His_Study%2C_1514%2C_NGA_6642.jpg/960px-Albrecht_D%C3%BCrer%2C_Saint_Jerome_in_His_Study%2C_1514%2C_NGA_6642.jpg")}
+.hero-sm .hero-art.art-jerome{background-position:50% 55%}
+.es-theme{display:flex;align-items:center;gap:9px}
+.es-theme .ic{width:20px;height:20px;color:var(--saffron-ink)}
+.escard-open{
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+  font:italic 14.5px/1.55 var(--read);color:var(--ink-2)}
+.escard .scard-top > .ic{width:18px;height:18px}
+.escard.done .scard-top em{color:var(--accent);font-weight:700}
+.scard-top-c small{font:600 11.5px/1 var(--sans);color:var(--ink-3)}
+/* an essay: where it sits, and what it holds, before the argument starts */
+.es-crumbs{margin:0 0 14px;max-width:760px}
+.es-stats{
+  display:flex;flex-wrap:wrap;gap:6px 16px;margin:0 0 16px !important;padding:0 0 16px;
+  border-bottom:1px solid var(--line);font:13px/1.4 var(--sans) !important;color:var(--ink-3) !important}
+.es-stats b{font-weight:700;color:var(--head)}
+.essay-stories .arelated{margin:6px 0 0}
 
 /* switch between the thinker-led and editorial versions */
 .modebar{display:flex;gap:6px;margin-bottom:14px}
@@ -1056,7 +1065,8 @@ html[data-theme="dark"] .cont-art{filter:grayscale(.4) brightness(.85)}
   border-bottom:1px solid var(--line);
 }
 .essay-doc p{margin-bottom:1.05em}
-.essay-doc p:last-child{
+/* the conclusion, set apart */
+.essay-doc p.es-close{
   margin-bottom:0;margin-top:24px;padding:15px 18px;border-radius:0 9px 9px 0;
   border-left:4px solid var(--gold);background:var(--gold-soft);font-weight:500;
 }

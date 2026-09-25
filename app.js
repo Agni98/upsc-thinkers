@@ -1381,10 +1381,22 @@ function renderEssay(topic, mode){
   const m = avail.find(x => x.id === mode) || avail[0];
   const paras = e[m.p], title = e[m.t];
   const n = paras.reduce((a, x) => a + x.split(/\s+/).length, 0);
+  const inMap = state.view === "themes";
+  const ti = ESSAY_THEMES.findIndex(t => (t.essays || []).includes(topic));
+  const theme = ESSAY_THEMES[ti];
+  // an essay read from the list counts as read in its theme, and is where the reader stopped
+  if (!inMap && theme) markRead(readKey("themes", ti + 1, "e:" + topic), { t:title, h:theme.t, where:"Model Essays" });
+  const order = essayOrder(), at = order.indexOf(topic);
+  const move = (k, fwd) => k
+    ? `<button class="mv${fwd ? " next" : ""}" data-essay="${esc(k)}"><em>${fwd ? "Next essay" : "Previous essay"}</em><span>${esc(ESSAYS[k].et || ESSAYS[k].t)}</span></button>`
+    : `<span class="mv-end">${fwd ? "The last essay" : "The first essay"}</span>`;
   return `
-    ${state.view === "themes"
-      ? ""
-      : `<button class="backlink" data-view="essays">&larr; All model essays</button>`}
+    ${inMap ? "" : `
+    <div class="rd-crumbs es-crumbs">
+      <button class="rd-up" data-view="essays">Model Essays</button>
+      <span class="rd-sep" aria-hidden="true">/</span>
+      <span>Essay ${at + 1} of ${order.length}</span>
+    </div>`}
     <article class="essay-doc">
       <div class="essay-kicker">${esc(themeOfEssay(topic) || topic)}</div>
       ${ avail.length > 1 ? `<div class="modebar" role="group" aria-label="Essay style">
@@ -1392,16 +1404,32 @@ function renderEssay(topic, mode){
              data-mode="${x.id}" data-topic="${esc(topic)}">${x.label}</button>`).join("")}
         </div>` : "" }
       <h1>${esc(title)}</h1>
-      <div class="essay-meta">${m.label} &middot; ${n} words &middot; ${paras.length} paragraphs</div>
+      <p class="es-stats">
+        <span><b>${n.toLocaleString("en-IN")}</b> words</span>
+        <span><b>${paras.length}</b> paragraphs</span>
+        <span><b>${Math.round(n / 200)}</b> minutes</span>
+        ${essayServes(e) ? `<span>answers <b>${essayServes(e)}</b> ${essayServes(e) === 1 ? "topic" : "topics"}</span>` : ""}
+        ${(e.atlas || []).length ? `<span>uses <b>${e.atlas.length}</b> ${e.atlas.length === 1 ? "story" : "stories"}</span>` : ""}
+      </p>
       <p class="mode-note">${esc(e.note || "") || m.note}</p>
       ${servesHTML(e)}
-      ${paras.map(x => `<p>${rich(x)}</p>`).join("")}
+      ${paras.map((x, i) => `<p${i === paras.length - 1 ? ' class="es-close"' : ""}>${rich(x)}</p>`).join("")}
       ${essayStoriesHTML(e)}
+      ${inMap ? "" : `<nav class="sm-move" aria-label="Previous and next essay">${move(order[at - 1], false)}${move(order[at + 1], true)}</nav>`}
     </article>`;
 }
 
-/* The stories from the Thought Atlas that an essay draws on. Inside the theme
-   map they open beside the essay; anywhere else they open in the atlas. */
+/* Every essay in theme order, for paging from one to the next. */
+function essayOrder(){
+  const out = [];
+  if (typeof ESSAYS !== "undefined")
+    ESSAY_THEMES.forEach(t => (t.essays || []).forEach(k => { if (ESSAYS[k]) out.push(k); }));
+  return out;
+}
+
+/* The stories from the Thought Atlas that an essay draws on, as the atlas
+   shows its related entries. Inside the theme map they open beside the essay;
+   anywhere else they open in the atlas. */
 function essayStoriesHTML(e){
   if (typeof ATLAS === "undefined" || !(e.atlas || []).length) return "";
   const ix = atlasById();
@@ -1412,35 +1440,95 @@ function essayStoriesHTML(e){
     <aside class="essay-stories">
       <b>Stories this essay uses</b>
       <p>Each is told in full in the Thought Atlas: the story, what it shows, how it has been read and where it breaks.</p>
-      <div class="pills">${ids.map(id => theme && (theme.atlas || []).includes(id)
-        ? `<button class="pill" data-sel="a:${id}">${esc(ix[id].t)}</button>`
-        : `<button class="pill" data-to="atlas|0|${id}">${esc(ix[id].t)}</button>`).join("")}</div>
+      <div class="arelated">${ids.map(id => `
+        <button class="arel" ${theme && (theme.atlas || []).includes(id) ? `data-sel="a:${id}"` : `data-to="atlas|0|${id}"`}>
+          ${atlasKindHTML(ix[id])}<b>${esc(ix[id].t)}</b><span>${esc(ix[id].q)}</span></button>`).join("")}
+      </div>
     </aside>`;
 }
 
-/* Index of every theme that has an essay. */
-function renderEssayList(){
-  const rows = [];
-  if (typeof ESSAYS !== "undefined")
-    ESSAY_THEMES.forEach(t => (t.essays || []).forEach(k => { if (ESSAYS[k]) rows.push({ theme:t.t, key:k }); }));
+/* ---- The Model Essays page ----
+   The maps' look: a header band, how an essay is built, then the essays by
+   theme, each card opening with the essay's own first sentence. */
+const ESSAY_PARTS = [
+  ["file",    "Written to answer", "The past topics the essay is written for; together the essays cover every one"],
+  ["layers",  "The argument",      "1,500 to 1,900 words: evidence, counter-argument and the turn to a conclusion"],
+  ["bulb",    "The conclusion",    "The last paragraph, set apart, says where the argument lands"],
+  ["compass", "Stories it uses",   "Atlas entries the essay draws on, each told in full"]
+];
+
+function essayCardHTML(k, ti){
+  const e = ESSAYS[k], body = essayBody(e);
+  const n = body.reduce((a, x) => a + x.split(/\s+/).length, 0);
+  const first = String(body[0] || "").replace(/\*\*/g, "").match(/^.*?[.?!](?=\s|$)/);
+  const Q = pyqText(), serves = (e.serves || []).filter(q => Q[q]);
+  const done = isRead(readKey("themes", ti + 1, "e:" + k));
   return `
-    <div class="sec-head">
-      <h3>Model Essays</h3>
-      <p>One full essay per theme, showing what a model paragraph becomes once
-         evidence, counter-argument and a conclusion are added to it.</p>
+      <button class="scard escard${done ? " done" : ""}" data-essay="${esc(k)}">
+        <span class="scard-top">${ico("nib")}<em>${done ? "Read" : Math.round(n / 200) + " min read"}</em></span>
+        <b>${esc(e.et || e.t)}</b>
+        ${first ? `<span class="escard-open">${esc(first[0])}</span>` : ""}
+        <span class="scard-stats">
+          <span><b>${n.toLocaleString("en-IN")}</b>words</span>
+          <span><b>${serves.length}</b>${serves.length === 1 ? "topic" : "topics"}</span>
+          <span><b>${(e.atlas || []).length}</b>${(e.atlas || []).length === 1 ? "story" : "stories"}</span>
+        </span>
+        ${serves.length ? `<span class="scard-top-c"><i>Answers</i>${esc(Q[serves[0]].q)}${
+          serves.length > 1 ? ` <small>and ${serves.length - 1} more</small>` : ""}</span>` : ""}
+      </button>`;
+}
+
+function renderEssayList(){
+  if (typeof ESSAYS === "undefined" || !essayOrder().length)
+    return `<div class="empty"><b>Nothing yet</b>Essays are added per theme in essays.js.</div>`;
+  const s = siteStats(), order = essayOrder();
+  const words = order.map(k => essayBody(ESSAYS[k]).join(" ").split(/\s+/).length);
+  const lo = Math.min.apply(null, words), hi = Math.max.apply(null, words);
+  const answered = order.reduce((a, k) => a + (ESSAYS[k].serves || []).length, 0);
+  const read = ESSAY_THEMES.reduce((a, t, i) => a + (t.essays || []).filter(k => isRead(readKey("themes", i + 1, "e:" + k))).length, 0);
+  return `
+  <section class="hero hero-sm">
+    <div class="hero-art art-jerome" aria-hidden="true"></div>
+    <div class="hero-body">
+      <p class="hero-k">Essay Paper</p>
+      <h2 class="hero-t">Model Essays</h2>
+      <p class="hero-s">${order.length} full essays, two for each theme and three where a theme needs it.
+         Each is built from its theme's model paragraphs and written to answer named past topics:
+         between them, all ${answered}.</p>
+      <p class="hero-note">${lo.toLocaleString("en-IN")} to ${hi.toLocaleString("en-IN")} words each, in one
+         editorial register: the argument is carried by evidence, and a thinker appears only where the idea
+         does real work.${read ? ` You have read ${read} of ${order.length}.` : ""}</p>
     </div>
-    ${ rows.length ? `<div class="essay-grid">${rows.map(r => {
-        const e = ESSAYS[r.key];
-        const n = essayBody(e).reduce((a, x) => a + x.split(/\s+/).length, 0);
-        const q = essayServes(e);
-        return `
-          <button class="essay-card" data-essay="${esc(r.key)}">
-            <span class="ec-theme">${esc(r.theme)}</span>
-            <b>${esc(e.t || e.et)}</b>
-            <span class="ec-meta">${n} words${q ? " &middot; answers " + q + " past question" + (q > 1 ? "s" : "") : ""}</span>
-          </button>`;
-      }).join("")}</div>`
-      : `<div class="empty"><b>Nothing yet</b>Essays are added per theme in essays.js.</div>` }`;
+    <div class="hero-aside">
+      <button data-essay="${esc(order[0])}"><b>${order.length}</b><span>essays, from the first</span></button>
+      <button data-view="pyq"><b>${s.topics}</b><span>past topics answered</span></button>
+      <button data-to="themes|1|p:0"><b>${s.paras}</b><span>model paragraphs behind them</span></button>
+    </div>
+  </section>
+
+  <div class="home">
+    <section class="atl-guide" aria-label="How every essay is built">
+      <h3 class="hb-t">How every essay is built</h3>
+      <ol class="atl-steps">${ESSAY_PARTS.map((p, i) => `
+        <li><span class="atl-step-ico">${ico(p[0])}</span>
+            <b><i>${i + 1}</i>${esc(p[1])}</b><span>${esc(p[2])}</span></li>`).join("")}
+      </ol>
+    </section>
+
+    ${ESSAY_THEMES.map((t, i) => {
+      const ks = (t.essays || []).filter(k => ESSAYS[k]);
+      if (!ks.length) return "";
+      return `
+    <section class="hblock es-group">
+      <div class="hb-head">
+        <div><h3 class="hb-t es-theme">${ico(t.ic || "target")}${esc(t.t)} <small>${ks.length}</small></h3>
+          <p class="hb-s">${esc(t.s)}</p></div>
+        <button class="hb-link" data-to="themes|${i + 1}|p:0">Model paragraphs ${ico("arrow")}</button>
+      </div>
+      <div class="scards">${ks.map(k => essayCardHTML(k, i)).join("")}</div>
+    </section>`;
+    }).join("")}
+  </div>`;
 }
 
 /* Question id ("2023B4") -> the question as it was set. */
@@ -3125,7 +3213,12 @@ document.addEventListener("click", e => {
   if (mb) { state.mode = mb.dataset.mode; state.view = "essay:" + mb.dataset.topic; render(); return; }
 
   const es = e.target.closest("[data-essay]");
-  if (es) { state.view = "essay:" + es.dataset.essay; render(); return; }
+  if (es) {
+    state.view = "essay:" + es.dataset.essay;
+    document.getElementById("sidebar").classList.remove("open");
+    render();
+    return;
+  }
 
   const oa = e.target.closest("[data-open-at]");
   if (oa) {

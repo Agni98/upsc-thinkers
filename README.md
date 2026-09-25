@@ -89,6 +89,18 @@ Its first page follows the same pattern:
 A theme page shows what the theme holds. Both maps' charts come from one function,
 `stackChartHTML` in app.js.
 
+### Model essays
+
+The Model Essays page has the same header band, with Dürer's *Saint Jerome in His Study* (CC0).
+It shows a guide to how every essay is built, then the essays grouped by theme. Each card
+opens with the essay's own first sentence, followed by its word count, the topics it answers
+(with the first one quoted), the stories it uses, and whether you have read it.
+
+An essay page opens with where it sits (*Essay 3 of 19*) and what it holds: words, paragraphs,
+reading time, topics answered and stories used. The conclusion is set apart in a box, the
+stories it uses are cards, and previous and next move through the essays in theme order. An
+essay read here counts as read in its theme on the Essay Theme Map.
+
 ### Reading the atlas
 
 The atlas opens on an **overview**. It first shows how every entry is built, in eight numbered
