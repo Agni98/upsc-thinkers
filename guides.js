@@ -4523,5 +4523,912 @@ const GUIDES = {
    "stepsIntro": "Use the following sequence when a question concerns perception, reality or reason.",
    "formula": "Accept that perception reflects the perceiver, and use your reactions to know yourself. Keep reality in view, test perceptions against evidence, and move from shadows towards clearer sight."
   }
+ ],
+ "Justice, Equality and the Excluded": [
+  {
+   "thinkers": [
+    [
+     "Rawls",
+     "justice in the basic structure",
+     [
+      "John Rawls gives the structural argument. He held that justice is the first virtue of social institutions. Principles chosen behind a veil of ignorance would allow inequality only where it benefits the least advantaged. Rawls called this the difference principle.",
+      "The principle concerns the basic structure of society, not individual generosity. A society whose institutions distribute fairly produces fewer people who need rescuing. Charity, however admirable, arrives after the distribution has already failed, and it leaves the arrangement that caused the failure untouched."
+     ],
+     "the answer needs to show why institutions, not individual generosity, decide how much charity a society needs."
+    ],
+    [
+     "Ambedkar",
+     "rights, not relief",
+     [
+      "Ambedkar made the same point with a sharper Indian edge. He refused to accept relief as a substitute for rights. A benefit that depends on the goodwill of the giver leaves the recipient in the same subordination that produced their condition.",
+      "Constitutional guarantees, reservation and legal remedies were instruments of dignity for Ambedkar because they do not require anyone to be kind. A right can be claimed. A favour can only be requested."
+     ],
+     "the question concerns dignity, entitlement or the difference between welfare and rights."
+    ],
+    [
+     "Nozick",
+     "the entitlement objection",
+     [
+      "Robert Nozick supplies the objection that must be answered. His entitlement theory holds that a distribution is just if it arose from just acquisition and voluntary transfer. Redistribution is then a violation, whatever pattern it produces.",
+      "The reply is that original acquisitions in India were rarely just. Land, schooling and entry into occupations were denied to many by caste and custom. Nozick’s own principle of rectification, which requires past injustice to be corrected, concedes the point."
+     ],
+     "the answer needs to present and answer the libertarian case against redistribution."
+    ],
+    [
+     "Gandhi",
+     "trusteeship",
+     [
+      "Gandhi’s idea of trusteeship attempts a middle path. The wealthy would hold their property on behalf of society and use it for the common good.",
+      "The idea deserves an honest place, along with its weakness. Trusteeship depends on the conscience of the person holding the property. Dependence on conscience is exactly what Ambedkar objected to, because it leaves the poor waiting on the virtue of the rich."
+     ],
+     "the question needs an Indian middle path between charity and redistribution, and its limits."
+    ]
+   ],
+   "examples": [
+    [
+     "CSR under Section 135",
+     [
+      "Section 135 of the Companies Act 2013 requires companies above certain limits of net worth, turnover or profit to spend at least two per cent of their average net profits of the previous three years on corporate social responsibility. India was the first country to make such spending a legal requirement.",
+      "According to the National CSR Portal, 27,188 companies spent about 34,909 crore rupees on CSR in 2023-24, up from about 10,066 crore in 2014-15. Education, health and rural development receive most of it. A mandated two per cent is effectively a tax collected and spent by the payer. Calling it generosity misdescribes it, since the company’s choice is over where to spend, not whether to give."
+     ],
+     "Is mandated giving charity or a tax? Ask who decides the use of the money and who can hold them to account."
+    ],
+    [
+     "Rights-based welfare laws",
+     [
+      "Three statutes changed the language of Indian welfare by turning schemes into claims. MGNREGA, passed in 2005, guarantees a hundred days of wage work a year to a rural household that asks for it, with an unemployment allowance if work is not provided. The National Food Security Act of 2013 makes subsidised grain a legal entitlement for about two-thirds of the population. The Right to Education Act of 2009 gives children aged six to fourteen a right to free schooling.",
+      "The change matters because of what it does to the relationship. A beneficiary must be grateful. A rights-holder can complain, go to court and vote on non-delivery."
+     ],
+     "Does the law create a claim or a hope? Look for enforceable entitlements and remedies for non-delivery."
+    ],
+    [
+     "Direct benefit transfer",
+     [
+      "Direct benefit transfer moves money into an account rather than delivering goods through an office. The aim is to remove intermediaries who could divert, delay or demand a share. Cash also lets a person buy what they judge they need, which treats them as a chooser rather than a case.",
+      "Two qualifications apply. Cash assumes a working market nearby, so it helps less where the problem is lack of supply. Delivery is only as reliable as the authentication system, and the Jharkhand evidence of exclusion shows where it can fail. Transfer changes who decides how to spend. Transfer does not by itself change who is entitled."
+     ],
+     "Does the method of delivery increase dignity and reliability? Check both the choice it gives and the exclusion it risks."
+    ],
+    [
+     "Philanthropy in health and education",
+     [
+      "Private foundations bring money, tolerance of risk and freedom from election cycles. Foundations can fund what a government cannot easily justify: an unproven method, a small population or a long horizon.",
+      "Foundations also decide alone. A foundation chooses its problem, its region and its measure, and no affected person can vote it out or appeal its withdrawal. Funding clusters where results are easy to show, which is rarely where need is greatest. A service sustained by a grant can end when priorities change, having relieved the state of pressure to build the same capacity."
+     ],
+     "Does philanthropy fill a gap or replace an obligation? Ask what happens when the funding ends."
+    ],
+    [
+     "The strengths of charity",
+     [
+      "The counter-argument has real force. A rights framework is slow by design, because entitlement requires eligibility rules, verification and audit. Charity can act on the morning of a flood without asking whether the recipient qualifies.",
+      "Community kitchens during the 2020 lockdown reached people faster than any scheme, because they asked for nothing. Religious and voluntary networks serve people with no documents or address, who have no legal claim on anything. Charity’s advantages are speed, reach and freedom from categories. All three are strengths in an emergency and weaknesses as a permanent arrangement."
+     ],
+     "Where does charity do what rights cannot? Separate emergency relief from permanent dependence."
+    ]
+   ],
+   "topics": [
+    [
+     "2023B3",
+     [
+      "Charity responds to need after it has arisen. Justice asks why the need arose. Rawls held that justice is the first virtue of social institutions, and a society whose institutions distribute land, education and work fairly produces fewer people who need rescue. The need for charity is therefore largely an output of the system, not a fact of nature. The more just the structure, the less charity is required.",
+      "Ambedkar explained why charity cannot replace justice. A benefit that depends on the giver’s goodwill leaves the recipient subordinate. MGNREGA, the Food Security Act and the Right to Education Act turned help into rights that can be claimed and enforced. Even corporate giving, made compulsory under Section 135, shows the state moving from voluntary generosity towards obligation.",
+      "Charity still has a role. Community kitchens during the 2020 lockdown and relief after floods show that charity can act faster than any entitlement, and reach people without documents. The balanced conclusion is that charity is valuable in emergencies and in the gaps a system cannot yet reach. A society that relies on charity permanently, however, has chosen generosity over justice, and keeps its poor waiting on the kindness of others."
+     ]
+    ],
+    [
+     "2018A3",
+     [
+      "Poverty is not contained within the lives of the poor. Poverty spreads through institutions everyone shares: public health, labour markets, schools, politics and the environment. A child denied schooling becomes a worker unable to take up new jobs. A family denied healthcare spreads disease. A region left behind feeds migration, crime and political anger. Prosperity anywhere depends on the capabilities of people everywhere.",
+      "Rawls’s difference principle expresses the moral side: inequality is acceptable only if it benefits the least advantaged. Ambedkar warned that a society which leaves some in subordination cannot secure its own democracy. Charity alone cannot remove the threat, because it treats the symptom and leaves the cause. Rights-based welfare, fair distribution of land and education, and public provision reduce the conditions that produce poverty.",
+      "The statement also applies across nations. Pandemics, climate change and migration show that deprivation in one place affects prosperity elsewhere. The case for addressing poverty is therefore moral and prudential at once. A prosperous society that ignores the poor within or beyond its borders builds its prosperity on unstable ground. Justice is not only a gift to the poor. Justice is a condition of lasting prosperity for all."
+     ]
+    ]
+   ],
+   "intro": [
+    "Charity is admired in every tradition. Giving to the poor, feeding the hungry and funding schools are rightly praised. Yet the need for charity is also a sign that something has gone wrong earlier, in the way a society distributes land, education, work and power. The question is whether generosity can ever replace justice, and what changes when help becomes a right rather than a gift."
+   ],
+   "claim": "A just society needs less charity because the need for rescue is largely produced by unjust institutions. Charity arrives after distribution has failed and leaves the cause untouched. Rights, by contrast, do not depend on anyone’s kindness and let the recipient claim, complain and hold the state to account. Charity still has a place in emergencies and among the undocumented, but as a permanent arrangement it keeps the poor dependent.",
+   "problem": [
+    "Societies often prefer charity to justice because charity leaves existing arrangements in place. A donor can feel generous without questioning how the gap arose. Philanthropy and corporate giving can fill real gaps in health and education, yet they decide by themselves what to fund and when to stop. The recipient remains grateful rather than entitled.",
+    "Rights-based welfare has its own difficulties. Entitlements require eligibility rules, verification and audit, which slow delivery and can exclude people without documents. The state may be absent or slow where charity is quick and flexible. The challenge is to build a structure of justice that reduces the need for rescue, while keeping the speed and reach of charity for the cases a system cannot yet serve."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "A beneficiary receives what someone chose to give and must hope it continues. A rights-holder receives what is owed and can complain, litigate and vote when it is not delivered. The shift from the first to the second changes the relationship, not only the amount."
+   ],
+   "thinkersTitle": "Four thinkers, four tests of justice and charity",
+   "together": [
+    "Putting the four together",
+    "Rawls locates justice in institutions. Ambedkar insists on rights rather than relief. Nozick raises the entitlement objection, which rectification answers. Gandhi offers trusteeship, which still depends on conscience. Together they explain why justice reduces the need for charity, and why charity cannot replace justice."
+   ],
+   "examplesIntro": "The examples below show giving made compulsory, help turned into rights, the effect of cash, the limits of philanthropy and the real strengths of charity. They are most useful when the answer asks whether the recipient can claim or only hope.",
+   "models": [
+    [
+     "Charity arrives after justice has failed.",
+     "Rawls located justice in the basic structure of society. A fair structure produces fewer people who need rescue. Charity treats the result of unfair distribution and leaves its cause untouched."
+    ],
+    [
+     "Rights replace dependence with claims.",
+     "Ambedkar refused relief as a substitute for rights, because a benefit that depends on goodwill keeps the recipient subordinate. MGNREGA and the Food Security Act turned help into enforceable entitlements."
+    ],
+    [
+     "Past injustice answers the entitlement objection.",
+     "Nozick held that just acquisition makes redistribution a violation. But land, schooling and occupations were long denied by caste. Nozick’s own principle of rectification supports correcting that history."
+    ],
+    [
+     "Mandated giving is not generosity.",
+     "Section 135 requires companies to spend two per cent of profits on CSR. About 34,909 crore rupees were spent in 2023-24. Mandated spending is closer to a tax than to charity."
+    ],
+    [
+     "Charity has a place in emergencies.",
+     "Community kitchens in 2020 moved faster than any scheme. Charity’s speed and reach are strengths in a crisis and weaknesses as a permanent system."
+    ]
+   ],
+   "steps": [
+    [
+     "Define the difference.",
+     "Separate charity as a gift from justice as a fair structure and a right."
+    ],
+    [
+     "Show why need arises.",
+     "Use Rawls to link poverty to institutions."
+    ],
+    [
+     "Explain dignity.",
+     "Use Ambedkar on rights rather than relief."
+    ],
+    [
+     "Answer objections.",
+     "Present Nozick and the principle of rectification."
+    ],
+    [
+     "Give Indian examples.",
+     "Use MGNREGA, NFSA, RTE, CSR and direct benefit transfer."
+    ],
+    [
+     "Acknowledge charity’s strengths.",
+     "Discuss speed and reach in emergencies."
+    ],
+    [
+     "Conclude with justice first.",
+     "Argue for rights as the base and charity as a supplement."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns charity, philanthropy, poverty or justice.",
+   "formula": "Build justice into institutions so that fewer people need rescue. Turn help into rights that can be claimed, keep charity for emergencies and the gaps rights cannot yet reach, and never let generosity replace the duty to change the structure."
+  },
+  {
+   "thinkers": [
+    [
+     "Sen",
+     "development as freedom",
+     [
+      "Amartya Sen provides the spine of the argument. Development is the expansion of substantive freedoms: the capability to be and do what a person has reason to value. Income is a means rather than an end.",
+      "His comparative work makes the point concrete. States with similar or lower per capita income have achieved much better literacy, life expectancy and child survival. Distribution and public provision are therefore not simply results of growth. They are partly independent of it."
+     ],
+     "the answer needs to show that income growth and human development can diverge."
+    ],
+    [
+     "Nozick",
+     "wealth before sharing",
+     [
+      "Robert Nozick’s view deserves equal weight, and an answer is unbalanced without it. Wealth must be created before it can be shared, and redistribution that ignores how wealth was produced can violate rights and weaken incentives.",
+      "A redistributive politics in a stagnant economy distributes shortage, and shortage falls hardest on those with the least buffer. Nozick’s warning is a reason to protect the conditions of production."
+     ],
+     "the question needs the case for growth and against distribution that ignores production."
+    ],
+    [
+     "Ambedkar",
+     "a life of contradictions",
+     [
+      "Ambedkar held both claims together and refused to rank them. In his final speech to the Constituent Assembly on 25 November 1949, he warned that India was entering a life of contradictions. The country would have political equality of one person, one vote, alongside deep social and economic inequality.",
+      "He said the contradiction must be removed, or those denied equality would blow up the structure of political democracy. For Ambedkar, economic justice was a condition of democratic survival."
+     ],
+     "the answer needs to link economic inequality with the stability of democracy."
+    ],
+    [
+     "Lohia",
+     "caste and class together",
+     [
+      "Ram Manohar Lohia supplied a practical form. He argued for limits on inequality within a productive economy, and insisted that in India caste and class must be attacked at the same time.",
+      "For Lohia, growth that left caste hierarchy intact would reproduce inequality in new forms. Justice needed both economic measures and social ones."
+     ],
+     "the question concerns the links between caste, class and economic policy."
+    ],
+    [
+     "Deendayal Upadhyaya",
+     "antyodaya",
+     [
+      "Deendayal Upadhyaya reached the same conjunction from a different tradition. He rejected both the economic man of capitalism and the collective man of socialism, and proposed antyodaya, the rise of the last person, as the test of any economic arrangement.",
+      "The formulation is useful because it can be measured. The question is not what the economy produced, but where the least advantaged person now stands."
+     ],
+     "the answer needs an operational test for inclusive growth."
+    ]
+   ],
+   "examples": [
+    [
+     "Inequality data and its limits",
+     [
+      "The World Inequality Lab’s 2024 paper on India argued that present inequality exceeds that of the colonial period. The paper reports the top one per cent holding about 40 per cent of national wealth. The top ten per cent receive about 58 per cent of national income, against about 15 per cent for the bottom half.",
+      "The measurement disputes are real. Consumption surveys show far less inequality than income and wealth estimates, partly because the very rich are under-sampled. The Lab combines surveys with tax records and rich lists. The direction of the trend is not seriously contested even by critics. The size is, and an answer should name its source."
+     ],
+     "How unequal is growth, and how do we know? Name the data series and its limits."
+    ],
+    [
+     "Kerala and Tamil Nadu",
+     [
+      "Kerala and Tamil Nadu are the standing Indian evidence that income and capability can diverge. Both have long recorded better life expectancy, literacy, infant mortality and school completion than several states with higher per capita income.",
+      "The explanation is historical: earlier land reform, earlier and broader public schooling, older networks of primary health centres, and social movements that made education and health politically unavoidable. Capability outcomes respond to public provision more than to average income. The investments were made decades before the outcomes appeared, which is why they are politically hard to repeat."
+     ],
+     "Can a state achieve high human development without high income? Look at public provision and social movements."
+    ],
+    [
+     "Jobless growth and informal work",
+     [
+      "Around nine in ten Indian workers are informal. Recent increases in female participation are concentrated in self-employment and unpaid family work, which is a warning about how participation figures should be read.",
+      "Output can rise substantially without creating secure wage jobs, because growth concentrated in capital-intensive and skill-intensive sectors adds value without adding many jobs. A society can become much richer while the typical worker’s security does not change. Jobless growth is the reason an aggregate figure settles nothing."
+     ],
+     "Does growth create secure work for most people? Look at employment quality, not only output."
+    ],
+    [
+     "Who bears the tax burden",
+     [
+      "Who bears a tax is a different question from who pays it at the counter. GST is levied on transactions, so a household spending nearly all its income pays tax on nearly all of it, while a household saving a large share pays on less. Without strong rate differences for necessities, a consumption tax is regressive relative to income.",
+      "Direct taxation is where progressivity is possible, and India collects a smaller share of revenue from direct taxes than many comparable economies. The design of GST slabs and the exemption of unprocessed food therefore carry a heavy distributive weight."
+     ],
+     "Who actually bears the cost of public revenue? Compare consumption and income taxes relative to income."
+    ],
+    [
+     "The East Asian sequence",
+     [
+      "Japan, South Korea and Taiwan achieved rapid industrial growth with unusually low inequality, partly because redistribution came before growth. Post-war land reform broke up large holdings and created owner-cultivators. Near-universal primary schooling was in place before industrial take-off.",
+      "When growth arrived, people were equipped to take part in it and assets were already spread out. In India, land reform remained incomplete outside a few states, and mass schooling came later and unevenly. Growth met a population not positioned to share it evenly. The lesson is not that redistribution and growth trade off. The lesson is that the order matters."
+     ],
+     "Does early redistribution help growth include everyone? Compare the sequence of land reform, schooling and industrialisation."
+    ]
+   ],
+   "topics": [
+    [
+     "2020B2",
+     [
+      "Social justice needs resources. Schools, hospitals, pensions and public works must be paid for, and a stagnant economy has little to distribute. Nozick’s warning that wealth must be created before it is shared has force: redistribution in a stagnant economy shares shortage, and shortage hurts the poor most. In that sense, there can be no social justice without economic prosperity.",
+      "Prosperity without justice, however, is meaningless for most people. Sen showed that development is the expansion of freedoms, and that income is only a means. The World Inequality Lab’s figures on the concentration of wealth, and the persistence of informal work, show how growth can enrich the aggregate without improving the lives of most. Ambedkar warned that such contradictions threaten democracy itself.",
+      "The two are conditions for each other. Kerala and Tamil Nadu show that public investment in health and education improves lives even at modest income. East Asian land reform and schooling show that justice can prepare the ground for faster and fairer growth. Deendayal Upadhyaya’s antyodaya offers the test: judge the economy by the condition of the last person. Prosperity is the means, and justice is what gives it meaning."
+     ]
+    ],
+    [
+     "2018A3",
+     [
+      "Poverty threatens prosperity because economies depend on the capabilities of all their people. Where many are poorly educated, unhealthy or insecure, markets are smaller, productivity is lower and growth is fragile. Jobless growth concentrates gains among a few while demand from the majority stagnates. Inequality then weakens the base on which prosperity rests.",
+      "Poverty also threatens prosperity politically. Ambedkar warned that a democracy built on deep economic inequality risks being blown apart by those denied equality. Lohia argued that caste and class inequality reinforce each other. Societies that leave large groups behind face unrest, polarisation and loss of trust, all of which damage investment and growth.",
+      "The East Asian experience shows the positive side. Land reform and universal schooling spread capability widely before growth arrived, and growth then included most people. Poverty anywhere threatens prosperity everywhere because economies and societies are connected. The prudent response is not only to grow, but to grow in ways that raise the floor, measured, as Deendayal Upadhyaya proposed, by the rise of the last person."
+     ]
+    ]
+   ],
+   "intro": [
+    "Economic growth and social justice are often presented as rivals. One side says a country must first grow and distribute later. The other says growth that leaves most people behind is worthless. Both sides point to real failures: stagnant economies that could only share scarcity, and booming economies whose gains went to a few. The question is how growth and justice depend on each other."
+   ],
+   "claim": "Growth and justice are conditions for each other. Without prosperity, there is little to distribute, and redistribution in a stagnant economy shares shortage. Without justice, growth enriches the aggregate while most people are no freer. Distribution and public provision also shape growth itself, as land reform and schooling show. The test of an economy is not only what it produces, but where the least advantaged person stands.",
+   "problem": [
+    "Growth figures are easy to report and satisfying to celebrate. Yet growth concentrated in capital-intensive or skill-intensive sectors can add wealth without adding secure jobs. Inequality in income and wealth has risen sharply in India, and most workers remain in informal employment. A rising average can hide a stagnant median.",
+    "The opposite danger is real too. A politics that redistributes without growth can shrink the resources available for public provision. States that ignore efficiency can end up distributing poverty. The challenge is to design growth that includes the poor and justice that strengthens the economy, rather than treating the two as a trade-off to be managed."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Growth measures what an economy produces. Development, in Sen’s sense, measures what people are able to do and be. An economy can grow without developing, and some states have developed faster than their income alone would predict."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of growth and justice",
+   "together": [
+    "Putting the five together",
+    "Sen shows that development and income can diverge. Nozick warns that there must be something to distribute. Ambedkar shows that inequality threatens democracy. Lohia joins caste and class. Deendayal Upadhyaya gives a measurable test. Together they show that growth and justice are conditions for each other, not rivals."
+   ],
+   "examplesIntro": "The examples below show inequality, human development, jobs, taxation and the sequencing of reform. They are most useful when the answer asks who gains from growth and how.",
+   "models": [
+    [
+     "Development is freedom, not income.",
+     "Sen showed that states with similar income achieve very different literacy and life expectancy. Public provision shapes development partly independently of growth."
+    ],
+    [
+     "Without growth, justice shares shortage.",
+     "Nozick’s warning has force: redistribution in a stagnant economy distributes scarcity, and scarcity hurts the poor most. Growth is a condition of lasting justice."
+    ],
+    [
+     "Inequality threatens democracy.",
+     "Ambedkar warned in 1949 that political equality alongside social and economic inequality creates a life of contradictions that could blow up political democracy."
+    ],
+    [
+     "Sequence matters.",
+     "East Asian economies carried out land reform and universal schooling before industrial take-off. Early redistribution prepared people to share in growth."
+    ],
+    [
+     "Judge by the last person.",
+     "Deendayal Upadhyaya’s antyodaya tests an economy by where the least advantaged person stands. The test turns justice into a measurable standard."
+    ]
+   ],
+   "steps": [
+    [
+     "Define both terms.",
+     "Separate economic growth from social justice and human development."
+    ],
+    [
+     "Show why justice needs growth.",
+     "Use Nozick and fiscal capacity."
+    ],
+    [
+     "Show why growth needs justice.",
+     "Use Sen, inequality data and jobless growth."
+    ],
+    [
+     "Give Indian evidence.",
+     "Use Kerala and Tamil Nadu, informal employment and taxation."
+    ],
+    [
+     "Bring in sequencing.",
+     "Use the East Asian example."
+    ],
+    [
+     "Link to democracy.",
+     "Use Ambedkar’s warning of 1949."
+    ],
+    [
+     "Conclude with a test.",
+     "Use antyodaya to judge whether growth is just."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns growth, prosperity and social justice.",
+   "formula": "Treat growth and justice as conditions for each other. Grow to create the means, distribute capabilities early so that growth includes everyone, and judge the economy by the condition of the last person."
+  },
+  {
+   "thinkers": [
+    [
+     "Sen",
+     "capabilities, not commodities",
+     [
+      "Amartya Sen’s capability approach moves the question. What matters is not what a person owns but what they are able to do and be: adequately nourished, free from preventable illness, literate and able to take part in community life.",
+      "Income buys these capabilities unevenly, because the conversion depends on health, gender and location. The same rupees do not buy the same freedom for a woman in a village with no clinic. Neglect of primary health and education disables everything downstream, including the ability to benefit from growth."
+     ],
+     "the answer needs to explain why capability matters more than income."
+    ],
+    [
+     "Nussbaum",
+     "a threshold for every person",
+     [
+      "Martha Nussbaum makes the list explicit and therefore actionable. She specifies central capabilities, such as life, bodily health, bodily integrity, senses and imagination, practical reason and affiliation.",
+      "A decent political order must secure each capability to a threshold for every person, not only on average. The move from average to threshold is the heart of her argument."
+     ],
+     "the question needs a clear list of basic capabilities or a threshold standard for policy."
+    ],
+    [
+     "Jyotirao and Savitribai Phule",
+     "education against hierarchy",
+     [
+      "Jyotirao and Savitribai Phule acted on this priority a century before it was theorised. They opened a school for girls in Pune in 1848. They identified denial of education as the means by which caste and gender subordination reproduced themselves.",
+      "Savitribai walked to school carrying a spare sari, because people threw mud and dung at her on the way. The Phules showed that education is not a service among others. Education is the key to every other freedom."
+     ],
+     "the answer needs an Indian example of education as a tool of social equality."
+    ],
+    [
+     "Ambedkar",
+     "educate first",
+     [
+      "Ambedkar placed education first in his call to educate, agitate and organise. His own life is the argument in miniature. The capabilities he acquired turned a personal humiliation into a constitutional claim.",
+      "For Ambedkar, education was the precondition for political action. A person who cannot read the law cannot claim its protection."
+     ],
+     "the question links education with empowerment and political participation."
+    ],
+    [
+     "Deendayal Upadhyaya",
+     "the last person in the queue",
+     [
+      "Deendayal Upadhyaya supplied the administrative version of the test. A system should be judged by the condition of the last person in the queue, not by its average.",
+      "Backwardness, on this reading, is not a residue that growth will clear away. Backwardness is the predictable result of withholding the capabilities on which every other opportunity depends."
+     ],
+     "the answer needs a governance standard for basic services."
+    ]
+   ],
+   "examples": [
+    [
+     "Public health spending and out-of-pocket costs",
+     [
+      "According to the National Health Accounts, government health expenditure rose from about 1.15 per cent of GDP in 2013-14 to about 1.43 per cent in 2022-23. The National Health Policy of 2017 set a target of 2.5 per cent. Out-of-pocket spending fell from about 64 per cent of total health spending to about 43 per cent over the same period.",
+      "The fall is real progress, and India still ranks high by international comparison. Out-of-pocket spending is the mechanism by which illness produces poverty. A household without insurance meets a hospital bill by selling assets or borrowing. An underfunded public health system therefore generates poverty."
+     ],
+     "Does illness push families into poverty? Look at public spending and the share paid out of pocket."
+    ],
+    [
+     "Learning, not enrolment",
+     [
+      "Enrolment in India is near universal, so enrolment reveals little. What matters is whether children can do what schooling is for. ASER 2024 found that 44.8 per cent of Class 5 children in government schools could read a Class 2 text, up from 38.5 per cent in 2022. Among Class 3 children in government schools, 23.4 per cent could do so, the best figure since 2005.",
+      "Both figures show recovery, and both leave a majority below the benchmark. The idea of learning poverty exists to force the distinction between schooling and learning. A system judged on inputs can report success for ever while the outcome it exists for does not occur."
+     ],
+     "Are children learning or only attending? Measure outcomes rather than enrolment."
+    ],
+    [
+     "Nutrition as a lifelong capability",
+     [
+      "The National Family Health Survey 2019-21 found stunting among children under five at 35.5 per cent, down from 38.4 per cent in the previous round. Wasting stood at 19.3 per cent and underweight at 32.1 per cent. Anaemia rose: about 57 per cent of women aged 15 to 49 and about 67 per cent of children aged six to fifty-nine months were anaemic.",
+      "Stunting is the clearest case of a capability rather than a commodity. Stunting reflects deprivation in the first thousand days, is linked to later learning and earnings, and cannot be reversed by feeding the same person more later. The deprivation is temporary. The disability it produces is not."
+     ],
+     "Which deprivations cause lifelong harm? Identify capabilities that must be secured early."
+    ],
+    [
+     "Insurance against primary care",
+     [
+      "Ayushman Bharat has two parts that are often discussed as one. PM-JAY insures hospital treatment, and the health and wellness centres, now called Ayushman Arogya Mandirs, are meant to strengthen primary care where most illness first appears.",
+      "The design tension is real. Insurance is visible and politically rewarding, because a saved hospital bill can be attributed. Primary care is unglamorous, and its success appears as an admission that never happened. A system that funds insurance well and primary care poorly treats disease late and expensively."
+     ],
+     "Does the system prevent illness or only pay for treatment? Compare investment in primary care with hospital insurance."
+    ],
+    [
+     "Fiscal capacity and priority",
+     [
+      "The counter-argument deserves respect. A state cannot spend what it does not collect. India’s tax-to-GDP ratio limits what any government can commit to health, education and nutrition at once. Growth expands the base from which all of these are funded.",
+      "The constraint is real but partly chosen. The composition of spending and the efficiency of collection are policy decisions, and states with similar incomes have achieved very different outcomes. Fiscal capacity limits the pace. Fiscal capacity does not decide the priority."
+     ],
+     "Is neglect forced by limited resources or chosen through priorities? Compare states with similar incomes and different outcomes."
+    ]
+   ],
+   "topics": [
+    [
+     "2019B2",
+     [
+      "Backwardness is often explained by low income, poor infrastructure or lack of investment. The statement points to a deeper cause: the neglect of primary health care and education. Sen’s capability approach explains why. Income is useful only if people can convert it into a good life, and health and education are what make that conversion possible. A sick or illiterate person cannot take up new jobs, use new technology or claim legal rights.",
+      "The evidence shows the cost of neglect. More than half of Class 5 children in government schools cannot read a Class 2 text. Over a third of young children are stunted, a harm that cannot be reversed later. Out-of-pocket spending still makes up over two-fifths of health expenditure, pushing families into poverty. Kerala and Tamil Nadu show the opposite path: early investment in schooling and health produced better outcomes than richer states achieved.",
+      "The statement should be qualified. Backwardness has several causes, including incomplete land reform, weak industrialisation and social hierarchy. Fiscal limits are real. Yet neglect of basic capabilities is the cause that disables all others. The Phules and Ambedkar understood that education was the key to every other freedom. A state that neglects health and education has not saved money. The state has decided how much of its population will be unable to use any opportunity."
+     ]
+    ]
+   ],
+   "intro": [
+    "Income is the usual measure of progress. Yet the same income can buy very different lives. A family with the same earnings may be healthy and educated in one place and sick and illiterate in another. What decides the difference is often whether the state provides basic health care, schooling and nutrition. The question is why these capabilities matter more than income, and why neglecting them keeps a country backward."
+   ],
+   "claim": "What matters is not what a person owns but what they are able to do and be: to be healthy, educated, nourished and able to take part in community life. Primary health care and education are the foundations of every other opportunity. Neglecting them does not save money. Neglecting them decides how much of the population will be unable to use anything else the state or the market provides.",
+   "problem": [
+    "Governments often treat health and education as expenditure to be minimised in hard times. Growth, infrastructure and industry seem more urgent. The results appear only slowly: children who cannot read, adults disabled by preventable illness and families pushed into poverty by medical bills. Because the damage is gradual, it rarely creates a crisis that forces action.",
+    "Fiscal limits are real. A state cannot spend what it does not collect, and India’s tax base limits what can be committed at once. The ethical and policy question is whether these limits justify neglect, or whether the priority of basic capabilities should shape how limited resources are spent. The experience of states with similar incomes but very different outcomes suggests that the priority is partly a choice."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "An average measures the mean. A threshold measures whether every person has reached the minimum for a recognisably human life. A country can raise its average while leaving a fifth of its people below the threshold."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of capability",
+   "together": [
+    "Putting the five together",
+    "Sen shifts attention from income to capabilities. Nussbaum sets a threshold for every person. The Phules and Ambedkar show education as the key to equality. Deendayal Upadhyaya judges a system by its last person. Together they explain why neglect of primary health and education is the root of backwardness."
+   ],
+   "examplesIntro": "The examples below show the state of health spending, learning, nutrition, insurance and fiscal capacity. They are most useful when the answer measures outcomes rather than inputs.",
+   "models": [
+    [
+     "Capability, not income.",
+     "Sen argued that what matters is what people can do and be. The same income buys different freedoms depending on health, gender and location, which is why basic services matter more than averages."
+    ],
+    [
+     "Thresholds, not averages.",
+     "Nussbaum requires every person to reach a threshold in central capabilities. A country can raise its average while leaving a fifth of its people below the level of a decent life."
+    ],
+    [
+     "Illness produces poverty.",
+     "Out-of-pocket spending made up about 43 per cent of health expenditure in 2022-23. Where public health care is weak, a hospital bill pushes families into debt."
+    ],
+    [
+     "Early deprivation is permanent.",
+     "Stunting, at 35.5 per cent of young children in NFHS-5, reflects deprivation in the first thousand days and cannot be reversed later. Nutrition is a capability that must be secured early."
+    ],
+    [
+     "Education unlocks every other freedom.",
+     "The Phules opened a girls’ school in 1848, and Ambedkar placed education first. A person who cannot read cannot claim rights or take up opportunities."
+    ]
+   ],
+   "steps": [
+    [
+     "Shift from income to capability.",
+     "Use Sen to explain what matters."
+    ],
+    [
+     "Set a threshold.",
+     "Use Nussbaum’s list of central capabilities."
+    ],
+    [
+     "Present the evidence.",
+     "Use health spending, ASER and NFHS figures."
+    ],
+    [
+     "Give Indian examples.",
+     "Contrast Kerala and Tamil Nadu with higher-income states."
+    ],
+    [
+     "Bring in social reformers.",
+     "Use the Phules and Ambedkar on education."
+    ],
+    [
+     "Address fiscal limits.",
+     "Show that constraints limit pace but not priority."
+    ],
+    [
+     "Conclude with the last person.",
+     "Judge the system by its least served citizen."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns health, education or human development.",
+   "formula": "Measure progress by what people can do and be, not by average income. Secure health, education and nutrition to a threshold for everyone, early and publicly, because every other opportunity depends on them."
+  },
+  {
+   "thinkers": [
+    [
+     "Beauvoir",
+     "one becomes a woman",
+     [
+      "Simone de Beauvoir gave the most efficient opening. She wrote that one is not born, but rather becomes, a woman. Femininity is produced by upbringing, expectation and institutions rather than given by biology.",
+      "The central mechanism is that man is treated as the standard and woman as the deviation from a norm she did not set. A default is never experienced as a position, which is why the structure is invisible to those it favours."
+     ],
+     "the answer needs to explain how gender roles are socially produced."
+    ],
+    [
+     "Wollstonecraft",
+     "treatment produces the evidence",
+     [
+      "Mary Wollstonecraft identified the engine two centuries earlier, in A Vindication of the Rights of Woman in 1792. She argued that women appear frivolous because they are educated to be ornamental.",
+      "The supposed evidence of women’s inferiority is produced by the treatment it is then used to justify. The circle can be broken only by changing the treatment, especially education."
+     ],
+     "the question concerns education, stereotypes or how inequality justifies itself."
+    ],
+    [
+     "Savitribai Phule and Pandita Ramabai",
+     "reform under attack",
+     [
+      "Savitribai Phule and Pandita Ramabai turned the argument into practice in India, under direct social attack. Savitribai taught in the girls’ schools she and Jyotirao Phule opened from 1848.",
+      "Pandita Ramabai founded the Sharada Sadan in 1889 for widows who had nowhere else to go. Both women built institutions that gave women education and shelter outside the family’s control."
+     ],
+     "the answer needs Indian examples of women building institutions against patriarchy."
+    ],
+    [
+     "Periyar",
+     "gender and caste together",
+     [
+      "Periyar’s Self-Respect Movement treated marriage, ritual and property together. Self-respect marriages dispensed with priests and rituals that marked women as subordinate.",
+      "Periyar refused to separate the question of gender from the question of caste. He argued that both rested on the same beliefs about birth, purity and obedience."
+     ],
+     "the question concerns the links between caste, marriage and women’s status."
+    ],
+    [
+     "Gilligan",
+     "the scale built from male responses",
+     [
+      "Carol Gilligan showed a subtler form of invisibility. In In a Different Voice, published in 1982, she demonstrated that women’s moral reasoning had been classified as less developed largely because the scale used to measure it had been built from male responses.",
+      "Her ethic of care reveals how the standard itself can carry bias. When men are the default, women’s differences appear as deficits."
+     ],
+     "the answer needs an example of bias built into the standard of measurement."
+    ],
+    [
+     "Ambedkar",
+     "endogamy joins caste and gender",
+     [
+      "Ambedkar saw the connection most clearly. In his paper Castes in India, written in 1916, he argued that caste is maintained through endogamy, and therefore through control over whom women may marry. Caste and patriarchy are one system with two faces.",
+      "His Hindu Code Bill, covering divorce, maintenance and inheritance, tried to legislate at that joint. His resignation in 1951, when the bill was stalled and diluted, measures how much resistance the structure could still mount."
+     ],
+     "the question needs to link caste with control over women, or discuss legal reform of family law."
+    ]
+   ],
+   "examples": [
+    [
+     "Women’s work: rising participation, changing composition",
+     [
+      "The claim that women’s labour force participation is falling has been overtaken by the data. The Periodic Labour Force Survey reports female participation rising from 23.3 per cent in 2017-18 to about 41.7 per cent in 2023-24. Rural women drove the rise, with the urban rate moving only from 20.4 to 25.4 per cent.",
+      "The composition keeps the older concern alive. Most of the increase is in self-employment and unpaid family work rather than wage work. Whether the rise represents opportunity or distress depends on which kind of work it is."
+     ],
+     "Is more work the same as more power? Look at the kind of work and who controls the income."
+    ],
+    [
+     "Time use and invisible hours",
+     [
+      "The Time Use Survey of 2019 found that women spent about 299 minutes a day on unpaid domestic work, against 97 minutes for men. Women spent about 134 minutes on caregiving, against 76 for men. The 2024 round shows the gap persisting.",
+      "The data supply the structural explanation that the sentiment account cannot. A woman is not absent from paid work because anyone forbade it. She is absent because about five hours of daily unpaid work have already been assigned to her. Attitudes can change while the constraint remains, because the constraint is time, not opinion."
+     ],
+     "What limits women’s choices even when attitudes change? Look at the allocation of time."
+    ],
+    [
+     "Inheritance in law and in practice",
+     [
+      "The Hindu Succession (Amendment) Act of 2005 made daughters coparceners in joint family property on the same footing as sons. In Vineeta Sharma v Rakesh Sharma in 2020, the Supreme Court held that the right arises by birth, whether or not the father was alive when the amendment came into force.",
+      "The legal position is clear. Practice is not. Land and housing are still recorded mostly in men’s names, partitions are settled informally, and a daughter who claims her share risks the family relationship that is her fallback. The statute addressed the sentiment. The structure, meaning who holds the asset and who fears the cost of claiming it, remains."
+     ],
+     "Does a legal right change who holds property? Compare the law with land records and family practice."
+    ],
+    [
+     "Sex ratio at birth",
+     [
+      "Sex ratio at birth is the rare case where a private preference leaves a public trace. NFHS-5 recorded 929 female births per 1,000 male births, up from 919 in NFHS-4, against a natural level of about 952. Punjab improved from 860 to 904 and Haryana from 836 to 893, though both remain below the natural level.",
+      "Beti Bachao Beti Padhao is the flagship response. A parliamentary committee reported in 2021 that about 79 per cent of the funds released between 2016 and 2019 went to media advocacy. The ratio is measured. Whether the scheme moved it is contested."
+     ],
+     "How is son preference measured, and what changes it? Separate awareness campaigns from structural change."
+    ],
+    [
+     "Men inside the structure",
+     [
+      "A structural account must explain why men enforce patriarchy, including against themselves. The same code that assigns women to the household assigns men to provision and stoicism. The costs are visible. Men account for about seven in ten recorded suicides in India, are over-represented in dangerous work and are less likely to seek help for mental distress.",
+      "None of this makes the structure symmetrical, since the distribution of power and property is not in doubt. The costs establish that patriarchy is a set of role obligations rather than a simple transfer from one group to another. Treating patriarchy as a quarrel between men and women misdescribes it."
+     ],
+     "What does the structure demand of men? Show how role obligations harm both sexes while power remains unequal."
+    ]
+   ],
+   "topics": [
+    [
+     "2020B3",
+     [
+      "Patriarchy is the least noticed structure of inequality because it works through ordinary life. Unlike a discriminatory law, it is not written in one place. Patriarchy lives in the household, the compliment, the division of chores and the name on a land record. Beauvoir observed that man is treated as the standard and woman as the deviation, and a default is never experienced as a position. People who benefit from patriarchy rarely see it, and many who are disadvantaged accept it as natural.",
+      "Patriarchy is also the most significant structure, because it shapes every other. The Time Use Survey shows women carrying about five hours a day of unpaid work, which limits their paid work and income. Inheritance law gives daughters equal rights, yet property remains mostly in men’s names. Ambedkar showed that caste itself is maintained by controlling women’s marriages, so patriarchy supports other hierarchies too.",
+      "Recognising patriarchy as a structure changes the remedy. Good intentions and awareness campaigns are not enough, as the uncertain effect of Beti Bachao Beti Padhao shows. Change requires redistributing time through shared care and public services, property through enforced inheritance, and power through representation. Patriarchy becomes visible only when we ask what it allocates, not only what people believe."
+     ]
+    ],
+    [
+     "2023B1",
+     [
+      "Girls and boys are raised under different disciplines. Girls are restricted in movement, dress, speech and ambition. Boys face demands to earn, to succeed, to protect and to hide emotion. Both disciplines are imposed by the same structure on children who chose neither. Beauvoir’s insight that one becomes a woman applies equally to becoming a man: both are produced by expectation.",
+      "Both disciplines cause harm. Restrictions limit girls’ education, work and freedom, and shape the unequal allocation of time and property in adult life. Demands on boys produce pressure, fear of failure and emotional isolation. Men account for about seven in ten recorded suicides in India and are less likely to seek help for distress.",
+      "The phrase “equally harmful” needs care. The harms are real on both sides, but the power they produce is not equal. Restrictions on girls keep women from property and decisions, while demands on boys still place men in positions of authority. The better response is to free both from rigid roles: to widen girls’ freedoms and to relieve boys of impossible demands. Recognising the harm to boys strengthens the case against patriarchy, because it shows that the structure serves no one well."
+     ]
+    ],
+    [
+     "2021B1",
+     [
+      "The saying praises mothers as the hidden rulers of the world, because they shape the next generation. There is truth in it. Early care shapes health, language, values and character, and mothers have long carried most of that work. The Time Use Survey confirms that women do most caregiving in India.",
+      "Yet the saying can also disguise powerlessness. The hand that rocks the cradle rules nothing if it holds no property, no wage and no way out. Praise for motherhood has often been used to keep women in the home and away from public power. Wollstonecraft warned that women are educated for ornament and then judged by the result. The Phules and Pandita Ramabai showed that real influence requires education and independent institutions.",
+      "The saying can be read in a better way. If care shapes the world, then care deserves recognition, support and sharing. Care work should be counted, supported by public services and shared by men. Women should also hold property, income and decision-making power. The hand that rocks the cradle will truly rule when it also holds a vote, a title deed and an equal voice."
+     ]
+    ]
+   ],
+   "intro": [
+    "Patriarchy is rarely experienced as a system. Patriarchy appears instead as habit, custom, compliment and expectation: who cooks, who inherits, who speaks, who decides. Because it works through ordinary life, it often goes unnoticed, even by those it disadvantages. Yet it shapes property, work, marriage and power more deeply than many written laws. The question is why patriarchy is a structure rather than a sentiment, and why good intentions leave it intact."
+   ],
+   "claim": "Patriarchy is a structure of roles, property and time, not merely an attitude. Patriarchy treats men as the standard and women as the deviation, assigns women unpaid care and men provision and stoicism, and keeps assets and decisions in male hands. Changing sentiments and passing laws are necessary but insufficient. The structure changes only when property, time, work and power are redistributed.",
+   "problem": [
+    "Many people believe that gender inequality is mainly about prejudice. If attitudes improve, the inequality will fade. Laws granting equal inheritance and schemes promoting girls’ education express such a belief. Laws and schemes matter, but the structure often continues. Daughters rarely claim land they are legally entitled to. Women take up paid work while still carrying most unpaid care. Praise for motherhood can coexist with the absence of any property or income of one’s own.",
+    "The structure also harms men, though not symmetrically. Boys are raised under demands to provide, to succeed and to suppress emotion. The challenge is to see patriarchy as a system that assigns roles to everyone, while recognising that power and property remain unequally distributed, and to design changes that alter the structure rather than only its image."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "A sentiment is an attitude that can change with persuasion. A structure is an allocation of property, time and power that persists even when attitudes change. A law that addresses the sentiment may leave the structure untouched."
+   ],
+   "thinkersTitle": "Thinkers who exposed a hidden structure",
+   "together": [
+    "Putting them together",
+    "Beauvoir and Wollstonecraft show that gender is produced by treatment that then justifies itself. Savitribai Phule and Pandita Ramabai built institutions against it. Periyar and Ambedkar show that caste and gender are bound together. Gilligan shows bias hidden in the standard itself. Together they explain why patriarchy is a structure that sentiment alone cannot change."
+   ],
+   "examplesIntro": "The examples below show patriarchy in work, time, property, birth and masculinity. They are most useful when the answer asks what the structure allocates, not only what people believe.",
+   "models": [
+    [
+     "Patriarchy is a structure, not a sentiment.",
+     "Beauvoir showed that man is treated as the standard and woman as the deviation. A default is invisible to those it favours. Changing attitudes is not enough if property, time and power stay unequal."
+    ],
+    [
+     "Time is the hidden constraint.",
+     "The Time Use Survey found women spending about 299 minutes a day on unpaid domestic work against 97 for men. Women’s choices are limited less by opinion than by the time already assigned to them."
+    ],
+    [
+     "Law without practice leaves the structure intact.",
+     "Daughters have had equal coparcenary rights since 2005, confirmed in Vineeta Sharma in 2020. Yet land remains mostly in men’s names, because claiming a share risks family support."
+    ],
+    [
+     "Caste and patriarchy are joined.",
+     "Ambedkar argued that caste is maintained through endogamy and therefore through control of women’s marriages. The two hierarchies are one system with two faces."
+    ],
+    [
+     "The structure harms men too.",
+     "Boys are raised under demands to provide and to hide distress. Men account for about seven in ten recorded suicides. Patriarchy assigns burdens to both sexes while keeping power unequal."
+    ]
+   ],
+   "steps": [
+    [
+     "Define patriarchy as a structure.",
+     "Use Beauvoir and Wollstonecraft to show how roles are produced."
+    ],
+    [
+     "Show what it allocates.",
+     "Use data on time use, property and work."
+    ],
+    [
+     "Give Indian reformers.",
+     "Use Savitribai Phule, Pandita Ramabai, Periyar and Ambedkar."
+    ],
+    [
+     "Show the gap between law and practice.",
+     "Use inheritance law and sex ratio at birth."
+    ],
+    [
+     "Include men.",
+     "Discuss the demands placed on boys and their costs."
+    ],
+    [
+     "Avoid false symmetry.",
+     "Acknowledge that power and property remain unequal."
+    ],
+    [
+     "Conclude with structural remedies.",
+     "Recommend redistribution of care, property and power."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns gender, patriarchy or social roles.",
+   "formula": "Treat patriarchy as a structure that allocates property, time and power. Change laws and attitudes, but also redistribute care work, enforce women’s property rights and open decisions to women, while freeing both sexes from rigid roles."
+  },
+  {
+   "thinkers": [
+    [
+     "Bentham",
+     "the greatest happiness",
+     [
+      "Jeremy Bentham stated the majoritarian answer at its clearest. The aim is the greatest happiness of the greatest number, with each person counting for one and nobody for more than one.",
+      "The strength of the principle is its impartiality: no person’s pleasure counts extra because of birth or status, a radical claim in the eighteenth century. Its weakness is what the question probes. An aggregate can improve while a minority is made much worse off, and the arithmetic registers no objection."
+     ],
+     "the answer needs to present the case for aggregate welfare and its blind spot."
+    ],
+    [
+     "Mill",
+     "the tyranny of the majority",
+     [
+      "John Stuart Mill saw the danger and named it. He warned that the tyranny of the majority works through opinion and custom as well as through law.",
+      "A society can enslave more effectively than any magistrate, because its pressure reaches into private life. Mill’s harm principle limits interference to preventing harm to others."
+     ],
+     "the question concerns individual liberty against social pressure, or the limits of state power."
+    ],
+    [
+     "Rawls",
+     "the separateness of persons",
+     [
+      "John Rawls answered the arithmetic directly. He argued that utilitarianism does not take seriously the distinction between persons, because it treats a society as a single being trading off its own satisfactions.",
+      "The veil of ignorance blocks the trade. A person who might turn out to be the sacrificed minority will not agree to sacrificing it."
+     ],
+     "the answer needs to explain why individuals cannot simply be traded off for aggregate gain."
+    ],
+    [
+     "Ambedkar",
+     "safeguards against majority custom",
+     [
+      "Ambedkar applied the same reasoning to a society where the majority’s customary preference was itself the instrument of exclusion.",
+      "For this reason he insisted on constitutional safeguards rather than trusting goodwill. Fundamental rights, reservation and legal remedies protect minorities from a majority that may be sincere and still unjust."
+     ],
+     "the question concerns minority rights, reservation or constitutional protections."
+    ],
+    [
+     "Tocqueville",
+     "the benevolent majority",
+     [
+      "Alexis de Tocqueville added an observation that completes the picture. A democratic majority can be sincerely benevolent and still crushing, because it never has to meet the minority’s reasoning.",
+      "His insight explains why good intentions do not protect minorities. Institutions must require the majority to hear and answer those it outvotes."
+     ],
+     "the answer needs to show how democratic majorities can harm minorities without intending to."
+    ]
+   ],
+   "examples": [
+    [
+     "Land acquisition and displacement",
+     [
+      "Land acquisition is where the aggregate case and the individual case collide most visibly. A dam, a highway or a plant may raise welfare in total while imposing near-total loss on the households standing on the site. The displaced households usually have the least capacity to relocate.",
+      "The Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act of 2013 required social impact assessment, consent from most landowners for private and public-private projects, and compensation at a multiple of market value. The gap is that compensation is monetary and the loss is not. A cultivator loses an occupation, a network and a place, and cash restores none of them."
+     ],
+     "Who bears the cost of a public project? Weigh aggregate benefit against the loss to those displaced."
+    ],
+    [
+     "Vaccine mandates and bodily autonomy",
+     [
+      "The pandemic tested whether an individual may be compelled for a collective benefit. In Jacob Puliyel v Union of India in 2022, the Supreme Court held that bodily autonomy is protected under Article 21 and that nobody can be forcibly vaccinated. The Court accepted that the state may impose reasonable restrictions in the interest of public health.",
+      "The strongest case for compulsion is not paternalism but harm to others, since vaccination and isolation protect other people, which is exactly the situation Mill’s harm principle addresses. The strongest case against is that emergency powers are easy to assume and hard to give up."
+     ],
+     "When may individual liberty be limited for public health? Apply the harm principle and check for time limits."
+    ],
+    [
+     "Reservation as a counter-majoritarian device",
+     [
+      "Reservation is counter-majoritarian by design. Its premise is that a majority will not voluntarily give up advantage, so representation must be secured by rule. In Indra Sawhney in 1992, the Supreme Court set a ceiling of fifty per cent and excluded the creamy layer.",
+      "In Janhit Abhiyan in 2022, the Court upheld the ten per cent quota for economically weaker sections by three to two, holding that the fifty per cent limit is not part of the basic structure. The ruling reopens a settled question, because a ceiling that can be exceeded when Parliament decides is a convention rather than a constraint."
+     ],
+     "How should minorities be protected from majority advantage? Examine the purpose and limits of reservation."
+    ],
+    [
+     "Clearances and forest rights",
+     [
+      "Eminent domain rests on the proposition that the state’s claim over land is ultimately superior to the holder’s. What varies is the procedure required before it is used. Public hearings for environmental clearance are held where a project is sited, so those who bear the harm can speak, while beneficiaries elsewhere are unrepresented.",
+      "The Forest Rights Act of 2006 recognised rights that predate the state’s record. Clearance can no longer treat forest-dwelling communities as occupying land without title. Recognition is in the statute. Whether recognition is applied at the point of clearance is the live question."
+     ],
+     "Are the rights of affected communities respected in practice? Compare the law with the clearance process."
+    ],
+    [
+     "The libertarian objection",
+     [
+      "Robert Nozick argued that rights act as side constraints rather than goals to be maximised. Rights mark out what may not be done to a person, whatever the aggregate gain. On that view, asking whether total benefit exceeds total loss is the wrong question, because a person is not a resource whose sacrifice can be justified by gains to others.",
+      "Applied consistently, the view rules out much ordinary policy, including redistributive taxation. Its value in an essay is that it names what utilitarian reasoning cannot see: those who bear the cost are not compensated by the fact that others gained."
+     ],
+     "Are there things that may not be done to a person for any gain? Identify rights that limit aggregate reasoning."
+    ]
+   ],
+   "topics": [
+    [
+     "2019A3",
+     [
+      "What benefits one person can harm others. A factory owner gains from polluting a river, and a driver saves time by ignoring traffic rules. In such cases, the best choice for the individual imposes costs on society. Mill’s harm principle allows society to limit individual liberty only to prevent harm to others, and the pandemic showed why: a person’s refusal to isolate can endanger many.",
+      "The statement also works the other way. What is best for society in aggregate may not be best for individuals. Land acquisition can raise total welfare while destroying the livelihood of displaced families. Bentham’s arithmetic registers no objection when a minority is made worse off, which is why Rawls insisted on the separateness of persons, and why Ambedkar built constitutional safeguards. Nozick’s side constraints mark what may not be done to a person for any gain.",
+      "The balanced answer is that neither the individual nor the aggregate should always prevail. Society may limit individual choices that harm others, as in public health, but it must justify the limit and keep it temporary. Society may pursue collective projects, but it must compensate and protect those who bear the cost. A just society is one where the trade between individual and collective good is always made openly and justified to the person bearing it."
+     ]
+    ],
+    [
+     "2025A1",
+     [
+      "Truth knows no colour: a valid claim does not get its validity from the race, caste, religion, class or gender of the person who makes it. The same evidence should lead to the same conclusion whoever presents it. The idea is the foundation of science, law and democratic debate. Bentham’s principle that each counts for one expresses the same impartiality in ethics.",
+      "In practice, societies often judge claims by who makes them. Minority voices are dismissed, while the claims of the powerful are accepted without scrutiny. Mill warned that the tyranny of the majority works through opinion and custom. Tocqueville saw that a majority can be benevolent and still never hear the minority’s reasoning. Standpoint matters here in a precise sense: people outside power often see evidence that others miss, and excluding them makes knowledge worse.",
+      "A society tests whether it believes that truth knows no colour by how it treats claims from people it could afford to ignore. Ambedkar’s constitutional safeguards, public hearings for displaced communities and the Forest Rights Act all try to ensure that such claims are heard. Truth may know no colour, but institutions must be designed so that the colour of the speaker does not decide whether the truth is heard."
+     ]
+    ]
+   ],
+   "intro": [
+    "A society is made of individuals, yet what benefits one person may harm others, and what benefits the majority may crush a minority. A factory may raise a region’s income while displacing a village. A vaccine mandate may protect the public while limiting personal choice. The question is how to weigh individual interests against the common good, and what makes a claim valid regardless of who makes it."
+   ],
+   "claim": "What is best for an individual is not always best for society, and what is best for the majority is not always just. The common good must be pursued without treating any person as a mere resource for others. Rights mark what may not be done to a person, whatever the aggregate gain. Truth knows no colour: a claim’s validity does not depend on who makes it, and a society proves its impartiality by how it treats claims from people it could afford to ignore.",
+   "problem": [
+    "Public policy constantly balances individual and collective interests. Land is acquired for roads, dams and industry. Health measures limit freedom to protect others. Taxation takes from some to provide for all. In each case, the benefits are spread widely while the costs fall heavily on particular people, often those least able to resist.",
+    "The difficulty is that both extremes fail. A society that always puts individual choice first cannot build public goods or control harms like epidemics. A society that always puts the aggregate first can sacrifice minorities without noticing. The challenge is to pursue the common good while protecting individuals, especially those whose voices carry least weight, and to judge claims by their merits rather than by the status of those who make them."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "An aggregate asks whether total benefit exceeds total cost. A distribution asks who bears the cost and who receives the benefit. A policy can pass the first test while failing the second, and a just society must answer both."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of the common good",
+   "together": [
+    "Putting the five together",
+    "Bentham offers impartial aggregate welfare. Mill warns of majority tyranny. Rawls insists that persons cannot be traded off. Ambedkar builds constitutional safeguards. Tocqueville shows that even a kind majority can crush a minority it never hears. Together they explain why the common good must protect the individual it asks to sacrifice."
+   ],
+   "examplesIntro": "The examples below show the common good pressing on individuals through land, health, representation and clearance, and the libertarian objection. They are most useful when the answer asks who bears the cost.",
+   "models": [
+    [
+     "Aggregate gain can hide individual loss.",
+     "Bentham’s greatest happiness principle counts each person as one. But an aggregate can rise while a minority is made much worse off, and the arithmetic records no objection."
+    ],
+    [
+     "Persons are separate.",
+     "Rawls argued that utilitarianism treats society as a single being trading off its own satisfactions. The veil of ignorance blocks the sacrifice of a minority that anyone might belong to."
+    ],
+    [
+     "Liberty may be limited only to prevent harm.",
+     "Mill’s harm principle justifies public health measures that protect others. In Jacob Puliyel in 2022, the Supreme Court held that nobody can be forcibly vaccinated, while allowing reasonable restrictions."
+    ],
+    [
+     "Minorities need safeguards, not goodwill.",
+     "Ambedkar insisted on constitutional protections because majority custom was itself the tool of exclusion. Tocqueville showed that even a benevolent majority can crush those it never hears."
+    ],
+    [
+     "Compensation is not restoration.",
+     "The 2013 land acquisition law requires social impact assessment and higher compensation. Yet a displaced cultivator loses an occupation and a community that money cannot restore."
+    ]
+   ],
+   "steps": [
+    [
+     "State the conflict.",
+     "Show how individual and collective good can diverge in both directions."
+    ],
+    [
+     "Present aggregate reasoning.",
+     "Use Bentham and its strength of impartiality."
+    ],
+    [
+     "Show its blind spot.",
+     "Use Rawls, Mill and Tocqueville on minorities."
+    ],
+    [
+     "Give Indian examples.",
+     "Use land acquisition, vaccine mandates, reservation or forest rights."
+    ],
+    [
+     "Present rights as limits.",
+     "Use Nozick’s side constraints and Ambedkar’s safeguards."
+    ],
+    [
+     "Apply impartiality.",
+     "Explain why claims must be judged on merit, and how institutions ensure all are heard."
+    ],
+    [
+     "Conclude with justification.",
+     "Argue that every trade between individual and society must be justified to the person bearing it."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns the individual and society, majority and minority, or impartiality.",
+   "formula": "Pursue the common good without treating any person as a resource. Limit liberty only to prevent harm, compensate and protect those who bear public costs, safeguard minorities, and judge every claim on its merits, whoever makes it."
+  }
  ]
 };
