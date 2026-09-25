@@ -2716,5 +2716,904 @@ const GUIDES = {
    "stepsIntro": "Use the following sequence when a question concerns time, change, patience or long-term thinking.",
    "formula": "Expect change, read the pattern across years, and build institutions with memory and long horizons. Be patient where waiting keeps the choice open, and act quickly where waiting destroys it."
   }
+ ],
+ "The Good Life: Contentment, Simplicity and Being Humane": [
+  {
+   "thinkers": [
+    [
+     "Aristotle",
+     "happiness as an activity",
+     [
+      "Aristotle’s argument turns on what the word means. Eudaimonia is not a feeling that arrives. Eudaimonia is an activity of the soul in accordance with virtue, carried on over a complete life. In other words, happiness is something a person does rather than something that happens to them.",
+      "Aristotle noted that we choose honour, pleasure and intelligence partly for the sake of other things, but we choose happiness only for itself. A destination can be reached and then left behind. An activity is only ever being performed."
+     ],
+     "the answer needs to define happiness as a way of living rather than a state reached."
+    ],
+    [
+     "The Buddha",
+     "craving moves the target",
+     [
+      "The Buddha reaches the same point from another direction. Suffering arises from craving, which attaches satisfaction to a condition not yet obtained. The condition arrives, the mind adjusts, and the craving moves on to something else.",
+      "The Eightfold Path is therefore a practice and not a prize. Nirvana is the extinguishing of craving, not the acquisition of its object."
+     ],
+     "the question concerns desire, restlessness or why achievement does not bring lasting satisfaction."
+    ],
+    [
+     "Epicurus",
+     "pleasures that do not create new wants",
+     [
+      "Epicurus is often misread as a lover of luxury. In fact he argued for a simple life. The pleasures worth pursuing are those that are easy to obtain and do not create further wants.",
+      "Bread, water and friendship serve better than luxury, because they do not manufacture the appetite they satisfy. Epicurus locates happiness in modest, repeatable pleasures rather than in a distant goal."
+     ],
+     "the answer needs to show how simple pleasures and friendship support a good life."
+    ],
+    [
+     "Camus",
+     "meaning in the pushing",
+     [
+      "Albert Camus gives the hardest version. He faced a universe that offers no destination at all, and he still wrote that Sisyphus, pushing his rock up the hill for ever, must be imagined happy. The meaning lies in the pushing.",
+      "Seeing life as a journey is therefore not a consoling metaphor. Seeing life as a journey accurately describes where satisfaction is located: in the activity or nowhere."
+     ],
+     "the question concerns meaning without guarantees, or finding value in effort itself."
+    ],
+    [
+     "Epictetus",
+     "satisfaction available now",
+     [
+      "Epictetus adds the practical point that makes the idea liveable. If satisfaction lies in an activity, then it is available now, under present conditions, because the activity belongs to us and the conditions do not.",
+      "There is no path to happiness, because a path implies a distance still to be covered. For Epictetus, the distance was never the obstacle. The obstacle was the belief that happiness waits somewhere else."
+     ],
+     "the answer needs to show that happiness depends on present choices rather than future conditions."
+    ]
+   ],
+   "examples": [
+    [
+     "Income and well-being: the research",
+     [
+      "The Easterlin paradox observed that average reported happiness in a country can stay flat while national income rises for decades. In 2010, Daniel Kahneman and Angus Deaton found that day-to-day emotional well-being stopped improving above an annual income of about 75,000 dollars. In 2021, Matthew Killingsworth found that it kept rising.",
+      "The two sides then worked together with Barbara Mellers and published a joint answer in 2023. Flattening is real, but only for the least happy group. For everyone else, well-being keeps rising with income, at a diminishing rate. Money keeps mattering, but each doubling of income buys a fixed increase rather than a proportional one."
+     ],
+     "Does more money bring more happiness? Show that income matters most at the bottom and less at the top."
+    ],
+    [
+     "Bhutan’s Gross National Happiness",
+     [
+      "Bhutan is the standing example of a state that made well-being its constitutional purpose. Gross National Happiness is written into its 2008 constitution and measured through an index covering health, education, living standards, governance, ecology, time use, community vitality, cultural resilience and psychological well-being. In India, Madhya Pradesh created a department for happiness in 2016.",
+      "The serious argument is not whether happiness can be measured precisely. Every government already aims at something. GDP was designed to measure production, not life. What gets measured shapes what gets funded, which makes the choice of indicator a political decision."
+     ],
+     "What should a government measure to judge progress? Compare output measures with measures of well-being."
+    ],
+    [
+     "Mental health in an achievement culture",
+     [
+      "The National Mental Health Survey of 2015-16, conducted by NIMHANS across twelve states with 34,802 respondents, found that about 10.6 per cent of adults had a mental disorder. Prevalence was higher in urban metros, at 13.5 per cent, than in rural areas, at 6.9 per cent. Between 70 and 92 per cent of those affected received no adequate care.",
+      "Set the treatment gap beside a culture that measures worth by rank, salary and title. Achievement is measured and published continuously. Its cost is neither measured nor disclosed. A person is judged on one and left alone with the other."
+     ],
+     "What does a culture of arrival cost? Look at the mental health burden and the gap in care."
+    ],
+    [
+     "The counter-argument: when arrival is the point",
+     [
+      "The claim that happiness lies in the journey is made mostly by people who have already arrived somewhere. For a household without secure food, a roof or the means to pay a medical bill, the destination is not a fantasy that will disappoint. The destination is a floor, and reaching it changes life in lasting ways.",
+      "The income research supports this point. Gains from additional income are largest at the bottom. The arrival fallacy is therefore a problem of the comfortable. An essay that preaches contentment without saying to whom it applies is speaking to the wrong audience."
+     ],
+     "For whom is the journey the point, and for whom is arrival essential? Separate the arrival fallacy from the need for a secure floor."
+    ],
+    [
+     "Emptiness after arrival",
+     [
+      "The arrival fallacy is easiest to see when a long-pursued goal is finally reached and the expected change does not come. Retirement, the departure of grown children, and the period after a promotion or a cleared examination share a structure.",
+      "Each removes a source of daily purpose that had been mistaken for a burden. Each ends a story the person had been living inside. Goals are not worthless. A goal supplies a direction and a daily practice, and only the direction ends on arrival. The practice has to be rebuilt, and most people plan for neither."
+     ],
+     "What does a goal give that arrival takes away? Show why people need a new daily practice after reaching a goal."
+    ]
+   ],
+   "topics": [
+    [
+     "2024A3",
+     [
+      "The saying rejects the idea that happiness waits at the end of a road. If happiness were a destination, it could be reached only after the journey, and life before arrival would be merely preparation. Aristotle described happiness as an activity carried on over a whole life, not a state reached at its end. The Buddha explained why reaching a goal rarely satisfies: craving adjusts and moves on to a new object.",
+      "Research supports the point. Hedonic adaptation means people return to their previous level of well-being after most gains. The emptiness that often follows retirement, promotion or a cleared examination shows that the goal had supplied a daily practice, and arrival took it away. Camus found meaning in Sisyphus’s pushing, and Epictetus taught that satisfaction is available now, because the activity belongs to us.",
+      "Yet the saying must not become a reason to ignore material need. Income matters most for people at the bottom, and for a family without food or healthcare, reaching security is a real improvement. The wise reading is that happiness is found in how one lives, once the basic floor of life is secure. Public policy must provide that floor. Personal wisdom must stop treating the next achievement as the condition for living well."
+     ]
+    ],
+    [
+     "2025B3",
+     [
+      "Seeing life as a destination makes the present a waiting room. Every day is judged by how close it brings us to a future condition. When the condition arrives, it often disappoints, and a new destination replaces it. Seeing life as a journey changes the question from “how far is there left to go?” to “how well am I travelling?” Aristotle’s eudaimonia and the Buddha’s path both place value in the practice rather than the prize.",
+      "The journey view also changes how failure and delay appear. If life is a journey, a setback is part of the route rather than a failure to arrive. Epicurus valued the simple pleasures available along the way, and Camus found meaning in effort itself. The research on hedonic adaptation shows why the destination view disappoints: people adjust quickly to what they gain.",
+      "A journey still needs direction. Without some destination, travel becomes wandering. The better view is to hold goals lightly as directions while finding satisfaction in the daily practice of work, relationships and growth. Society also has a role: people struggling to secure food, health and shelter need to reach those destinations. For them, arrival is not a fallacy but a necessity."
+     ]
+    ]
+   ],
+   "intro": [
+    "Many people organise their lives around a future condition: a job, a salary, a house, a rank. They expect to be happy when they arrive. Often the arrival brings a short lift and then a return to the old mood, and a new goal takes the place of the old one. The question is where satisfaction is actually found, and what follows for how a person or a society should pursue it."
+   ],
+   "claim": "Happiness is an activity, not a destination. Satisfaction lies in how a life is lived each day: in work done well, relationships kept and virtues practised. Goals still matter because they give direction, but reaching them does not deliver lasting happiness. For people without the basics of a decent life, however, arriving at security is exactly the point, and the argument must not become a sermon on contentment to the poor.",
+   "problem": [
+    "Modern life encourages the belief that happiness lies at the end of a series of achievements. Education leads to a job, the job to promotion, and promotion to comfort. Each stage is presented as the condition for a happiness that will come later. Research on hedonic adaptation shows that people adjust quickly to gains, so the expected happiness fades soon after it arrives.",
+    "Yet the opposite claim can also mislead. For a family without secure food, housing or healthcare, reaching a basic standard of living changes life in lasting ways. The income research supports this: additional income matters most at the bottom. The task is to hold both truths together: happiness is found in the practice of living, and a society must still secure the floor that makes such a practice possible."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "A goal gives two things: a direction and a daily practice. Arrival delivers only the end of the direction. The practice has to be rebuilt, which is why people often feel empty after a long-sought goal is reached."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of happiness",
+   "together": [
+    "Putting the five together",
+    "Aristotle defines happiness as an activity. The Buddha explains why arrival does not satisfy. Epicurus shows the value of simple pleasures that create no new wants. Camus finds meaning in the effort itself. Epictetus makes satisfaction available now. Together they explain why happiness is the path rather than the end of it."
+   ],
+   "examplesIntro": "The examples below test the claim against research, policy and the lives of people who have not yet reached a secure floor. They are most useful when the answer asks for whom the claim is true.",
+   "models": [
+    [
+     "Happiness is an activity.",
+     "Aristotle defined eudaimonia as an activity of the soul in accordance with virtue over a complete life. Happiness is something a person does, not something that happens to them. A destination is reached and left. An activity is always being performed."
+    ],
+    [
+     "Arrival disappoints because craving moves.",
+     "The Buddha taught that craving attaches satisfaction to a condition not yet obtained. When the condition arrives, the mind adjusts and craving moves on. Research on hedonic adaptation shows the same pattern."
+    ],
+    [
+     "Goals give direction and practice.",
+     "A long-pursued goal supplies both a direction and a daily practice. Arrival ends only the direction. The emptiness after retirement or promotion shows that the practice must be rebuilt."
+    ],
+    [
+     "Income matters most at the bottom.",
+     "Research by Kahneman, Deaton and Killingsworth shows that well-being keeps rising with income at a diminishing rate. For the poor, reaching security is a real gain, not an illusion."
+    ],
+    [
+     "Measure what matters.",
+     "Bhutan made Gross National Happiness a constitutional purpose. Whatever a state measures shapes what it funds, so the choice between output and well-being indicators is a political decision."
+    ]
+   ],
+   "steps": [
+    [
+     "Define happiness.",
+     "Use Aristotle to present happiness as an activity rather than a feeling or a state."
+    ],
+    [
+     "Explain the arrival fallacy.",
+     "Use the Buddha and hedonic adaptation to show why goals rarely satisfy on arrival."
+    ],
+    [
+     "Show where satisfaction lies.",
+     "Point to daily practice, relationships and simple pleasures."
+    ],
+    [
+     "Bring in evidence.",
+     "Use the income and well-being research or mental health data."
+    ],
+    [
+     "State the counter-argument.",
+     "Acknowledge that for the poor, reaching security is essential."
+    ],
+    [
+     "Apply to policy.",
+     "Discuss well-being measures and the provision of a basic floor."
+    ],
+    [
+     "Conclude with direction and practice.",
+     "Recommend goals as directions and daily life as the place of satisfaction."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns happiness, the good life or the journey and the destination.",
+   "formula": "Find happiness in the practice of living, not at the end of a road. Hold goals as directions, rebuild daily purpose after arrival, and secure the basic floor that lets everyone travel the journey with dignity."
+  },
+  {
+   "thinkers": [
+    [
+     "Gandhi",
+     "need and greed",
+     [
+      "Gandhi said that the earth provides enough for every man’s need but not for every man’s greed. The saying is usually quoted as moral advice. The saying reads better as an economic claim about limits. His idea of aparigraha, or non-possession, was not an instruction to own nothing. Aparigraha was an instruction to hold only what one actually uses.",
+      "His objection to industrial civilisation followed. An industrial society manufactures wants faster than it satisfies them, so it grows richer in goods while growing poorer in the experience of having enough."
+     ],
+     "the answer needs an Indian argument for limits on consumption."
+    ],
+    [
+     "Mahavira",
+     "non-possession as a vow",
+     [
+      "Mahavira took the position to its limit. He made non-possession a vow and treated attachment itself as bondage.",
+      "His example shows why the charge of utopianism must be answered honestly. A doctrine that only a renunciate can follow is not a social programme. Mahavira supplies the ideal. Others must supply a version that households can live by."
+     ],
+     "the question concerns renunciation, or the charge that wantlessness is utopian."
+    ],
+    [
+     "Schumacher",
+     "a different optimisation",
+     [
+      "E. F. Schumacher supplied the answer that makes the position workable. What he called Buddhist economics aims at the maximum of well-being with the minimum of consumption, not the maximum of consumption.",
+      "Schumacher treated work as a source of meaning rather than a cost to be reduced, and asked what scale of technology a community can actually control. His economics is not renunciation. His economics is a different goal for the same economy."
+     ],
+     "the answer needs a practical economic model of sufficiency."
+    ],
+    [
+     "Sen",
+     "freedom as the goal",
+     [
+      "Amartya Sen moves the goal altogether. Development is the expansion of substantive freedoms: the capability to be and do what a person has reason to value.",
+      "Income matters as an instrument, not in itself. Sen’s view explains why a poor household needs more goods, while a rich one may gain nothing from more. Enough is measured by capabilities, not possessions."
+     ],
+     "the question concerns development, poverty or what economic growth is for."
+    ],
+    [
+     "Thiruvalluvar",
+     "enough decided by need",
+     [
+      "Thiruvalluvar states the standard without any metaphysics. In the Tirukkural, wealth is meant to serve the household’s needs and the duties of giving and hospitality.",
+      "What counts as enough is decided by those needs. Wealth beyond them becomes a burden, held for others rather than enjoyed. Thiruvalluvar grounds sufficiency in household ethics rather than renunciation."
+     ],
+     "the answer needs an ancient Indian view of wealth, sufficiency and giving."
+    ]
+   ],
+   "examples": [
+    [
+     "Mission LiFE and individual responsibility",
+     [
+      "India announced Mission LiFE, or Lifestyle for Environment, at COP26 in Glasgow in November 2021. The mission frames sustainability partly as individual behaviour. UNEP has estimated that if one billion people adopted environment-friendly behaviours, global emissions could fall by about twenty per cent.",
+      "The criticism concerns where responsibility lands. The Carbon Disclosure Project linked about seventy per cent of global industrial emissions since 1988 to a hundred producers. An exclusive focus on household habits can look like a transfer of blame. Twenty per cent is substantial, but it is not the other eighty."
+     ],
+     "Where does responsibility for consumption lie? Weigh individual behaviour against producers and policy."
+    ],
+    [
+     "Fast fashion and food waste as manufactured want",
+     [
+      "The strongest evidence that wants are produced rather than discovered is that some industries are profitable only if wants keep expanding. Fast fashion works by shortening the time a garment feels wearable. Clothes are not worn out but declared finished.",
+      "Food systems in wealthy markets waste a large share of what is grown, much of it after purchase. If the desire was engineered, then declining it is not self-denial. Declining it is refusing to buy a want that was sold alongside the product."
+     ],
+     "Is the desire natural or manufactured? Look at industries that depend on shortening the life of what they sell."
+    ],
+    [
+     "Minimalism and the poor",
+     [
+      "Minimalism as it is sold is an aesthetic that requires money: fewer objects, but expensive ones, in a large uncluttered room. Minimalism demonstrates that one could buy more and has chosen not to, which makes it a status signal rather than renunciation.",
+      "A household with three vessels because it can afford only three is not practising simplicity. Gandhi’s position survives the test because he could have lived otherwise and was explicit that poverty was not his ideal."
+     ],
+     "Is the simplicity chosen or imposed? Separate voluntary sufficiency from deprivation."
+    ],
+    [
+     "Degrowth or green growth",
+     [
+      "The climate debate asks whether emissions can fall fast enough while output keeps rising. Green growth says they can, through renewables, efficiency and electrification. Several wealthy economies have reduced emissions while growing. Degrowth says the decoupling is too slow and partly due to moving production abroad, so rich economies must reduce throughput.",
+      "For India, the argument has a different shape. A country with large unmet needs in energy, housing and nutrition cannot treat contraction as a goal. India has therefore argued in per capita terms. The honest framing is not growth against no growth. The honest framing is who has already used the carbon budget."
+     ],
+     "Should everyone consume less, or should the rich consume less while the poor consume more? Consider per capita emissions and unmet needs."
+    ],
+    [
+     "Consumption and employment",
+     [
+      "The counter-case is strong in a developing economy. Domestic demand turns capacity into jobs. Much Indian employment sits in sectors that exist because people buy more than they strictly need: textiles, construction, hospitality, retail and transport.",
+      "A general fall in consumption lands first on informal and daily-wage workers, as the demand collapse of 2020 showed. An argument for sufficiency must therefore specify whose consumption should fall. Reducing the footprint of the richest tenth and reducing total demand are different policies with opposite effects on the poor."
+     ],
+     "Whose consumption should change? Separate restraint at the top from a fall in demand that hurts workers."
+    ]
+   ],
+   "topics": [
+    [
+     "2021A3",
+     [
+      "The statement rejects both extremes. Wantlessness is utopian because only a few can live by it. Mahavira made non-possession a vow, but a society cannot run on the ideals of renunciates. Families need homes, healthcare and education, and a developing economy needs demand to create jobs. Materialism is a chimera because it promises satisfaction it cannot deliver. Each gain creates a new want, and industries such as fast fashion profit by manufacturing desire.",
+      "The third answer is sufficiency. Gandhi’s aparigraha asks people to hold what they use, not to own nothing. Schumacher’s Buddhist economics aims at maximum well-being with minimum consumption. Sen defines development as expanding freedoms, which means that income matters as a means. Thiruvalluvar ties wealth to the needs and duties of the household.",
+      "Sufficiency also has a distributional meaning. The poor need more goods to reach a decent life, while the rich may gain little from more. Mission LiFE’s focus on lifestyle is useful, but responsibility also lies with producers and policy. The balanced conclusion is that neither renunciation nor accumulation should be the goal. Enough, defined by what a good life requires and shared fairly, is both practical and ethical."
+     ]
+    ],
+    [
+     "2025B4",
+     [
+      "Contentment is natural wealth because it does not depend on continuous acquisition. A person who knows what is enough can enjoy what they have without chasing the next purchase. Epicurus valued simple pleasures that create no new wants, and Gandhi argued that the earth has enough for need but not for greed. Contentment frees time, attention and resources for relationships, work and service.",
+      "Luxury can be artificial poverty because it manufactures wants faster than it satisfies them. The more one has, the more one is trained to want, and the gap between desire and possession never closes. Fast fashion shows how industries shorten the life of goods to keep demand growing. A person surrounded by luxury may feel poorer than a person with less, because they are always measuring against the next level.",
+      "The statement needs a qualification. Contentment cannot be preached to people without food, shelter or healthcare. For them, acquiring the basics is not greed but justice. Contentment is wealth only above the floor of a decent life. The ethical task is to help everyone reach that floor, while encouraging those above it to see that more consumption is not the same as more well-being."
+     ]
+    ]
+   ],
+   "intro": [
+    "Two views of the good life compete. One says that happiness lies in wanting less: renunciation, simplicity and freedom from desire. The other says that prosperity lies in producing and consuming more. Both have failures. Complete renunciation is possible only for a few, and endless consumption promises satisfaction it cannot deliver. The question is whether there is a third answer that a society, not only a saint, can live by."
+   ],
+   "claim": "The third answer is sufficiency. Enough is defined by what a good life requires, not by what a market can sell. Sufficiency accepts that material goods matter as means to freedom and well-being, while refusing the belief that more is always better. Contentment is natural wealth because it does not require constant acquisition. Luxury can be artificial poverty because it manufactures wants faster than it satisfies them.",
+   "problem": [
+    "Consumption drives economies. Jobs in textiles, construction, retail and transport depend on people buying more than they strictly need. For a developing country with millions still lacking basic goods, rising consumption is part of rising welfare. A call for renunciation can sound like a demand that the poor stay poor.",
+    "Yet unlimited consumption has costs. Industries profit by shortening the life of products and creating new wants. Environmental limits make the consumption patterns of the rich impossible to extend to everyone. The ethical and economic question is how to define enough, whose consumption should fall and whose should rise, and how to separate the need for development from the manufacture of desire."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Voluntary sufficiency is chosen by someone who could have more. Imposed scarcity is suffered by someone who cannot. The first can be a virtue. Describing the second as simplicity flatters the observer and insults the household."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of enough",
+   "together": [
+    "Putting the five together",
+    "Gandhi and Mahavira supply the ideal of non-possession. Schumacher turns it into an economics of well-being with minimum consumption. Sen redefines the goal as freedom, which explains why the poor need more and the rich may not. Thiruvalluvar defines enough by the needs of the household. Together they give the third answer: sufficiency."
+   ],
+   "examplesIntro": "The examples below show sufficiency in policy, the evidence of manufactured wants, and the limits of the argument in a developing economy. They are most useful when the answer asks whose consumption should change.",
+   "models": [
+    [
+     "Sufficiency is the third answer.",
+     "Neither wantlessness nor endless consumption can guide a society. Sufficiency defines enough by what a good life requires, not by what a market can sell. The standard is practical for households and ethical for the planet."
+    ],
+    [
+     "Aparigraha means holding what you use.",
+     "Gandhi’s non-possession was not an instruction to own nothing. Gandhi asked people to hold only what they actually use. The earth has enough for need but not for greed."
+    ],
+    [
+     "Development is freedom, not accumulation.",
+     "Sen defines development as the expansion of capabilities. Income matters as an instrument. The poor need more goods, while the rich may gain little from more."
+    ],
+    [
+     "Many wants are manufactured.",
+     "Fast fashion and food waste show industries that profit by expanding desire past the point of use. Declining such wants is not self-denial but a refusal to buy what was engineered."
+    ],
+    [
+     "Restraint must fall where it is fair.",
+     "A general fall in consumption hurts informal workers first. An argument for sufficiency must specify that the richest should consume less while the poorest are helped to consume more."
+    ]
+   ],
+   "steps": [
+    [
+     "State both extremes.",
+     "Explain why wantlessness is impractical and materialism unsatisfying."
+    ],
+    [
+     "Propose sufficiency.",
+     "Define enough by the needs of a good life."
+    ],
+    [
+     "Bring in Indian thought.",
+     "Use Gandhi’s aparigraha, Mahavira or Thiruvalluvar."
+    ],
+    [
+     "Use economic reasoning.",
+     "Apply Schumacher’s well-being economics and Sen’s capability approach."
+    ],
+    [
+     "Show manufactured wants.",
+     "Use fast fashion or food waste as evidence."
+    ],
+    [
+     "Address distribution.",
+     "Separate restraint by the rich from the needs of the poor, and discuss employment."
+    ],
+    [
+     "Link to sustainability.",
+     "Discuss Mission LiFE, producer responsibility and per capita fairness."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns consumption, simplicity, contentment or materialism.",
+   "formula": "Seek sufficiency rather than renunciation or accumulation. Define enough by what a good life requires, raise the floor for the poor, restrain the manufactured wants of the rich, and measure progress by freedom and well-being rather than by consumption."
+  },
+  {
+   "thinkers": [
+    [
+     "Laozi",
+     "the effort that has been concealed",
+     [
+      "Laozi refuses the obvious reading of simplicity. He wrote that the Tao which can be named is not the eternal Tao, and that the sage achieves more by not forcing than the person who strains.",
+      "Simplicity here is not the absence of effort but effort concealed. Simplicity is the state reached after everything unnecessary has been removed, which is far harder than the state before anything was added. Laozi’s image is water, the softest substance, which still wears down stone because it has no fixed shape to defend."
+     ],
+     "the answer needs a philosophical account of simplicity as achievement."
+    ],
+    [
+     "Thiruvalluvar",
+     "compression as mastery",
+     [
+      "Thiruvalluvar makes the same point through the form of his verse. Each couplet of the Tirukkural compresses an ethical argument into two short lines.",
+      "The compression is itself the achievement. The thought had to be fully possessed before it could be stated so briefly. Brevity of that kind is evidence of understanding, not a shortcut around it."
+     ],
+     "the question needs an Indian example of compression as a sign of mastery."
+    ],
+    [
+     "Gandhi",
+     "the compressed symbol",
+     [
+      "Gandhi carried simplicity into politics and dress. Appearing in a loincloth before the British establishment was a compressed argument about whom he represented.",
+      "The spinning wheel condensed self-reliance, the dignity of labour and economic decentralisation into a single object that a villager could hold. His talisman reduced a complex ethical judgment to one test that a tired official could apply."
+     ],
+     "the answer needs an example of simplicity as political communication or a decision rule."
+    ],
+    [
+     "Kabir",
+     "dismantling professional complexity",
+     [
+      "Kabir worked from the other direction. He used the language of weaving and ordinary household life to dismantle religious complexity that had become a profession for those who maintained it.",
+      "Kabir shows that complexity has a sociology. Complexity can protect an expert class and keep ordinary people dependent on interpreters. Plain speech returns the question to everyone."
+     ],
+     "the question concerns jargon, gatekeeping or the power of experts."
+    ],
+    [
+     "Schumacher",
+     "appropriate technology",
+     [
+      "E. F. Schumacher applied the principle to machines. A tool that a village can build, repair and afford does more good than a plant the village cannot control.",
+      "Simplicity here is an engineering discipline, not a preference. Simplicity puts the user rather than the manufacturer in charge of the outcome."
+     ],
+     "the answer concerns technology, development or design that serves users."
+    ]
+   ],
+   "examples": [
+    [
+     "Plain language in law and welfare forms",
+     [
+      "A statute that governs a citizen and cannot be read by that citizen has transferred power to whoever can read it. Indian drafting inherits a colonial style built on very long sentences, nested provisos and definitions that refer to other definitions. The style may be defensible in a tax code argued by specialists. The style is indefensible in a welfare application.",
+      "The consequence is exclusion. A form that requires an intermediary creates a paid intermediary, and the fee falls on exactly the applicant the scheme exists to help. The test for plain drafting is whether an eligible person can prove eligibility without paying someone to explain the sentence."
+     ],
+     "Who can read the rule that governs them? Ask whether complexity creates a paid gatekeeper."
+    ],
+    [
+     "UPI and the design of public interfaces",
+     [
+      "UPI is India’s clearest demonstration that interface design is policy. Annual UPI transactions rose from about 1.78 crore in 2016-17 to more than 18,000 crore in 2024-25, and the number of banks on the network grew from 44 to more than 600. India now accounts for a large share of the world’s real-time payments.",
+      "UPI did not succeed because its engineering was unprecedented. UPI succeeded because the action asked of the user was reduced to something possible on a cheap phone with poor connectivity. Where a public system fails on adoption, the defect is usually in what it asks of the person, not in what it can do."
+     ],
+     "Did simplicity decide adoption? Look at what the system asks of its least skilled user."
+    ],
+    [
+     "Jargon as armour",
+     [
+      "Technical vocabulary has a legitimate use. Technical vocabulary compresses a precise idea for people who share the definition. Jargon can also make a decision unexaminable by anyone outside the room.",
+      "The test is whether the term survives translation into ordinary words. If it does, the jargon was shorthand. If the plain version is embarrassing, the jargon was armour. Regulatory forbearance describes a decision to let a bank delay admitting a loss. A public decision must be defensible in the language of the public."
+     ],
+     "Does the term survive translation into plain words? Ask whether jargon compresses meaning or hides it."
+    ],
+    [
+     "Irreducible complexity and the checklist",
+     [
+      "The case for simplicity, pushed too far, becomes an argument for dangerous ignorance. Some systems are complex because reality is. A drug interaction, the taxation of cross-border income or an aircraft failure at altitude cannot be reduced to one rule without losing distinctions on which safety depends.",
+      "The answer is structure, not compression. The surgical safety checklist and the aviation checklist do not simplify the underlying system. The checklists make the complexity navigable under pressure by fixing the order of operations. Simplifying the problem can kill. Simplifying the interface saves lives."
+     ],
+     "Is the complexity real or protective? Simplify the interface, not the problem, where the complexity is real."
+    ],
+    [
+     "Gandhi’s talisman as a decision rule",
+     [
+      "Gandhi’s talisman asks a person facing a doubtful decision to recall the face of the poorest and weakest person they have seen, and to ask whether the step contemplated will be of any use to that person.",
+      "The talisman is a piece of design as well as moral instruction. The talisman turns an abstract question about the public good into a concrete test with a specific person in it, usable by someone tired and under pressure. The talisman is also a distributional rule, asking about the worst-off rather than the total, which places it closer to Rawls than to Bentham. Its limit is that it gives a direction, not a magnitude."
+     ],
+     "Can a complex ethical judgment be reduced to a usable rule? Show both the power and the limit of the talisman."
+    ]
+   ],
+   "topics": [
+    [
+     "2020A4",
+     [
+      "Simplicity looks easy, but it is usually the last stage of understanding. Laozi described the sage as achieving more by not forcing, and Thiruvalluvar compressed whole ethical arguments into two lines. Reaching simplicity requires knowing what can be removed without loss, which requires understanding the whole. Complexity is the easier state. Anyone can add. Only someone who understands can take away.",
+      "Simplicity is also sophisticated in its effects. UPI succeeded because it asked very little of the user. Gandhi’s spinning wheel and talisman carried complex arguments in forms that ordinary people could use. Schumacher’s appropriate technology put the user in charge. By contrast, complex laws and welfare forms create paid intermediaries, and jargon can hide decisions from public scrutiny. Kabir showed that complexity often protects those who control it.",
+      "The saying has limits that a good answer should state. Some systems are complex because reality is complex. Medicine, aviation and international taxation cannot be reduced to single rules without danger. The sophisticated response is to simplify the interface, as checklists do, rather than the problem. Simplicity is the ultimate sophistication when it comes from understanding and serves the user, not when it ignores what matters."
+     ]
+    ]
+   ],
+   "intro": [
+    "Simplicity is often mistaken for ease. A simple design, a clear sentence or a short rule looks as if it took little effort. In fact, simplicity is usually the result of long work: understanding a problem well enough to remove everything that does not matter. Complexity, by contrast, can protect experts, hide responsibility and exclude ordinary people. The question is why simplicity is a mark of sophistication, and when simplifying goes too far."
+   ],
+   "claim": "Simplicity is the ultimate sophistication because it requires complete understanding and makes an idea usable by others. A simple law, form or tool puts the user in charge. Complexity often has a social function: it protects those who control it and delays the moment when a claim can be checked. But some systems are complex because reality is complex. The answer there is not to simplify the problem, but to simplify the interface to it.",
+   "problem": [
+    "Much of public life is more complicated than it needs to be. Laws are drafted in long sentences with nested provisos. Welfare forms require intermediaries. Financial products are described in jargon that few can understand. Each layer of complexity has a defender, and each makes it harder for citizens to know their rights or hold decision-makers to account.",
+    "Simplifying, however, can also cause harm. A drug interaction, an aircraft emergency or cross-border taxation cannot be reduced to a single rule without losing distinctions that keep people safe. The challenge is to separate complexity that conceals from complexity that is real, and to design systems in which even real complexity can be navigated by the people who depend on them."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Simplifying the problem removes distinctions that may matter, and can be dangerous. Simplifying the interface leaves the problem intact but makes it navigable, as a checklist or a well-designed form does. The second is the sophistication the saying praises."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of simplicity",
+   "together": [
+    "Putting the five together",
+    "Laozi shows that simplicity is effort concealed. Thiruvalluvar shows that compression requires mastery. Gandhi shows how a simple symbol or rule can carry a complex argument. Kabir shows how complexity can protect experts. Schumacher shows simplicity as design that empowers users. Together they explain why simplicity is harder to reach than complexity and more useful once reached."
+   ],
+   "examplesIntro": "The examples below show simplicity succeeding in public design, complexity serving as armour, and the limits of simplifying a complex reality. They are most useful when the answer asks who benefits from the complexity.",
+   "models": [
+    [
+     "Simplicity is effort concealed.",
+     "Laozi described simplicity as the state reached after everything unnecessary has been removed. Reaching it requires complete understanding, which is why it is harder than complexity."
+    ],
+    [
+     "Compression shows mastery.",
+     "Thiruvalluvar compressed ethical arguments into two-line couplets. A thought must be fully possessed before it can be stated so briefly."
+    ],
+    [
+     "Complexity can protect power.",
+     "Kabir used ordinary language to dismantle religious complexity maintained by professionals. Complex laws, forms and jargon can exclude citizens and shield decisions from scrutiny."
+    ],
+    [
+     "Design decides adoption.",
+     "UPI grew from about 1.78 crore transactions in 2016-17 to more than 18,000 crore in 2024-25, because it asked little of the user. Public systems often fail on what they ask of people, not on what they can do."
+    ],
+    [
+     "Simplify the interface, not the problem.",
+     "Medicine and aviation are complex because reality is. Checklists make that complexity navigable without pretending it away. The sophisticated response to real complexity is structure."
+    ]
+   ],
+   "steps": [
+    [
+     "Define simplicity.",
+     "Distinguish simplicity reached through understanding from simplicity that ignores what matters."
+    ],
+    [
+     "Show why simplicity is hard.",
+     "Use Laozi or Thiruvalluvar."
+    ],
+    [
+     "Show what simplicity achieves.",
+     "Use UPI, Gandhi’s symbols or appropriate technology."
+    ],
+    [
+     "Examine the sociology of complexity.",
+     "Ask whom complex laws, forms and jargon protect."
+    ],
+    [
+     "Acknowledge irreducible complexity.",
+     "Use medicine, aviation or tax as examples."
+    ],
+    [
+     "Offer the solution.",
+     "Recommend simplifying interfaces through checklists, plain language and good design."
+    ],
+    [
+     "Conclude with the user.",
+     "Judge simplicity by whether the intended user can act without help."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns simplicity, clarity or complexity.",
+   "formula": "Pursue simplicity that comes from understanding and serves the user. Remove complexity that protects gatekeepers, and where reality is complex, simplify the interface rather than the problem."
+  },
+  {
+   "thinkers": [
+    [
+     "Marcus Aurelius",
+     "beginning with debts",
+     [
+      "Marcus Aurelius began the Meditations not with doctrine but with a list of debts. He set out what he had learned from his grandfather, his teachers and his adopted father.",
+      "The opening is itself the argument. A mind that begins by listing what it has received is oriented differently from one that begins by listing what it lacks. The difference decides what the person notices for the rest of the day. His method throughout was to examine his own impressions before acting on them."
+     ],
+     "the answer needs a model of gratitude as a daily practice."
+    ],
+    [
+     "Epictetus",
+     "opinions, not things",
+     [
+      "Epictetus states the same mechanism as a rule. People are disturbed not by things but by the opinions they hold about things.",
+      "Since the opinion is the part that belongs to us, calm is available even in circumstances that cannot be improved. For this reason Epictetus could teach the doctrine from a condition of slavery without absurdity."
+     ],
+     "the question concerns tranquillity, resilience or control over one’s own responses."
+    ],
+    [
+     "The Buddha",
+     "mindfulness interrupts craving",
+     [
+      "The Buddha adds the technique that the Stoics point towards without systematising. Mindfulness is sustained, non-judgmental attention to what is actually happening.",
+      "Within the Eightfold Path, mindfulness interrupts the automatic movement from sensation to craving to distress before that movement completes. Tranquillity comes from seeing the reaction as it happens."
+     ],
+     "the answer needs to explain mindfulness and how it produces calm."
+    ],
+    [
+     "Guru Nanak",
+     "remembrance within working life",
+     [
+      "Guru Nanak gives an Indian devotional version. Remembrance of the divine, naam japna, is practised in the middle of ordinary working life rather than in withdrawal from it. Remembrance goes together with honest labour, kirat karni, and sharing with others, vand chhakna.",
+      "Guru Nanak joins inner attention to outer duty. Tranquillity is not found by leaving the world but by living in it with remembrance, work and generosity."
+     ],
+     "the question needs an Indian example that links inner practice to work and service."
+    ],
+    [
+     "Gibran",
+     "joy and sorrow from the same well",
+     [
+      "Kahlil Gibran adds the corrective that stops the argument becoming a case for numbness. He wrote that joy and sorrow are inseparable, drawn from the same well.",
+      "A tranquil self is therefore not one that has stopped feeling. A tranquil self is one that is no longer ruled by what it feels. Gibran’s distinction separates cultivated equanimity from suppression."
+     ],
+     "the answer needs to show that tranquillity does not mean the absence of feeling."
+    ]
+   ],
+   "examples": [
+    [
+     "The attention economy",
+     [
+      "In a business funded by advertising, the user’s attention is the product and the content is the bait. The interface is designed against the user’s stated intention. Variable rewards, autoplay, infinite scroll and timed notifications apply well-understood behavioural findings to the problem of keeping users engaged.",
+      "Framing the problem as a matter of willpower therefore misdescribes it. A person resisting a feed is not fighting their own weakness but the work of teams optimising against them with far better data. Mindfulness is a reasonable individual response and an inadequate systemic one, as a swimming lesson is a reasonable response to a flood."
+     ],
+     "Is distraction a personal failing or a designed outcome? Separate individual practice from the design of the environment."
+    ],
+    [
+     "Corporate wellness and structural burnout",
+     [
+      "William Fleming of Oxford’s Wellbeing Research Centre studied survey responses from 46,336 workers in 233 organisations. The study, published in the Industrial Relations Journal in 2024, compared participants and non-participants in individual well-being programmes. The study found no benefit from resilience training, mindfulness classes or well-being apps. Of about ninety offerings examined, only volunteering was associated with better well-being.",
+      "If burnout comes from workload, insecurity and lack of control, then an intervention aimed at the worker’s response treats the symptom while the cause continues. The programme’s real function may be to show that something was done."
+     ],
+     "Is the programme addressing the cause or the symptom? Ask whether work conditions changed."
+    ],
+    [
+     "What the evidence on gratitude supports",
+     [
+      "Structured gratitude practices, such as writing down things one is grateful for, do show benefits. The effects are usually modest, often measured against no treatment rather than an active alternative, and frequently assessed over short periods with self-reported outcomes.",
+      "The defensible claim is narrow. Deliberately attending to what is already present appears to raise reported well-being somewhat, for some people, in the short run. The effect is enough to make gratitude worth practising. The effect is not enough to support a claim that attention alone determines contentment."
+     ],
+     "How strong is the evidence for inner practices? Use modest claims that the research supports."
+    ],
+    [
+     "Yoga as public health policy",
+     [
+      "India has treated yoga as an instrument of both health policy and diplomacy. The Ministry of AYUSH was created in 2014 to bring traditional systems into formal health administration. The United Nations designated 21 June as the International Day of Yoga, observed since 2015.",
+      "The public health case rests on non-communicable disease. Where the burden is hypertension, diabetes and sedentary living, a low-cost practice needing no equipment is a rational intervention. Honesty about evidence is essential. Claims that yoga supports cardiovascular and mental health are reasonably supported. Claims that yoga can substitute for treatment of serious disease are not."
+     ],
+     "Where does an inner practice serve public health, and where does it overreach? Separate supported claims from unsupported ones."
+    ],
+    [
+     "Tranquillity as accommodation",
+     [
+      "The sharpest objection to the theme should be stated at full strength. A philosophy that places well-being entirely in managing one’s own responses implies that conditions need not change. Applied to an underpaid worker or a person facing discrimination, such a philosophy becomes a doctrine of adjustment. Marx’s charge that religion consoles rather than frees has the same structure.",
+      "The Stoic reply is that its distinction is between what is and is not within one’s control. Injustice within one’s control is exactly what one is obliged to act against. The test is whether a practice keeps that distinction."
+     ],
+     "Is the practice helping a person act, or persuading them to accept injustice? Check whether it preserves the duty to change what can be changed."
+    ]
+   ],
+   "topics": [
+    [
+     "2026A2",
+     [
+      "A grateful mind is beautiful in a precise sense. Gratitude changes what a person notices. Marcus Aurelius began the Meditations by listing what he had received from others, and the list oriented his mind towards what he had rather than what he lacked. A person who begins with debts sees the world as a set of gifts, and responds with humility, generosity and trust.",
+      "Gratitude also shapes relationships and communities. A grateful person acknowledges the work of others, including the unseen work of families, teachers and workers. Guru Nanak joined remembrance with honest labour and sharing, turning gratitude into generosity. Research on gratitude practices shows modest but real benefits to well-being.",
+      "Gratitude must not become a demand that people be thankful for injustice. Telling an exploited worker to be grateful for a job is not moral guidance but a way of silencing complaint. The beautiful grateful mind recognises what it has received and still sees what should change. Gratitude that leads to generosity and action is beautiful. Gratitude used to excuse injustice is not."
+     ]
+    ],
+    [
+     "2020A2",
+     [
+      "A mindful manifesto is a commitment to attend deliberately to one’s own mind: to notice thoughts, feelings and reactions rather than being driven by them. The Buddha taught mindfulness as the practice that interrupts the movement from sensation to craving to distress. Epictetus taught that people are disturbed not by events but by their opinions about events. Both locate tranquillity in the relation between the mind and what happens, not in the events themselves.",
+      "The need for such a practice is sharper today. The attention economy is designed to capture and fragment attention. Constant notifications and comparison produce restlessness even amid comfort. A mindful commitment helps a person decide where attention goes, rather than letting it be sold. Yoga and meditation, promoted through public health policy, can support this practice.",
+      "Mindfulness is a catalyst, not a complete solution. The research on corporate wellness shows that individual practices do not fix burnout caused by workload and insecurity. A tranquil self must also be willing to change what can be changed, including unjust working conditions. Gibran reminds us that tranquillity does not mean the end of feeling. The mindful self feels fully but is not ruled by its feelings, and acts where action is due."
+     ]
+    ]
+   ],
+   "intro": [
+    "People often believe that peace of mind depends on circumstances: a better job, a quieter home, fewer problems. Yet two people in the same circumstances can feel very differently. One is grateful and calm, the other restless and resentful. The question is how much of tranquillity lies in the mind’s own habits, such as attention and gratitude, and how much depends on conditions that should be changed."
+   ],
+   "claim": "Gratitude and attention shape the inner economy: they decide what a person counts as income and what as loss. A grateful mind notices what it has received, and a mindful mind interrupts the reaction that turns sensation into distress. Gratitude and attention make tranquillity possible in conditions that cannot be changed. But they must not become a way of accepting conditions that should be changed. Inner calm and outer action belong together.",
+   "problem": [
+    "Modern life is designed to capture attention. Notifications, advertising and endless feeds compete for every spare moment, and much of the design works against the user’s own intentions. Comparison with others is constant. Under such pressure, people feel restless even when their material conditions improve.",
+    "Practices such as gratitude and mindfulness offer a response. Yet they can also be misused. Employers may offer mindfulness training instead of reducing workloads, and a philosophy of inner calm can be used to tell people to accept injustice. The question is how to cultivate an inner economy of attention and gratitude without turning it into a doctrine of adjustment."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Equanimity is not numbness. A tranquil person still feels joy and sorrow but is not ruled by them. Accepting what cannot be changed is wisdom. Accepting what can and should be changed is resignation."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of the inner life",
+   "together": [
+    "Putting the five together",
+    "Marcus Aurelius shows gratitude as a way of orienting attention. Epictetus shows that disturbance lies in our opinions. The Buddha supplies mindfulness as the technique. Guru Nanak joins remembrance to work and sharing. Gibran shows that tranquillity does not mean the end of feeling. Together they describe an inner economy that circumstances do not control."
+   ],
+   "examplesIntro": "The examples below show the external pressures on attention, the evidence for inner practices, and the danger of using them to avoid change. They are most useful when the answer separates individual practice from structural causes.",
+   "models": [
+    [
+     "Gratitude orients attention.",
+     "Marcus Aurelius began the Meditations with a list of debts. A mind that begins with what it has received notices differently from one that begins with what it lacks."
+    ],
+    [
+     "Disturbance lies in judgment.",
+     "Epictetus taught that people are disturbed not by things but by their opinions about things. Since opinions are within our control, calm is possible even in difficult conditions."
+    ],
+    [
+     "Mindfulness interrupts reaction.",
+     "The Buddha taught mindfulness as attention that stops the movement from sensation to craving to distress. Tranquillity comes from seeing a reaction before it takes control."
+    ],
+    [
+     "Individual practice cannot fix structural causes.",
+     "A study of 46,336 workers found no benefit from individual well-being programmes. Burnout caused by workload and insecurity needs changes in work, not only in workers."
+    ],
+    [
+     "Equanimity is not resignation.",
+     "Tranquillity means not being ruled by feelings, not accepting injustice. The Stoic distinction between what is and is not in our control obliges action on what can be changed."
+    ]
+   ],
+   "steps": [
+    [
+     "Define the inner economy.",
+     "Explain how attention and gratitude decide what a person counts as gain or loss."
+    ],
+    [
+     "Use classical thinkers.",
+     "Bring in Marcus Aurelius, Epictetus and the Buddha."
+    ],
+    [
+     "Give an Indian perspective.",
+     "Use Guru Nanak’s joining of remembrance, work and sharing."
+    ],
+    [
+     "Examine modern pressures.",
+     "Discuss the attention economy and constant comparison."
+    ],
+    [
+     "Use evidence carefully.",
+     "Cite modest, supported findings on gratitude and yoga."
+    ],
+    [
+     "State the objection.",
+     "Address the risk of accepting conditions that should be changed."
+    ],
+    [
+     "Conclude with inner calm and outer action.",
+     "Argue that tranquillity should support, not replace, efforts to change what is unjust."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns gratitude, mindfulness or tranquillity.",
+   "formula": "Cultivate gratitude and attention so that circumstances do not rule the mind. Keep the distinction between what can and cannot be changed, and let inner calm support action against what should be changed."
+  },
+  {
+   "thinkers": [
+    [
+     "Gandhi",
+     "the talisman and sarvodaya",
+     [
+      "Gandhi’s talisman is the most usable ethical instrument in Indian public life. When in doubt, recall the face of the poorest and weakest person you have seen, and ask whether the step you are considering will be of any use to them. The talisman turns an abstract obligation into a test a person can apply.",
+      "His idea of sarvodaya, the welfare of all, rejected the utilitarian settlement in which a majority’s gain permits a minority’s loss. Placing the last person first is not charity but the criterion for deciding whether a policy has worked."
+     ],
+     "the answer needs an Indian decision rule centred on the poorest."
+    ],
+    [
+     "Vivekananda",
+     "service as worship",
+     [
+      "Vivekananda gave the same commitment a religious form. He spoke of daridra narayana, the poor as God, and insisted that service to a living human being is worship rather than a substitute for it.",
+      "His rebuke to a religion that offers philosophy to a hungry person remains the sharpest statement of misplaced priority. For Vivekananda, spiritual life that ignores suffering has missed its purpose."
+     ],
+     "the question links spirituality, service and social responsibility."
+    ],
+    [
+     "Mother Teresa",
+     "the poverty of being unwanted",
+     [
+      "Mother Teresa narrows the frame to the individual encounter. She argued that the loneliness of being unwanted is a more serious poverty than hunger, and that the work is done one person at a time.",
+      "Her view corrects a politics that can discuss the poor endlessly without meeting one. Humaneness begins with presence."
+     ],
+     "the answer needs to show the importance of personal care and presence."
+    ],
+    [
+     "Gilligan",
+     "the ethic of care",
+     [
+      "Carol Gilligan supplies the theoretical vocabulary. Her ethic of care holds that moral maturity can consist in attending to relationship, need and context, rather than applying a rule more consistently.",
+      "Becoming humane, on this account, is not an improvement in feeling. Becoming humane is a change in what a person is able to notice. For this reason the journey takes a lifetime and is never completed by good intentions alone."
+     ],
+     "the question concerns moral development, care work or attention to context."
+    ],
+    [
+     "Deendayal Upadhyaya",
+     "the last person in the queue",
+     [
+      "Deendayal Upadhyaya put the same test into the language of governance through the idea of antyodaya, the rise of the last person. He argued that a system should be judged by the condition of the last person in the queue rather than by its average performance.",
+      "The criterion can be translated into budget lines and delivery data, which compassion alone cannot. Antyodaya turns care into a measurable standard for policy."
+     ],
+     "the answer needs a governance criterion for inclusive development."
+    ]
+   ],
+   "examples": [
+    [
+     "Ayushman Bharat and the last mile",
+     [
+      "Ayushman Bharat PM-JAY, launched in September 2018, offers hospital cover of five lakh rupees a year per family. After the expansion of 2024, the scheme covers about 12 crore families, and in October 2024 it was extended to everyone aged seventy and above regardless of income.",
+      "The design follows antyodaya: judge the scheme by its effect on the last person. The failures also lie at the last mile. Empanelled hospitals are concentrated in districts that already had them, some package rates are below what private hospitals accept, and eligible people often do not know they are eligible. Entitlement is created centrally and delivered locally, and the local half is where it breaks."
+     ],
+     "Does the scheme reach the last person? Look at delivery, awareness and hospital coverage, not only the entitlement."
+    ],
+    [
+     "Unpaid care work",
+     [
+      "India’s Time Use Survey makes visible what GDP omits. In 2019, women spent an average of 299 minutes a day on unpaid domestic work, against 97 minutes for men. Women spent 134 minutes a day on caregiving, against 76 for men. The 2024 round shows the gap persisting.",
+      "Two consequences follow. Care is a precondition for all counted labour, since nobody goes to work from a household that nobody maintains. Because care is unmeasured, it is also unfunded, unpensioned and absent from calculations of who contributed what."
+     ],
+     "Is care counted and supported? Show how unpaid care sustains the economy while remaining invisible."
+    ],
+    [
+     "Kerala’s community palliative care",
+     [
+      "Palliative care shows what a health system thinks medicine is for, because the patient will not recover. Kerala built the Neighbourhood Network in Palliative Care around trained community volunteers linked to primary health centres and nursing support. Care reaches the home rather than requiring the household to reach a hospital.",
+      "In 2008, Kerala became the first Indian state to adopt a palliative care policy and bring it into the public health system. The lesson is that the scarce resource was never only medical expertise. The scarce resource was presence, and presence can be organised."
+     ],
+     "Can compassion be organised at scale? Show how community systems turn care into a reliable service."
+    ],
+    [
+     "Rights or compassion?",
+     [
+      "The counter-argument is strong. Compassion is unreliable in ways an entitlement is not. Compassion responds to proximity and vividness, so it favours the visible case over the greater need. Compassion fluctuates with the giver’s mood and creates no obligation a person can enforce.",
+      "Ambedkar’s refusal to accept relief as a substitute for rights states the same objection politically. The reconciliation is that rights decide what a person may demand, while disposition decides what they meet at the counter. A system staffed by people who resent claimants will deliver less than the entitlement promises."
+     ],
+     "What does compassion add to rights, and what do rights add to compassion? Show why each needs the other."
+    ],
+    [
+     "Compassion fatigue among frontline workers",
+     [
+      "Compassion fatigue is a predictable condition of certain work, not a personal failing. Compassion fatigue appears wherever people absorb distress repeatedly: nurses, palliative staff, child protection officers, disaster responders and helpline workers.",
+      "Empathy has a cost. Where the caseload is unlimited, the cost accumulates until the worker withdraws emotionally in order to keep functioning, and the public reads the withdrawal as callousness. The protective factors are structural: limited caseloads, real supervision, teamwork and permission to rotate out. An institution that relies on compassion without renewing it is consuming a resource it has not planned to replace."
+     ],
+     "Can institutions sustain the compassion they depend on? Look at caseloads, supervision and support for workers."
+    ]
+   ],
+   "topics": [
+    [
+     "2020A1",
+     [
+      "Every person is born human. Becoming humane takes a lifetime. The journey is one of learning to notice others: their needs, their suffering and their dignity. Gilligan describes moral maturity as growing attention to relationship and context. Gandhi’s talisman asks a person to recall the poorest face they have seen before deciding. Vivekananda saw service to the poor as worship. Each marks a step from living for oneself to living with and for others.",
+      "The journey is never finished by good intentions. Compassion must become reliable, and that requires knowledge and systems. Ayushman Bharat shows how an entitlement can reach millions, and its last-mile failures show where care still breaks. Kerala’s palliative care network shows that presence can be organised. The unpaid care recorded by the Time Use Survey shows how much humane work remains invisible.",
+      "Being humane also requires sustaining the people who care. Frontline workers suffer compassion fatigue when institutions rely on their empathy without support. A humane society does not leave compassion to chance. A humane society builds rights that do not depend on kindness, trains people to notice, and supports those who serve. The long journey from human being to being humane is personal and collective at once."
+     ]
+    ],
+    [
+     "2018A2",
+     [
+      "Love without knowledge can do harm. A person who wants to help but does not understand the problem may give the wrong help, create dependence or respond only to the visible case. Knowledge without love can be cold. An expert who understands a problem perfectly may design a system that treats people as numbers. A good life joins both: the desire to help and the understanding needed to help well.",
+      "Indian thought offers examples of this union. Gandhi’s talisman begins with love for the poorest, and it becomes a practical test for policy. Deendayal Upadhyaya’s antyodaya turns care into a standard that budgets and delivery data can measure. Kerala’s palliative care network combines community compassion with medical training.",
+      "The balance must be maintained. Love inspires, but it needs knowledge to guide it towards the greatest need and the most effective means. Knowledge guides, but it needs love to keep its purpose human. Rights and systems protect people from the unreliability of kindness, and compassionate people make systems humane in practice. A good life is one in which love supplies the purpose and knowledge supplies the means."
+     ]
+    ]
+   ],
+   "intro": [
+    "Being human is a biological fact. Being humane is a moral achievement. A person may live a long life without learning to notice the suffering of others, while another spends a lifetime learning to respond to it. The question is how compassion is developed, how it becomes reliable enough to guide public life, and how it relates to rights, systems and knowledge."
+   ],
+   "claim": "Becoming humane is a lifelong journey of learning to notice and respond to others, especially the weakest. Compassion is essential, but it is not enough on its own, because it is uneven and cannot be enforced. A good life joins love with knowledge: the desire to help with the understanding needed to help well. In public life, compassion must be built into rights and systems, and systems need people who care.",
+   "problem": [
+    "Compassion is valued in every tradition, yet it fails in predictable ways. Compassion responds to what is near and vivid, not to what is greatest. Compassion fluctuates with mood and circumstance. Compassion leaves the receiver dependent on the continued kindness of the giver. Public welfare built on charity alone is unreliable and can humiliate those it helps.",
+    "Systems and rights address these weaknesses, but they fail differently. An entitlement written in law can still be denied at a counter by an official who resents claimants. A health scheme can exist on paper and fail at the last mile. Frontline workers who care can burn out. The challenge is to join compassion and knowledge, disposition and design, so that care reaches the last person reliably."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Rights decide what a person may demand. Disposition decides what they actually meet at the counter. A humane society needs both: entitlements that do not depend on kindness, and people who deliver them with care."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of humaneness",
+   "together": [
+    "Putting the five together",
+    "Gandhi gives a test centred on the poorest. Vivekananda makes service a form of worship. Mother Teresa shows the importance of presence. Gilligan explains humaneness as a change in what one notices. Deendayal Upadhyaya turns the idea into a governance criterion. Together they show that becoming humane joins feeling, attention and systems."
+   ],
+   "examplesIntro": "The examples below show compassion built into policy, care that remains invisible, and the limits of compassion without systems. They are most useful when the answer asks whether care reaches the last person.",
+   "models": [
+    [
+     "The poorest are the test.",
+     "Gandhi’s talisman asks whether a step will help the poorest person one has seen. Antyodaya makes the last person in the queue the criterion for judging a system."
+    ],
+    [
+     "Service is worship.",
+     "Vivekananda saw the poor as divine and service as worship. A spiritual life that offers philosophy to the hungry has missed its purpose."
+    ],
+    [
+     "Humaneness is a change in attention.",
+     "Gilligan’s ethic of care holds that moral maturity lies in noticing relationships, needs and context. Becoming humane changes what a person can see."
+    ],
+    [
+     "Rights and compassion need each other.",
+     "Compassion is uneven and unenforceable, so people need rights. Rights are delivered by people, so systems need compassionate staff."
+    ],
+    [
+     "Institutions must sustain carers.",
+     "Compassion fatigue among nurses and frontline workers is predictable. Limited caseloads, supervision and rotation protect the empathy public services depend on."
+    ]
+   ],
+   "steps": [
+    [
+     "Define being humane.",
+     "Distinguish biological humanity from the moral capacity to notice and respond to others."
+    ],
+    [
+     "Bring in Indian thinkers.",
+     "Use Gandhi, Vivekananda or Deendayal Upadhyaya."
+    ],
+    [
+     "Explain care as attention.",
+     "Use Gilligan and Mother Teresa."
+    ],
+    [
+     "Show the limits of compassion alone.",
+     "Discuss unreliability and the need for rights."
+    ],
+    [
+     "Give policy examples.",
+     "Use Ayushman Bharat, palliative care or the Time Use Survey."
+    ],
+    [
+     "Consider those who care.",
+     "Discuss compassion fatigue and institutional support."
+    ],
+    [
+     "Conclude with love and knowledge.",
+     "Argue that compassion needs understanding and systems to be reliable."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns compassion, service or the good life.",
+   "formula": "Become humane by learning to notice the weakest and to respond with care. Join love with knowledge, build rights that do not depend on kindness, support those who serve, and judge every system by the condition of the last person."
+  }
  ]
 };
