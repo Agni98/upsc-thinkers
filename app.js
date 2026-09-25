@@ -3089,11 +3089,6 @@ function renderPYQ(){
 
     <div class="home">
 
-    ${ (typeof PYQ_NOTES !== "undefined") ? `<div class="pyq-notes">
-      <h4 class="hb-t">What ${papers} papers show</h4>
-      <ul>${PYQ_NOTES.map(x => `<li>${rich(x)}</li>`).join("")}</ul>
-    </div>` : "" }
-
     <div class="pyq-tabs t-regions" role="group" aria-label="Arrange the topics">
       <button class="pyqtab on" data-pyq="theme">By theme</button>
       <button class="pyqtab" data-pyq="year">By year</button>

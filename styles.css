@@ -1179,18 +1179,6 @@ html[data-theme="dark"] .cont-art{filter:grayscale(.4) brightness(.85)}
 .pyq.page{margin-top:0;padding-top:0;border-top:0}
 .pyq .sec-head{margin-bottom:16px}
 
-.pyq-notes{
-  background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--saffron);
-  border-radius:0 12px 12px 0;padding:16px 20px 14px;margin:26px 0 22px;box-shadow:var(--shadow)}
-.pyq-notes h4.hb-t{font-size:17px;border:0;padding:0;margin-bottom:10px}
-.pyq-notes ul{list-style:none;display:grid;gap:9px}
-.pyq-notes li{
-  font-size:13.5px;line-height:1.62;color:var(--ink-2);padding-left:15px;position:relative}
-.pyq-notes li::before{
-  content:"";position:absolute;left:0;top:.63em;width:5px;height:5px;border-radius:50%;
-  background:var(--saffron)}
-.pyq-notes li b{color:var(--ink);font-weight:600}
-
 /* the two views are a segmented control, as elsewhere */
 .pyq-tabs.t-regions{margin:24px 0 14px}
 .pyq-tabs .pyqtab:focus-visible{outline:2px solid var(--saffron);outline-offset:1px}

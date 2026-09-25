@@ -168,7 +168,7 @@ On the GS-IV page they open the case studies and the concept notes.
 Below the band, each group is a card. It shows its rank and
 name, a bar for its share of all the questions, and a strip with one cell for each paper. A
 cell is light when the paper set one question from the group, and dark when it set two or more.
-The Essay page also keeps its notes on what the papers show. *By theme* and *By year* are a
+*By theme* and *By year* are a
 segmented control, and a label under each question in By year jumps back to its group.
 
 ### The Quote Bank

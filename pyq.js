@@ -178,11 +178,3 @@ const PYQ_THEMES = [
     qs:["2024B1","2021A1","2020B4","2019B4"] }
 
 ];
-
-/* What the nine papers show when you stand back from them. */
-const PYQ_NOTES = [
-  "**There is no reliable Section A / Section B rule, and betting on one is a mistake.** In 2018 the concrete questions sat in Section A (climate technologies, border disputes) while Section B was wholly abstract. In 2019 and 2020 that reversed exactly. Since 2023 the distinction has all but vanished, because almost nothing concrete is being set in either half.",
-  "**The paper has drifted decisively towards the aphorism.** Nine of the 32 questions set between 2018 and 2021 name a contemporary policy subject outright — climate technology, border disputes, primary health care, biased media, artificial intelligence, patriarchy, technology in international relations, self-discovery outsourced to technology, Indian diversity. Of the 32 set between 2023 and 2026, exactly one does: social media and the fear of missing out.",
-  "**Four themes carry 37 of the 72 questions** — knowledge and education, adversity and character, the good life, and the ethics of decision — and each appears in at least six of the nine papers. Every paper of the last nine contains at least one of them, and each of the last five contains at least four.",
-  "**Nothing here is unwritable without current affairs.** Every one of the 72 can be argued from an idea plus an example. What has become non-negotiable is the idea, which is what the thinker pages, the model paragraphs and the model essays on this site exist to supply."
-];
