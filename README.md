@@ -297,9 +297,18 @@ Every work carries two classification tags, because the second turns out to be h
 - **Fate** — how it reached us: *lost for fifteen centuries*, *abandoned to the mice and printed
   in 1932*, *self-published after the conference was cancelled*, *rejected by four publishers*.
 
-**Three levels.** The index groups the works under their thinker. A thinker's page carries the
-framing and their shelf. Each work has its own page with its form, fate, cover and the full
-piece, plus links to the author's other works.
+**Three levels.** The index page has the same header band as the other pages, with Carl
+Spitzweg's *The Bookworm* (about 1850, public domain). Below it come four short steps on how
+every piece is built, then all 16 works on one timeline, oldest first. Where more than two
+centuries pass between two works, the line breaks and says how long. Then comes a shelf for
+each thinker, with a portrait, the reason they were picked, and a card for each work. A card
+shows the cover, date, one-line gist, form, fate and reading time.
+
+A thinker's page carries the framing, the shelf and a boxed *Taken together* close. Each work has
+its own page with its form, fate, cover and the full piece, and the author's other works as
+cards. Both pages open with where they sit (*Works in Depth / Karl Marx / Work 3 of 4*) and
+what they hold: words and minutes. Previous and next run through every work in shelf order, or
+through the shelves on a thinker's page.
 
 Every piece leads with **what the work says** — the argument, the story, the ideas explained
 for someone who has not read it — with publishing history and reception kept to a supporting

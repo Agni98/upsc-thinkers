@@ -1363,7 +1363,11 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 .worklab > p{
   font-family:var(--serif);font-size:16.5px;line-height:1.78;margin-bottom:17px;color:var(--ink)}
 .wl-close{
-  margin-top:30px;padding-top:20px;border-top:2px solid var(--line)}
+  margin-top:30px;padding:16px 20px 4px;border-left:4px solid var(--gold);
+  background:var(--gold-soft);border-radius:0 12px 12px 0}
+.wl-close > b{
+  display:block;margin-bottom:8px;font:700 11px/1.4 var(--sans);letter-spacing:.8px;
+  text-transform:uppercase;color:var(--saffron-ink)}
 .wl-close p{
   font-family:var(--serif);font-size:16px;line-height:1.78;margin-bottom:14px;color:var(--ink)}
 .wl-open{margin-top:22px}
@@ -1375,48 +1379,78 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   .work-go,.wl-open,.backlink{display:none}
 }
 
-/* --- Works in Depth: classified by thinker --- */
-.wl-group{margin-bottom:34px}
-.wl-group > header{margin-bottom:14px;padding-bottom:11px;border-bottom:2px solid var(--line)}
-.wl-who{
-  display:block;text-align:left;background:none;border:0;padding:0;cursor:pointer;font:inherit}
-.wl-who b{
-  display:block;font-family:var(--serif);font-size:23px;font-weight:600;letter-spacing:-.3px;
-  color:var(--ink)}
-.wl-who:hover b{color:var(--accent)}
-.wl-who span{
-  display:block;font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:.3px;
-  color:var(--ink-3);margin-top:2px}
-.wl-group > header p{
-  font-size:13.5px;line-height:1.6;color:var(--ink-2);margin-top:8px;max-width:760px;font-style:italic}
+/* --- Works in Depth: the page ---
+   The other pages' look, with Carl Spitzweg's The Bookworm (about 1850, public
+   domain) in the band; then every work on one rail of time, and a shelf of
+   cards for each thinker. */
+.art-bookworm{background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Carl_Spitzweg_-_%22The_Bookworm%22.jpg/500px-Carl_Spitzweg_-_%22The_Bookworm%22.jpg")}
+.hero-sm .hero-art.art-bookworm{background-position:50% 30%}
+#wl-time,.wl-grp{scroll-margin-top:84px}
 
-.wl-shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
-.wl-card{
-  display:flex;gap:14px;align-items:flex-start;text-align:left;font:inherit;color:inherit;
-  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
-  padding:14px;cursor:pointer;transition:.15s;box-shadow:var(--shadow)}
-.wl-card:hover{border-color:var(--accent);box-shadow:var(--shadow-lg);transform:translateY(-1px)}
-.wl-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.wl-card .cover{flex:0 0 54px;width:54px}
-.wl-card-txt{display:block;position:relative;padding-left:20px;min-width:0}
-.wl-card-txt .radio{
-  position:absolute;left:0;top:3px;width:12px;height:12px;border-radius:50%;
-  border:2px solid var(--accent);background:var(--panel)}
-.wl-card:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2px var(--panel)}
-.wl-card-txt b{
-  display:block;font-family:var(--serif);font-size:16px;font-weight:600;line-height:1.25;
-  letter-spacing:-.2px}
-.wl-card-txt .yr{
-  display:block;font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.4px;
-  color:var(--accent);margin-top:2px}
-.wl-card-txt .gist{
-  display:block;font-size:12.5px;line-height:1.5;color:var(--ink-2);margin-top:6px}
-.wl-mini{
-  display:block;font-family:var(--sans);font-size:10.5px;line-height:1.45;color:var(--ink-3);
-  margin-top:5px}
-.wl-mini i{
-  font-style:normal;font-weight:700;letter-spacing:.7px;text-transform:uppercase;
-  color:var(--accent);margin-right:6px}
+.wlt-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:12px 18px;box-shadow:var(--shadow)}
+.wlt-line{--wlt-w:128px;position:relative;list-style:none;margin:0;padding:0}
+.wlt-line::before{
+  content:"";position:absolute;left:calc(var(--wlt-w) + 19px);top:16px;bottom:16px;
+  width:2px;background:var(--saffron);opacity:.4}
+.wlt{
+  display:grid;grid-template-columns:var(--wlt-w) 12px minmax(0,1fr);gap:0 14px;align-items:center;
+  width:100%;padding:7px 0;border:0;background:none;text-align:left;cursor:pointer}
+.wlt-when{font:600 12px/1.3 var(--sans);font-style:normal;color:var(--ink-3);text-align:right}
+.wlt-dot{
+  position:relative;z-index:1;width:12px;height:12px;border-radius:50%;
+  background:var(--panel);border:2px solid var(--saffron)}
+.wlt-txt{min-width:0}
+.wlt-txt b{font:600 15px/1.35 var(--read);color:var(--head)}
+.wlt-txt span{font:12.5px/1.35 var(--sans);color:var(--ink-3);margin-left:4px}
+.wlt:hover .wlt-dot{background:var(--saffron)}
+.wlt:hover .wlt-txt b{color:var(--saffron-ink)}
+.wlt:focus-visible{outline:2px solid var(--saffron);outline-offset:2px;border-radius:6px}
+/* a break in the rail, where centuries pass */
+.wlt-gap{position:relative;padding:8px 0 8px calc(var(--wlt-w) + 40px);font:italic 13px/1.3 var(--read);color:var(--ink-3)}
+.wlt-gap::before{
+  content:"";position:absolute;left:calc(var(--wlt-w) + 14px);top:50%;width:12px;height:6px;
+  transform:translateY(-50%) skewY(-20deg);background:var(--panel);
+  border-top:2px solid var(--ink-3);border-bottom:2px solid var(--ink-3)}
+
+.wl-grp-id{display:flex;align-items:center;gap:14px;min-width:0}
+.wl-grp-id .portrait{width:50px;height:50px;border-radius:50%}
+.wl-grp-id .portrait .mono{font-size:16px}
+.wl-grp-ico{
+  flex:0 0 50px;width:50px;height:50px;border-radius:50%;display:grid;place-items:center;
+  background:var(--saffron-soft);color:var(--saffron-ink)}
+.wl-grp-ico .ic{width:22px;height:22px}
+.wl-grp .hb-t{border:0;padding:0}
+.wl-grp .hb-s{padding:0;margin-top:3px;font:600 12px/1.4 var(--sans);letter-spacing:.3px;color:var(--ink-3)}
+.wl-why{margin:0 0 14px;max-width:780px;font:italic 14.5px/1.6 var(--read);color:var(--ink-2)}
+
+.wlc-top{display:flex;gap:13px;align-items:flex-start}
+.wlc .cover{flex:0 0 54px;width:54px}
+.wlc-id{display:flex;flex-direction:column;gap:5px;min-width:0}
+.wlc-id em{font:700 11px/1.2 var(--sans);font-style:normal;letter-spacing:.4px;color:var(--saffron-ink)}
+.wlc-id b{font:600 17px/1.3 var(--read);color:var(--head)}
+.wlc-gist{font:14px/1.5 var(--read);color:var(--ink-2)}
+.wlc-meta{font:12px/1.5 var(--sans);color:var(--ink-3)}
+.wlc-meta i{
+  margin-right:7px;font:700 10px/1 var(--sans);font-style:normal;letter-spacing:.7px;
+  text-transform:uppercase;color:var(--accent)}
+.wlc-go{
+  margin-top:auto;padding-top:4px;display:inline-flex;align-items:center;gap:6px;
+  font:600 12.5px/1 var(--sans);color:var(--accent)}
+.wlc-go .ic{width:14px;height:14px}
+.wlc:hover .wlc-go{color:var(--saffron-ink)}
+.worklab .wl-shelf{margin:24px 0 6px}
+
+@media (max-width:620px){
+  .wlt-line{--wlt-w:86px}
+  .wlt{gap:0 10px}
+  .wlt-line::before{left:calc(var(--wlt-w) + 15px)}
+  .wlt-gap{padding-left:calc(var(--wlt-w) + 32px)}
+  .wlt-gap::before{left:calc(var(--wlt-w) + 10px)}
+  .wlt-txt span{display:block;margin:1px 0 0}
+  .wl-grp .hb-head{flex-wrap:wrap}
+}
 
 /* --- a single work --- */
 .work-one .wl-head{display:flex;gap:20px;align-items:flex-start;margin-bottom:22px}
@@ -1431,20 +1465,16 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
   text-transform:uppercase;color:var(--ink-3);margin-right:8px}
 .work-one > p{
   font-family:var(--serif);font-size:16.5px;line-height:1.8;margin-bottom:17px;color:var(--ink)}
-.wl-sibs{
-  margin-top:28px;padding-top:18px;border-top:1px solid var(--line);
-  display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.wl-sibs{margin-top:30px;padding-top:18px;border-top:1px solid var(--line)}
 .wl-sibs > b{
-  font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.8px;
-  text-transform:uppercase;color:var(--ink-3);margin-right:4px}
+  display:block;margin-bottom:12px;font:700 11px/1.4 var(--sans);letter-spacing:.8px;
+  text-transform:uppercase;color:var(--saffron-ink)}
 
 @media (max-width:700px){
-  .wl-shelf{grid-template-columns:1fr}
   .work-one .wl-head{gap:14px}
   .work-one .wl-head .cover{flex:0 0 62px;width:62px}
-  .wl-who b{font-size:20px}
 }
-@media print{ .wl-sibs,.wl-card .work-go{display:none} }
+@media print{ .wl-sibs,.wlc-go,.sm-move{display:none} }
 
 /* --- long-form work pages: sections, lists, timeline --- */
 .wl-prose h2{

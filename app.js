@@ -1420,24 +1420,55 @@ function wlCover(id, work){
     </div>` };
 }
 
+/* Every shelf in order, and every work on them, for paging and the timeline. */
+const wlIds = () => Object.keys(WORKLAB).filter(id => byId[id] || WORKLAB[id].who);
+const wlAll = () => wlIds().flatMap(id => WORKLAB[id].works.map(w => ({ id, w })));
+const wlWords = w => w.p.join(" ").split(/\s+/).length;
+/* A work's date as printed, and as a number for ordering: "c. 4th c. BCE" is
+   -350, "c. 1500–1000 BCE" is -1250, "1844" is 1844. */
+function wlWhen(id, w){
+  const c = wlCover(id, w);
+  return (c.meta && c.meta.y) || wlWho(id).years;
+}
+function wlYear(s){
+  s = String(s || "");
+  const cent = s.match(/(\d+)(?:st|nd|rd|th)\s*c/);
+  const nums = s.match(/\d{3,4}/g);
+  const n = cent ? (+cent[1] - 1) * 100 + 50 : nums ? nums.reduce((a, x) => a + +x, 0) / nums.length : 0;
+  return /BCE|\bBC\b/.test(s) ? -n : n;
+}
+
 /* Level 3 — one work. */
 function renderWork(id, title){
-  const e = WORKLAB[id], t = byId[id];
+  const e = WORKLAB[id];
   const w = e.works.find(x => x.t === title);
   if (!w) return renderWorkThinker(id);
-  const who = wlWho(id), c = wlCover(id, w);
-  const n = w.p.join(" ").split(/\s+/).length;
+  const who = wlWho(id), c = wlCover(id, w), n = wlWords(w);
   const others = e.works.filter(x => x.t !== w.t);
   const yr = (c.meta && c.meta.y) || who.years;
+  const all = wlAll(), at = all.findIndex(x => x.id === id && x.w.t === w.t);
+  const move = (x, fwd) => x
+    ? `<button class="mv${fwd ? " next" : ""}" data-work="${esc(x.id)}:${esc(x.w.t)}"><em>${fwd ? "Next work" : "Previous work"}</em><span>${esc(x.w.t)}</span><i>${esc(wlWho(x.id).name)}</i></button>`
+    : `<span class="mv-end">${fwd ? "The last work" : "The first work"}</span>`;
   return `
-    <button class="backlink" data-work="${esc(id)}:">&larr; ${esc(who.name)}</button>
+    <div class="rd-crumbs es-crumbs">
+      <button class="rd-up" data-view="worklab">Works in Depth</button>
+      <span class="rd-sep" aria-hidden="true">/</span>
+      <button class="rd-up" data-work="${esc(id)}:">${esc(who.name)}</button>
+      ${e.works.length > 1 ? `<span class="rd-sep" aria-hidden="true">/</span>
+      <span>Work ${e.works.indexOf(w) + 1} of ${e.works.length}</span>` : ""}
+    </div>
     <article class="worklab work-one">
       <div class="wl-head">
         ${c.html}
         <div>
           <div class="essay-kicker">${esc(who.name)} &middot; ${esc(who.tradition)}</div>
           <h1>${esc(w.t)}</h1>
-          <div class="essay-meta">${esc(yr)} &middot; ${n} words</div>
+          <p class="es-stats">
+            <span><b>${esc(yr)}</b></span>
+            <span><b>${n.toLocaleString("en-IN")}</b> words</span>
+            <span><b>${Math.round(n / 200)}</b> minutes</span>
+          </p>
           <div class="wl-tags">
             <span class="wl-tag"><i>Form</i>${esc(w.form)}</span>
             <span class="wl-tag"><i>Fate</i>${esc(w.fate)}</span>
@@ -1447,11 +1478,12 @@ function renderWork(id, title){
       ${ w.coverNote ? `<p class="wl-covernote">${esc(w.coverNote)}</p>` : "" }
       <div class="wl-prose">${wlBody(w.p)}</div>
       ${wlTimeline(w.timeline)}
-      ${ others.length ? `<div class="wl-sibs">
+      ${ others.length ? `<section class="wl-sibs">
         <b>Also by ${esc(who.name)}</b>
-        ${others.map(x => `<button class="pill" data-work="${esc(id)}:${esc(x.t)}">${esc(x.t)}</button>`).join("")}
-      </div>` : "" }
+        <div class="scards">${others.map(x => wlCard(id, x)).join("")}</div>
+      </section>` : "" }
       ${ who.hasPage ? `<button class="pill wl-open" data-open="${esc(id)}">Open the full page for ${esc(who.name)}</button>` : "" }
+      <nav class="sm-move" aria-label="Previous and next work">${move(all[at - 1], false)}${move(all[at + 1], true)}</nav>
     </article>`;
 }
 
@@ -1460,63 +1492,142 @@ function renderWorkThinker(id){
   const e = WORKLAB[id];
   if (!e) return `<div class="empty"><b>Not found</b>No deep dive for this entry yet.</div>`;
   const who = wlWho(id);
+  const ids = wlIds(), at = ids.indexOf(id);
+  const words = e.works.reduce((a, w) => a + wlWords(w), 0);
+  const move = (k, fwd) => k
+    ? `<button class="mv${fwd ? " next" : ""}" data-work="${esc(k)}:"><em>${fwd ? "Next shelf" : "Previous shelf"}</em><span>${esc(wlWho(k).name)}</span><i>${esc(WORKLAB[k].t)}</i></button>`
+    : `<span class="mv-end">${fwd ? "The last shelf" : "The first shelf"}</span>`;
   return `
-    <button class="backlink" data-view="worklab">&larr; All works in depth</button>
+    <div class="rd-crumbs es-crumbs">
+      <button class="rd-up" data-view="worklab">Works in Depth</button>
+      <span class="rd-sep" aria-hidden="true">/</span>
+      <span>Shelf ${at + 1} of ${ids.length}</span>
+    </div>
     <article class="worklab">
       <div class="essay-kicker">${esc(who.name)} &middot; ${esc(who.years)} &middot; ${esc(who.tradition)}</div>
       <h1>${esc(e.t)}</h1>
+      <p class="es-stats">
+        <span><b>${e.works.length}</b> ${e.works.length === 1 ? "work" : "works"}</span>
+        <span><b>${words.toLocaleString("en-IN")}</b> words</span>
+        <span><b>${Math.round(words / 200)}</b> minutes</span>
+      </p>
       <p class="mode-note">${esc(e.why)}</p>
       ${wlBody(e.intro)}
-      <div class="wl-shelf">${e.works.map(w => wlCard(id, w)).join("")}</div>
-      <div class="wl-close">${e.close.map(x => `<p>${rich(x)}</p>`).join("")}</div>
+      <div class="scards wl-shelf">${e.works.map(w => wlCard(id, w)).join("")}</div>
+      <div class="wl-close"><b>Taken together</b>${e.close.map(x => `<p>${rich(x)}</p>`).join("")}</div>
+      ${ who.hasPage ? `<button class="pill wl-open" data-open="${esc(id)}">Open the full page for ${esc(who.name)}</button>` : "" }
+      <nav class="sm-move" aria-label="Previous and next shelf">${move(ids[at - 1], false)}${move(ids[at + 1], true)}</nav>
     </article>`;
 }
 
+/* A work as a card: its cover and date, the one-line gist, what kind of book
+   it is and how it reached us. */
 function wlCard(id, w){
   const c = wlCover(id, w);
-  const n = w.p.join(" ").split(/\s+/).length;
   return `
-    <button class="wl-card" data-work="${esc(id)}:${esc(w.t)}">
-      ${c.html}
-      <span class="wl-card-txt">
-        <span class="radio" aria-hidden="true"></span>
-        <b>${esc(w.t)}</b>
-        ${(c.meta && c.meta.y) ? `<span class="yr">${esc(c.meta.y)}</span>` : ""}
-        <span class="gist">${esc(w.gist)}</span>
-        <span class="wl-mini"><i>Form</i>${esc(w.form)}</span>
-        <span class="wl-mini"><i>Fate</i>${esc(w.fate)}</span>
-        <span class="work-go">Read the piece &middot; ${n} words &rarr;</span>
+    <button class="scard wlc" data-work="${esc(id)}:${esc(w.t)}">
+      <span class="wlc-top">${c.html}
+        <span class="wlc-id"><em>${esc(wlWhen(id, w))}</em><b>${esc(w.t)}</b></span>
       </span>
+      <span class="wlc-gist">${esc(w.gist)}</span>
+      <span class="wlc-meta"><i>Form</i>${esc(w.form)}</span>
+      <span class="wlc-meta"><i>Fate</i>${esc(w.fate)}</span>
+      <span class="wlc-go">${Math.round(wlWords(w) / 200)} min read ${ico("arrow")}</span>
     </button>`;
 }
 
-/* Level 1 — the index, classified by thinker. */
+/* ---- The Works in Depth page ----
+   The other pages' look: a header band, how every piece is built, all the
+   works on one line of time, then a shelf for each thinker. */
+const WL_PARTS = [
+  ["book",    "The form",  "What kind of book it is: a poem, a manual, a pamphlet, a speech, a novel"],
+  ["compass", "The fate",  "How it reached us, which is often the more interesting half"],
+  ["file",    "The piece", "About a thousand words on what is actually in the book"],
+  ["link",    "The shelf", "The author's other works in depth, and the thinker's full page"]
+];
+
+/* Every work, oldest first, on one rail. Where more than two centuries pass
+   between two works, the rail breaks and says how long. */
+function wlLineHTML(all){
+  const rows = all.map(x => ({ id:x.id, w:x.w, y:wlWhen(x.id, x.w) }))
+    .map(r => Object.assign(r, { n:wlYear(r.y) })).sort((a, b) => a.n - b.n);
+  let out = "", prev = null;
+  rows.forEach(r => {
+    if (prev !== null && r.n - prev >= 200)
+      out += `<li class="wlt-gap"><span>about ${(Math.round((r.n - prev) / 100) * 100).toLocaleString("en-IN")} years</span></li>`;
+    out += `
+        <li><button class="wlt" data-work="${esc(r.id)}:${esc(r.w.t)}">
+          <i class="wlt-when">${esc(r.y)}</i><span class="wlt-dot" aria-hidden="true"></span>
+          <span class="wlt-txt"><b>${esc(r.w.t)}</b> <span>${esc(wlWho(r.id).name)}</span></span>
+        </button></li>`;
+    prev = r.n;
+  });
+  return `<ol class="wlt-line">${out}</ol>`;
+}
+
+/* Level 1 — the index, a shelf for each thinker. */
 function renderWorkLabList(){
   if (typeof WORKLAB === "undefined") return "";
-  const ids = Object.keys(WORKLAB).filter(id => byId[id] || WORKLAB[id].who);
-  const total = ids.reduce((a, id) => a + WORKLAB[id].works.length, 0);
+  const ids = wlIds(), all = wlAll();
+  const ns = all.map(x => wlYear(wlWhen(x.id, x.w)));
+  const span = Math.round((Math.max.apply(null, ns) - Math.min.apply(null, ns)) / 100) * 100;
+  const people = ids.filter(id => byId[id]).length, texts = ids.length - people;
+  const word = n => ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"][n] || String(n);
   return `
-    <div class="sec-head">
-      <h3>Works in Depth</h3>
-      <p>Five thinkers, one from each of five traditions, chosen to be as unlike each other as
-         this roster allows &mdash; an aphoristic poem, a manual of statecraft, an unfinished
-         economics, a sequence of interventions, and two novels. ${total} works, about a
-         thousand words on each, on what is actually in the book and what happened to it.</p>
+  <section class="hero hero-sm">
+    <div class="hero-art art-bookworm" aria-hidden="true"></div>
+    <div class="hero-body">
+      <p class="hero-k">Thinkers</p>
+      <h2 class="hero-t">Works in Depth</h2>
+      <p class="hero-s">${all.length} works by ${word(people)} thinkers${texts ? ` and ${word(texts)} ${texts === 1 ? "text" : "texts"}
+         with no single author` : ""}, about a thousand words on each: what is actually in the book,
+         and what happened to it.</p>
+      <p class="hero-note">The thinkers are chosen to be as unlike each other as the roster allows: an
+         aphoristic poem, a manual of statecraft, an unfinished economics, a sequence of interventions,
+         two novels and a body of hymns.</p>
     </div>
-    ${ids.map(id => {
-      const e = WORKLAB[id], who = wlWho(id);
+    <div class="hero-aside">
+      <button data-jumpto="wl-g0"><b>${ids.length}</b><span>shelves, one for each thinker or text</span></button>
+      <button data-work="${esc(all[0].id)}:${esc(all[0].w.t)}"><b>${all.length}</b><span>works, from the first</span></button>
+      <button data-jumpto="wl-time"><b>${span.toLocaleString("en-IN")}</b><span>years from the oldest to the newest</span></button>
+    </div>
+  </section>
+
+  <div class="home">
+    <section class="atl-guide" aria-label="How every piece is built">
+      <h3 class="hb-t">How every piece is built</h3>
+      <ol class="atl-steps">${WL_PARTS.map((p, i) => `
+        <li><span class="atl-step-ico">${ico(p[0])}</span>
+            <b><i>${i + 1}</i>${esc(p[1])}</b><span>${esc(p[2])}</span></li>`).join("")}
+      </ol>
+    </section>
+
+    <section class="hblock" id="wl-time">
+      <div class="hb-head">
+        <div><h3 class="hb-t">${span.toLocaleString("en-IN")} years on one shelf</h3>
+          <p class="hb-s">Every work, oldest first. The rail breaks where more than two centuries pass.
+             Open a title to read the piece.</p></div>
+      </div>
+      <div class="wlt-card">${wlLineHTML(all)}</div>
+    </section>
+
+    ${ids.map((id, i) => {
+      const e = WORKLAB[id], who = wlWho(id), t = byId[id];
       return `
-      <section class="wl-group">
-        <header>
-          <button class="wl-who" data-work="${esc(id)}:">
-            <b>${esc(who.name)}</b>
-            <span>${esc(who.years)} &middot; ${esc(who.tradition)}</span>
-          </button>
-          <p>${esc(e.why)}</p>
-        </header>
-        <div class="wl-shelf">${e.works.map(w => wlCard(id, w)).join("")}</div>
-      </section>`;
-    }).join("")}`;
+    <section class="hblock wl-grp" id="wl-g${i}">
+      <div class="hb-head">
+        <div class="wl-grp-id">
+          ${t ? portraitHTML(t) : `<span class="wl-grp-ico">${ico("book")}</span>`}
+          <div><h3 class="hb-t">${esc(who.name)} <small>${plural(e.works.length, "work", "works")}</small></h3>
+            <p class="hb-s">${esc(who.years)} &middot; ${esc(who.tradition)}</p></div>
+        </div>
+        <button class="hb-link" data-work="${esc(id)}:">The whole shelf ${ico("arrow")}</button>
+      </div>
+      <p class="wl-why">${esc(e.why)}</p>
+      <div class="scards">${e.works.map(w => wlCard(id, w)).join("")}</div>
+    </section>`;
+    }).join("")}
+  </div>`;
 }
 
 /* An essay is keyed by its own title; the kicker should name its theme. */
