@@ -123,9 +123,8 @@ and the paper switch. Every word you type has to appear in the quotation or in t
 
 Below it come four short steps on using a quotation, then a switch that arranges the quotations
 by tradition, essay theme or GS-IV heading. A thinker listed under two themes or headings appears
-under both. Thinkers not listed under any appear in a last group, so every quotation is shown. A
-chart shows how many quotations each group holds, split into one-liners of 12 words or fewer and
-longer lines. Open a bar to go to its group. *One-liners only* hides the longer lines.
+under both. Thinkers not listed under any appear in a last group, so every quotation is shown.
+*One-liners only* hides every quotation longer than 12 words.
 
 Each thinker is one card with their quotations. Click the name to open the thinker. The sidebar
 search now searches the whole site on this page too, as it does everywhere else.

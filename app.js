@@ -1069,27 +1069,11 @@ function quoteCardHTML(t){
         </article>`;
 }
 
-/* The chart and the groups: the part of the page that changes when the
-   arrangement does, redrawn on its own so the reader keeps their place. */
+/* The groups: the part of the page that changes when the arrangement does,
+   redrawn on its own so the reader keeps their place. */
 function quoteBodyHTML(list){
-  const mode = state.qmode || "school";
-  const groups = quoteGroups(list, mode);
-  const first = { school:"Tradition", theme:"Essay theme", syl:"GS-IV heading" }[mode];
-  const rows = groups.map(g => {
-    const qs = g.list.flatMap(t => t.quotes);
-    const a = qs.filter(q => quoteWords(q) <= QUOTE_SHORT).length;
-    return { t:g.t, at:`data-jumpto="${g.id}"`, a, b:qs.length - a };
-  });
+  const groups = quoteGroups(list, state.qmode || "school");
   return `
-    <section class="hblock">
-      <div class="hb-head">
-        <div><h3 class="hb-t">Where the quotations are</h3>
-          <p class="hb-s">Quotations under each ${first.toLowerCase()}, split into one-liners of ${QUOTE_SHORT} words
-             or fewer and longer lines.${mode === "school" ? "" : " A thinker listed in two places counts in both."}
-             Open a bar to go to its group.</p></div>
-      </div>
-      <div class="schart-card">${stackChartHTML(rows, "one-liner|one-liners", "longer line|longer lines", first)}</div>
-    </section>
     ${groups.map(g => `
     <section class="hblock q-group" id="${g.id}">
       <div class="hb-head">
@@ -2222,8 +2206,7 @@ function vizTip(el, x, y){
 }
 
 /* A stacked bar per row, two series, sorted by total: used by both maps'
-   first pages and the Quote Bank. rows: [{ t, open, a, b }]; open is a
-   data-open-at value, or a row can carry its own attribute in at. A
+   first pages. rows: [{ t, open, a, b }]; open is a data-open-at value. A
    series label is "one|many", so a count of one reads correctly. */
 const nLab = (lab, n) => { const p = lab.split("|"); return n === 1 ? p[0] : (p[1] || p[0]); };
 function stackChartHTML(rows, la, lb, first){
@@ -2236,7 +2219,7 @@ function stackChartHTML(rows, la, lb, first){
       <span><i class="sw-b"></i>${esc(cap(lb))}</span>
     </div>
     <ol class="schart">${rows.map(r => `
-      <li><button class="schart-row" ${r.at || `data-open-at="${r.open}"`} data-tip="${esc(r.t)}" data-a="${r.a}" data-b="${r.b}"
+      <li><button class="schart-row" data-open-at="${r.open}" data-tip="${esc(r.t)}" data-a="${r.a}" data-b="${r.b}"
                   data-la="${esc(la)}" data-lb="${esc(lb)}"
                   aria-label="${esc(r.t)}: ${r.a} ${esc(nLab(la, r.a))}, ${r.b} ${esc(nLab(lb, r.b))}, ${r.a + r.b} in all">
         <span class="schart-t">${esc(r.t)}</span>
