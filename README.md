@@ -276,6 +276,31 @@ knowledge questions. 45 paragraphs, 300-360 words each, built from the thinkers 
 Every paragraph carries the past questions it answers; every past question carries a link to
 the paragraph written for it. All 72 questions reach one.
 
+### Each paragraph as a revision guide
+
+Open a model paragraph and it reads as a **revision and answer-building guide**, in six parts
+under a jump strip:
+
+1. **The moral problem**, with one useful distinction in a box.
+2. **The thinkers as tests of judgment.** Each thinker has a one-line subtitle, two short
+   paragraphs and a "Use X when" line. A box then says what the thinkers add up to.
+3. **Applying the framework.** Five worked examples, each ending with what the example tests.
+   They grew out of the "Open it out with" notes and take their place.
+4. **The past topics developed.** Every question the paragraph serves gets about 250 words.
+   Paragraphs 7.5, 8.5 and 9.4 serve none, so they get two **topics to practise** instead,
+   labelled as such.
+5. **Five model paragraphs** for answer writing, each opening with a bold lead.
+6. **Build a defensible answer**: seven steps and a conclusion formula.
+
+A short opening problem and **the central claim** sit above the six parts. The structure follows
+a sample guide for paragraph 1.1. All 45 guides are written the same way, and all nine themes
+are complete.
+
+Guides live in `guides.js`, keyed by theme title with one entry per paragraph (`null` where a
+paragraph has none). A paragraph without a guide falls back to the plain paragraph view. The
+writing follows the site's plain-English rules: normal word order, no semicolons, no sentence
+that opens with a bare "This" or "It", and no sentence over forty words.
+
 ### Model essays
 
 **Two essays per theme** (three for Justice), **nineteen in all**, and the pair on each theme
@@ -443,6 +468,7 @@ covers.js     cover / title-page images for those works
 worklab.js    16 works explored in depth, including the Rigveda
 mcqs.js       two practice questions per thinker
 answers.js    five sub-theme model paragraphs per essay theme (45 in all)
+guides.js     each model paragraph as a six-part revision guide
 essays.js     19 model essays, two per theme, partitioned across the past questions
 pyq.js        nine years of past essay questions, classified by theme
 portraits.js  pre-resolved portrait URLs (verified to load)

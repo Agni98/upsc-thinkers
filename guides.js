@@ -7219,5 +7219,917 @@ const GUIDES = {
    "stepsIntro": "Use the following sequence when a question concerns growth, development or well-being.",
    "formula": "Pursue growth as a means, and specify at the outset what it is for and for whom. Judge the economy by the capabilities of its least advantaged people, by its care for natural capital, and by whether people remain its purpose rather than its instruments."
   }
+ ],
+ "Technology and the Modern Self": [
+  {
+   "thinkers": [
+    [
+     "Foucault",
+     "techniques of the self",
+     [
+      "Michel Foucault’s late work supplies the frame. He argued that every culture provides techniques of the self: practices through which a person builds themselves as a subject. Confession, the diary and the examination of conscience were older instruments. The feed, the profile and the metric are the current ones.",
+      "The older techniques belonged to the person using them. The newer ones belong to a company whose interests are not that person’s. Foucault’s account of the panopticon adds the mechanism: where a person may always be observed, they begin to observe themselves. Every action becomes a potential post."
+     ],
+     "the answer needs to explain how platforms shape the way people form themselves."
+    ],
+    [
+     "James and Allport",
+     "the self as knower and as known",
+     [
+      "William James, and later Gordon Allport, distinguished the self as knower from the self as known. One part of the self observes and judges, and another part is observed.",
+      "The distinction becomes unstable online, because the audience’s response arrives fast enough to shape the self it is responding to. The known self starts to be written by others’ reactions before the knower has had time to reflect."
+     ],
+     "the question concerns identity formation and the influence of feedback."
+    ],
+    [
+     "Festinger",
+     "social comparison",
+     [
+      "Leon Festinger’s social comparison theory of 1954 names the engine of the distress. People evaluate themselves against others wherever no objective standard exists.",
+      "Upward comparison with people who appear to be doing better is both compulsive and corrosive. A curated feed industrialises exactly that mechanism, showing each person an endless supply of others’ best moments."
+     ],
+     "the answer needs to explain FOMO, envy or low self-esteem linked to social media."
+    ],
+    [
+     "Maslow",
+     "self-actualisation and autonomy",
+     [
+      "Abraham Maslow described self-actualisation as the growth of an autonomous person towards their own potential.",
+      "A self assembled from continuous external feedback has not been discovered. A self assembled that way has been built to a specification, and the specification belongs to somebody else. Maslow’s model asks whether growth comes from within or is shaped by metrics."
+     ],
+     "the question concerns personal growth, autonomy or authenticity."
+    ],
+    [
+     "Marcus Aurelius",
+     "writing for no reader",
+     [
+      "Marcus Aurelius offers the older technique against which the new one can be measured. He wrote the Meditations for no reader at all.",
+      "The absence of an audience made his writing an instrument of self-knowledge rather than self-presentation. A journal with an audience is a performance. Once a record of inner life is written to be seen, it is edited by the response one expects."
+     ],
+     "the answer needs an example of reflection without an audience."
+    ]
+   ],
+   "examples": [
+    [
+     "Social media and adolescent mental health",
+     [
+      "The claim that social media causes adolescent anxiety and depression is the most commonly overstated in the theme. Jonathan Haidt argued in 2024 that smartphones and social media caused the rise in adolescent anxiety and depression. Critics such as Candice Odgers and Andrew Przybylski accept the correlation but dispute the causal step, noting that most studies are cross-sectional and show small, mixed associations.",
+      "Two objections are worth carrying. Much of the experimental evidence Haidt cites was run on adults, while policy targets children under thirteen. If the mechanism were algorithmic, the association should strengthen as algorithms improve, which is not clearly observed. A careful answer reports the correlation as robust and the causation as unsettled."
+     ],
+     "What does the evidence show about harm? Separate correlation from causation."
+    ],
+    [
+     "Recommender systems and engagement",
+     [
+      "A recommender system does not choose what is good for the user, or even what the user says they want. The system predicts what will keep the user present, because engagement is what the business model sells.",
+      "The objective explains most of what follows without any theory of malice. Content that provokes outrage holds attention better than content that qualifies. Autoplay and infinite scroll remove natural stopping points. Variable rewards, like those of slot machines, make refreshing compulsive. The interests of the user and the operator diverge at the moment the user would otherwise stop."
+     ],
+     "What is the platform designed to maximise? Show how the business model shapes the user’s experience."
+    ],
+    [
+     "The Digital Personal Data Protection Act",
+     [
+      "India’s Digital Personal Data Protection Act was passed in August 2023, and its rules were notified in November 2025. The law is built on consent: personal data may be processed for a stated purpose with notice, and individuals may withdraw consent.",
+      "The exemptions are where the argument lies. Section 17 allows the central government to exempt notified state agencies from the Act. Section 44(3) amended the Right to Information Act’s exemption for personal information, removing the public interest override. The result binds private processors substantially and the state considerably less."
+     ],
+     "Who does the law protect people from? Compare obligations on private companies with exemptions for the state."
+    ],
+    [
+     "Correctives: detox, school bans and age limits",
+     [
+      "Three kinds of corrective operate at different levels. Individual digital detox relies on the user out-willing an interface built by teams with better data, which is the weakest approach. School phone restrictions work better because they change a default for everyone in a shared space, so no child pays a social cost for abstaining alone.",
+      "Statutory age limits shift the obligation to the platform. Australia’s minimum age of sixteen for social media accounts is the furthest-reaching example. Each approach faces a difficulty. Age verification requires collecting more data, and a restriction that ends at the school gate or the national border is easily bypassed."
+     ],
+     "Which corrective changes the environment rather than relying on willpower? Compare individual, institutional and legal approaches."
+    ],
+    [
+     "Online community as genuine self-discovery",
+     [
+      "The counter-case is strong and often left out. For a person whose surroundings offer nobody like them, an online community is not a substitute for connection but the only form of it available.",
+      "In India, the point applies to a young person with a rare illness, someone whose caste or gender identity is unsafe to disclose locally, a disabled person facing inaccessible spaces, or a woman whose movement is restricted. The platform supplies what the neighbourhood withholds, and the self discovered there is genuine. The same architecture produces both harm and help, depending largely on what a person had offline."
+     ],
+     "For whom is the platform a lifeline? Show that online communities can support real self-discovery."
+    ]
+   ],
+   "topics": [
+    [
+     "2021A1",
+     [
+      "Self-discovery once depended on reflection, conversation, solitude and experience. Today much of it happens through technology. Personality quizzes, recommendation feeds, fitness trackers and social media profiles tell people what they like, how they compare and who they are. Foucault described every culture’s techniques of the self. The platform has become one such technique, but it belongs to a company rather than to the person using it.",
+      "The outsourcing changes the self being discovered. James and Allport distinguished the self as knower from the self as known, and online feedback now arrives fast enough to shape the known self before the knower reflects. Festinger’s social comparison explains why constant exposure to others’ curated lives produces anxiety. Maslow’s self-actualisation requires autonomy, and a self built from metrics has been assembled to another’s specification.",
+      "The claim should not be pushed too far. For isolated people, online communities can enable real self-discovery. Evidence that social media harms mental health is correlational and disputed. The better conclusion is that self-discovery has been partly leased to technology, and people must reclaim some of its tools. Marcus Aurelius wrote for no reader, and reflection without an audience remains the surest path to knowing oneself."
+     ]
+    ],
+    [
+     "2024B1",
+     [
+      "Fear of missing out is the anxiety that others are enjoying experiences one is missing. Social media intensifies it by displaying a constant stream of others’ best moments. Festinger’s social comparison theory explains the mechanism: people judge themselves against others, and upward comparison with those who seem happier is corrosive. Recommender systems designed for engagement keep users scrolling through such comparisons.",
+      "The link to depression and loneliness is widely argued. Jonathan Haidt has linked the rise in adolescent anxiety and depression to smartphones and social media. Critics such as Candice Odgers and Andrew Przybylski accept the correlation but question the causal claim, pointing to small and mixed effects in most studies. An honest answer treats the association as real and the causation as unsettled.",
+      "The response should target the environment as much as the individual. School phone restrictions change the default for everyone. Age limits, such as Australia’s minimum age of sixteen, place obligations on platforms. Rules against manipulative design address the engagement model itself. Online communities also help isolated young people, so the goal is not to remove social media but to reduce the design features that turn connection into comparison and comparison into loneliness."
+     ]
+    ]
+   ],
+   "intro": [
+    "People have always discovered themselves through the tools their culture offered: prayer, confession, diaries, conversation and solitude. Today much of that work happens through platforms: profiles, feeds, likes and metrics. The tools shape what a person notices about themselves and how they judge their worth. The question is whether self-discovery has been handed over to technology, and what that means for identity, mental health and freedom."
+   ],
+   "claim": "Self-discovery has not been abolished, but its tools have been leased. The older techniques of the self belonged to the person using them. The newer ones belong to companies whose interests differ from the user’s. When every action may be seen, people begin to observe and edit themselves for an audience. A self assembled from continuous external feedback risks being built to someone else’s specification. Yet the same platforms can also help isolated people find others like them, and the evidence on harm is still disputed.",
+   "problem": [
+    "Social media promises connection and self-expression. Its design also encourages constant comparison, performance and the pursuit of approval. Young people especially may measure themselves against curated images of others’ lives and feel anxious that they are missing out. The rise in adolescent anxiety has been linked to smartphones and social media, though the causal evidence is contested.",
+    "A simple story of harm is also incomplete. For a young person with a rare illness, a disability or an identity unsafe to reveal locally, online communities may be the only place to find understanding. The challenge is to see how platform design shapes the self, to judge the evidence honestly, and to find correctives that protect the young without denying the value that some people find online."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Self-knowledge is written for no audience and can be honest. Self-presentation is written to be seen and is edited by the response one expects. The more of inner life that is performed, the less of it is discovered."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of the self",
+   "together": [
+    "Putting the five together",
+    "Foucault shows that platforms have become techniques of the self owned by others. James and Allport show how feedback reshapes the self it observes. Festinger explains the comparison that fuels FOMO. Maslow asks whether growth is autonomous. Marcus Aurelius shows reflection without an audience. Together they explain what it means for self-discovery to be outsourced."
+   ],
+   "examplesIntro": "The examples below show the evidence on mental health, the design of recommendation systems, data protection, attempted correctives and the value of online community. They are most useful when the answer separates what is proven from what is claimed.",
+   "models": [
+    [
+     "The tools of self-discovery are leased.",
+     "Foucault described techniques through which people form themselves. The feed and the profile are modern techniques, but they belong to companies whose interests differ from users’."
+    ],
+    [
+     "Feedback reshapes the self.",
+     "James and Allport distinguished the self as knower from the self as known. Online reactions arrive fast enough to shape the known self before reflection can occur."
+    ],
+    [
+     "Comparison drives FOMO.",
+     "Festinger showed that people judge themselves against others. Curated feeds industrialise upward comparison, which fuels anxiety and the fear of missing out."
+    ],
+    [
+     "Correlation is not causation.",
+     "Haidt links social media to adolescent distress, while Odgers and Przybylski dispute the causal evidence. A careful answer treats the link as real and the cause as unsettled."
+    ],
+    [
+     "Online community can be a lifeline.",
+     "For people isolated by illness, disability or identity, platforms supply connection the neighbourhood withholds. The same architecture harms some and helps others."
+    ]
+   ],
+   "steps": [
+    [
+     "Describe the change.",
+     "Explain how technology has become a tool of self-discovery."
+    ],
+    [
+     "Use Foucault.",
+     "Show that the tools are owned by others and encourage self-surveillance."
+    ],
+    [
+     "Explain the psychology.",
+     "Use social comparison and the self as knower and known."
+    ],
+    [
+     "Present the evidence honestly.",
+     "Separate correlation from causation in mental health research."
+    ],
+    [
+     "Show the business model.",
+     "Explain engagement optimisation."
+    ],
+    [
+     "Give the counter-case.",
+     "Show how online communities help isolated people."
+    ],
+    [
+     "Conclude with reclaiming the self.",
+     "Recommend changes to design and habits of reflection without an audience."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns identity, social media or self-discovery.",
+   "formula": "Recognise that the tools of self-discovery have been leased to platforms built for engagement. Reclaim reflection without an audience, change the design and defaults that turn connection into comparison, and protect the online communities that give isolated people a place to belong."
+  },
+  {
+   "thinkers": [
+    [
+     "Bentham",
+     "observation that needs no intent",
+     [
+      "Jeremy Bentham designed the panopticon as a humane efficiency: a prison in which one unseen observer could watch every cell. Inmates who never knew when they were watched behaved as though they always were.",
+      "Bentham’s benevolent intention is what makes the design instructive. The effect comes from the architecture, and nobody needs to intend harm for it to work."
+     ],
+     "the answer needs to show how design shapes behaviour without anyone intending it."
+    ],
+    [
+     "Foucault",
+     "the internalised observer",
+     [
+      "Michel Foucault drew out the consequence. What matters is not the watching but the internalising. The cost is not mainly what others learn about us. The cost is the conduct that never happens: the thought not pursued and the question not asked.",
+      "The loss leaves no record and produces no complainant, which is why it appears in no assessment of a platform’s harms."
+     ],
+     "the question concerns surveillance, self-censorship or the hidden costs of being observed."
+    ],
+    [
+     "The Buddha",
+     "attention as the faculty that interrupts",
+     [
+      "The Buddha’s teaching on mindfulness identifies what is being taken. Attention is the faculty that interrupts the automatic movement from sensation to craving to distress.",
+      "A mind trained never to rest anywhere has lost the instrument it might have used to notice what was happening to it. Losing attention means losing the capacity for self-correction."
+     ],
+     "the answer needs to explain why attention matters for well-being and self-control."
+    ],
+    [
+     "Marcus Aurelius",
+     "the retreat within",
+     [
+      "Marcus Aurelius supplied the same insight without technical vocabulary. He observed that people seek retreats in the countryside or by the sea, when they could at any moment retreat into themselves.",
+      "The inner retreat is available only to a mind that still knows how to use it. Continuous distraction removes the one refuge that requires no travel."
+     ],
+     "the question concerns inner calm, solitude or reflection."
+    ],
+    [
+     "Habermas",
+     "attention and public reasoning",
+     [
+      "Jürgen Habermas gave the political version of the loss. A public sphere needs participants who can follow an argument to its end.",
+      "Where communication becomes a managed display for consumption, the capacity for deliberation disappears with the capacity for attention. Democracy needs citizens who can attend long enough to judge."
+     ],
+     "the answer needs to link attention with democratic debate."
+    ],
+    [
+     "Drucker",
+     "attention as the productive asset",
+     [
+      "Peter Drucker sharpened the economic consequence. If the productive asset of a knowledge economy is the capacity to concentrate, then an environment engineered to fragment concentration consumes the very input the economy depends on.",
+      "The consumption appears on no balance sheet as depletion. Firms and students lose productivity without any account recording the loss."
+     ],
+     "the question concerns productivity, learning or the knowledge economy."
+    ]
+   ],
+   "examples": [
+    [
+     "Notification design and interruption",
+     [
+      "Notifications are not neutral technical features. Their timing, grouping, wording and default state are chosen, and chosen to produce a return visit. The evidence on cost is clear on one point. After an interruption, resuming a demanding task takes much longer than the interruption itself, because the mental context has to be rebuilt.",
+      "The effect persists even when the notification is not acted on. The cost is not only the seconds spent looking at the phone. The anticipation of interruption itself degrades sustained attention, which is why silencing a device produces better work than merely resisting it."
+     ],
+     "What does an interruption really cost? Count the time to recover focus, not only the time spent looking."
+    ],
+    [
+     "Multitasking and learning",
+     [
+      "Research on media multitasking supports a narrower claim than popular writing makes, and the narrower claim is still damaging. What people call multitasking is rapid switching, and switching costs time and accuracy in ways the switcher underestimates.",
+      "Comprehension of difficult text falls when reading is mixed with messaging, yet readers believe they have understood. Studies comparing screen and paper reading find a modest advantage for paper on demanding texts. For a student, the felt sense of having studied is an unreliable sign of having learned."
+     ],
+     "Does the student learn or only feel busy? Separate the feeling of study from measured comprehension."
+    ],
+    [
+     "Advertising and the incentive against depth",
+     [
+      "Where a publisher is paid for attention delivered to advertisers rather than for value delivered to readers, the incentive runs against depth. A long investigation costs months of salary, may produce nothing publishable, and is read by fewer people than a list or a controversy.",
+      "The structural fix is to change what the reader pays for, which is why subscription and reader-funded models have returned. Public-interest journalism is increasingly funded by trusts. The trade-off must be stated: subscriptions produce better journalism for those who can pay, and may leave others with the advertising-funded version."
+     ],
+     "What does the business model reward? Link revenue models to the depth of content."
+    ],
+    [
+     "Regulating design rather than content",
+     [
+      "Regulators have shifted from policing content to policing design, which is a more workable target. The European Union’s Digital Services Act requires very large platforms to assess risks, explain their recommender systems and offer an option not to be profiled.",
+      "India’s Central Consumer Protection Authority issued guidelines in 2023 against dark patterns, naming manipulative practices such as false urgency, basket sneaking, confirm-shaming and subscription traps. Design regulation avoids asking the state to decide truth. Design regulation governs how a choice is presented, which is a narrower and more defensible power."
+     ],
+     "Can regulation protect attention without controlling speech? Focus on design rather than content."
+    ],
+    [
+     "Moral panic and the burden of proof",
+     [
+      "Every communication technology has drawn similar warnings. In Plato’s Phaedrus, Socrates objects that writing will produce forgetfulness, because people will rely on external marks instead of memory, and a written text cannot answer questions. The same fears greeted print, the novel, radio, television and video games.",
+      "The history does not show that present concerns are baseless. The history sets a burden of proof: whoever claims this time is different must identify what is structurally new. The strongest candidates are personalisation, constant availability and the measurement of every response."
+     ],
+     "What is genuinely new about the present technology? Identify structural differences, not only familiar fears."
+    ]
+   ],
+   "topics": [
+    [
+     "2024B1",
+     [
+      "Fear of missing out grows where attention is constantly pulled towards what others are doing. Social media feeds are designed to hold attention through variable rewards, infinite scroll and notifications timed to bring users back. Each return exposes the user to more of others’ curated lives. Foucault showed how being observed changes conduct, and constant visibility on social media encourages people to watch themselves and compare.",
+      "The link to depression and loneliness runs through attention. The Buddha taught that attention is the faculty that interrupts the movement from sensation to craving to distress. A mind constantly interrupted loses that capacity. Marcus Aurelius described the inner retreat available to anyone who can turn attention inward. Continuous distraction removes that refuge and leaves a person restless even when surrounded by connection.",
+      "The evidence on causation remains disputed, and history warns against moral panic. Yet the design features that capture attention are real and structural. Effective responses change defaults rather than relying on willpower: school phone rules, limits on manipulative design and age restrictions on platforms. Young people also need spaces and habits where attention can rest. Protecting attention is the most direct way to reduce the fear of missing out."
+     ]
+    ]
+   ],
+   "intro": [
+    "Information is now abundant, but the attention needed to understand it is scarce. Phones, feeds and notifications compete for every spare moment, and much of that competition is designed. People feel busy and distracted, students struggle to concentrate, and public debate shrinks into slogans. The question is why attention has become the scarce resource, what is lost when it is consumed, and what can protect it."
+   ],
+   "claim": "The scarce resource in an information economy is sustained attention: the capacity that turns information into understanding. Continuous observation and engineered interruption consume that capacity without leaving a record of the loss. The cost appears as thoughts not pursued, reading not understood and debates not followed. Protecting attention requires changing defaults and design, not only individual willpower, while recognising that new media have always drawn moral panic.",
+   "problem": [
+    "Every new notification seems trivial, and each scroll takes only seconds. Yet the combined effect is a fragmented mind that finds it harder to read deeply, think slowly or follow an argument. The costs are hard to measure. Nobody files a complaint about a thought they never had.",
+    "The business model makes the problem structural. Platforms and many media outlets are paid for attention delivered to advertisers, so they are designed to capture and hold it. Individual willpower is weak against such design. Yet warnings about new technology have often been exaggerated, from Socrates’ fear of writing onwards. The challenge is to identify what is genuinely new, and to design correctives that protect attention without assuming every new medium is a disaster."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Information is what arrives. Attention is what turns it into understanding. An economy that multiplies information while consuming attention produces more data and less knowledge."
+   ],
+   "thinkersTitle": "Six thinkers, six tests of attention",
+   "together": [
+    "Putting the six together",
+    "Bentham and Foucault show how observation reshapes conduct without intent. The Buddha and Marcus Aurelius show attention as the faculty of inner freedom. Habermas links attention to democratic reasoning. Drucker shows attention as the scarce asset of the knowledge economy. Together they explain why attention is the resource most consumed and least counted."
+   ],
+   "examplesIntro": "The examples below show how interruption is engineered, what it does to learning, how business models discourage depth, how regulation is changing, and why warnings about new media must meet a burden of proof. They are most useful when the answer identifies what is structurally new.",
+   "models": [
+    [
+     "Attention is the scarce resource.",
+     "Information is abundant, but the attention that turns it into understanding is limited. An economy that consumes attention produces more data and less knowledge."
+    ],
+    [
+     "Design works without intent.",
+     "Bentham designed the panopticon as a humane reform, yet its architecture shaped behaviour on its own. Notification design and infinite scroll shape attention in the same way."
+    ],
+    [
+     "The cost leaves no record.",
+     "Foucault showed that the real cost of observation is the conduct that never happens. Thoughts not pursued and questions not asked appear in no account of harm."
+    ],
+    [
+     "Attention enables self-correction.",
+     "The Buddha taught mindfulness as the faculty that interrupts craving and distress. A mind never allowed to rest loses its capacity to notice what is happening to it."
+    ],
+    [
+     "Regulate design, not speech.",
+     "The EU’s Digital Services Act and India’s 2023 dark-pattern guidelines target manipulative design. Rules of this kind protect attention without asking the state to decide what is true."
+    ]
+   ],
+   "steps": [
+    [
+     "Define attention as scarce.",
+     "Distinguish information from the attention that turns it into understanding."
+    ],
+    [
+     "Show how attention is captured.",
+     "Explain notification design, engagement and business models."
+    ],
+    [
+     "Show the costs.",
+     "Use evidence on interruption and learning."
+    ],
+    [
+     "Use thinkers.",
+     "Bring in Foucault, the Buddha and Habermas."
+    ],
+    [
+     "Consider the economy.",
+     "Use Drucker on attention as a productive asset."
+    ],
+    [
+     "Address moral panic.",
+     "Identify what is genuinely new."
+    ],
+    [
+     "Conclude with design and habits.",
+     "Recommend changes in defaults, regulation and personal practice."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns attention, distraction or the information economy.",
+   "formula": "Treat sustained attention as the scarce resource that turns information into understanding. Change the defaults and designs that consume it, regulate manipulation rather than speech, and protect spaces where attention can rest."
+  },
+  {
+   "thinkers": [
+    [
+     "Marx",
+     "alienation",
+     [
+      "Karl Marx’s account of alienation is the necessary starting point. Work under industrial conditions estranges the worker from the product, the activity, other workers and their own human capacities.",
+      "The question is therefore never simply whether jobs exist. The question is whether work returns anything to the person doing it. Automation that removes degrading labour is not automatically a loss. What changes is who captures the surplus created by higher productivity."
+     ],
+     "the answer needs to examine the quality of work and the distribution of gains from technology."
+    ],
+    [
+     "Schumacher",
+     "good work",
+     [
+      "E. F. Schumacher supplied a positive account of work. Good work gives people the chance to use and develop their faculties, to join others in a common task, and to produce something needed.",
+      "Work therefore has three functions, and income is only one. A skilling policy built entirely around employability addresses a third of the problem."
+     ],
+     "the question concerns the meaning and dignity of work."
+    ],
+    [
+     "Drucker",
+     "the knowledge worker",
+     [
+      "Peter Drucker saw the transition earliest. He identified the knowledge worker, whose means of production is knowledge they own and carry.",
+      "Drucker warned that such an economy makes continuous learning a condition of staying employable, not an extra. Reskilling is not a one-time event but a lifelong requirement."
+     ],
+     "the answer needs to explain lifelong learning and the changing nature of skills."
+    ],
+    [
+     "Sen",
+     "capability as the criterion",
+     [
+      "Amartya Sen gave the criterion for judging the outcome. What matters is whether people can do and be what they have reason to value.",
+      "A transition that raises output while destroying people’s capability to earn a living has failed on its own terms. Sen’s test asks what happens to the displaced, not only to the average."
+     ],
+     "the question needs a criterion for judging technological change."
+    ],
+    [
+     "McGregor",
+     "Theory X and Theory Y",
+     [
+      "Douglas McGregor explained why the same technology can produce either outcome. Theory X assumes that people avoid work and must be controlled, and designs jobs accordingly. Theory Y assumes that people seek responsibility, and designs jobs that allow it.",
+      "Automation deployed under Theory X strips the remaining judgment out of a role. Under Theory Y, automation removes drudgery and leaves the judgment to the worker."
+     ],
+     "the answer needs to show how management choices shape the effect of automation."
+    ]
+   ],
+   "examples": [
+    [
+     "India’s particular exposure",
+     [
+      "India’s exposure to automation has an unusual shape. About nine in ten workers are informal, and many are in agriculture, construction and personal services, which are physically embodied and hard to automate with current systems.",
+      "The exposed segment is the one India built most recently: routine cognitive work in services, back offices, customer support, basic coding and document handling. A large share of formal, aspirational, English-medium jobs sits there. The risk is not mass displacement across the economy. The risk is the removal of the rung that has carried graduates to secure salaries, just as the largest cohorts reach it."
+     ],
+     "Which jobs are most exposed, and who holds them? Look at the route from a degree to a secure job."
+    ],
+    [
+     "Skilling and the placement gap",
+     [
+      "Skilling programmes are often measured by enrolments and certificates, which are inputs. The outcome that matters is whether a person is doing better-paid work a year later. Evaluations of Indian skilling have repeatedly found a gap between the two.",
+      "The causes are structural. Courses are chosen by availability rather than local demand, employers do not recognise certificates, and short courses cannot replace learning on the job. Apprenticeships perform better because training happens inside a firm with a reason to keep the trainee. Measuring certificates instead of jobs repeats the error Goodhart described."
+     ],
+     "Does training lead to jobs? Measure placement and wages, not certificates."
+    ],
+    [
+     "Gig and platform work",
+     [
+      "Platform work sits between two legal categories. A worker directed on price, allocation, route and rating is being managed. A worker classified as an independent contractor bears their own risk and receives none of an employer’s obligations. NITI Aayog estimated about 77 lakh gig workers in 2020-21, projected to reach 2.35 crore by 2029-30.",
+      "Rajasthan passed a law for gig workers in 2023, creating registration and a welfare fund. Karnataka followed in 2025 with a welfare board funded by a fee on transactions. The Code on Social Security 2020 recognises gig and platform workers nationally. The state laws build a welfare floor without settling whether the platform is an employer."
+     ],
+     "Who protects the worker whose manager is an algorithm? Examine classification and social security."
+    ],
+    [
+     "Universal basic income",
+     [
+      "The Economic Survey of 2016-17 examined universal basic income seriously. The Survey concluded that a genuinely universal payment at a meaningful level would be fiscally very demanding. A payment large enough to matter, multiplied by India’s population, approaches the size of the entire welfare budget.",
+      "Serious Indian proposals are therefore quasi-universal, and the funding question becomes which existing subsidies are withdrawn. The argument in favour is administrative as well as ethical. A universal payment needs no eligibility test and so produces no exclusion error, which is where targeted schemes often fail."
+     ],
+     "Can income support cushion displacement affordably? Weigh fiscal cost against exclusion error."
+    ],
+    [
+     "Where AI augments rather than replaces",
+     [
+      "The useful distinction is between tasks where a system produces the final output and tasks where it produces a candidate that a human judges. Diagnostic screening is the clearest case. An algorithm reading retinal images or chest X-rays can triage volumes no radiologist could see, and flag cases for expert attention where no expert is present.",
+      "Machine translation has the same structure, and Indian language technology projects aim at multilingual access that human translation cannot provide at scale. Agricultural advisory brings weather and pest guidance to farmers who would otherwise receive none. In each case, AI extends reach into a gap rather than displacing a worker."
+     ],
+     "Does the technology replace workers or extend services into gaps? Look for augmentation where experts are absent."
+    ]
+   ],
+   "topics": [
+    [
+     "2019B4",
+     [
+      "Artificial intelligence can automate tasks once thought to require human judgment. In India, the most exposed jobs are routine cognitive roles in services, back offices and basic coding, which have carried many graduates into secure employment. The threat of a jobless future is real for this group, and it arrives as India’s largest cohorts reach working age.",
+      "Yet the future is not fixed by technology. Marx asked who captures the gains of higher productivity. McGregor showed that the same automation can strip judgment from work or remove drudgery and leave judgment with the worker. AI can also augment work, extending diagnostics, translation and agricultural advice to places without experts. Much of India’s workforce is in physical work that is hard to automate.",
+      "Reskilling is necessary but insufficient. Drucker showed that continuous learning is now a condition of employment, yet Indian skilling programmes often produce certificates without jobs. Apprenticeships tied to employers work better. Gig workers need social security, and income support may be needed for those displaced. Schumacher reminds us that work offers meaning as well as income. The outcome depends on policy choices about training, protection and the sharing of gains, not on the technology alone."
+     ]
+    ]
+   ],
+   "intro": [
+    "Artificial intelligence can now write, translate, diagnose, code and analyse. Some fear a future in which machines take most jobs. Others expect new and better work for those who reskill. Both views treat the outcome as a matter of technology. The question is what work means, who captures the gains of automation, and which choices decide whether AI brings a jobless future or better jobs."
+   ],
+   "claim": "Whether AI produces a jobless future or better work is a political and institutional choice, not a technological fate. Work provides income, the chance to develop one’s abilities and a place in a common task. Automation that removes drudgery can improve work, while automation that strips judgment from roles can degrade it. Reskilling matters, but it must be tied to real jobs, and social protection must support those displaced. The distribution of gains decides the outcome.",
+   "problem": [
+    "AI threatens jobs in routine cognitive work: back-office processing, customer support, basic coding and document handling. In India, these are the jobs that have offered many graduates a route to secure salaries. The threat falls exactly where the country has most recently built its middle class.",
+    "Yet the jobless-future story is too simple. Much of India’s workforce is in agriculture, construction and personal services, which are hard to automate. AI can extend diagnostics, translation and advice to places without experts. Reskilling programmes often fail to lead to jobs, and gig work grows without clear protection. The challenge is to shape the transition so that productivity gains improve work and are shared."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Automation that replaces produces the final output and removes the worker. Automation that augments produces a candidate that a human judges, extending reach into gaps no expert covers. The same technology can do either, depending on how work is designed."
+   ],
+   "thinkersTitle": "Five thinkers, five tests of work",
+   "together": [
+    "Putting the five together",
+    "Marx asks who captures the gains and whether work returns anything to the worker. Schumacher defines good work beyond income. Drucker makes learning lifelong. Sen judges the transition by what people can do. McGregor shows that job design decides whether automation degrades or improves work. Together they show that the future of work is a choice."
+   ],
+   "examplesIntro": "The examples below show India’s exposure, the record of skilling, the rise of gig work, the income-support debate and cases where AI augments human work. They are most useful when the answer asks who gains and who is protected.",
+   "models": [
+    [
+     "Work is more than income.",
+     "Schumacher described good work as developing faculties, joining a common task and producing something needed. Skilling that aims only at employability addresses a third of the problem."
+    ],
+    [
+     "Gains depend on who captures them.",
+     "Marx asked whether work returns anything to the worker. Automation raises productivity, and the distribution of that surplus decides whether workers gain."
+    ],
+    [
+     "Design decides the effect.",
+     "McGregor’s Theory X and Theory Y show that automation can strip judgment from jobs or remove drudgery. The same tool produces different work depending on management choices."
+    ],
+    [
+     "Measure placement, not certificates.",
+     "Indian skilling has often produced certificates without jobs. Apprenticeships succeed because training happens inside firms that want to keep the trainee."
+    ],
+    [
+     "Augmentation extends reach.",
+     "AI in diagnostics, translation and farm advice extends services into places without experts. Deploying AI to fill gaps is easier and more beneficial than replacing incumbents."
+    ]
+   ],
+   "steps": [
+    [
+     "Define work broadly.",
+     "Use Schumacher and Marx."
+    ],
+    [
+     "Identify exposure.",
+     "Show which Indian jobs are most at risk and why."
+    ],
+    [
+     "Distinguish replacement from augmentation.",
+     "Give examples of each."
+    ],
+    [
+     "Evaluate reskilling.",
+     "Use Drucker and evidence on placement."
+    ],
+    [
+     "Address protection.",
+     "Discuss gig work and income support."
+    ],
+    [
+     "Show that design matters.",
+     "Use McGregor."
+    ],
+    [
+     "Conclude with choice.",
+     "Argue that the outcome depends on policy and distribution."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns automation, AI or the future of work.",
+   "formula": "Treat the future of work as a choice, not a fate. Deploy AI to augment and extend human work, tie training to real jobs, protect workers in transition, and share the gains of productivity so that automation removes drudgery rather than dignity."
+  },
+  {
+   "thinkers": [
+    [
+     "Foucault",
+     "power and knowledge",
+     [
+      "Michel Foucault’s central claim is that power and knowledge cannot be separated. Defining criminality, risk or normality is already an exercise of authority over the people being sorted.",
+      "A system that ranks citizens by predicted risk is not neutrally observing a population. The system is producing one. The panoptic mechanism makes control self-enforcing, because a person who might always be observed begins to police themselves."
+     ],
+     "the answer needs to explain how classification and observation exercise power."
+    ],
+    [
+     "Orwell",
+     "control of language and record",
+     [
+      "George Orwell described the same architecture through language. His concern was a vocabulary designed to make certain thoughts unavailable.",
+      "His observation that whoever controls the past controls the future applies to an environment where the record is held by whoever runs the platform or the database."
+     ],
+     "the question concerns control of information, records or public memory."
+    ],
+    [
+     "Bentham",
+     "the humane intention",
+     [
+      "Jeremy Bentham designed the panopticon as a reform of prisons. His intention was humane.",
+      "The fact that a humane purpose produced a structure of total observation is exactly why good intentions are a poor safeguard. The design operates regardless of the designer’s motives."
+     ],
+     "the answer needs to show why good intentions do not justify surveillance."
+    ],
+    [
+     "Habermas",
+     "consent without coercion",
+     [
+      "Jürgen Habermas supplied the standard for judging such systems. A norm is valid only if everyone affected could accept it in a discussion free of coercion and deception.",
+      "A consent notice that nobody can reasonably read fails that test. Consent obtained where refusal means losing a service is not free consent."
+     ],
+     "the question concerns consent, legitimacy or data protection."
+    ],
+    [
+     "Ambedkar",
+     "a right that cannot be exercised",
+     [
+      "Ambedkar insisted that a right which cannot be exercised is indistinguishable from a right that does not exist.",
+      "The safeguard that works is therefore not transparency alone, because knowing that a database exists helps little. The safeguard is contestability: whether the person classified can see, question and appeal the category applied to them."
+     ],
+     "the answer needs to show why remedies and appeals matter."
+    ],
+    [
+     "Schumacher",
+     "scale and consent",
+     [
+      "E. F. Schumacher’s question about scale supplies the design rule. A system too large for its users to understand cannot meaningfully be consented to.",
+      "Minimisation, retention limits and a ban on linking databases across purposes are not concessions to privacy advocates. Limits of this kind are the conditions under which consent means anything at all."
+     ],
+     "the question concerns data minimisation and the design of large systems."
+    ]
+   ],
+   "examples": [
+    [
+     "The Puttaswamy test",
+     [
+      "In Justice K. S. Puttaswamy v Union of India in 2017, nine judges unanimously held that privacy is a fundamental right under Article 21. The judgment’s lasting contribution is its test. A state intrusion must rest on a law, pursue a legitimate aim, be proportionate and the least restrictive means available, and carry safeguards against abuse.",
+      "Applying the test honestly is demanding. Many contested surveillance practices in India fail the first step, because they rest on executive orders rather than statutes. The test turns a general anxiety about privacy into four specific questions with checkable answers."
+     ],
+     "Does the intrusion meet legality, necessity and proportionality? Apply each part of the test in turn."
+    ],
+    [
+     "Authentication failure and exclusion",
+     [
+      "Aadhaar’s difficulties are best understood as a design question about defaults. When biometric authentication fails, the system treats the failure as an unverified claim rather than an unreadable sensor, so the cost falls on the claimant.",
+      "Jean Drèze and colleagues surveyed about 1,000 households across 32 villages in Jharkhand and found exclusion rates as high as twenty per cent where every ration purchase required authentication. The Right to Food Campaign documented at least 57 hunger-related deaths between 2015 and 2018, at least 19 linked to Aadhaar-related exclusion. In any verification system, the decisive choice is what happens on failure."
+     ],
+     "What happens when the system fails? Look at who bears the cost of an error."
+    ],
+    [
+     "Facial recognition without a statute",
+     [
+      "Facial recognition in Indian policing has expanded without a law authorising it. Responding to information requests from the Internet Freedom Foundation, Delhi Police disclosed that it treats a similarity score above eighty per cent as a positive match, and that its use rests on a departmental order.",
+      "Eighty per cent is not a confidence level in any evidential sense. In a 2018 test by the American Civil Liberties Union at a similar threshold, a commercial system falsely matched 28 members of the United States Congress with arrest photographs. Measured against Puttaswamy, the practice fails on legality before accuracy is even considered."
+     ],
+     "Is the technology authorised by law and accurate enough to act on? Check legality first, then error rates."
+    ],
+    [
+     "Function creep",
+     [
+      "Function creep is the process by which a system built for one purpose becomes required for others. Each extension seems reasonable, and none is separately debated. Aadhaar was introduced to make subsidy delivery more reliable. Aadhaar then became progressively necessary for bank accounts, phone connections, school admissions and pensions.",
+      "The mechanism is administrative convenience rather than conspiracy, since an existing database is cheaper for any department than building its own. The original consent no longer covers the current use, and nobody approved the overall system as a whole. Purpose limitation is therefore the central principle of data protection."
+     ],
+     "Is the data being used for the purpose for which it was collected? Trace each extension of use."
+    ],
+    [
+     "Unpublished restrictions and contestability",
+     [
+      "A restriction that cannot be examined cannot be contested. In Anuradha Bhasin v Union of India in 2020, the Supreme Court held that indefinite internet shutdowns are impermissible and that orders must be reasoned, proportionate, reviewed and published.",
+      "India recorded 84 shutdowns in 2024, the most of any democracy, and orders often go unpublished. Where an order is not published, the remedy exists in principle and is unusable in practice. Publication and automatic expiry are not procedural details. Publication and expiry are the conditions under which the right operates at all."
+     ],
+     "Can the citizen see and challenge the order? Check publication and expiry."
+    ]
+   ],
+   "topics": [
+    [
+     "practice",
+     [
+      "Every data system sorts people into categories: eligible or ineligible, low risk or high risk, verified or unverified. Foucault argued that defining such categories is an exercise of power, because it settles questions about people who were never asked. A system that ranks citizens by predicted risk does not simply observe a population. The system shapes how that population is treated.",
+      "The consequences are concrete. When Aadhaar authentication failed in Jharkhand, families were classified as unverified and lost rations. When facial recognition sets a match threshold of eighty per cent, people can be classified as suspects by a system with no statutory basis. When a database built for one purpose spreads to others, the categories follow people into banks, schools and pensions.",
+      "Because classification is power, it must be constrained like any other power. Puttaswamy requires legality, necessity and proportionality. Purpose limitation keeps categories within the use for which they were created. Ambedkar’s insistence that rights must be exercisable points to the most important safeguard: every person classified should be able to see the category, question it and appeal it."
+     ],
+     "Classification is power."
+    ],
+    [
+     "practice",
+     [
+      "Most surveillance systems are introduced for good reasons: to reduce fraud, improve welfare, prevent crime or protect public order. Bentham designed the panopticon as a humane reform. Yet the architecture of total observation worked the same way whatever its designer intended. People who may be watched begin to watch themselves, and the cost appears as thoughts and actions that never happen.",
+      "Good intentions also do not prevent function creep or error. Aadhaar was introduced for subsidy delivery and became necessary for many services. Authentication failures excluded the poor from rations. Internet shutdowns meant to maintain order often go unpublished, making them impossible to challenge.",
+      "Safeguards must therefore be structural. Every intrusion should rest on law, as Puttaswamy requires. Systems should collect only what they need and keep it only as long as necessary. Databases should not be linked across purposes. Orders should be published and should expire automatically. Most important, those affected must be able to contest decisions. A state that relies on good intentions rather than safeguards has left citizens dependent on the continuing goodwill of those who watch them."
+     ],
+     "Good intentions are a poor safeguard against surveillance."
+    ]
+   ],
+   "intro": [
+    "Governments and companies collect more data about people than ever before: identity, location, purchases, health and faces. Data can make welfare more efficient and policing more effective. Data can also be used to classify, exclude and control. The question is how surveillance and data collection change the relationship between citizens and power, and what safeguards make such systems legitimate."
+   ],
+   "claim": "Classification is power. Whoever defines categories such as risk, eligibility or suspicion settles questions about people who were never asked. Surveillance shapes behaviour even without intent, because people who may be watched begin to watch themselves. Good intentions are therefore a poor safeguard. The safeguards that work are legality, minimisation, purpose limitation and above all contestability: the ability of the person classified to see, question and appeal the category applied to them.",
+   "problem": [
+    "Data systems promise efficiency. Digital identity can reduce fraud, cameras can help find criminals, and linked databases can deliver benefits faster. Each system is usually introduced for a reasonable purpose. Over time, systems extend to new uses, link with other databases and become required for ordinary life, often without new debate.",
+    "The costs fall unevenly. When authentication fails, the poor lose rations and pensions. When facial recognition misidentifies, innocent people face suspicion. When orders restricting communication are not published, citizens cannot challenge them. The challenge is to capture the benefits of data while ensuring that every system rests on law, collects only what it needs, stays within its purpose and can be challenged by those it affects."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Identification verifies that a person is entitled to something. Surveillance keeps a permanent record of what they do. A state can verify an entitlement without keeping a record of every transaction, and most of the welfare gain survives the separation."
+   ],
+   "thinkersTitle": "Six thinkers, six tests of surveillance",
+   "together": [
+    "Putting the six together",
+    "Foucault shows that classification is power. Orwell shows the control of records. Bentham shows that humane intent does not prevent harm. Habermas sets the test of free consent. Ambedkar insists on rights that can be exercised. Schumacher shows why systems must be small enough to understand. Together they define the safeguards that make data systems legitimate."
+   ],
+   "examplesIntro": "The examples below show the legal test for privacy, the cost of failed authentication, facial recognition without law, function creep and unpublished restrictions. They are most useful when the answer asks whether the person affected can challenge the system.",
+   "models": [
+    [
+     "Classification is power.",
+     "Foucault showed that defining categories such as risk or eligibility is an exercise of authority. Data systems do not just observe people. They decide how people are treated."
+    ],
+    [
+     "Good intentions do not protect.",
+     "Bentham designed the panopticon as a humane reform, yet its architecture controlled behaviour regardless of intent. Surveillance must be judged by its design, not its purpose."
+    ],
+    [
+     "Law comes first.",
+     "Puttaswamy in 2017 required legality, necessity, proportionality and safeguards. Facial recognition resting on a departmental order fails the first test."
+    ],
+    [
+     "The default on failure carries moral weight.",
+     "Aadhaar authentication failures excluded Jharkhand households from rations. In any verification system, what happens when the system fails decides who bears the cost."
+    ],
+    [
+     "Contestability is the key safeguard.",
+     "Ambedkar held that a right that cannot be exercised does not exist. People must be able to see, question and appeal the categories applied to them."
+    ]
+   ],
+   "steps": [
+    [
+     "Explain classification as power.",
+     "Use Foucault and Orwell."
+    ],
+    [
+     "Show why intent is not enough.",
+     "Use Bentham’s panopticon."
+    ],
+    [
+     "Apply the legal test.",
+     "Use Puttaswamy’s four requirements."
+    ],
+    [
+     "Give Indian examples.",
+     "Discuss Aadhaar exclusion, facial recognition and function creep."
+    ],
+    [
+     "Separate identification from surveillance.",
+     "Show that entitlements can be verified without permanent records."
+    ],
+    [
+     "Set design rules.",
+     "Recommend minimisation, purpose limitation and retention limits."
+    ],
+    [
+     "Conclude with contestability.",
+     "Argue that those classified must be able to see and challenge decisions."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns privacy, surveillance or data.",
+   "formula": "Treat every data system as an exercise of power. Ground it in law, collect only what is needed, keep it to its purpose, publish its orders and give every person classified the means to see, question and appeal the category applied to them."
+  },
+  {
+   "thinkers": [
+    [
+     "Einstein",
+     "capability does not decide use",
+     [
+      "Albert Einstein urged President Roosevelt in 1939 to build an atomic weapon before Germany could. He later worked for disarmament, and signed the Russell-Einstein Manifesto against nuclear weapons days before his death in 1955.",
+      "The sequence shows two things. Technical capability settles nothing about whether a thing should be built. The people best placed to understand a technology cannot leave decisions about its use to whoever deploys it later."
+     ],
+     "the answer needs to address the ethics of powerful technologies."
+    ],
+    [
+     "Kautilya",
+     "capability sets the menu",
+     [
+      "Kautilya’s sixfold policy treats capability as the variable that decides which options are available: peace, war, neutrality, preparation, alliance or dual policy.",
+      "A state’s technological position therefore sets the menu long before any negotiation begins. The leverage is exercised without being stated aloud."
+     ],
+     "the question needs an Indian framework linking capability with foreign policy choices."
+    ],
+    [
+     "Nehru",
+     "science as the base of autonomy",
+     [
+      "Nehru’s investment in scientific institutions, from the IITs to the atomic energy and space programmes, came from understanding that independence needs a capability base.",
+      "Non-alignment as a doctrine of autonomy required capabilities that took decades to build. Nehru’s experience shows both the vision and the long lag between investment and leverage."
+     ],
+     "the answer needs a historical Indian example of building scientific capability."
+    ],
+    [
+     "Schumacher",
+     "dependency as a lever",
+     [
+      "E. F. Schumacher’s warning about scale applies to states as much as villages. A technology a country cannot build, maintain or replace is a dependency.",
+      "Dependencies are the instruments through which pressure is applied when it cannot be applied openly. Resilience requires the ability to repair and replace, not only to buy."
+     ],
+     "the question concerns technological dependence and self-reliance."
+    ],
+    [
+     "Orwell",
+     "power without announcement",
+     [
+      "George Orwell named what the silence permits. The most consequential exercises of power are those for which no announcement is ever made.",
+      "Where there is no announcement, there is nothing to object to. Export controls, cable disruptions and cyber operations often work in exactly this silence."
+     ],
+     "the answer needs to explain hidden or unannounced forms of power."
+    ],
+    [
+     "Ambedkar",
+     "rights that cannot be exercised",
+     [
+      "Ambedkar’s point that a right which cannot be exercised is indistinguishable from one that does not exist applies to sovereignty.",
+      "A state that cannot build or replace the systems its economy runs on holds formal independence alongside practical dependence. The gap between the two is where the silent factor operates."
+     ],
+     "the question concerns the difference between formal and practical sovereignty."
+    ]
+   ],
+   "examples": [
+    [
+     "Semiconductor chokepoints",
+     [
+      "Semiconductor manufacturing shows that modern leverage lies at chokepoints rather than in overall size. Advanced chip fabrication is concentrated in a handful of firms. The extreme ultraviolet lithography machines required are made by essentially one company in the Netherlands, and design software and certain materials are similarly concentrated.",
+      "Export controls exploit these narrow points. A country with a large market but no place in the chain has little to answer with. India’s Semiconductor Mission targets assembly, testing and a first commercial fabrication plant at a mature node, a strategy of supply security rather than frontier leadership. Dependence is measured by whether a substitute exists at any price."
+     ],
+     "Where are the chokepoints, and does a substitute exist? Map dependence by irreplaceability, not trade volume."
+    ],
+    [
+     "Digital public infrastructure as soft power",
+     [
+      "India’s digital public infrastructure has become a distinctive instrument of influence because it is offered as a template rather than a product. Identity, payments and document storage are provided as open specifications a country can implement itself, avoiding dependence on a foreign vendor. UPI and UPI-linked payments now work in several countries, including Singapore, the UAE, Nepal, Bhutan, Mauritius, Sri Lanka and France.",
+      "A country running on Indian-designed systems develops a continuing relationship in standards, training and interoperability. The qualification is that exporting an architecture also exports its assumptions, including its treatment of consent and state access to data."
+     ],
+     "Does sharing technology build influence, and what does it export with it? Consider both partnership and the assumptions built into the design."
+    ],
+    [
+     "Undersea cables and cyber operations",
+     [
+      "Almost all intercontinental data traffic runs through submarine cables. The infrastructure is sparse, largely unguarded and concentrated at a few landing points, which makes it both critical and exposed.",
+      "The deeper strategic difficulty is attribution. A cyber operation can be routed through third countries and carried out by actors whose link to a state is deliberately unclear. The target may know it was attacked without being able to prove by whom. Deterrence depends on the promise of retaliation, and retaliation requires an address. Operations are designed to stay below the threshold that would justify a response, which is what the grey zone means."
+     ],
+     "Can a state respond to an attack it cannot attribute? Examine attribution and thresholds in cyber conflict."
+    ],
+    [
+     "Critical minerals and the energy transition",
+     [
+      "Decarbonisation substitutes one dependence for another. Batteries, magnets, wind turbines and electrolysers need lithium, cobalt, nickel and rare earth elements. The constraint is less about deposits than processing. China accounts for roughly seventy per cent of rare earth mining and about ninety per cent of processing capacity, and has used export licensing as an instrument.",
+      "India approved the National Critical Mineral Mission in January 2025, with an outlay of about 34,300 crore rupees over seven years for exploration, overseas assets, recycling and processing. An energy transition presented as freedom from imported fuel can reproduce the same vulnerability in a different material."
+     ],
+     "Does the energy transition create new dependencies? Look at processing capacity, not only reserves."
+    ],
+    [
+     "Dual-use space capability",
+     [
+      "India’s space programme was justified from the start in developmental terms: communication for remote areas, weather forecasting, resource mapping and disaster warning. The framing is accurate but incomplete, because space capabilities are inherently dual-use.",
+      "A launch vehicle that places a satellite in orbit is also a delivery system. An imaging satellite that maps crops also images installations. A navigation system that guides fishermen also guides munitions. The civilian purpose is not a cover. The line between civilian and strategic capability is thin in space by nature, which is why access to launch and imagery is treated as a question of autonomy."
+     ],
+     "Can civilian and strategic technology be separated? Show how dual-use capability shapes strategic relations."
+    ]
+   ],
+   "topics": [
+    [
+     "2020B4",
+     [
+      "Diplomacy and war are the visible faces of international relations. Technology works beneath them. Kautilya taught that capability decides which policies are available, and technology is now the core of capability. A country that controls semiconductor chokepoints, critical mineral processing or undersea cables holds leverage that needs no announcement. Export controls and supply restrictions can shape another state’s choices quietly, as Orwell’s warning about unannounced power suggests.",
+      "Dependence is the channel of this silent influence. Schumacher warned that a technology one cannot build or replace is a dependency. India’s Semiconductor Mission and National Critical Mineral Mission are attempts to reduce such dependence. Nehru’s early investment in scientific institutions shows that capability takes decades to build. Ambedkar’s insight applies to sovereignty: a right that cannot be exercised is no right at all, and formal independence without capability is incomplete.",
+      "Technology is also a positive instrument. India’s digital public infrastructure, shared as open templates and linked through UPI to several countries, builds influence without dependence. Space capabilities serve development and security at once. Einstein’s life reminds us that capability does not decide use. Technology is the silent factor because it sets the terms of international relations before diplomats speak, and wise statecraft builds capability while keeping ethical judgment over its use."
+     ]
+    ]
+   ],
+   "intro": [
+    "International relations are usually described through diplomacy, alliances, trade and war. Yet much of the real balance of power is set earlier and more quietly: in laboratories, factories, supply chains and technical standards. A country that cannot make critical technologies depends on those who can. The question is how technology silently shapes international relations, and what it means for India’s autonomy."
+   ],
+   "claim": "Technology is a silent factor in international relations because capability decides which choices are available long before any negotiation begins. Dependence on technologies a state cannot build, maintain or replace becomes an instrument of pressure that need never be announced. Strategic autonomy therefore requires capability, not only declarations. Yet capability also raises ethical questions that its builders cannot leave to others.",
+   "problem": [
+    "Formal sovereignty can hide practical dependence. A country may be independent on paper while relying on others for semiconductors, critical minerals, satellite imagery or communication cables. Export controls, supply disruptions and cyber operations can apply pressure without any declaration of hostility.",
+    "Building capability is slow and expensive. Nehru’s investment in scientific institutions took decades to pay off. Technologies are often dual-use, serving both civilian and military ends. Exporting technology can build influence and also export its assumptions. The challenge is to see technology as a central factor in statecraft, build the capabilities that preserve autonomy, and keep ethical judgment over how they are used."
+   ],
+   "distinction": [
+    "A useful distinction",
+    "Formal independence is the legal right to decide. Practical autonomy is the capability to act on the decision. A state that cannot build or replace the systems its economy runs on holds the first without the second."
+   ],
+   "thinkersTitle": "Six thinkers, six tests of technological power",
+   "together": [
+    "Putting the six together",
+    "Einstein shows that capability does not decide use. Kautilya shows that capability sets the menu of choices. Nehru shows the long work of building a scientific base. Schumacher shows dependency as a lever. Orwell shows power exercised without announcement. Ambedkar shows the gap between formal and practical sovereignty. Together they explain why technology is the silent factor in international relations."
+   ],
+   "examplesIntro": "The examples below show chokepoints, digital public infrastructure, cyber operations, critical minerals and dual-use space capability. They are most useful when the answer asks whether a substitute exists at any price.",
+   "models": [
+    [
+     "Capability sets the menu.",
+     "Kautilya taught that a state’s strength decides which policies are available. Technological capability now defines the options before any negotiation begins."
+    ],
+    [
+     "Dependence is a silent lever.",
+     "Schumacher warned that a technology one cannot build or replace is a dependency. Export controls on chips or minerals apply pressure without any declaration."
+    ],
+    [
+     "Chokepoints matter more than size.",
+     "One company makes the machines for the most advanced chips, and China processes about ninety per cent of rare earths. Leverage lies where no substitute exists."
+    ],
+    [
+     "Formal sovereignty needs practical capability.",
+     "Ambedkar held that a right that cannot be exercised does not exist. A state that cannot replace critical systems holds independence without autonomy."
+    ],
+    [
+     "Capability does not decide use.",
+     "Einstein urged the atomic bomb and then worked for disarmament. The builders of powerful technology cannot leave the ethics of its use to others."
+    ]
+   ],
+   "steps": [
+    [
+     "Explain why technology is silent.",
+     "Show how capability shapes options before diplomacy."
+    ],
+    [
+     "Use Kautilya.",
+     "Link capability to available policies."
+    ],
+    [
+     "Identify dependencies.",
+     "Discuss semiconductors, critical minerals and cables."
+    ],
+    [
+     "Show India’s responses.",
+     "Use the Semiconductor Mission and the National Critical Mineral Mission."
+    ],
+    [
+     "Show technology as influence.",
+     "Discuss digital public infrastructure and space."
+    ],
+    [
+     "Address grey-zone conflict.",
+     "Discuss cyber operations and attribution."
+    ],
+    [
+     "Conclude with capability and ethics.",
+     "Argue for building capability while keeping judgment over its use."
+    ]
+   ],
+   "stepsIntro": "Use the following sequence when a question concerns technology and international relations.",
+   "formula": "Treat technology as the silent factor that sets the terms of international relations. Build the capabilities that turn formal independence into practical autonomy, share technology in ways that build partnership rather than dependence, and keep ethical judgment over how capability is used."
+  }
  ]
 };
