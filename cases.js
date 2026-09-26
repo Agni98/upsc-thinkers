@@ -1050,6 +1050,76 @@ const CASE_ANSWERS = {
  ],
  "close": "Rameshwar should neither shut his eyes nor walk out. He should keep his own conduct clean, fix what lies within his power, and take documented evidence to the vigilance machinery through protected channels."
 },
+"Q253":{
+ "t": "Ravi: predictive policing and a neighbourhood under watch",
+ "brief": "Ravi, Superintendent of Police in a riot-prone district, introduced an AI system that captures biometric data from crowds and predicts crime. The system has flagged an immigrant, low-income neighbourhood. Patrols, preventive detentions and checkpoints focused there have improved public order. Community leaders and rights activists say the system learns from biased historical data, that the surveillance has created fear, and that residents do not know what data is held against their names.",
+ "conflict": [
+  "Public order and crime prevention against privacy and equal treatment.",
+  "The speed of data-driven policing against the bias built into its data.",
+  "Secrecy for operational reasons against openness to the people affected.",
+  "Results now against lasting trust between the police and the community."
+ ],
+ "stake": [
+  "Residents of the flagged neighbourhood",
+  "Victims of crime and the wider public",
+  "Police officers on the ground",
+  "Community leaders and rights activists",
+  "The company that supplied the system",
+  "Courts and oversight bodies"
+ ],
+ "options": [
+  [
+   "Continue as before",
+   "Keeps the visible gains in public order.",
+   "Entrenches bias, deepens fear, and risks unlawful detentions and legal challenge."
+  ],
+  [
+   "Switch the system off",
+   "Removes the harm at once.",
+   "Loses a useful tool, and the gains may be reversed."
+  ],
+  [
+   "Pause the targeting, audit the system, and resume only with safeguards",
+   "Keeps what works and corrects what does not.",
+   "Takes time and effort, and needs support from above."
+  ]
+ ],
+ "criteria": [
+  "Policing must be lawful, fair and accountable. The Puttaswamy judgment of 2017 requires any intrusion on privacy to have a basis in law and to be necessary and proportionate. **Capturing biometric data from crowds without a clear law fails the first test.** A system trained on past arrests learns where police patrolled, not only where crime happened, so it sends police back to the same people. Detentions and checkpoints based on a machine's label, without suspicion of an individual, treat a whole neighbourhood as suspect."
+ ],
+ "sequence": [
+  "Stop preventive detentions and checkpoints based only on the system's output, and require evidence against an individual.",
+  "Commission an independent audit of the data and the model for bias, with outside experts and community observers.",
+  "Check the legal basis for biometric capture, and limit collection to what the law allows.",
+  "Tell residents what data is held, how it is used, and how to correct it or complain.",
+  "Keep a named officer answerable for every decision the system informs.",
+  "Build community policing: meet residents, appoint local liaison volunteers, and tackle drug trafficking with their help.",
+  "Report the findings to superiors, and publish a summary."
+ ],
+ "also": [
+  [
+   "(a) Ethical issues, including biases, in AI-driven policing",
+   [
+    [
+     "Historical bias: the data reflects past policing, not only crime.",
+     "Feedback loops: more patrols record more crime in the same area, which brings more patrols.",
+     "Profiling of immigrants and the poor, against equality before the law under Article 14.",
+     "Privacy and consent in capturing biometric data.",
+     "Opacity: residents cannot see or contest the data held on them.",
+     "Automation bias: officers trusting the output without their own judgment.",
+     "Accountability: nobody answers for a wrong label."
+    ]
+   ]
+  ],
+  [
+   "(b) The action that best complies with ethics",
+   [
+    "The third option. The option keeps the legitimate aim of preventing crime, removes the unlawful and unfair uses, and rebuilds trust. **Technology should inform police judgment, not replace it.**"
+   ]
+  ]
+ ],
+ "close": "Order that rests on suspicion of a whole neighbourhood does not last. Ravi should keep the tool, correct its bias, put the law and a named officer in charge of every decision it informs, and earn the neighbourhood's trust."
+},
 "Q113":{
  "t": "Raman: a terror group recruiting unemployed youth online",
  "brief": "As Director General of Police, Raman learns that a new global terrorist group is recruiting unemployed graduates in his state, especially from one community, through social media. Many young people spend six to eight hours a day online, endorse the group's messages and forward secessionist posts.",
@@ -1480,6 +1550,68 @@ const CASE_ANSWERS = {
   ]
  ],
  "close": "Sympathy for a local economy cannot extend to children making explosives. The children must be rescued and schooled, the owner prosecuted, and the cluster made to employ adults."
+},
+"Q257":{
+ "t": "Ajit: one order, two buyers",
+ "brief": "Ajit heads weapon sales in the Ministry of Defence Production. Two countries want its long-range artillery and missiles, but production allows only one order. Country A, a developing nation and a planned research partner, needs the weapons to defend itself against a troublesome neighbour and seeks a large purchase on a long-term loan. Country B is allied with a superpower, holds nuclear weapons outside the NPT, supports guerrilla forces abroad and spends heavily on its military, but it offers advance payment and trade advantages.",
+ "conflict": [
+  "Economic gain and jobs against the risk that the weapons are misused.",
+  "Strategic ties and a trade agreement against national policy and international commitments.",
+  "The argument that someone else will sell against responsibility for what one sells.",
+  "Immediate payment against a long-term partnership."
+ ],
+ "stake": [
+  "The people of both buying countries and their neighbours",
+  "The ministry and its workers",
+  "The government and its foreign policy",
+  "Trade negotiators",
+  "International export control regimes and partners",
+  "Indian taxpayers"
+ ],
+ "options": [
+  [
+   "Sell to Country B",
+   "Advance payment, trade benefits and closer ties with its bloc.",
+   "High risk that the weapons reach guerrilla forces or are used in aggression, and a risk of breaching missile export commitments. The sale also feeds a military budget that crowds out its people's welfare."
+  ],
+  [
+   "Sell to Country A, with due diligence and conditions on end use",
+   "Meets a legitimate defensive need, and builds a research partnership.",
+   "Payment comes slowly, through a long-term loan."
+  ],
+  [
+   "Refuse both",
+   "Avoids all risk.",
+   "Loses the economic and strategic gains, and leaves Country A exposed."
+  ]
+ ],
+ "criteria": [
+  "Arms sales are lawful, but the seller shares responsibility for how the weapons are used. **The tests are the buyer's legitimate need, the risk of diversion or misuse, compliance with national policy and international commitments, and the effect on regional peace.** India has been a member of the Missile Technology Control Regime since 2016 and the Wassenaar Arrangement since 2017. Its export licences under the SCOMET list require assurances from the end user. A buyer that supports guerrilla forces abroad fails the diversion test. Economic benefit cannot justify a sale likely to feed violence, and the fact that another supplier may sell does not remove one's own responsibility."
+ ],
+ "sequence": [
+  "Complete due diligence on Country A: an end-user certificate, limits on re-export, and conditions on use.",
+  "Offer only systems that comply with MTCR guidelines, which strongly restrict transfers of missiles able to carry 500 kilograms over 300 kilometres or more.",
+  "Arrange the loan through established channels, such as a government-backed line of credit, with safeguards.",
+  "Build the research collaboration into the agreement.",
+  "Decline Country B's order, and explain the decision through diplomatic channels in terms of policy, not judgment of the country.",
+  "Keep the trade negotiations separate from the arms decision.",
+  "Record the reasons, and brief the ministry and the Ministry of External Affairs."
+ ],
+ "also": [
+  [
+   "(a) The options, and the one to choose",
+   [
+    "Selling to Country A is the defensible choice. Its need is defensive, it is not linked to violence abroad, and the partnership serves India's long-term interest. Country B's advance payment is attractive, but the risk of misuse and of breaching export commitments is too high."
+   ]
+  ],
+  [
+   "(b) Balancing economic and strategic interests with ethics",
+   [
+    "Ethics and interest are not always opposed. **A reputation as a responsible supplier is itself a strategic asset**, and weapons that reach guerrilla forces can harm India's own security and standing. The balance comes from clear criteria applied consistently, due diligence at every stage, and a written record within government of why a sale was made or refused."
+   ]
+  ]
+ ],
+ "close": "A country that sells weapons shares responsibility for their use. Ajit should sell to the buyer whose need is defensive and whose record is clean, with full due diligence, and let a clear principle, not the size of an advance, decide."
 },
 "Q205":{
  "t": "The AI company whose emissions rose by half",
@@ -2253,6 +2385,68 @@ const CASE_ANSWERS = {
   "Suggest changes to the decision process so that the same error does not recur."
  ],
  "close": "My advice would be to disclose fully and truthfully, and to own the mistake. An honest error openly admitted is defensible; information withheld or twisted to escape it is not."
+},
+"Q255":{
+ "t": "Vikas: fingerprints that fail at the ration shop",
+ "brief": "Vikas, Collector of a remote hilly district, must run the public distribution system for economically weaker families. Real-time fingerprint authentication, meant to stop leakage, often fails for children, manual labourers and older people, and when the connection is weak. Distributors then use their own discretion. Strict rules protect public money but deny food to eligible people. Unchecked discretion invites misuse.",
+ "conflict": [
+  "Fiscal probity against the right to food and to life under Article 21.",
+  "A uniform rule against the people it fails.",
+  "Distributors' discretion against the risk of misuse.",
+  "Technology as a safeguard against technology as a barrier."
+ ],
+ "stake": [
+  "Eligible families, especially children, labourers and older people",
+  "Ration dealers",
+  "The food and civil supplies department",
+  "UIDAI and the technology providers",
+  "The public exchequer",
+  "Gram panchayats and vigilance committees"
+ ],
+ "options": [
+  [
+   "Enforce fingerprint authentication strictly",
+   "Prevents leakage and protects public money.",
+   "Denies food to eligible people through no fault of their own."
+  ],
+  [
+   "Leave failures to the dealer's discretion",
+   "Nobody goes hungry in the short term.",
+   "Opens the door to fake entries and diversion, with no record."
+  ],
+  [
+   "Keep authentication, but add recorded fall-back methods and checks",
+   "Protects both the eligible and the exchequer.",
+   "Needs more administrative work and monitoring."
+  ]
+ ],
+ "criteria": [
+  "Preventing leakage is a legitimate aim, but denying food to an eligible person is a greater harm than a small risk of leakage. The Supreme Court's Aadhaar judgment of 2018 held that nobody should be denied a benefit because authentication fails, and government instructions say the same. **The test is whether the rule serves its purpose, getting food to the eligible, or defeats it.**"
+ ],
+ "sequence": [
+  "Issue clear instructions that no eligible family may be turned away for a failed authentication.",
+  "Provide fall-back methods: an iris scan, a one-time password on a registered phone, a nominee, or manual verification recorded in an exception register.",
+  "Allow offline authentication, with later syncing, where the connection is weak.",
+  "Audit the exception register regularly, and check a sample of households in person.",
+  "Hold camps to update the fingerprints of children, labourers and older people.",
+  "Involve gram panchayats and vigilance committees in social audits, and run a helpline.",
+  "Report the problems to the state and to UIDAI for technical fixes."
+ ],
+ "also": [
+  [
+   "(a) Balancing fiscal probity with empathy",
+   [
+    "Probity and empathy are not opposites here. **Fiscal probity exists to get benefits to the right people, and turning the right people away defeats it.** Fall-back methods, each recorded and later audited, protect both."
+   ]
+  ],
+  [
+   "(b) The ethics of technology as a gatekeeper",
+   [
+    "Technology can reduce leakage, remove middlemen and leave a record that can be audited. Technology becomes unethical when it is the only gate, when its failures fall on the poor, and when no human can override it. **A gate should open for the eligible when the machine fails, with a record, rather than shut them out.** Technology should serve the welfare scheme, not decide who deserves it."
+   ]
+  ]
+ ],
+ "close": "A ration system exists to feed people. Vikas should keep the technology to stop leakage, but never let a failed fingerprint decide that a family goes hungry."
 },
 "Q232":{
  "t": "Rakesh: compensation for a bus driver who started a fight",
@@ -3205,6 +3399,146 @@ const CASE_ANSWERS = {
  ],
  "close": "The head of the institute should keep the selection on merit and the funding on its merits, and should record and report the attempt to link the two."
 },
+"Q252":{
+ "t": "Lata: a hysterectomy without her consent",
+ "brief": "Lata consented to a diagnostic laparoscopy for acute abdominal pain. During the procedure, Dr. Mansi found a tumour in her uterus that could be malignant. Instead of taking a biopsy, she removed the uterus on the written consent of Lata's sister-in-law, Sujatha, to spare Lata a second operation. Lata feels betrayed. The police and Sujatha defend the doctor's good intention, and Lata has decided to go to court.",
+ "conflict": [
+  "The patient's control over her own body against the doctor's judgment of her good.",
+  "Sparing a second operation against waiting for the patient's own decision.",
+  "A relative's consent against the patient's consent.",
+  "Good intention against the rules of informed consent.",
+  "Support for the doctor from the police and family against the patient's right to seek redress."
+ ],
+ "stake": [
+  "Lata, and her ability to decide about her own body",
+  "Dr. Mansi and her surgical team",
+  "Sujatha and Lata's family",
+  "The hospital",
+  "The police and the court",
+  "The medical profession and future patients"
+ ],
+ "options": [
+  [
+   "Remove the uterus on the relative's consent, as was done",
+   "Spares Lata a second operation if the tumour is malignant.",
+   "Removes an organ, and her ability to bear children, without her consent. The operation may prove unnecessary if the tumour is benign."
+  ],
+  [
+   "Take a biopsy, close, and let Lata decide once she is awake",
+   "Respects her consent, and the decision rests on a confirmed diagnosis.",
+   "She may need a second operation if the tumour is malignant."
+  ],
+  [
+   "Remove the uterus only if waiting would put her life in immediate danger",
+   "Acts only in a genuine emergency.",
+   "Needs a clear clinical judgment, recorded with reasons."
+  ]
+ ],
+ "criteria": [
+  "A competent adult must consent to each major procedure. **Consent to a diagnostic laparoscopy is not consent to a hysterectomy.** The Supreme Court said so in Samira Kohli v Prabha Manchanda in 2008. A relative may decide only when the patient cannot, and when delay would threaten life or cause serious harm. Here there was no emergency, and Lata could have decided the next day. The cost of a second operation was real, but it was Lata's cost to weigh, not the doctor's or Sujatha's."
+ ],
+ "sequence": [
+  "In the theatre: take a biopsy, record the finding, and close.",
+  "After recovery: explain the findings, the options and their risks to Lata herself, and give her time to decide.",
+  "Before any procedure: discuss findings that could arise, and record what the patient agrees to if they do.",
+  "Now: acknowledge the error honestly, apologise, and support Lata's treatment and counselling.",
+  "The hospital: review its consent procedures, and train staff on the limits of consent by a relative.",
+  "The police: record the complaint and leave the judgment to the court, instead of pressing Lata to drop it."
+ ],
+ "also": [
+  [
+   "(a) The ethical issues",
+   [
+    [
+     "Informed consent and the right to decide about one's own body.",
+     "Paternalism: the doctor put her judgment in place of the patient's.",
+     "Consent by a relative, used when the patient could have decided later.",
+     "The loss of the ability to bear children, a harm that cannot be undone.",
+     "Gender: a decision about a woman's body taken by others.",
+     "The police discouraging a complaint instead of recording it."
+    ]
+   ]
+  ],
+  [
+   "(b) The doctor's moral conduct",
+   [
+    "Dr. Mansi meant well. She wanted to spare Lata the risk and pain of another operation. **Good intention does not make the act right.** She acted without a genuine emergency, relied on a relative instead of the patient, and removed an organ on a diagnosis that was not yet confirmed. Her motive was beneficent, but her method was paternalistic, and it failed the duty to respect the patient's choice. Her responsibility now is to own the decision, not to defend it."
+   ]
+  ]
+ ],
+ "close": "A doctor's skill gives her the power to decide, but not the right to decide for a patient who can decide for herself. Except in a real emergency, the choice about Lata's body was Lata's."
+},
+"Q256":{
+ "t": "Rajan: order between two communities",
+ "brief": "Rajapuram, a border district, has seen violent ethnic conflict between the Jhara and Biru communities over land, resources and political representation. Many people have died, the communities live in separate relief camps, and the highway is blocked. The local administration and police are divided along community lines, both communities distrust the government, and a neighbouring country may exploit the unrest. Rajan, the new District Magistrate, must restore authority, reopen the highway and start peace talks.",
+ "conflict": [
+  "Restoring order quickly against using force that deepens distrust.",
+  "The neutrality of the administration against the loyalties of its own officials.",
+  "Relief and supplies now against resolving the causes later.",
+  "National security against the rights and grievances of both communities."
+ ],
+ "stake": [
+  "Both communities, especially victims and people in relief camps",
+  "Local officials and police",
+  "Central forces",
+  "The state and central governments",
+  "Community and religious leaders",
+  "Civil society and the media"
+ ],
+ "options": [
+  [
+   "Deploy central forces in strength and impose order",
+   "Restores control quickly.",
+   "Force alone may harden distrust and risks excesses."
+  ],
+  [
+   "Negotiate first and hold back force",
+   "Builds goodwill.",
+   "Violence may continue, and supplies stay cut off."
+  ],
+  [
+   "A controlled, even-handed approach: secure the highway and camps with neutral forces, move partisan officials, deliver relief equally, and open talks",
+   "Restores authority while building trust.",
+   "Needs careful coordination and fairness that both sides can see."
+  ]
+ ],
+ "criteria": [
+  "The first duty is to protect life. Force should be the minimum needed, used equally for both communities, and within the law. **Neutrality must be seen as well as practised, because each community judges the government by what it sees.** Lasting peace also needs the causes addressed: land claims, the allocation of resources, and representation."
+ ],
+ "sequence": [
+  "Requisition central forces such as the CRPF to secure the highway, the relief camps and flashpoints, with clear orders on minimum force.",
+  "Open the highway as a corridor for food and medical supplies, with protection for both communities.",
+  "Move officials and police who have taken sides, and use mixed teams for sensitive duties.",
+  "Run the relief camps to one standard, and publish what each receives.",
+  "Form peace committees with elders, women and young people of both communities, and start talks through trusted mediators.",
+  "Counter rumours with regular briefings, and act against incitement from either side.",
+  "Register and investigate crimes impartially, and share intelligence with the centre on threats from across the border.",
+  "Begin work on the causes: a review of land records, fair allocation of resources, and representation in local bodies."
+ ],
+ "also": [
+  [
+   "(a) The ethical issues",
+   [
+    [
+     "Protecting life and restoring order.",
+     "Neutrality, and the partisanship of officials.",
+     "Equal treatment in relief and policing.",
+     "The use of force, and human rights.",
+     "Justice for victims of violence.",
+     "The risk of exploitation from across the border.",
+     "The long-standing grievances behind the conflict."
+    ]
+   ]
+  ],
+  [
+   "(b) Protecting a non-partisan image",
+   [
+    "The third option protects Rajan's non-partisan image without compromising ethics. **Neutrality is shown by equal treatment that both communities can see**: the same protection, the same relief, the same standard of investigation, and officials who are not seen to belong to either side. Neutral central forces help, provided they act with restraint."
+   ]
+  ]
+ ],
+ "close": "In a divided district, the administration can restore authority only if both communities trust it. Rajan should protect life first, act even-handedly where everyone can see it, and begin work on the causes, so that order becomes peace."
+},
 "Q197":{
  "t": "Ashok: refugees and armed soldiers at the border at night",
  "brief": "Ashok, Divisional Commissioner of a border district in the North-East, is told at night that 200 to 250 people, mostly women and children, some bleeding badly, are trying to cross from a neighbouring country in civil war after a military takeover. About ten armed soldiers in uniform are with them. The state minister wants an immediate report; bad weather prevents Ashok from reaching the Home Secretary.",
@@ -4037,6 +4371,75 @@ const CASE_ANSWERS = {
   "Act on the Committee's findings, and train all staff on the policy."
  ],
  "close": "The ED should treat the complaint as the law requires, whatever Mr A's sales. Keeping Mrs X, protecting her, and letting the Internal Committee decide is how a growing company keeps both its good name and its good people."
+},
+"Q254":{
+ "t": "Seema: a bribery network behind land-use approvals",
+ "brief": "Seema, the new District Collector, finds a large backlog of applications to convert farmland to residential use near a new industrial area. Some applications have been approved out of turn, reportedly for bribes, through touts working with a few subordinate officials. Honest staff are afraid to process files, and the backlog is hurting the local economy. An aggressive investigation risks resistance and a backlash from the unions.",
+ "conflict": [
+  "Ending corruption against keeping daily administration running.",
+  "Speed of action against due process and fairness to the accused.",
+  "Stability in the office against the continuing harassment of applicants.",
+  "Clearing the backlog quickly against clearing it fairly."
+ ],
+ "stake": [
+  "Farmers and other applicants",
+  "Honest employees",
+  "The corrupt officials and the touts",
+  "Staff unions",
+  "Industry and the local economy",
+  "The state government and vigilance agencies"
+ ],
+ "options": [
+  [
+   "Launch an immediate, aggressive crackdown",
+   "Signals zero tolerance.",
+   "Risks resistance, a work slowdown, and cases that fail for lack of evidence."
+  ],
+  [
+   "Ignore the network and only push for faster disposal",
+   "Avoids conflict.",
+   "Rewards the corrupt, leaves applicants harassed, and makes Seema complicit."
+  ],
+  [
+   "Reform the process and build a case quietly, then act",
+   "Removes the touts' leverage, clears the backlog fairly, and punishes wrongdoing on evidence.",
+   "Takes weeks, and staff must be handled carefully."
+  ]
+ ],
+ "criteria": [
+  "The aim is to end the corruption and serve the applicants, not only to punish. **Touts profit from discretion and delay, so a transparent, time-bound process removes their leverage at the source.** Punishment must rest on evidence and due process, or it will fail in court and alienate honest staff. Seema's duty covers both integrity and service delivery."
+ ],
+ "sequence": [
+  "Introduce a first-come, first-served online queue, with the status of every application visible to the public.",
+  "Set time limits for each stage, and give written reasons for any rejection.",
+  "Hold special camps to clear the backlog in order, with teams of trusted officials.",
+  "Rotate the officials on the land-use desks, and keep unauthorised people out of the office.",
+  "Gather evidence quietly, and refer it to the Anti-Corruption Bureau for inquiry and traps.",
+  "Review the approvals already given out of turn, and act against those found illegal.",
+  "Meet staff and union representatives, explain that the target is the network and not honest employees, and protect those who report.",
+  "Open a helpline for applicants to report demands for bribes."
+ ],
+ "also": [
+  [
+   "(a) The ethical issues",
+   [
+    [
+     "Corruption and abuse of public office.",
+     "Unequal treatment of applicants.",
+     "Fear among honest staff, and a hostile work culture.",
+     "Denial of timely service, and harm to the local economy.",
+     "The Collector's duty to act, and the risk of acting unfairly."
+    ]
+   ]
+  ],
+  [
+   "(b) The recommended option",
+   [
+    "The third option. The option removes the touts' leverage by changing the system, clears the backlog fairly, and punishes wrongdoers on evidence. **Seema fixes the system, not just the case.**"
+   ]
+  ]
+ ],
+ "close": "A bribery network lives on delay and discretion. Seema should take both away with a transparent, time-bound process, and then let evidence, not anger, bring the wrongdoers to account."
 },
 "Q144":{
  "t": "MGNREGA: a predecessor's mismanaged programme",

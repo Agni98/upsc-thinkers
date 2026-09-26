@@ -2,7 +2,7 @@
    GS-IV — THE CONCEPTS THAT KEEP COMING BACK
    ---------------------------------------------------------------------
    For each syllabus heading, the ideas the paper has returned to across
-   2013-2025, ordered by how often. Each carries a plain definition built
+   2013-2026, ordered by how often. Each carries a plain definition built
    from open reference sources, and the questions that asked it.
 
    Question references were remapped when the compilation was replaced
@@ -358,7 +358,7 @@ const GS4_CONCEPTS = {
   ],
   "Aptitude & Foundational Values for Civil Service":[
     { t:"Integrity",
-      qs:["Q040", "Q046", "Q049", "Q050", "Q052", "Q054", "Q055"],
+      qs:["Q239", "Q040", "Q046", "Q049", "Q050", "Q052", "Q054", "Q055"],
       d:["**Integrity is the consistency between a person's stated values and their conduct, held steady across situations and maintained when nobody is checking.** The word comes from the same root as integer and integrated: something whole and undivided. A person of integrity is the same person in different rooms."],
       secs:[
         ["Integrity is wider than honesty", [
@@ -411,7 +411,7 @@ const GS4_CONCEPTS = {
       take:"**A public office is held on behalf of people who cannot supervise it.** The spirit of service is what makes that arrangement tolerable, because it is the only thing operating in the very large space that supervision does not reach.",
       src:"Spirit of service as listed in the 2013 and 2017 papers" },
     { t:"Impartiality, non-partisanship and objectivity",
-      qs:["Q043", "Q047"],
+      qs:["Q256", "Q043", "Q047"],
       d:["**Impartiality is deciding on relevant considerations alone, without favour to any person; non-partisanship is serving whichever government holds office without allegiance to its politics; objectivity is following the evidence to its conclusion regardless of where it leads.** The three are distinct and are usually failed one at a time."],
       secs:[
         ["How each one fails", [
@@ -496,7 +496,7 @@ const GS4_CONCEPTS = {
       take:"**Maturity is not the absence of strong feeling.** It is the gap a person can hold between feeling something and doing something about it. That gap is trainable, and it widens with use.",
       src:"Emotional maturity as treated in developmental and organisational psychology" },
     { t:"Emotional intelligence and the ethical decision",
-      qs:["Q056", "Q061"],
+      qs:["Q250", "Q056", "Q061"],
       d:["**Emotional intelligence does not tell you what is right. It helps you act on what you have already judged to be right.** Keeping these two apart is what makes an answer on this precise."],
       secs:[
         ["Reason decides; emotional intelligence carries it out", [
@@ -649,7 +649,7 @@ const GS4_CONCEPTS = {
       take:"**Where there is righteousness in the heart there is beauty in the character.** The order in that sequence is the argument: what a person is inwardly determines what they become outwardly, and not the reverse.",
       src:"Socrates in Plato's Apology; the righteousness sequence is from a quotation set in 2019" },
     { t:"How rightness is judged: consequences, duty and character",
-      qs:["Q088", "Q090"],
+      qs:["Q245", "Q088", "Q090"],
       d:["**Three positions answer the question of what makes an act right, and each locates rightness somewhere different.** The 2018 paper asked candidates to compare them directly."],
       secs:[
         ["Consequentialism: outcomes", [
@@ -724,6 +724,39 @@ const GS4_CONCEPTS = {
       ],
       take:"**Character decides what capability is used for, and capability decides how much that decision matters.**",
       src:"The hiring formulation is quoted in the 2018 paper" },
+    { t:"Trusteeship: wealth and power held in trust",
+      qs:["Q244"],
+      d:["**Trusteeship is Gandhi's idea that a person who holds wealth or power holds it on behalf of society, not as an owner.** The holder may keep what a reasonable life needs. The rest is to be used for the common good."],
+      secs:[
+        ["Gandhi's idea", ["Gandhi drew the idea from the opening verse of the Isha Upanishad, which asks a person to enjoy the world by renouncing it, and from the English law of trusts. A practical trusteeship formula was later drafted by his associates and revised by him. **The formula gives private ownership no standing except what society permits for its own welfare**, allows the state to regulate trusteeship by law, and proposes a minimum and a maximum income."]],
+        ["Public office as a trust", ["For an administrator the idea translates directly. **Public office is itself a trust.** The powers, funds and discretion of an office belong to the public, and the officer holds them on the public's behalf. The Supreme Court applied the public trust doctrine in M. C. Mehta v Kamal Nath in 1996: the state holds natural resources such as rivers, forests and the seashore in trust, and cannot hand them over for private use."]],
+        ["Fairness through trusteeship", ["Applied to governance, trusteeship means four things. **Allocate public resources by need, not by influence.** Treat discretion as a duty owed to the weakest, in the spirit of Gandhi's talisman. Avoid waste, since public money spent carelessly is a breach of trust. Give an account of how the trust was used, through transparency, social audit and reports on outcomes."]],
+        ["The limits of the idea", ["Critics, Ambedkar among them, doubted that owners would ever act as trustees of their own accord. **Trusteeship that depends only on the holder's conscience leaves the poor waiting on the virtue of the rich.** For this reason the formula itself allowed regulation by law. In administration the equivalent is that the officer's sense of trust is backed by rules, audit and accountability."]]
+      ],
+      take:"**Whatever you hold in office, you hold for others.** Use it for those who need it most, waste none of it, and account for all of it.",
+      src:"Gandhi's writings on trusteeship; the public trust doctrine in M. C. Mehta v Kamal Nath (1996); the question is from the 2026 paper" },
+    { t:"Civil disobedience in a constitutional democracy",
+      qs:["Q243"],
+      d:["**Civil disobedience is the open, non-violent breaking of a law in order to change a law or policy, by people willing to accept the penalty.** Civil disobedience differs from ordinary crime because it is public and conscientious, and from rebellion because it accepts the legal order as a whole."],
+      secs:[
+        ["Ambedkar's warning", ["In his last speech to the Constituent Assembly on 25 November 1949, Ambedkar said that where constitutional methods are open, there can be no justification for unconstitutional ones. **He called civil disobedience, non-cooperation and satyagraha the grammar of anarchy.** His reason was that a democracy gives its citizens votes, courts and a free press as lawful routes to change. Methods built to resist a colonial power weaken a people who now govern themselves."]],
+        ["The case for disobedience", ["Thoreau, Gandhi and Martin Luther King argued the other side. King's Letter from Birmingham Jail in 1963 held that **a person who breaks an unjust law must do so openly, lovingly and with a willingness to accept the penalty.** John Rawls defended civil disobedience in a nearly just society when lawful appeals have failed and a clear injustice remains. Majorities can be wrong, and lawful channels can be slow or closed to those with least power."]],
+        ["Tests of legitimate disobedience", ["The two views can be reconciled through tests. **Is the injustice serious and clear? Have lawful remedies been tried? Is the action non-violent, public and willing to accept the penalty? Does it appeal to principles the Constitution itself holds, such as equality and dignity?** Action that passes these tests is a claim on the conscience of the majority. Action that fails them, through violence, coercion of others or permanent obstruction, comes close to the anarchy Ambedkar feared."]],
+        ["How the state should respond", ["Article 19 protects peaceful assembly and speech, subject to reasonable restrictions. In Amit Sahni v Commissioner of Police in 2020, the Supreme Court held that protest is a right but that public roads cannot be occupied indefinitely. **The state should protect the right to protest, engage with the grievance, and enforce the law against violence without treating dissent itself as a threat.** Answering the substance of a genuine concern is the surest way to keep protest within constitutional bounds."]]
+      ],
+      take:"**Keep lawful channels open and responsive, so that disobedience is rarely needed.** Where it comes, judge it by its method and its grievance, not by its inconvenience.",
+      src:"Ambedkar's speech of 25 November 1949; King, Letter from Birmingham Jail (1963); Rawls, A Theory of Justice; the question is from the 2026 paper" },
+    { t:"Duty and charity",
+      qs:["Q251"],
+      d:["**A duty is what we owe, and we can be blamed for failing to do it. Charity is good done beyond what we owe, and we are praised for it but not blamed for withholding it.** The question is whether helping people in desperate need belongs to the first or the second."],
+      secs:[
+        ["Singer's argument", ["Peter Singer set out the argument in Famine, Affluence, and Morality in 1972. **If it is in our power to prevent something very bad without sacrificing anything of comparable moral importance, we ought to do it.** His example is a child drowning in a shallow pond. Anyone passing must wade in, even at the cost of muddy clothes. Distance, he argued, does not change the obligation, so giving to relieve famine is a duty and not a generous extra."]],
+        ["Duty and charity distinguished", ["The traditional view placed giving under charity: good to do, but not wrong to omit. Kant treated helping others as an imperfect duty. **We must help, but we may choose when, whom and how much.** Singer's claim moves the relief of severe, preventable suffering into strict duty, at least where the cost to us is small. Indian and other traditions hold a similar idea. Daan in the dharma texts and zakat in Islam are obligations on people with means, not only acts of kindness."]],
+        ["Why the claim is persuasive", ["The claim rests on two facts. **The suffering is severe and preventable, and the cost to the giver is small.** Where both hold, failing to act is hard to defend by any standard. Rawls's concern for the least advantaged, and the constitutional value of fraternity, point the same way."]],
+        ["Limits and objections", ["The objections deserve a hearing. A demand without limit could consume a person's whole life, and individual giving cannot replace just institutions. **The measured version of the claim survives both objections**: a duty to give some part of what one can spare, alongside a duty to support fair public systems. The question's own condition, giving without significantly affecting financial stability, is exactly this measured version."]]
+      ],
+      take:"**Where suffering is severe and your cost is small, helping is owed, not merely admired.** Charity begins where the duty ends.",
+      src:"Singer, Famine, Affluence, and Morality (1972); Kant on imperfect duties; the question is from the 2026 paper" },
   ],
   "Moral Thinkers & Philosophers of the World":[
     { t:"Forgiveness, anger and moral strength",
@@ -833,7 +866,7 @@ const GS4_CONCEPTS = {
       take:"**Where there is righteousness in the heart there is beauty in the character.** The order in that sequence is the argument: what a person is inwardly determines what they become outwardly, and not the reverse.",
       src:"Socrates in Plato's Apology; the righteousness sequence is from a quotation set in 2019" },
     { t:"How rightness is judged: consequences, duty and character",
-      qs:["Q088", "Q090"],
+      qs:["Q245", "Q088", "Q090"],
       d:["**Three positions answer the question of what makes an act right, and each locates rightness somewhere different.** The 2018 paper asked candidates to compare them directly."],
       secs:[
         ["Consequentialism: outcomes", [
@@ -908,10 +941,43 @@ const GS4_CONCEPTS = {
       ],
       take:"**Character decides what capability is used for, and capability decides how much that decision matters.**",
       src:"The hiring formulation is quoted in the 2018 paper" },
+    { t:"Trusteeship: wealth and power held in trust",
+      qs:["Q244"],
+      d:["**Trusteeship is Gandhi's idea that a person who holds wealth or power holds it on behalf of society, not as an owner.** The holder may keep what a reasonable life needs. The rest is to be used for the common good."],
+      secs:[
+        ["Gandhi's idea", ["Gandhi drew the idea from the opening verse of the Isha Upanishad, which asks a person to enjoy the world by renouncing it, and from the English law of trusts. A practical trusteeship formula was later drafted by his associates and revised by him. **The formula gives private ownership no standing except what society permits for its own welfare**, allows the state to regulate trusteeship by law, and proposes a minimum and a maximum income."]],
+        ["Public office as a trust", ["For an administrator the idea translates directly. **Public office is itself a trust.** The powers, funds and discretion of an office belong to the public, and the officer holds them on the public's behalf. The Supreme Court applied the public trust doctrine in M. C. Mehta v Kamal Nath in 1996: the state holds natural resources such as rivers, forests and the seashore in trust, and cannot hand them over for private use."]],
+        ["Fairness through trusteeship", ["Applied to governance, trusteeship means four things. **Allocate public resources by need, not by influence.** Treat discretion as a duty owed to the weakest, in the spirit of Gandhi's talisman. Avoid waste, since public money spent carelessly is a breach of trust. Give an account of how the trust was used, through transparency, social audit and reports on outcomes."]],
+        ["The limits of the idea", ["Critics, Ambedkar among them, doubted that owners would ever act as trustees of their own accord. **Trusteeship that depends only on the holder's conscience leaves the poor waiting on the virtue of the rich.** For this reason the formula itself allowed regulation by law. In administration the equivalent is that the officer's sense of trust is backed by rules, audit and accountability."]]
+      ],
+      take:"**Whatever you hold in office, you hold for others.** Use it for those who need it most, waste none of it, and account for all of it.",
+      src:"Gandhi's writings on trusteeship; the public trust doctrine in M. C. Mehta v Kamal Nath (1996); the question is from the 2026 paper" },
+    { t:"Civil disobedience in a constitutional democracy",
+      qs:["Q243"],
+      d:["**Civil disobedience is the open, non-violent breaking of a law in order to change a law or policy, by people willing to accept the penalty.** Civil disobedience differs from ordinary crime because it is public and conscientious, and from rebellion because it accepts the legal order as a whole."],
+      secs:[
+        ["Ambedkar's warning", ["In his last speech to the Constituent Assembly on 25 November 1949, Ambedkar said that where constitutional methods are open, there can be no justification for unconstitutional ones. **He called civil disobedience, non-cooperation and satyagraha the grammar of anarchy.** His reason was that a democracy gives its citizens votes, courts and a free press as lawful routes to change. Methods built to resist a colonial power weaken a people who now govern themselves."]],
+        ["The case for disobedience", ["Thoreau, Gandhi and Martin Luther King argued the other side. King's Letter from Birmingham Jail in 1963 held that **a person who breaks an unjust law must do so openly, lovingly and with a willingness to accept the penalty.** John Rawls defended civil disobedience in a nearly just society when lawful appeals have failed and a clear injustice remains. Majorities can be wrong, and lawful channels can be slow or closed to those with least power."]],
+        ["Tests of legitimate disobedience", ["The two views can be reconciled through tests. **Is the injustice serious and clear? Have lawful remedies been tried? Is the action non-violent, public and willing to accept the penalty? Does it appeal to principles the Constitution itself holds, such as equality and dignity?** Action that passes these tests is a claim on the conscience of the majority. Action that fails them, through violence, coercion of others or permanent obstruction, comes close to the anarchy Ambedkar feared."]],
+        ["How the state should respond", ["Article 19 protects peaceful assembly and speech, subject to reasonable restrictions. In Amit Sahni v Commissioner of Police in 2020, the Supreme Court held that protest is a right but that public roads cannot be occupied indefinitely. **The state should protect the right to protest, engage with the grievance, and enforce the law against violence without treating dissent itself as a threat.** Answering the substance of a genuine concern is the surest way to keep protest within constitutional bounds."]]
+      ],
+      take:"**Keep lawful channels open and responsive, so that disobedience is rarely needed.** Where it comes, judge it by its method and its grievance, not by its inconvenience.",
+      src:"Ambedkar's speech of 25 November 1949; King, Letter from Birmingham Jail (1963); Rawls, A Theory of Justice; the question is from the 2026 paper" },
+    { t:"Duty and charity",
+      qs:["Q251"],
+      d:["**A duty is what we owe, and we can be blamed for failing to do it. Charity is good done beyond what we owe, and we are praised for it but not blamed for withholding it.** The question is whether helping people in desperate need belongs to the first or the second."],
+      secs:[
+        ["Singer's argument", ["Peter Singer set out the argument in Famine, Affluence, and Morality in 1972. **If it is in our power to prevent something very bad without sacrificing anything of comparable moral importance, we ought to do it.** His example is a child drowning in a shallow pond. Anyone passing must wade in, even at the cost of muddy clothes. Distance, he argued, does not change the obligation, so giving to relieve famine is a duty and not a generous extra."]],
+        ["Duty and charity distinguished", ["The traditional view placed giving under charity: good to do, but not wrong to omit. Kant treated helping others as an imperfect duty. **We must help, but we may choose when, whom and how much.** Singer's claim moves the relief of severe, preventable suffering into strict duty, at least where the cost to us is small. Indian and other traditions hold a similar idea. Daan in the dharma texts and zakat in Islam are obligations on people with means, not only acts of kindness."]],
+        ["Why the claim is persuasive", ["The claim rests on two facts. **The suffering is severe and preventable, and the cost to the giver is small.** Where both hold, failing to act is hard to defend by any standard. Rawls's concern for the least advantaged, and the constitutional value of fraternity, point the same way."]],
+        ["Limits and objections", ["The objections deserve a hearing. A demand without limit could consume a person's whole life, and individual giving cannot replace just institutions. **The measured version of the claim survives both objections**: a duty to give some part of what one can spare, alongside a duty to support fair public systems. The question's own condition, giving without significantly affecting financial stability, is exactly this measured version."]]
+      ],
+      take:"**Where suffering is severe and your cost is small, helping is owed, not merely admired.** Charity begins where the duty ends.",
+      src:"Singer, Famine, Affluence, and Morality (1972); Kant on imperfect duties; the question is from the 2026 paper" },
   ],
   "Public / Civil Service Values & Ethics in Public Administration":[
     { t:"Police ethics: force, community and legitimacy",
-      qs:["Q113", "Q114", "Q166", "Q118", "Q119"],
+      qs:["Q242", "Q253", "Q113", "Q114", "Q166", "Q118", "Q119"],
       d:["**Policing is the one branch of administration authorised to use force against citizens, which is why its ethics turn on restraint rather than on effectiveness alone.** Five case studies in these papers put an officer between a lawful objective and a method that would damage the community it is meant to protect."],
       secs:[
         ["The shape of the recurring dilemma", [
@@ -926,7 +992,7 @@ const GS4_CONCEPTS = {
       take:"**A police force that is feared can compel; one that is trusted is told things.** The second is what actually prevents crime.",
       src:"Policing by consent as a standard principle; the cases are from the 2018 to 2024 papers" },
     { t:"Law, rules and ethics in administration",
-      qs:["Q102", "Q109", "Q110", "Q106"],
+      qs:["Q248", "Q102", "Q109", "Q110", "Q106"],
       d:["**Law is enacted by a legislature and enforceable by the state; rules are made under a law to work it in detail; ethics is the standard of right conduct that neither of them fully captures.** All three control behaviour, and they do it differently."],
       secs:[
         ["How law, rules and ethics each work", [
@@ -1011,7 +1077,7 @@ const GS4_CONCEPTS = {
       take:"**The role expected is not obedience and not independence but stewardship**: holding something on behalf of people who cannot supervise it, and treating the fact that they cannot check as a reason for greater care rather than less.",
       src:"Substance over form is the framing of the 2024 paper; the will-to-power quotation is from 2020" },
     { t:"Duty against personal obligation",
-      qs:["Q115"],
+      qs:["Q250", "Q115"],
       d:["**These cases set an official duty against a genuine private obligation, usually to family, and they are difficult because both claims are legitimate.** The candidate who witnesses an accident on the way to an interview, and the officer whose mother is critically ill as a border crisis begins, are the same problem at different scales."],
       secs:[
         ["Reject the either-or framing", [
@@ -1026,7 +1092,7 @@ const GS4_CONCEPTS = {
       take:"**Declare the conflict, seek the arrangement, and accept the cost of the choice you make.** The failure is not in choosing family; it is in choosing without telling anyone.",
       src:"The cases are from the 2017 and 2022 papers" },
     { t:"Constitutional morality",
-      qs:["Q045"],
+      qs:["Q243", "Q045"],
       d:["**Constitutional morality is the commitment to the principles and procedures of the Constitution, held even when they produce results one dislikes.** Ambedkar borrowed the phrase from George Grote and warned the Constituent Assembly that it was not a natural sentiment. It has to be cultivated."],
       secs:[
         ["A constitution is only a form", [
@@ -1056,7 +1122,7 @@ const GS4_CONCEPTS = {
       take:"**A system that only punishes measures itself by how many it convicts; one that seeks justice measures itself by how few return.**",
       src:"Theories of punishment as standardly set out; the framing is from the 2024 paper" },
     { t:"Substance over form",
-      qs:["Q100"],
+      qs:["Q248", "Q100"],
       d:["**Form is the procedure correctly followed; substance is the result the procedure was created to produce.** The 2024 paper asks civil servants to give importance to the second, which sounds obvious and is difficult in practice."],
       secs:[
         ["Why form wins: it can be measured", [
@@ -1070,6 +1136,17 @@ const GS4_CONCEPTS = {
       ],
       take:"**Ask what this rule was written to achieve, and whether what you are about to do achieves it.** If the answer is no, the compliance is real and the work is not done.",
       src:"The framing is from the 2024 paper" },
+    { t:"National security and human rights",
+      qs:["Q242"],
+      d:["**National security protects the state and its people from external and internal threats. Human rights protect individuals, including from the state itself.** The two conflict when security measures restrict liberty, privacy or due process."],
+      secs:[
+        ["Security protects rights too", ["The conflict is real but not total. **Security is itself a condition for rights.** A person living under terrorism or insurgency cannot enjoy the right to life, movement or livelihood. The state has a duty to protect, and a government that fails to prevent violence fails its citizens."]],
+        ["Where security threatens rights", ["Security powers are easily overused. Preventive detention, surveillance, internet shutdowns and special powers in disturbed areas can reach innocent people, fall hardest on minorities and outlast the threat. The Justice Jeevan Reddy Committee recommended in 2005 that the Armed Forces (Special Powers) Act be repealed. **Powers that cannot be questioned tend to be used more widely than their purpose.**"]],
+        ["The proportionality test", ["Indian courts have set the test. In Puttaswamy in 2017 and Anuradha Bhasin in 2020, the Supreme Court held that a restriction must have a basis in law, pursue a legitimate aim, be necessary and proportionate, and be open to review. **Legality, necessity, proportionality and oversight** turn a security measure from a use of power into a justified exception."]],
+        ["Balancing in practice", ["In practice the balance rests on safeguards: time limits and review for detentions, judicial approval for surveillance, published and reasoned orders, independent bodies such as the National Human Rights Commission, and accountability for excesses. **Community trust is also a security asset.** Measures that alienate a population weaken intelligence and cooperation, and so weaken security itself."]]
+      ],
+      take:"**Security and rights are both duties of the state.** Use the least restrictive measure that works, for the shortest time, under law and review.",
+      src:"Puttaswamy (2017) and Anuradha Bhasin (2020) on proportionality; the question is from the 2026 paper" },
   ],
   "Probity in Governance":[
     { t:"Probity in public life",
@@ -1103,7 +1180,7 @@ const GS4_CONCEPTS = {
       take:"**Disclosure is only as useful as the record it discloses.** An office that stops writing things down has defeated the Act while complying with it.",
       src:"Right to Information Act 2005; Official Secrets Act 1923 and Section 22" },
     { t:"Governance, good governance and ethical governance",
-      qs:["Q138", "Q127", "Q131", "Q124"],
+      qs:["Q247", "Q138", "Q127", "Q131", "Q124"],
       d:["**Governance is the exercise of authority to manage a country's affairs. Good governance adds standards of how that should be done. Ethical governance adds the question of the values it serves.** The three are nested, not alternatives."],
       secs:[
         ["Three different ideas", [
@@ -1133,7 +1210,7 @@ const GS4_CONCEPTS = {
       take:"**Conduct rules tell you what will get you punished. An ethics code tells you what the job is for.** An organisation that has only the first has told its staff the boundaries and not the purpose.",
       src:"Central Civil Services (Conduct) Rules 1964; Second ARC on a public service code" },
     { t:"Accountability in public service",
-      qs:["Q141", "Q136"],
+      qs:["Q239", "Q141", "Q136"],
       d:["**Accountability is the obligation to explain and justify one's conduct to someone with the standing to question it and the power to respond.** Three elements are needed. A standard to be measured against, a forum that can demand an answer, and a consequence that follows."],
       secs:[
         ["Standard, forum and consequence", [
@@ -1240,10 +1317,21 @@ const GS4_CONCEPTS = {
       ],
       take:"**Decide on a stated principle, publish the principle, and apply it consistently.** In a scarcity dispute the perception that allocation is arbitrary does more damage than the scarcity itself.",
       src:"The case is from the 2024 paper" },
+    { t:"Efficiency and effectiveness",
+      qs:["Q247"],
+      d:["**Efficiency is doing things right: producing an output with the least time, money and effort. Effectiveness is doing the right things: producing the outcome that actually matters.** The distinction is Peter Drucker's, from The Effective Executive (1967)."],
+      secs:[
+        ["Why the two pull apart", ["An office can dispose of files quickly and still decide them badly. A scheme can meet its spending targets and leave its beneficiaries no better off. **Efficiency without effectiveness rewards speed at the wrong task.** Effectiveness without efficiency reaches the right goal at a cost that leaves nothing for other goals."]],
+        ["Effectiveness first", ["The order matters. **First decide what outcome is wanted and for whom, then find the least costly way to reach it.** Improving a process whose purpose is wrong only produces the wrong result faster. The Outcome Budget, introduced in India in 2005, was an attempt to measure what spending achieves and not only what it buys."]],
+        ["Measures that do not mislead", ["Targets shape behaviour. Goodhart's law warns that **when a measure becomes a target, it ceases to be a good measure.** The number of vaccine doses given is easy to count, but the number of children actually protected is the measure that matters. A balanced system tracks both outputs and outcomes, and checks one against the other."]],
+        ["Productivity with people in mind", ["Productivity rises when the two are joined: clear goals, simple processes, delegation, technology where it helps, and training tied to the job. **Mission Karmayogi, launched in 2020, links civil servants' training to the roles they actually perform.** Efficiency that exhausts staff or shuts out the vulnerable is not productivity, because it undermines the outcome."]]
+      ],
+      take:"**Choose the right goal first, then pursue it with the least waste.** Judge success by outcomes, and use efficiency to serve them.",
+      src:"Drucker, The Effective Executive (1967); the question is from the 2026 paper" },
   ],
   "Corruption, Whistleblowing & Conflict of Interest":[
     { t:"Conflict of interest",
-      qs:["Q156", "Q157", "Q158", "Q168", "Q171", "Q174"],
+      qs:["Q250", "Q156", "Q157", "Q158", "Q168", "Q171", "Q174"],
       d:["**A conflict of interest exists when an official's private interest could improperly influence a duty they owe to the public.** The paper has asked about it eight times, more than any other idea in this theme, and twice set the same two cases in consecutive years."],
       secs:[
         ["A situation, not a behaviour", [
@@ -1289,7 +1377,7 @@ const GS4_CONCEPTS = {
       take:"**Reduce the opportunity, raise the certainty of detection, and remove the story people tell themselves.** The last is done by making conduct visible, because a practice is hardest to rationalise when it must be described aloud.",
       src:"The opportunity, incentive and rationalisation framing; the core-values question is from the 2023 paper" },
     { t:"Why anti-corruption measures fail",
-      qs:["Q159", "Q129"],
+      qs:["Q254", "Q159", "Q129"],
       d:["**India has codes of conduct, vigilance machinery, RTI, an active media and criminal law, and corruption persists.** The 2015 paper asks why. The answer is that most of these operate after the fact, and the ones that operate before it are weak."],
       secs:[
         ["Where each measure falls short", [
@@ -1488,7 +1576,7 @@ const GS4_CONCEPTS = {
   ],
   "Accountability & Ethical Governance":[
     { t:"National interest against ethical obligation",
-      qs:["Q196", "Q192", "Q195"],
+      qs:["Q249", "Q257", "Q196", "Q192", "Q195"],
       d:["**States are expected to pursue their own interest, and the question is whether anything constrains that pursuit.** The realist answer is that international relations is an arena of power where moral language is decoration. The papers ask whether that is the whole account."],
       secs:[
         ["The realist case", [
@@ -1501,9 +1589,9 @@ const GS4_CONCEPTS = {
           "The war questions bring specific criteria. Whether the cause is just, whether force is a last resort, whether it is authorised, whether the harm is proportionate to the objective, and whether civilians are distinguished from combatants. **These are old tests and they remain the ones most arguments turn on.**"]]
       ],
       take:"Strength, peace and security relate in a definite order. Strength without legitimacy produces fear and balancing behaviour by others. **Security bought by making neighbours insecure is temporary**, because it generates the coalition that ends it. Durable security rests on arrangements others also want to keep.",
-      src:"Just war criteria as standardly set out; the questions are from the 2015, 2017 and 2022 papers" },
+      src:"Just war criteria as standardly set out; the questions are from the 2015, 2017, 2022 and 2026 papers" },
     { t:"The arms trade",
-      qs:["Q191", "Q198"],
+      qs:["Q257", "Q191", "Q198"],
       d:["**The arms trade is lawful, large, and morally distinctive because the product's purpose is to cause harm.** The 2024 paper asks what ethical considerations should restrain powerful nations; the 2020 case puts an Indian manufacturer in the exporter's position."],
       secs:[
         ["The case for arms export", [
@@ -1516,7 +1604,7 @@ const GS4_CONCEPTS = {
           "The honest difficulty is that refusing a sale rarely prevents the buyer from arming. Another supplier fills the gap, and India forgoes both the revenue and the influence. **This is a real argument and it proves less than it seems**, since it would justify participation in anything, and the same reasoning is available to every supplier simultaneously."]]
       ],
       take:"**A state that profits from a conflict it says it wants ended has an interest working against its stated position.** Naming that conflict of interest is the beginning of a defensible policy.",
-      src:"Arms Trade Treaty principles on end use and diversion; the cases are from the 2020 and 2024 papers" },
+      src:"Arms Trade Treaty principles on end use and diversion; the cases are from the 2020, 2024 and 2026 papers" },
     { t:"Human rights of non-citizens",
       qs:["Q193"],
       d:["**The 2021 paper asks whether the democratic values of an elected government have primacy over the human rights of non-citizens.** The question sets popular mandate against a claim that does not depend on membership."],
@@ -1582,11 +1670,12 @@ const GS4_CONCEPTS = {
       ],
       src:"Information Technology Act 2000 provisions on electronic communication; the cases are from the 2020 and 2023 papers" },
     { t:"Medical ethics: autonomy, consent and triage",
-      qs:["Q206", "Q209"],
+      qs:["Q246", "Q252", "Q241", "Q206", "Q209"],
       d:["**Medical ethics rests on four principles: autonomy, beneficence, non-maleficence and justice.** Autonomy is the patient's right to decide about their own body. Beneficence is acting for their good. Non-maleficence is avoiding harm. Justice is fairness in distributing care."],
       secs:[
         ["When autonomy is uncomfortable", [
           "The papers set cases where these collide. A pregnant woman refuses to donate the only compatible blood, on religious grounds, while an injured man will die without it. **Autonomy answers this cleanly and uncomfortably: nobody may be compelled to give blood, whatever the consequence.** Bodily integrity is not overridden by another's need, and a doctor who took blood without consent would have committed an assault."]],
+        ["Beneficence against paternalism", ["Paternalism is overriding or steering a person's choice for their own good. **Beneficence asks a doctor to act for the patient's good, but it does not license overriding a competent adult's informed choice.** Giving the patient honest information and advice is legitimate. Pressing the family until the patient gives in, or treating her consent as a formality, is not. In Samira Kohli v Prabha Manchanda in 2008, the Supreme Court held that consent to a diagnostic procedure is not consent to remove an organ. Only an emergency that threatens life or health justifies acting without the patient's own consent."]],
         ["Persuasion, not coercion", [
           "That does not exhaust the doctor's options. Persuasion is legitimate where coercion is not. Explaining, asking again, involving someone she trusts, and searching harder for an alternative source are all permitted. **The line is between changing her mind and overriding it.**"]],
         ["Triage in a resource crisis", [
@@ -1595,9 +1684,9 @@ const GS4_CONCEPTS = {
           "Research ethics adds informed consent and data integrity. A trial expedited by manipulating data and shortening consent procedures endangers everyone who will later take the drug. **The people harmed are future patients who never knew a trial existed.**"]]
       ],
       take:"**Autonomy protects the patient from the doctor's judgement; justice protects other patients from the doctor's sympathy.** Both constrain a person trying to do good.",
-      src:"Beauchamp and Childress on the four principles; the cases are from the 2021, 2023 and 2024 papers" },
+      src:"Beauchamp and Childress on the four principles; the cases are from the 2021, 2023, 2024 and 2026 papers" },
     { t:"AI and algorithmic decision-making",
-      qs:["Q200", "Q202"],
+      qs:["Q239", "Q253", "Q200", "Q202"],
       d:["**The question is whether an algorithm can be a dependable input to administrative decisions.** The papers ask it twice, in 2021 about digital technology and in 2024 about artificial intelligence."],
       secs:[
         ["The case for algorithms", [
@@ -1612,7 +1701,7 @@ const GS4_CONCEPTS = {
       take:"**A system that is accurate on average will still be wrong about somebody, and that person is entitled to an answer from a human being.**",
       src:"Automation bias and algorithmic accountability as treated in the governance literature" },
     { t:"The digital divide and online delivery",
-      qs:["Q201", "Q128"],
+      qs:["Q255", "Q201", "Q128"],
       d:["**Moving a public service online changes who can reach it.** The 2022 paper asks about the ethical issues of online methods for vulnerable groups, and the same paper asks how far e-governance has actually helped beneficiaries."],
       secs:[
         ["The gains come first", [
@@ -1687,7 +1776,7 @@ const GS4_CONCEPTS = {
       take:"**A conflict of interest is resolved by removing yourself, not by resolving to be fair.** The second is unverifiable, which is precisely the problem.",
       src:"The case is from the 2024 paper" },
     { t:"Research integrity in drug trials",
-      qs:["Q204"],
+      qs:["Q241", "Q204"],
       d:["**A drug trial is the mechanism by which a society finds out whether a medicine works and whom it harms.** Manipulating its data does not merely break a rule; it destroys the only means of knowing."],
       secs:[
         ["Two different wrongs", [
@@ -1697,14 +1786,15 @@ const GS4_CONCEPTS = {
         ["Institutional safeguards", [
           "The safeguards are institutional rather than personal. Ethics committee approval before enrolment. Trial registration in advance, so that a study cannot be quietly abandoned when results disappoint. Independent monitoring. Publication of negative results. **Pre-registration matters more than it sounds, because selective publication makes a drug look better than the evidence supports.**"]],
         ["Options for the scientist", [
-          "For the scientist under pressure, the options are the usual ones and the stakes are higher than usual. Document the instruction. Escalate to the ethics committee, which exists precisely for this and is not part of the management chain. Refuse to sign. **Report to the regulator if the trial proceeds regardless.**"]]
+          "For the scientist under pressure, the options are the usual ones and the stakes are higher than usual. Document the instruction. Escalate to the ethics committee, which exists precisely for this and is not part of the management chain. Refuse to sign. **Report to the regulator if the trial proceeds regardless.**"]],
+        ["Untested remedies and vulnerable people", ["The 2026 paper asks whether a District Magistrate should give an endangered tribe a mineral supplement that a university study suggests, before any clinical trial. **Good intentions do not replace evidence.** An untested remedy can cause harm, and a small, vulnerable community has the least capacity to absorb harm or to refuse. The ethical course is to support a properly approved trial, with the community's free and informed consent and independent ethics review, and to keep providing medical care in the meantime."]]
       ],
       take:"**A falsified trial does not produce a bad drug; it produces a drug whose effects nobody knows.** That is the harm, and it is unbounded.",
       src:"New Drugs and Clinical Trials Rules 2019; informed consent as set out in ICMR guidelines" },
   ],
   "Environmental & Development Ethics":[
     { t:"Development against the environment",
-      qs:["Q227", "Q214", "Q219", "Q216", "Q224"],
+      qs:["Q240", "Q227", "Q214", "Q219", "Q216", "Q224"],
       d:["**Each of these questions sets a real gain against a real loss.** A dam brings power and irrigation. It also floods a valley. Housing for homeless families is a constitutional duty. The land offered for it is forest. The conflict is genuine. Answers that pick a side and call the other side greed are weak."],
       secs:[
         ["Sustainable development", [
@@ -1740,7 +1830,7 @@ const GS4_CONCEPTS = {
       take:"**CSR is a floor for what a company adds, and no substitute for what it must not do.** Judge a firm first on its core conduct, then on what it gives away.",
       src:"Companies Act 2013, section 135 and Schedule VII; Milton Friedman (1970) on business and profit; R. Edward Freeman on stakeholders" },
     { t:"Displacement, land and rehabilitation",
-      qs:["Q226", "Q216", "Q219"],
+      qs:["Q240", "Q226", "Q216", "Q219"],
       d:["**A large project needs land, and the land is almost always someone's home.** Mines, dams and industrial parks are built on ground held by Adivasis, hill communities and villagers, often without paper title. The 2016 case states the ethical core plainly. The benefits go to industry and to cities, and the costs go to the displaced."],
       secs:[
         ["A problem of distributive justice", [
@@ -2037,7 +2127,7 @@ const GS4_CONCEPTS = {
       links:[["Corruption, Whistleblowing & Conflict of Interest", "Whistleblowing"], ["Environmental & Development Ethics", "Speaking up about hidden harm"], ["Ethics in Science, Technology & Media", "Research integrity in drug trials"]],
       src:"Six cases, 2014 to 2024" },
     { t:"Enforcement against the people it lands on",
-      qs:["Q113", "Q221", "Q233", "Q118", "Q119", "Q223", "Q238"],
+      qs:["Q253", "Q113", "Q221", "Q233", "Q118", "Q119", "Q223", "Q238"],
       d:["**Doing your job by the book hurts people who are already poor.** The still, the mine, the small workshop is illegal. It is also what the village lives on."],
       dlab:"The situation",
       secs:[
@@ -2061,9 +2151,9 @@ const GS4_CONCEPTS = {
         sequence:["Map the problem: who profits, who protects, who works in it, who is harmed.", "Act first against the organisers, the money trail and colluding officials.", "Rescue and protect the most vulnerable: children, victims, addicts.", "Give notice and time to those who can comply, and enforce strictly after that.", "Bring in the alternative: jobs, schemes, credit, schooling, treatment.", "Work with the community, and check that the activity has really ended."],
         traps:["Suspending the law out of sympathy.", "Raids that only catch the poorest workers."] },
       links:[["Social Justice, Gender & the Weaker Sections", "Child labour and the family-enterprise loophole"], ["Environmental & Development Ethics", "Pollution against employment"], ["Environmental & Development Ethics", "Illegal extraction and the protected nexus"], ["Public / Civil Service Values & Ethics in Public Administration", "Police ethics: force, community and legitimacy"]],
-      src:"Seven cases, 2013 to 2024" },
+      src:"Eight cases, 2013 to 2026" },
     { t:"Profit against the cost nobody counted",
-      qs:["Q205", "Q180", "Q198", "Q222", "Q212"],
+      qs:["Q257", "Q205", "Q180", "Q198", "Q222", "Q212"],
       d:["**The gain is clear, near and measured. The harm is spread out, far away, or years off.** A plant, a data centre, a target met by cutting a corner."],
       dlab:"The situation",
       secs:[
@@ -2087,7 +2177,7 @@ const GS4_CONCEPTS = {
         sequence:["Find out the facts, and who is affected.", "Stop or reduce the harm at once where it is serious.", "Tell the regulator and those affected honestly.", "Compensate those already harmed.", "Change the process or the product for good.", "Report publicly on progress, so the change can be checked."],
         traps:["The false choice between jobs and safety.", "Using CSR spending to cover a harm the business itself causes."] },
       links:[["Corporate Governance & Workplace Ethics", "Business under pressure: ends and means"], ["Ethics in Science, Technology & Media", "Corporate responsibility for product safety"], ["Environmental & Development Ethics", "Corporate social responsibility"], ["Ethics in Science, Technology & Media", "Access to medicine and the unprofitable cure"]],
-      src:"Five cases, 2015 to 2024" },
+      src:"Six cases, 2015 to 2026" },
     { t:"Few resources, many claimants",
       qs:["Q146", "Q209", "Q120"],
       d:["**There is not enough, and you must decide who gets it first.** Beds, boats, relief, money, or your own time."],
@@ -2141,7 +2231,7 @@ const GS4_CONCEPTS = {
       links:[["Corruption, Whistleblowing & Conflict of Interest", "Conflict of interest"], ["Corruption, Whistleblowing & Conflict of Interest", "Insider information and its misuse"], ["Ethics in Science, Technology & Media", "Conflict of interest in procurement"], ["Probity in Governance", "RTI, transparency and its misuse"]],
       src:"Four cases, 2013 to 2025" },
     { t:"The rule against the deserving case",
-      qs:["Q232", "Q053", "Q210", "Q184"],
+      qs:["Q255", "Q232", "Q053", "Q210", "Q184"],
       d:["**The rule gives a hard answer to someone who clearly deserves better.** A widow, a displaced family, a man at fault who is still suffering."],
       dlab:"The situation",
       secs:[
@@ -2166,7 +2256,7 @@ const GS4_CONCEPTS = {
         sequence:["Read the rule and its purpose in full, and check what discretion it gives.", "Separate what the law requires from what is only policy or practice.", "Apply the rule honestly and explain the decision.", "Use every other lawful route to help: schemes, funds, statutory dues, voluntary bodies.", "Record the reasons, so the next case is decided the same way.", "Recommend a reform if the rule produces an unjust result."],
         traps:["A cold refusal and an unexplained favour are failures of the same job."] },
       links:[["Public / Civil Service Values & Ethics in Public Administration", "Substance over form"], ["Social Justice, Gender & the Weaker Sections", "Compassion when the claimant is at fault"], ["Public / Civil Service Values & Ethics in Public Administration", "Law, rules and ethics in administration"]],
-      src:"Four cases, 2017 to 2022" },
+      src:"Five cases, 2017 to 2026" },
     { t:"Equal treatment against local custom",
       qs:["Q235", "Q236"],
       d:["**The community wants you to treat some people as lesser.** Caste at a school meal. Girls kept out of the classroom."],
@@ -2247,7 +2337,7 @@ const GS4_CONCEPTS = {
       links:[["Aptitude & Foundational Values for Civil Service", "Courage of conviction"], ["Corruption, Whistleblowing & Conflict of Interest", "Bribery in business, and the third way"], ["Corporate Governance & Workplace Ethics", "Coercion against undue influence"], ["Aptitude & Foundational Values for Civil Service", "Trustworthiness, fortitude and perseverance"]],
       src:"Seven cases, 2013 to 2022" },
     { t:"The crisis that will not wait",
-      qs:["Q197", "Q114", "Q206", "Q234", "Q116"],
+      qs:["Q252", "Q256", "Q197", "Q114", "Q206", "Q234", "Q116"],
       d:["**People's lives depend on what you decide in the next hour.** There is no time for the file, and often no way to reach your superiors."],
       dlab:"The situation",
       secs:[
@@ -2271,7 +2361,7 @@ const GS4_CONCEPTS = {
         sequence:["Stabilise: medical help for the injured, safety for the team.", "Assess the situation and set priorities by need.", "Act with the powers you have, and the least force needed.", "Keep trying to reach your superiors, and act on your own authority until you do.", "Speak honestly to the people affected.", "Record every decision and its reason, and review it afterwards."],
         traps:["Treating the lack of orders as a reason to do nothing.", "Treating the emergency as a licence to ignore the law."] },
       links:[["Public / Civil Service Values & Ethics in Public Administration", "Crisis, triage and prioritising in a disaster"], ["Emotional Intelligence", "Emotional intelligence and the ethical decision"], ["Accountability & Ethical Governance", "Human rights of non-citizens"], ["Public / Civil Service Values & Ethics in Public Administration", "Police ethics: force, community and legitimacy"]],
-      src:"Five cases, 2019 to 2025" },
+      src:"Seven cases, 2019 to 2026" },
     { t:"The job against the rest of your life",
       qs:["Q112", "Q177", "Q207", "Q181"],
       d:["**The job asks for more than you can give without harm at home.** A death in the family during a disaster. Small children who need you. A boss who makes every day a strain. A private matter that goes viral."],
@@ -2325,7 +2415,7 @@ const GS4_CONCEPTS = {
       links:[["Corporate Governance & Workplace Ethics", "Sexual harassment at work"], ["Corporate Governance & Workplace Ethics", "Workplace bullying and belittlement"], ["Corporate Governance & Workplace Ethics", "Moral integrity and professional efficiency"]],
       src:"Three cases, 2013 to 2023" },
     { t:"Fixing the system, not just the case",
-      qs:["Q144", "Q148", "Q054", "Q149", "Q211", "Q150", "Q170", "Q055"],
+      qs:["Q254", "Q144", "Q148", "Q054", "Q149", "Q211", "Q150", "Q170", "Q055"],
       d:["**The problem is bigger than one person.** A programme that leaks money. A file with a vested interest buried in it. Rules that punish the honest and help the dishonest."],
       dlab:"The situation",
       secs:[
@@ -2349,7 +2439,7 @@ const GS4_CONCEPTS = {
         sequence:["Establish the facts and the scale of the problem.", "Stop the immediate loss or harm.", "Fix responsibility through due process, with recovery and prosecution where the law requires.", "Redesign the process: simpler rules, time limits, digital records, audits.", "Put information in the public domain and involve citizens.", "Protect honest officers who decide in good faith."],
         traps:["Treating an inherited mess as \"not my problem\"."] },
       links:[["Probity in Governance", "Accountability in public service"], ["Probity in Governance", "Protecting the honest decision-maker"], ["Corruption, Whistleblowing & Conflict of Interest", "Why anti-corruption measures fail"], ["Corruption, Whistleblowing & Conflict of Interest", "Vested interests behind an ordinary file"], ["Aptitude & Foundational Values for Civil Service", "The four standard objections to ethical conduct"]],
-      src:"Eight cases, 2014 to 2025" },
+      src:"Nine cases, 2014 to 2026" },
     { t:"Development against the people who pay for it",
       qs:["Q219", "Q224", "Q226", "Q227", "Q237"],
       d:["**A project or a policy will make most people better off, but a few will pay for it.** Forest dwellers, displaced farmers, a quiet town, the rural young."],

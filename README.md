@@ -74,7 +74,7 @@ screen the contents live in the drawer, opened from **Contents** at the top of t
 Its first page has the home page's header band, with shortcuts to the concept notes, past
 questions and case studies. Below that come:
 - **Where the paper asks most**: a stacked bar per heading of theory and case-study questions,
-  2013 to 2025, sorted by total, with a tooltip and a table view. The two moral-thinkers headings
+  2013 to 2026, sorted by total, with a tooltip and a table view. The two moral-thinkers headings
   share one pool and appear once. The Case Studies heading is left out, since its cases are
   already counted under the heading each tests.
 - a card per heading: its syllabus line, counts, most asked concepts and reading progress
@@ -97,8 +97,8 @@ Below the band:
 The menus, the sidebar and every "case studies" link lead to this page. The cards and rows open
 the answers, which are read in the syllabus map.
 
-The Case Studies heading of the syllabus map is where every Section B case lives: all 75, from
-2013 to 2025, each with a model answer. It holds three things.
+The Case Studies heading of the syllabus map is where every Section B case lives: all 81, from
+2013 to 2026, each with a model answer. It holds three things.
 
 **How to answer one: the five boxes.** The method comes from the supplied answer framework.
 It runs: case, ethical conflict, governing principles, options, eliminate the defective ones,
@@ -124,7 +124,7 @@ links to the concept notes to reason with, and lists its cases, newest first.
 set, then the five boxes, then any part of the question the boxes do not already answer (the
 laws asked for, the training suggested, the policy measures), and a model conclusion. Five of
 the answers (Rajesh, Subash, Sunil, the Municipal Commissioner, the Executive Engineer) are the
-supplied model answers. The other seventy follow them.
+supplied model answers. The other seventy-six follow them.
 
 Every case is an item in the heading's contents tree, under its theme, so read ticks and
 previous and next work as they do elsewhere. Wherever a case appears (the GS-IV questions page,
@@ -133,6 +133,15 @@ a heading's question list, a concept note, the site search), it links to its ans
 The data: `cases.js` holds the method (`CASE_METHOD`) and the answers (`CASE_ANSWERS`, keyed by
 question id). The themes are the Case Studies entries in `gs4concepts.js`, with their `core`,
 `engine`, `arch` and `links`.
+
+**The 2026 paper** was added from the paper as supplied: thirteen theory questions (Q239 to Q251)
+and six cases (Q252 to Q257), each case with a model answer. The supplied paper carries no
+syllabus headings, so the 2026 questions' headings and themes were assigned from what each
+question asks. Five concept notes were added for ideas the paper raised and the site lacked:
+trusteeship, civil disobedience in a constitutional democracy, and duty and charity (under both
+moral-thinkers headings), efficiency and effectiveness (Probity in Governance), and national
+security and human rights (Public / Civil Service Values). The medical-ethics note gained a
+section on paternalism, and the drug-trials note one on untested remedies.
 
 ### The Essay Theme Map
 
@@ -472,7 +481,7 @@ essays.js     19 model essays, two per theme, partitioned across the past questi
 pyq.js        nine years of past essay questions, classified by theme
 portraits.js  pre-resolved portrait URLs (verified to load)
 atlas.js      the Human Thought Atlas: stories, thought experiments and models
-gs4pyq.js     238 GS-IV questions, 2013 to 2025, 75 of them case studies
+gs4pyq.js     257 GS-IV questions, 2013 to 2026, 81 of them case studies
 gs4concepts.js the GS-IV concept notes, and the 16 case-study themes
 cases.js      the case-study method and a model answer for every case
 app.js        rendering, search, syllabus maps

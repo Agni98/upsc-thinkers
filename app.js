@@ -2179,7 +2179,7 @@ function caseAnswerPane(id){
 
 /* ---- The Case Studies front page ----
    The other pages' look: a header band with Carracci's Choice of Hercules
-   (1596, public domain), the five boxes, then the cases arranged by theme, each
+   (1596, public domain), then the cases arranged by theme, each
    theme a card with the years its cases were set, or paper by paper. Every card
    and row opens in the syllabus map, where the answers are read. */
 function caseCardHTML(c, i, years, cs){
@@ -2779,10 +2779,6 @@ function questionPane(title){
       <div class="ans-head"><b>Past questions</b>
         <span>${qs.length} from ${span} &middot; ${a.length} theory${
           b.length ? ", " + b.length + " case " + (b.length === 1 ? "study" : "studies") : ""}</span></div>
-      ${title.indexOf("Moral Thinkers") === 0
-        ? `<p class="g4-note">The paper sets one theme for moral thinkers, so this pool is shared with the other moral-thinkers heading.</p>` : ""}
-      ${title === "Case Studies"
-        ? `<p class="g4-note">Every Section B case from 2013 to 2025, gathered from all themes.</p>` : ""}
       ${a.length ? `<h6>Section A &middot; theory</h6><ul>${gs4Rows(a)}</ul>` : ""}
       ${b.length ? `<h6>Section B &middot; case studies</h6><ul>${gs4Rows(b)}</ul>` : ""}
     </div>`;
