@@ -1050,76 +1050,6 @@ const CASE_ANSWERS = {
  ],
  "close": "Rameshwar should neither shut his eyes nor walk out. He should keep his own conduct clean, fix what lies within his power, and take documented evidence to the vigilance machinery through protected channels."
 },
-"Q253":{
- "t": "Ravi: predictive policing and a neighbourhood under watch",
- "brief": "Ravi, Superintendent of Police in a riot-prone district, introduced an AI system that captures biometric data from crowds and predicts crime. The system has flagged an immigrant, low-income neighbourhood. Patrols, preventive detentions and checkpoints focused there have improved public order. Community leaders and rights activists say the system learns from biased historical data, that the surveillance has created fear, and that residents do not know what data is held against their names.",
- "conflict": [
-  "Public order and crime prevention against privacy and equal treatment.",
-  "The speed of data-driven policing against the bias built into its data.",
-  "Secrecy for operational reasons against openness to the people affected.",
-  "Results now against lasting trust between the police and the community."
- ],
- "stake": [
-  "Residents of the flagged neighbourhood",
-  "Victims of crime and the wider public",
-  "Police officers on the ground",
-  "Community leaders and rights activists",
-  "The company that supplied the system",
-  "Courts and oversight bodies"
- ],
- "options": [
-  [
-   "Continue as before",
-   "Keeps the visible gains in public order.",
-   "Entrenches bias, deepens fear, and risks unlawful detentions and legal challenge."
-  ],
-  [
-   "Switch the system off",
-   "Removes the harm at once.",
-   "Loses a useful tool, and the gains may be reversed."
-  ],
-  [
-   "Pause the targeting, audit the system, and resume only with safeguards",
-   "Keeps what works and corrects what does not.",
-   "Takes time and effort, and needs support from above."
-  ]
- ],
- "criteria": [
-  "Policing must be lawful, fair and accountable. The Puttaswamy judgment of 2017 requires any intrusion on privacy to have a basis in law and to be necessary and proportionate. **Capturing biometric data from crowds without a clear law fails the first test.** A system trained on past arrests learns where police patrolled, not only where crime happened, so it sends police back to the same people. Detentions and checkpoints based on a machine's label, without suspicion of an individual, treat a whole neighbourhood as suspect."
- ],
- "sequence": [
-  "Stop preventive detentions and checkpoints based only on the system's output, and require evidence against an individual.",
-  "Commission an independent audit of the data and the model for bias, with outside experts and community observers.",
-  "Check the legal basis for biometric capture, and limit collection to what the law allows.",
-  "Tell residents what data is held, how it is used, and how to correct it or complain.",
-  "Keep a named officer answerable for every decision the system informs.",
-  "Build community policing: meet residents, appoint local liaison volunteers, and tackle drug trafficking with their help.",
-  "Report the findings to superiors, and publish a summary."
- ],
- "also": [
-  [
-   "(a) Ethical issues, including biases, in AI-driven policing",
-   [
-    [
-     "Historical bias: the data reflects past policing, not only crime.",
-     "Feedback loops: more patrols record more crime in the same area, which brings more patrols.",
-     "Profiling of immigrants and the poor, against equality before the law under Article 14.",
-     "Privacy and consent in capturing biometric data.",
-     "Opacity: residents cannot see or contest the data held on them.",
-     "Automation bias: officers trusting the output without their own judgment.",
-     "Accountability: nobody answers for a wrong label."
-    ]
-   ]
-  ],
-  [
-   "(b) The action that best complies with ethics",
-   [
-    "The third option. The option keeps the legitimate aim of preventing crime, removes the unlawful and unfair uses, and rebuilds trust. **Technology should inform police judgment, not replace it.**"
-   ]
-  ]
- ],
- "close": "Order that rests on suspicion of a whole neighbourhood does not last. Ravi should keep the tool, correct its bias, put the law and a named officer in charge of every decision it informs, and earn the neighbourhood's trust."
-},
 "Q113":{
  "t": "Raman: a terror group recruiting unemployed youth online",
  "brief": "As Director General of Police, Raman learns that a new global terrorist group is recruiting unemployed graduates in his state, especially from one community, through social media. Many young people spend six to eight hours a day online, endorse the group's messages and forward secessionist posts.",
@@ -3399,75 +3329,6 @@ const CASE_ANSWERS = {
  ],
  "close": "The head of the institute should keep the selection on merit and the funding on its merits, and should record and report the attempt to link the two."
 },
-"Q252":{
- "t": "Lata: a hysterectomy without her consent",
- "brief": "Lata consented to a diagnostic laparoscopy for acute abdominal pain. During the procedure, Dr. Mansi found a tumour in her uterus that could be malignant. Instead of taking a biopsy, she removed the uterus on the written consent of Lata's sister-in-law, Sujatha, to spare Lata a second operation. Lata feels betrayed. The police and Sujatha defend the doctor's good intention, and Lata has decided to go to court.",
- "conflict": [
-  "The patient's control over her own body against the doctor's judgment of her good.",
-  "Sparing a second operation against waiting for the patient's own decision.",
-  "A relative's consent against the patient's consent.",
-  "Good intention against the rules of informed consent.",
-  "Support for the doctor from the police and family against the patient's right to seek redress."
- ],
- "stake": [
-  "Lata, and her ability to decide about her own body",
-  "Dr. Mansi and her surgical team",
-  "Sujatha and Lata's family",
-  "The hospital",
-  "The police and the court",
-  "The medical profession and future patients"
- ],
- "options": [
-  [
-   "Remove the uterus on the relative's consent, as was done",
-   "Spares Lata a second operation if the tumour is malignant.",
-   "Removes an organ, and her ability to bear children, without her consent. The operation may prove unnecessary if the tumour is benign."
-  ],
-  [
-   "Take a biopsy, close, and let Lata decide once she is awake",
-   "Respects her consent, and the decision rests on a confirmed diagnosis.",
-   "She may need a second operation if the tumour is malignant."
-  ],
-  [
-   "Remove the uterus only if waiting would put her life in immediate danger",
-   "Acts only in a genuine emergency.",
-   "Needs a clear clinical judgment, recorded with reasons."
-  ]
- ],
- "criteria": [
-  "A competent adult must consent to each major procedure. **Consent to a diagnostic laparoscopy is not consent to a hysterectomy.** The Supreme Court said so in Samira Kohli v Prabha Manchanda in 2008. A relative may decide only when the patient cannot, and when delay would threaten life or cause serious harm. Here there was no emergency, and Lata could have decided the next day. The cost of a second operation was real, but it was Lata's cost to weigh, not the doctor's or Sujatha's."
- ],
- "sequence": [
-  "In the theatre: take a biopsy, record the finding, and close.",
-  "After recovery: explain the findings, the options and their risks to Lata herself, and give her time to decide.",
-  "Before any procedure: discuss findings that could arise, and record what the patient agrees to if they do.",
-  "Now: acknowledge the error honestly, apologise, and support Lata's treatment and counselling.",
-  "The hospital: review its consent procedures, and train staff on the limits of consent by a relative.",
-  "The police: record the complaint and leave the judgment to the court, instead of pressing Lata to drop it."
- ],
- "also": [
-  [
-   "(a) The ethical issues",
-   [
-    [
-     "Informed consent and the right to decide about one's own body.",
-     "Paternalism: the doctor put her judgment in place of the patient's.",
-     "Consent by a relative, used when the patient could have decided later.",
-     "The loss of the ability to bear children, a harm that cannot be undone.",
-     "Gender: a decision about a woman's body taken by others.",
-     "The police discouraging a complaint instead of recording it."
-    ]
-   ]
-  ],
-  [
-   "(b) The doctor's moral conduct",
-   [
-    "Dr. Mansi meant well. She wanted to spare Lata the risk and pain of another operation. **Good intention does not make the act right.** She acted without a genuine emergency, relied on a relative instead of the patient, and removed an organ on a diagnosis that was not yet confirmed. Her motive was beneficent, but her method was paternalistic, and it failed the duty to respect the patient's choice. Her responsibility now is to own the decision, not to defend it."
-   ]
-  ]
- ],
- "close": "A doctor's skill gives her the power to decide, but not the right to decide for a patient who can decide for herself. Except in a real emergency, the choice about Lata's body was Lata's."
-},
 "Q256":{
  "t": "Rajan: order between two communities",
  "brief": "Rajapuram, a border district, has seen violent ethnic conflict between the Jhara and Biru communities over land, resources and political representation. Many people have died, the communities live in separate relief camps, and the highway is blocked. The local administration and police are divided along community lines, both communities distrust the government, and a neighbouring country may exploit the unrest. Rajan, the new District Magistrate, must restore authority, reopen the highway and start peace talks.",
@@ -4441,6 +4302,76 @@ const CASE_ANSWERS = {
  ],
  "close": "A bribery network lives on delay and discretion. Seema should take both away with a transparent, time-bound process, and then let evidence, not anger, bring the wrongdoers to account."
 },
+"Q253":{
+ "t": "Ravi: predictive policing and a neighbourhood under watch",
+ "brief": "Ravi, Superintendent of Police in a riot-prone district, introduced an AI system that captures biometric data from crowds and predicts crime. The system has flagged an immigrant, low-income neighbourhood. Patrols, preventive detentions and checkpoints focused there have improved public order. Community leaders and rights activists say the system learns from biased historical data, that the surveillance has created fear, and that residents do not know what data is held against their names.",
+ "conflict": [
+  "Public order and crime prevention against privacy and equal treatment.",
+  "The speed of data-driven policing against the bias built into its data.",
+  "Secrecy for operational reasons against openness to the people affected.",
+  "Results now against lasting trust between the police and the community."
+ ],
+ "stake": [
+  "Residents of the flagged neighbourhood",
+  "Victims of crime and the wider public",
+  "Police officers on the ground",
+  "Community leaders and rights activists",
+  "The company that supplied the system",
+  "Courts and oversight bodies"
+ ],
+ "options": [
+  [
+   "Continue as before",
+   "Keeps the visible gains in public order.",
+   "Entrenches bias, deepens fear, and risks unlawful detentions and legal challenge."
+  ],
+  [
+   "Switch the system off",
+   "Removes the harm at once.",
+   "Loses a useful tool, and the gains may be reversed."
+  ],
+  [
+   "Pause the targeting, audit the system, and resume only with safeguards",
+   "Keeps what works and corrects what does not.",
+   "Takes time and effort, and needs support from above."
+  ]
+ ],
+ "criteria": [
+  "Policing must be lawful, fair and accountable. The Puttaswamy judgment of 2017 requires any intrusion on privacy to have a basis in law and to be necessary and proportionate. **Capturing biometric data from crowds without a clear law fails the first test.** A system trained on past arrests learns where police patrolled, not only where crime happened, so it sends police back to the same people. Detentions and checkpoints based on a machine's label, without suspicion of an individual, treat a whole neighbourhood as suspect."
+ ],
+ "sequence": [
+  "Stop preventive detentions and checkpoints based only on the system's output, and require evidence against an individual.",
+  "Commission an independent audit of the data and the model for bias, with outside experts and community observers.",
+  "Check the legal basis for biometric capture, and limit collection to what the law allows.",
+  "Tell residents what data is held, how it is used, and how to correct it or complain.",
+  "Keep a named officer answerable for every decision the system informs.",
+  "Build community policing: meet residents, appoint local liaison volunteers, and tackle drug trafficking with their help.",
+  "Report the findings to superiors, and publish a summary."
+ ],
+ "also": [
+  [
+   "(a) Ethical issues, including biases, in AI-driven policing",
+   [
+    [
+     "Historical bias: the data reflects past policing, not only crime.",
+     "Feedback loops: more patrols record more crime in the same area, which brings more patrols.",
+     "Profiling of immigrants and the poor, against equality before the law under Article 14.",
+     "Privacy and consent in capturing biometric data.",
+     "Opacity: residents cannot see or contest the data held on them.",
+     "Automation bias: officers trusting the output without their own judgment.",
+     "Accountability: nobody answers for a wrong label."
+    ]
+   ]
+  ],
+  [
+   "(b) The action that best complies with ethics",
+   [
+    "The third option. The option keeps the legitimate aim of preventing crime, removes the unlawful and unfair uses, and rebuilds trust. **Technology should inform police judgment, not replace it.**"
+   ]
+  ]
+ ],
+ "close": "Order that rests on suspicion of a whole neighbourhood does not last. Ravi should keep the tool, correct its bias, put the law and a named officer in charge of every decision it informs, and earn the neighbourhood's trust."
+},
 "Q144":{
  "t": "MGNREGA: a predecessor's mismanaged programme",
  "brief": "As Administrator in charge of a district, you monitor MGNREGA works by gram panchayats and give technical sanction to them. In one panchayat you find that under your predecessor wages did not reach real job-seekers, muster rolls were not kept, payments did not match work, fictitious people were paid, job cards were issued without need, funds were siphoned off, and approved works never existed.",
@@ -5191,5 +5122,74 @@ const CASE_ANSWERS = {
   ]
  ],
  "close": "Migration cannot and should not be stopped, but distress migration can be reduced. Rural jobs, viable farming and good services make villages worth staying in; fair treatment in cities makes migration safe for those who choose it."
+},
+"Q252":{
+ "t": "Lata: a hysterectomy without her consent",
+ "brief": "Lata consented to a diagnostic laparoscopy for acute abdominal pain. During the procedure, Dr. Mansi found a tumour in her uterus that could be malignant. Instead of taking a biopsy, she removed the uterus on the written consent of Lata's sister-in-law, Sujatha, to spare Lata a second operation. Lata feels betrayed. The police and Sujatha defend the doctor's good intention, and Lata has decided to go to court.",
+ "conflict": [
+  "The patient's control over her own body against the doctor's judgment of her good.",
+  "Sparing a second operation against waiting for the patient's own decision.",
+  "A relative's consent against the patient's consent.",
+  "Good intention against the rules of informed consent.",
+  "Support for the doctor from the police and family against the patient's right to seek redress."
+ ],
+ "stake": [
+  "Lata, and her ability to decide about her own body",
+  "Dr. Mansi and her surgical team",
+  "Sujatha and Lata's family",
+  "The hospital",
+  "The police and the court",
+  "The medical profession and future patients"
+ ],
+ "options": [
+  [
+   "Remove the uterus on the relative's consent, as was done",
+   "Spares Lata a second operation if the tumour is malignant.",
+   "Removes an organ, and her ability to bear children, without her consent. The operation may prove unnecessary if the tumour is benign."
+  ],
+  [
+   "Take a biopsy, close, and let Lata decide once she is awake",
+   "Respects her consent, and the decision rests on a confirmed diagnosis.",
+   "She may need a second operation if the tumour is malignant."
+  ],
+  [
+   "Remove the uterus only if waiting would put her life in immediate danger",
+   "Acts only in a genuine emergency.",
+   "Needs a clear clinical judgment, recorded with reasons."
+  ]
+ ],
+ "criteria": [
+  "A competent adult must consent to each major procedure. **Consent to a diagnostic laparoscopy is not consent to a hysterectomy.** The Supreme Court said so in Samira Kohli v Prabha Manchanda in 2008. A relative may decide only when the patient cannot, and when delay would threaten life or cause serious harm. Here there was no emergency, and Lata could have decided the next day. The cost of a second operation was real, but it was Lata's cost to weigh, not the doctor's or Sujatha's."
+ ],
+ "sequence": [
+  "In the theatre: take a biopsy, record the finding, and close.",
+  "After recovery: explain the findings, the options and their risks to Lata herself, and give her time to decide.",
+  "Before any procedure: discuss findings that could arise, and record what the patient agrees to if they do.",
+  "Now: acknowledge the error honestly, apologise, and support Lata's treatment and counselling.",
+  "The hospital: review its consent procedures, and train staff on the limits of consent by a relative.",
+  "The police: record the complaint and leave the judgment to the court, instead of pressing Lata to drop it."
+ ],
+ "also": [
+  [
+   "(a) The ethical issues",
+   [
+    [
+     "Informed consent and the right to decide about one's own body.",
+     "Paternalism: the doctor put her judgment in place of the patient's.",
+     "Consent by a relative, used when the patient could have decided later.",
+     "The loss of the ability to bear children, a harm that cannot be undone.",
+     "Gender: a decision about a woman's body taken by others.",
+     "The police discouraging a complaint instead of recording it."
+    ]
+   ]
+  ],
+  [
+   "(b) The doctor's moral conduct",
+   [
+    "Dr. Mansi meant well. She wanted to spare Lata the risk and pain of another operation. **Good intention does not make the act right.** She acted without a genuine emergency, relied on a relative instead of the patient, and removed an organ on a diagnosis that was not yet confirmed. Her motive was beneficent, but her method was paternalistic, and it failed the duty to respect the patient's choice. Her responsibility now is to own the decision, not to defend it."
+   ]
+  ]
+ ],
+ "close": "A doctor's skill gives her the power to decide, but not the right to decide for a patient who can decide for herself. Except in a real emergency, the choice about Lata's body was Lata's."
 }
 };

@@ -89,7 +89,7 @@ Case studies have a front page of their own, in the same style as the other page
 band shows Annibale Carracci's *The Choice of Hercules* (1596, public domain): Hercules at the
 crossroads between Virtue and Vice. The first number in the band opens the full five-box method.
 Below the band:
-- a switch between two arrangements. **By theme** shows sixteen cards. Each gives the theme's
+- a switch between two arrangements. **By theme** shows seventeen cards. Each gives the theme's
   core conflict, its answer engine, a strip of the years its cases were set, the latest case and
   your progress. **By year** lists every paper's cases, newest first, so a whole paper can be
   practised at once.
@@ -112,10 +112,12 @@ a defensible course of action. Every answer uses the same five boxes:
 The method page adds the six tests, a stakeholder checklist, the weak and strong versions of a
 conflict and of a sequence, the rules the answers follow, and what the cases teach.
 
-**Sixteen themes, each with a common architecture.** The first ten are the answer engines in the
-framework; six more cover the cases those ten do not: threats and inducements, crises that will
-not wait, the job against the rest of your life, dignity at work, fixing the system, and
-development against the people who pay for it. Each theme has a core conflict and an engine
+**Seventeen themes, each with a common architecture.** The first ten are the answer engines in the
+framework; seven more cover the cases those ten do not: threats and inducements, crises that will
+not wait, the job against the rest of your life, dignity at work, fixing the system,
+development against the people who pay for it, and good intentions against the right to decide.
+A case goes under the theme whose engine gives the right advice for it. Lata's case (2026) looked
+urgent but was not an emergency, so it sits under the right to decide, not under the crisis theme. Each theme has a core conflict and an engine
 (for example: record the facts, seek the order in writing, escalate through the channel, act
 lawfully). Its common architecture fills the five boxes in general terms and adds the traps. It
 links to the concept notes to reason with, and lists its cases, newest first.
