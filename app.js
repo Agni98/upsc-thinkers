@@ -72,7 +72,7 @@ const ESSAY_THEMES = [
     s:"What a society owes its weakest members, and why patriarchy is a structure not a sentiment",
     ids:["rawls","ambedkar","amartya-sen","nozick","deendayal","gandhi","mother-teresa","lohia","nussbaum","jyotirao-phule","savitribai-phule","beauvoir","wollstonecraft","pandita-ramabai","periyar","gilligan","mill","bentham","tocqueville"],
     essays:["A country should not need this much kindness","Educated, and still not counted","Somebody always pays for the public good"],
-    atlas:["marshmallow","collectiveaction","freerider","omelas","veil","heinz","samaritan","noblelie","scarcity","womenleaders","fineprice","justworld","entitlements"] },
+    atlas:["marshmallow","collectiveaction","freerider","omelas","veil","heinz","samaritan","noblelie","scarcity","womenleaders","fineprice","justworld","entitlements","drowningchild"] },
   { t:"Democracy, the State and India in the World", n:"Democracy and the State", ic:"globe",
     s:"Leadership, media, plural identity, borders and the ethics of asymmetric power",
     ids:["ambedkar","tocqueville","habermas","montesquieu","nehru","kautilya","patel","orwell","gandhi","mandela","tagore","azad","aurobindo","mill","rousseau","jp-narayan","machiavelli","barnard"],
@@ -2725,6 +2725,47 @@ function conceptBody(c){
       ${c.take ? `<div class="gc-take" id="cp-take"><b class="gc-lab">Key takeaway</b><p>${g(c.take)}</p></div>` : ""}`;
 }
 
+/* Where a concept note's idea is set out on a thinker's page, argued in a model
+   paragraph for the Essay paper, or told as a story in the Thought Atlas: tk
+   holds [thinker id, idea heading], es holds [theme number, paragraph index],
+   and at holds atlas ids. A thinker's page links back. */
+function gcMoreHTML(c){
+  const tk = (c.tk || []).filter(x => byId[x[0]]);
+  const es = (c.es || []).map(x => {
+    const t = ESSAY_THEMES[x[0] - 1];
+    const p = t && typeof ANSWERS !== "undefined" && ANSWERS[t.t] && ANSWERS[t.t][x[1]];
+    return p ? { to:"themes|" + x[0] + "|p:" + x[1], h:p.h } : null; }).filter(Boolean);
+  const at = (c.at || []).map(id => (typeof ATLAS !== "undefined") && ATLAS.find(x => x.id === id)).filter(Boolean);
+  if (!tk.length && !es.length && !at.length) return "";
+  return `
+      <div class="gc-more" id="cp-more">
+        ${tk.length ? `<div><b>Thinkers</b><span class="pills">${tk.map(x => `
+          <button class="pill" data-open="${x[0]}" data-idea="${esc(x[1])}">${esc(byId[x[0]].name)}<i>${esc(x[1])}</i></button>`).join("")}</span></div>` : ""}
+        ${es.length ? `<div><b>Essay paper</b><span class="pills">${es.map(e => `
+          <button class="pill" data-to="${e.to}">${esc(e.h)}</button>`).join("")}</span></div>` : ""}
+        ${at.length ? `<div><b>Thought Atlas</b><span class="pills">${at.map(x => `
+          <button class="pill" data-to="atlas|0|${x.id}">${esc(x.t)}</button>`).join("")}</span></div>` : ""}
+      </div>`;
+}
+
+/* The reverse: the GS-IV notes that link to one of a thinker's ideas. The two
+   moral-thinkers headings hold the same notes, so each note is listed once. */
+let tkIx = null;
+function gs4NotesFor(tid, h){
+  if (!tkIx) {
+    tkIx = {};
+    const seen = new Set();
+    SYLLABUS.forEach((r, p) => ((typeof GS4_CONCEPTS !== "undefined" && GS4_CONCEPTS[r.t]) || []).forEach((c, i) =>
+      (c.tk || []).forEach(x => {
+        const k = x[0] + "|" + x[1];
+        if (seen.has(k + "|" + c.t)) return;
+        seen.add(k + "|" + c.t);
+        (tkIx[k] = tkIx[k] || []).push({ to:"syllabus|" + (p + 1) + "|c:" + i, t:c.t });
+      })));
+  }
+  return tkIx[tid + "|" + h] || [];
+}
+
 function conceptPane(title, i){
   const list = (typeof GS4_CONCEPTS !== "undefined" && GS4_CONCEPTS[title]) || [];
   const c = list[i];
@@ -2742,6 +2783,7 @@ function conceptPane(title, i){
         <button data-apart="cp-s${k + 1}" title="${esc(sec[0])}"><i>${k + 1}</i><span>${esc(sec[0])}</span></button>`).join("")}
         ${c.take ? `<button data-apart="cp-take"><i>${ico("bulb")}</i>Takeaway</button>` : ""}
         ${qs.length ? `<button data-apart="cp-qs"><i>${qs.length}</i>${cases ? "The cases" : "Where asked"}</button>` : ""}
+        ${(c.tk && c.tk.length) || (c.es && c.es.length) || (c.at && c.at.length) ? `<button data-apart="cp-more"><i>${ico("link")}</i>Related</button>` : ""}
       </nav>`;
   return `
     <article class="gc-item sm-pane">
@@ -2751,6 +2793,7 @@ function conceptPane(title, i){
       ${qs.length ? `<div class="gc-qs" id="cp-qs"><b>${
           title === "Case Studies" ? "The cases" : "Where it was asked"}</b>${
           qs.map(q => gcQuestion(q, c.t, byHead)).join("")}</div>` : ""}
+      ${gcMoreHTML(c)}
       ${c.src ? `<p class="gc-src">${esc(c.src)}</p>` : ""}
     </article>`;
 }
@@ -2956,8 +2999,9 @@ function openSheet(id){
 
       <section class="block">
         <div class="block-h"><span class="dot"></span>Core Ideas</div>
-        ${t.ideas.map(i => { const { h, d } = splitIdea(i);
-          return `<div class="idea">${h ? `<b>${esc(h)}</b>` : ""}<span>${esc(d)}</span></div>`; }).join("")}
+        ${t.ideas.map(i => { const { h, d } = splitIdea(i), gs = h ? gs4NotesFor(t.id, h) : [];
+          return `<div class="idea"${h ? ` data-h="${esc(h)}"` : ""}>${h ? `<b>${esc(h)}</b>` : ""}<span>${esc(d)}</span>${gs.length ? `
+            <span class="idea-gs">${gs.map(g => `<button data-to="${g.to}">GS-IV note: ${esc(g.t)}</button>`).join("")}</span>` : ""}</div>`; }).join("")}
       </section>
 
       <section class="block">
@@ -3699,7 +3743,14 @@ document.addEventListener("click", e => {
   }
 
   const open = e.target.closest("[data-open]");
-  if (open) { glossHide(true); openSheet(open.dataset.open); return; }
+  if (open) {
+    glossHide(true); openSheet(open.dataset.open);
+    // a link to one idea opens the thinker at that idea
+    const h = open.dataset.idea;
+    const el = h ? [...document.querySelectorAll("#sheet .idea")].find(x => x.dataset.h === h) : null;
+    if (el) { el.classList.add("idea-on"); requestAnimationFrame(() => el.scrollIntoView({ block:"center" })); }
+    return;
+  }
 
   const wk = e.target.closest("[data-work]");
   if (wk) {

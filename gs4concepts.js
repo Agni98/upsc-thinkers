@@ -40,9 +40,10 @@ const GS4_CONCEPTS = {
           "Conscience should operate within the constitutional and legal framework. Where rules are silent or ambiguous, conscience can guide discretion. Where an order or law appears fundamentally unjust, the right response is **lawful dissent, written objection and constitutional remedy**, not arbitrary disobedience."]]
       ],
       take:"Law tells us what we must not do. Rules tell us how we are expected to act. Conscience asks whether what we are doing is right. Ethical administration needs all three.",
+      tk:[["socrates", "Conscience over Law"], ["thoreau", "Conscience Above Law"], ["mlk", "Just vs. Unjust Law"]],
       src:"Stanford Encyclopedia of Philosophy, entry on Conscience" },
     { t:"Ethics, morals, values and law",
-      qs:["Q015", "Q019", "Q005", "Q012"],
+      qs:["Q062", "Q005", "Q071", "Q012", "Q016", "Q015", "Q019"],
       d:["**Values** are what a person or society treats as worth pursuing. **Morals** are the standards of right conduct a person actually holds. **Ethics** is the reasoned examination and justification of those standards. **Law** is the part of social conduct that society has decided to enforce."],
       secs:[
         ["Values → morals → ethics → law", [
@@ -89,6 +90,7 @@ const GS4_CONCEPTS = {
           "A project may serve a legitimate public purpose, but that does not by itself answer who should bear the cost. **Compensation, consent and procedural fairness remain separate questions.**"]]
       ],
       take:"Individual welfare is not merely added to social welfare. Many of the conditions that make individual flourishing possible exist only as shared goods.",
+      tk:[["marcus-aurelius", "Duty to the Common Good"], ["gandhi", "Sarvodaya & Antyodaya"], ["rousseau", "General Will (Volonté Générale)"], ["bentham", "Principle of Utility"]],
       src:"Gandhi on sarvodaya; the individual-and-collective framing is from the 2013 and 2017 papers" },
     { t:"Essence, determinants and consequences",
       qs:["Q006", "Q007", "Q008"],
@@ -130,6 +132,7 @@ const GS4_CONCEPTS = {
           "Moral criticism has usually worked from within a society's deeper commitments, by showing that an accepted practice contradicts principles the society already claims to value."]]
       ],
       take:"Values are not arbitrary merely because their application changes across time and cultures. A strong answer separates the underlying moral principle from the people and circumstances to which it is applied.",
+      tk:[["berlin", "Value Pluralism"], ["kant", "Categorical Imperative (1st formulation)"]],
       src:"Moral universalism and descriptive relativism as set out in open philosophy references" },
     { t:"Personal against professional ethics",
       qs:["Q015", "Q019"],
@@ -148,6 +151,7 @@ const GS4_CONCEPTS = {
           "A professional role has limits. Within a lawful and legitimate framework, professional duty governs and private preference yields. **Where a role appears to require what is plainly wrong, the disciplined response is to record the objection, use the institutional channels available and, if the conflict cannot be resolved, give up the role** rather than occupy it while refusing its duties."]]
       ],
       take:"Personal conscience matters, but public roles cannot function if each official treats private preference as a substitute for professional duty. The ethical task is to discharge the role faithfully while using lawful channels to challenge requirements that are genuinely wrong.",
+      tk:[["weber", "Ethic of Responsibility vs. Ethic of Conviction"], ["arendt", "Banality of Evil"]],
       src:"Standard treatment in professional ethics literature; Arendt on responsibility dissolved into procedure" },
     { t:"Happiness and the good life",
       qs:["Q017", "Q011"],
@@ -166,6 +170,7 @@ const GS4_CONCEPTS = {
           "The point is not that material conditions are unimportant. It is that once basic security is achieved, they stop being what is missing."]]
       ],
       take:"A good life is broader than pleasant moments or measurable consumption. Material security is the foundation, but flourishing also depends on relationships, purpose, capability and self-respect.",
+      tk:[["aristotle", "Eudaimonia"], ["buddha", "Middle Path"]],
       src:"Aristotle, Nicomachean Ethics, on eudaimonia; hedonic adaptation from well-being research" },
     { t:"Moral intuition and moral reasoning",
       qs:["Q004"],
@@ -184,6 +189,7 @@ const GS4_CONCEPTS = {
           "Conversely, when a carefully reasoned conclusion still feels deeply wrong, that persistent discomfort can signal a hidden premise or a missing consideration. The practical answer is not to choose one faculty over the other, but to examine intuitions and use reasoning to test them."]]
       ],
       take:"Treat moral intuition as an alert and moral reasoning as the examination. Neither is fully reliable on its own.",
+      tk:[["kohlberg", "Heinz Dilemma"], ["aristotle", "Practical Wisdom (Phronesis)"]],
       src:"Haidt, The Emotional Dog and Its Rational Tail (2001); dual-process framing from cognitive psychology" },
     { t:"Dimensions of ethics",
       qs:["Q001"],
@@ -224,7 +230,7 @@ const GS4_CONCEPTS = {
   ],
   "Human Values":[
     { t:"Social capital and trust",
-      qs:["Q126", "Q028"],
+      qs:["Q062", "Q126", "Q028"],
       d:["Social capital is the stock of **trust, shared norms and networks** that makes coordinated action easier. It lets people cooperate without separately negotiating or enforcing every interaction. Robert Putnam described it as the features of social organisation that improve a society's efficiency by making coordinated action possible."],
       secs:[
         ["Three forms of social capital", [
@@ -242,6 +248,7 @@ const GS4_CONCEPTS = {
           "**Trust is not a declaration. It accumulates as a record of consistent conduct.**"]]
       ],
       take:"Social capital lowers the friction of collective action. But trust within a closed group is not enough. Lasting public trust also needs bridging and linking connections across social and institutional boundaries.",
+      tk:[["ostrom", "Governing the Commons"]],
       src:"Putnam, Bowling Alone; OECD definition of social capital; World Bank on linking social capital" },
     { t:"Education and the inculcation of values",
       qs:["Q025"],
@@ -260,6 +267,7 @@ const GS4_CONCEPTS = {
           "Value education works better when it is built into institutional practice: mixed classrooms, equal treatment, teachers who model the values they teach, and settings where fairness and dignity are experienced rather than merely described."]]
       ],
       take:"Values are caught as much as taught. The strongest value education is an institution in which the desired values are experienced, again and again, as normal behaviour.",
+      tk:[["vivekananda", "Man-Making Education"], ["tagore", "Education at Santiniketan"], ["freire", "Banking Model of Education"]],
       src:"National Education Policy 2020; the hidden curriculum as used in education research" },
     { t:"Social values against economic values",
       qs:["Q027"],
@@ -273,6 +281,7 @@ const GS4_CONCEPTS = {
           "The counter-argument has real weight and belongs in any honest treatment. **Without sustained economic growth there is nothing to distribute**, and stagnation is not distributionally neutral: it falls first on those with no savings and informal work, who are precisely the people social values are invoked to protect. A position that treats economic reasoning as inherently suspect will end up protecting nobody."]]
       ],
       take:"**Inclusive growth is the attempt to make the two answer the same question**, by counting a gain as real only when it reaches those at the bottom. **Economic values tell us how to produce; social values tell us what the producing is for, and who must not be sacrificed to it.**",
+      tk:[["gandhi", "Sarvodaya & Antyodaya"], ["amartya-sen", "Development as Freedom"]],
       src:"Inclusive growth as used in Indian planning documents; the question framing is from the 2015 paper" },
     { t:"Patriotism in everyday civil life",
       qs:["Q029"],
@@ -287,10 +296,35 @@ const GS4_CONCEPTS = {
       ],
       take:"**Patriotism in civil life is the discipline of doing one's ordinary duty as though the country depended on it, because in aggregate it does.**",
       src:"The contrast between defence and civil life is the framing of the 2014 paper" },
+    { t:"Moral development: how conscience grows",
+      qs:[],
+      d:["**Moral development is the growth of a person's capacity to reason about right and wrong.** Lawrence Kohlberg described it as a sequence of stages, building on the work of Jean Piaget."],
+      secs:[
+        ["Kohlberg's three levels", ["At the pre-conventional level, a child judges right and wrong by punishment and self-interest. **At the conventional level, a person follows the expectations of family and society and upholds law and order.** At the post-conventional level, a person reasons from principles such as justice and human rights, which can justify questioning a law."]],
+        ["The Heinz dilemma", ["Kohlberg asked people whether a man named Heinz should steal a drug he cannot afford to save his dying wife. **What mattered was not the answer but the reasoning behind it,** which revealed the stage of moral development."]],
+        ["Gilligan's critique", ["Carol Gilligan argued that Kohlberg's scale, built largely from male responses, undervalued reasoning based on care and relationships. **Her ethics of care is a different moral voice, not a lower stage.**"]],
+        ["For values education and public service", ["Family, school and society shape the stage a person reaches. **Education that discusses dilemmas, rather than only teaching rules, helps people reason at higher levels.** A civil servant should follow the law, but also understand the principles behind it, so that conscience can guide discretion and recognise an unjust order."]]
+      ],
+      take:"**Move from obeying rules because you must to upholding principles because you understand them.**",
+      tk:[["kohlberg", "Level 1"], ["kohlberg", "Level 2"], ["kohlberg", "Level 3"], ["kohlberg", "Heinz Dilemma"], ["kohlberg", "Application to Public Service"], ["gilligan", "In a Different Voice (1982)"]],
+      at:["heinz"],
+      src:"Kohlberg's stages of moral development; Gilligan, In a Different Voice (1982)" },
+    { t:"Lessons from the lives of leaders, reformers and administrators",
+      qs:["Q026"],
+      d:["**The syllabus asks for lessons from the lives and teachings of great leaders, reformers and administrators.** A lesson is useful in an answer when it names a specific act and the value it shows."],
+      secs:[
+        ["Leaders", ["Gandhi suspended the Non-Cooperation Movement after Chauri Chaura in 1922, at great political cost: **the method mattered more than the momentum.** Nelson Mandela served a single term as President and stepped down in 1999: power held lightly. Ambedkar insisted on constitutional methods once democracy offered them."]],
+        ["Reformers", ["Ishwar Chandra Vidyasagar used both scripture and law to win the Widow Remarriage Act of 1856: **reform through reason and persistence.** Jyotirao and Savitribai Phule opened a school for girls in Pune in 1848 despite abuse: courage in the face of social hostility. Raja Ram Mohan Roy campaigned against sati until it was banned in 1829."]],
+        ["Administrators", ["Sardar Patel integrated the princely states and defended an independent all-India civil service that could give frank advice. **E. Sreedharan delivered the Konkan Railway and the first phase of the Delhi Metro on time: integrity and discipline in execution.** T. N. Seshan, as Chief Election Commissioner from 1990 to 1996, enforced the model code of conduct and showed what an independent institution can do."]],
+        ["Using lessons well", ["The 2017 paper asked for rulers who harmed society and rulers who developed it. **A strong answer names the person, the specific act and the value, and draws the lesson for present administration.** Avoid general praise. The lesson lies in the choice made under pressure."]]
+      ],
+      take:"**Name the person, the act and the value, and show how the lesson applies to a present-day decision.**",
+      tk:[["gandhi", "Purity of Means"], ["mandela", "Voluntary Relinquishment of Power"], ["vidyasagar", "Widow Remarriage Act (1856)"], ["savitribai-phule", "India's First Woman Teacher"], ["patel", "Steel Frame of India"], ["kalam", "Integrity and Simplicity"]],
+      src:"The GS-IV syllabus; the lives cited are matters of public record" },
   ],
   "Attitude":[
     { t:"Attitude: content, structure and function",
-      qs:["Q101", "Q030", "Q032", "Q035"],
+      qs:["Q101", "Q030", "Q031", "Q032", "Q035"],
       d:["**An attitude is a learned, relatively enduring evaluation of a person, group, object or issue that disposes someone to respond to it in a consistent way.** It is not a passing mood and not the same as an opinion: an opinion is a stated judgement, while an attitude is the settled orientation that produces such judgements."],
       secs:[
         ["The structure: thinking, feeling, acting", [
@@ -301,9 +335,10 @@ const GS4_CONCEPTS = {
           "This is why identical rules produce different administration. The rulebook is the same for every officer; what differs is the disposition brought to it. **A positively oriented officer reads a discretionary provision looking for the reading that lets a legitimate case succeed; a negatively oriented one reads the same provision looking for the objection that lets the file be returned.** Neither has broken a rule."]]
       ],
       take:"**Attitude is therefore the invisible half of administration.** Rules determine the boundaries of what may be done; attitude determines what actually gets done inside them.",
+      tk:[["allport", "Definition of Attitude"], ["allport", "Functions of Attitude"]],
       src:"Tripartite model of attitude and Katz's functional theory, standard social psychology" },
     { t:"How attitudes form and how they change",
-      qs:["Q032", "Q035", "Q030"],
+      qs:["Q064", "Q030", "Q032", "Q035"],
       d:["**Attitudes are learned rather than innate, and most are acquired without the holder ever deciding to adopt them.** Family transmits the earliest and most durable set, largely by demonstration rather than instruction. Beyond it, peer group, education, workplace culture, media and direct personal experience each deposit more."],
       secs:[
         ["Sincere beliefs, inherited dispositions", [
@@ -314,6 +349,8 @@ const GS4_CONCEPTS = {
           "For a serving officer this suggests a practical discipline: notice the cases where your reaction to a file changes with the name on it, seek postings and colleagues outside your own background, and treat discomfort at an unfamiliar group as information about yourself rather than about them."]]
       ],
       take:"**Attitudes are not adopted by argument and are rarely surrendered to it.** They are formed by exposure and habit, and they are changed by exposure, by acting against them, and by altering the conditions that keep them useful.",
+      tk:[["festinger", "Cognitive Dissonance"], ["festinger", "Attitude Change through Behaviour"]],
+      at:["dissonance"],
       src:"Contact hypothesis; Festinger on cognitive dissonance" },
     { t:"Social influence and persuasion",
       qs:["Q033", "Q032", "Q035"],
@@ -341,6 +378,7 @@ const GS4_CONCEPTS = {
           "The counter-consideration is that moral attitudes are not merely prejudices to be dissolved. A settled refusal to accept a bribe is also a moral attitude resistant to argument, and its resistance is a virtue. **What separates a moral conviction from a prejudice is not how firmly it is held but whether it survives examination**: whether it rests on reasons its holder can state, whether it treats like cases alike, and whether it would be accepted by the person it disadvantages."]]
       ],
       take:"**A political or moral attitude that has never been examined is simply an inheritance, and inheritances carry whatever their previous owners put in them.**",
+      tk:[["allport", "The Nature of Prejudice (1954)"], ["allport", "Contact Hypothesis"]],
       src:"Stereotype, prejudice and discrimination as the cognitive, affective and behavioural components; Article 17 on untouchability" },
     { t:"Democratic and bureaucratic attitudes",
       qs:["Q034", "Q101"],
@@ -354,6 +392,7 @@ const GS4_CONCEPTS = {
           "The balance is not a midpoint but a division of labour. **The rule governs what may be decided; the democratic disposition governs how the decision is reached, explained and delivered.** An officer can be strict about the entitlement and generous about access, patient with a confused applicant, and clear in giving reasons for a refusal."]]
       ],
       take:"**Rules exist to protect citizens from the official's whim, and purpose exists to protect citizens from the rule's blindness.** An administration needs both, and an officer who has only one of them will fail in a predictable direction.",
+      tk:[["weber", "Ideal-Type Bureaucracy"], ["mcgregor", "Theory Y"]],
       src:"Weber on bureaucracy; the democratic and bureaucratic contrast is the framing of the 2015 paper" },
   ],
   "Aptitude & Foundational Values for Civil Service":[
@@ -369,6 +408,8 @@ const GS4_CONCEPTS = {
           "Integrity alone is not sufficient, and the pairing with competence is the standard test. **Integrity without knowledge is well-meaning and ineffective; knowledge without integrity is capable and dangerous.** An honest officer who cannot appraise a project approves a bad one sincerely. A skilled officer without integrity designs the diversion so that it survives audit. The public needs both, and of the two, capability without character does more damage because it is harder to detect."]]
       ],
       take:"**Integrity empowers because it removes leverage.** A person who can be embarrassed, obliged or bought can be directed; a person with nothing to conceal and no favours outstanding cannot. The freedom to give an inconvenient opinion is bought by having nothing that can be produced against you.",
+      tk:[["kalam", "Integrity and Simplicity"]],
+      at:["gyges"],
       src:"The knowledge-and-integrity formulation is quoted in the 2014 paper; the compromise test in 2017" },
     { t:"Aptitude, competence and values",
       qs:["Q041", "Q042", "Q044", "Q104", "Q049", "Q142", "Q051"],
@@ -396,9 +437,10 @@ const GS4_CONCEPTS = {
         ["The disciplined form of dissent", [
           "The disciplined form is specific. **Put the objection in writing, address it to the person who can act on it, state reasons rather than conclusions, and then implement the lawful decision whichever way it goes.** That combination is what separates the officer who dissents from the one who obstructs."]]
       ],
+      tk:[["patel", "Fearless and Impartial Advice"], ["socrates", "Conscience over Law"]],
       src:"Listed among foundational values in the 2013 and 2017 papers" },
     { t:"Spirit of service and dedication",
-      qs:["Q137", "Q048", "Q050"],
+      qs:["Q098", "Q137", "Q048", "Q050"],
       d:["**The spirit of service is the disposition to treat public office as a trust exercised for others rather than a position held for oneself, and dedication is the sustained commitment to that purpose over time.** Neither is measurable by output; both are visible in what a person does when the work is unrewarded."],
       secs:[
         ["Service is an orientation, not effort", [
@@ -409,6 +451,7 @@ const GS4_CONCEPTS = {
           "The honest complication is that dedication can attach to the wrong object. A person may be devoted to their department's standing, their own reputation for toughness, or a programme they designed, and that devotion will look identical from outside while producing defensiveness, suppression of bad news and resistance to correction. **The test is whether the commitment survives being told the thing it is committed to is not working.**"]]
       ],
       take:"**A public office is held on behalf of people who cannot supervise it.** The spirit of service is what makes that arrangement tolerable, because it is the only thing operating in the very large space that supervision does not reach.",
+      tk:[["vivekananda", "Daridra Narayana / Practical Vedanta"], ["mother-teresa", "Service to the Destitute"]],
       src:"Spirit of service as listed in the 2013 and 2017 papers" },
     { t:"Impartiality, non-partisanship and objectivity",
       qs:["Q256", "Q043", "Q047"],
@@ -423,9 +466,10 @@ const GS4_CONCEPTS = {
         ["Three questions to test yourself", [
           "**Impartiality asks whether you would decide the same way if the applicant's identity were concealed; non-partisanship asks whether you would give the same advice to the other side; objectivity asks whether you would reach the same finding if you did not know what answer was wanted.** Three questions, three different failures."]]
       ],
+      tk:[["patel", "Fearless and Impartial Advice"], ["weber", "Ideal-Type Bureaucracy"]],
       src:"Foundational values in the GS-IV syllabus; asked in near-identical form in 2016 and 2021" },
     { t:"Trustworthiness, fortitude and perseverance",
-      qs:["Q048", "Q050"],
+      qs:["Q063", "Q031", "Q048", "Q050"],
       d:["**Trustworthiness is being someone whose word and conduct can be relied on in advance; fortitude is the capacity to endure hardship or pressure without abandoning one's course; perseverance is sustained effort towards a purpose across a long period and repeated setbacks.** The first concerns what others can expect of you, the second and third what you can expect of yourself."],
       secs:[
         ["Trustworthiness is built by a record", [
@@ -467,6 +511,20 @@ const GS4_CONCEPTS = {
           "**Transparency lets the public see, accountability lets them respond, fairness ensures consistency, and justice asks whether the consistent thing is the right thing.** An administration can achieve the first three and still fail the fourth, which is why the fourth cannot be delegated to procedure."]]
       ],
       src:"Listed for examination in the 2017 paper; RTI Act 2005 on disclosure" },
+    { t:"Tolerance, pluralism and secularism",
+      qs:["Q083"],
+      d:["**Tolerance is the willingness to live with, and respect, beliefs and practices one does not share.** The syllabus names it as a foundational value of the civil service. In India, it is tied to pluralism and to the constitutional principle of secularism."],
+      secs:[
+        ["Indian roots", ["Ashoka's twelfth rock edict asked people to honour other sects, and warned that a person who praises his own sect while disparaging others harms his own. **Jain anekantavada teaches that truth has many sides.** Akbar's policy of sulh-i-kul, peace with all, brought scholars of many faiths into debate."]],
+        ["Western roots", ["John Locke argued in A Letter Concerning Toleration (1689) that the state cannot compel belief, since faith forced is not faith. **Mill defended free discussion as the way to find truth.** Karl Popper warned of the paradox of tolerance: a society that tolerates those who would destroy tolerance may lose it."]],
+        ["Secularism in the Constitution", ["Articles 25 to 28 protect freedom of religion, and the Forty-second Amendment of 1976 added the word \"secular\" to the Preamble. **In S. R. Bommai v Union of India (1994), the Supreme Court held that secularism is part of the Constitution's basic structure.** Indian secularism means equal respect and principled distance from all religions, not strict separation."]],
+        ["Tolerance in administration", ["For an officer, tolerance means impartial treatment of all communities, restraint in personal speech, and firm protection of minorities and dissenters. **Tolerance does not mean tolerating violence or incitement.** The 2018 paper quoted Gandhi: anger and intolerance are the enemies of correct understanding."]]
+      ],
+      take:"**Respect beliefs you do not share, treat every community alike, and never tolerate violence in the name of tolerance.**",
+      tk:[["mahavira", "Anekantavada"], ["locke", "Religious Toleration"], ["nehru", "Secularism"], ["azad", "Composite Nationalism"], ["kabir", "Syncretism"], ["vivekananda", "Universal Religion & Tolerance"]],
+      es:[[7, 2]],
+      at:["anekanta", "blindmen"],
+      src:"Ashoka's Rock Edict XII; Locke, A Letter Concerning Toleration (1689); S. R. Bommai v Union of India (1994)" },
   ],
   "Emotional Intelligence":[
     { t:"Emotional intelligence and its components",
@@ -481,9 +539,10 @@ const GS4_CONCEPTS = {
           "The common misreading is that emotional intelligence means being pleasant. It does not. It means making your emotions work for you rather than against you. An officer who feels anger at a contractor's negligence and uses it to press for accountability has used the emotion. An officer who suppresses it and grows resentful has not."]]
       ],
       take:"**Emotional intelligence is also neutral about ends.** A skilled manipulator reads people accurately and uses what they read to exploit. The skill tells you how to reach someone; it does not tell you what to reach them for. That is why it must be paired with values and never treated as a substitute for them.",
+      tk:[["goleman", "Five Components of EI"]],
       src:"Goleman's four-domain model of emotional intelligence" },
     { t:"Emotional maturity, and whether it can be developed",
-      qs:["Q057", "Q061"],
+      qs:["Q063", "Q057", "Q061"],
       d:["**Emotional maturity is the capacity to respond to a situation in proportion to it, rather than in proportion to how it feels.** A mature person can be disappointed without becoming bitter, and criticised without becoming defensive."],
       secs:[
         ["What emotional maturity consists of", [
@@ -494,6 +553,7 @@ const GS4_CONCEPTS = {
           "The methods are unglamorous. Naming the emotion as it arises, which slows the reaction. Delaying a response to a provocation. Asking for honest feedback from someone with no reason to flatter. Reviewing one's own decisions afterwards, including the ones that went well. Mentors and difficult postings do more than any course."]]
       ],
       take:"**Maturity is not the absence of strong feeling.** It is the gap a person can hold between feeling something and doing something about it. That gap is trainable, and it widens with use.",
+      tk:[["goleman", "EI is Learnable"], ["marcus-aurelius", "Dichotomy of Control"]],
       src:"Emotional maturity as treated in developmental and organisational psychology" },
     { t:"Emotional intelligence and the ethical decision",
       qs:["Q250", "Q056", "Q061"],
@@ -509,9 +569,10 @@ const GS4_CONCEPTS = {
           "The safeguard is sequence. Decide what is right using reason, evidence and the rules. Then use emotional intelligence to implement it, to communicate it, and to withstand the pressure that follows."]]
       ],
       take:"**Emotional intelligence is the instrument, and conscience is the direction.** An instrument without a direction is simply skill, and skill is available to anyone.",
+      tk:[["goleman", "Application"]],
       src:"The crisis-of-conscience framing is from the 2021 paper" },
     { t:"EQ against IQ in a position of power",
-      qs:["Q039"],
+      qs:["Q003", "Q039"],
       d:["**Intelligence quotient measures reasoning ability; emotional quotient measures the handling of emotion in oneself and others.** The question is which matters more for someone holding power. The honest answer is that they matter at different stages."],
       secs:[
         ["IQ is a threshold", [
@@ -524,6 +585,7 @@ const GS4_CONCEPTS = {
           "The counter-case is real and should be stated. **Empathy is partial by nature.** It responds to the person in front of you, which is exactly the person a fair system should not favour. Sympathy for a visible applicant can crowd out an absent one with a stronger claim. Emotional intelligence must therefore work inside impartiality, not around it."]]
       ],
       take:"**IQ gets you into the room; EQ determines what happens in it.** Neither is sufficient, and a person of high ability and low self-control does more damage than one of modest ability.",
+      tk:[["goleman", "EI Outweighs IQ"]],
       src:"The EQ against IQ framing is from the 2023 paper" },
     { t:"Anger and the management of negative emotion",
       qs:["Q060"],
@@ -539,6 +601,7 @@ const GS4_CONCEPTS = {
           "The distinction worth keeping is between suppression and regulation. **Suppression hides the feeling and it continues working underground**, emerging as sarcasm, delay or withdrawn cooperation. Regulation acknowledges the feeling and chooses the response."]]
       ],
       take:"**Use the information the anger carries, and discard the urgency it manufactures.**",
+      tk:[["goleman", "Amygdala Hijack"]],
       src:"The framing is from the 2016 paper; suppression against regulation from emotion-regulation research" },
   ],
   "Moral Thinkers & Philosophers of India":[
@@ -556,6 +619,7 @@ const GS4_CONCEPTS = {
           "Anger and intolerance work against this from the other side. Both close a person to correction. An angry mind cannot assess evidence, and an intolerant one has decided in advance which evidence counts. Both feel like conviction from inside."]]
       ],
       take:"**Forgiveness ends the cycle; retaliation continues it.** In public life this matters because an administration that carries grievances forward will act on them, and the people it acts on will carry their own.",
+      tk:[["gandhi", "Ahimsa"], ["mandela", "Reconciliation over Revenge"]],
       src:"Gandhi on forgiveness; set in the 2015 and 2021 papers" },
     { t:"Service as the route to self-realisation",
       qs:["Q079", "Q070", "Q074", "Q078"],
@@ -571,6 +635,7 @@ const GS4_CONCEPTS = {
           "The honest limit is that service can itself become a performance. Help given for recognition is still help, but it stops when nobody is watching, and it makes demands on the person receiving it. The simplest acts of kindness are held up precisely because they carry no audience."]]
       ],
       take:"**A person who serves stops asking what they are worth, because the question has been replaced by something more interesting.**",
+      tk:[["vivekananda", "Daridra Narayana / Practical Vedanta"], ["mother-teresa", "Service to the Destitute"]],
       src:"Gandhi and Vivekananda on service, from quotations set across the papers" },
     { t:"Corruption and who can end it",
       qs:["Q072", "Q087", "Q091"],
@@ -586,9 +651,11 @@ const GS4_CONCEPTS = {
           "That distinction is also why anti-corruption law struggles. Law can prohibit what is clearly wrong. It cannot reach the large space of decisions that are within a person's authority and still improper."]]
       ],
       take:"**Rules limit what you may do; ethics limits what you will do within that.** Corruption occupies the difference between the two.",
+      tk:[["kautilya", "Forty Ways of Embezzlement"], ["kautilya", "Fish in Water"], ["kalam", "Integrity and Simplicity"]],
+      at:["gyges", "principalagent"],
       src:"Kautilya, Arthashastra, on the difficulty of detection; Kalam on the three people" },
     { t:"Choosing and using a moral exemplar",
-      qs:["Q018", "Q096", "Q067"],
+      qs:["Q067", "Q026", "Q018", "Q096"],
       d:["**A moral exemplar is a person whose conduct shows what a value looks like when it is actually lived.** The papers ask which ethical personality has inspired you and how you applied their teachings. The question is about application, not admiration."],
       secs:[
         ["What a life shows that a rule cannot", [
@@ -618,7 +685,7 @@ const GS4_CONCEPTS = {
       take:"**A person owes something to themselves and something beyond themselves, and the whole moral difficulty is in the proportion.**",
       src:"Hillel's question; the peace and ambition quotations are from the papers" },
     { t:"Thought, character and self-formation",
-      qs:["Q066", "Q080"],
+      qs:["Q066", "Q073", "Q080"],
       d:["**The claim is that a person is made by what they habitually think.** Vivekananda's version is that we are what our thinking has made us, so we should take care what we think. Gandhi's is that a man is but the product of his thoughts, and he becomes what he thinks."],
       secs:[
         ["From thought to character", [
@@ -647,9 +714,11 @@ const GS4_CONCEPTS = {
           "The link between the two is that self-examination is what makes truthfulness possible. A person who has not examined their own motives will misreport them sincerely."]]
       ],
       take:"**Where there is righteousness in the heart there is beauty in the character.** The order in that sequence is the argument: what a person is inwardly determines what they become outwardly, and not the reverse.",
+      tk:[["socrates", "The Examined Life"], ["socrates", "Socratic Method (Elenchus)"]],
+      at:["gadfly", "cave"],
       src:"Socrates in Plato's Apology; the righteousness sequence is from a quotation set in 2019" },
     { t:"How rightness is judged: consequences, duty and character",
-      qs:["Q245", "Q088", "Q090"],
+      qs:["Q245", "Q010", "Q090", "Q088"],
       d:["**Three positions answer the question of what makes an act right, and each locates rightness somewhere different.** The 2018 paper asked candidates to compare them directly."],
       secs:[
         ["Consequentialism: outcomes", [
@@ -665,6 +734,7 @@ const GS4_CONCEPTS = {
         ["Using all three tests", [
           "**Most real decisions use all three tests.** Naming which one an argument rests on is what turns an opinion into a position."]]
       ],
+      tk:[["bentham", "Principle of Utility"], ["kant", "Categorical Imperative (1st formulation)"], ["aristotle", "Virtue as Habit"], ["gandhi", "Purity of Means"]],
       src:"The three normative positions; Weber on the ethics of office; Rawls on the least advantaged" },
     { t:"Human dignity: people as ends, never merely means",
       qs:["Q068", "Q094"],
@@ -680,6 +750,7 @@ const GS4_CONCEPTS = {
           "This is why dignity appears in the Preamble and why Article 21 has been read to include living with dignity rather than merely existing. **Dignity is not a benefit conferred by the state.** It is the status a person has, which the state is required to respect."]]
       ],
       take:"**A person is not a resource with feelings attached.** They have their own ends, and any arrangement that treats those ends as irrelevant has crossed the line, however efficient it is.",
+      tk:[["kant", "Humanity Formula (2nd formulation)"], ["nussbaum", "Dignity Threshold"]],
       src:"Kant, Groundwork of the Metaphysics of Morals; Constitution of India, Preamble and Article 21" },
     { t:"Indian moral teachings: Buddha and Guru Nanak",
       qs:["Q069", "Q077"],
@@ -693,6 +764,7 @@ const GS4_CONCEPTS = {
           "Their present relevance is easy to state without exaggeration. Both reject inherited hierarchy as a basis for worth. Both make honest work a moral requirement rather than a necessity. Both put the test of a belief in conduct rather than in profession."]]
       ],
       take:"**Neither asked for withdrawal from the world.** The Buddha's path is followed in ordinary life, and Nanak explicitly rejected renunciation in favour of the householder who works and shares. That is what makes both usable by an administrator rather than only by a seeker.",
+      tk:[["buddha", "Eightfold Path"], ["buddha", "Middle Path"], ["guru-nanak", "Kirat Karo, Naam Japo, Vand Chhako"]],
       src:"The Buddha's eightfold path; Guru Nanak's three principles and the institution of langar" },
     { t:"Equality and the awakening of women",
       qs:["Q070", "Q228"],
@@ -708,6 +780,7 @@ const GS4_CONCEPTS = {
           "The honest complication is that formal advance and social practice move at different speeds. Laws on inheritance, marriage age and workplace conduct have advanced considerably. Property registered in women's names, participation in paid work, and freedom of movement have not moved correspondingly."]]
       ],
       take:"**Progress for women is not one item on a list of national goals.** It is the condition on which most of the other items depend.",
+      tk:[["amartya-sen", "Missing Women"], ["savitribai-phule", "India's First Woman Teacher"], ["wollstonecraft", "Education as Emancipation"]],
       src:"The quotation is from the 2023 paper; the propagation argument follows Sen on women's agency" },
     { t:"Character as the condition for capability",
       qs:["Q085"],
@@ -725,7 +798,7 @@ const GS4_CONCEPTS = {
       take:"**Character decides what capability is used for, and capability decides how much that decision matters.**",
       src:"The hiring formulation is quoted in the 2018 paper" },
     { t:"Trusteeship: wealth and power held in trust",
-      qs:["Q244"],
+      qs:["Q244", "Q095"],
       d:["**Trusteeship is Gandhi's idea that a person who holds wealth or power holds it on behalf of society, not as an owner.** The holder may keep what a reasonable life needs. The rest is to be used for the common good."],
       secs:[
         ["Gandhi's idea", ["Gandhi drew the idea from the opening verse of the Isha Upanishad, which asks a person to enjoy the world by renouncing it, and from the English law of trusts. A practical trusteeship formula was later drafted by his associates and revised by him. **The formula gives private ownership no standing except what society permits for its own welfare**, allows the state to regulate trusteeship by law, and proposes a minimum and a maximum income."]],
@@ -734,6 +807,8 @@ const GS4_CONCEPTS = {
         ["The limits of the idea", ["Critics, Ambedkar among them, doubted that owners would ever act as trustees of their own accord. **Trusteeship that depends only on the holder's conscience leaves the poor waiting on the virtue of the rich.** For this reason the formula itself allowed regulation by law. In administration the equivalent is that the officer's sense of trust is backed by rules, audit and accountability."]]
       ],
       take:"**Whatever you hold in office, you hold for others.** Use it for those who need it most, waste none of it, and account for all of it.",
+      es:[[6, 0]],
+      tk:[["gandhi", "Trusteeship"], ["vinoba", "Bhoodan Movement (1951)"]],
       src:"Gandhi's writings on trusteeship; the public trust doctrine in M. C. Mehta v Kamal Nath (1996); the question is from the 2026 paper" },
     { t:"Civil disobedience in a constitutional democracy",
       qs:["Q243"],
@@ -745,6 +820,8 @@ const GS4_CONCEPTS = {
         ["How the state should respond", ["Article 19 protects peaceful assembly and speech, subject to reasonable restrictions. In Amit Sahni v Commissioner of Police in 2020, the Supreme Court held that protest is a right but that public roads cannot be occupied indefinitely. **The state should protect the right to protest, engage with the grievance, and enforce the law against violence without treating dissent itself as a threat.** Answering the substance of a genuine concern is the surest way to keep protest within constitutional bounds."]]
       ],
       take:"**Keep lawful channels open and responsive, so that disobedience is rarely needed.** Where it comes, judge it by its method and its grievance, not by its inconvenience.",
+      es:[[1, 3], [7, 4]],
+      tk:[["ambedkar", "Grammar of Anarchy"], ["thoreau", "Civil Disobedience (1849)"], ["mlk", "Letter from Birmingham Jail"], ["gandhi", "Satyagraha"]],
       src:"Ambedkar's speech of 25 November 1949; King, Letter from Birmingham Jail (1963); Rawls, A Theory of Justice; the question is from the 2026 paper" },
     { t:"Duty and charity",
       qs:["Q251"],
@@ -756,7 +833,183 @@ const GS4_CONCEPTS = {
         ["Limits and objections", ["The objections deserve a hearing. A demand without limit could consume a person's whole life, and individual giving cannot replace just institutions. **The measured version of the claim survives both objections**: a duty to give some part of what one can spare, alongside a duty to support fair public systems. The question's own condition, giving without significantly affecting financial stability, is exactly this measured version."]]
       ],
       take:"**Where suffering is severe and your cost is small, helping is owed, not merely admired.** Charity begins where the duty ends.",
+      es:[[6, 0]],
+      tk:[["kant", "Duty over Inclination"], ["mother-teresa", "Small Acts, Great Love"]],
+      at:["drowningchild", "samaritan"],
       src:"Singer, Famine, Affluence, and Morality (1972); Kant on imperfect duties; the question is from the 2026 paper" },
+    { t:"Utilitarianism: the greatest good and its limits",
+      qs:["Q010"],
+      d:["**Utilitarianism judges an action by its consequences: the right act is the one that produces the greatest happiness for the greatest number.** Jeremy Bentham founded it, and John Stuart Mill refined it."],
+      secs:[
+        ["Bentham's principle of utility", ["Bentham opened his Introduction to the Principles of Morals and Legislation (1789) with the claim that nature has placed mankind under two masters, pain and pleasure. **An act is right to the degree that it increases happiness and reduces suffering, with each person counting for one and nobody for more than one.** His felicific calculus weighed pleasures by intensity, duration, certainty, nearness, fruitfulness, purity and extent."]],
+        ["Mill's higher pleasures", ["Mill's Utilitarianism (1863) answered the charge that the theory was fit only for pigs. **Some pleasures are higher than others: the pleasures of the mind, of friendship and of moral action count for more than bodily ones.** He wrote that it is better to be Socrates dissatisfied than a fool satisfied. Mill also defended rules that experience shows tend to promote happiness."]],
+        ["Where it serves the administrator", ["Utilitarian reasoning runs through public policy. Cost-benefit analysis, triage in a disaster, and choosing where a limited budget does the most good all ask which option produces the greatest total benefit. **The theory is impartial and practical: it asks about the effects of a decision on everyone.**"]],
+        ["Its limits", ["The weakness is the minority. **A policy can raise total welfare while imposing severe loss on a few, and the arithmetic records no objection.** Rawls argued that utilitarianism ignores the separateness of persons. Rights, dignity and justice act as limits that a sum of benefits cannot override. Measuring happiness is also far harder than the calculus suggests."]]
+      ],
+      take:"**Use utilitarian reasoning to count everyone's interests, and rights to protect the person the count would sacrifice.**",
+      tk:[["bentham", "Principle of Utility"], ["bentham", "Felicific Calculus"], ["mill", "Qualitative Utilitarianism"]],
+      es:[[6, 4], [1, 1]],
+      at:["trolley", "omelas"],
+      src:"Bentham, An Introduction to the Principles of Morals and Legislation (1789); Mill, Utilitarianism (1863)" },
+    { t:"Kant: duty and the categorical imperative",
+      qs:["Q068"],
+      d:["**Kant held that an action is right because of the principle behind it, not because of its results.** A moral rule binds everyone unconditionally. He called such a rule a categorical imperative."],
+      secs:[
+        ["The two main formulations", ["Kant set out the idea in the Groundwork of the Metaphysics of Morals (1785). **First: act only on a principle that you could will to become a universal law.** A person who lies when convenient could not want everyone to lie, because trust would collapse. **Second: treat humanity, in yourself and in others, always as an end and never merely as a means.**"]],
+        ["Good will and duty", ["For Kant, the only thing good without qualification is a good will. An act has moral worth when it is done from duty, not merely in line with duty. **A shopkeeper who gives honest change only because honesty is good for business acts rightly, but without moral worth.** The 2024 paper quoted his line that in law a man is guilty when he violates the rights of others, while in ethics he is guilty if he only thinks of doing so."]],
+        ["Kant in public service", ["Kant gives the administrator two tests. **Would I accept this rule if everyone in my position followed it? Am I treating any citizen merely as a means to a target or a result?** The tests rule out making exceptions for oneself, using people as numbers, and deceiving the public for its own good."]],
+        ["Its limits", ["Kant's ethics can be rigid. In a short essay of 1797 he argued that one may not lie even to a murderer asking where a friend is hiding. **Critics reply that duties can conflict, and that consequences cannot be ignored when lives are at stake.** Most practical ethics combines Kant's respect for persons with attention to outcomes."]]
+      ],
+      take:"**Act only on rules you would accept for everyone, and never use a person merely as a means.**",
+      tk:[["kant", "Categorical Imperative (1st formulation)"], ["kant", "Humanity Formula (2nd formulation)"], ["kant", "Good Will"], ["kant", "Duty over Inclination"]],
+      es:[[1, 4]],
+      at:["trolley"],
+      src:"Kant, Groundwork of the Metaphysics of Morals (1785)" },
+    { t:"Virtue ethics and practical wisdom",
+      qs:["Q097"],
+      d:["**Virtue ethics asks not \"what rule applies?\" but \"what would a person of good character do?\"** Its founder is Aristotle, whose Nicomachean Ethics treats virtue as a settled disposition built by practice."],
+      secs:[
+        ["Virtue as habit", ["Aristotle held that we become just by doing just acts and brave by doing brave acts. **Character is formed by repetition, so small daily choices decide how a person behaves in a crisis.** The 2013 paper quoted a line attributed to him: he counted braver the one who overcomes his desires than the one who overcomes his enemies."]],
+        ["The golden mean", ["Each virtue lies between two vices, one of excess and one of deficiency. **Courage lies between cowardice and rashness. Generosity lies between meanness and extravagance.** The mean is not a mathematical midpoint. The mean is what the situation requires, for the right reason, towards the right person, at the right time."]],
+        ["Practical wisdom", ["Finding the mean needs phronesis, or practical wisdom: **the ability to see what a particular situation requires.** Rules cannot anticipate every case, so good judgment matters most where the rules run out. Practical wisdom grows through experience and reflection."]],
+        ["Virtue in the civil service", ["Codes and rules set a floor. Character decides conduct where nobody is watching. **Training that builds habits of honesty, restraint and fairness does more than a longer code of conduct.** The weakness of virtue ethics is that it gives little direct guidance in a hard dilemma, so it works best alongside principles and law."]]
+      ],
+      take:"**Build the habits that make right action natural, and use practical wisdom where the rules run out.**",
+      tk:[["aristotle", "Virtue as Habit"], ["aristotle", "Golden Mean"], ["aristotle", "Practical Wisdom (Phronesis)"], ["aristotle", "Eudaimonia"]],
+      es:[[1, 2]],
+      src:"Aristotle, Nicomachean Ethics" },
+    { t:"Justice as fairness",
+      qs:["Q090"],
+      d:["**John Rawls asked what principles of justice people would choose if they did not know what place they would hold in society.** His answer, in A Theory of Justice (1971), is justice as fairness."],
+      secs:[
+        ["The veil of ignorance", ["Imagine choosing the rules of society without knowing your caste, class, gender, talents or beliefs. **Behind this veil of ignorance, nobody can design rules that favour themselves.** Rawls argued that people would then protect the worst position, since they might end up in it."]],
+        ["The two principles", ["**First, every person has an equal right to the most extensive basic liberties compatible with the same liberties for others.** Second, social and economic inequalities are acceptable only if they come with fair equality of opportunity, and if they benefit the least advantaged. Rawls called the second condition the difference principle."]],
+        ["Rawls in the Indian context", ["The 2016 paper asked candidates to analyse Rawls's concept of social justice in the Indian context. **Reservation, progressive taxation, targeted welfare and the Directive Principles all follow the logic of arranging inequality to help the least advantaged.** The Constitution's promise of equality of opportunity matches Rawls's second principle."]],
+        ["Criticisms", ["Robert Nozick argued that redistribution violates people's rights to what they have justly acquired. Amartya Sen argued in The Idea of Justice (2009) that we need not design a perfectly just society to remove clear injustices. **For an administrator, the useful test is Rawls's: would this policy be acceptable to someone who might be its poorest beneficiary?**"]]
+      ],
+      take:"**Judge a rule as if you might be the person it treats worst.**",
+      tk:[["rawls", "Veil of Ignorance"], ["rawls", "Justice as Fairness"], ["rawls", "Second Principle (b): Difference Principle"]],
+      es:[[6, 0], [6, 4]],
+      at:["veil"],
+      src:"Rawls, A Theory of Justice (1971); Sen, The Idea of Justice (2009)" },
+    { t:"Liberty and the harm principle",
+      qs:["Q246"],
+      d:["**John Stuart Mill argued in On Liberty (1859) that the only purpose for which power can rightly be used over a person against their will is to prevent harm to others.** A person's own good is not a sufficient reason."],
+      secs:[
+        ["The harm principle", ["Mill drew a line around the individual. **Conduct that affects only oneself should be free, even if others think it foolish.** Conduct that harms others may be restricted by law or by public opinion. The principle limits both the state and the pressure of society."]],
+        ["Against paternalism", ["Mill rejected paternalism towards adults. People may be advised, persuaded and warned, but not compelled for their own good. **His example is a person about to cross an unsafe bridge: stop them to warn them if there is no time, but let them cross once they understand the danger.** The 2026 paper's question on a doctor overriding a patient's choice turns on this line."]],
+        ["Freedom of thought and the tyranny of the majority", ["Mill defended free discussion because silencing an opinion robs everyone of the chance to correct error or to understand the truth better. **He warned that the tyranny of the majority, working through opinion and custom, can be more oppressive than law.** Isaiah Berlin later distinguished negative liberty, freedom from interference, from positive liberty, the capacity to direct one's own life."]],
+        ["Liberty in administration", ["The harm principle guides many decisions: bans, public health measures, regulation of speech and personal conduct. **Ask whether the restriction prevents harm to others, whether it is the least restrictive means, and whether it respects the person's own choices.** Mill allowed limits where people cannot yet decide for themselves, such as children."]]
+      ],
+      take:"**Restrict a person's freedom to prevent harm to others, not to make them live as you think best.**",
+      tk:[["mill", "Harm Principle"], ["mill", "Liberty of Thought and Expression"], ["mill", "Tyranny of the Majority"], ["berlin", "Negative Liberty"], ["berlin", "Positive Liberty"]],
+      es:[[6, 4], [2, 4]],
+      at:["nudge"],
+      src:"Mill, On Liberty (1859); Berlin, Two Concepts of Liberty (1958)" },
+    { t:"The social contract",
+      qs:[],
+      d:["**Social contract theory explains the authority of government as the result of an agreement among the people it governs.** Government is legitimate because, and to the extent that, it serves the purposes for which people accept it."],
+      secs:[
+        ["Hobbes, Locke and Rousseau", ["Thomas Hobbes, in Leviathan (1651), described life without government as solitary, poor, nasty, brutish and short, so people give up their freedom to a sovereign in exchange for security. **John Locke, in his Two Treatises of Government (1689), held that people keep natural rights to life, liberty and property, and that a government which violates them loses its claim to obedience.** Jean-Jacques Rousseau, in The Social Contract (1762), grounded law in the general will of the whole people."]],
+        ["An Indian parallel", ["The Arthashastra tells a similar story. **When people suffered under matsya nyaya, the law of the fish in which the big devour the small, they made Manu their king and paid him a share of their grain for protection.** Protection and welfare are the king's side of the bargain."]],
+        ["The Constitution as a contract", ["India's Constitution opens with \"We, the people of India\", who give the Constitution to themselves. **Every official exercises power held in trust under that agreement.** Legitimacy therefore depends on keeping its terms: rights respected, power accountable, and the public interest served."]],
+        ["Using the idea in answers", ["The social contract explains why trust matters in governance. **When the state fails to protect, to deliver or to be fair, it weakens its own authority, and obedience turns into mere compliance or resistance.** The idea also grounds the duty of citizens to obey just laws and to use lawful means of change."]]
+      ],
+      take:"**Authority rests on consent, and consent lasts only while government keeps its side of the bargain.**",
+      tk:[["hobbes", "Social Contract"], ["hobbes", "State of Nature"], ["locke", "Government by Consent"], ["locke", "Natural Rights"], ["rousseau", "General Will (Volonté Générale)"]],
+      es:[[7, 4]],
+      src:"Hobbes, Leviathan (1651); Locke, Two Treatises of Government (1689); Rousseau, The Social Contract (1762); Arthashastra, Book 1" },
+    { t:"The ethics of care",
+      qs:[],
+      d:["**The ethics of care holds that moral life is centred on relationships and responsibility for others' needs, not only on impartial rules and rights.** Carol Gilligan developed it in In a Different Voice (1982), and Nel Noddings extended it."],
+      secs:[
+        ["Care and justice", ["Gilligan found that many people, especially women in her studies, reasoned about moral problems in terms of relationships and responsibilities rather than abstract rights. **The ethics of justice asks what is fair between equals. The ethics of care asks who needs help and how to respond to them.** She argued that the two are different moral voices, not higher and lower stages."]],
+        ["Attention to the particular person", ["Care begins with attention: noticing a person's actual situation, listening, and responding to need. **A rule applied without attention can be correct and still cruel.** Care explains why the manner of delivering a service matters as much as the entitlement."]],
+        ["Care in public service", ["Frontline work in health, child protection, disaster relief and welfare depends on care. **An officer who explains, listens and treats a claimant with dignity makes the same rule humane.** Care also supports a duty to those who cannot speak for themselves: children, the elderly, the disabled and future generations."]],
+        ["Limits and balance", ["Care without justice can become favouritism towards those one knows. Care without support leads to burnout among frontline staff. **The two ethics work best together: justice sets fair rules, and care decides how those rules meet the person in front of you.**"]]
+      ],
+      take:"**Apply fair rules with attention to the person in front of you.**",
+      tk:[["gilligan", "Ethics of Care vs. Ethics of Justice"], ["gilligan", "Relevance to Administration"], ["gilligan", "Complement, Not Substitute"]],
+      es:[[4, 4]],
+      at:["samaritan"],
+      src:"Gilligan, In a Different Voice (1982); Noddings, Caring (1984)" },
+    { t:"Gandhi's method: ahimsa, satyagraha and swaraj",
+      qs:["Q243", "Q010"],
+      d:["**Gandhi's ethics joins three ideas.** Ahimsa is non-violence as active love. Satyagraha is insistence on truth through non-violent resistance. Swaraj is self-rule that begins with rule over oneself. Beneath all three lies his belief that the means shape the end."],
+      secs:[
+        ["Ahimsa", ["For Gandhi, ahimsa was not merely avoiding harm. **Ahimsa meant active goodwill even towards an opponent, and the refusal to humiliate anyone.** He held that non-violence is the law of our species, as violence is the law of the brute."]],
+        ["Satyagraha", ["Gandhi developed satyagraha in South Africa from 1906. **Satyagraha seeks to convert the opponent through truth, reason and voluntary self-suffering, not to defeat them.** He suspended the Non-Cooperation Movement after the violence at Chauri Chaura in 1922, because a movement that turned violent had lost its method."]],
+        ["Purity of means and swaraj", ["In Hind Swaraj (1909) Gandhi wrote that the means are to the end as the seed is to the tree. **An unjust method cannot produce a just result.** Swaraj meant more than political independence: self-discipline in the individual, and self-governing villages in society."]],
+        ["Gandhi in administration", ["The method translates into dialogue before force, persuasion before coercion, and restraint in the use of power. **Decentralisation through panchayats reflects his idea of swaraj.** Critics note that non-violent methods depend on an opponent who can be moved by conscience. Ambedkar felt that Gandhi's fast of 1932 against separate electorates put pressure on him rather than persuading him."]]
+      ],
+      take:"**Pursue even a just end only by just means, and seek to convert the opponent rather than defeat them.**",
+      tk:[["gandhi", "Ahimsa"], ["gandhi", "Satyagraha"], ["gandhi", "Purity of Means"], ["gandhi", "Swaraj"]],
+      es:[[1, 0]],
+      src:"Gandhi, Hind Swaraj (1909) and An Autobiography: The Story of My Experiments with Truth" },
+    { t:"The seven social sins",
+      qs:["Q089"],
+      d:["**Gandhi published a list of seven social sins in Young India in 1925: politics without principles, wealth without work, pleasure without conscience, knowledge without character, commerce without morality, science without humanity, and worship without sacrifice.** Each names an activity cut off from the value that should guide it."],
+      secs:[
+        ["What the list teaches", ["Every pair joins something good with the value that keeps it good. **Politics, wealth, pleasure, knowledge, commerce, science and worship are not wrong in themselves. Each becomes a sin when separated from principle, work, conscience, character, morality, humanity or sacrifice.** The 2016 paper asked candidates to discuss the concept."]],
+        ["In governance and public life", ["Politics without principles appears as opportunism and power for its own sake. **Wealth without work appears as rent-seeking and corruption.** Commerce without morality appears as adulteration, fraud and exploitation. Knowledge without character appears in the educated official who uses expertise to get around the rules."]],
+        ["In science and technology", ["Science without humanity is the sin of the present century. **Technology built without regard for those it affects, from weapons to surveillance to biased algorithms, is knowledge used against people.** The remedy is ethical review, accountability and attention to who bears the cost."]],
+        ["Using the list", ["The list works as a checklist for an answer. **For any institution or decision, ask which of the seven separations is happening.** The corrective is to rejoin the activity to its value: principled politics, earned wealth, responsible science."]]
+      ],
+      take:"**Each good activity needs its guiding value: politics needs principle, wealth needs work, knowledge needs character.**",
+      tk:[["gandhi", "Seven Social Sins"]],
+      src:"Gandhi, Young India, 1925" },
+    { t:"Sarvodaya, antyodaya and integral humanism",
+      qs:[],
+      d:["**Sarvodaya means the welfare of all. Antyodaya means the rise of the last person.** Both judge a society by what happens to its weakest members, and both run from Gandhi through Vinoba Bhave and Deendayal Upadhyaya into Indian policy."],
+      secs:[
+        ["Gandhi's sarvodaya", ["Gandhi took the idea from John Ruskin's Unto This Last, which he paraphrased in Gujarati in 1908 as Sarvodaya. **He drew three lessons: the good of the individual is contained in the good of all, all work has equal dignity, and a life of labour is the life worth living.** His talisman turns the idea into a test: recall the face of the poorest person you have seen, and ask whether your step will help them."]],
+        ["Vinoba and Bhoodan", ["Vinoba Bhave carried sarvodaya into practice. **In the Bhoodan movement from 1951, he walked across India asking landowners to give land to the landless.** The movement showed both the power of moral persuasion and its limits without institutional support."]],
+        ["Deendayal Upadhyaya's integral humanism", ["In lectures in 1965, Deendayal Upadhyaya set out integral humanism: **development should serve the whole person, body, mind, intellect and spirit, and not the individual or the state alone.** He made antyodaya the test of any economic arrangement: judge it by the condition of the last person in the queue."]],
+        ["In policy and administration", ["Antyodaya runs through Indian welfare: the Antyodaya Anna Yojana of 2000 for the poorest families, and the Deendayal Antyodaya Yojana for rural livelihoods. **For an officer, antyodaya means measuring a scheme by whether it reaches the last eligible person, not by its average.**"]]
+      ],
+      take:"**Judge every policy by what it does for the last person.**",
+      tk:[["gandhi", "Sarvodaya & Antyodaya"], ["vinoba", "Sarvodaya"], ["vinoba", "Bhoodan Movement (1951)"], ["deendayal", "Integral Humanism (1965)"], ["deendayal", "Antyodaya"]],
+      es:[[4, 4], [6, 2]],
+      src:"Gandhi, Sarvodaya (1908); Deendayal Upadhyaya, Integral Humanism (1965)" },
+    { t:"Kautilya: rajadharma and yogakshema",
+      qs:["Q091"],
+      d:["**Kautilya's Arthashastra treats governance as a duty to secure the welfare and security of the people, yogakshema.** The ruler's own happiness lies in the happiness of the subjects."],
+      secs:[
+        ["The ruler's duty", ["The Arthashastra states that in the happiness of the subjects lies the happiness of the king, and in their welfare his welfare. **Whatever pleases the ruler personally is not good. Whatever pleases the subjects is good.** Rajadharma, the duty of the ruler, is service, discipline and protection."]],
+        ["The state and its elements", ["Kautilya's saptanga theory names seven elements of the state: the ruler, ministers, territory and people, the fort, the treasury, the army, and allies. **The state is strong only when all seven are sound, and a corrupt minister or an empty treasury weakens the whole.**"]],
+        ["Corruption and its control", ["Kautilya listed forty ways in which officials embezzle. **He wrote that just as it is impossible not to taste honey placed on the tongue, it is hard for an official handling revenue not to taste a little of it.** He compared corrupt officials to fish moving in water, whom nobody can see drinking. His remedies were testing officials' integrity before appointment, auditing accounts and rewarding informers."]],
+        ["Using Kautilya", ["The 2016 paper quoted the view that corruption causes misuse of the treasury, inefficiency and obstruction to national development, and asked for Kautilya's views. **Kautilya supplies an Indian basis for welfare governance, anti-corruption systems and pragmatic statecraft.** His realism about human weakness is a reason to design institutions that do not rely on virtue alone."]]
+      ],
+      take:"**Govern for the people's welfare and security, and design checks that assume officials will be tempted.**",
+      tk:[["kautilya", "Yogakshema"], ["kautilya", "Saptanga Theory"], ["kautilya", "Forty Ways of Embezzlement"], ["kautilya", "Fish in Water"]],
+      es:[[7, 3]],
+      src:"Kautilya, Arthashastra" },
+    { t:"Nishkama karma: the Gita's ethics of duty",
+      qs:["Q098"],
+      d:["**Nishkama karma is action done as duty, without attachment to its fruits.** The Bhagavad Gita states it in the line \"your right is to the work alone, never to its fruits\" (2.47)."],
+      secs:[
+        ["Duty without attachment", ["The Gita asks a person to do their duty fully while letting go of the craving for reward, praise or a particular result. **Evenness of mind in success and failure is called yoga (2.48).** Detachment is not indifference. The worker still cares about doing the work well."]],
+        ["Svadharma and devotion to duty", ["The Gita teaches that one's own duty, done even imperfectly, is better than another's duty done well (3.35), and that a person devoted to their own work attains perfection (18.45). **The 2025 paper quoted this last idea: one who is devoted to one's duty attains highest perfection in life.**"]],
+        ["Lokasangraha", ["The Gita also asks action for lokasangraha, the welfare and holding together of the world (3.20). **Duty is not private self-improvement. Duty serves others.** Tilak read the Gita as a call to action in Gita Rahasya (1915), and Gandhi called it his spiritual dictionary."]],
+        ["In the civil service", ["Nishkama karma describes the ideal public servant: working without seeking credit, without fear of blame, and without favouring outcomes that benefit oneself. **An officer who does not need recognition can take the unpopular right decision.** Detachment from fruits must not become detachment from consequences. An officer still owns the results of a decision."]]
+      ],
+      take:"**Do your duty fully, for the good of others, without craving its rewards or fearing its blame.**",
+      tk:[["tilak", "Gita Rahasya"]],
+      src:"Bhagavad Gita 2.47, 2.48, 3.20, 3.35, 18.45; Tilak, Gita Rahasya (1915)" },
+    { t:"Mahavira: ahimsa, anekantavada and aparigraha",
+      qs:["Q065"],
+      d:["**Mahavira, the twenty-fourth Tirthankara of Jainism, taught a discipline of non-violence, many-sided truth and non-possession.** The 2025 paper asked for his major teachings and their relevance today."],
+      secs:[
+        ["The five vows", ["Jain ethics rests on five vows: ahimsa (non-violence), satya (truth), asteya (not stealing), brahmacharya (restraint) and aparigraha (non-possession). **Ahimsa is the highest, extending to all living beings.** The path to liberation is the three jewels: right faith, right knowledge and right conduct."]],
+        ["Anekantavada", ["Anekantavada holds that reality has many sides, and that no single viewpoint grasps the whole truth. **Syadvada expresses this in speech: a claim is true \"in some respect\".** The parable of the blind men and the elephant, used in Jain teaching, makes the point: each describes a part and mistakes it for the whole."]],
+        ["Aparigraha", ["Aparigraha is freedom from possessiveness: taking only what one needs. **Attachment to possessions is itself a form of bondage.** Gandhi drew on the same idea in his own vow of non-possession and in trusteeship."]],
+        ["Relevance today", ["Anekantavada supports tolerance, dialogue and humility in a plural society. **Ahimsa supports non-violent conflict resolution and care for animals and the environment.** Aparigraha speaks to consumerism, sustainability and integrity in office, where the temptation to accumulate is constant."]]
+      ],
+      take:"**Harm none, hold only what you need, and remember that your view is one side of the truth.**",
+      tk:[["mahavira", "Five Vows"], ["mahavira", "Ahimsa Paramo Dharma"], ["mahavira", "Anekantavada"], ["mahavira", "Syadvada"], ["mahavira", "Aparigraha"]],
+      es:[[4, 1]],
+      at:["anekanta", "blindmen"],
+      src:"Jain tradition and the teachings of Mahavira" },
   ],
   "Moral Thinkers & Philosophers of the World":[
     { t:"Forgiveness, anger and moral strength",
@@ -773,6 +1026,7 @@ const GS4_CONCEPTS = {
           "Anger and intolerance work against this from the other side. Both close a person to correction. An angry mind cannot assess evidence, and an intolerant one has decided in advance which evidence counts. Both feel like conviction from inside."]]
       ],
       take:"**Forgiveness ends the cycle; retaliation continues it.** In public life this matters because an administration that carries grievances forward will act on them, and the people it acts on will carry their own.",
+      tk:[["gandhi", "Ahimsa"], ["mandela", "Reconciliation over Revenge"]],
       src:"Gandhi on forgiveness; set in the 2015 and 2021 papers" },
     { t:"Service as the route to self-realisation",
       qs:["Q079", "Q070", "Q074", "Q078"],
@@ -788,6 +1042,7 @@ const GS4_CONCEPTS = {
           "The honest limit is that service can itself become a performance. Help given for recognition is still help, but it stops when nobody is watching, and it makes demands on the person receiving it. The simplest acts of kindness are held up precisely because they carry no audience."]]
       ],
       take:"**A person who serves stops asking what they are worth, because the question has been replaced by something more interesting.**",
+      tk:[["vivekananda", "Daridra Narayana / Practical Vedanta"], ["mother-teresa", "Service to the Destitute"]],
       src:"Gandhi and Vivekananda on service, from quotations set across the papers" },
     { t:"Corruption and who can end it",
       qs:["Q072", "Q087", "Q091"],
@@ -803,9 +1058,11 @@ const GS4_CONCEPTS = {
           "That distinction is also why anti-corruption law struggles. Law can prohibit what is clearly wrong. It cannot reach the large space of decisions that are within a person's authority and still improper."]]
       ],
       take:"**Rules limit what you may do; ethics limits what you will do within that.** Corruption occupies the difference between the two.",
+      tk:[["kautilya", "Forty Ways of Embezzlement"], ["kautilya", "Fish in Water"], ["kalam", "Integrity and Simplicity"]],
+      at:["gyges", "principalagent"],
       src:"Kautilya, Arthashastra, on the difficulty of detection; Kalam on the three people" },
     { t:"Choosing and using a moral exemplar",
-      qs:["Q018", "Q096", "Q067"],
+      qs:["Q067", "Q026", "Q018", "Q096"],
       d:["**A moral exemplar is a person whose conduct shows what a value looks like when it is actually lived.** The papers ask which ethical personality has inspired you and how you applied their teachings. The question is about application, not admiration."],
       secs:[
         ["What a life shows that a rule cannot", [
@@ -835,7 +1092,7 @@ const GS4_CONCEPTS = {
       take:"**A person owes something to themselves and something beyond themselves, and the whole moral difficulty is in the proportion.**",
       src:"Hillel's question; the peace and ambition quotations are from the papers" },
     { t:"Thought, character and self-formation",
-      qs:["Q066", "Q080"],
+      qs:["Q066", "Q073", "Q080"],
       d:["**The claim is that a person is made by what they habitually think.** Vivekananda's version is that we are what our thinking has made us, so we should take care what we think. Gandhi's is that a man is but the product of his thoughts, and he becomes what he thinks."],
       secs:[
         ["From thought to character", [
@@ -864,9 +1121,11 @@ const GS4_CONCEPTS = {
           "The link between the two is that self-examination is what makes truthfulness possible. A person who has not examined their own motives will misreport them sincerely."]]
       ],
       take:"**Where there is righteousness in the heart there is beauty in the character.** The order in that sequence is the argument: what a person is inwardly determines what they become outwardly, and not the reverse.",
+      tk:[["socrates", "The Examined Life"], ["socrates", "Socratic Method (Elenchus)"]],
+      at:["gadfly", "cave"],
       src:"Socrates in Plato's Apology; the righteousness sequence is from a quotation set in 2019" },
     { t:"How rightness is judged: consequences, duty and character",
-      qs:["Q245", "Q088", "Q090"],
+      qs:["Q245", "Q010", "Q090", "Q088"],
       d:["**Three positions answer the question of what makes an act right, and each locates rightness somewhere different.** The 2018 paper asked candidates to compare them directly."],
       secs:[
         ["Consequentialism: outcomes", [
@@ -882,6 +1141,7 @@ const GS4_CONCEPTS = {
         ["Using all three tests", [
           "**Most real decisions use all three tests.** Naming which one an argument rests on is what turns an opinion into a position."]]
       ],
+      tk:[["bentham", "Principle of Utility"], ["kant", "Categorical Imperative (1st formulation)"], ["aristotle", "Virtue as Habit"], ["gandhi", "Purity of Means"]],
       src:"The three normative positions; Weber on the ethics of office; Rawls on the least advantaged" },
     { t:"Human dignity: people as ends, never merely means",
       qs:["Q068", "Q094"],
@@ -897,6 +1157,7 @@ const GS4_CONCEPTS = {
           "This is why dignity appears in the Preamble and why Article 21 has been read to include living with dignity rather than merely existing. **Dignity is not a benefit conferred by the state.** It is the status a person has, which the state is required to respect."]]
       ],
       take:"**A person is not a resource with feelings attached.** They have their own ends, and any arrangement that treats those ends as irrelevant has crossed the line, however efficient it is.",
+      tk:[["kant", "Humanity Formula (2nd formulation)"], ["nussbaum", "Dignity Threshold"]],
       src:"Kant, Groundwork of the Metaphysics of Morals; Constitution of India, Preamble and Article 21" },
     { t:"Indian moral teachings: Buddha and Guru Nanak",
       qs:["Q069", "Q077"],
@@ -910,6 +1171,7 @@ const GS4_CONCEPTS = {
           "Their present relevance is easy to state without exaggeration. Both reject inherited hierarchy as a basis for worth. Both make honest work a moral requirement rather than a necessity. Both put the test of a belief in conduct rather than in profession."]]
       ],
       take:"**Neither asked for withdrawal from the world.** The Buddha's path is followed in ordinary life, and Nanak explicitly rejected renunciation in favour of the householder who works and shares. That is what makes both usable by an administrator rather than only by a seeker.",
+      tk:[["buddha", "Eightfold Path"], ["buddha", "Middle Path"], ["guru-nanak", "Kirat Karo, Naam Japo, Vand Chhako"]],
       src:"The Buddha's eightfold path; Guru Nanak's three principles and the institution of langar" },
     { t:"Equality and the awakening of women",
       qs:["Q070", "Q228"],
@@ -925,6 +1187,7 @@ const GS4_CONCEPTS = {
           "The honest complication is that formal advance and social practice move at different speeds. Laws on inheritance, marriage age and workplace conduct have advanced considerably. Property registered in women's names, participation in paid work, and freedom of movement have not moved correspondingly."]]
       ],
       take:"**Progress for women is not one item on a list of national goals.** It is the condition on which most of the other items depend.",
+      tk:[["amartya-sen", "Missing Women"], ["savitribai-phule", "India's First Woman Teacher"], ["wollstonecraft", "Education as Emancipation"]],
       src:"The quotation is from the 2023 paper; the propagation argument follows Sen on women's agency" },
     { t:"Character as the condition for capability",
       qs:["Q085"],
@@ -942,7 +1205,7 @@ const GS4_CONCEPTS = {
       take:"**Character decides what capability is used for, and capability decides how much that decision matters.**",
       src:"The hiring formulation is quoted in the 2018 paper" },
     { t:"Trusteeship: wealth and power held in trust",
-      qs:["Q244"],
+      qs:["Q244", "Q095"],
       d:["**Trusteeship is Gandhi's idea that a person who holds wealth or power holds it on behalf of society, not as an owner.** The holder may keep what a reasonable life needs. The rest is to be used for the common good."],
       secs:[
         ["Gandhi's idea", ["Gandhi drew the idea from the opening verse of the Isha Upanishad, which asks a person to enjoy the world by renouncing it, and from the English law of trusts. A practical trusteeship formula was later drafted by his associates and revised by him. **The formula gives private ownership no standing except what society permits for its own welfare**, allows the state to regulate trusteeship by law, and proposes a minimum and a maximum income."]],
@@ -951,6 +1214,8 @@ const GS4_CONCEPTS = {
         ["The limits of the idea", ["Critics, Ambedkar among them, doubted that owners would ever act as trustees of their own accord. **Trusteeship that depends only on the holder's conscience leaves the poor waiting on the virtue of the rich.** For this reason the formula itself allowed regulation by law. In administration the equivalent is that the officer's sense of trust is backed by rules, audit and accountability."]]
       ],
       take:"**Whatever you hold in office, you hold for others.** Use it for those who need it most, waste none of it, and account for all of it.",
+      es:[[6, 0]],
+      tk:[["gandhi", "Trusteeship"], ["vinoba", "Bhoodan Movement (1951)"]],
       src:"Gandhi's writings on trusteeship; the public trust doctrine in M. C. Mehta v Kamal Nath (1996); the question is from the 2026 paper" },
     { t:"Civil disobedience in a constitutional democracy",
       qs:["Q243"],
@@ -962,6 +1227,8 @@ const GS4_CONCEPTS = {
         ["How the state should respond", ["Article 19 protects peaceful assembly and speech, subject to reasonable restrictions. In Amit Sahni v Commissioner of Police in 2020, the Supreme Court held that protest is a right but that public roads cannot be occupied indefinitely. **The state should protect the right to protest, engage with the grievance, and enforce the law against violence without treating dissent itself as a threat.** Answering the substance of a genuine concern is the surest way to keep protest within constitutional bounds."]]
       ],
       take:"**Keep lawful channels open and responsive, so that disobedience is rarely needed.** Where it comes, judge it by its method and its grievance, not by its inconvenience.",
+      es:[[1, 3], [7, 4]],
+      tk:[["ambedkar", "Grammar of Anarchy"], ["thoreau", "Civil Disobedience (1849)"], ["mlk", "Letter from Birmingham Jail"], ["gandhi", "Satyagraha"]],
       src:"Ambedkar's speech of 25 November 1949; King, Letter from Birmingham Jail (1963); Rawls, A Theory of Justice; the question is from the 2026 paper" },
     { t:"Duty and charity",
       qs:["Q251"],
@@ -973,7 +1240,183 @@ const GS4_CONCEPTS = {
         ["Limits and objections", ["The objections deserve a hearing. A demand without limit could consume a person's whole life, and individual giving cannot replace just institutions. **The measured version of the claim survives both objections**: a duty to give some part of what one can spare, alongside a duty to support fair public systems. The question's own condition, giving without significantly affecting financial stability, is exactly this measured version."]]
       ],
       take:"**Where suffering is severe and your cost is small, helping is owed, not merely admired.** Charity begins where the duty ends.",
+      es:[[6, 0]],
+      tk:[["kant", "Duty over Inclination"], ["mother-teresa", "Small Acts, Great Love"]],
+      at:["drowningchild", "samaritan"],
       src:"Singer, Famine, Affluence, and Morality (1972); Kant on imperfect duties; the question is from the 2026 paper" },
+    { t:"Utilitarianism: the greatest good and its limits",
+      qs:["Q010"],
+      d:["**Utilitarianism judges an action by its consequences: the right act is the one that produces the greatest happiness for the greatest number.** Jeremy Bentham founded it, and John Stuart Mill refined it."],
+      secs:[
+        ["Bentham's principle of utility", ["Bentham opened his Introduction to the Principles of Morals and Legislation (1789) with the claim that nature has placed mankind under two masters, pain and pleasure. **An act is right to the degree that it increases happiness and reduces suffering, with each person counting for one and nobody for more than one.** His felicific calculus weighed pleasures by intensity, duration, certainty, nearness, fruitfulness, purity and extent."]],
+        ["Mill's higher pleasures", ["Mill's Utilitarianism (1863) answered the charge that the theory was fit only for pigs. **Some pleasures are higher than others: the pleasures of the mind, of friendship and of moral action count for more than bodily ones.** He wrote that it is better to be Socrates dissatisfied than a fool satisfied. Mill also defended rules that experience shows tend to promote happiness."]],
+        ["Where it serves the administrator", ["Utilitarian reasoning runs through public policy. Cost-benefit analysis, triage in a disaster, and choosing where a limited budget does the most good all ask which option produces the greatest total benefit. **The theory is impartial and practical: it asks about the effects of a decision on everyone.**"]],
+        ["Its limits", ["The weakness is the minority. **A policy can raise total welfare while imposing severe loss on a few, and the arithmetic records no objection.** Rawls argued that utilitarianism ignores the separateness of persons. Rights, dignity and justice act as limits that a sum of benefits cannot override. Measuring happiness is also far harder than the calculus suggests."]]
+      ],
+      take:"**Use utilitarian reasoning to count everyone's interests, and rights to protect the person the count would sacrifice.**",
+      tk:[["bentham", "Principle of Utility"], ["bentham", "Felicific Calculus"], ["mill", "Qualitative Utilitarianism"]],
+      es:[[6, 4], [1, 1]],
+      at:["trolley", "omelas"],
+      src:"Bentham, An Introduction to the Principles of Morals and Legislation (1789); Mill, Utilitarianism (1863)" },
+    { t:"Kant: duty and the categorical imperative",
+      qs:["Q068"],
+      d:["**Kant held that an action is right because of the principle behind it, not because of its results.** A moral rule binds everyone unconditionally. He called such a rule a categorical imperative."],
+      secs:[
+        ["The two main formulations", ["Kant set out the idea in the Groundwork of the Metaphysics of Morals (1785). **First: act only on a principle that you could will to become a universal law.** A person who lies when convenient could not want everyone to lie, because trust would collapse. **Second: treat humanity, in yourself and in others, always as an end and never merely as a means.**"]],
+        ["Good will and duty", ["For Kant, the only thing good without qualification is a good will. An act has moral worth when it is done from duty, not merely in line with duty. **A shopkeeper who gives honest change only because honesty is good for business acts rightly, but without moral worth.** The 2024 paper quoted his line that in law a man is guilty when he violates the rights of others, while in ethics he is guilty if he only thinks of doing so."]],
+        ["Kant in public service", ["Kant gives the administrator two tests. **Would I accept this rule if everyone in my position followed it? Am I treating any citizen merely as a means to a target or a result?** The tests rule out making exceptions for oneself, using people as numbers, and deceiving the public for its own good."]],
+        ["Its limits", ["Kant's ethics can be rigid. In a short essay of 1797 he argued that one may not lie even to a murderer asking where a friend is hiding. **Critics reply that duties can conflict, and that consequences cannot be ignored when lives are at stake.** Most practical ethics combines Kant's respect for persons with attention to outcomes."]]
+      ],
+      take:"**Act only on rules you would accept for everyone, and never use a person merely as a means.**",
+      tk:[["kant", "Categorical Imperative (1st formulation)"], ["kant", "Humanity Formula (2nd formulation)"], ["kant", "Good Will"], ["kant", "Duty over Inclination"]],
+      es:[[1, 4]],
+      at:["trolley"],
+      src:"Kant, Groundwork of the Metaphysics of Morals (1785)" },
+    { t:"Virtue ethics and practical wisdom",
+      qs:["Q097"],
+      d:["**Virtue ethics asks not \"what rule applies?\" but \"what would a person of good character do?\"** Its founder is Aristotle, whose Nicomachean Ethics treats virtue as a settled disposition built by practice."],
+      secs:[
+        ["Virtue as habit", ["Aristotle held that we become just by doing just acts and brave by doing brave acts. **Character is formed by repetition, so small daily choices decide how a person behaves in a crisis.** The 2013 paper quoted a line attributed to him: he counted braver the one who overcomes his desires than the one who overcomes his enemies."]],
+        ["The golden mean", ["Each virtue lies between two vices, one of excess and one of deficiency. **Courage lies between cowardice and rashness. Generosity lies between meanness and extravagance.** The mean is not a mathematical midpoint. The mean is what the situation requires, for the right reason, towards the right person, at the right time."]],
+        ["Practical wisdom", ["Finding the mean needs phronesis, or practical wisdom: **the ability to see what a particular situation requires.** Rules cannot anticipate every case, so good judgment matters most where the rules run out. Practical wisdom grows through experience and reflection."]],
+        ["Virtue in the civil service", ["Codes and rules set a floor. Character decides conduct where nobody is watching. **Training that builds habits of honesty, restraint and fairness does more than a longer code of conduct.** The weakness of virtue ethics is that it gives little direct guidance in a hard dilemma, so it works best alongside principles and law."]]
+      ],
+      take:"**Build the habits that make right action natural, and use practical wisdom where the rules run out.**",
+      tk:[["aristotle", "Virtue as Habit"], ["aristotle", "Golden Mean"], ["aristotle", "Practical Wisdom (Phronesis)"], ["aristotle", "Eudaimonia"]],
+      es:[[1, 2]],
+      src:"Aristotle, Nicomachean Ethics" },
+    { t:"Justice as fairness",
+      qs:["Q090"],
+      d:["**John Rawls asked what principles of justice people would choose if they did not know what place they would hold in society.** His answer, in A Theory of Justice (1971), is justice as fairness."],
+      secs:[
+        ["The veil of ignorance", ["Imagine choosing the rules of society without knowing your caste, class, gender, talents or beliefs. **Behind this veil of ignorance, nobody can design rules that favour themselves.** Rawls argued that people would then protect the worst position, since they might end up in it."]],
+        ["The two principles", ["**First, every person has an equal right to the most extensive basic liberties compatible with the same liberties for others.** Second, social and economic inequalities are acceptable only if they come with fair equality of opportunity, and if they benefit the least advantaged. Rawls called the second condition the difference principle."]],
+        ["Rawls in the Indian context", ["The 2016 paper asked candidates to analyse Rawls's concept of social justice in the Indian context. **Reservation, progressive taxation, targeted welfare and the Directive Principles all follow the logic of arranging inequality to help the least advantaged.** The Constitution's promise of equality of opportunity matches Rawls's second principle."]],
+        ["Criticisms", ["Robert Nozick argued that redistribution violates people's rights to what they have justly acquired. Amartya Sen argued in The Idea of Justice (2009) that we need not design a perfectly just society to remove clear injustices. **For an administrator, the useful test is Rawls's: would this policy be acceptable to someone who might be its poorest beneficiary?**"]]
+      ],
+      take:"**Judge a rule as if you might be the person it treats worst.**",
+      tk:[["rawls", "Veil of Ignorance"], ["rawls", "Justice as Fairness"], ["rawls", "Second Principle (b): Difference Principle"]],
+      es:[[6, 0], [6, 4]],
+      at:["veil"],
+      src:"Rawls, A Theory of Justice (1971); Sen, The Idea of Justice (2009)" },
+    { t:"Liberty and the harm principle",
+      qs:["Q246"],
+      d:["**John Stuart Mill argued in On Liberty (1859) that the only purpose for which power can rightly be used over a person against their will is to prevent harm to others.** A person's own good is not a sufficient reason."],
+      secs:[
+        ["The harm principle", ["Mill drew a line around the individual. **Conduct that affects only oneself should be free, even if others think it foolish.** Conduct that harms others may be restricted by law or by public opinion. The principle limits both the state and the pressure of society."]],
+        ["Against paternalism", ["Mill rejected paternalism towards adults. People may be advised, persuaded and warned, but not compelled for their own good. **His example is a person about to cross an unsafe bridge: stop them to warn them if there is no time, but let them cross once they understand the danger.** The 2026 paper's question on a doctor overriding a patient's choice turns on this line."]],
+        ["Freedom of thought and the tyranny of the majority", ["Mill defended free discussion because silencing an opinion robs everyone of the chance to correct error or to understand the truth better. **He warned that the tyranny of the majority, working through opinion and custom, can be more oppressive than law.** Isaiah Berlin later distinguished negative liberty, freedom from interference, from positive liberty, the capacity to direct one's own life."]],
+        ["Liberty in administration", ["The harm principle guides many decisions: bans, public health measures, regulation of speech and personal conduct. **Ask whether the restriction prevents harm to others, whether it is the least restrictive means, and whether it respects the person's own choices.** Mill allowed limits where people cannot yet decide for themselves, such as children."]]
+      ],
+      take:"**Restrict a person's freedom to prevent harm to others, not to make them live as you think best.**",
+      tk:[["mill", "Harm Principle"], ["mill", "Liberty of Thought and Expression"], ["mill", "Tyranny of the Majority"], ["berlin", "Negative Liberty"], ["berlin", "Positive Liberty"]],
+      es:[[6, 4], [2, 4]],
+      at:["nudge"],
+      src:"Mill, On Liberty (1859); Berlin, Two Concepts of Liberty (1958)" },
+    { t:"The social contract",
+      qs:[],
+      d:["**Social contract theory explains the authority of government as the result of an agreement among the people it governs.** Government is legitimate because, and to the extent that, it serves the purposes for which people accept it."],
+      secs:[
+        ["Hobbes, Locke and Rousseau", ["Thomas Hobbes, in Leviathan (1651), described life without government as solitary, poor, nasty, brutish and short, so people give up their freedom to a sovereign in exchange for security. **John Locke, in his Two Treatises of Government (1689), held that people keep natural rights to life, liberty and property, and that a government which violates them loses its claim to obedience.** Jean-Jacques Rousseau, in The Social Contract (1762), grounded law in the general will of the whole people."]],
+        ["An Indian parallel", ["The Arthashastra tells a similar story. **When people suffered under matsya nyaya, the law of the fish in which the big devour the small, they made Manu their king and paid him a share of their grain for protection.** Protection and welfare are the king's side of the bargain."]],
+        ["The Constitution as a contract", ["India's Constitution opens with \"We, the people of India\", who give the Constitution to themselves. **Every official exercises power held in trust under that agreement.** Legitimacy therefore depends on keeping its terms: rights respected, power accountable, and the public interest served."]],
+        ["Using the idea in answers", ["The social contract explains why trust matters in governance. **When the state fails to protect, to deliver or to be fair, it weakens its own authority, and obedience turns into mere compliance or resistance.** The idea also grounds the duty of citizens to obey just laws and to use lawful means of change."]]
+      ],
+      take:"**Authority rests on consent, and consent lasts only while government keeps its side of the bargain.**",
+      tk:[["hobbes", "Social Contract"], ["hobbes", "State of Nature"], ["locke", "Government by Consent"], ["locke", "Natural Rights"], ["rousseau", "General Will (Volonté Générale)"]],
+      es:[[7, 4]],
+      src:"Hobbes, Leviathan (1651); Locke, Two Treatises of Government (1689); Rousseau, The Social Contract (1762); Arthashastra, Book 1" },
+    { t:"The ethics of care",
+      qs:[],
+      d:["**The ethics of care holds that moral life is centred on relationships and responsibility for others' needs, not only on impartial rules and rights.** Carol Gilligan developed it in In a Different Voice (1982), and Nel Noddings extended it."],
+      secs:[
+        ["Care and justice", ["Gilligan found that many people, especially women in her studies, reasoned about moral problems in terms of relationships and responsibilities rather than abstract rights. **The ethics of justice asks what is fair between equals. The ethics of care asks who needs help and how to respond to them.** She argued that the two are different moral voices, not higher and lower stages."]],
+        ["Attention to the particular person", ["Care begins with attention: noticing a person's actual situation, listening, and responding to need. **A rule applied without attention can be correct and still cruel.** Care explains why the manner of delivering a service matters as much as the entitlement."]],
+        ["Care in public service", ["Frontline work in health, child protection, disaster relief and welfare depends on care. **An officer who explains, listens and treats a claimant with dignity makes the same rule humane.** Care also supports a duty to those who cannot speak for themselves: children, the elderly, the disabled and future generations."]],
+        ["Limits and balance", ["Care without justice can become favouritism towards those one knows. Care without support leads to burnout among frontline staff. **The two ethics work best together: justice sets fair rules, and care decides how those rules meet the person in front of you.**"]]
+      ],
+      take:"**Apply fair rules with attention to the person in front of you.**",
+      tk:[["gilligan", "Ethics of Care vs. Ethics of Justice"], ["gilligan", "Relevance to Administration"], ["gilligan", "Complement, Not Substitute"]],
+      es:[[4, 4]],
+      at:["samaritan"],
+      src:"Gilligan, In a Different Voice (1982); Noddings, Caring (1984)" },
+    { t:"Gandhi's method: ahimsa, satyagraha and swaraj",
+      qs:["Q243", "Q010"],
+      d:["**Gandhi's ethics joins three ideas.** Ahimsa is non-violence as active love. Satyagraha is insistence on truth through non-violent resistance. Swaraj is self-rule that begins with rule over oneself. Beneath all three lies his belief that the means shape the end."],
+      secs:[
+        ["Ahimsa", ["For Gandhi, ahimsa was not merely avoiding harm. **Ahimsa meant active goodwill even towards an opponent, and the refusal to humiliate anyone.** He held that non-violence is the law of our species, as violence is the law of the brute."]],
+        ["Satyagraha", ["Gandhi developed satyagraha in South Africa from 1906. **Satyagraha seeks to convert the opponent through truth, reason and voluntary self-suffering, not to defeat them.** He suspended the Non-Cooperation Movement after the violence at Chauri Chaura in 1922, because a movement that turned violent had lost its method."]],
+        ["Purity of means and swaraj", ["In Hind Swaraj (1909) Gandhi wrote that the means are to the end as the seed is to the tree. **An unjust method cannot produce a just result.** Swaraj meant more than political independence: self-discipline in the individual, and self-governing villages in society."]],
+        ["Gandhi in administration", ["The method translates into dialogue before force, persuasion before coercion, and restraint in the use of power. **Decentralisation through panchayats reflects his idea of swaraj.** Critics note that non-violent methods depend on an opponent who can be moved by conscience. Ambedkar felt that Gandhi's fast of 1932 against separate electorates put pressure on him rather than persuading him."]]
+      ],
+      take:"**Pursue even a just end only by just means, and seek to convert the opponent rather than defeat them.**",
+      tk:[["gandhi", "Ahimsa"], ["gandhi", "Satyagraha"], ["gandhi", "Purity of Means"], ["gandhi", "Swaraj"]],
+      es:[[1, 0]],
+      src:"Gandhi, Hind Swaraj (1909) and An Autobiography: The Story of My Experiments with Truth" },
+    { t:"The seven social sins",
+      qs:["Q089"],
+      d:["**Gandhi published a list of seven social sins in Young India in 1925: politics without principles, wealth without work, pleasure without conscience, knowledge without character, commerce without morality, science without humanity, and worship without sacrifice.** Each names an activity cut off from the value that should guide it."],
+      secs:[
+        ["What the list teaches", ["Every pair joins something good with the value that keeps it good. **Politics, wealth, pleasure, knowledge, commerce, science and worship are not wrong in themselves. Each becomes a sin when separated from principle, work, conscience, character, morality, humanity or sacrifice.** The 2016 paper asked candidates to discuss the concept."]],
+        ["In governance and public life", ["Politics without principles appears as opportunism and power for its own sake. **Wealth without work appears as rent-seeking and corruption.** Commerce without morality appears as adulteration, fraud and exploitation. Knowledge without character appears in the educated official who uses expertise to get around the rules."]],
+        ["In science and technology", ["Science without humanity is the sin of the present century. **Technology built without regard for those it affects, from weapons to surveillance to biased algorithms, is knowledge used against people.** The remedy is ethical review, accountability and attention to who bears the cost."]],
+        ["Using the list", ["The list works as a checklist for an answer. **For any institution or decision, ask which of the seven separations is happening.** The corrective is to rejoin the activity to its value: principled politics, earned wealth, responsible science."]]
+      ],
+      take:"**Each good activity needs its guiding value: politics needs principle, wealth needs work, knowledge needs character.**",
+      tk:[["gandhi", "Seven Social Sins"]],
+      src:"Gandhi, Young India, 1925" },
+    { t:"Sarvodaya, antyodaya and integral humanism",
+      qs:[],
+      d:["**Sarvodaya means the welfare of all. Antyodaya means the rise of the last person.** Both judge a society by what happens to its weakest members, and both run from Gandhi through Vinoba Bhave and Deendayal Upadhyaya into Indian policy."],
+      secs:[
+        ["Gandhi's sarvodaya", ["Gandhi took the idea from John Ruskin's Unto This Last, which he paraphrased in Gujarati in 1908 as Sarvodaya. **He drew three lessons: the good of the individual is contained in the good of all, all work has equal dignity, and a life of labour is the life worth living.** His talisman turns the idea into a test: recall the face of the poorest person you have seen, and ask whether your step will help them."]],
+        ["Vinoba and Bhoodan", ["Vinoba Bhave carried sarvodaya into practice. **In the Bhoodan movement from 1951, he walked across India asking landowners to give land to the landless.** The movement showed both the power of moral persuasion and its limits without institutional support."]],
+        ["Deendayal Upadhyaya's integral humanism", ["In lectures in 1965, Deendayal Upadhyaya set out integral humanism: **development should serve the whole person, body, mind, intellect and spirit, and not the individual or the state alone.** He made antyodaya the test of any economic arrangement: judge it by the condition of the last person in the queue."]],
+        ["In policy and administration", ["Antyodaya runs through Indian welfare: the Antyodaya Anna Yojana of 2000 for the poorest families, and the Deendayal Antyodaya Yojana for rural livelihoods. **For an officer, antyodaya means measuring a scheme by whether it reaches the last eligible person, not by its average.**"]]
+      ],
+      take:"**Judge every policy by what it does for the last person.**",
+      tk:[["gandhi", "Sarvodaya & Antyodaya"], ["vinoba", "Sarvodaya"], ["vinoba", "Bhoodan Movement (1951)"], ["deendayal", "Integral Humanism (1965)"], ["deendayal", "Antyodaya"]],
+      es:[[4, 4], [6, 2]],
+      src:"Gandhi, Sarvodaya (1908); Deendayal Upadhyaya, Integral Humanism (1965)" },
+    { t:"Kautilya: rajadharma and yogakshema",
+      qs:["Q091"],
+      d:["**Kautilya's Arthashastra treats governance as a duty to secure the welfare and security of the people, yogakshema.** The ruler's own happiness lies in the happiness of the subjects."],
+      secs:[
+        ["The ruler's duty", ["The Arthashastra states that in the happiness of the subjects lies the happiness of the king, and in their welfare his welfare. **Whatever pleases the ruler personally is not good. Whatever pleases the subjects is good.** Rajadharma, the duty of the ruler, is service, discipline and protection."]],
+        ["The state and its elements", ["Kautilya's saptanga theory names seven elements of the state: the ruler, ministers, territory and people, the fort, the treasury, the army, and allies. **The state is strong only when all seven are sound, and a corrupt minister or an empty treasury weakens the whole.**"]],
+        ["Corruption and its control", ["Kautilya listed forty ways in which officials embezzle. **He wrote that just as it is impossible not to taste honey placed on the tongue, it is hard for an official handling revenue not to taste a little of it.** He compared corrupt officials to fish moving in water, whom nobody can see drinking. His remedies were testing officials' integrity before appointment, auditing accounts and rewarding informers."]],
+        ["Using Kautilya", ["The 2016 paper quoted the view that corruption causes misuse of the treasury, inefficiency and obstruction to national development, and asked for Kautilya's views. **Kautilya supplies an Indian basis for welfare governance, anti-corruption systems and pragmatic statecraft.** His realism about human weakness is a reason to design institutions that do not rely on virtue alone."]]
+      ],
+      take:"**Govern for the people's welfare and security, and design checks that assume officials will be tempted.**",
+      tk:[["kautilya", "Yogakshema"], ["kautilya", "Saptanga Theory"], ["kautilya", "Forty Ways of Embezzlement"], ["kautilya", "Fish in Water"]],
+      es:[[7, 3]],
+      src:"Kautilya, Arthashastra" },
+    { t:"Nishkama karma: the Gita's ethics of duty",
+      qs:["Q098"],
+      d:["**Nishkama karma is action done as duty, without attachment to its fruits.** The Bhagavad Gita states it in the line \"your right is to the work alone, never to its fruits\" (2.47)."],
+      secs:[
+        ["Duty without attachment", ["The Gita asks a person to do their duty fully while letting go of the craving for reward, praise or a particular result. **Evenness of mind in success and failure is called yoga (2.48).** Detachment is not indifference. The worker still cares about doing the work well."]],
+        ["Svadharma and devotion to duty", ["The Gita teaches that one's own duty, done even imperfectly, is better than another's duty done well (3.35), and that a person devoted to their own work attains perfection (18.45). **The 2025 paper quoted this last idea: one who is devoted to one's duty attains highest perfection in life.**"]],
+        ["Lokasangraha", ["The Gita also asks action for lokasangraha, the welfare and holding together of the world (3.20). **Duty is not private self-improvement. Duty serves others.** Tilak read the Gita as a call to action in Gita Rahasya (1915), and Gandhi called it his spiritual dictionary."]],
+        ["In the civil service", ["Nishkama karma describes the ideal public servant: working without seeking credit, without fear of blame, and without favouring outcomes that benefit oneself. **An officer who does not need recognition can take the unpopular right decision.** Detachment from fruits must not become detachment from consequences. An officer still owns the results of a decision."]]
+      ],
+      take:"**Do your duty fully, for the good of others, without craving its rewards or fearing its blame.**",
+      tk:[["tilak", "Gita Rahasya"]],
+      src:"Bhagavad Gita 2.47, 2.48, 3.20, 3.35, 18.45; Tilak, Gita Rahasya (1915)" },
+    { t:"Mahavira: ahimsa, anekantavada and aparigraha",
+      qs:["Q065"],
+      d:["**Mahavira, the twenty-fourth Tirthankara of Jainism, taught a discipline of non-violence, many-sided truth and non-possession.** The 2025 paper asked for his major teachings and their relevance today."],
+      secs:[
+        ["The five vows", ["Jain ethics rests on five vows: ahimsa (non-violence), satya (truth), asteya (not stealing), brahmacharya (restraint) and aparigraha (non-possession). **Ahimsa is the highest, extending to all living beings.** The path to liberation is the three jewels: right faith, right knowledge and right conduct."]],
+        ["Anekantavada", ["Anekantavada holds that reality has many sides, and that no single viewpoint grasps the whole truth. **Syadvada expresses this in speech: a claim is true \"in some respect\".** The parable of the blind men and the elephant, used in Jain teaching, makes the point: each describes a part and mistakes it for the whole."]],
+        ["Aparigraha", ["Aparigraha is freedom from possessiveness: taking only what one needs. **Attachment to possessions is itself a form of bondage.** Gandhi drew on the same idea in his own vow of non-possession and in trusteeship."]],
+        ["Relevance today", ["Anekantavada supports tolerance, dialogue and humility in a plural society. **Ahimsa supports non-violent conflict resolution and care for animals and the environment.** Aparigraha speaks to consumerism, sustainability and integrity in office, where the temptation to accumulate is constant."]]
+      ],
+      take:"**Harm none, hold only what you need, and remember that your view is one side of the truth.**",
+      tk:[["mahavira", "Five Vows"], ["mahavira", "Ahimsa Paramo Dharma"], ["mahavira", "Anekantavada"], ["mahavira", "Syadvada"], ["mahavira", "Aparigraha"]],
+      es:[[4, 1]],
+      at:["anekanta", "blindmen"],
+      src:"Jain tradition and the teachings of Mahavira" },
   ],
   "Public / Civil Service Values & Ethics in Public Administration":[
     { t:"Police ethics: force, community and legitimacy",
@@ -1006,9 +1449,10 @@ const GS4_CONCEPTS = {
         ["Boundary, route and journey", [
           "**Law tells you the boundary, rules tell you the route, and ethics tells you whether to make the journey at all.**"]]
       ],
+      tk:[["weber", "Ideal-Type Bureaucracy"], ["simon", "Programmed vs. Non-programmed Decisions"]],
       src:"The two gaps are the framing of the 2015 paper; the express-prohibition proposition is from 2018" },
     { t:"Resolving an ethical dilemma",
-      qs:["Q105", "Q115", "Q114"],
+      qs:["Q121", "Q114", "Q115", "Q105"],
       d:["**An ethical dilemma is a situation where two defensible obligations conflict, so that satisfying one means failing the other.** It is not a choice between right and wrong, which is merely a temptation. The difficulty is that both options have a genuine claim."],
       secs:[
         ["A six-step process", [
@@ -1034,6 +1478,8 @@ const GS4_CONCEPTS = {
           "The resolution is a distinction between the decision and the deliberation. **Before a decision, disagreement is a duty**: record it, address it upward, argue it properly. **After a lawful decision, implementation is a duty**, whichever way it went. What is not available is the third option of appearing to comply while ensuring the thing fails."]]
       ],
       take:"**Discipline should govern conduct, not thought.** An organisation that has silenced disagreement has not achieved discipline; it has only stopped hearing about its own problems.",
+      tk:[["arendt", "Banality of Evil"], ["barnard", "Zone of Indifference"]],
+      at:["milgram", "asch"],
       src:"The counter-productive framing is from the 2017 paper" },
     { t:"Ethics and politics",
       qs:["Q023", "Q013"],
@@ -1049,6 +1495,7 @@ const GS4_CONCEPTS = {
           "The 2017 question asks why ethical young people avoid politics, and the reasons are structural rather than moral. Entry requires money, connections and tolerance of intimidation. Careers are insecure and reputations are damaged by association. **The remedies are therefore structural too**: transparent funding, inner-party democracy, protection from criminal intimidation, and a route into politics that does not require inherited standing."]]
       ],
       take:"**Politics is not the absence of ethics but ethics under conditions of disagreement, scarcity and compromise**, which is the hardest place to practise it and the place where it matters most.",
+      tk:[["weber", "Politics as a Vocation"], ["machiavelli", "Separation of Ethics and Politics"], ["gokhale", "Spiritualisation of Politics"]],
       src:"Weber on conviction and responsibility; the recruitment question is from the 2017 paper" },
     { t:"Crisis, triage and prioritising in a disaster",
       qs:["Q116", "Q120"],
@@ -1064,7 +1511,7 @@ const GS4_CONCEPTS = {
       take:"**Announce the basis for prioritisation and apply it consistently.** Most anger at relief work is not about the order chosen; it is about the suspicion that there was no order and that access was decided by influence.",
       src:"Triage principles from disaster medicine; the cases are from the 2015 and 2019 papers" },
     { t:"What a public servant is",
-      qs:["Q103"],
+      qs:["Q099", "Q103"],
       d:["**A public servant holds an office created for the public, exercises power that is not their own, and spends money that belongs to others.** Every distinctive feature of the role follows from those three facts."],
       secs:[
         ["Delegated authority, public money", [
@@ -1075,6 +1522,7 @@ const GS4_CONCEPTS = {
           "The 2020 paper raises the will to power alongside rational and moral duty. **Ambition in office is not disqualifying; it is what makes anything get done.** A person without drive holds the post and manages the routine. The question is whether that drive is bound by rules, reason and duty, or whether the office simply serves it."]]
       ],
       take:"**The role expected is not obedience and not independence but stewardship**: holding something on behalf of people who cannot supervise it, and treating the fact that they cannot check as a reason for greater care rather than less.",
+      tk:[["appleby", "Public Responsibility"], ["appleby", "Government is Different"]],
       src:"Substance over form is the framing of the 2024 paper; the will-to-power quotation is from 2020" },
     { t:"Duty against personal obligation",
       qs:["Q250", "Q115"],
@@ -1092,7 +1540,7 @@ const GS4_CONCEPTS = {
       take:"**Declare the conflict, seek the arrangement, and accept the cost of the choice you make.** The failure is not in choosing family; it is in choosing without telling anyone.",
       src:"The cases are from the 2017 and 2022 papers" },
     { t:"Constitutional morality",
-      qs:["Q243", "Q045"],
+      qs:["Q243", "Q036", "Q045"],
       d:["**Constitutional morality is the commitment to the principles and procedures of the Constitution, held even when they produce results one dislikes.** Ambedkar borrowed the phrase from George Grote and warned the Constituent Assembly that it was not a natural sentiment. It has to be cultivated."],
       secs:[
         ["A constitution is only a form", [
@@ -1105,6 +1553,7 @@ const GS4_CONCEPTS = {
           "The courts have used the idea to test practices against constitutional values rather than against majority opinion, which is also the objection to it: that it lets judges substitute their reading for an elected legislature's. The objection is serious and does not remove the concept's value for conduct."]]
       ],
       take:"**A constitution can be followed to the letter and hollowed out at the same time.** Constitutional morality is the disposition that prevents this, and it exists only in the people operating the system.",
+      tk:[["ambedkar", "Constitutional Morality"]],
       src:"Ambedkar's address to the Constituent Assembly, quoting Grote" },
     { t:"From punishment to justice in criminal law",
       qs:["Q038"],
@@ -1137,7 +1586,7 @@ const GS4_CONCEPTS = {
       take:"**Ask what this rule was written to achieve, and whether what you are about to do achieves it.** If the answer is no, the compliance is real and the work is not done.",
       src:"The framing is from the 2024 paper" },
     { t:"National security and human rights",
-      qs:["Q242"],
+      qs:["Q242", "Q190"],
       d:["**National security protects the state and its people from external and internal threats. Human rights protect individuals, including from the state itself.** The two conflict when security measures restrict liberty, privacy or due process."],
       secs:[
         ["Security protects rights too", ["The conflict is real but not total. **Security is itself a condition for rights.** A person living under terrorism or insurgency cannot enjoy the right to life, movement or livelihood. The state has a duty to protect, and a government that fails to prevent violence fails its citizens."]],
@@ -1146,7 +1595,62 @@ const GS4_CONCEPTS = {
         ["Balancing in practice", ["In practice the balance rests on safeguards: time limits and review for detentions, judicial approval for surveillance, published and reasoned orders, independent bodies such as the National Human Rights Commission, and accountability for excesses. **Community trust is also a security asset.** Measures that alienate a population weaken intelligence and cooperation, and so weaken security itself."]]
       ],
       take:"**Security and rights are both duties of the state.** Use the least restrictive measure that works, for the shortest time, under law and review.",
+      es:[[7, 3]],
+      tk:[["arendt", "Right to Have Rights"], ["locke", "Natural Rights"]],
       src:"Puttaswamy (2017) and Anuradha Bhasin (2020) on proportionality; the question is from the 2026 paper" },
+    { t:"The banality of evil and thoughtless obedience",
+      qs:[],
+      d:["**Hannah Arendt used the phrase \"the banality of evil\" for harm done by ordinary people who stop thinking about what they are doing.** She coined it in Eichmann in Jerusalem (1963), her report on the trial of Adolf Eichmann in 1961."],
+      secs:[
+        ["Eichmann's ordinariness", ["Eichmann organised the transport of millions of people to death camps. **At his trial he did not appear as a monster but as a careerist who followed orders, used official language and never asked what his work was doing.** Arendt concluded that great evil can come from thoughtlessness rather than hatred."]],
+        ["Obedience under authority", ["Stanley Milgram's experiments in the early 1960s showed that many ordinary people would give what they believed were dangerous electric shocks when an authority told them to. **The Nuremberg principles, set out in 1950, state that acting under a superior's orders does not free a person from responsibility** where a moral choice was possible."]],
+        ["The danger in administration", ["Bureaucracy divides work so that nobody sees the whole. **A clerk who processes an unjust eviction, an officer who signs an order without reading it, and a team that meets a target by excluding the poor all risk thoughtless harm.** Harm then happens without anyone intending it."]],
+        ["The remedy: thinking", ["Arendt saw thinking as a moral capacity: stopping to ask what one is doing. **Ask what a routine actually does to people, whether an order is lawful and just, and whether you would defend the act in public.** Institutions help by protecting dissent and by recording objections in writing."]]
+      ],
+      take:"**Following orders does not end responsibility. Keep asking what your routine does to people.**",
+      tk:[["arendt", "Banality of Evil"], ["arendt", "Thoughtlessness as the Root of Evil"]],
+      es:[[1, 1], [3, 3]],
+      at:["milgram", "stanfordprison"],
+      src:"Arendt, Eichmann in Jerusalem (1963); the Nuremberg principles (1950)" },
+    { t:"Dirty hands: when duty seems to demand a wrong",
+      qs:["Q010"],
+      d:["**The problem of dirty hands arises when a public official seems to face a choice in which every option, including doing nothing, involves a moral wrong.** Machiavelli raised it, and Michael Walzer named it in an essay of 1973."],
+      secs:[
+        ["Machiavelli's challenge", ["Machiavelli wrote in The Prince (1513) that a ruler must learn how not to be good when the situation demands it. **Political responsibility can require acts that private morality forbids.** The 2018 paper asked whether means or ends matter more, which is the heart of this problem."]],
+        ["Walzer's answer", ["Walzer argued that a politician may sometimes be right to do something wrong, but must recognise it as wrong. **A leader who feels no guilt has lost the moral sense that should restrain the use of power.** Weber made a similar point: the ethic of responsibility accepts accountability for the consequences of hard choices."]],
+        ["An Indian example", ["In December 1999, hijackers took Indian Airlines flight IC 814 to Kandahar. **The government released three militants to save the passengers.** Whatever one's judgment of the decision, it shows the structure of dirty hands: saving lives now at the risk of harm later."]],
+        ["Limits on dirty hands", ["The idea is dangerous if it becomes a routine excuse. **Some acts, such as torture, are forbidden absolutely.** A claim of necessity should be rare, genuine, the least harmful option, and open to later review. The official must still answer for the choice."]]
+      ],
+      take:"**If duty forces a hard choice, choose the least harmful course, admit its cost, and submit it to review.**",
+      tk:[["machiavelli", "Dirty Hands Problem"], ["machiavelli", "Ends and Means"], ["weber", "Ethic of Responsibility vs. Ethic of Conviction"]],
+      es:[[1, 0], [3, 3]],
+      src:"Machiavelli, The Prince (1513); Walzer, Political Action: The Problem of Dirty Hands (1973)" },
+    { t:"Bounded rationality and satisficing",
+      qs:["Q121"],
+      d:["**Herbert Simon showed that real decision-makers cannot be perfectly rational.** They have limited information, time and capacity, so they satisfice: they choose the first option that is good enough rather than the best possible one."],
+      secs:[
+        ["Simon's argument", ["Simon set out the idea in Administrative Behavior (1947) and received the Nobel Prize in economics in 1978. **Bounded rationality is not a failure of the individual but the condition of every real decision.** Satisficing is a sensible response to limits, not laziness."]],
+        ["Programmed and non-programmed decisions", ["Simon distinguished routine decisions, which can be handled by rules and procedures, from new and unstructured decisions, which need judgment. **Good administration turns routine problems into procedures, and saves human attention for the problems that need it.**"]],
+        ["Why it matters for ethics", ["If certainty never arrives, demanding a perfect decision is a demand for delay. **Officials who fear punishment for any imperfect decision will avoid deciding at all.** Protecting honest decisions taken in good faith, on the information available, is therefore part of good governance."]],
+        ["Improving decisions within limits", ["Checklists, clear criteria, consultation, pilots and feedback help people decide better under limits. **Recording the reasons for a decision shows that it was reasonable when it was made.** The 2025 paper asked how a civil servant should use reason and critical thinking in implementing welfare schemes."]]
+      ],
+      take:"**Decide on the best information available, record your reasons, and design systems that help people decide well under limits.**",
+      tk:[["simon", "Bounded Rationality"], ["simon", "Satisficing"], ["simon", "Programmed vs. Non-programmed Decisions"]],
+      es:[[1, 2], [1, 1]],
+      src:"Simon, Administrative Behavior (1947)" },
+    { t:"Weber: bureaucracy and legal-rational authority",
+      qs:["Q088", "Q034"],
+      d:["**Max Weber described the modern bureaucracy as the most rational form of administration: rule-bound, hierarchical, impersonal and staffed by trained officials chosen on merit.** He also warned of its dangers."],
+      secs:[
+        ["Three types of authority", ["Weber distinguished three types of authority. Traditional authority rests on custom. Charismatic authority rests on a leader's personal qualities. Legal-rational authority rests on rules. **Modern bureaucracy rests on legal-rational authority: officials are obeyed because of their lawful office, not their person.**"]],
+        ["The ideal type", ["Weber's ideal bureaucracy has a clear hierarchy, written rules, records, specialised roles, appointment on merit, and impersonal treatment of cases. **Impersonality protects fairness: the same rule applies to everyone, whoever they know.**"]],
+        ["The iron cage", ["Weber feared that rationalisation would trap people in an iron cage of rules and efficiency. **Officials can come to care more about procedure than about the people it serves.** Red tape, rigid rule-following and indifference are the dangers."]],
+        ["Weber in the papers", ["The 2016 paper quoted Weber's view that the moral norms of private conscience should not simply be applied to public administration. **The official's ethic is loyalty to lawful rules and responsibility for consequences.** The 2015 paper contrasted bureaucratic and democratic attitudes. The balance is rule-bound fairness with responsiveness to citizens."]]
+      ],
+      take:"**Keep bureaucracy's fairness and predictability, and resist its tendency to put procedure above people.**",
+      tk:[["weber", "Three Types of Authority"], ["weber", "Ideal-Type Bureaucracy"], ["weber", "Iron Cage & Depersonalisation"], ["weber", "Ethic of Responsibility vs. Ethic of Conviction"]],
+      es:[[3, 3], [7, 0]],
+      src:"Weber, Economy and Society; The Protestant Ethic (1905); Politics as a Vocation (1919)" },
   ],
   "Probity in Governance":[
     { t:"Probity in public life",
@@ -1195,7 +1699,7 @@ const GS4_CONCEPTS = {
       take:"**Efficiency asks whether the thing was done well; ethics asks whether it was the right thing to do.** An administration needs both questions, and only ever institutionalises the first.",
       src:"Good governance attributes as set out by the United Nations; Mission Karmayogi and the citizens' charter movement" },
     { t:"Code of ethics against code of conduct",
-      qs:["Q037", "Q135"],
+      qs:["Q122", "Q037", "Q135", "Q139"],
       d:["**A code of ethics states the values an organisation stands for. A code of conduct states the specific behaviour it requires.** The first is aspirational and general; the second is enforceable and particular."],
       secs:[
         ["Values against rules", [
@@ -1271,6 +1775,7 @@ const GS4_CONCEPTS = {
           "For an officer facing such an instruction, the sequence is: establish the legality, record the objection with reasons, propose alternatives such as phasing or other sources, and escalate in writing. **Resignation is the last option and usually the least effective**, because it removes the one person raising the objection and changes nothing else."]]
       ],
       take:"**Money not spent is a decision, not a neutral outcome**, and it should be defended as a decision or corrected as a failure.",
+      tk:[["kautilya", "Forty Ways of Embezzlement"]],
       src:"The re-appropriation case is from the 2020 paper; utilisation issues as recorded in CAG reporting" },
     { t:"Politicisation of the bureaucracy",
       qs:["Q117"],
@@ -1286,6 +1791,7 @@ const GS4_CONCEPTS = {
           "The related problem is prosecution of honest mistakes. Where a bona fide error can become a corruption case years later, the rational response is to decide nothing. Section 17A of the Prevention of Corruption Act, inserted in 2018, requires prior approval before investigating a decision taken in the discharge of official functions, and it addresses this directly."]]
       ],
       take:"**A civil service protected from arbitrary transfer and from prosecution for honest error can afford to give inconvenient advice.** One without those protections will give convenient advice, and it will be sincere in doing so.",
+      tk:[["patel", "Steel Frame of India"], ["woodrow-wilson", "Politics–Administration Dichotomy"], ["appleby", "Politics–Administration Continuum"]],
       src:"Section 17A, Prevention of Corruption Act, inserted 2018; the cases are from the 2019 paper" },
     { t:"Protecting the honest decision-maker",
       qs:["Q148"],
@@ -1301,6 +1807,7 @@ const GS4_CONCEPTS = {
           "The counter-argument deserves weight. Protection can shield the genuinely culpable, and a requirement of prior approval before investigation can become a shield rather than a filter. **The safeguard must be a filter with a timeline, not a permission that never arrives.**"]]
       ],
       take:"**A system that punishes error more reliably than it punishes inaction has chosen inaction.** That choice is usually made by accident.",
+      tk:[["simon", "Bounded Rationality"]],
       src:"The institutional framework question is from the 2019 paper" },
     { t:"Competing legitimate claims on a scarce resource",
       qs:["Q146"],
@@ -1327,7 +1834,34 @@ const GS4_CONCEPTS = {
         ["Productivity with people in mind", ["Productivity rises when the two are joined: clear goals, simple processes, delegation, technology where it helps, and training tied to the job. **Mission Karmayogi, launched in 2020, links civil servants' training to the roles they actually perform.** Efficiency that exhausts staff or shuts out the vulnerable is not productivity, because it undermines the outcome."]]
       ],
       take:"**Choose the right goal first, then pursue it with the least waste.** Judge success by outcomes, and use efficiency to serve them.",
+      es:[[1, 2]],
+      tk:[["drucker", "Effectiveness vs. Efficiency"], ["woodrow-wilson", "Business-like Efficiency"]],
+      at:["goodhart", "cobra"],
       src:"Drucker, The Effective Executive (1967); the question is from the 2026 paper" },
+    { t:"The philosophical basis of governance and probity",
+      qs:["Q244"],
+      d:["**The syllabus asks for the philosophical basis of governance and probity: why those who govern should be upright, and what makes their authority legitimate.** Several traditions give the same answer: power is held for the good of the governed."],
+      secs:[
+        ["Classical answers", ["Plato's guardians in the Republic held no private property, so that they would rule for the city and not for themselves. **Aristotle distinguished rule for the common good from corrupt rule for the ruler's own benefit.** Confucius taught that a ruler governs best by virtue and example, and that names must match realities: an official must actually do what the title promises."]],
+        ["Indian answers", ["Kautilya's Arthashastra places the ruler's happiness in the welfare of the subjects. **Gandhi's trusteeship treats power and wealth as held in trust for society.** His idea of Ram Rajya was a rule of moral authority and justice for the weakest, not a religious state."]],
+        ["Modern answers", ["Social contract theory grounds authority in the consent of the governed. **The Constitution's Preamble names the purposes of government: justice, liberty, equality and fraternity.** The Nolan Committee in Britain (1995) set out seven principles of public life: selflessness, integrity, objectivity, accountability, openness, honesty and leadership."]],
+        ["What probity adds", ["Probity is uprightness beyond what rules require. **A decision can be lawful and still lack probity, if it serves private interest or hides the truth.** The philosophical basis explains why: authority exists for the public, so any use of it for oneself betrays its purpose."]]
+      ],
+      take:"**Power is held in trust for the governed. Probity is using it only for that purpose, even where rules are silent.**",
+      tk:[["plato", "Philosopher King"], ["confucius", "Rule by Virtue"], ["confucius", "Rectification of Names"], ["kautilya", "Yogakshema"], ["gandhi", "Trusteeship"], ["locke", "Government by Consent"]],
+      src:"Plato, Republic; Kautilya, Arthashastra; Confucius, Analects; the Nolan Committee (1995)" },
+    { t:"Citizen's charters, work culture and service delivery",
+      qs:["Q122", "Q127", "Q131"],
+      d:["**The syllabus names citizen's charters, work culture and quality of service delivery together, because each depends on the others.** A charter promises a standard, work culture decides whether it is kept, and service delivery is the result the citizen sees."],
+      secs:[
+        ["Citizen's charters", ["The idea began in Britain in 1991. **India adopted charters after a Conference of Chief Ministers in 1997, which set out an action plan for effective and responsive government.** A charter states the services offered, the standards and time limits, and how to complain. The 2019 paper asked for the principles of the citizens' charter movement."]],
+        ["Why charters disappointed", ["Many charters were drafted without consulting users, were not publicised, and carried no penalty for failure. **The Second Administrative Reforms Commission, in its report on citizen-centric administration (2009), recommended the Sevottam model:** charters, grievance redress and service delivery capability, improved together. Right to services laws, beginning with Madhya Pradesh in 2010, made time limits enforceable."]],
+        ["Work culture", ["Work culture is the shared habits of an office: punctuality, ownership of files, courtesy, teamwork and honesty. **Codes of ethics and conduct set expectations, but leaders' example decides the culture.** The 2025 paper asked how a code of ethics supports a sound work culture. Training that links skills to the job, as in Mission Karmayogi, helps."]],
+        ["Quality of service delivery", ["Good delivery is timely, accessible, respectful and reliable. **Measure it by the citizen's experience: the time taken, the number of visits, and whether the service arrived.** Grievance systems such as CPGRAMS, social audits and feedback close the loop. The 2022 paper asked whether an officer engrossed with the periphery, ignoring core issues, harms service delivery."]]
+      ],
+      take:"**Promise clear standards, build a culture that keeps them, and measure success by what the citizen receives.**",
+      tk:[["drucker", "Management by Objectives (MBO)"], ["mcgregor", "Theory Y"]],
+      src:"Second ARC, Citizen Centric Administration (2009); the Sevottam model" },
   ],
   "Corruption, Whistleblowing & Conflict of Interest":[
     { t:"Conflict of interest",
@@ -1360,6 +1894,8 @@ const GS4_CONCEPTS = {
           "The measures that would work are known. Secure anonymous channels. Independent handling outside the accused's chain of command. Statutory protection against transfer, suspension and dismissal, with reversal and compensation. Timelines for action, since indefinite pendency is itself retaliation. And physical protection where organised interests are involved."]]
       ],
       take:"**A system that depends on individual courage to surface wrongdoing has decided that most wrongdoing will stay hidden**, because courage of that order is rare and the cost is borne entirely by the person who shows it.",
+      tk:[["einstein", "Moral Responsibility of Bystanders"]],
+      at:["bystander"],
       src:"Whistle Blowers Protection Act 2014, never commenced; the Snowden case is from the 2018 paper" },
     { t:"Causes of corruption",
       qs:["Q160", "Q152"],
@@ -1375,6 +1911,7 @@ const GS4_CONCEPTS = {
           "The claim that corruption reflects a failure of core values is true and incomplete. **Values determine how many people want to divert; system design determines how many can.** Societies with similar stated values differ enormously in measured corruption, and the difference is in detection, discretion and consequence."]]
       ],
       take:"**Reduce the opportunity, raise the certainty of detection, and remove the story people tell themselves.** The last is done by making conduct visible, because a practice is hardest to rationalise when it must be described aloud.",
+      tk:[["kautilya", "Forty Ways of Embezzlement"]],
       src:"The opportunity, incentive and rationalisation framing; the core-values question is from the 2023 paper" },
     { t:"Why anti-corruption measures fail",
       qs:["Q254", "Q159", "Q129"],
@@ -1390,6 +1927,7 @@ const GS4_CONCEPTS = {
           "Zero tolerance is worth examining rather than endorsing. As a statement of standards it is sound. **As an operating rule it is unworkable**, because it treats a clerical lapse and a large diversion alike, consumes investigative capacity on trivia, and makes officers defensive about admitting any error. A graded response with certain consequence achieves more than an absolute rule applied selectively."]]
       ],
       take:"**Certainty beats severity, and prevention beats punishment.** Most Indian anti-corruption design has the emphasis the other way round.",
+      tk:[["kautilya", "Fish in Water"]],
       src:"The effectiveness question is from the 2015 paper; zero tolerance and social audit from 2021" },
     { t:"Insider information and its misuse",
       qs:["Q174"],
@@ -1480,6 +2018,7 @@ const GS4_CONCEPTS = {
           "The intimidation case tests something else again. Yielding to a violent demand for jobs buys peace and guarantees repetition. **Conceding to force teaches that force works**, which is the same lesson a bribe teaches. The response is immediate de-escalation combined with a refusal to negotiate under threat, then a genuine engagement with local employment once the coercion has stopped."]]
       ],
       take:"**Ethics in business is a constraint on how profit is pursued, not a competing objective.** Firms that treat it as an objective abandon it when profit is threatened, which is precisely when it was needed.",
+      tk:[["gandhi", "Purity of Means"]],
       src:"The cases are from the 2015, 2017 and 2022 papers" },
     { t:"Workplace bullying and belittlement",
       qs:["Q187"],
@@ -1576,7 +2115,7 @@ const GS4_CONCEPTS = {
   ],
   "Accountability & Ethical Governance":[
     { t:"National interest against ethical obligation",
-      qs:["Q249", "Q257", "Q196", "Q192", "Q195"],
+      qs:["Q249", "Q257", "Q189", "Q192", "Q194", "Q195", "Q196"],
       d:["**States are expected to pursue their own interest, and the question is whether anything constrains that pursuit.** The realist answer is that international relations is an arena of power where moral language is decoration. The papers ask whether that is the whole account."],
       secs:[
         ["The realist case", [
@@ -1589,6 +2128,7 @@ const GS4_CONCEPTS = {
           "The war questions bring specific criteria. Whether the cause is just, whether force is a last resort, whether it is authorised, whether the harm is proportionate to the objective, and whether civilians are distinguished from combatants. **These are old tests and they remain the ones most arguments turn on.**"]]
       ],
       take:"Strength, peace and security relate in a definite order. Strength without legitimacy produces fear and balancing behaviour by others. **Security bought by making neighbours insecure is temporary**, because it generates the coalition that ends it. Durable security rests on arrangements others also want to keep.",
+      tk:[["kant", "Perpetual Peace"], ["machiavelli", "Separation of Ethics and Politics"]],
       src:"Just war criteria as standardly set out; the questions are from the 2015, 2017, 2022 and 2026 papers" },
     { t:"The arms trade",
       qs:["Q257", "Q191", "Q198"],
@@ -1604,6 +2144,7 @@ const GS4_CONCEPTS = {
           "The honest difficulty is that refusing a sale rarely prevents the buyer from arming. Another supplier fills the gap, and India forgoes both the revenue and the influence. **This is a real argument and it proves less than it seems**, since it would justify participation in anything, and the same reasoning is available to every supplier simultaneously."]]
       ],
       take:"**A state that profits from a conflict it says it wants ended has an interest working against its stated position.** Naming that conflict of interest is the beginning of a defensible policy.",
+      tk:[["einstein", "Ethical Responsibility of Science"]],
       src:"Arms Trade Treaty principles on end use and diversion; the cases are from the 2020, 2024 and 2026 papers" },
     { t:"Human rights of non-citizens",
       qs:["Q193"],
@@ -1619,6 +2160,7 @@ const GS4_CONCEPTS = {
           "The argument against is that democracy is not merely majority preference. **A majority can vote for things that are not permitted to it**, which is the entire purpose of a constitution. If a mandate could override the basic rights of anyone within the state's power, it could do so for unpopular citizens as easily as for foreigners."]]
       ],
       take:"The workable position is that a state may lawfully distinguish between citizen and non-citizen in political and economic rights, and may not do so in the basic protections of life, liberty and dignity. **Sovereignty settles who may enter and stay. It does not settle how anyone within reach may be treated.**",
+      tk:[["arendt", "Right to Have Rights"]],
       src:"Constitution of India, Articles 14 and 21; non-refoulement as a principle of customary international law" },
     { t:"Ethics of international aid",
       qs:[],
@@ -1668,6 +2210,7 @@ const GS4_CONCEPTS = {
         ["Permanent, public, beyond recall", [
           "**Anything posted is permanent, public and beyond recall, and those three facts do not change because the provocation was real.**"]]
       ],
+      tk:[["habermas", "Public Sphere"]],
       src:"Information Technology Act 2000 provisions on electronic communication; the cases are from the 2020 and 2023 papers" },
     { t:"Medical ethics: autonomy, consent and triage",
       qs:["Q246", "Q252", "Q241", "Q206", "Q209"],
@@ -1759,6 +2302,7 @@ const GS4_CONCEPTS = {
           "Real options exist. Shift data centres to grids with low carbon intensity. Contract for additional renewable capacity rather than buying existing supply. Improve efficiency per unit of computation, and schedule flexible workloads for periods of surplus generation. And disclose the trade-off honestly."]]
       ],
       take:"**The defensible position is to revise the target openly with reasons, or to meet it and accept slower growth.** What is not defensible is holding both claims simultaneously and hoping nobody checks.",
+      tk:[["schumacher", "Intermediate/Appropriate Technology"]],
       src:"The case is from the 2024 paper" },
     { t:"Conflict of interest in procurement",
       qs:["Q162"],
@@ -1791,10 +2335,35 @@ const GS4_CONCEPTS = {
       ],
       take:"**A falsified trial does not produce a bad drug; it produces a drug whose effects nobody knows.** That is the harm, and it is unbounded.",
       src:"New Drugs and Clinical Trials Rules 2019; informed consent as set out in ICMR guidelines" },
+    { t:"End of life: euthanasia and living wills",
+      qs:[],
+      d:["**Euthanasia is ending a life to relieve suffering.** Active euthanasia, a deliberate act such as a lethal injection, is illegal in India. Passive euthanasia, withdrawing or withholding life support, is lawful under conditions set by the Supreme Court."],
+      secs:[
+        ["The Indian law", ["In Aruna Shanbaug v Union of India (2011), the Supreme Court allowed passive euthanasia under strict safeguards. **In Common Cause v Union of India (2018), a Constitution Bench recognised the right to die with dignity as part of Article 21, and allowed living wills, or advance directives.** The Court simplified the procedure in 2023."]],
+        ["The case for choice", ["Autonomy supports a person's right to refuse treatment and to decide about the end of their own life. **Dignity supports sparing a person prolonged suffering with no hope of recovery.** A living will lets a person decide in advance, while they are able to."]],
+        ["The case for caution", ["The sanctity of life counsels against ending it. **The strongest worry is pressure on the vulnerable: the elderly, the disabled and the poor may feel a burden to their families.** Where good palliative care is missing, a choice to die may reflect lack of care rather than free will."]],
+        ["Balancing the two", ["Safeguards matter: informed consent, independent medical boards, review, and protection against pressure. **Investment in palliative care, as in Kerala's community network, makes the choice genuinely free.** The principle is respect for the person's own considered wishes, with protection for those who cannot protect themselves."]]
+      ],
+      take:"**Respect a person's considered choice about the end of life, and protect the vulnerable from being pushed into it.**",
+      tk:[["mother-teresa", "Dignity in Dying"]],
+      src:"Aruna Shanbaug v Union of India (2011); Common Cause v Union of India (2018)" },
+    { t:"Free speech and its limits",
+      qs:[],
+      d:["**Freedom of speech and expression under Article 19(1)(a) protects the right to hold and share opinions.** Article 19(2) allows reasonable restrictions on grounds such as public order, decency, defamation and incitement to an offence."],
+      secs:[
+        ["Why speech is protected", ["Mill argued that silencing an opinion robs everyone: if it is true, we lose the truth, and if it is false, we lose a clearer understanding of the truth. **Democracy depends on criticism of those in power.** Speech that offends is still protected speech."]],
+        ["Where the line lies", ["In Shreya Singhal v Union of India (2015), the Supreme Court struck down Section 66A of the Information Technology Act as vague and overbroad. **The Court distinguished discussion and advocacy, which are protected, from incitement, which may be restricted.** A restriction must be narrow, lawful and proportionate."]],
+        ["Hate speech", ["Speech that incites violence or hostility against a group harms both its targets and public order. **The law punishes promoting enmity between groups, now under Section 196 of the Bharatiya Nyaya Sanhita.** The Law Commission's report of 2017 examined how hate speech should be defined. The difficulty is applying such laws evenly, without targeting unpopular views."]],
+        ["For the administrator", ["Protect lawful speech and peaceful protest, even when critical of the government. **Act against incitement quickly and even-handedly, whoever its source.** Avoid blanket bans and internet shutdowns where narrower measures would work, and follow the Supreme Court's requirement of reasoned, published orders."]]
+      ],
+      take:"**Protect speech, including speech you dislike, and restrict only what incites harm, by the narrowest lawful means.**",
+      tk:[["mill", "Liberty of Thought and Expression"]],
+      es:[[7, 1], [2, 4]],
+      src:"Article 19; Shreya Singhal v Union of India (2015); Mill, On Liberty (1859)" },
   ],
   "Environmental & Development Ethics":[
     { t:"Development against the environment",
-      qs:["Q240", "Q227", "Q214", "Q219", "Q216", "Q224"],
+      qs:["Q240", "Q219", "Q123", "Q190", "Q214", "Q216", "Q224", "Q227"],
       d:["**Each of these questions sets a real gain against a real loss.** A dam brings power and irrigation. It also floods a valley. Housing for homeless families is a constitutional duty. The land offered for it is forest. The conflict is genuine. Answers that pick a side and call the other side greed are weak."],
       secs:[
         ["Sustainable development", [
@@ -1811,6 +2380,7 @@ const GS4_CONCEPTS = {
           "For an administrator the route is procedural rather than philosophical. Make the impact assessment real and not a formality. Hear the people who will bear the cost, especially those with no title deed. Look for the smaller design or the other site before accepting the trade. Where forest land is diverted, treat compensatory planting as a minimum and not a purchase. **Record the reasons, because a decision that cannot be explained to the losers has not been justified.**"]]
       ],
       take:"**The question is never development or environment. It is who gains, who pays, and whether the payer was asked.**",
+      tk:[["schumacher", "Small is Beautiful (1973)"], ["schumacher", "Permanence"]],
       src:"Brundtland Commission, Our Common Future (1987); Rio Declaration 1992, principles 15 and 16; Vellore Citizens' Welfare Forum v Union of India (1996); M.C. Mehta v Kamal Nath (1997) on the public trust doctrine" },
     { t:"Corporate social responsibility",
       qs:["Q215", "Q217", "Q222", "Q224"],
@@ -1828,6 +2398,7 @@ const GS4_CONCEPTS = {
           "The reverse point deserves conceding. **A firm that pays fair wages, controls its effluent and trains local people has done more good than one with an award-winning CSR report.** The 2020 case of a factory that trained villagers, kept paying wages through a lockdown and built a clinic is genuinely admirable. Its lapse, drawing more electricity than it was sanctioned, is the reminder that goodwill is not compliance."]]
       ],
       take:"**CSR is a floor for what a company adds, and no substitute for what it must not do.** Judge a firm first on its core conduct, then on what it gives away.",
+      tk:[["gandhi", "Trusteeship"]],
       src:"Companies Act 2013, section 135 and Schedule VII; Milton Friedman (1970) on business and profit; R. Edward Freeman on stakeholders" },
     { t:"Displacement, land and rehabilitation",
       qs:["Q240", "Q226", "Q216", "Q219"],
@@ -1866,7 +2437,7 @@ const GS4_CONCEPTS = {
       take:"**The decision to avoid is the one that looks balanced: a notice issued, a deadline that passes, and nothing done.** It protects nobody, and lets everyone believe something happened.",
       src:"Environment (Protection) Act 1986, with the consent regime under the Water Act 1974 and Air Act 1981; the cases are from the 2018 and 2022 papers" },
     { t:"Environmental ethics: what is owed to nature",
-      qs:["Q218", "Q214"],
+      qs:["Q214", "Q218", "Q095"],
       d:["**Environmental ethics asks what human beings owe to the natural world, and whether nature has value apart from its use to us.** The 2015 paper asks for the definition directly. The 2024 paper asks how to restore a balance between society and the environment."],
       secs:[
         ["Three positions", [
@@ -1883,6 +2454,8 @@ const GS4_CONCEPTS = {
           "The reverse objection is that anthropocentric reasoning steadily undervalues what it cannot price. A wetland is worth its flood control and nothing more, until it is gone. **Long-run human interest and ecocentric conclusions usually converge**, which is why the distinction matters less in the field than on paper."]]
       ],
       take:"**The useful question is not whether a river has rights. It is whether anyone in the room where the decision is taken speaks for the river.**",
+      tk:[["mahavira", "Ahimsa Paramo Dharma"], ["ostrom", "Governing the Commons"]],
+      at:["commons"],
       src:"Aldo Leopold, A Sand County Almanac (1949); Arne Naess on deep ecology (1973); Articles 48A and 51A(g) of the Constitution" },
     { t:"Illegal extraction and the protected nexus",
       qs:["Q220"],
@@ -1946,6 +2519,7 @@ const GS4_CONCEPTS = {
           "For women already in service, the 2024 question points at different obstacles. Postings decided on assumptions about family. Exclusion from the informal circles where things are settled. Harassment handled by a committee that may not meet. A second shift at home that no colleague counts. **The Sexual Harassment of Women at Workplace Act 2013 requires an internal committee in every workplace.** Whether it exists and functions is the test."]]
       ],
       take:"**Inequality survives less by open exclusion than by rules that look neutral and happen to fit one group's life better than another's.**",
+      tk:[["beauvoir", "The Second Sex (1949)"], ["wollstonecraft", "A Vindication of the Rights of Woman (1792)"], ["savitribai-phule", "Girls' Education"]],
       src:"Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act 2013; Criminal Law (Amendment) Act 2013, following the Justice Verma Committee; standard biographical accounts of Savitribai Phule" },
     { t:"Migration and the invisible workforce",
       qs:["Q234", "Q237", "Q233"],
@@ -1988,7 +2562,7 @@ const GS4_CONCEPTS = {
       take:"**The loophole is not in the law's words. It is in the fact that nobody checks. A relationship asserted and never verified is the whole mechanism.**",
       src:"Child Labour (Prohibition and Regulation) Amendment Act 2016; ILO Conventions 138 and 182, ratified by India in June 2017; the cases are from the 2013 and 2020 papers" },
     { t:"Growth that does not reach",
-      qs:["Q230", "Q233"],
+      qs:["Q123", "Q233", "Q230"],
       d:["**The 2017 question states the charge. National wealth increased, and the benefit collected in enclaves of prosperity for a minority.** The 2020 case shows the same thing at district scale, in a tribal district where even targeted welfare programmes have not reached the people they name."],
       secs:[
         ["Distributive justice", [
@@ -2005,6 +2579,7 @@ const GS4_CONCEPTS = {
           "The practical version is unglamorous. **Measure outcomes for the bottom group, not for the average.** Put the school, the clinic and the road where the return looks worst. Fix the last mile, since a scheme that exists and does not arrive is the commonest failure. And treat local capacity to demand, a working gram sabha and a grievance channel that answers, as part of the delivery system."]]
       ],
       take:"**Prosperity that has to be described as enclaves has already answered the question about whether it was shared.**",
+      tk:[["amartya-sen", "Development as Freedom"], ["deendayal", "Antyodaya"]],
       src:"Amartya Sen, Development as Freedom (1999); Article 46 of the Constitution; the questions are from the 2017 and 2020 papers" },
     { t:"Caste, purity and the shared meal",
       qs:["Q236"],
@@ -2024,6 +2599,7 @@ const GS4_CONCEPTS = {
           "The workable approach uses both, in order. State the legal position clearly and once, to the parents and in writing. **Let respected people in the village eat first and publicly**, the Sarpanch, the teachers, the doctor, and any elders who will. Bring in the school management committee and the mothers' group. Use the anganwadi and the panchayat, which already share food across castes in practice. Keep the cook in her post throughout. **Prosecute those organising the boycott if it holds, rather than the individual parent.**"]]
       ],
       take:"**The cook's dignity is not a bargaining item. The object is not to win the argument but to make the practice unrepeatable.**",
+      tk:[["ambedkar", "Annihilation of Caste"], ["guru-nanak", "Langar & Sangat"], ["narayana-guru", "One Caste, One Religion, One God"], ["basavanna", "Dasoha"]],
       src:"Article 17 of the Constitution; Protection of Civil Rights Act 1955; SC and ST (Prevention of Atrocities) Act 1989; the case is from the 2015 paper" },
     { t:"Compassion when the claimant is at fault",
       qs:["Q232"],

@@ -52,6 +52,30 @@ key takeaway. The page shows a definition box, the numbered sections and a takea
 that is itself a list of strings becomes bullets. The nine case-study patterns under heading 16 use
 the same form, with the opening box labelled *The situation* (`dlab`) instead of *Definition*.
 
+A note can also link out. `tk` holds `[thinker id, idea heading]` pairs, shown as **Thinkers**
+buttons that open the thinker's page at that idea. `es` holds `[theme number, paragraph index]`
+pairs for model paragraphs in the Essay paper, and `at` holds Thought Atlas ids. The links go
+both ways: each idea on a thinker's page lists the GS-IV notes that point to it.
+
+**What the notes must cover.** The notes were first built only from past GS-IV questions, and
+that let obvious ideas slip. Trusteeship, civil disobedience and duty against charity had never
+been asked in GS-IV, so they had no note until the 2026 paper asked them. Other ideas had been
+asked and still got no note of their own, because the old notes grouped questions by the topic
+of the quotation. "Discuss Mahatma Gandhi's concept of Seven Sins" (2016) sat under no note at
+all, and 24 questions, including most of the 2025 paper, were linked to no note. The notes now
+also cover the standard canon, whether or not it has been asked yet:
+- the Western theories: utilitarianism, Kant, virtue ethics, Rawls, Mill's harm principle, the
+  social contract and the ethics of care
+- Indian thought: Gandhi's method, the seven social sins, sarvodaya and antyodaya, Kautilya,
+  nishkama karma and Mahavira
+- administration: Arendt, dirty hands, Simon and Weber
+- the syllabus's own phrases: lessons from leaders, tolerance, the philosophical basis of
+  governance, and citizen's charters with work culture and service delivery
+- moral development, end-of-life ethics and free speech
+
+Every question in `gs4pyq.js` is linked to at least one note. When a paper is added, link every
+question to a note, and give any idea the paper raises a note if the site lacks one.
+
 ### Reading the maps
 
 Both maps, and the atlas, read the same way. A map opens on an **index** of every heading,
@@ -198,7 +222,8 @@ search now searches the whole site on this page too, as it does everywhere else.
 
 ### Reading the atlas
 
-The atlas holds 110 entries. The ten most recent are models and findings from the social
+The atlas holds 111 entries. The most recent is the drowning child, Peter Singer's thought
+experiment on duty and charity (1972). The ten before it are models and findings from the social
 sciences: job market signalling, the digital provide (Kerala's fishermen and mobile phones), Sen
 on famine and entitlements, the Jevons paradox, Coase and the problem of social cost, the resource
 curse, defaults and nudges, the belief in a just world, the Pygmalion effect, and the great and

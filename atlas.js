@@ -35,6 +35,7 @@ const ATLAS = [
   {"id": "kisagotami", "t": "Kisa Gotami and the Mustard Seed", "src": "Buddhist tradition", "form": "Parable", "fg": "parable", "tr": "indian", "q": "Grief; universality of death", "sec": "morality", "th": ["death"]},
   {"id": "omelas", "t": "The Ones Who Walk Away from Omelas", "src": "Ursula K. Le Guin", "form": "Short story", "fg": "literary", "tr": "western", "q": "Collective welfare vs individual suffering", "sec": "morality", "th": ["justice", "cooperation"]},
   {"id": "samaritan", "t": "The Good Samaritan", "src": "Gospel of Luke", "form": "Parable", "fg": "parable", "tr": "scripture", "q": "Moral obligation; otherness", "sec": "morality", "th": ["cooperation", "justice"]},
+  {"id": "drowningchild", "t": "The Drowning Child", "src": "Peter Singer", "form": "Thought experiment", "fg": "te", "tr": "western", "q": "Is helping the distant poor a duty or a kindness?", "sec": "morality", "th": ["justice"]},
   {"id": "noblelie", "t": "Noble Lie", "src": "Plato, Republic", "form": "Political myth", "fg": "myth", "tr": "greek", "q": "Social cohesion; ideology", "sec": "politics", "th": ["power", "knowledge"]},
   {"id": "panopticon", "t": "Panopticon", "src": "Bentham / Foucault", "form": "Architectural metaphor", "fg": "metaphor", "tr": "western", "q": "Surveillance; discipline; power", "sec": "politics", "th": ["power", "freedom"]},
   {"id": "generalwill", "t": "General Will", "src": "Rousseau", "form": "Conceptual model", "fg": "concept", "tr": "western", "q": "Collective sovereignty", "sec": "politics", "th": ["freedom", "power"]},
@@ -1116,7 +1117,8 @@ const ATLAS_ENTRIES = {
       "gyges",
       "heinz",
       "omelas",
-      "experience"
+      "experience",
+      "drowningchild"
     ],
     "reading": [
       [
@@ -1543,7 +1545,8 @@ const ATLAS_ENTRIES = {
       "kisagotami",
       "heinz",
       "omelas",
-      "angulimala"
+      "angulimala",
+      "drowningchild"
     ],
     "reading": [
       [
@@ -1555,6 +1558,71 @@ const ATLAS_ENTRIES = {
         "John M. Darley and C. Daniel Batson, “From Jerusalem to Jericho”, Journal of Personality and Social Psychology (1973)",
         "The study of seminary students in a hurry.",
         "https://doi.org/10.1037/h0034449"
+      ]
+    ]
+  },
+  "drowningchild": {
+    "source": "Peter Singer, “Famine, Affluence, and Morality”, Philosophy & Public Affairs 1, no. 3 (1972)",
+    "period": "Written in November 1971, during the Bangladesh refugee crisis",
+    "tradition": "Modern Western philosophy",
+    "type": "A thought experiment. A thought experiment is an imagined situation used to test an idea.",
+    "setup": [
+      "In November 1971, people were dying in East Bengal from lack of food, shelter and medical care. War had driven millions of refugees across the border into India. The Australian philosopher Peter Singer, then teaching at Oxford, wrote an essay about this suffering and about the response of rich countries. The essay was published in 1972 as “Famine, Affluence, and Morality”.",
+      "Singer asked his readers to imagine a simple case. You are walking past a shallow pond, and a small child has fallen in and is drowning. You can wade in and pull the child out. The only cost is that your clothes will get muddy and you will be late. Almost everyone agrees that you must save the child. Walking on would be a serious moral failure.",
+      "Singer then stated the principle behind this judgment. If it is in our power to prevent something very bad from happening, without sacrificing anything of comparable moral importance, we ought to do it. Death from hunger is very bad. For most people in rich countries, giving money to relieve a famine costs something far less important, such as new clothes or a meal out.",
+      "Singer argued that two facts do not change the duty. The first is distance. A child starving in another country is as real as the child in the pond, and relief agencies can reach her. The second is numbers. The fact that millions of other people could also help does not reduce your own duty. If many people walk past the pond and do nothing, the child still needs saving.",
+      "His conclusion was that the line between duty and charity is drawn in the wrong place. Giving to relieve famine is not a generous act that deserves special praise. Failing to give is wrong. Singer also offered a milder version of his principle: we ought to prevent very bad things unless we must sacrifice something morally significant. Even the milder version, he argued, asks most comfortable people to give far more than they do.",
+      "Singer tried to live by the argument, and he gives a large share of his own income to charity. His book The Life You Can Save (2009) took the argument to a wider public. The essay remains one of the most widely taught pieces of applied ethics."
+    ],
+    "question": "If you can prevent great suffering at small cost to yourself, is helping a duty or only a kindness?",
+    "reveals": "The drowning child shows that almost everyone already accepts a duty to rescue when the cost is small. Singer’s point is that the same principle, applied honestly, reaches much further than we like. Distance and numbers feel as if they reduce our duty, but they change neither the suffering nor our ability to prevent it. The case moves the relief of desperate need from charity into duty, at least where the need is severe and the cost to the giver is slight.",
+    "readings": [
+      [
+        "A utilitarian reading",
+        "Singer is a utilitarian. What matters is the suffering prevented, not where it happens or who happens to be nearby. Help should go where it prevents the most harm."
+      ],
+      [
+        "Duty and charity",
+        "Traditional ethics treated giving as charity: praiseworthy, but not required. Kant called helping others an imperfect duty, which leaves a person free to choose when, whom and how much to help. Singer moves the relief of desperate need into strict duty."
+      ],
+      [
+        "Effective giving",
+        "The argument helped to inspire the effective altruism movement, which asks donors to choose causes by the evidence of how much good each rupee does."
+      ],
+      [
+        "Indian traditions",
+        "Daan in the dharma texts and zakat in Islam are obligations on people with means, not only acts of kindness. The Sikh teaching of vand chhako, sharing what one earns, makes giving part of daily life."
+      ]
+    ],
+    "breaks": [
+      "Critics say the principle is too demanding. If every spare rupee must go to the needy, nobody may ever enjoy a book, a holiday or a hobby. Singer replies that the demand only seems extreme because we are used to giving so little.",
+      "Saving a child from a pond is certain and immediate. Aid to a distant place is uncertain: money may be wasted, stolen, or may create dependence.",
+      "Individual giving cannot fix the causes of famine. Amartya Sen showed that famines come from failures of entitlement and of accountable government, not only from a lack of food. Justice and good institutions may matter more than charity.",
+      "Some argue that people have special duties to family, neighbours and fellow citizens, and that equal concern for everyone ignores these ties."
+    ],
+    "uses": [
+      "Public policy: Foreign aid, disaster relief and welfare schemes rest on a duty to help those who suffer, not only on generosity.",
+      "Corporate responsibility: India’s Companies Act of 2013 made some corporate giving a legal duty rather than a choice.",
+      "Civil service: An officer who could prevent serious harm at small cost, by acting quickly on a complaint or a warning, has a duty to act, not merely an option.",
+      "Exam use: In GS-IV, use it for the 2026 question on duty and charity, for compassion towards the weaker sections, and for the ethics of international aid. In the Essay paper, use it for topics such as “A society that has more justice is a society that needs less charity” (2023)."
+    ],
+    "related": [
+      "samaritan",
+      "bystander",
+      "trolley",
+      "veil",
+      "entitlements"
+    ],
+    "reading": [
+      [
+        "Peter Singer, “Famine, Affluence, and Morality”, Philosophy & Public Affairs 1, no. 3 (1972), pages 229 to 243",
+        "",
+        "https://www.jstor.org/stable/2265052"
+      ],
+      [
+        "“Study Guide: Peter Singer’s ‘Famine, Affluence, and Morality’”, Utilitarianism.net",
+        "A plain summary of the argument and the main objections.",
+        "https://utilitarianism.net/peter-singer-famine-affluence-and-morality/"
       ]
     ]
   },
@@ -4157,7 +4225,8 @@ const ATLAS_ENTRIES = {
       "collectiveaction",
       "freerider",
       "brokenwindows",
-      "justworld"
+      "justworld",
+      "drowningchild"
     ],
     "reading": [
       [
