@@ -2844,6 +2844,7 @@ function renderSyllabus(){
 }
 
 function render(){
+  navRecord();
   const main = document.getElementById("main");
   if (state.view === "home")          main.innerHTML = renderHome();
   else if (state.view.startsWith("essay:")) main.innerHTML = renderEssay(state.view.slice(6), state.mode);
@@ -3039,14 +3040,79 @@ function openSheet(id){
   ov.classList.add("open");
   document.body.style.overflow = "hidden";
   ov.scrollTop = 0;
-  location.hash = t.id;
+  navSheet(t.id);
 }
 
 function closeSheet(){
   document.getElementById("overlay").classList.remove("open");
   document.body.style.overflow = "";
-  if (location.hash) history.replaceState(null, "", location.pathname + location.search);
 }
+
+/* Closing a sheet the reader opened steps back past its history entry. */
+function closeSheetBack(){
+  if (!document.getElementById("overlay").classList.contains("open")) return;
+  if (history.state && history.state.sheet) history.back();
+  else closeSheet();
+}
+
+/* ================= HISTORY =================
+   Each page the reader opens is an entry in the browser's history, so back (the
+   browser's, or the phone's in the app) returns to the previous page and to
+   where it was scrolled. A thinker's sheet is an entry of its own, so back
+   closes it first. Typing in a box or changing an arrangement updates the
+   current entry instead of adding one. */
+const NAV_KEYS = ["view", "page", "sel", "nav", "fold", "mode", "q", "tag", "amode", "qmode", "qshort"];
+let navRestoring = false;
+const navSnap = () => Object.fromEntries(NAV_KEYS.map(k => [k, state[k]]));
+const navId = s => [s.view, s.page, s.sel, s.mode].join("|");
+const navUrl = () => location.pathname + location.search;
+
+function navRecord(){
+  if (navRestoring) return;
+  const h = history.state, snap = navSnap();
+  if (!h || !h.nav) { history.replaceState({ nav:snap, idx:0 }, "", navUrl()); return; }
+  // leaving a thinker's sheet for a page: the page takes the sheet's place
+  if (h.sheet) { history.replaceState({ nav:snap, idx:h.idx }, "", navUrl()); return; }
+  if (navId(h.nav) === navId(snap)) { history.replaceState(Object.assign({}, h, { nav:snap }), ""); return; }
+  history.replaceState(Object.assign({}, h, { y:window.scrollY }), "");
+  history.pushState({ nav:snap, idx:(h.idx || 0) + 1 }, "", navUrl());
+}
+
+function navSheet(id){
+  if (navRestoring) return;
+  const h = history.state && history.state.nav ? history.state : { nav:navSnap(), idx:0 };
+  history.replaceState(h.sheet ? h : Object.assign({}, h, { y:window.scrollY }), "");
+  history.pushState({ nav:navSnap(), idx:(h.idx || 0) + 1, sheet:id }, "", navUrl() + "#" + id);
+}
+
+window.addEventListener("popstate", e => {
+  const h = e.state;
+  if (!h || !h.nav) return;
+  navRestoring = true;
+  const move = navId(h.nav) !== navId(navSnap());
+  Object.assign(state, h.nav);
+  glossHide(true);
+  closeTopMenus(false);
+  if (move) render();
+  if (h.sheet) openSheet(h.sheet); else closeSheet();
+  navRestoring = false;
+  if (move) window.scrollTo({ top:h.y || 0, behavior:"instant" });
+});
+
+/* The phone's back button in the app: close whatever is open over the page,
+   then step back through the pages. False on the first page, so the app can
+   close. */
+window.appBack = function(){
+  if (glossPinned) { glossHide(true); return true; }
+  if (document.getElementById("overlay").classList.contains("open")) { closeSheetBack(); return true; }
+  const side = document.getElementById("sidebar");
+  if (side.classList.contains("open")) { side.classList.remove("open"); return true; }
+  if (document.querySelector("#topNav .tn.open")) { closeTopMenus(false); return true; }
+  const bar = document.getElementById("searchBar");
+  if (bar && bar.classList.contains("open")) { closeSearch(true); return true; }
+  if (history.state && history.state.idx > 0) { history.back(); return true; }
+  return false;
+};
 
 /* ================= PAST QUESTIONS =================
    Nine Mains papers classified by what the question asks you to do, most
@@ -3971,7 +4037,7 @@ document.addEventListener("click", e => {
     return;
   }
 
-  if (e.target.id === "closeBtn" || e.target.id === "overlay") closeSheet();
+  if (e.target.id === "closeBtn" || e.target.id === "overlay") closeSheetBack();
 });
 
 document.getElementById("search").addEventListener("input", e => {
@@ -4066,7 +4132,7 @@ document.addEventListener("focusout", e => {
 window.addEventListener("resize", () => glossHide(true));
 
 document.addEventListener("keydown", e => {
-  if (e.key === "Escape") { glossHide(true); closeSheet(); closeTopMenus(false); closeSearch(true); }
+  if (e.key === "Escape") { glossHide(true); closeSheetBack(); closeTopMenus(false); closeSearch(true); }
   const inMap = state.view === "themes" || state.view === "syllabus";
   if ((e.key === "ArrowLeft" || e.key === "ArrowRight") && inMap
       && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)
@@ -4140,11 +4206,21 @@ document.addEventListener("input", e => {
     }
   }catch(e){}
 
+  // a reload returns to the page the reader was on, and to its open sheet
+  const was = history.state && history.state.nav ? history.state : null;
+  if (was) Object.assign(state, was.nav);
+
   loadCache();
   renderTopNav();
   render();
   fetchPortraits();
 
-  const hash = location.hash.slice(1);
-  if (hash && byId[hash]) openSheet(hash);
+  if (was && was.sheet && byId[was.sheet]) {
+    navRestoring = true;
+    openSheet(was.sheet);
+    navRestoring = false;
+  } else {
+    const hash = location.hash.slice(1);
+    if (hash && byId[hash]) openSheet(hash);
+  }
 })();
