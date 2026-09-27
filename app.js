@@ -452,10 +452,9 @@ function paperCardHTML(o){
         <span class="pcard-ico">${ico(o.icon)}</span>
         <div><h4>${o.t}</h4><p>${o.d}</p></div>
       </div>
-      <div class="pcard-stats">${o.stats.map(s => `
-        <button data-to="${s[2]}"><b>${s[0]}</b><span>${s[1]}</span></button>`).join("")}
-      </div>
-      <button class="obtn" data-to="${o.to}">${o.go} ${ico("arrow")}</button>
+      <nav class="pcard-links" aria-label="${esc(o.t)}">${o.links.map(l => `
+        <button data-to="${l[2]}" title="${esc(l[3])}"><span class="pl-ico">${ico(l[0])}</span><b>${esc(l[1])}</b>${ico("chev")}</button>`).join("")}
+      </nav>
     </section>`;
 }
 
@@ -491,16 +490,17 @@ function renderHome(){
       <div class="pcards">
         ${paperCardHTML({
           t:"GS-IV: Ethics", d:"Concepts, thinkers, case studies and PYQs", icon:"scale", art:"aristotle",
-          to:"syllabus|0|", go:"Explore GS-IV",
-          stats:[[s.headings, "Syllabus topics", "syllabus|0|"], [s.gsq, "Past questions", "gs4pyq|0|"],
-                 [s.concepts, "Concept notes", "syllabus|1|"],
-                 [s.cases, "Case studies", cs ? "cases|0|" : "gs4pyq|0|"]]
+          links:[["layers", "Topics", "syllabus|0|", "The syllabus headings"],
+                 ["calendar", "PYQs", "gs4pyq|0|", "Past GS-IV questions"],
+                 ["book", "Notes", "syllabus|1|", "Concept notes"],
+                 ["case", "Case Studies", cs ? "cases|0|" : "gs4pyq|0|", "Case studies with model answers"]]
         })}
         ${paperCardHTML({
           t:"Essay Paper", d:"Themes, model essays, arguments and examples", icon:"nib", art:"pen",
-          to:"themes|0|", go:"Explore Essays",
-          stats:[[s.themes, "Essay themes", "themes|0|"], [s.essays, "Model essays", "essays|0|"],
-                 [s.paras, "Model paragraphs", "themes|1|p:0"], [s.stories, "Stories & examples", "atlas|0|"]]
+          links:[["layers", "Themes", "themes|0|", "The essay themes"],
+                 ["calendar", "PYQs", "pyq|0|", "Past essay topics"],
+                 ["file", "Paragraphs", "themes|1|p:0", "Model paragraphs"],
+                 ["nib", "Essays", "essays|0|", "Model essays"]]
         })}
       </div>
     </section>
@@ -526,7 +526,36 @@ function renderHome(){
         </button>`).join("")}
       </div>
     </section>
+
+    ${typeof ATLAS !== "undefined" ? `
+    <section class="hblock hb-atlas">
+      <div class="hb-head">
+        <div><h3 class="hb-t">Human Thought Atlas</h3></div>
+        <button class="hb-link" data-to="atlas|0|">Open the atlas ${ico("arrow")}</button>
+      </div>
+      <div class="acards">${atlasHighlights(6).map(x => atlasCardHTML(x, "atlas|0|" + x.id)).join("")}</div>
+    </section>` : ""}
     </div>`;
+}
+
+/* Six atlas entries for the home page, a different six each day: a shuffle
+   seeded by the date. One entry from each family comes first (imagined cases,
+   stories, findings, ideas), then entries of kinds not yet shown. */
+function atlasHighlights(n){
+  const d = new Date();
+  let seed = (d.getFullYear() * 372 + d.getMonth() * 31 + d.getDate()) % 2147483646 + 1;
+  const rnd = () => (seed = seed * 16807 % 2147483647) / 2147483647;
+  const pool = ATLAS.slice();
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  const out = [], fams = new Set(), kinds = new Set();
+  const take = x => { if (!out.includes(x)) { out.push(x); fams.add(atlasLook(x)[0]); kinds.add(x.fg); } };
+  pool.forEach(x => { if (!fams.has(atlasLook(x)[0])) take(x); });
+  pool.forEach(x => { if (!kinds.has(x.fg)) take(x); });
+  pool.forEach(take);
+  return out.slice(0, n);
 }
 
 /* ================= SEARCH =================
@@ -3437,11 +3466,12 @@ function atlasMinutes(e){
 }
 
 /* A card on the overview: what kind of entry it is, and the question it asks,
-   which says more about what is inside than the title does. */
-function atlasCardHTML(x){
+   which says more about what is inside than the title does. Outside the atlas
+   the card opens its entry through a link (to). */
+function atlasCardHTML(x, to){
   const e = ATLAS_ENTRIES[x.id];
   return `
-      <button class="acard fam-${atlasLook(x)[0]}${isRead("atlas|0|" + x.id) ? " done" : ""}" data-sel="${x.id}">
+      <button class="acard fam-${atlasLook(x)[0]}${isRead("atlas|0|" + x.id) ? " done" : ""}" ${to ? `data-to="${to}"` : `data-sel="${x.id}"`}>
         <span class="acard-top">${atlasKindHTML(x)}<i class="acard-tick" title="Read"></i></span>
         <b>${esc(x.t)}</b>
         <span class="acard-q">${esc(e.question)}</span>

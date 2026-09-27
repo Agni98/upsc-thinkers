@@ -39,8 +39,10 @@ the GS-IV headings, the essay themes), with case studies, quotes and stories bel
 
 The home page opens with one search box for the whole site, a row of shortcuts and a quotation
 from the quote bank that changes daily. Below it: where you stopped, with how much of that heading
-or theme is read; the two papers, whose numbers are links to what they count; six thinkers; and
-the six essay themes the paper has asked most. The photographs are public-domain and CC0 images
+or theme is read; the two papers, each with four named links (GS-IV: topics, PYQs, notes, case
+studies; Essay: themes, PYQs, paragraphs, essays); six thinkers; the six essay themes the paper has
+asked most; and six entries from the Thought Atlas, one of each kind first, a different six each
+day (three on a phone). The photographs are public-domain and CC0 images
 from Wikimedia Commons.
 
 ### GS-IV concept notes

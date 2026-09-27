@@ -494,16 +494,21 @@ html[data-theme="dark"] .nav-item.active .nav-count{background:rgba(232,165,90,.
 .pcard-ico .ic{width:26px;height:26px}
 .pcard h4{font-family:var(--read);font-size:23px;font-weight:600;line-height:1.2;color:var(--head)}
 .pcard-h p{font-family:var(--read);font-size:14.5px;line-height:1.5;color:var(--ink-2);margin-top:5px}
-.pcard-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;margin:26px 0 20px}
-.pcard-stats button{
-  display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:2px 12px;
-  border:0;border-left:1px solid var(--line);background:none;text-align:left;cursor:pointer}
-.pcard-stats button:first-child{border-left:0;padding-left:0}
-.pcard-stats b{font-family:var(--read);font-size:24px;font-weight:600;line-height:1.1;color:var(--head)}
-.pcard-stats span{font:13px/1.35 var(--read);color:var(--ink-2)}
-.pcard-stats button:hover b{color:var(--saffron-ink)}
-.pcard-stats button:hover span{text-decoration:underline;text-underline-offset:3px}
-.pcard-stats button:focus-visible{outline:2px solid var(--saffron);outline-offset:2px;border-radius:4px}
+/* where each paper's material lives: plain named links, a quiet tile each */
+.pcard-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%;margin-top:22px}
+.pcard-links button{
+  display:flex;align-items:center;gap:10px;min-height:48px;padding:9px 12px 9px 9px;text-align:left;
+  background:var(--bg);border:1px solid var(--line);border-radius:10px;cursor:pointer;
+  transition:border-color .15s,background .15s}
+.pl-ico{
+  flex:0 0 auto;width:30px;height:30px;border-radius:8px;display:grid;place-items:center;
+  background:var(--saffron-soft);color:var(--saffron-ink)}
+.pl-ico .ic{width:16px;height:16px}
+.pcard-links b{flex:1;min-width:0;font:600 15px/1.25 var(--read);color:var(--head)}
+.pcard-links button > .ic{flex:0 0 auto;width:15px;height:15px;color:var(--ink-3);transition:transform .15s,color .15s}
+.pcard-links button:hover{border-color:var(--saffron);background:var(--panel)}
+.pcard-links button:hover > .ic{color:var(--saffron-ink);transform:translateX(2px)}
+.pcard-links button:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 
 .tcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr));gap:12px}
 .tcard{
@@ -589,9 +594,18 @@ html[data-theme="dark"] .cont-art{filter:grayscale(.4) brightness(.85)}
   .pcard{padding:18px 16px}
   .pcard-h{max-width:none}
   .pcard-art{width:60%;opacity:.3}
-  .pcard-stats{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:16px}
-  .pcard-stats button:nth-child(3){border-left:0;padding-left:0}
+  .pcard-links{gap:8px;margin-top:18px}
+  .pcard-links button{padding:8px 10px 8px 8px}
   .hb-head{flex-wrap:wrap;align-items:flex-start}
+}
+/* one column of atlas cards on a phone: three are enough for the home page */
+@media (max-width:540px){ .hb-atlas .acard:nth-child(n+4){display:none} }
+/* narrow phones: the tile itself reads as a link, so the label keeps the room */
+@media (max-width:420px){
+  .pcard-links button{gap:8px;padding:8px}
+  .pcard-links button > .ic{display:none}
+  .pl-ico{width:26px;height:26px}
+  .pcard-links b{font-size:14px}
 }
 
 /* ---------------- The Thought Atlas in the Essay paper ---------------- */
