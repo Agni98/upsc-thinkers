@@ -511,9 +511,12 @@ pyq.js        nine years of past essay questions, classified by theme
 portraits.js  pre-resolved portrait URLs (verified to load)
 atlas.js      the Human Thought Atlas: stories, thought experiments and models
 gs4pyq.js     257 GS-IV questions, 2013 to 2026, 81 of them case studies
-gs4concepts.js the GS-IV concept notes, and the 16 case-study themes
+gs4concepts.js the GS-IV concept notes, and the 17 case-study themes
 cases.js      the case-study method and a model answer for every case
 app.js        rendering, search, syllabus maps
+favicon.svg   the tab icon: the app's logo without its hills, cropped close so it holds at 16px
+favicon-32.png  the same as a PNG, for browsers without SVG icons
+apple-touch-icon.png  the full logo, 180px, for phone home screens
 ```
 
 ## Adding or editing a thinker
