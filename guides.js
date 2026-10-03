@@ -941,8 +941,8 @@ const GUIDES = {
      "Tagore",
      "a mind formed by wonder",
      [
-      "Tagore founded Santiniketan because he believed the school he had attended did the opposite of educating. Instruction delivered as dictation trained a child to receive rather than to grow. He called such a school a factory that produces uniform minds.",
-      "His alternative placed learning in the open air, in the arts and in the child’s own language. His reasoning was that a mind formed by wonder keeps that disposition long after the content has been forgotten. What survives the syllabus is the habit of attention and the willingness to be surprised."
+      "Tagore founded his school at Santiniketan because he believed that the school he had attended as a boy did the opposite of educating. Lessons delivered as dictation trained a child to receive, not to grow. He compared such a school to a factory that turns out identical minds.",
+      "His alternative placed learning in the open air, in the arts and in the child’s own language. His reasoning was simple. A mind formed by wonder keeps that habit long after the content has been forgotten. So what survives the syllabus is the habit of attention and the willingness to be surprised."
      ],
      "the question asks what education is for, or contrasts learning with instruction."
     ],
@@ -950,8 +950,8 @@ const GUIDES = {
      "Freire",
      "the banking model and its politics",
      [
-      "Paulo Freire named the mechanism that Tagore resisted. He called it the banking model of education. The student is treated as an empty account, and the teacher deposits information into it.",
-      "Freire argued that the effect is political and not only educational. A person trained only to receive will accept the world as it has been described to them. His alternative was conscientisation, which teaches a learner to read the word and the world together. Literacy then becomes the ability to question the arrangement one lives under."
+      "Paulo Freire, a Brazilian educator, named the method that Tagore resisted. He called it the banking model of education. The student is treated like an empty bank account, and the teacher deposits information into it. In the examination, the student withdraws the deposit and hands it back.",
+      "Freire argued that the effect is political, not only educational. A person trained only to receive will accept the world as it has been described to them. His alternative was what he called conscientisation. A learner is taught to read the word and the world together. Poor farmers who learn to read the word “wage”, for example, also learn to ask why their wages are so low. Literacy then becomes the ability to question the arrangement one lives under."
      ],
      "an answer needs to link teaching methods with citizenship, power or social change."
     ],
@@ -960,7 +960,7 @@ const GUIDES = {
      "education for democracy",
      [
       "Martha Nussbaum defends the humanities on democratic grounds. She argues that a democracy needs citizens who can examine their own assumptions and imagine a life unlike their own.",
-      "Self-examination and imagination produce no measurable economic return. For that reason, Nussbaum notes, they are usually the first to be cut when budgets tighten. Her argument is that a society which trains only for profit will lose the civic abilities that self-government requires."
+      "Self-examination and imagination produce no measurable economic return. For that reason, Nussbaum notes, they are usually the first things cut when budgets tighten. Her argument is that a society which trains people only to earn will lose the civic abilities that self-government needs. Citizens who cannot question themselves cannot correct their country’s mistakes either."
      ],
      "the question concerns the purpose of higher education, the humanities, or the relation between education and democracy."
     ],
@@ -968,8 +968,8 @@ const GUIDES = {
      "Vivekananda",
      "drawing out, not putting in",
      [
-      "Vivekananda compresses the argument into one sentence. He said that education is the manifestation of the perfection already in man. The important word is manifestation. Nothing is being installed. Something already present is being drawn out.",
-      "On this view, a teacher’s work is closer to gardening than to construction. A system built for efficient transmission will always mistake its own efficiency for success."
+      "Vivekananda put the argument into one sentence. He said that education is the manifestation of the perfection already in man. The important word is manifestation. Nothing is being installed. Something already present is being drawn out.",
+      "On this view, a teacher’s work is closer to gardening than to building. A gardener does not make a plant grow. The gardener provides the conditions in which it grows. A system built to transmit information efficiently will always mistake its own efficiency for success."
      ],
      "the answer needs an Indian framing of education as the development of character and capacity."
     ]
@@ -978,87 +978,89 @@ const GUIDES = {
     [
      "NEP 2020: structure and formation",
      [
-      "The Union Cabinet approved the National Education Policy on 29 July 2020. The policy replaces the 10+2 school structure with a 5+3+3+4 design covering ages 3 to 18. The policy removes rigid separation between streams, allows multiple entry and exit in higher education, and targets a 50 per cent gross enrolment ratio in higher education by 2035.",
-      "Every one of these is a change to structure. Whether formation changes depends on things the policy cannot legislate. A teacher with a class of sixty, an assessment system that still rewards recall, and colleges that do not value unusual subject combinations can all defeat the intention. Flexibility creates room for a different education. Flexibility does not by itself fill the room."
+      "The Union Cabinet approved the National Education Policy on 29 July 2020. The policy replaces the 10+2 school structure with a 5+3+3+4 design that covers ages 3 to 18. The policy removes the rigid walls between arts, science and commerce. The policy allows students to enter and leave higher education at several points, and it aims for half of all young people of college age to be enrolled in higher education by 2035.",
+      "Every one of these is a change to structure. Whether students actually come out different depends on things the policy cannot legislate. A teacher with a class of sixty, an assessment system that still rewards recall, and colleges that look down on unusual subject combinations can all defeat the policy’s intention. Flexibility creates room for a different education. But flexibility does not fill that room by itself."
      ],
      "Can a policy change what students become, or only how schooling is arranged? Separate reforms of structure from changes in teaching and assessment."
     ],
     [
      "Coaching culture and the rational student",
      [
-      "Coaching is usually criticised as a cultural failing. A better reading is that coaching is a rational response to the incentive a student faces. When one ranked examination decides access and the syllabus is finite, drilling pays better than exploration.",
-      "The human cost is visible. According to the National Crime Records Bureau, more than 13,000 students died by suicide in 2022, and students made up 7.6 per cent of all suicides that year. In January 2024 the Ministry of Education issued guidelines for coaching centres. The guidelines require registration, bar the enrolment of students below sixteen, forbid misleading promises of ranks, and limit classes to five hours a day. The guidelines regulate the supply of coaching. They do not change the examination incentive that creates the demand."
+      "Coaching is usually criticised as a cultural failing. A better reading is that coaching is a sensible response to the incentive a student faces. When one ranked examination decides who gets in, and the syllabus is limited, drilling pays better than exploring.",
+      "The human cost is visible. According to the National Crime Records Bureau, more than 13,000 students died by suicide in 2022, and students made up 7.6 per cent of all suicides that year. In January 2024 the Ministry of Education issued guidelines for coaching centres. Centres must register, must not enrol students below sixteen, must not make misleading promises of ranks, and must limit classes to five hours a day. The guidelines regulate the supply of coaching. But they do not change the examination incentive that creates the demand for it."
      ],
-     "Is the problem the coaching centre or the incentive that makes it rational? Ask what would change if the examination changed."
+     "Is the problem the coaching centre, or the incentive that makes coaching sensible? Ask what would change if the examination changed."
     ],
     [
      "ASER and the basics that must come first",
      [
-      "ASER 2024 surveyed 649,491 children across 17,997 villages in 605 districts. The survey is the largest picture available of what rural schooling actually delivers. Among Class 5 children in government schools, the share who could read a Class 2 text rose from 38.5 per cent in 2022 to 44.8 per cent in 2024. Among Class 3 children in government schools, the figure rose from 16.3 per cent to 23.4 per cent, the highest since ASER began in 2005.",
-      "The findings must be read both ways. The recovery from pandemic learning loss is real, and the trend is upward. Yet more than half of Class 5 children in government schools still cannot read at Class 2 level. No argument about critical thinking reaches a child who cannot read the question."
+      "ASER 2024 surveyed 649,491 children across 17,997 villages in 605 districts. The survey gives the largest available picture of what rural schooling actually delivers. Among Class 5 children in government schools, the share who could read a Class 2 text rose from 38.5 per cent in 2022 to 44.8 per cent in 2024. Among Class 3 children in government schools, the share rose from 16.3 per cent to 23.4 per cent, the highest since ASER began in 2005.",
+      "The findings must be read both ways. The recovery from learning lost during the pandemic is real, and the trend is upward. Yet more than half of Class 5 children in government schools still cannot read at Class 2 level. No argument about critical thinking reaches a child who cannot read the question."
      ],
-     "Can a school teach questioning before it has taught reading? Place foundational literacy before higher aims in the sequence of education."
+     "Can a school teach questioning before it has taught reading? Put basic literacy before higher aims in the order of education."
     ],
     [
      "Employability: rival aim or precondition?",
      [
-      "The India Skills Report, produced by CII with Wheebox and AICTE, put overall graduate employability at 54.81 per cent in 2025, up from 51.25 per cent in 2024. Roughly half of graduates, on this measure, are not ready for the jobs their degrees name.",
-      "The usual framing sets skills against liberal education, as though a person must choose. A better framing is sequence. A graduate who cannot find work does not become a reflective citizen at leisure. The graduate falls into insecure work, which removes the freedom that liberal education is supposed to create. Employability is therefore a precondition for other aims of education, not a rival to them."
+      "The India Skills Report, produced by CII with Wheebox and AICTE, put overall graduate employability at 54.81 per cent in 2025, up from 51.25 per cent in 2024. On this measure, roughly half of graduates are not ready for the jobs their degrees name.",
+      "The usual framing sets job skills against a liberal education, as though a person must choose one. A better framing is about order. A graduate who cannot find work does not become a reflective citizen in their spare time. The graduate falls into insecure work, and insecure work removes the very freedom that a liberal education is supposed to create. So employability is a precondition for the other aims of education, not a rival to them."
      ],
      "Does preparing for work betray the purpose of education? Consider whether economic security is the condition for the freedoms education promises."
     ],
     [
      "The honest counter-case: knowledge that must be retained",
      [
-      "The anti-rote argument is often overstated, and a good answer says so. Some disciplines cannot be practised by looking things up. A surgeon in theatre and a pilot in an emergency work under time pressure where recall must be automatic.",
-      "Mathematics is the clearest case in school. A student who has not internalised arithmetic and algebra cannot follow an argument that uses them, because working memory is consumed by the mechanics. Chess masters see patterns rather than pieces, and their pattern library is memorised. The real distinction is not memory against understanding. The distinction is between memorised content that enables thought and memorised content that replaces it."
+      "The argument against rote learning is often overstated, and a good answer says so. Some kinds of work cannot be done by looking things up. A surgeon in the operating theatre and a pilot in an emergency work under such time pressure that recall must be automatic.",
+      "Mathematics is the clearest case in school. A student who has not mastered arithmetic and algebra cannot follow an argument that uses them, because the mechanics use up all their working memory. Chess masters see patterns instead of single pieces, and they have memorised their library of patterns. So the real distinction is not memory against understanding. The real distinction is between memorised content that enables thought and memorised content that replaces it."
      ],
-     "Where does memorisation serve thinking rather than replace it? Identify the knowledge a discipline needs to have ready before judgment can work."
+     "Where does memorisation serve thinking instead of replacing it? Identify the knowledge a subject needs to have ready before judgment can work."
     ]
    ],
    "topics": [
     [
      "2023B4",
      [
-      "The saying suggests that education is not the same as the content taught in school. Most facts learned for examinations are forgotten, yet an educated person remains different from one who was never educated. What remains is a way of attending to the world: curiosity, the habit of checking a claim, the confidence to ask a question and the patience to follow an argument. Tagore built Santiniketan around this idea, and Vivekananda described education as drawing out a capacity already present.",
-      "Freire explains why many systems fail to leave anything behind. In the banking model, the student stores information in order to return it in an examination. Once the examination is over, nothing remains, because nothing was built. The coaching economy shows how rational this can be for the student when a single ranked examination decides the future.",
-      "The saying has a limit that a good essay should state. Some content must remain, because it is the ground on which thinking stands. ASER shows that many children still cannot read a simple text, and no disposition can grow without that foundation. Education is what remains after the details are forgotten, but only if the foundations were first learned well enough never to be forgotten."
+      "The saying suggests that education is not the same as the content taught in school. Most facts learned for examinations are forgotten, yet an educated person stays different from one who was never educated. What remains is a way of attending to the world. Curiosity remains, along with the habit of checking a claim, the confidence to ask a question and the patience to follow an argument. Tagore built Santiniketan around this idea. Vivekananda described education as drawing out an ability already present.",
+      "Freire explains why many systems leave nothing behind. In the banking model, the student stores information only to hand it back in an examination. Once the examination is over, nothing remains, because nothing was built. The coaching economy shows how sensible this can be for the student, when a single ranked examination decides the future.",
+      "The saying has a limit, and a good essay should state it. Some content must remain, because it is the ground on which thinking stands. ASER shows that many children still cannot read a simple text, and no habit of mind can grow without that foundation. So education is what remains after the details are forgotten. But the claim holds only if the foundations were first learned well enough never to be forgotten."
      ]
     ],
     [
      "2026B2",
      [
-      "A person with little education often has firm answers because they have met few alternatives. Education introduces other views, other evidence and other ways of reasoning. Each answer learned opens further questions about its limits, its assumptions and its exceptions. A well-educated mind therefore ends with more questions, not because it knows less, but because it can see more of what is unknown.",
-      "Nussbaum links this to democracy. Citizens who can question their own assumptions and imagine lives unlike their own can deliberate, compromise and correct error. Freire links it to freedom. A person who can question the arrangement they live under is no longer simply governed by it. Tagore’s wonder and Vivekananda’s drawing out describe the same growth from the inside.",
-      "The statement should not be read as praise for endless doubt. Some questions do get answered, and an educated person acts on the best available answers while remaining open to revision. The better questions of an educated mind are more precise, more useful and more honest about what evidence could settle them. Questions are the sign that learning is still alive, not a reason to avoid decisions."
+      "A person with little education often has firm answers, because they have met few alternatives. Education introduces other views, other evidence and other ways of reasoning. Each answer learned opens new questions about its limits, its assumptions and its exceptions. So a well-educated mind ends with more questions. The reason is not that it knows less. The reason is that it can see more of what is unknown.",
+      "Nussbaum links this habit to democracy. Citizens who can question their own assumptions and imagine lives unlike their own can debate, compromise and correct mistakes. Freire links the habit to freedom. A person who can question the arrangement they live under is no longer simply governed by it. Tagore’s wonder and Vivekananda’s drawing out describe the same growth from the inside.",
+      "But the statement should not be read as praise for endless doubt. Some questions do get answered, and an educated person acts on the best available answers while staying open to revision. The questions of an educated mind are better because they are more precise, more useful and more honest about what evidence could settle them. Questions are the sign that learning is still alive. They are not a reason to avoid decisions."
      ]
     ]
    ],
    "intro": [
-    "Most of what a student learns for an examination is forgotten within a few years. Dates, formulas and definitions fade once they are no longer tested. Yet some people leave school changed in ways that last a lifetime, while others leave with a certificate and little else. The question is what education leaves behind once the syllabus has gone, and whether our schools are designed to produce it."
+    "Most of what a student learns for an examination is forgotten within a few years. Dates, formulas and definitions fade once nobody tests them. Yet some people leave school changed in ways that last a lifetime, while others leave with a certificate and little else.",
+    "So the question is what education leaves behind once the syllabus has gone. And are our schools designed to produce it?"
    ],
-   "claim": "The lasting product of education is a disposition, not a store of facts. A well-educated person keeps the habit of attention, the willingness to be surprised and the ability to ask a better question. Facts still matter, because some knowledge must be retained before any thinking can begin. But a system that measures only what was deposited will mistake recall for education and close the minds it was meant to open.",
+   "claim": "The lasting product of education is a habit of mind, not a store of facts. A well-educated person keeps the habit of paying attention, the willingness to be surprised and the ability to ask a better question. Facts still matter, because some knowledge must be held in memory before any thinking can begin. But a system that measures only what was put in will mistake recall for education. Such a system will close the minds it was meant to open.",
    "problem": [
-    "Examinations reward what can be measured, and recall is the easiest thing to measure. A student facing a ranked examination with a fixed syllabus is acting rationally when they drill and memorise. Schools, coaching centres and parents respond to the same incentive. The result is a system that can report rising marks while producing people who are afraid of questions that do not have a known answer.",
-    "The opposite error is also real. Critics of rote learning sometimes speak as if content does not matter at all. A child who cannot read cannot think critically about a text. A doctor who has to look up basic anatomy cannot act in an emergency. The ethical and practical question is therefore how to build the foundations that must be retained, while protecting the curiosity that makes those foundations useful."
+    "Examinations reward what can be measured, and recall is the easiest thing to measure. Picture a student facing a ranked examination with a fixed syllabus. Drilling and memorising is the sensible thing for that student to do. Schools, coaching centres and parents respond to the same incentive. The result is a system that can report rising marks while producing people who are afraid of any question without a known answer.",
+    "But there is an opposite error, and it is just as real. Critics of rote learning sometimes talk as if content does not matter at all. A child who cannot read cannot think critically about a text. A doctor who has to look up basic anatomy cannot act in an emergency.",
+    "So the real question is a balance. How can education build the foundations that must be remembered, while protecting the curiosity that makes those foundations useful?"
    ],
    "distinction": [
     "A useful distinction",
-    "Content that enables further thought, such as reading, arithmetic or a clinician’s knowledge of anatomy, must be retained. Content that substitutes for thought, such as a memorised model answer, can be forgotten without loss. Good education builds the first and does not confuse it with the second."
+    "The important distinction is between content that enables thought and content that replaces it. Reading, arithmetic and a doctor’s knowledge of anatomy enable thought, so they must be retained. A memorised model answer replaces thought, so it can be forgotten without loss. Good education builds the first kind and does not confuse it with the second."
    ],
    "thinkersTitle": "Four thinkers, four tests of education",
    "together": [
     "Putting the four together",
-    "Tagore shows that the lasting product of education is a disposition. Freire shows why a transmission model produces passive citizens. Nussbaum explains what a democracy loses when it trains only for employment. Vivekananda gives the Indian statement of education as drawing out what is already present. Together they explain why a good education leaves a person with more questions, and better ones."
+    "Tagore shows that the lasting product of education is a habit of mind. Freire shows why a model of pure transmission produces passive citizens. Nussbaum explains what a democracy loses when it trains people only for jobs. Vivekananda gives the Indian statement of education as drawing out what is already present. Together they explain why a good education leaves a person with more questions, and better ones."
    ],
    "models": [
     [
      "Education leaves a disposition.",
-     "Tagore believed that a mind formed by wonder keeps its curiosity long after the syllabus is forgotten. The lasting product of education is the habit of attention and the willingness to be surprised. A system that measures only recall measures the part of education that fades first."
+     "Tagore believed that a mind formed by wonder keeps its curiosity long after the syllabus is forgotten. The lasting product of education is the habit of attention and the willingness to be surprised. A system that measures only recall is measuring the part of education that fades first."
     ],
     [
      "The banking model produces passive citizens.",
-     "Freire argued that treating students as accounts into which information is deposited trains them to accept the world as described. Education that teaches students to question the arrangement they live under is a condition of democratic citizenship, not a luxury."
+     "Freire argued that treating students as accounts into which information is deposited trains them to accept the world as it is described to them. Education that teaches students to question the arrangement they live under is a condition of democratic citizenship, not a luxury."
     ],
     [
      "Foundations must come first.",
@@ -1066,21 +1068,21 @@ const GUIDES = {
     ],
     [
      "Incentives shape learning.",
-     "Coaching culture is a rational response to ranked examinations with finite syllabi. Regulating coaching centres treats the symptom. Changing what examinations reward is the only way to change what students choose to learn."
+     "Coaching culture is a sensible response to ranked examinations with limited syllabi. Regulating coaching centres treats the symptom. Changing what examinations reward is the only way to change what students choose to learn."
     ],
     [
      "More questions mean better questions.",
-     "An educated mind ends with more questions because it can see what remains unknown. Its questions are sharper and more answerable. Nussbaum links this capacity to self-government, because citizens who can question their assumptions can also correct their mistakes."
+     "An educated mind ends with more questions because it can see what remains unknown. Its questions are sharper and easier to answer. Nussbaum links this ability to self-government, because citizens who can question their assumptions can also correct their mistakes."
     ]
    ],
    "steps": [
     [
      "Define what education is for.",
-     "Distinguish formation of the person from transmission of content and from training for employment."
+     "Separate the formation of a person from the transmission of content and from training for a job."
     ],
     [
      "Identify what should remain.",
-     "Name the lasting capacities, such as curiosity, reasoning and judgment, as well as the foundational knowledge that must be retained."
+     "Name the lasting abilities, such as curiosity, reasoning and judgment, and the basic knowledge that must be retained."
     ],
     [
      "Examine the incentives.",
@@ -1092,7 +1094,7 @@ const GUIDES = {
     ],
     [
      "State the counter-case.",
-     "Acknowledge where memorisation and skills training are necessary."
+     "Admit where memorisation and skills training are necessary."
     ],
     [
      "Connect education to citizenship.",
@@ -1100,10 +1102,10 @@ const GUIDES = {
     ],
     [
      "Propose reforms at the right level.",
-     "Suggest changes in assessment, teacher preparation and foundational learning, not only in structure."
+     "Suggest changes in assessment, teacher training and basic learning, not only in structure."
     ]
    ],
-   "formula": "Build the foundations that must be retained, then educate for the disposition that remains after the details fade. Judge a system by the curiosity, judgment and capacity to question that it leaves behind, not only by the marks it records."
+   "formula": "Build the foundations that must be retained, then educate for the habit of mind that remains after the details fade. Judge a system by the curiosity, judgment and capacity to question that it leaves behind, not only by the marks it records."
   },
   {
    "thinkers": [
@@ -1111,8 +1113,8 @@ const GUIDES = {
      "Socrates",
      "admitted ignorance as the start of enquiry",
      [
-      "Socrates built an entire philosophical practice on admitting that he knew nothing. His method was to question people who claimed expertise until the claim broke down. His conclusion was not that knowledge is impossible. His conclusion was that recognising one’s own ignorance is the only honest place to start.",
-      "He described himself as a midwife rather than a teacher, because understanding cannot be handed over. Understanding has to be delivered out of the person who holds it. On this view the doubter is not obstructing enquiry. The doubter is conducting it, because certainty is where enquiry stops."
+      "Socrates built a whole way of doing philosophy on admitting that he knew nothing. His method was to question people who claimed expertise until their claim broke down. He did not conclude that knowledge is impossible. He concluded that recognising your own ignorance is the only honest place to start.",
+      "He described himself as a midwife, not a teacher. A midwife does not create the baby. She helps deliver what is already there. In the same way, understanding cannot be handed over. Understanding has to be drawn out of the person who will hold it. On this view the doubter is not blocking enquiry. The doubter is doing the enquiry, because certainty is where enquiry stops."
      ],
      "the answer needs to show why questioning is the beginning of knowledge, or why expertise must be tested."
     ],
@@ -1120,8 +1122,8 @@ const GUIDES = {
      "Einstein",
      "the assumption nobody examines",
      [
-      "Einstein applied the same disposition to physics. He questioned the absoluteness of simultaneity, which every competent physicist had treated as too obvious to examine. The question produced relativity.",
-      "He then spent decades doubting quantum mechanics, and he was largely wrong. Yet his objections sharpened the theory he was attacking. Productive doubt is not scepticism about everything. Productive doubt is a refusal to exempt the one assumption that nobody is examining."
+      "Einstein brought the same habit to physics. Every competent physicist treated simultaneity as absolute. If two events happened at the same time for one observer, they happened at the same time for everyone. The idea seemed too obvious to examine. Einstein questioned it, and the question produced the theory of relativity.",
+      "Einstein then spent decades doubting quantum mechanics, and there he was largely wrong. Yet his objections sharpened the very theory he was attacking. So productive doubt is not doubt about everything. Productive doubt is a refusal to exempt the one assumption that nobody is examining."
      ],
      "the question concerns scientific discovery, originality, or how even mistaken doubt can improve knowledge."
     ],
@@ -1129,8 +1131,8 @@ const GUIDES = {
      "Mill",
      "contested opinion as living truth",
      [
-      "Mill gives the social version of the argument. An opinion that is never contested is held as dead dogma rather than as living truth. Even a false challenge is useful, because answering it forces the holder to understand why they believe what they believe.",
-      "A research culture therefore needs the doubter out of self-interest, not out of tolerance. An institution that treats questioning as disloyalty loses its only mechanism for discovering that it is wrong. The institution will go on being wrong with growing confidence."
+      "Mill gives the social version of the argument. An opinion that is never challenged is held as dead dogma, not as living truth. People repeat it without knowing why it is true. Even a false challenge is useful, because answering it forces the believer to understand the reasons for the belief.",
+      "So a research culture needs the doubter for its own sake, not as a favour. An institution that treats questioning as disloyalty loses its only way of discovering that it is wrong. Such an institution goes on being wrong with growing confidence."
      ],
      "an answer needs to defend dissent, open debate or institutional scrutiny."
     ],
@@ -1138,8 +1140,8 @@ const GUIDES = {
      "Kalam",
      "failure reviewed in public",
      [
-      "A. P. J. Abdul Kalam’s account of the SLV-3 failure shows doubt working inside an institution. The first launch in 1979 failed. The review was held openly, the cause was traced, and nobody was made a scapegoat. The next attempt, in 1980, succeeded.",
-      "Kalam recalled that Satish Dhawan, then chairman of ISRO, faced the press himself after the failure and let Kalam announce the success a year later. The sequence is possible only where error is treated as information rather than as disgrace."
+      "A. P. J. Abdul Kalam’s account of the SLV-3 rocket shows doubt working inside an institution. The first launch, in 1979, failed. The review was held openly. The cause was traced, and nobody was made a scapegoat. The next attempt, in 1980, succeeded.",
+      "Kalam recalled that Satish Dhawan, then chairman of ISRO, faced the press himself after the failure. A year later, Dhawan let Kalam announce the success. Such a sequence is possible only in an institution that treats error as information, not as disgrace."
      ],
      "the case involves research institutions, leadership after failure, or learning from mistakes."
     ]
@@ -1149,39 +1151,39 @@ const GUIDES = {
      "ANRF and funding for risk",
      [
       "The Anusandhan National Research Foundation Act 2023 created a single body to fund and direct research across the sciences. The foundation’s target is 50,000 crore rupees over 2023 to 2028. About 14,000 crore is to come from the Centre. The remaining 36,000 crore, roughly seventy per cent, is expected from industry, philanthropy and other non-government sources.",
-      "The design raises a real question. Funding raised from sponsors tends to favour work with a demonstrable application. Exploratory research needs the opposite: freedom to fail and to ask questions whose value is not yet clear. Whether ANRF protects risk depends on how much of its money is insulated from the demand to show a return."
+      "The design raises a real question. Money from sponsors tends to favour work that has a clear practical use. Exploratory research needs the opposite: freedom to fail, and freedom to ask questions whose value is not yet clear. So whether ANRF protects risky research depends on how much of its money is shielded from the demand to show a return."
      ],
      "Does the funding system reward safe confirmation or risky questions? Look at who pays and what they expect in return."
     ],
     [
      "Peer review, replication and predatory journals",
      [
-      "Science does not rest on the honesty of individual scientists. Science rests on machinery designed to catch error: peer review before publication, replication afterwards and retraction when a result fails. Every part of the machinery is under strain. Large replication efforts in psychology and cancer biology have failed to reproduce a substantial share of published findings.",
-      "Predatory journals publish for a fee without meaningful review, which gives a claim the appearance of scrutiny without its substance. Reviewers are unpaid and overloaded, and replication attracts neither funding nor citation. When doubt becomes a profession and the profession stops rewarding it, the label of science outlasts the process that earned it."
+      "Science does not rest on the honesty of individual scientists. Science rests on machinery designed to catch error. Peer review checks a study before publication. Replication repeats it afterwards. Retraction withdraws a result that fails. Every part of this machinery is under strain. Large efforts to repeat published studies in psychology and cancer biology have failed to reproduce a substantial share of them.",
+      "Predatory journals publish papers for a fee without real review. They give a claim the appearance of scrutiny without its substance. Reviewers are unpaid and overloaded. Repeating someone else’s study attracts neither funding nor citations. So doubt has become a profession that no longer rewards its own work. When that happens, the label of science outlasts the process that earned it."
      ],
      "Are the institutions of doubt still doing their work? Ask whether replication, review and retraction are rewarded or neglected."
     ],
     [
      "Scientific temper as a constitutional duty",
      [
-      "Article 51A(h), inserted by the 42nd Amendment in 1976, makes it a fundamental duty of every citizen to develop the scientific temper, humanism and the spirit of inquiry and reform. India is unusual in placing such a duty in a constitution at all.",
-      "The duty is not enforceable, which raises the same question as the Directive Principles. An unenforceable duty still sets a standard against which public conduct can be judged, including the state’s own conduct. A government that funds research while promoting pseudoscience in official communication fails a duty named in its own Constitution. The demand falls on institutions as much as on citizens."
+      "Article 51A(h) was inserted by the 42nd Amendment in 1976. The article makes it a fundamental duty of every citizen to develop the scientific temper, humanism and the spirit of inquiry and reform. India is unusual in placing such a duty in a constitution at all.",
+      "No court can enforce the duty, which raises the same question as the Directive Principles. But an unenforceable duty still sets a standard for judging public conduct, including the state’s own conduct. Suppose a government funds research while promoting pseudoscience in its official communication. That government fails a duty named in its own Constitution. So the demand falls on institutions as much as on citizens."
      ],
      "What does a duty to think scientifically require of the state? Apply the standard to official communication and policy, not only to citizens."
     ],
     [
      "Legitimate doubt and motivated reasoning",
      [
-      "The line between doubt and denial is not the line between doubt and belief, because doubt is the correct scientific posture. The line lies between doubt that specifies what would change its mind and doubt that does not.",
-      "A person who says a vaccine trial was too short to detect a specific long-term effect has made a claim that evidence can address. A person who treats every new safety study as further proof of a cover-up has adopted a position no evidence can reach. The same test separates a climate scientist arguing about the sensitivity of a model from a commentator for whom no observed warming would ever settle the question."
+      "The line between doubt and denial is not the line between doubt and belief, because doubt is the correct scientific attitude. The line falls between doubt that says what would change its mind and doubt that does not.",
+      "Take two critics of a vaccine. The first says that the trial was too short to detect a particular long-term effect. Evidence can address that claim, for example through a longer follow-up study. The second treats every new safety study as further proof of a cover-up. No evidence can reach that position. The same test separates a climate scientist who argues about the details of a model from a commentator for whom no observed warming would ever settle the question."
      ],
      "Is the doubt answerable? Ask what evidence would count against the doubter’s position."
     ],
     [
      "Bodies where dissent is recorded",
      [
-      "Whether an expert body deliberates or merely ratifies is usually visible in whether disagreement leaves a trace. The Reserve Bank’s Monetary Policy Committee publishes minutes that show how each member voted. A persistent minority view is on the public record and can be tested against what happens next.",
-      "A committee whose recommendations are always unanimous is either very lucky in its composition or is not really deliberating. The design lesson applies to any expert body. Requiring that dissent be recorded, rather than merely permitted, changes the incentive. A member who must sign their name to a decision reads the file differently."
+      "Does an expert body really deliberate, or does it merely approve? The answer usually shows in whether disagreement leaves a trace. The Reserve Bank’s Monetary Policy Committee publishes minutes that show how each member voted. A persistent minority view is on the public record, and anyone can test it against what happens next.",
+      "A committee whose recommendations are always unanimous is either very lucky in its members or is not really deliberating. The design lesson applies to any expert body. Requiring dissent to be recorded, and not merely allowed, changes the incentive. A member who must sign their name to a decision reads the file differently."
      ],
      "Does the institution make dissent visible? Look for recorded votes, minority opinions and published reasons."
     ]
@@ -1190,53 +1192,55 @@ const GUIDES = {
     [
      "2024A4",
      [
-      "Science is sometimes imagined as a collection of certainties. In fact, its history is a series of accepted beliefs that someone doubted. Einstein questioned the absoluteness of simultaneity, which physicists had treated as obvious, and relativity followed. Socrates made admitted ignorance the starting point of all enquiry. The doubter is a true scientist because doubt is how error is found, and finding error is how knowledge improves.",
-      "Doubt also has an institutional form. Peer review, replication and retraction are organised doubt, designed so that no claim is accepted merely because of who made it. Kalam’s account of the SLV-3 failure shows an institution treating failure as information, reviewing it in public and succeeding a year later. Mill adds that even wrong challenges are useful, because answering them keeps knowledge alive rather than dead.",
-      "The statement needs one qualification. Not every doubter is a scientist. A person who rejects every vaccine study or every climate observation doubts in a way that no evidence can answer. The scientific doubter is marked by discipline: they state what evidence would change their mind, and they accept the result. The true scientist doubts in order to know, not in order to avoid knowing."
+      "Science is sometimes imagined as a collection of certainties. In fact, the history of science is a series of accepted beliefs that someone doubted. Einstein questioned the idea that simultaneity is absolute, which physicists had treated as obvious, and relativity followed. Socrates made admitted ignorance the starting point of all enquiry. The doubter is a true scientist because doubt is how error is found, and finding error is how knowledge improves.",
+      "Doubt also has an institutional form. Peer review, replication and retraction are organised doubt. They are designed so that no claim is accepted merely because of who made it. Kalam’s account of the SLV-3 failure shows an institution treating failure as information, reviewing it in public and succeeding a year later. Mill adds that even wrong challenges are useful, because answering them keeps knowledge alive instead of dead.",
+      "The statement needs one qualification. Not every doubter is a scientist. A person who rejects every vaccine study or every climate observation doubts in a way that no evidence can answer. The scientific doubter is marked by discipline. Such a doubter states what evidence would change their mind, and accepts the result. The true scientist doubts in order to know, not in order to avoid knowing."
      ]
     ],
     [
      "2021B2",
      [
-      "A blind date is a meeting whose outcome cannot be known in advance. Research is similar. A genuine research question is one whose answer is not already known, and the researcher must be willing to be surprised, disappointed or proved wrong. Research whose conclusion is fixed before it starts is not research but advocacy.",
-      "The comparison also explains why research needs a certain courage and institutional protection. Many experiments fail. Kalam’s account of the first SLV-3 launch shows that failure, reviewed honestly, is often the step before success. Funding systems that demand guaranteed results discourage the blind date altogether. The design of ANRF, which relies heavily on sponsors, raises exactly this question: will anyone fund a meeting whose outcome is unknown?",
-      "A blind date is not random, however. The researcher prepares, chooses a method and knows what to look for. Socrates questioned with a method, and Einstein doubted a specific assumption. Research combines openness about the result with discipline in the method. The negative result, the failed replication and the surprising finding are all part of the knowledge the date produces."
+      "A blind date is a meeting whose outcome nobody can know in advance. Research is similar. A real research question is one whose answer is not already known. So the researcher must be willing to be surprised, disappointed or proved wrong. Research whose conclusion is fixed before it starts is not research. Research of that kind is advocacy.",
+      "The comparison also explains why research needs courage and protection from institutions. Many experiments fail. Kalam’s account of the first SLV-3 launch shows that a failure, reviewed honestly, is often the step before success. Funding systems that demand guaranteed results discourage the blind date altogether. The design of ANRF, which relies heavily on sponsors, raises exactly this question. Will anyone pay for a meeting whose outcome is unknown?",
+      "But a blind date is not random. The researcher prepares, chooses a method and knows what to look for. Socrates questioned with a method, and Einstein doubted one specific assumption. So research combines openness about the result with discipline in the method. The negative result, the failed replication and the surprising finding are all part of the knowledge the date produces."
      ]
     ]
    ],
    "intro": [
-    "Science is often presented as a body of settled facts. In practice, science advances by doubting what everyone else takes for granted. The same is true of good administration and good research: progress depends on someone asking whether the accepted view is actually right. The difficulty is that doubt can also be used to reject evidence that is inconvenient. The task is to distinguish productive doubt, which can be answered by evidence, from doubt that no evidence could ever satisfy."
+    "Science is often presented as a body of settled facts. In practice, science moves forward when someone doubts what everyone else takes for granted. The same is true of good administration and good research. Progress depends on someone asking whether the accepted view is actually right.",
+    "The difficulty is that doubt can also be used to reject evidence that is simply inconvenient. So the task is to tell two kinds of doubt apart. Productive doubt can be answered by evidence. The other kind could never be satisfied by any evidence at all."
    ],
-   "claim": "Doubt is the method of science, not its failure. A scientist who questions accepted assumptions is doing the work that allows knowledge to improve. But productive doubt is disciplined: it names what evidence would change its mind. Institutions must protect such doubt, reward honest negative results and record dissent, because the alternative to doubt is not certainty but undetected error.",
+   "claim": "Doubt is the method of science, not its failure. A scientist who questions accepted assumptions is doing the work that lets knowledge improve. But productive doubt is disciplined, because it names the evidence that would change its mind. Institutions must protect such doubt, reward honest negative results and record dissent. The alternative to doubt is not certainty. The alternative is error that nobody detects.",
    "problem": [
-    "Every institution prefers confidence. Funding bodies reward projects that promise results, journals prefer positive findings, and organisations treat a raised objection as disloyalty. Under such pressure, researchers learn to confirm rather than to test. The published record then fills with findings that cannot be replicated, and errors survive because nobody inside the system is rewarded for finding them.",
-    "Doubt, however, is not good in itself. A person who rejects every vaccine study or every climate observation is also doubting, but in a way that no evidence can reach. Treating such doubt as scientific gives it an authority it has not earned. The practical question is how to protect questioning without giving equal standing to denial, and how to build institutions that treat error as information rather than as disgrace."
+    "Every institution prefers confidence. Funding bodies reward projects that promise results. Journals prefer findings that show something worked. Organisations treat a raised objection as disloyalty. Under this pressure, researchers learn to confirm instead of to test. The published record then fills with findings that nobody can reproduce. Errors survive, because nobody inside the system is rewarded for finding them.",
+    "But doubt is not good in itself. A person who rejects every vaccine study or every climate observation is also doubting. The difference is that no evidence can reach that kind of doubt. Treating it as scientific gives it an authority it has not earned.",
+    "So the practical question has two parts. How can institutions protect questioning without giving equal standing to denial? And how can they treat error as information instead of as disgrace?"
    ],
    "distinction": [
     "A useful distinction",
-    "Productive doubt states what would count as an answer. Motivated doubt treats every new piece of evidence as further proof of its suspicion. The test is simple: ask the doubter what would change their mind."
+    "The important distinction is between productive doubt and motivated doubt. Productive doubt states what would count as an answer. Motivated doubt treats every new piece of evidence as further proof of its suspicion. The test is simple. Ask the doubter what would change their mind. A productive doubter can tell you. A motivated doubter cannot."
    ],
    "thinkersTitle": "Four thinkers, four tests of enquiry",
    "together": [
     "Putting the four together",
-    "Socrates shows that enquiry starts from admitted ignorance. Einstein shows that progress often comes from questioning the assumption everyone else accepts. Mill explains why institutions need challenges, even wrong ones. Kalam shows how an institution can treat failure as information. Together they make doubt a method with rules, not a mood."
+    "Socrates shows that enquiry starts from admitted ignorance. Einstein shows that progress often comes from questioning the assumption everyone else accepts. Mill explains why institutions need challenges, even wrong ones. Kalam shows how an institution can treat failure as information. Together they turn doubt from a mood into a method with rules."
    ],
    "models": [
     [
      "Doubt begins enquiry.",
-     "Socrates held that recognising one’s own ignorance is the only honest place to start. Certainty ends enquiry. The doubter is not an obstacle to knowledge but the person doing the work that allows knowledge to grow."
+     "Socrates held that recognising your own ignorance is the only honest place to start. Certainty ends enquiry. The doubter is not an obstacle to knowledge. The doubter is the person doing the work that lets knowledge grow."
     ],
     [
      "Productive doubt targets an unexamined assumption.",
-     "Einstein questioned the absoluteness of simultaneity, which physicists had treated as obvious. Productive doubt does not question everything at once. Productive doubt questions the one assumption that nobody else is examining."
+     "Einstein questioned the idea that simultaneity is absolute, which physicists had treated as obvious. Productive doubt does not question everything at once. Productive doubt questions the one assumption that nobody else is examining."
     ],
     [
      "Contested opinions stay alive.",
-     "Mill argued that an opinion never challenged becomes dead dogma. Even a false challenge forces believers to understand their reasons. Institutions therefore need critics for their own sake, not merely out of tolerance."
+     "Mill argued that an opinion never challenged becomes dead dogma. Even a false challenge forces believers to understand their reasons. So institutions need critics for their own sake, not merely out of tolerance."
     ],
     [
      "Institutions must reward honest failure.",
-     "Kalam’s account of the SLV-3 failure shows that error reviewed openly can lead to success. Research systems that punish negative results produce findings that cannot be replicated and errors that nobody is placed to catch."
+     "Kalam’s account of the SLV-3 failure shows that an error reviewed openly can lead to success. Research systems that punish negative results produce findings nobody can reproduce, and errors that nobody is in a position to catch."
     ],
     [
      "Doubt must be answerable.",
@@ -1250,7 +1254,7 @@ const GUIDES = {
     ],
     [
      "Identify the assumption being questioned.",
-     "Show what accepted belief the doubt targets and why it matters."
+     "Show which accepted belief the doubt targets, and why that belief matters."
     ],
     [
      "Test whether the doubt is answerable.",
@@ -1266,14 +1270,14 @@ const GUIDES = {
     ],
     [
      "Treat failure as information.",
-     "Show how honest review of failure leads to better results."
+     "Show how honest review of a failure leads to better results."
     ],
     [
      "Connect to citizenship.",
-     "Link scientific temper to Article 51A(h) and to public reasoning."
+     "Link the scientific temper to Article 51A(h) and to public reasoning."
     ]
    ],
-   "formula": "Doubt is the method of science when it is disciplined and answerable. Protect doubt in institutions by rewarding replication, recording dissent and treating failure as information, and reject doubt that no evidence could ever satisfy."
+   "formula": "Doubt is the method of science when it is disciplined and answerable. Protect doubt in institutions by rewarding replication, recording dissent and treating failure as information. Reject doubt that no evidence could ever satisfy."
   },
   {
    "thinkers": [
@@ -1281,26 +1285,26 @@ const GUIDES = {
      "Plato",
      "number turns the mind towards what does not change",
      [
-      "Plato placed mathematics at the centre of education for a reason that had nothing to do with calculation. For him, number was the discipline that turns the mind away from the shifting world of appearances towards what does not change.",
-      "He also believed that the ratios producing harmony in music were the same ratios that ordered the cosmos. For Plato, reason and beauty were not two neighbouring qualities. They were one quality perceived twice."
+      "Plato placed mathematics at the centre of education, and his reason had nothing to do with calculation. For him, number was the subject that turns the mind away from the shifting world of appearances and towards what does not change. A drawn triangle is always slightly crooked. The triangle that geometry studies is perfect and eternal.",
+      "Plato also believed that the ratios which produce harmony in music are the same ratios that order the cosmos. So for Plato, reason and beauty were not two separate qualities that happen to sit side by side. They were one quality, seen from two sides."
      ],
-     "the question links mathematics with order, harmony or education of the mind."
+     "the question links mathematics with order, harmony or the education of the mind."
     ],
     [
      "Aristotle",
      "contemplation as a pleasure in itself",
      [
       "Aristotle reached a similar position by a different route. He held that the highest human activity is contemplation, the mind engaged with what is necessarily true.",
-      "He insisted that contemplation is pleasurable in itself, not merely as a means to something else. On this account, the joy of understanding is not a side effect of reasoning. The joy is part of what makes reasoning a complete human good."
+      "He insisted that contemplation is pleasant in itself, not merely as a means to something else. On his account, the joy of understanding is not a side effect of reasoning. The joy is part of what makes reasoning a complete human good."
      ],
-     "an answer needs to show that intellectual work has intrinsic value, not only practical use."
+     "an answer needs to show that intellectual work has value in itself, not only practical use."
     ],
     [
      "Einstein",
      "beauty as a guide to truth",
      [
-      "Einstein treated beauty as evidence. He said more than once that the elegance of a theory was a sign of its truth. Many physicists accepted general relativity for its formal elegance before observation had confirmed it.",
-      "The claim is strong because it suggests that the mind recognises rightness before it can prove it. Einstein’s own career shows both sides: elegance guided him to relativity, and the evidence then confirmed what elegance suggested."
+      "Einstein treated beauty as a kind of evidence. He said more than once that the elegance of a theory was a sign of its truth. Many physicists accepted general relativity for its elegance before observation had confirmed it.",
+      "The claim is strong because it suggests that the mind can recognise rightness before it can prove it. Einstein’s own career shows both halves of the process. Elegance guided him to relativity. The evidence then confirmed what elegance had suggested."
      ],
      "the question concerns scientific creativity, elegance, or the relation between intuition and proof."
     ],
@@ -1308,8 +1312,8 @@ const GUIDES = {
      "Tagore",
      "beauty as human recognition of coherence",
      [
-      "Tagore pressed the objection in his well-known conversation with Einstein in 1930. He argued that truth without a human perceiver is an empty abstraction.",
-      "On his account, beauty is not decoration added to reason. Beauty is the form in which a human being registers coherence. The disagreement between Tagore and Einstein suggests that an idea with large consequences tends to be simple, not because reality is simple, but because a simple statement is what a mind can hold, turn over and act upon."
+      "Tagore pressed an objection in his well-known conversation with Einstein in 1930. He argued that truth without a human mind to perceive it is an empty abstraction.",
+      "On his account, beauty is not decoration added to reason. Beauty is the way a human being registers that things fit together. The disagreement between Tagore and Einstein helps explain why ideas with large consequences tend to be simple. Reality is often not simple. But a simple statement is what a mind can hold, turn over and act on."
      ],
      "the answer needs to bring in the human side of knowledge, or to connect science with art."
     ],
@@ -1317,8 +1321,8 @@ const GUIDES = {
      "Ambedkar",
      "compression in constitutional drafting",
      [
-      "Ambedkar’s drafting of the Constitution is the Indian example of simplicity with large consequences. What made the document usable was not its length but its compression. A vast moral and political argument was reduced to articles an ordinary citizen could invoke.",
-      "Article 17 abolishes untouchability in a sentence of eleven words. The consequences were vast because the statement was simple enough to be carried, remembered and demanded."
+      "Ambedkar’s drafting of the Constitution is the Indian example of simplicity with large consequences. What made the document usable was not its length but its compression. A vast moral and political argument was reduced to articles that an ordinary citizen could invoke.",
+      "Article 17 abolishes untouchability in a sentence of eleven words. The consequences were vast because the statement was simple enough to be carried, remembered and demanded. A villager refused water at a public well does not need to know political philosophy. They need to know one sentence."
      ],
      "the question asks how simple ideas produce large social or political consequences."
     ]
@@ -1327,86 +1331,88 @@ const GUIDES = {
     [
      "India’s mathematical inheritance",
      [
-      "Aryabhata, working in the fifth century, gave a strikingly accurate value for pi and a method for solving indeterminate equations. Brahmagupta, in the seventh century, gave the first systematic rules for zero and for negative numbers as quantities in their own right.",
-      "Ramanujan, with almost no formal training, produced thousands of results that he presented largely without proof. Many were confirmed only decades later, and some still generate new work. The tradition shows that intuition finds the result and proof secures it. The two are not rivals but stages. Ramanujan needed Hardy, and Hardy had nothing to prove without Ramanujan."
+      "Aryabhata, working in the fifth century, gave a strikingly accurate value for pi and a method for solving a class of equations with many possible answers. Brahmagupta, in the seventh century, gave the first systematic rules for zero, and for negative numbers as quantities in their own right.",
+      "Ramanujan, with almost no formal training, produced thousands of results that he presented mostly without proof. Many were confirmed only decades later, and some still lead to new work. The tradition shows how intuition and proof relate. Intuition finds the result, and proof secures it. The two are not rivals. They are stages of one process. Ramanujan needed Hardy, and Hardy would have had nothing to prove without Ramanujan."
      ],
      "How do intuition and proof relate in mathematics? Show that each needs the other."
     ],
     [
      "When elegance misleads",
      [
-      "Beauty is a good guide and a bad criterion, and physics shows why. String theory is mathematically elegant, unifies forces that resist unification and has attracted enormous talent for four decades. String theory has not produced a prediction that experiment can currently test and rule out.",
-      "Supersymmetry, elegant for similar reasons, predicted particles that the Large Hadron Collider has not found in the expected ranges. The physicist Sabine Hossenfelder has argued that aesthetic criteria have been doing work in theory choice that evidence should be doing. The lesson transfers to policy. A framework that is beautiful, explains everything and cannot be falsified has stopped being a scientific claim."
+      "Beauty is a good guide but a bad test, and physics shows why. String theory is mathematically elegant. The theory unites forces that resist being united, and it has attracted enormous talent for four decades. Yet string theory has not produced a prediction that any current experiment can test and rule out.",
+      "Supersymmetry, elegant for similar reasons, predicted new particles. The Large Hadron Collider has not found them in the expected ranges. The physicist Sabine Hossenfelder has argued that a sense of beauty has been doing work in choosing theories that evidence should be doing. The lesson carries over to policy. A framework that is beautiful, explains everything and can never be shown wrong has stopped being a scientific claim."
      ],
-     "When is elegance evidence and when is it only appeal? Ask whether the idea makes a prediction that could be wrong."
+     "When is elegance evidence, and when is it only appeal? Ask whether the idea makes a prediction that could turn out wrong."
     ],
     [
      "Simplicity as discipline in design",
      [
-      "Simplicity in design is expensive because it requires knowing exactly what can be removed. Hospital signs that a frightened person can follow, a form that a first-time applicant can complete without help, and a warning label that survives translation into many languages all depend on hidden work about what to leave out.",
-      "The failure is the opposite of clarity: a document written to protect its author, where every contingency is covered, nothing is prioritised, and the reader cannot find the one instruction that matters. The test is not how short the result is. The test is whether the person it was written for can act on it without asking anyone."
+      "Simplicity in design is expensive, because it requires knowing exactly what can be removed. Think of hospital signs that a frightened person can follow, or a form that a first-time applicant can fill in without help, or a warning label that survives translation into many languages. Each depends on hidden work about what to leave out.",
+      "The failure is the opposite of clarity. Picture a document written to protect its author. Every possibility is covered, nothing is put first, and the reader cannot find the one instruction that matters. So the test of simplicity is not how short the result is. The test is whether the person it was written for can act on it without asking anyone."
      ],
      "Is the simplicity the product of understanding or of omission? Judge by whether the intended user can act on it."
     ],
     [
      "Two cultures and the split at Class XI",
      [
-      "C. P. Snow’s lecture of 1959 described a British intellectual life divided into literary and scientific cultures that could no longer talk to each other. India institutionalises the split earlier than most systems. The choice of stream at Class XI, made at fifteen or sixteen, has been close to irreversible. A commerce student cannot ordinarily return to physics, and a science student often drops history entirely.",
-      "NEP 2020 tries to address the split by removing rigid separation between streams and permitting combinations across them. Whether the reform reaches classrooms depends on board examinations and on what colleges accept at admission, neither of which a policy document controls."
+      "In a lecture in 1959, C. P. Snow described British intellectual life as split into two cultures, the literary and the scientific, which could no longer talk to each other. India builds the split into schooling earlier than most systems. Students choose a stream at Class XI, at fifteen or sixteen, and the choice has been close to permanent. A commerce student cannot ordinarily return to physics. A science student often drops history entirely.",
+      "NEP 2020 tries to address the split by removing the rigid walls between streams and allowing combinations across them. Whether the reform reaches classrooms depends on board examinations and on what colleges accept at admission. A policy document controls neither."
      ],
-     "Does the education system allow reason and imagination to meet? Look at the choices students are forced to make and when."
+     "Does the education system allow reason and imagination to meet? Look at the choices students are forced to make, and when they must make them."
     ],
     [
      "Occam’s razor in policy",
      [
-      "Occam’s razor says that entities should not be multiplied beyond necessity. The principle is a rule about explanation, not about reality, and reality is often complicated. The abuse in policy is to treat the simplest story as the true one because it is easiest to communicate.",
-      "Blaming farmer distress on a single cause, or malnutrition on food availability alone, ignores sanitation, maternal health and distribution within the household. The result is an intervention that is clean, measurable and insufficient. The correct use of the razor is to prefer the simpler of two explanations that fit the evidence equally well. The razor says nothing in favour of a simple explanation that fits the evidence worse."
+      "Occam’s razor says that we should not multiply explanations beyond what is necessary. The principle is a rule about explanation, not a claim about reality, and reality is often complicated. The abuse in policy is to treat the simplest story as the true one because it is the easiest to communicate.",
+      "Consider two examples. Blaming farmer distress on a single cause ignores the many pressures farmers face. Blaming malnutrition on food supply alone ignores sanitation, the health of mothers and how food is shared within the household. The result is an intervention that is clean, measurable and not enough. The correct use of the razor is narrow. When two explanations fit the evidence equally well, prefer the simpler one. The razor says nothing in favour of a simple explanation that fits the evidence worse."
      ],
-     "Is the simple explanation the best fit or only the easiest? Compare how well each explanation accounts for the evidence."
+     "Is the simple explanation the best fit, or only the easiest? Compare how well each explanation accounts for the evidence."
     ]
    ],
    "topics": [
     [
      "2023B2",
      [
-      "Music and mathematics share structure. Both depend on pattern, proportion and the resolution of tension. Plato believed that the ratios producing harmony in music were the same ratios that ordered the cosmos, which is why he placed mathematics at the centre of education. Aristotle held that contemplation of necessary truths is pleasurable in itself. Calling mathematics the music of reason captures the experience of those who work in it: a proof resolves like a chord.",
-      "The comparison also explains how mathematics is discovered. Ramanujan produced results by something close to hearing a pattern before he could prove it, and Hardy supplied the proofs. Einstein treated elegance as a sign of truth. In both cases, a sense of form guided the mind to the result, and rigour confirmed it.",
-      "The analogy has a limit. Music is judged by the ear, but mathematics must also be proved. String theory shows that an elegant structure can attract generations of effort without producing a test. The music of reason is a guide to discovery, but proof and evidence remain the final judges. The phrase is best understood as a reminder that rigour, pursued far enough, produces its own kind of beauty."
+      "Music and mathematics share a structure. Both depend on pattern, proportion and the resolution of tension. Plato believed that the ratios behind musical harmony were the same ratios that ordered the cosmos, which is why he placed mathematics at the centre of education. Aristotle held that thinking about necessary truths is pleasant in itself. Calling mathematics the music of reason captures the experience of those who work in it. A proof resolves the way a chord does.",
+      "The comparison also explains how mathematics is discovered. Ramanujan found results by something close to hearing a pattern before he could prove it, and Hardy supplied the proofs. Einstein treated elegance as a sign of truth. In both cases, a sense of form guided the mind to the result, and rigour confirmed it.",
+      "But the analogy has a limit. Music is judged by the ear, while mathematics must also be proved. String theory shows that an elegant structure can attract generations of effort without producing a test. So the music of reason is a guide to discovery, but proof and evidence remain the final judges. The phrase is best read as a reminder that rigour, pursued far enough, produces its own kind of beauty."
      ]
     ],
     [
      "2024B3",
      [
-      "Many ideas that changed the world can be stated in a sentence. Equality before the law, the germ theory of disease and the abolition of untouchability are all simple to state. Article 17 abolishes untouchability in a sentence of eleven words, and its consequences have been vast. A simple statement can be carried, remembered, taught and demanded, which is why simplicity helps large consequences to follow.",
-      "Tagore’s conversation with Einstein suggests why. Simplicity is not a property of reality, which is often complicated. Simplicity is what a human mind can hold and act upon. Good design shows the same principle: a form or a warning that people can act on without help is the product of a great deal of work on what to leave out.",
-      "The claim should not be taken as a rule that every simple idea is important or true. Occam’s razor is abused when a simple explanation is preferred even though it fits the evidence worse, as when malnutrition is blamed on food supply alone. The ideas with large consequences are simple in statement but deep in understanding. Their simplicity comes after the complexity has been understood, not before."
+      "Many ideas that changed the world can be stated in one sentence. Equality before the law, the germ theory of disease and the abolition of untouchability are all simple to state. Article 17 abolishes untouchability in a sentence of eleven words, and its consequences have been vast. A simple statement can be carried, remembered, taught and demanded. So simplicity helps large consequences to follow.",
+      "Tagore’s conversation with Einstein suggests why. Simplicity is not a property of reality, which is often complicated. Simplicity is what a human mind can hold and act on. Good design shows the same principle. A form or a warning that people can act on without help is the product of a great deal of work on what to leave out.",
+      "But the claim should not become a rule that every simple idea is important or true. Occam’s razor is abused when a simple explanation is preferred even though it fits the evidence worse, as when malnutrition is blamed on food supply alone. The ideas with large consequences are simple to state but deep in understanding. Their simplicity comes after the complexity has been understood, not before."
      ]
     ],
     [
      "2022A3",
      [
-      "The statement describes history as a contest between two tempers. The scientific temper tests claims against evidence. The romantic temper trusts feeling, tradition and inspiration. Much of modern history does show the victory of the first: medicine displaced superstition, and experiment displaced authority. Article 51A(h) of the Constitution asks every citizen to develop the scientific temper and the spirit of inquiry.",
-      "Yet the contest was never simply reason against feeling. Einstein treated beauty as a guide to truth. Ramanujan found results by intuition that others later proved. Plato saw mathematics and music as expressions of the same harmony. The scientific achievement often begins with something close to the romantic sense of wonder, disciplined by evidence.",
-      "The better reading is that the victory of rigour was not a victory of coldness. Rigour, pursued far enough, produces its own kind of wonder. Tagore’s objection also deserves a place: science serves human beings, and a science cut off from human values can produce power without direction. History is best seen not as the defeat of the romantic by the scientific, but as the training of imagination by evidence."
+      "The statement describes history as a contest between two tempers. The scientific temper tests claims against evidence. The romantic temper trusts feeling, tradition and inspiration. Much of modern history does show the victory of the first. Medicine replaced superstition, and experiment replaced authority. Article 51A(h) of the Constitution asks every citizen to develop the scientific temper and the spirit of inquiry.",
+      "Yet the contest was never simply reason against feeling. Einstein treated beauty as a guide to truth. Ramanujan found results by intuition that others later proved. Plato saw mathematics and music as expressions of the same harmony. Scientific achievement often begins with something close to the romantic sense of wonder, which evidence then disciplines.",
+      "So the better reading is that the victory of rigour was not a victory of coldness. Rigour, pursued far enough, produces its own kind of wonder. Tagore’s objection also deserves a place. Science serves human beings, and a science cut off from human values can produce power without direction. History is best seen not as the defeat of the romantic by the scientific, but as imagination being trained by evidence."
      ]
     ]
    ],
    "intro": [
-    "Mathematics is often taught as a set of rules and procedures, dry and mechanical. Yet many mathematicians and scientists describe their work in terms of beauty, harmony and elegance. They say a proof can be beautiful and a theory can be too elegant to be wrong. The question is what this experience of beauty tells us about reason, and whether simplicity and elegance are reliable guides to truth."
+    "Mathematics is often taught as a set of dry, mechanical rules. Yet many mathematicians and scientists describe their work in terms of beauty, harmony and elegance. They say that a proof can be beautiful, and that a theory can be too elegant to be wrong.",
+    "So two questions arise. What does this experience of beauty tell us about reason? And are simplicity and elegance reliable guides to truth?"
    ],
-   "claim": "Rigour and beauty are not opposites. A simple, elegant statement is often a sign of deep understanding, because it shows what can be removed without loss. Ideas with large consequences are usually simple enough to be carried, remembered and acted upon. But elegance is a guide, not a proof. A beautiful theory must still be tested, and a simple explanation must still fit the evidence better than the complicated one it replaces.",
+   "claim": "Rigour and beauty are not opposites. A simple, elegant statement is often a sign of deep understanding, because it shows what can be removed without loss. Ideas with large consequences are usually simple enough to be carried, remembered and acted on. But elegance is a guide, not a proof. A beautiful theory must still be tested. A simple explanation must still fit the evidence better than the complicated one it replaces.",
    "problem": [
-    "Many students experience mathematics and science as a list of procedures to memorise. The popular picture sets reason against feeling, the scientist against the romantic, and precision against wonder. The picture misses what practitioners report: that understanding a proof or a law feels like seeing a pattern fall into place.",
-    "The opposite error is to treat beauty as enough. Theories that are elegant but untested can attract decades of effort without producing evidence. In policy, a simple explanation is attractive because it is easy to communicate, even when the causes are many. The task is to value simplicity as the result of understanding while refusing simplicity that comes from ignoring what does not fit."
+    "Many students experience mathematics and science as a list of procedures to memorise. The popular picture sets reason against feeling, the scientist against the romantic, and precision against wonder. The picture misses what people who do the work actually report. Understanding a proof or a law of nature feels like seeing a pattern fall into place.",
+    "But there is an opposite error. Beauty is not enough on its own. Some theories are elegant but untested, and they can absorb decades of effort without producing evidence. Policy has a similar weakness. A simple explanation is attractive because it is easy to communicate, even when a problem has many causes.",
+    "So the task has two sides. We should value simplicity when it is the result of understanding. And we should refuse simplicity that comes from ignoring whatever does not fit."
    ],
    "distinction": [
     "A useful distinction",
-    "Simplicity that comes after understanding is compression: it keeps everything essential and removes the rest. Simplicity that comes before understanding is omission: it leaves out what is inconvenient. The first is insight. The second is a shortcut."
+    "The important distinction is between compression and omission. Simplicity that comes after understanding is compression. A good map of a city is an example. The map leaves out almost everything, but it keeps every road you need. Simplicity that comes before understanding is omission. Omission leaves out whatever is inconvenient, including roads you need. The first kind of simplicity is insight. The second is a shortcut."
    ],
    "thinkersTitle": "Five thinkers, five tests of rigour and beauty",
    "together": [
     "Putting the five together",
-    "Plato and Aristotle show that reason has its own beauty and its own pleasure. Einstein shows that elegance can guide discovery. Tagore reminds us that beauty is how a human mind recognises coherence. Ambedkar shows that a simple statement can change a society because people can carry and demand it. Together they explain why rigour, pursued far enough, produces its own kind of wonder."
+    "Plato and Aristotle show that reason has its own beauty and its own pleasure. Einstein shows that elegance can guide discovery. Tagore reminds us that beauty is how a human mind recognises that things fit together. Ambedkar shows that a simple statement can change a society, because people can carry it and demand it. Together they explain why rigour, pursued far enough, produces its own kind of wonder."
    ],
    "models": [
     [
@@ -1415,25 +1421,25 @@ const GUIDES = {
     ],
     [
      "Elegance guides but does not prove.",
-     "Einstein treated elegance as a sign of truth, and general relativity was later confirmed. Yet string theory shows that elegance can attract decades of effort without a testable prediction. Beauty points the way, and evidence decides."
+     "Einstein treated elegance as a sign of truth, and general relativity was later confirmed. Yet string theory shows that elegance can attract decades of effort without a prediction anyone can test. Beauty points the way, and evidence decides."
     ],
     [
      "Simple statements carry large consequences.",
-     "Article 17 abolishes untouchability in a sentence of eleven words. A simple statement can be remembered, taught and demanded, which is how it changes behaviour on a large scale."
+     "Article 17 abolishes untouchability in a sentence of eleven words. A simple statement can be remembered, taught and demanded, and that is how it changes behaviour on a large scale."
     ],
     [
      "Simplicity must come after understanding.",
-     "Simplicity that compresses knowledge is insight. Simplicity that omits inconvenient causes is a shortcut. Occam’s razor prefers the simpler of two explanations only when both fit the evidence equally well."
+     "Simplicity that compresses knowledge is insight. Simplicity that leaves out inconvenient causes is a shortcut. Occam’s razor prefers the simpler of two explanations only when both fit the evidence equally well."
     ],
     [
      "Intuition and proof are stages, not rivals.",
-     "Ramanujan found results that Hardy helped to prove. Intuition discovers and proof secures. A mature scientific temper values both, rather than setting feeling against reason."
+     "Ramanujan found results that Hardy helped to prove. Intuition discovers, and proof secures. A mature scientific temper values both, instead of setting feeling against reason."
     ]
    ],
    "steps": [
     [
      "Define the terms.",
-     "Explain what is meant by rigour, beauty, simplicity or the scientific temper in the question."
+     "Explain what the question means by rigour, beauty, simplicity or the scientific temper."
     ],
     [
      "Show the link between reason and beauty.",
@@ -1460,7 +1466,7 @@ const GUIDES = {
      "Present rigour and imagination as partners in discovery."
     ]
    ],
-   "formula": "Value simplicity when it is the product of understanding, and treat elegance as a guide rather than a proof. Let intuition propose and evidence decide, so that rigour and wonder work together."
+   "formula": "Value simplicity when it is the product of understanding, and treat elegance as a guide, not a proof. Let intuition propose and evidence decide, so that rigour and wonder work together."
   },
   {
    "thinkers": [
@@ -1468,8 +1474,8 @@ const GUIDES = {
      "Ambedkar",
      "education first",
      [
-      "Ambedkar’s instruction to educate, agitate and organise put education first on purpose. He had watched a community denied not only land and office but the right to read. He understood that such exclusion was not incidental to their subordination. Exclusion from knowledge was the machinery of it.",
-      "Knowledge, in his account, turns a grievance into a claim and a claim into a constitutional argument. The empire that mattered was the one held over what people believed they were entitled to. His own life proves the point: a scholar redrafted the terms of membership of a nation."
+      "Ambedkar’s call was to educate, agitate and organise, and he put education first on purpose. He had watched a community denied not only land and office but the right to read. He understood that this exclusion was not a side effect of their subordination. Exclusion from knowledge was how the subordination worked.",
+      "On his account, knowledge turns a grievance into a claim, and a claim into a constitutional argument. The empire that mattered most was the one held over what people believed they were entitled to. His own life proves the point. A scholar from a community denied schooling ended up redrafting the terms on which every Indian belongs to the nation."
      ],
      "the answer needs to connect knowledge with social justice, empowerment or the power to exclude."
     ],
@@ -1478,7 +1484,7 @@ const GUIDES = {
      "knowledge as national capital",
      [
       "Kalam framed the same insight as a national project. He argued that a country’s real capital lies in the knowledge of its young people, and that self-reliance in technology is a form of sovereignty.",
-      "His concern with building things indigenously came from watching other countries decide what India would be allowed to build. For Kalam, a nation that cannot make its own critical technologies depends on the decisions of others."
+      "His concern with building things in India came from watching other countries decide what India would be allowed to build. For Kalam, a nation that cannot make its own critical technologies depends on the decisions of others. If a foreign supplier can refuse a part, a foreign government can shape your choices."
      ],
      "the question concerns technology, self-reliance, research or the demographic dividend."
     ],
@@ -1486,8 +1492,8 @@ const GUIDES = {
      "Vivekananda",
      "confidence in one’s own thought",
      [
-      "Vivekananda supplies an older Indian version of the argument. He said that education is the manifestation of the perfection already in man. He also argued that a nation confident in its own thought does not need to borrow its self-image from anyone.",
-      "For Vivekananda, intellectual self-respect was the foundation of national strength. A people who believe their own ideas are worthless will not produce new ones."
+      "Vivekananda supplies an older Indian version of the argument. He said that education is the manifestation of the perfection already in man. He also argued that a nation confident in its own thought does not need to borrow its picture of itself from anyone else.",
+      "For Vivekananda, intellectual self-respect was the foundation of national strength. The reason is simple. A people who believe their own ideas are worthless will not produce new ones."
      ],
      "the answer needs to link education with national confidence, culture or civilisational identity."
     ],
@@ -1495,119 +1501,121 @@ const GUIDES = {
      "Nye",
      "power through attraction",
      [
-      "Joseph Nye, an American political scientist, coined the term soft power in 1990. He defined soft power as the ability to get what one wants through attraction rather than coercion or payment. Culture, political values and foreign policies seen as legitimate are its main sources.",
-      "Nye’s framework explains why ideas, education and culture matter in international relations. Nye also warned that soft power is hard to control and cannot be switched on by a government. Attraction depends on how others perceive a country, not only on what it does."
+      "Joseph Nye, an American political scientist, coined the term soft power in 1990. He defined soft power as the ability to get what one wants through attraction, not through force or payment. Its main sources are culture, political values and foreign policies that others see as legitimate.",
+      "Nye’s framework explains why ideas, education and culture matter in international relations. But Nye also warned that soft power is hard to control, and that no government can switch it on. Attraction depends on how others see a country, not only on what the country does."
      ],
-     "the question concerns diplomacy, culture, diaspora or influence without force."
+     "the question concerns diplomacy, culture, the diaspora or influence without force."
     ]
    ],
    "examples": [
     [
      "The demographic dividend and the employability gap",
      [
-      "The demographic dividend is a window, not an endowment. The dividend pays only if the people entering the workforce can do work that someone will pay for, and the window closes as the population ages. The India Skills Report put graduate employability at 54.81 per cent in 2025, up from 51.25 per cent the year before.",
-      "Roughly half of graduates, on that measure, are not immediately employable in the roles their qualifications name. The gap is less about the number of institutions than about the distance between what a syllabus certifies and what an employer needs. The distance widens when curricula are revised once a decade and work changes every year."
+      "The demographic dividend is a window, not a permanent gift. A young population pays a dividend only if the people entering the workforce can do work that someone will pay for. And the window closes as the population ages. The India Skills Report put graduate employability at 54.81 per cent in 2025, up from 51.25 per cent the year before.",
+      "On that measure, roughly half of graduates cannot step straight into the jobs their qualifications name. The gap is less about the number of colleges than about the distance between what a syllabus certifies and what an employer needs. The distance widens when courses are revised once a decade and work changes every year."
      ],
-     "Is the knowledge economy built on degrees or on capacity? Compare the number of graduates with what they can actually do."
+     "Is the knowledge economy built on degrees or on ability? Compare the number of graduates with what they can actually do."
     ],
     [
      "Brain drain, remittances and the diaspora",
      [
-      "Brain drain assumes departure is a net loss, and the accounting is more complicated. India received about 129 billion dollars in remittances in 2024, the largest inflow of any country and well ahead of Mexico at around 68 billion. A diaspora also supplies capital, market access, reputation and returning founders who bring practices learned elsewhere.",
-      "The honest counter-argument remains. The sending country funded the education, and another economy captures the productivity. The loss is greatest when the emigrants are the most highly trained. Whether departure becomes drain or circulation depends largely on whether return is attractive."
+      "The idea of brain drain assumes that every departure is a loss. The real accounting is more complicated. India received about 129 billion dollars in remittances in 2024, the largest inflow of any country and well ahead of Mexico at around 68 billion. A diaspora also supplies investment, access to markets, reputation, and founders who return with practices learned elsewhere.",
+      "But the honest counter-argument remains. India paid for the education, and another economy gains the output. The loss is greatest when the people who leave are the most highly trained. So whether departure becomes a drain or a circulation of talent depends largely on whether coming back is attractive."
      ],
-     "Is the diaspora a loss or an extension of national capacity? Ask what would make talent return or stay connected."
+     "Is the diaspora a loss, or an extension of national capacity? Ask what would make talent return or stay connected."
     ],
     [
      "Research spending below one per cent",
      [
-      "India’s gross expenditure on research and development is about 0.64 per cent of GDP, a figure that has barely moved in two decades of rapid growth. Israel spends about 6 per cent, South Korea about 5, the United States about 3.4 and China about 2.4. China rose from roughly 0.6 per cent in the late 1990s during its fastest growth years.",
-      "The composition matters as much as the total. In high-spending economies, most research is funded by private firms. In India, the state carries an unusually large share, which is why ANRF was designed to draw in industry money. A country can import technology at India’s level of spending. A country cannot set the direction of technology at that level."
+      "India spends about 0.64 per cent of GDP on research and development. The figure has barely moved in two decades of rapid growth. Israel spends about 6 per cent, South Korea about 5, the United States about 3.4 and China about 2.4. China rose from roughly 0.6 per cent in the late 1990s, during its fastest years of growth.",
+      "Who pays matters as much as how much. In high-spending economies, private firms fund most research. In India, the state carries an unusually large share, which is why ANRF was designed to draw in money from industry. At India’s level of spending, a country can import technology. A country cannot set the direction of technology at that level."
      ],
-     "Can a country lead in ideas without investing in producing them? Compare research spending and who pays for it."
+     "Can a country lead in ideas without investing in producing them? Compare research spending, and who pays for it."
     ],
     [
      "Semiconductors and technological sovereignty",
      [
-      "The India Semiconductor Mission was approved on 15 December 2021 with an outlay of 76,000 crore rupees. Micron’s assembly and test plant at Sanand was cleared in June 2023. The Tata joint venture with Taiwan’s Powerchip at Dholera, approved in February 2024, is the first commercial wafer fabrication unit, planned at 50,000 wafer starts a month on a 28 nanometre process.",
-      "The 28 nanometre node is the workhorse for cars, appliances and defence electronics, and it is several generations behind the leading edge. The doctrine is therefore supply security, not frontier leadership. The two goals should not be confused in an answer."
+      "The India Semiconductor Mission was approved on 15 December 2021 with an outlay of 76,000 crore rupees. Micron’s plant at Sanand, which assembles and tests chips, was cleared in June 2023. The Tata joint venture with Taiwan’s Powerchip at Dholera was approved in February 2024. The Dholera unit is the first commercial plant in India to make chips from raw silicon wafers. The plant is planned to start 50,000 wafers a month using a 28 nanometre process.",
+      "The 28 nanometre process is the workhorse for cars, appliances and defence electronics. But the process is several generations behind the most advanced chips. So the aim is secure supply, not leadership at the frontier. An answer should not confuse the two goals."
      ],
      "What does technological sovereignty require, and what is realistic? Separate security of supply from leadership at the frontier."
     ],
     [
      "Culture, scholarships and soft power",
      [
-      "The Indian Technical and Economic Cooperation programme, running since 1964, trains civil servants, engineers and officers from partner countries in Indian institutions. The programme builds a network of people across Africa, Asia and the Pacific with direct professional experience of India. Alongside it sits the influence of yoga, cinema and food, and the International Day of Yoga observed since 2015.",
-      "The useful distinction is between reach and conversion. Cultural familiarity lowers the cost of a relationship. Familiarity does not by itself produce a vote at the United Nations or a defence agreement. Soft power reduces friction. Soft power does not deliver outcomes on demand."
+      "The Indian Technical and Economic Cooperation programme, known as ITEC, has run since 1964. ITEC trains civil servants, engineers and officers from partner countries in Indian institutions. Over the decades it has built a network of people across Africa, Asia and the Pacific who know India from direct professional experience. Alongside ITEC sits the appeal of yoga, cinema and food, and the International Day of Yoga, observed since 2015.",
+      "The useful distinction here is between reach and results. Familiarity with a country’s culture makes a relationship cheaper and easier. But familiarity does not by itself produce a vote at the United Nations or a defence agreement. Soft power reduces friction. Soft power does not deliver outcomes on demand."
      ],
-     "Does cultural influence translate into outcomes? Distinguish familiarity from influence over decisions."
+     "Does cultural influence turn into outcomes? Separate familiarity from influence over decisions."
     ]
    ],
    "topics": [
     [
      "2024A2",
      [
-      "Empires of the past were built on territory, trade routes and armies. Empires of the future will increasingly be built on the ability to generate and apply knowledge. Kalam argued that a country’s real capital is the knowledge of its young people and that technological self-reliance is a form of sovereignty. The semiconductor mission and the Anusandhan National Research Foundation show India trying to build such capacity.",
-      "Knowledge power has two forms. The first is the capacity to create technology, medicine and institutions. The second is soft power, which Nye described as influence through attraction. India’s diaspora, its ITEC training programme and its culture all extend influence without force. Yet influence is fragile if the capacity beneath it is thin. Research spending of about 0.64 per cent of GDP and an employability rate near half show how much remains to be built.",
-      "Ambedkar’s warning completes the argument. Control over knowledge has always been a tool of exclusion, and an empire of the mind can be built on propaganda as easily as on truth. The empires of the mind worth building are those that widen access to knowledge and remain accountable to the people they serve. Otherwise the new empire only reproduces the old exclusion in a new form."
+      "Empires of the past were built on territory, trade routes and armies. Empires of the future will increasingly be built on the ability to generate and apply knowledge. Kalam argued that a country’s real capital is the knowledge of its young people, and that technological self-reliance is a form of sovereignty. The Semiconductor Mission and the Anusandhan National Research Foundation show India trying to build that capacity.",
+      "Knowledge power takes two forms. The first is the capacity to create technology, medicine and institutions. The second is soft power, which Nye described as influence through attraction. India’s diaspora, its ITEC training programme and its culture all extend influence without force. Yet influence is fragile if the capacity beneath it is thin. Research spending of about 0.64 per cent of GDP and an employability rate near half show how much remains to be built.",
+      "Ambedkar’s warning completes the argument. Control over knowledge has always been a tool of exclusion, and an empire of the mind can be built on propaganda as easily as on truth. The empires of the mind worth building are those that widen access to knowledge and stay accountable to the people they serve. Otherwise the new empire only repeats the old exclusion in a new form."
      ]
     ],
     [
      "2025A3",
      [
-      "Thought finds a world when it discovers what already exists: the laws of physics, the structure of a cell or the history of a people. Thought creates a world when ideas change what people believe is possible, and so change what they attempt. Constitutional rights, scientific institutions and technologies all began as ideas before they became facts.",
-      "Ambedkar’s life shows both movements. He studied the social order to understand how caste worked, and then used that knowledge to draft a Constitution that created new rights. Vivekananda argued that a nation confident in its own thought will act differently from one that borrows its self-image. What a society believes decides what it attempts, and what it attempts decides what exists.",
-      "The creative power of thought carries responsibility. Ideas can create a world of equal citizenship, but they can also create a world of manufactured grievance and division. Knowledge that is not tested against evidence and not accountable to the people it affects can build a false world. The task is to join the discovering power of thought, which respects evidence, with its creating power, which imagines what could be better."
+      "Thought finds a world when it discovers what already exists, such as the laws of physics, the structure of a cell or the history of a people. Thought creates a world when ideas change what people believe is possible, and so change what they attempt. Constitutional rights, scientific institutions and technologies all began as ideas before they became facts.",
+      "Ambedkar’s life shows both movements. He studied the social order to understand how caste worked. Then he used that knowledge to draft a Constitution that created new rights. Vivekananda argued that a nation confident in its own thought will act differently from one that borrows its picture of itself. What a society believes decides what it attempts, and what it attempts decides what comes to exist.",
+      "But the creative power of thought carries a responsibility. Ideas can create a world of equal citizenship. Ideas can also create a world of manufactured grievance and division. Knowledge that is not tested against evidence, and not accountable to the people it affects, can build a false world. So the task is to join the two powers of thought. The discovering power respects evidence. The creating power imagines what could be better."
      ]
     ]
    ],
    "intro": [
-    "For most of history, power meant land, armies and resources. In the present century, the decisive advantage increasingly lies in knowledge: the ability to produce ideas, test them and turn them into technology, institutions and influence. The question is what an empire of the mind actually means, who holds it, and whether it can be used to free people as well as to control them."
+    "For most of history, power meant land, armies and natural resources. In this century, the decisive advantage lies more and more in knowledge. Knowledge here means the ability to produce ideas, test them and turn them into technology, institutions and influence.",
+    "So three questions follow. What does an empire of the mind actually mean? Who holds it? And can it be used to free people as well as to control them?"
    ],
-   "claim": "The trained mind has become the decisive asset of nations. Territory can be occupied and resources exhausted, but a population able to generate, test and apply ideas produces advantages that cannot simply be seized. Thought both discovers a world and creates one, because what a society believes possible decides what it attempts. Yet an empire of the mind can be built on false ideas as easily as true ones, so knowledge must remain accountable to the people it governs.",
+   "claim": "The trained mind has become a nation’s decisive asset. Territory can be occupied and resources can run out. But a population that can generate, test and apply ideas produces advantages that nobody can simply seize. Thought both discovers a world and creates one, because what a society believes is possible decides what it attempts. Yet an empire of the mind can be built on false ideas as easily as on true ones. So knowledge must stay accountable to the people it governs.",
    "problem": [
-    "India’s ambitions rest on the claim that a young population and a strong technical workforce can make the country a knowledge power. Yet the foundations are uneven. Around half of graduates are not ready for the jobs their degrees name. Research spending remains well below that of leading economies. Many of the most highly trained people leave for other countries. An empire of the mind requires more than a large number of degrees.",
-    "The claim also has a darker side. The same capacity that spreads scientific knowledge spreads propaganda. Control over what people believe is a form of power, and it has always been used to exclude. Ambedkar saw that denying a community the right to read was the machinery of its subordination. The question is not only how to build a knowledge economy, but how to make knowledge a means of freedom rather than a new instrument of control."
+    "India’s ambitions rest on a claim. A young population and a strong technical workforce, the claim goes, can make the country a knowledge power. Yet the foundations are uneven. Around half of graduates are not ready for the jobs their degrees name. Research spending remains far below that of the leading economies. Many of the most highly trained people leave for other countries. An empire of the mind needs more than a large number of degrees.",
+    "The claim also has a darker side. The same channels that spread scientific knowledge also spread propaganda. Control over what people believe is a form of power, and that power has always been used to exclude. Ambedkar saw that denying a community the right to read was the very machinery of its subordination.",
+    "So the question is not only how to build a knowledge economy. The question is also how to make knowledge a means of freedom, and not a new tool of control."
    ],
    "distinction": [
     "A useful distinction",
-    "Hard power compels through force or payment. Soft power attracts, so that others come to want what you want. Knowledge power creates the capacity to produce new ideas and technologies. An empire of the mind needs the third, and it can generate the second, but it cannot be imposed like the first."
+    "The important distinction is between three kinds of power. Hard power compels, through force or payment. Soft power attracts, so that others come to want what you want. Knowledge power is the capacity to produce new ideas and technologies. An empire of the mind needs the third kind. The third kind can generate the second. But neither can be imposed the way the first is."
    ],
    "thinkersTitle": "Four thinkers, four tests of knowledge as power",
    "together": [
     "Putting the four together",
-    "Ambedkar shows that control over knowledge is control over people, and that education is the first step to freedom. Kalam treats knowledge and technology as national capital and sovereignty. Vivekananda adds the need for confidence in one’s own thought. Nye explains how ideas and culture become influence abroad. Together they show that the empire of the mind is built at home, in schools and laboratories, before it is felt abroad."
+    "Ambedkar shows that control over knowledge is control over people, and that education is the first step to freedom. Kalam treats knowledge and technology as national capital and as sovereignty. Vivekananda adds the need for confidence in one’s own thought. Nye explains how ideas and culture become influence abroad. Together they show that the empire of the mind is built at home, in schools and laboratories, before anyone abroad feels it."
    ],
    "models": [
     [
      "Knowledge is the new capital.",
-     "Kalam argued that a nation’s real wealth lies in the knowledge of its young people. Territory can be occupied and resources exhausted, but the capacity to create and apply ideas cannot simply be seized."
+     "Kalam argued that a nation’s real wealth lies in the knowledge of its young people. Territory can be occupied and resources can run out. But nobody can simply seize the capacity to create and apply ideas."
     ],
     [
      "Exclusion from knowledge is a form of domination.",
-     "Ambedkar saw that denying a community the right to read was the machinery of its subordination. Education turns a grievance into a claim and a claim into a right, which is why he placed education first."
+     "Ambedkar saw that denying a community the right to read was how its subordination worked. Education turns a grievance into a claim and a claim into a right, which is why he put education first."
     ],
     [
      "Capacity must precede reputation.",
-     "India’s research spending of about 0.64 per cent of GDP and graduate employability near half show gaps in the foundations of knowledge power. Influence abroad cannot last without capacity at home."
+     "India’s research spending of about 0.64 per cent of GDP, and graduate employability near half, show gaps in the foundations of knowledge power. Influence abroad cannot last without capacity at home."
     ],
     [
      "Soft power reduces friction but does not command.",
-     "Nye defined soft power as influence through attraction. ITEC, the diaspora and culture make relationships easier, but they do not deliver outcomes on demand."
+     "Nye defined soft power as influence through attraction. ITEC, the diaspora and culture make relationships easier. But they do not deliver outcomes on demand."
     ],
     [
      "Ideas can build false worlds too.",
-     "The machinery that spreads scientific temper can also spread propaganda. An empire of the mind must remain accountable to evidence and to the people it governs."
+     "The channels that spread the scientific temper can also spread propaganda. An empire of the mind must stay accountable to evidence and to the people it governs."
     ]
    ],
    "steps": [
     [
      "Define the kind of power.",
-     "Distinguish hard power, soft power and the capacity to produce knowledge."
+     "Separate hard power, soft power and the capacity to produce knowledge."
     ],
     [
      "Show why knowledge now matters most.",
-     "Explain why ideas and skills create advantages that cannot simply be seized."
+     "Explain why ideas and skills create advantages that nobody can simply seize."
     ],
     [
      "Assess the foundations.",
@@ -1615,7 +1623,7 @@ const GUIDES = {
     ],
     [
      "Consider the flows of talent.",
-     "Discuss brain drain, remittances and circulation."
+     "Discuss brain drain, remittances and the circulation of talent."
     ],
     [
      "Examine soft power honestly.",
@@ -1627,10 +1635,10 @@ const GUIDES = {
     ],
     [
      "Conclude with accountability.",
-     "Argue for knowledge power that widens access and remains answerable to evidence and citizens."
+     "Argue for knowledge power that widens access and stays answerable to evidence and to citizens."
     ]
    ],
-   "formula": "Build the empire of the mind at home, through foundations of learning, research and skill, before seeking influence abroad. Keep knowledge open and accountable, so that it frees people rather than controls them."
+   "formula": "Build the empire of the mind at home, through foundations of learning, research and skill, before seeking influence abroad. Keep knowledge open and accountable, so that it frees people instead of controlling them."
   },
   {
    "thinkers": [
@@ -1638,8 +1646,8 @@ const GUIDES = {
      "Socrates",
      "truth through dialogue",
      [
-      "Socrates never wrote a treatise, and the omission was itself a position. He believed truth emerges from the friction between two people who disagree and are willing to follow the argument wherever it leads.",
-      "A monologue, however brilliant, cannot expose the assumption its author cannot see. Plato’s dialogues show the pattern again and again. Someone arrives certain, the certainty is tested, and something more defensible survives. Wisdom finds truth because it is willing to lose an argument."
+      "Socrates never wrote a book, and the choice was itself a position. He believed that truth emerges from the friction between two people who disagree and are willing to follow the argument wherever it leads.",
+      "A monologue, however brilliant, cannot expose an assumption its author cannot see. Plato’s dialogues show the pattern again and again. Someone arrives certain. Socrates tests the certainty with questions. Something more defensible survives. So wisdom finds truth because it is willing to lose an argument."
      ],
      "the answer needs to show how dialogue and questioning reveal truth."
     ],
@@ -1647,8 +1655,8 @@ const GUIDES = {
      "Mill",
      "silencing robs everyone",
      [
-      "Mill turned the Socratic insight into a principle for whole societies. Silencing an opinion, he argued, robs everyone. If the opinion is right, we lose the correction. If it is wrong, we lose the clearer understanding that comes from defending the truth against it.",
-      "Mill’s argument makes free discussion a public good, not merely an individual right. A society that suppresses dissent weakens its own capacity to find and hold the truth."
+      "Mill turned the Socratic insight into a principle for whole societies. Silencing an opinion, he argued, robs everyone. If the opinion is right, we lose the correction it offers. If the opinion is wrong, we lose the clearer understanding that comes from defending the truth against it.",
+      "Mill’s argument makes free discussion a public good, not merely a private right. A society that suppresses dissent weakens its own ability to find the truth and to hold on to it."
      ],
      "the question concerns freedom of expression, dissent or the value of opposing views."
     ],
@@ -1656,26 +1664,26 @@ const GUIDES = {
      "Habermas",
      "conditions for genuine debate",
      [
-      "Jürgen Habermas set out the conditions under which a contest is genuine rather than staged. In what he called an ideal speech situation, every participant may question any claim, nobody is excluded, and no coercion is at work. A norm is legitimate only if everyone affected could accept it after a real discussion.",
-      "The standard is demanding. The standard exposes much of what passes for debate: a panel chosen for agreement, a consultation held after the decision, or a chamber where the result is known before anyone speaks."
+      "Jürgen Habermas, a German philosopher, set out the conditions under which a contest is genuine and not staged. He called them an ideal speech situation. Every participant may question any claim. Nobody is shut out. Nobody is coerced. Under these conditions, a rule is legitimate only if everyone affected by it could accept it after a real discussion.",
+      "The standard is demanding, and that is its use. The standard exposes much of what passes for debate. A panel chosen because its members agree fails the test. So does a consultation held after the decision, or a chamber where everyone knows the result before anyone speaks."
      ],
-     "an answer needs to test the quality of public deliberation, consultation or legislative debate."
+     "an answer needs to test the quality of public deliberation, consultation or debate in a legislature."
     ],
     [
      "Ambedkar",
      "constitutional morality must be cultivated",
      [
-      "Ambedkar warned the Constituent Assembly that constitutional morality is not a natural sentiment. Constitutional morality has to be cultivated. The forms of democracy can survive while the substance drains away.",
-      "For Ambedkar, democracy depends on habits: respect for opponents, restraint in the use of power and willingness to be answerable. Institutions that avoid scrutiny keep their procedures while losing their purpose."
+      "Ambedkar warned the Constituent Assembly that constitutional morality is not a natural sentiment. Constitutional morality has to be cultivated. The outward forms of democracy can survive while the substance drains away.",
+      "For Ambedkar, democracy depends on habits. Those habits include respect for opponents, restraint in the use of power and willingness to answer for one’s actions. Institutions that avoid scrutiny keep their procedures but lose their purpose."
      ],
-     "the question concerns democratic institutions, parliamentary scrutiny or the health of constitutional democracy."
+     "the question concerns democratic institutions, scrutiny by Parliament or the health of constitutional democracy."
     ],
     [
      "Tagore and Gandhi",
      "disagreement between friends",
      [
-      "The exchange between Tagore and Gandhi is the model worth remembering. The two men disagreed publicly and fundamentally about non-cooperation, the boycott of schools and the burning of foreign cloth. Neither softened his position for the sake of friendship or the movement.",
-      "The exchange produced no winner. The exchange produced two positions that each had to become more precise under pressure. Their disagreement shows what a genuine opponent is for, and what the absence of one quietly costs."
+      "The exchange between Tagore and Gandhi is the model worth remembering. The two men disagreed publicly and deeply about non-cooperation, the boycott of schools and the burning of foreign cloth. Neither softened his position for the sake of their friendship or of the national movement.",
+      "The exchange produced no winner. Instead, it produced two positions that each had to become more precise under pressure. Their disagreement shows what a genuine opponent is for, and what the absence of one quietly costs."
      ],
      "the answer needs an example of respectful, principled disagreement that improved both sides."
     ]
@@ -1684,40 +1692,40 @@ const GUIDES = {
     [
      "Bills passed without committee scrutiny",
      [
-      "Committee scrutiny is where a bill meets the people it will govern. Committees take evidence, sit across party lines and publish their reasoning. PRS Legislative Research found that the 17th Lok Sabha referred about 16 per cent of bills to committees. The 16th referred about 25 per cent, and the 14th and 15th about 60 and 71 per cent.",
-      "Disruption compounds the problem. A House that loses sitting days to protest passes the same laws in less time and with fewer speakers. The result is law that is formally valid but substantively unexamined, and its defects surface later in litigation rather than earlier in drafting."
+      "Committee scrutiny is where a bill meets the people it will govern. Committees hear evidence, sit across party lines and publish their reasoning. PRS Legislative Research found that the 17th Lok Sabha sent about 16 per cent of bills to committees. The 16th sent about 25 per cent. The 14th and 15th sent about 60 and 71 per cent.",
+      "Disruption makes the problem worse. A House that loses sitting days to protest still passes the same laws, only in less time and with fewer speakers. The result is a law that is valid in form but unexamined in substance. Its defects then come to light later, in court cases, instead of earlier, at the drafting stage."
      ],
      "Is the legislature testing laws before passing them? Compare the rate of committee scrutiny across Lok Sabhas."
     ],
     [
      "Echo chambers and algorithmic sorting",
      [
-      "Habermas described an ideal speech situation as debate free of power and deception, where only the force of the better argument decides. A recommendation system built for engagement is close to the opposite. The system shows each person the material most likely to hold their attention, and outrage holds attention better than qualification does.",
-      "The result is not that people meet no disagreement. People meet the weakest form of the other side, which strengthens their existing view rather than testing it. Real contest requires meeting the best opposing argument, and the machinery has no reason to show it."
+      "Habermas described an ideal speech situation as debate free of power and deception, where only the force of the better argument decides. A recommendation system built to maximise engagement is close to the opposite. The system shows each person the material most likely to hold their attention. Outrage holds attention better than careful qualification does.",
+      "The result is not that people meet no disagreement. The result is that people meet the weakest form of the other side. Meeting a weak opponent strengthens a person’s existing view instead of testing it. Real contest requires meeting the best opposing argument, and the machinery has no reason to show it."
      ],
-     "Does the platform expose people to the strongest opposing case or the weakest? Ask what the system is designed to maximise."
+     "Does the platform show people the strongest opposing case or the weakest? Ask what the system is designed to maximise."
     ],
     [
      "The Pre-Legislative Consultation Policy",
      [
-      "The Pre-Legislative Consultation Policy was adopted on 10 January 2014. The policy requires a department to publish a draft law with its justification and an assessment of costs, and to keep it open for comment for at least thirty days. Compliance has been poor. Between June 2014 and May 2019, 186 bills were introduced and only 44 were published for comment. Of these, 24 did not meet the thirty-day requirement.",
-      "Across a wider count, 227 of 301 bills reached Parliament with no prior consultation. The policy is not binding, and no public system monitors compliance. Consultation that is optional is easily skipped when a government is in a hurry."
+      "The Pre-Legislative Consultation Policy was adopted on 10 January 2014. The policy requires a department to publish a draft law, with its justification and an estimate of costs, and to keep it open for public comment for at least thirty days. Compliance has been poor. Between June 2014 and May 2019, 186 bills were introduced, and only 44 were published for comment. Of those 44, 24 did not meet the thirty-day requirement.",
+      "In a wider count, 227 of 301 bills reached Parliament with no consultation beforehand. The policy is not binding, and no public system checks whether departments follow it. Consultation that is optional is easily skipped when a government is in a hurry."
      ],
-     "Is public consultation real or optional? Look at how often the policy is followed and what happens when it is not."
+     "Is public consultation real or optional? Look at how often the policy is followed, and what happens when it is not."
     ],
     [
      "Public interest litigation as institutional counter-argument",
      [
-      "Public interest litigation relaxed the rule that only an injured party may approach the court. The change allowed people without means or standing to have a grievance heard. PIL works as a permanent opposition that does not depend on winning an election, and it has produced important outcomes on food, the environment and custodial rights.",
-      "The objections are also real. A court is not designed to weigh budgets or run programmes. An unelected bench directing policy raises a democratic problem, and the instrument has been used for private ends under a public label. PIL is a corrective for a legislature that is not scrutinising, and a poor substitute for one that does."
+      "Public interest litigation relaxed the old rule that only an injured party may approach the court. The change let people without money or legal standing have a grievance heard. PIL works as a permanent opposition that does not need to win an election. PIL has produced important outcomes on food, the environment and the rights of people in custody.",
+      "The objections are also real. A court is not designed to weigh budgets or to run programmes. An unelected bench directing policy raises a democratic problem. And some people have used the tool for private ends under a public label. So PIL is a useful corrective when a legislature is not scrutinising. But PIL is a poor substitute for a legislature that does."
      ],
-     "When should courts supply the opposition that politics lacks? Weigh access to justice against the limits of judicial capacity and legitimacy."
+     "When should courts supply the opposition that politics lacks? Weigh access to justice against the limits of what courts can do and the limits of their legitimacy."
     ],
     [
      "Khanna’s dissent in ADM Jabalpur",
      [
-      "ADM Jabalpur v Shivkant Shukla, decided in 1976 during the Emergency, held that once the enforcement of Article 21 was suspended, a detainee could not seek habeas corpus, however unlawful the detention. Justice H. R. Khanna alone dissented. He held that the state cannot take life or liberty without the authority of law.",
-      "Khanna was passed over for Chief Justice and resigned. The 44th Amendment of 1978 made Article 21 non-suspendable even during an Emergency. In Puttaswamy in 2017, the Supreme Court expressly overruled the majority. The dissent became the law, forty-one years later."
+      "ADM Jabalpur v Shivkant Shukla was decided in 1976, during the Emergency. The Supreme Court held that once the enforcement of Article 21 was suspended, a detained person could not seek habeas corpus, however unlawful the detention. Justice H. R. Khanna alone dissented. He held that the state cannot take life or liberty without the authority of law.",
+      "Khanna was passed over for Chief Justice, and he resigned. The 44th Amendment of 1978 made Article 21 impossible to suspend, even during an Emergency. In the Puttaswamy case in 2017, the Supreme Court expressly overruled the majority in ADM Jabalpur. The dissent became the law, forty-one years later."
      ],
      "What is the value of a recorded dissent? Show how a lone opposing view can later correct an institution."
     ]
@@ -1726,31 +1734,33 @@ const GUIDES = {
     [
      "2023A1",
      [
-      "A game needs an opponent because the opponent tests every move. Thinking works the same way. A single mind cannot easily see its own assumptions. An opponent exposes them and forces each position to become more precise. Socrates never wrote a treatise because he believed truth emerged in dialogue. Mill argued that even a false opinion helps, because answering it clarifies why the truth is true.",
-      "The same principle applies to institutions. Parliamentary committees, public consultation and judicial review all place an opposite team inside decision-making. When bills pass without committee scrutiny, or consultation is skipped, the game is played without an opponent, and the flaws appear later in courts or on the ground. Khanna’s dissent in ADM Jabalpur shows how a lone opponent can protect a principle until the institution is ready to return to it.",
-      "The analogy has a limit. An opponent improves thinking only if the contest is fair and both sides play to learn. Disruption, echo chambers and staged debates are not real opposition. Habermas’s ideal speech situation describes the conditions under which contest produces truth. Thinking needs an opponent, but it needs one who argues honestly and a referee who lets the better argument win."
+      "A game needs an opponent, because the opponent tests every move. Thinking works the same way. A single mind cannot easily see its own assumptions. An opponent exposes them, and forces each position to become more precise. Socrates never wrote a book because he believed truth emerged in dialogue. Mill argued that even a false opinion helps, because answering it makes clear why the truth is true.",
+      "The same principle applies to institutions. Parliamentary committees, public consultation and judicial review all place an opposite team inside decision-making. When bills pass without committee scrutiny, or consultation is skipped, the game is played without an opponent. The flaws then appear later, in courts or on the ground. Khanna’s dissent in ADM Jabalpur shows how a lone opponent can protect a principle until the institution is ready to return to it.",
+      "But the analogy has a limit. An opponent improves thinking only if the contest is fair and both sides play to learn. Disruption, echo chambers and staged debates are not real opposition. Habermas’s ideal speech situation describes the conditions under which contest produces truth. So thinking needs an opponent who argues honestly, and a referee who lets the better argument win."
      ]
     ],
     [
      "2019A1",
      [
-      "Knowledge collects facts, but wisdom knows how to test them, weigh them and see what they mean. Wisdom finds truth by admitting ignorance, listening to other views and being willing to change its mind. Socrates said that his only wisdom was knowing that he did not know. His method of questioning was a way of finding truth by exposing false certainty.",
+      "Knowledge collects facts. Wisdom knows how to test them, weigh them and see what they mean. Wisdom finds truth by admitting ignorance, listening to other views and being willing to change its mind. Socrates said that his only wisdom was knowing that he did not know. His method of questioning was a way of finding truth by exposing false certainty.",
       "Wisdom also knows that truth is rarely found alone. Mill’s defence of free discussion shows that truth becomes clearer when it is challenged. Tagore and Gandhi disagreed openly, and each position became sharper under pressure. Wise institutions build in the opposition that individuals may lack: committees, courts, recorded dissent and public consultation.",
-      "Wisdom differs from cleverness here. A clever person can defend any position, including a false one. A wise person seeks the position that survives the strongest objection. The finding of truth is therefore not only an intellectual act but a moral one, requiring humility, honesty and the courage to lose an argument. Wisdom finds truth because it looks for it where it might be proved wrong."
+      "Here wisdom differs from cleverness. A clever person can defend any position, including a false one. A wise person looks for the position that survives the strongest objection. So finding truth is not only an intellectual act. Finding truth is also a moral act, because it needs humility, honesty and the courage to lose an argument. Wisdom finds truth because it looks for truth where it might be proved wrong."
      ]
     ]
    ],
    "intro": [
-    "People often think of thinking as something done alone. Yet most ideas improve only when they meet resistance. A plan that nobody questions keeps its hidden flaws, and a belief that nobody challenges is held without understanding. The question is why thought needs an opponent, and how societies can build institutions in which genuine disagreement improves decisions rather than blocking them."
+    "People often picture thinking as something done alone. Yet most ideas improve only when they meet resistance. A plan that nobody questions keeps its hidden flaws. A belief that nobody challenges is held without understanding.",
+    "So two questions follow. Why does thought need an opponent? And how can a society build institutions in which real disagreement improves decisions instead of blocking them?"
    ],
-   "claim": "Truth emerges most reliably from honest contest. An opponent exposes assumptions that a single mind cannot see, and forces each side to become more precise. Wisdom finds truth because it is willing to lose an argument. For this reason democratic institutions must protect real disagreement: committee scrutiny, public consultation, independent courts and recorded dissent. An institution that avoids opposition has not settled its questions. The institution has only stopped asking them.",
+   "claim": "Truth emerges most reliably from an honest contest. An opponent exposes assumptions that a single mind cannot see, and forces each side to become more precise. Wisdom finds truth because it is willing to lose an argument. For this reason democratic institutions must protect real disagreement: scrutiny by committees, public consultation, independent courts and recorded dissent. An institution that avoids opposition has not settled its questions. The institution has only stopped asking them.",
    "problem": [
-    "Opposition is uncomfortable, slow and often unwelcome. Governments prefer to pass laws quickly, organisations prefer consensus, and individuals prefer to hear views that confirm their own. Digital platforms reinforce the preference by showing people content that holds their attention, which often means content that confirms what they already believe or presents the other side at its weakest.",
-    "Yet contest can also fail. Debate can become noise, disruption or a performance for supporters. An opposition that only obstructs does not improve thinking any more than one that is silenced. The practical question is how to design institutions in which disagreement is genuine, evidence-based and consequential, so that the best version of each argument meets the best version of the other."
+    "Opposition is uncomfortable, slow and often unwelcome. Governments prefer to pass laws quickly. Organisations prefer agreement. Individuals prefer to hear views that confirm their own. Digital platforms strengthen the preference. They show people whatever holds their attention, which often means content that confirms what they already believe, or shows the other side at its weakest.",
+    "But contest can also fail. Debate can become noise, disruption or a show put on for supporters. An opposition that only obstructs does not improve thinking any more than an opposition that has been silenced.",
+    "So the practical question is about design. How can institutions make disagreement real, based on evidence and able to change the result? The aim is for the best version of each argument to meet the best version of the other."
    ],
    "distinction": [
     "A useful distinction",
-    "A genuine opponent tests an argument at its strongest and changes the outcome if the argument fails. A staged opponent is chosen to lose, heard after the decision, or answered only with a vote. The first improves thinking. The second only decorates a conclusion already reached."
+    "The important distinction is between a genuine opponent and a staged one. A genuine opponent tests an argument at its strongest, and the outcome changes if the argument fails. A staged opponent is chosen to lose, or is heard only after the decision is made, or is answered only with a vote. Think of a public consultation opened the day after a project has been approved. The first kind of opponent improves thinking. The second kind only decorates a conclusion already reached."
    ],
    "thinkersTitle": "Five thinkers, five tests of contest",
    "together": [
@@ -1760,15 +1770,15 @@ const GUIDES = {
    "models": [
     [
      "Dialogue exposes hidden assumptions.",
-     "Socrates believed truth emerges from the friction between people who disagree. A single mind cannot see its own blind spots. A genuine opponent can."
+     "Socrates believed that truth emerges from the friction between people who disagree. A single mind cannot see its own blind spots. A genuine opponent can."
     ],
     [
      "Silencing harms everyone.",
-     "Mill argued that suppressing an opinion robs both sides. A true opinion corrects us, and a false one sharpens our understanding of the truth. Free discussion is therefore a public good."
+     "Mill argued that suppressing an opinion robs both sides. A true opinion corrects us, and a false one sharpens our understanding of the truth. So free discussion is a public good."
     ],
     [
      "Debate needs fair conditions.",
-     "Habermas’s ideal speech situation requires that everyone can question any claim, nobody is excluded and no coercion is at work. Consultations held after decisions and panels chosen for agreement fail the test."
+     "Habermas’s ideal speech situation requires that everyone can question any claim, that nobody is shut out and that nobody is coerced. Consultations held after decisions, and panels chosen because they agree, fail the test."
     ],
     [
      "Institutions must build in opposition.",
@@ -1794,7 +1804,7 @@ const GUIDES = {
     ],
     [
      "Bring in evidence.",
-     "Use PRS data on committee referrals or the record of pre-legislative consultation."
+     "Use PRS data on committee referrals, or the record of consultation before laws are drafted."
     ],
     [
      "Consider the digital sphere.",
@@ -1806,10 +1816,10 @@ const GUIDES = {
     ],
     [
      "Conclude with the virtues of dialogue.",
-     "Emphasise humility, honesty and willingness to lose an argument."
+     "Stress humility, honesty and the willingness to lose an argument."
     ]
    ],
-   "formula": "Seek truth through honest contest. Build opposition into institutions, hear the strongest version of the other side, and be willing to lose an argument, because an idea that has never been challenged has never been tested."
+   "formula": "Seek truth through honest contest. Build opposition into institutions, hear the strongest version of the other side, and be willing to lose an argument. An idea that has never been challenged has never been tested."
   }
  ],
  "Character, Adversity and the Test of Power": [
