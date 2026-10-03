@@ -1681,7 +1681,6 @@ function renderEssay(topic, mode){
         ${essayServes(e) ? `<span>answers <b>${essayServes(e)}</b> ${essayServes(e) === 1 ? "topic" : "topics"}</span>` : ""}
         ${(e.atlas || []).length ? `<span>uses <b>${e.atlas.length}</b> ${e.atlas.length === 1 ? "story" : "stories"}</span>` : ""}
       </p>
-      <p class="mode-note">${esc(e.note || "") || m.note}</p>
       ${servesHTML(e)}
       ${paras.map((x, i) => `<p${i === paras.length - 1 ? ' class="es-close"' : ""}>${rich(x)}</p>`).join("")}
       ${essayStoriesHTML(e)}
