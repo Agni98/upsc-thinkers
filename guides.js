@@ -3628,8 +3628,8 @@ const GUIDES = {
      "Tagore",
      "keeping imagination larger than politics",
      [
-      "Tagore is the strongest Indian evidence for the claim. He wrote the national anthems of two countries, India and Bangladesh. He returned his knighthood in 1919 in a letter that shaped how the Jallianwala Bagh massacre was understood. He argued publicly with Gandhi about the moral character of a mass movement. He held no institutional authority for any of this.",
-      "His argument was that the artist’s function is to keep a society’s imagination larger than its politics. A people who cannot imagine an arrangement other than the present one will never demand one."
+      "Tagore is the strongest Indian evidence for the claim. He wrote the national anthems of two countries, India and Bangladesh. In 1919 he returned his knighthood, and his letter of protest shaped how the massacre at Jallianwala Bagh was understood. He argued in public with Gandhi about the moral character of a mass movement. He held no official position for any of this.",
+      "His argument was that the artist’s job is to keep a society’s imagination larger than its politics. A people who cannot imagine any arrangement other than the present one will never demand a different one."
      ],
      "the answer needs an Indian example of art shaping national life and conscience."
     ],
@@ -3637,17 +3637,17 @@ const GUIDES = {
      "Tolstoy",
      "art as the transmission of feeling",
      [
-      "Tolstoy supplied the theory in What Is Art?, published in 1897. He held that art is the transmission of feeling from one person to another, and that its value lies in the sincerity and reach of the transmission rather than in refinement.",
-      "On this account the artist legislates by deciding what a society is able to feel about a fact it already knows. A change in feeling usually comes before any change in law."
+      "Tolstoy supplied the theory in What Is Art?, published in 1897. He held that art is the passing of a feeling from one person to another. The value of art, for Tolstoy, lies in how sincere and how far-reaching that passing is, not in how refined the work is.",
+      "On this account, the artist legislates by deciding what a society is able to feel about a fact it already knows. And a change in feeling usually comes before any change in law."
      ],
-     "the question asks how art influences society or what makes art valuable."
+     "the question asks how art influences society, or what makes art valuable."
     ],
     [
      "Plato",
      "the opposing witness",
      [
-      "Plato is the necessary opposing witness, and the argument is stronger for taking him seriously. In the Republic he proposed excluding poets from his ideal city, precisely because he agreed that they shape the soul.",
-      "Plato thought such power was too dangerous to leave unsupervised. The disagreement between Plato and Tolstoy concerns the value of the influence, not whether it exists. Both agree that poets legislate."
+      "Plato is the necessary witness for the other side, and the argument is stronger for taking him seriously. In the Republic he proposed keeping poets out of his ideal city. His reason was that he agreed with the claim. Poets shape the soul.",
+      "Plato thought such power was too dangerous to leave unsupervised. So the disagreement between Plato and Tolstoy is about whether art’s influence is good, not about whether the influence exists. Both agree that poets legislate."
      ],
      "the answer needs to present the case for regulating art, or the danger of its influence."
     ],
@@ -3655,8 +3655,8 @@ const GUIDES = {
      "Gibran",
      "the extraordinary in the ordinary",
      [
-      "Kahlil Gibran completes the picture from the maker’s side. He insisted that the poet finds the extraordinary already present in ordinary things rather than inventing it.",
-      "Creativity springs from looking for the magical in the mundane, because the mundane is where a society stores its assumptions. Noticing those assumptions is the first legislative act of an artist."
+      "Kahlil Gibran completes the picture from the maker’s side. He insisted that the poet does not invent the extraordinary. The poet finds it already present in ordinary things.",
+      "Creativity springs from looking for the magical in the everyday, because the everyday is where a society keeps its assumptions. Nobody questions how a household divides its chores until a story makes the division visible. Noticing such assumptions is the first legislative act of an artist."
      ],
      "the question concerns creativity, inspiration or seeing the familiar freshly."
     ],
@@ -3664,8 +3664,8 @@ const GUIDES = {
      "Aurobindo",
      "consciousness before institutions",
      [
-      "Sri Aurobindo’s life is a sharp Indian illustration. He moved from revolutionary politics into poetry and philosophy, settling in Pondicherry in 1910.",
-      "His view was that a people’s consciousness must change before its institutions can, and that the work of changing consciousness is not done in legislatures. Whether his turn was wisdom or retreat is a genuine question, and an essay is stronger for asking it."
+      "Sri Aurobindo’s life is a sharp Indian illustration. He moved from revolutionary politics into poetry and philosophy, and settled in Pondicherry in 1910.",
+      "His view was that a people’s consciousness must change before its institutions can change, and that legislatures cannot do the work of changing consciousness. Whether his turn away from politics was wisdom or retreat is a real question. An essay is stronger for asking it."
      ],
      "the answer needs to discuss the relation between inner change and political change."
     ]
@@ -3674,40 +3674,40 @@ const GUIDES = {
     [
      "Art that changed feeling before the law",
      [
-      "The claim that art legislates is best tested where public feeling shifted before any law did. Charles Dickens on debtors’ prisons and Upton Sinclair on meatpacking are standard Western examples. In India, Premchand wrote about rural indebtedness, and Mahasweta Devi wrote about bonded labour and dispossession. Hindi and regional cinema put caste and dowry before audiences who could otherwise avoid them.",
-      "The causal claim must be made carefully. Art rarely produces a statute directly. Art changes the emotional cost of continuing to do nothing, and legislation tends to follow that change rather than lead it."
+      "The claim that art legislates is best tested where public feeling shifted before any law did. The standard Western examples are Charles Dickens on debtors’ prisons and Upton Sinclair on the meatpacking factories of Chicago. In India, Premchand wrote about the debts that trapped farmers, and Mahasweta Devi wrote about bonded labour and people driven off their land. Hindi and regional cinema put caste and dowry before audiences who could otherwise avoid them.",
+      "The claim about cause and effect must be made carefully. Art rarely produces a law directly. What art does is raise the emotional cost of continuing to do nothing. Legislation tends to follow that change in feeling, not lead it."
      ],
      "Did the art change the law, or the feeling that made the law possible? Trace the sequence from sentiment to policy."
     ],
     [
      "Film certification and the state’s judgment",
      [
-      "India certifies films before release under the Cinematograph Act of 1952. The Central Board of Film Certification is therefore a licensing body, not only a rating body. In K. A. Abbas v Union of India in 1970, the Supreme Court upheld pre-censorship of films. The Court reasoned that cinema’s immediacy and reach justified treating films differently from print.",
-      "The reasoning rests on a claim about the power of the medium that predates television and the internet. The Shyam Benegal committee recommended in 2016 that the Board move towards certification and away from ordering changes. The unresolved question is why a democracy that permits a book to be published permits a film only after alteration."
+      "India certifies films before release under the Cinematograph Act of 1952. So the Central Board of Film Certification is a licensing body, not only a rating body. In K. A. Abbas v Union of India in 1970, the Supreme Court upheld censorship of films before release. The Court reasoned that cinema’s immediacy and reach justified treating films differently from books.",
+      "The reasoning rests on a claim about the power of cinema made before television and the internet existed. In 2016 the Shyam Benegal committee recommended that the Board should certify films for age groups instead of ordering cuts. The question remains unresolved. Why does a democracy that lets a book be published let a film be shown only after changes?"
      ],
-     "Should the state decide what art may transmit? Compare the treatment of different media and the reasons given."
+     "Should the state decide what art may say? Compare how different media are treated, and the reasons given."
     ],
     [
      "Art organised for politics: PWA and IPTA",
      [
-      "The Progressive Writers’ Association, formed in 1936, and the Indian People’s Theatre Association, formed in 1943 during the Bengal famine, placed literature and performance in the service of a political programme. The two movements produced durable work.",
-      "The movements also show a standing difficulty. Art committed in advance to a conclusion tends to become illustration. Members argued among themselves about whether art should be a weapon, or whether a work that stops being honest stops being persuasive. Art influences politics most when it remains answerable first to its own truthfulness."
+      "The Progressive Writers’ Association was formed in 1936. The Indian People’s Theatre Association was formed in 1943, during the Bengal famine. Both placed literature and performance in the service of a political programme. Both movements produced lasting work.",
+      "The movements also show a recurring difficulty. Art that is committed in advance to a conclusion tends to become mere illustration of that conclusion. Members argued among themselves about it. Some said art should be a weapon. Others said that a work which stops being honest also stops being persuasive. So art influences politics most when it stays answerable first to its own truthfulness."
      ],
      "When does committed art become propaganda? Ask whether the work stays honest when honesty is inconvenient to its cause."
     ],
     [
      "Public funding and independence",
      [
-      "India funds culture through bodies created in the early 1950s. The Sangeet Natak Akademi, established in 1953, is the model: an autonomous academy funded by the state and governed by practitioners. The design solves a real problem, because art forms with small audiences and long training cannot survive on ticket sales, and their loss would be irreversible.",
-      "The design creates its own problem. Autonomy on paper can coexist with dependence in fact when appointments and budgets run through government. The question is not whether the state should fund art. The question is what insulates the judgment of merit from the funder."
+      "India funds culture through bodies created in the early 1950s. The Sangeet Natak Akademi, set up in 1953, is the model. The Akademi is an independent body, funded by the state but run by artists themselves. The design solves a real problem. Art forms with small audiences and long training cannot survive on ticket sales, and once lost, they cannot be brought back.",
+      "But the design creates its own problem. Independence on paper can sit alongside dependence in fact, when appointments and budgets run through the government. So the question is not whether the state should fund art. The question is what protects judgments of artistic merit from the people who provide the money."
      ],
-     "Can art be publicly funded and still independent? Look at who appoints and who decides what deserves support."
+     "Can art be publicly funded and still independent? Look at who appoints, and who decides what deserves support."
     ],
     [
      "The objection: influence without accountability",
      [
-      "A legislator can be voted out, an official is bound by service rules, and a judge writes reasons that can be appealed. An artist with a large audience faces none of these checks and may shape public sentiment more than any of them.",
-      "The reply is not that artists are secretly accountable. The objection proves too much, since it applies equally to columnists, preachers and teachers. The relevant distinction is between power that compels and power that persuades. An artist cannot make anyone do anything, and the remedy for unwelcome persuasion has always been counter-persuasion."
+      "A legislator can be voted out. An official is bound by service rules. A judge writes reasons that can be appealed. An artist with a large audience faces none of these checks, yet may shape public feeling more than any of them.",
+      "The reply is not that artists are secretly accountable. The reply is that the objection proves too much. The same objection would apply to columnists, preachers and teachers. The relevant distinction is between power that compels and power that persuades. An artist cannot make anyone do anything. And the remedy for unwelcome persuasion has always been persuasion in return."
      ],
      "Is the artist’s influence a threat to democracy? Separate persuasion from compulsion."
     ]
@@ -3716,63 +3716,65 @@ const GUIDES = {
     [
      "2022A2",
      [
-      "Shelley’s claim is that poets shape the laws of the world without holding office. Laws follow what a society can feel and imagine, and poets, novelists and filmmakers shape both. Tolstoy described art as the transmission of feeling, and a change in feeling usually comes before a change in law. Tagore wrote the anthems of two nations and returned his knighthood after Jallianwala Bagh, shaping how a massacre was understood.",
-      "Indian literature offers many examples. Premchand made rural indebtedness visible to readers who did not live it, and Mahasweta Devi did the same for bonded labour. Cinema brought caste and dowry into public discussion. In each case, art raised the emotional cost of doing nothing, and reform became easier. Plato feared this power so much that he would have excluded poets from his republic.",
-      "The influence is unacknowledged because it cannot be measured or voted on. Governments sometimes try to control it through censorship, as the pre-certification of films shows. Yet art persuades rather than compels, and a democracy should answer art with argument rather than licensing. The poet’s legislation is real, but it works only through the free consent of those who are moved."
+      "The poet Shelley called poets the unacknowledged legislators of the world. He meant that poets shape the laws of the world without holding office. Laws follow what a society can feel and imagine, and poets, novelists and filmmakers shape both. Tolstoy described art as the passing on of feeling, and a change in feeling usually comes before a change in law. Tagore wrote the anthems of two nations, and his returned knighthood after Jallianwala Bagh shaped how a massacre was understood.",
+      "Indian literature offers many examples. Premchand made the debts of farmers visible to readers who did not live with them. Mahasweta Devi did the same for bonded labour. Cinema brought caste and dowry into public discussion. In each case, art raised the emotional cost of doing nothing, and so reform became easier. Plato feared this power so much that he would have kept poets out of his republic.",
+      "The influence goes unacknowledged because nobody can measure it or vote on it. Governments sometimes try to control it through censorship, as the certification of films before release shows. Yet art persuades instead of forcing. So a democracy should answer art with argument, not with licensing. The poet’s legislation is real, but it works only through the free consent of the people it moves."
      ]
     ],
     [
      "2023A4",
      [
-      "Creativity is often imagined as a flash from nowhere. More often it begins with attention to the ordinary. Gibran held that the poet finds the extraordinary already present in ordinary things. A familiar object, a daily routine or a common phrase can reveal something new when looked at freshly. The mundane is where a society stores its assumptions, and noticing them is the first step to questioning them.",
-      "Tagore found poetry in village life and seasons. Premchand found drama in the debts of a farmer. Designers find better solutions in the small frustrations of daily use. The effort matters: seeing the magical in the mundane requires patience, attention and the willingness to look again at what everyone else has stopped noticing.",
-      "The claim has a social dimension too. Art that reveals the hidden meaning of ordinary life can change how a society sees itself. Aurobindo believed that consciousness must change before institutions, and looking freshly at the ordinary is one way consciousness changes. Inspiration is not waiting for the extraordinary. Inspiration is the effort to see the ordinary clearly enough to find what was always there."
+      "Creativity is often imagined as a flash from nowhere. More often, creativity begins with attention to the ordinary. Gibran held that the poet finds the extraordinary already present in ordinary things. A familiar object, a daily routine or a common phrase can reveal something new when someone looks at it freshly. The everyday is where a society keeps its assumptions, and noticing them is the first step to questioning them.",
+      "Tagore found poetry in village life and in the seasons. Premchand found drama in a farmer’s debts. Designers find better solutions in the small frustrations of daily use. The effort matters. Seeing the magical in the everyday requires patience, attention and the willingness to look again at what everyone else has stopped noticing.",
+      "The claim also has a social side. Art that reveals the hidden meaning of ordinary life can change how a society sees itself. Aurobindo believed that consciousness must change before institutions can, and looking freshly at the ordinary is one way consciousness changes. So inspiration is not waiting for the extraordinary. Inspiration is the effort to see the ordinary clearly enough to find what was always there."
      ]
     ]
    ],
    "intro": [
-    "Laws are made in parliaments, but the feelings that make laws possible are often shaped elsewhere. A poem, a novel or a film can change how a society feels about a fact it already knows. Artists hold no office and command no army, yet their work can shift what people are able to imagine and to demand. The question is how art exercises this quiet authority, and whether an influence without accountability should worry a democracy."
+    "Laws are made in parliaments. But the feelings that make laws possible are often shaped somewhere else. A poem, a novel or a film can change how a society feels about a fact it already knows. Artists hold no office and command no army. Yet their work can shift what people are able to imagine, and so what they are able to demand.",
+    "So two questions follow. How does art exercise this quiet authority? And should a democracy worry about an influence that answers to nobody?"
    ],
-   "claim": "Artists legislate by shaping what a society can feel and imagine. Their work usually comes before any change in law, because it changes the emotional cost of doing nothing. Creativity begins by noticing what is taken for granted in ordinary life, where a society stores its assumptions. The power is real, which is why Plato feared it. Yet the power works through persuasion, not compulsion, and the right answer to art one dislikes is more art, not a licence.",
+   "claim": "Artists legislate by shaping what a society can feel and imagine. Their work usually comes before any change in the law, because it raises the emotional cost of doing nothing. Creativity begins by noticing what is taken for granted in ordinary life, because ordinary life is where a society keeps its assumptions. The power is real, which is why Plato feared it. Yet the power works by persuading, not by forcing. So the right answer to art one dislikes is more art, not a licence.",
    "problem": [
-    "Art is often treated as decoration, separate from the serious business of law and policy. Budgets for culture are the first to be cut, and artists are praised in speeches but seldom consulted. The view misses how public feeling changes. Social reform has repeatedly followed a change in sentiment that writers, singers and filmmakers helped to create.",
-    "Yet the power of art raises hard questions. Art can inflame as well as enlighten. Governments may try to control art through censorship or funding, and artists may place their work in the service of a political programme until it becomes propaganda. The challenge is to recognise art’s influence, protect its independence and accept that influence without office must be answered by argument rather than by control."
+    "Art is often treated as decoration, separate from the serious business of law and policy. Budgets for culture are the first to be cut. Artists are praised in speeches but seldom consulted. This view misses how public feeling actually changes. Again and again, social reform has followed a change in sentiment that writers, singers and filmmakers helped to create.",
+    "But the power of art raises hard questions. Art can inflame as well as enlighten. Governments may try to control art through censorship or through funding. And artists may put their work so fully in the service of a political programme that the work becomes propaganda.",
+    "So the challenge has three parts. Recognise art’s influence. Protect its independence. And accept that influence without office must be answered by argument, not by control."
    ],
    "distinction": [
     "A useful distinction",
-    "Power that compels, like a law or an order, must be accountable to voters and courts. Power that persuades, like art or argument, cannot force anyone to act. The remedy for persuasion one dislikes is counter-persuasion, not licensing."
+    "The important distinction is between power that compels and power that persuades. A law or an order compels, so it must answer to voters and to courts. Art and argument persuade. Neither can force anyone to act. A film may move a million people to anger, but nobody is fined for staying unmoved. So the remedy for persuasion one dislikes is persuasion in return, not a licence."
    ],
    "thinkersTitle": "Five thinkers, five tests of the artist’s authority",
    "together": [
     "Putting the five together",
-    "Tagore shows the artist keeping imagination larger than politics. Tolstoy explains how art transmits feeling. Plato agrees that art shapes the soul and warns of its danger. Gibran locates creativity in the ordinary. Aurobindo argues that consciousness changes before institutions. Together they explain why poets legislate without being acknowledged."
+    "Tagore shows the artist keeping imagination larger than politics. Tolstoy explains how art passes on feeling. Plato agrees that art shapes the soul, and warns of its danger. Gibran places creativity in the ordinary. Aurobindo argues that consciousness changes before institutions do. Together they explain why poets legislate without anyone acknowledging it."
    ],
    "models": [
     [
      "Art changes feeling before law.",
-     "Tolstoy described art as the transmission of feeling. Reforms on indebtedness, bonded labour, caste and dowry followed changes in public feeling that writers and filmmakers helped to create."
+     "Tolstoy described art as the passing on of feeling. Reforms on debt, bonded labour, caste and dowry followed changes in public feeling that writers and filmmakers helped to create."
     ],
     [
      "The artist keeps imagination larger than politics.",
-     "Tagore argued that a people who cannot imagine another arrangement will never demand one. The artist’s function is to widen what a society can imagine."
+     "Tagore argued that a people who cannot imagine another arrangement will never demand one. The artist’s job is to widen what a society can imagine."
     ],
     [
      "Plato agreed that poets legislate.",
-     "Plato wanted to exclude poets from his republic because they shape the soul. The debate is about the value of art’s influence, not its existence."
+     "Plato wanted to keep poets out of his republic because they shape the soul. The debate is about whether art’s influence is good, not about whether it exists."
     ],
     [
      "Creativity begins in the ordinary.",
-     "Gibran held that the poet finds the extraordinary in ordinary things. The mundane stores a society’s assumptions, and noticing them is the first creative act."
+     "Gibran held that the poet finds the extraordinary in ordinary things. The everyday holds a society’s assumptions, and noticing them is the first creative act."
     ],
     [
      "Persuasion should be answered by persuasion.",
-     "Artists cannot compel anyone. Pre-censorship treats persuasion as if it were compulsion. The democratic remedy for unwelcome art is counter-argument, not licensing."
+     "Artists cannot force anyone to do anything. Censorship before release treats persuasion as if it were force. The democratic remedy for unwelcome art is argument, not licensing."
     ]
    ],
    "steps": [
     [
      "Define the artist’s authority.",
-     "Explain how art shapes feeling and imagination rather than law directly."
+     "Explain how art shapes feeling and imagination, instead of shaping law directly."
     ],
     [
      "Give Indian examples.",
@@ -3792,14 +3794,14 @@ const GUIDES = {
     ],
     [
      "Address accountability.",
-     "Distinguish persuasion from compulsion."
+     "Separate persuasion from compulsion."
     ],
     [
      "Conclude with freedom and responsibility.",
-     "Argue for independent art answerable to its own truthfulness."
+     "Argue for independent art that answers to its own truthfulness."
     ]
    ],
-   "formula": "Recognise that artists shape what a society can feel and imagine, often before law follows. Protect art’s independence, answer unwelcome art with argument rather than control, and expect art to stay answerable to its own truthfulness."
+   "formula": "Recognise that artists shape what a society can feel and imagine, often before the law follows. Protect the independence of art, answer unwelcome art with argument instead of control, and expect art to stay answerable to its own truthfulness."
   },
   {
    "thinkers": [
@@ -3807,17 +3809,17 @@ const GUIDES = {
      "Gandhi",
      "true civilisation as conduct",
      [
-      "Gandhi gave the sharpest statement of the distinction in Hind Swaraj, written in 1909 as an attack. Civilisation, he argued, had come to mean the multiplication of wants and the machinery for satisfying them. What he called true civilisation was a mode of conduct that shows a person the path of duty.",
-      "The provocation was deliberate. Gandhi argued that a nation could acquire every instrument of modern life and become less itself in the process. An independence that merely transferred the machinery would not be independence at all."
+      "Gandhi gave the sharpest statement of the distinction in Hind Swaraj, which he wrote in 1909 as an attack on modern civilisation. Civilisation, he argued, had come to mean multiplying wants and building machinery to satisfy them. What he called true civilisation was a way of conduct that shows a person the path of duty.",
+      "The provocation was deliberate. Gandhi argued that a nation could acquire every tool of modern life and become less itself in the process. An independence that merely handed the same machinery from British to Indian hands would not be independence at all."
      ],
-     "the answer needs a critique of material progress without moral progress."
+     "the answer needs a critique of material progress that comes without moral progress."
     ],
     [
      "Tagore",
      "a culture alive through absorption",
      [
-      "Tagore gave a more generous version. He refused to treat inheritance as something to be preserved intact. Culture, for him, was alive to the degree that it could absorb what it met, argue with it and be changed by it.",
-      "A tradition kept behind glass has already stopped being a tradition. Tagore’s Visva-Bharati was designed as a meeting place of cultures, not a fortress for one."
+      "Tagore gave a more generous version. He refused to treat inheritance as something to be kept untouched. For him, a culture was alive to the degree that it could take in what it met, argue with it and be changed by it.",
+      "A tradition kept behind glass has already stopped being a tradition. Tagore designed his university, Visva-Bharati, as a meeting place of cultures, not a fortress for one."
      ],
      "the question concerns cultural exchange, openness or globalisation."
     ],
@@ -3825,8 +3827,8 @@ const GUIDES = {
      "Nehru",
      "the palimpsest",
      [
-      "Nehru supplied the historical form with his image of India as a palimpsest, in which layer is written upon layer and none wholly erases what came before.",
-      "His insistence on scientific temper was an argument that a culture can adopt an instrument without surrendering an identity. For Nehru, modern science and an ancient civilisation were not enemies."
+      "Nehru supplied the historical version. He described India as a palimpsest. A palimpsest is an old manuscript on which new writing was added over older writing that was never fully erased. In India, layer was written upon layer, and no layer wholly erased what came before.",
+      "Nehru’s insistence on the scientific temper was an argument that a culture can adopt a tool without giving up its identity. For Nehru, modern science and an ancient civilisation were not enemies."
      ],
      "the answer needs to show how a culture can modernise while keeping continuity."
     ],
@@ -3834,8 +3836,8 @@ const GUIDES = {
      "Burke",
      "the wisdom held in manners",
      [
-      "Edmund Burke provides the conservative caution that deserves engaging rather than dismissing. Institutions and manners contain accumulated practical wisdom that no individual reasoner could reconstruct from scratch.",
-      "Dismantling them faster than they can be replaced destroys knowledge that nobody knew was being held. Burke’s caution applies to rapid cultural change as much as to political revolution."
+      "Edmund Burke provides the conservative caution, and his caution deserves an answer, not a dismissal. Institutions and manners contain practical wisdom built up over generations. No single person reasoning alone could rebuild that wisdom from scratch.",
+      "So tearing down institutions faster than they can be replaced destroys knowledge that nobody knew was being held. Burke’s caution applies to rapid cultural change as much as to political revolution."
      ],
      "the question concerns the risks of rapid change or the value of tradition."
     ],
@@ -3843,50 +3845,50 @@ const GUIDES = {
      "Kabir",
      "arguing from within",
      [
-      "Kabir stands against any account that treats culture as a possession to be guarded. He worked from inside both Hindu and Islamic vocabularies while refusing to belong wholly to either.",
-      "He showed that a culture can be argued with from within, and that the arguing is not a threat to the inheritance. The arguing is evidence that the inheritance is still alive."
+      "Kabir stands against any account that treats culture as a possession to be guarded. He worked from inside both Hindu and Islamic vocabularies, while refusing to belong wholly to either.",
+      "He showed that a culture can be argued with from within, and that the arguing does not threaten the inheritance. The arguing is evidence that the inheritance is still alive."
      ],
-     "the answer needs an example of syncretism or of critique from within a tradition."
+     "the answer needs an example of traditions blending, or of criticism from within a tradition."
     ]
    ],
    "examples": [
     [
      "Heritage listing and what gets chosen",
      [
-      "Heritage listing is an act of selection, and selection carries politics. UNESCO’s intangible heritage list includes Indian entries such as the Kumbh Mela, inscribed in 2017, Durga Puja in Kolkata in 2021 and the Garba of Gujarat in 2023. Each inscription brings visibility, funding and tourism.",
-      "Each inscription also fixes a living practice in an official description at a particular moment. Listing tends to favour practices that are already visible and organised, which can widen the gap between traditions with advocates and those without. A practice that survives by changing can be pressed to perform an approved version of itself for visitors."
+      "Listing something as heritage means choosing it over other things, and choosing carries politics. UNESCO’s list of intangible heritage includes Indian entries such as the Kumbh Mela, listed in 2017, Durga Puja in Kolkata in 2021 and the Garba of Gujarat in 2023. Each listing brings attention, funding and tourism.",
+      "But each listing also fixes a living practice in an official description at one moment in time. Listing tends to favour practices that are already visible and organised. So the gap can widen between traditions that have advocates and traditions that do not. A practice that survives by changing can be pushed to perform an approved version of itself for visitors."
      ],
-     "Does listing protect a living practice or freeze it? Ask who chooses what is listed and what the listing changes."
+     "Does listing protect a living practice, or freeze it? Ask who chooses what is listed, and what the listing changes."
     ],
     [
      "Globalisation and regional traditions",
      [
-      "The homogenisation thesis holds that global supply chains and media make tastes converge, so regional food, dress and craft give way to a standard set. What has actually happened is more varied. Convergence is strongest where an item is a commodity competing on price, which is why handloom and small craft have suffered against mill production.",
-      "Convergence is weakest where an item carries identity, which is why regional cuisine has spread rather than shrunk. The threat to a tradition is not exposure but commodification. Practices that survive are those that people continue to do, not only to buy."
+      "One common argument holds that global supply chains and media make tastes converge. Regional food, dress and craft, the argument goes, give way to one standard set. What has actually happened is more varied. Convergence is strongest where an item is a commodity that competes on price. For that reason handloom and small crafts have suffered against factory production.",
+      "Convergence is weakest where an item carries identity. For that reason regional cuisine has spread across the country instead of shrinking. So the threat to a tradition is not contact with the world. The threat is being turned into a mere product. The practices that survive are those that people keep doing, not only those they keep buying."
      ],
      "Is globalisation erasing culture or changing its form? Separate commodities from practices that carry identity."
     ],
     [
      "Language counts in the 2011 Census",
      [
-      "The 2011 Census recorded 19,569 raw returns of mother tongues. Rationalisation reduced them to 1,369 mother tongues. Only those with at least ten thousand speakers were reported as languages, giving 121 languages, of which 22 are in the Eighth Schedule. About 96.7 per cent of the population reports one of the 22 as its mother tongue.",
-      "The counting method is itself an argument. A language spoken by fewer than ten thousand people does not appear as a language at all. Since schooling, examinations and official use follow the scheduled list, the classification does not merely record the hierarchy of languages. The classification reinforces it."
+      "The 2011 Census recorded 19,569 raw returns of mother tongues. After sorting, these were reduced to 1,369 mother tongues. Only those with at least ten thousand speakers were reported as languages, which gave 121 languages, of which 22 are in the Eighth Schedule of the Constitution. About 96.7 per cent of the population reports one of those 22 as its mother tongue.",
+      "The counting method is itself an argument. A language spoken by fewer than ten thousand people does not appear as a language at all. Schooling, examinations and official use all follow the scheduled list. So the classification does not merely record the ranking of languages. The classification strengthens it."
      ],
-     "How does official classification affect cultural survival? Look at which languages are counted, taught and used."
+     "How does official classification affect whether a culture survives? Look at which languages are counted, taught and used."
     ],
     [
      "Culture as inheritance or practice",
      [
-      "Every living tradition has absorbed, adapted and discarded continuously. Indian classical music absorbed Persian forms. The architecture of any long-standing temple shows successive periods. Food regarded as most authentically regional often contains crops that arrived through trade, such as the chilli.",
-      "An argument that treats culture as a fixed inheritance must explain why the moment of authenticity is the one it happens to prefer. Culture defended as inheritance is threatened by change. Culture lived as practice is threatened mainly by being forbidden."
+      "Every living tradition has taken in new things, adapted and dropped old ones, all the time. Indian classical music absorbed Persian forms. The architecture of any old temple shows the styles of several periods. Food that people regard as most authentically regional often uses crops that arrived through trade. The chilli, now central to Indian cooking, came from the Americas only about five hundred years ago.",
+      "So an argument that treats culture as a fixed inheritance must explain one thing. Why is the moment of authenticity always the moment the speaker happens to prefer? Culture defended as an inheritance is threatened by change. Culture lived as a practice is threatened mainly by being forbidden."
      ],
      "Which moment of a tradition is treated as authentic, and why? Show that living cultures have always changed."
     ],
     [
      "Diaspora culture",
      [
-      "A diaspora separates two things normally joined: the culture people carry and the society that produced and continuously revised it. What travels is a snapshot, and it is preserved with more care than at home, because it is under pressure.",
-      "Diaspora communities therefore often keep older forms, more elaborate rituals and more conservative language than the place they left. Neither version is more authentic. The home version has continuity and drift. The diaspora version has fidelity to a moment but has lost the process that would revise it. Culture is not a possession that can be carried intact. Culture is a process that needs a living society to run it."
+      "A diaspora separates two things that are normally joined. One is the culture people carry. The other is the society that produced that culture and kept revising it. What travels abroad is a snapshot. The snapshot is preserved with more care than at home, because it is under pressure.",
+      "So diaspora communities often keep older forms, more elaborate rituals and more conservative language than the place they left. Neither version is more authentic. The home version has continuity, and it drifts. The diaspora version is faithful to one moment, but it has lost the process that would revise it. Culture is not a possession that can be carried away intact. Culture is a process, and it needs a living society to run it."
      ],
      "Can culture be carried without the society that produced it? Compare the home and diaspora versions of a tradition."
     ]
@@ -3895,45 +3897,47 @@ const GUIDES = {
     [
      "2020B1",
      [
-      "The saying separates two things often confused. Civilisation, in this sense, is what a society has: its roads, machines, institutions and goods. Culture is what a society is: its values, habits, relationships and ways of meaning. Possessions can be acquired within a generation and lost within one. Culture changes more slowly, and it decides what a people does with its possessions.",
-      "Gandhi’s Hind Swaraj made the point as a warning. A nation could acquire every modern instrument and become less itself. True civilisation, for Gandhi, was conduct that shows the path of duty. Tagore added that a living culture absorbs what it meets rather than guarding itself behind glass. Nehru’s image of India as a palimpsest shows how new layers are written without erasing the old, and Kabir shows how a tradition stays alive by arguing with itself.",
-      "The distinction must not be pushed too far. Culture is shaped by what a society has: technology changes work, family and language. The 2011 Census shows how official choices about languages affect which cultures survive. Burke warns that rapid change can destroy wisdom held in manners. The balanced conclusion is that a society should adopt useful instruments while keeping its culture alive through practice, not by freezing it as a possession."
+      "The saying separates two things that people often confuse. Civilisation, in this sense, is what a society has: its roads, machines, institutions and goods. Culture is what a society is: its values, habits, relationships and ways of making meaning. Possessions can be acquired within a generation and lost within one. Culture changes more slowly, and culture decides what a people does with its possessions.",
+      "Gandhi’s Hind Swaraj made the point as a warning. A nation could acquire every modern tool and become less itself. True civilisation, for Gandhi, was conduct that shows the path of duty. Tagore added that a living culture takes in what it meets, instead of guarding itself behind glass. Nehru’s image of India as a palimpsest shows how new layers are written without erasing the old. Kabir shows how a tradition stays alive by arguing with itself.",
+      "But the distinction must not be pushed too far. Culture is shaped by what a society has, because technology changes work, family and language. The 2011 Census shows how official choices about languages affect which cultures survive. Burke warns that rapid change can destroy wisdom held in manners. So the balanced conclusion is that a society should adopt useful tools while keeping its culture alive through practice, not by freezing it as a possession."
      ]
     ]
    ],
    "intro": [
-    "A society can change its possessions within a generation. Cars, phones, buildings and machines arrive quickly and spread fast. What changes more slowly is what people value, how they treat one another and what they are able to do with what they have. The question is how to distinguish culture from civilisation, and what a society keeps when its possessions change."
+    "A society can change its possessions within a generation. Cars, phones, buildings and machines arrive quickly and spread fast. Other things change more slowly: what people value, how they treat one another, and what they are able to do with what they have.",
+    "So the question is how to tell culture apart from civilisation. And what does a society keep when its possessions change?"
    ],
-   "claim": "Culture is the way a people lives, thinks and relates. Civilisation, in the sense of the saying, is the stock of instruments and possessions it has acquired. Possessions can be gained or lost in a generation. Culture changes more slowly and decides what a society does with its possessions. A living culture is not a museum piece: it absorbs, argues and adapts, and it survives by being practised rather than guarded.",
+   "claim": "Culture is the way a people lives, thinks and relates to one another. Civilisation, in the sense the saying uses, is the stock of tools and possessions a people has acquired. Possessions can be gained or lost in a generation. Culture changes more slowly, and culture decides what a society does with its possessions. A living culture is not a museum piece. A living culture takes in new things, argues and adapts. Culture survives by being practised, not by being guarded.",
    "problem": [
-    "Rapid economic change raises fears of cultural loss. Global brands, languages and media seem to replace local ones. Some respond by treating culture as an inheritance to be defended against change. Others dismiss culture as irrelevant to modern progress. Both responses misunderstand how culture actually lives.",
-    "The distinction also raises a question about modernity. A nation can acquire every modern instrument and still lose its ability to use them well. Gandhi feared exactly such an outcome. Yet a culture that refuses all new instruments may lose the means to meet its people’s needs. The challenge is to adopt what is useful without surrendering the values and capacities that make a society itself."
+    "Rapid economic change raises fears of losing one’s culture. Global brands, languages and media seem to replace local ones. Some people respond by treating culture as an inheritance to be defended against change. Others dismiss culture as irrelevant to modern progress. Both responses misunderstand how culture actually lives.",
+    "The distinction also raises a question about modern life. A nation can acquire every modern tool and still lose the ability to use them well. Gandhi feared exactly this outcome. But there is a problem on the other side. A culture that refuses every new tool may lose the means to meet its people’s needs.",
+    "So the challenge is to adopt what is useful without giving up the values and abilities that make a society what it is."
    ],
    "distinction": [
     "A useful distinction",
-    "Culture as inheritance is a fixed body of practices to be defended against change. Culture as practice is what people actually do now, absorbing and adapting continuously. Every living tradition has behaved like the second while often describing itself as the first."
+    "The important distinction is between culture as inheritance and culture as practice. Culture as inheritance is a fixed set of customs, defended against change. Culture as practice is what people actually do now, taking in new things and adapting all the time. Every living tradition has behaved like the second, while often describing itself as the first. A grandmother who says she cooks exactly as her grandmother did is usually using a pressure cooker."
    ],
    "thinkersTitle": "Five thinkers, five tests of culture",
    "together": [
     "Putting the five together",
-    "Gandhi separates civilisation as machinery from civilisation as conduct. Tagore shows that a living culture absorbs what it meets. Nehru describes culture as layered continuity. Burke warns that tradition holds wisdom nobody can easily rebuild. Kabir shows that argument from within keeps a culture alive. Together they explain why culture is what we are, and why it is not a possession."
+    "Gandhi separates civilisation as machinery from civilisation as conduct. Tagore shows that a living culture takes in what it meets. Nehru describes culture as layered continuity. Burke warns that tradition holds wisdom that nobody can easily rebuild. Kabir shows that argument from within keeps a culture alive. Together they explain why culture is what we are, and why culture is not a possession."
    ],
    "models": [
     [
      "Civilisation is possession, culture is practice.",
-     "Possessions can be gained or lost in a generation. Culture is what a people is able to do with them, and it changes more slowly."
+     "Possessions can be gained or lost in a generation. Culture is what a people is able to do with its possessions, and culture changes more slowly."
     ],
     [
      "True civilisation is conduct.",
-     "Gandhi defined true civilisation as conduct that shows the path of duty. A nation can acquire modern instruments and still lose itself if its conduct does not improve."
+     "Gandhi defined true civilisation as conduct that shows the path of duty. A nation can acquire modern tools and still lose itself, if its conduct does not improve."
     ],
     [
      "Living cultures absorb and adapt.",
-     "Tagore held that culture is alive to the degree that it can absorb, argue and change. A tradition kept behind glass has stopped being a tradition."
+     "Tagore held that a culture is alive to the degree that it can take in, argue and change. A tradition kept behind glass has stopped being a tradition."
     ],
     [
      "Tradition holds hidden wisdom.",
-     "Burke warned that manners and institutions contain practical knowledge nobody can rebuild quickly. Rapid change can destroy what nobody knew was being held."
+     "Burke warned that manners and institutions contain practical knowledge that nobody can rebuild quickly. Rapid change can destroy what nobody knew was being held."
     ],
     [
      "Classification shapes survival.",
@@ -3943,7 +3947,7 @@ const GUIDES = {
    "steps": [
     [
      "Define both terms.",
-     "Separate culture as a way of life from civilisation as possessions and instruments."
+     "Separate culture as a way of life from civilisation as possessions and tools."
     ],
     [
      "Present Gandhi’s critique.",
@@ -3959,7 +3963,7 @@ const GUIDES = {
     ],
     [
      "Give examples.",
-     "Discuss heritage listing, globalisation, languages or diaspora."
+     "Discuss heritage listing, globalisation, languages or the diaspora."
     ],
     [
      "Address authenticity.",
@@ -3967,10 +3971,10 @@ const GUIDES = {
     ],
     [
      "Conclude with balance.",
-     "Argue for adopting useful instruments while keeping culture alive through practice."
+     "Argue for adopting useful tools while keeping culture alive through practice."
     ]
    ],
-   "formula": "Treat culture as what a people is and does, not as a possession to be guarded. Adopt useful instruments, keep traditions alive by practising and arguing with them, and protect the wisdom that change can destroy."
+   "formula": "Treat culture as what a people is and does, not as a possession to be guarded. Adopt useful tools, keep traditions alive by practising them and arguing with them, and protect the wisdom that change can destroy."
   },
   {
    "thinkers": [
@@ -3978,8 +3982,8 @@ const GUIDES = {
      "Marx",
      "the borrowed costume",
      [
-      "Marx’s line about history repeating first as tragedy and then as farce, from The Eighteenth Brumaire of 1852, is quoted constantly and completed rarely. His actual argument was that people make their own history, but not under circumstances of their own choosing. In moments of crisis they borrow the costumes and slogans of the past to perform a revolution that is really about something else.",
-      "The farce lies in the borrowing, not in the events. A present that cannot describe itself in its own words reaches for an older script, and the mismatch produces the comedy."
+      "Marx wrote that history repeats itself, first as tragedy and then as farce. The line comes from The Eighteenth Brumaire, written in 1852. People quote it constantly, but rarely finish the argument. His actual argument was that people make their own history, but not in circumstances they choose. In moments of crisis, they borrow the costumes and slogans of the past to act out a revolution that is really about something else.",
+      "The farce lies in the borrowing, not in the events themselves. A present that cannot describe itself in its own words reaches for an older script. The mismatch between the old script and the new situation produces the comedy."
      ],
      "the answer needs to explain why history appears to repeat, or why political movements borrow old symbols."
     ],
@@ -3987,17 +3991,17 @@ const GUIDES = {
      "Hegel",
      "understanding comes late",
      [
-      "Hegel supplies a structure that makes repetition intelligible. History, for him, is a process in which contradiction drives development forward, and understanding arrives only afterwards.",
-      "The owl of Minerva flies at dusk. Lessons are always drawn late, and patterns are invisible to people living inside them."
+      "Hegel supplies a structure that makes repetition easier to understand. For him, history is a process in which conflict drives development forward. And understanding of the process arrives only afterwards.",
+      "Hegel put the point as an image: the owl of Minerva flies at dusk. Minerva was the goddess of wisdom, and her owl flies only when the day is over. So lessons are always drawn late, and the people living inside a pattern cannot see it."
      ],
-     "the question concerns historical development or why lessons are learned only after the fact."
+     "the question concerns historical development, or why lessons are learned only after the fact."
     ],
     [
      "Burke",
      "a partnership across generations",
      [
-      "Burke explains why the past binds us even when it is not understood. Society, he wrote, is a partnership between the living, the dead and those not yet born.",
-      "An inheritance is therefore held in trust rather than owned outright. The present generation has duties to those who came before and those who will come after."
+      "Burke explains why the past binds us even when we do not understand it. Society, he wrote, is a partnership between the living, the dead and those not yet born.",
+      "So an inheritance is held in trust, not owned outright. A family that inherits an old house may live in it, but it also owes something to the people who built it and to the children who will live there next. In the same way, the present generation has duties both to those who came before and to those who will come after."
      ],
      "the answer needs a view of history as inheritance and trust."
     ],
@@ -4005,17 +4009,17 @@ const GUIDES = {
      "Orwell",
      "control of the past",
      [
-      "George Orwell stated the danger in its most compressed form in Nineteen Eighty-Four. Whoever controls the past controls the future, and whoever controls the present controls the past.",
-      "His deeper insight is that manipulation works mostly through what is quietly removed rather than through what is loudly asserted. A deletion leaves no argument to answer."
+      "George Orwell stated the danger in its shortest form in Nineteen Eighty-Four. Whoever controls the past controls the future, and whoever controls the present controls the past.",
+      "His deeper insight is that manipulation works mostly through what is quietly removed, not through what is loudly claimed. A loud claim can be argued with. A deletion leaves nothing to argue with."
      ],
-     "the question concerns propaganda, censorship of history or the politics of memory."
+     "the question concerns propaganda, the censorship of history or the politics of memory."
     ],
     [
      "Azad",
      "the composite past as fact",
      [
-      "Maulana Abul Kalam Azad showed what is at stake in India. In his Congress presidential address at Ramgarh in 1940, he insisted that India’s composite past was a historical fact rather than a sentiment.",
-      "The past is a permanent dimension of consciousness because a contested version of it supplies the material for present claims. Azad defended the shared past as the ground of a shared future."
+      "Maulana Abul Kalam Azad showed what is at stake in India. In his address as Congress president at Ramgarh in 1940, he insisted that India’s shared, composite past was a historical fact and not a sentiment.",
+      "The past stays a permanent part of consciousness because disputed versions of it supply the material for present claims. Azad defended the shared past because he saw it as the ground of a shared future."
      ],
      "the answer needs an Indian example of history used to support pluralism."
     ],
@@ -4023,8 +4027,8 @@ const GUIDES = {
      "Nehru",
      "the past examined in prison",
      [
-      "Nehru’s The Discovery of India shows what an honest version looks like. He wrote it in Ahmednagar Fort prison between 1942 and 1945, treating the past as something to be examined and argued with rather than venerated.",
-      "The book is useful because it names what was ugly alongside what was admirable. A past that only ever produces pride has stopped being history and become an instrument."
+      "Nehru’s The Discovery of India shows what an honest version looks like. He wrote it in prison at Ahmednagar Fort between 1942 and 1945. He treated the past as something to examine and argue with, not something to worship.",
+      "The book is useful because it names what was ugly alongside what was admirable. A past that only ever produces pride has stopped being history. Such a past has become a tool."
      ],
      "the question needs a model of honest, critical engagement with national history."
     ]
@@ -4033,40 +4037,40 @@ const GUIDES = {
     [
      "Textbook revision and who may narrate",
      [
-      "Textbook revision is unavoidable, because scholarship advances and syllabi have limited pages. Every deletion is both a teaching decision and a political one. What separates legitimate revision from imposition is procedure rather than content.",
-      "Was the change made by subject experts through a documented process, or by administrative direction? Was the deletion published with reasons, or made quietly between editions? A curriculum revised openly by historians who disagree in public is doing what a discipline does. A curriculum revised without a visible record is asserting a narrative, and the missing record is itself the evidence."
+      "Textbooks must be revised, because scholarship moves on and a syllabus has only so many pages. But every deletion is both a teaching decision and a political one. What separates legitimate revision from imposition is the procedure followed, not the content changed.",
+      "Two questions decide the matter. Was the change made by subject experts through a recorded process, or by an order from an administrator? And was the deletion published with reasons, or made quietly between editions? A curriculum revised openly by historians who disagree in public is doing what a discipline does. A curriculum revised without any visible record is pushing a story. The missing record is itself the evidence."
      ],
-     "Is the past being revised by an open process or by quiet deletion? Look at who decided and whether reasons were published."
+     "Is the past being revised by an open process or by quiet deletion? Look at who decided, and whether reasons were published."
     ],
     [
      "Monuments and renaming",
      [
-      "Monuments are not history. Monuments record a society’s decisions about whom to honour, made at a particular time. Taking down a statue does not erase a historical figure, who remains in archives and textbooks, but it does withdraw honour.",
-      "The strongest counter-position is that a landscape edited to contain only the acceptable teaches nothing about what a society once believed. An honest inscription beside a monument may preserve more than removal. Renaming raises the same question more cheaply, because a name change is highly visible, costs little and can substitute for the material redress it appears to symbolise."
+      "Monuments are not history. Monuments record a society’s decisions about whom to honour, made at a particular time. Taking down a statue does not erase a historical figure, who remains in archives and textbooks. But taking it down does withdraw honour.",
+      "The strongest counter-argument is that a landscape edited to contain only the acceptable teaches nothing about what a society once believed. An honest plaque beside a monument, explaining what the person did, may preserve more than removal would. Renaming raises the same question more cheaply. A new name is highly visible and costs little. So renaming can stand in for the real compensation it appears to symbolise."
      ],
-     "Does removing or renaming change understanding or only honour? Compare removal with recontextualisation and redress."
+     "Does removing or renaming change understanding, or only honour? Compare removal with adding context, and with real redress."
     ],
     [
      "Archives and access to the record",
      [
-      "A society cannot examine what it cannot see. India’s Public Records Act of 1993 governs the transfer of records to the National Archives, ordinarily after twenty-five years, subject to exemptions applied by departments themselves.",
-      "The incentive to transfer is weak and the penalty for not transferring is negligible. Declassification happens episodically and by political decision rather than by rule. Where the record is unavailable, the field is left to memory and assertion, which is exactly the condition in which contested history becomes impossible to resolve."
+      "A society cannot examine what it cannot see. India’s Public Records Act of 1993 governs the transfer of government records to the National Archives. Records are ordinarily transferred after twenty-five years, but departments themselves decide which exemptions apply.",
+      "Departments have little reason to transfer records, and the penalty for not transferring them is negligible. Records are declassified now and then, by political decision, not by a regular rule. Where the record is unavailable, the field is left to memory and assertion. Disputes about history can never be resolved under such conditions."
      ],
-     "Is the record available to historians and citizens? Look at archival rules and how they are applied."
+     "Is the record available to historians and citizens? Look at the archival rules and how they are applied."
     ],
     [
      "Truth and reconciliation",
      [
-      "South Africa’s Truth and Reconciliation Commission, established in 1995 and chaired by Archbishop Desmond Tutu, made an explicit trade. Perpetrators could apply for amnesty, but only in exchange for full disclosure of politically motivated acts.",
-      "The design assumed that a society emerging from conflict needs the facts established more than it needs punishment. The criticisms are serious. Victims were asked to accept truth in place of justice, reparations were slow and small, and economic inequality was left untouched. The alternative of amnesty without truth, which many transitions chose, provides neither."
+      "South Africa set up its Truth and Reconciliation Commission in 1995, chaired by Archbishop Desmond Tutu. The Commission made an open trade. People who had committed politically motivated crimes could apply for amnesty, but only if they disclosed fully what they had done.",
+      "The design assumed that a society coming out of conflict needs the facts established more than it needs punishment. The criticisms are serious. Victims were asked to accept truth instead of justice. Compensation was slow and small. And economic inequality was left untouched. But the alternative that many countries chose, amnesty without truth, provides neither truth nor justice."
      ],
-     "Can a society establish truth without full justice? Weigh disclosure, amnesty and reparation."
+     "Can a society establish the truth without full justice? Weigh disclosure, amnesty and compensation."
     ],
     [
      "When a society cannot set its history down",
      [
-      "The familiar warning is that a society that forgets its past will repeat it. The counter-argument inverts the warning. A society that cannot conclude an account of what happened remains inside it. Grievance that has never been acknowledged stays available for mobilisation, because nothing has been settled.",
-      "The argument supports commissions, official histories and open archives as means of closure. The danger is real too. A settled official account can also be a silencing. Closure imposed by the stronger party is not closure but a second injury. Setting the record down and dictating it are different acts."
+      "The familiar warning is that a society that forgets its past will repeat it. The counter-argument turns the warning around. A society that can never conclude its account of what happened stays trapped inside it. A grievance that has never been acknowledged remains ready to be used for mobilisation, because nothing has been settled.",
+      "The argument supports commissions, official histories and open archives as ways of reaching closure. But the danger is real too. A settled official account can also silence people. Closure imposed by the stronger side is not closure. Closure of that kind is a second injury. Setting the record down and dictating the record are different acts."
      ],
      "Does the society need to remember more or to settle more? Separate honest closure from imposed silence."
     ]
@@ -4075,31 +4079,33 @@ const GUIDES = {
     [
      "2021B3",
      [
-      "Marx’s remark, in The Eighteenth Brumaire of 1852, described Louis Napoleon’s seizure of power as a repetition of his uncle’s. The first Napoleon was a tragedy of genuine historical force. The nephew’s coup borrowed its costumes and became a farce. Marx’s deeper point was that people make history under circumstances not of their choosing, and in moments of crisis they borrow the language and symbols of the past.",
-      "The pattern can be seen whenever a political movement dresses present conflicts in old costumes. Past glories and past grievances are revived to justify present claims, often with little fit between the old script and the new situation. Orwell warned that whoever controls the past controls the future, and textbook revisions, monuments and renaming show how actively the past is used. Hegel adds that the pattern is visible only afterwards, which is why lessons come late.",
-      "History does not literally repeat. Circumstances change, and the same actions produce different results. What repeats is the temptation to borrow the past rather than understand the present. Nehru’s Discovery of India shows the alternative: examining the past honestly, including its failures, so that the present can describe itself in its own terms. A society that understands its history is less likely to perform it again as farce."
+      "In The Eighteenth Brumaire of 1852, Marx described Louis Napoleon’s seizure of power as a repeat of his uncle’s. The first Napoleon was a tragedy with real historical force. The nephew’s coup borrowed the uncle’s costumes and became a farce. Marx’s deeper point was that people make history in circumstances they did not choose. In moments of crisis, they borrow the language and symbols of the past.",
+      "The pattern appears whenever a political movement dresses present conflicts in old costumes. Past glories and past grievances are revived to justify present claims, often with little fit between the old script and the new situation. Orwell warned that whoever controls the past controls the future. Textbook revisions, monuments and renaming show how actively the past is used. Hegel adds that the pattern becomes visible only afterwards, which is why lessons come late.",
+      "So history does not literally repeat. Circumstances change, and the same actions produce different results. What repeats is the temptation to borrow the past instead of understanding the present. Nehru’s Discovery of India shows the alternative. Nehru examined the past honestly, including its failures, so that the present could describe itself in its own terms. A society that understands its history is less likely to act it out again as farce."
      ]
     ],
     [
      "2018B2",
      [
-      "The past is a permanent dimension of consciousness because no person or society can think without it. Language, values, institutions and identities are inherited. Burke described society as a partnership between the living, the dead and those not yet born, so the present always acts within a trust received from the past. Even rebellion against tradition takes its meaning from what it rejects.",
-      "The past also shapes values through memory. Azad defended India’s composite past as a historical fact, and that memory supported a pluralist nation. Other memories of conquest or injustice can support grievance. The struggle over textbooks, monuments and archives shows that control of the past is a form of power, as Orwell warned. Truth and reconciliation commissions show societies trying to settle a painful past through disclosure.",
-      "The permanence of the past is not a sentence to be ruled by it. Nehru examined India’s past critically, naming what was ugly and admirable. Hegel suggested that understanding comes late but does come. The past remains in consciousness, but a society can choose whether to hold it as honest inquiry or as a weapon. Values grounded in an honestly examined past can guide the future. Values built on a selected past can only divide it."
+      "The past is a permanent part of consciousness because no person and no society can think without it. Language, values, institutions and identities are all inherited. Burke described society as a partnership between the living, the dead and those not yet born, so the present always acts within a trust received from the past. Even a rebellion against tradition takes its meaning from what it rejects.",
+      "The past also shapes values through memory. Azad defended India’s composite past as a historical fact, and that memory supported a pluralist nation. Other memories, of conquest or injustice, can feed grievance. The struggle over textbooks, monuments and archives shows that control of the past is a form of power, as Orwell warned. Truth and reconciliation commissions show societies trying to settle a painful past through disclosure.",
+      "But the permanence of the past is not a sentence to be ruled by it. Nehru examined India’s past critically, and named what was ugly as well as what was admirable. Hegel suggested that understanding comes late, but that it does come. So the past stays in consciousness, but a society can choose how to hold it: as honest inquiry or as a weapon. Values grounded in an honestly examined past can guide the future. Values built on a selected past can only divide it."
      ]
     ]
    ],
    "intro": [
-    "Every society lives with its past. The past supplies identity, pride and grievance, and it is constantly retold to justify present claims. Some societies repeat old mistakes. Others use history to build unity or division. The question is how history repeats, how the past shapes consciousness and values, and how a society can hold its history honestly."
+    "Every society lives with its past. The past supplies identity, pride and grievance, and people keep retelling it to justify claims they make today. Some societies repeat old mistakes. Others use history to build unity, or to build division.",
+    "So the questions are these. In what sense does history repeat? How does the past shape what people think and value? And how can a society hold its history honestly?"
    ],
-   "claim": "The past is a permanent dimension of human consciousness because present claims are built from it. History does not repeat mechanically, but societies in crisis borrow the scripts of the past, sometimes tragically and sometimes absurdly. An honest relation to the past examines it rather than venerating it, names what was ugly as well as what was admirable, keeps the record open, and seeks closure without silencing.",
+   "claim": "The past is a permanent part of human consciousness, because present claims are built out of it. History does not repeat like a machine. But societies in crisis borrow the scripts of the past, sometimes with tragic results and sometimes with absurd ones. An honest relation to the past examines it instead of worshipping it. An honest relation names what was ugly as well as what was admirable, keeps the record open, and seeks closure without silencing anyone.",
    "problem": [
-    "The past is contested because it confers legitimacy. Groups seek recognition for past wrongs, nations build pride on past glory, and political movements borrow symbols from earlier struggles. Control over history, through textbooks, monuments and archives, becomes control over identity and power.",
-    "Yet forgetting the past is no solution. A society that cannot acknowledge its history may repeat it, and grievances left unaddressed remain available for mobilisation. A society that cannot set its history down may also be imprisoned by it. The challenge is to keep the past as an object of honest inquiry, open to evidence and argument, rather than a weapon in present conflicts."
+    "The past is fought over because it gives legitimacy. Groups seek recognition for wrongs done to them in the past. Nations build pride on past glory. Political movements borrow symbols from earlier struggles. So control over history, through textbooks, monuments and archives, becomes control over identity and power.",
+    "Yet forgetting the past is no solution. A society that cannot admit its history may repeat it. And grievances that are never addressed stay ready to be stirred up again. But there is an opposite problem. A society that can never set its history down may become its prisoner.",
+    "So the challenge is to keep the past as a subject of honest inquiry, open to evidence and argument. The past should not become a weapon in present conflicts."
    ],
    "distinction": [
     "A useful distinction",
-    "History examined is a record open to evidence and argument, including what is uncomfortable. History used is a selection of the past arranged to justify a present claim. The first can correct a society. The second can only confirm it."
+    "The important distinction is between history examined and history used. History examined is a record open to evidence and argument, including the parts that are uncomfortable. History used is a selection from the past, arranged to justify a present claim. A textbook that discusses both the achievements and the cruelties of an empire is examining history. A speech that mentions only one of them is using it. The first kind can correct a society. The second kind can only confirm what the society already believes."
    ],
    "thinkersTitle": "Six thinkers, six tests of memory",
    "together": [
@@ -4113,7 +4119,7 @@ const GUIDES = {
     ],
     [
      "The past is held in trust.",
-     "Burke described society as a partnership between the living, the dead and the unborn. The present inherits obligations as well as possessions."
+     "Burke described society as a partnership between the living, the dead and the unborn. The present inherits duties as well as possessions."
     ],
     [
      "Control of the past is power.",
@@ -4121,11 +4127,11 @@ const GUIDES = {
     ],
     [
      "Honest history names the ugly.",
-     "Nehru’s Discovery of India examined the past rather than venerating it. A past that only produces pride has become an instrument."
+     "Nehru’s Discovery of India examined the past instead of worshipping it. A past that only produces pride has become a tool."
     ],
     [
      "Closure needs truth, not silence.",
-     "South Africa’s Truth and Reconciliation Commission traded amnesty for disclosure. A settled record can end a conflict, but closure imposed by the stronger party is a second injury."
+     "South Africa’s Truth and Reconciliation Commission traded amnesty for disclosure. A settled record can end a conflict. But closure imposed by the stronger side is a second injury."
     ]
    ],
    "steps": [
@@ -4139,11 +4145,11 @@ const GUIDES = {
     ],
     [
      "Show the politics of memory.",
-     "Use Orwell with examples of textbooks, monuments or archives."
+     "Use Orwell, with examples of textbooks, monuments or archives."
     ],
     [
      "Give an Indian perspective.",
-     "Use Azad on the composite past or Nehru on critical history."
+     "Use Azad on the composite past, or Nehru on critical history."
     ],
     [
      "Discuss closure.",
@@ -4151,14 +4157,14 @@ const GUIDES = {
     ],
     [
      "Separate examination from use.",
-     "Distinguish honest inquiry from selective memory."
+     "Separate honest inquiry from selective memory."
     ],
     [
      "Conclude with responsibility.",
      "Argue for open archives, honest teaching and closure without silencing."
     ]
    ],
-   "formula": "Hold the past as a record to be examined, not a script to be borrowed. Keep the archive open, name what was ugly with what was admirable, and seek closure through truth rather than silence."
+   "formula": "Hold the past as a record to be examined, not a script to be borrowed. Keep the archive open, name what was ugly along with what was admirable, and seek closure through truth, not silence."
   },
   {
    "thinkers": [
@@ -4166,8 +4172,8 @@ const GUIDES = {
      "Socrates",
      "irony as method",
      [
-      "Socrates made irony a method rather than a mannerism. He professed ignorance while questioning people who claimed knowledge, and used the gap between what he said and what he meant to expose confusion.",
-      "The technique works because a contradiction stated directly is resisted, while a contradiction the listener discovers is accepted. Ambiguity is often the only vehicle by which an uncomfortable meaning can travel."
+      "Socrates made irony a method, not a habit of speech. He claimed to know nothing while he questioned people who claimed to know a great deal. He used the gap between what he said and what he meant to expose their confusion.",
+      "The technique works for a simple reason. When someone states a contradiction to you directly, you resist it. When you discover the contradiction yourself, you accept it. So ambiguity is often the only way an uncomfortable meaning can reach its listener."
      ],
      "the answer needs to show irony as a tool of teaching or discovery."
     ],
@@ -4175,16 +4181,16 @@ const GUIDES = {
      "Laozi",
      "paradox as philosophy",
      [
-      "Laozi built a philosophy on paradox. He opened by saying that the Tao which can be named is not the eternal Tao. He wrote of the soft overcoming the hard and the sage acting without acting.",
-      "The paradoxes carry weight. Laozi’s position is that language works by division while reality does not, so any statement precise enough to be useful has already left something out."
+      "Laozi built a whole philosophy on paradox. He opened by saying that the Tao which can be named is not the eternal Tao. He wrote of the soft overcoming the hard, and of the wise person acting without acting.",
+      "The paradoxes carry real weight. Laozi’s position is that language works by dividing things, while reality is not divided. So any statement precise enough to be useful has already left something out."
      ],
-     "the question concerns the limits of language or the truth in contradiction."
+     "the question concerns the limits of language, or the truth in contradiction."
     ],
     [
      "Kabir",
      "upside-down sayings",
      [
-      "Kabir worked the same seam in Indian devotional verse. His ulatbamsi, or upside-down sayings, use impossible images to shake listeners out of their settled categories.",
+      "Kabir worked the same seam in Indian devotional verse. His ulatbamsi, or upside-down sayings, use impossible images, such as a fish climbing a tree, to shake listeners out of their settled categories.",
       "Kabir’s paradoxes are designed to dislodge certainty. A listener who cannot fit the saying into familiar categories is forced to think again."
      ],
      "the answer needs an Indian example of paradox used to challenge fixed belief."
@@ -4193,17 +4199,17 @@ const GUIDES = {
      "Camus",
      "holding the absurd",
      [
-      "Albert Camus gave the modern and hardest version. The absurd is not a property of the universe. The absurd is the collision between a human demand for meaning and a universe that returns none.",
-      "His instruction is to hold the contradiction rather than resolve it through faith or despair. Living with an unresolved tension is, for Camus, a form of honesty."
+      "Albert Camus gave the modern version, and the hardest one. For Camus, the absurd is not a property of the universe. The absurd is the collision between the human demand for meaning and a universe that gives no answer.",
+      "His instruction is to hold the contradiction, not to resolve it through faith or through despair. For Camus, living with a tension that never resolves is a form of honesty."
      ],
-     "the question concerns living with contradiction or finding meaning without certainty."
+     "the question concerns living with contradiction, or finding meaning without certainty."
     ],
     [
      "Nietzsche",
      "suspicion with a purpose",
      [
-      "Nietzsche added the warning that stops the argument becoming a licence. He objected that philosophers mistook their own grammar for the structure of the world, and he wrote in aphorisms to resist that temptation.",
-      "He was clear, however, that suspicion of language is a tool for getting closer to something. Suspicion is not permission to say nothing and call it depth."
+      "Nietzsche added the warning that stops the argument from becoming a licence. He objected that philosophers mistook the grammar of their own language for the structure of the world. He wrote in short, sharp sayings to resist that temptation.",
+      "But Nietzsche was clear that suspicion of language is a tool for getting closer to something real. Suspicion is not permission to say nothing and call it depth."
      ],
      "the answer needs to warn against using ambiguity as an escape from meaning."
     ]
@@ -4212,95 +4218,97 @@ const GUIDES = {
     [
      "Constructive ambiguity in diplomacy",
      [
-      "Diplomacy sometimes needs a text both sides can sign because it does not resolve their disagreement. United Nations Security Council Resolution 242 of 1967 is the standard example. Its English text refers to withdrawal from “territories” rather than from “the territories”, and each side has relied on its preferred reading.",
-      "Constructive ambiguity is a real technique, not a drafting failure. Ambiguity buys a ceasefire or a framework that precision would have prevented. The cost is deferred, not avoided. The disagreement remains, and each party believes it secured its reading."
+      "Diplomacy sometimes needs a text that both sides can sign precisely because it does not settle their disagreement. United Nations Security Council Resolution 242, adopted in 1967 after the Arab-Israeli war, is the standard example. Its English text calls for withdrawal from “territories”, not from “the territories”. Each side has relied on the reading it prefers. One reads “all the territories”. The other reads “some territories”.",
+      "Constructive ambiguity is a real technique, not a drafting mistake. Ambiguity buys a ceasefire or a framework that precision would have made impossible. But the cost is postponed, not avoided. The disagreement remains, and each party believes it won its own reading."
      ],
-     "Does the ambiguity make agreement possible or only postpone conflict? Weigh present agreement against future dispute."
+     "Does the ambiguity make agreement possible, or only postpone conflict? Weigh agreement now against dispute later."
     ],
     [
      "Legal drafting where ambiguity is a defect",
      [
-      "Legal drafting reverses the diplomatic case. A statute or contract is written so that a stranger, years later, can determine what was meant without asking anyone. Ambiguity in law transfers the decision to whoever interprets it, usually a court or an official.",
-      "Vagueness in a penal provision or licensing condition therefore works as a delegation of power. For this reason vagueness is treated as a constitutional problem, not only a matter of style. A rule a citizen cannot apply to their own conduct in advance is not working as a rule."
+      "Legal drafting reverses the diplomatic case. A law or a contract is written so that a stranger, years later, can work out what was meant without asking anyone. Ambiguity in law hands the decision to whoever interprets it, usually a court or an official.",
+      "So vagueness in a criminal law, or in a licence condition, works as a hidden grant of power. For this reason vagueness is treated as a constitutional problem, not just a problem of style. Imagine a law that bans “improper conduct” without saying what counts as improper. A citizen cannot know in advance whether they are breaking it. A rule that a citizen cannot apply to their own conduct in advance is not working as a rule."
      ],
-     "Who decides what an ambiguous rule means? Show how vagueness transfers power to the interpreter."
+     "Who decides what an ambiguous rule means? Show how vagueness hands power to the interpreter."
     ],
     [
      "Satire as political speech",
      [
-      "Satire is politically distinctive because it withdraws dignity rather than making a claim that can be rebutted, which is why the powerful find it hard to answer. In India, satire is also legally exposed. Provisions on hurting religious feelings, obscenity and public mischief are broadly drawn, and complaints can be filed in many places.",
-      "The process of defending against complaints is itself a punishment, whatever the final result. Where a comedian faces travel, bail and years of hearings, the chilling effect comes from procedure rather than conviction. A conviction rate near zero is therefore no evidence that speech is free."
+      "Satire is politically unusual. Satire does not make a claim that can be answered. Satire takes away dignity, which is why the powerful find it hard to answer. In India, satire is also legally exposed. The laws on hurting religious feelings, obscenity and public mischief are broadly worded. And complaints can be filed in many places at once.",
+      "The process of defending against complaints is itself a punishment, whatever the final result. A comedian who must travel to distant courts, seek bail and attend years of hearings is punished long before any verdict. So the chilling effect comes from procedure, not from conviction. A conviction rate near zero is therefore no evidence that speech is free."
      ],
-     "Is satire free if its process punishes? Look at procedure as well as verdicts."
+     "Is satire free if the process itself punishes? Look at procedure as well as verdicts."
     ],
     [
      "Translation and what is lost",
      [
-      "Translation between Indian languages and English tests the claim that language shapes thought. Kinship terms in many Indian languages encode relation, side and seniority that English collapses into “cousin” or “uncle”. Honorific pronouns mark relative status in every sentence, and English cannot carry that without adding words.",
-      "Terms such as dharma, maya and jugaad are usually left untranslated because every English candidate brings the wrong frame. The consequence for public life is concrete. Law, administration and higher education conducted in English require many citizens to argue in a register that is not fully theirs."
+      "Translation between Indian languages and English tests the claim that language shapes thought. Kinship words in many Indian languages record the relation, the side of the family and who is older. English squeezes all of this into “cousin” or “uncle”. Hindi has chacha, mama, phupha and mausa, while English has only “uncle”. Respectful pronouns, such as aap, mark relative status in every sentence, and English cannot carry that without adding words.",
+      "Words such as dharma, maya and jugaad are usually left untranslated, because every English candidate brings the wrong frame. The consequence for public life is concrete. Law, administration and higher education run in English. So many citizens must argue in a language that is not fully their own."
      ],
      "What meaning is lost between languages, and who bears the loss? Consider the citizen who must use a second language in public life."
     ],
     [
      "Euphemism as evasion",
      [
-      "Ambiguity is not always richness. George Orwell argued in 1946 that political language exists largely to make the indefensible sound acceptable, and that corruption runs from the phrase back into the thought.",
-      "The modern examples are easy to collect: “collateral damage” for civilians killed, “enhanced interrogation” for torture, “rightsizing” for dismissal, “encounter” for a killing without trial. Each substitutes an abstract noun for a concrete act, and removes the person to whom the act was done. Literary ambiguity opens a text to more meaning. Euphemism closes it, because the plain statement would be resisted."
+      "Ambiguity is not always richness. In 1946 George Orwell argued that political language exists largely to make the indefensible sound acceptable. He also argued that the corruption runs both ways: bad phrases lead to bad thinking.",
+      "The modern examples are easy to collect. “Collateral damage” means civilians killed. “Enhanced interrogation” means torture. “Rightsizing” means firing people. “Encounter” can mean a killing without trial. Each replaces a concrete act with an abstract phrase, and removes the person to whom the act was done. Literary ambiguity opens a text to more meaning. Euphemism closes it, because people would resist the plain statement."
      ],
-     "Does the phrase reveal or hide the act? Translate the euphemism into plain words and compare."
+     "Does the phrase reveal the act or hide it? Translate the euphemism into plain words and compare."
     ]
    ],
    "topics": [
     [
      "2026A1",
      [
-      "An oxymoron joins two words that seem to contradict each other: bitter sweetness, a living death or a wise fool. The figure is not a failure of expression. Life often contains both terms at once. A farewell can be happy and sad, success can feel empty, and freedom can be frightening. Laozi’s paradoxes, such as the soft overcoming the hard, and Kabir’s upside-down sayings show that contradiction can describe reality more accurately than plain statement.",
-      "The ironies of life appear where intentions and results diverge. Socrates used irony to reveal the gap between claimed and real knowledge. Camus described the absurd as the collision between human demand for meaning and a silent universe. Oxymorons capture such situations in a compressed form, holding both sides without choosing one.",
-      "Contradictions should still be used honestly. Nietzsche warned that suspicion of language must aim at truth, not escape it. Euphemisms like “collateral damage” also combine words oddly, but they hide rather than reveal. The oxymoron that reflects life brings a hidden tension into view. The phrase that conceals makes a harsh act disappear. Oxymorons reflect the ironies of life when they help us see more of the truth, not less."
+      "An oxymoron joins two words that seem to contradict each other: bitter sweetness, a living death or a wise fool. The figure of speech is not a failure of expression. Life often contains both halves at once. A farewell can be happy and sad. Success can feel empty. Freedom can be frightening. Laozi’s paradoxes, such as the soft overcoming the hard, and Kabir’s upside-down sayings show that contradiction can describe reality more accurately than plain statement.",
+      "The ironies of life appear where intentions and results come apart. Socrates used irony to reveal the gap between the knowledge people claimed and the knowledge they had. Camus described the absurd as the collision between the human demand for meaning and a silent universe. Oxymorons capture such situations in compressed form. They hold both sides without choosing one.",
+      "But contradictions should still be used honestly. Nietzsche warned that suspicion of language must aim at truth, not escape it. Euphemisms like “collateral damage” also join words oddly, but they hide instead of reveal. The oxymoron that reflects life brings a hidden tension into view. The phrase that conceals makes a harsh act disappear. So oxymorons reflect the ironies of life when they help us see more of the truth, not less."
      ]
     ],
     [
      "2022B3",
      [
-      "A smile is the most ambiguous of human expressions. The same smile can express joy, politeness, embarrassment, contempt, sorrow or courage. A smile can welcome or dismiss, comfort or wound. A smile says a great deal while committing to nothing, which is why it is the chosen vehicle for all ambiguities.",
-      "The ambiguity has uses. Socrates’ irony, often delivered with a smile, exposed confusion without direct attack. A smile can ease tension in diplomacy, soften a refusal or hide pain to protect others. Like constructive ambiguity in a treaty, a smile can keep a relationship going when plain words would break it.",
-      "The ambiguity also has costs. A smile can hide contempt, mask cruelty or conceal suffering that needs help. Satire uses the smile to withdraw dignity from the powerful. Frontline workers smile through exhaustion, and societies may read their smiles as contentment. The ethical task is to read smiles carefully and to recognise when a smile carries meaning that words cannot, and when it covers something that should be said plainly."
+      "A smile is the most ambiguous of human expressions. The same smile can express joy, politeness, embarrassment, contempt, sorrow or courage. A smile can welcome or dismiss, comfort or wound. A smile says a great deal while committing to nothing. For that reason a smile is the chosen vehicle for every kind of ambiguity.",
+      "The ambiguity has uses. Socrates’ irony, often delivered with a smile, exposed confusion without a direct attack. A smile can ease tension in diplomacy, soften a refusal, or hide pain to protect others. Like constructive ambiguity in a treaty, a smile can keep a relationship going when plain words would break it.",
+      "But the ambiguity also has costs. A smile can hide contempt, mask cruelty or conceal suffering that needs help. Satire uses the smile to take dignity away from the powerful. Frontline workers smile through exhaustion, and society may read their smiles as contentment. So the ethical task is to read smiles carefully. We must recognise when a smile carries meaning that words cannot, and when it covers something that should be said plainly."
      ]
     ]
    ],
    "intro": [
-    "Language usually aims at clarity. Yet some of the most truthful statements are paradoxes, ironies or contradictions: bitter sweetness, a deafening silence, a wise fool. A smile can mean welcome, embarrassment, contempt or grief. The question is why contradiction and ambiguity are sometimes the most accurate way to describe life, and when ambiguity becomes evasion."
+    "Language usually aims at clarity. Yet some of the truest statements are paradoxes, ironies or contradictions: a bitter sweetness, a deafening silence, a wise fool. A smile can mean welcome, embarrassment, contempt or grief.",
+    "So two questions follow. Why are contradiction and ambiguity sometimes the most accurate way to describe life? And when does ambiguity turn into evasion?"
    ],
-   "claim": "Life often contains both terms of a contradiction at once, and oxymorons and ironies report that truth accurately. Ambiguity can carry meanings that a plain statement would provoke resistance to, and it can hold situations that do not resolve. But ambiguity has two directions. Literary ambiguity opens meaning, while euphemism closes it to hide an act. Precision is a duty where others must act on the words.",
+   "claim": "Life often contains both halves of a contradiction at once, and oxymorons and ironies report that truth accurately. Ambiguity can carry meanings that a plain statement would make people resist, and it can hold situations that never resolve. But ambiguity can work in two directions. Literary ambiguity opens up meaning. Euphemism closes meaning down in order to hide an act. And where other people must act on the words, precision is a duty.",
    "problem": [
-    "Clear language is essential in law, science and administration. A rule that nobody can understand gives power to whoever interprets it. Yet much of human experience resists clear statement. Love can hurt, success can feel empty, and a victory can be a loss. Insisting on plain statements alone may falsify experience.",
-    "Ambiguity can also be abused. Governments and organisations use euphemisms to make harmful acts sound acceptable. Diplomats use deliberate vagueness to secure agreement, postponing conflict rather than resolving it. The challenge is to know when ambiguity conveys truth and when it conceals it, and when precision is required."
+    "Clear language is essential in law, science and administration. A rule that nobody can understand gives power to whoever interprets it. Yet much of human experience resists clear statement. Love can hurt. Success can feel empty. A victory can also be a loss. Insisting only on plain statements may falsify experience.",
+    "But there is a problem. Ambiguity can also be abused. Governments and organisations use euphemisms to make harmful acts sound acceptable. Diplomats use deliberate vagueness to win agreement, which postpones a conflict instead of resolving it.",
+    "So the challenge is to know when ambiguity conveys truth and when it hides truth. And we need to know when precision is required."
    ],
    "distinction": [
     "A useful distinction",
-    "Ambiguity that opens meaning allows a text or a gesture to carry more than a plain statement could. Ambiguity that closes meaning, like euphemism, replaces a concrete act with an abstraction so that the act cannot be seen. The test is whether the plain statement would reveal more or less."
+    "The important distinction is between ambiguity that opens meaning and ambiguity that closes it. Ambiguity that opens meaning lets a poem or a gesture carry more than a plain statement could. Ambiguity that closes meaning, such as euphemism, replaces a concrete act with an abstract phrase, so that nobody can see the act. The test is simple. Would the plain statement reveal more, or less? If the plain statement would reveal more, the ambiguity is hiding something."
    ],
    "thinkersTitle": "Five thinkers, five tests of paradox",
    "together": [
     "Putting the five together",
-    "Socrates uses irony to reveal what direct statement cannot. Laozi and Kabir use paradox to break settled categories. Camus asks us to hold contradiction rather than resolve it falsely. Nietzsche warns that suspicion of language must still aim at truth. Together they explain why oxymorons reflect life, and why ambiguity must be used honestly."
+    "Socrates uses irony to reveal what a direct statement cannot. Laozi and Kabir use paradox to break settled categories. Camus asks us to hold a contradiction instead of resolving it falsely. Nietzsche warns that suspicion of language must still aim at truth. Together they explain why oxymorons reflect life, and why ambiguity must be used honestly."
    ],
    "models": [
     [
      "Contradiction can be accurate.",
-     "Oxymorons reflect life because many situations genuinely contain both terms. Laozi’s paradoxes and Kabir’s upside-down sayings describe reality more accurately than plain statement."
+     "Oxymorons reflect life because many situations really do contain both halves. Laozi’s paradoxes and Kabir’s upside-down sayings describe reality more accurately than plain statement."
     ],
     [
      "Irony lets uncomfortable meaning travel.",
-     "Socrates used irony to expose confusion that could not be shown directly. A contradiction the listener discovers is accepted where a direct one would be resisted."
+     "Socrates used irony to expose confusion that could not be shown directly. A contradiction the listener discovers is accepted, where a direct one would be resisted."
     ],
     [
      "Ambiguity can defer conflict.",
-     "Resolution 242 of 1967 was signed because its wording allowed different readings. Constructive ambiguity buys agreement now against a dispute later."
+     "Resolution 242 of 1967 was agreed because its wording allowed different readings. Constructive ambiguity buys agreement now at the price of a dispute later."
     ],
     [
      "Precision is a duty in law.",
-     "A vague rule transfers power to whoever interprets it. A rule a citizen cannot apply to their own conduct in advance is not working as a rule."
+     "A vague rule hands power to whoever interprets it. A rule that a citizen cannot apply to their own conduct in advance is not working as a rule."
     ],
     [
      "Euphemism closes meaning.",
@@ -4337,7 +4345,7 @@ const GUIDES = {
      "Argue that ambiguity is honest when it opens meaning and dishonest when it hides an act."
     ]
    ],
-   "formula": "Accept contradiction where life truly contains both terms, and use ambiguity when it opens meaning. Demand precision where others must act on the words, and translate every euphemism back into the plain act it hides."
+   "formula": "Accept contradiction where life truly contains both halves, and use ambiguity when it opens meaning. Demand precision where others must act on the words, and translate every euphemism back into the plain act it hides."
   },
   {
    "thinkers": [
@@ -4345,8 +4353,8 @@ const GUIDES = {
      "Hegel",
      "the real is rational",
      [
-      "Hegel’s proposition that the real is rational and the rational is real is often misread. He was not saying that whatever exists is justified.",
-      "His claim was that reality has a rational structure that unfolds through contradiction and its resolution. What genuinely is, as opposed to what merely persists for a while, is intelligible. What is genuinely rational has the power to make itself actual. The doctrine is an argument for reading history as a process with a logic rather than as a series of accidents."
+      "Hegel wrote that the real is rational and the rational is real. The statement is often misread as saying that whatever exists is justified. Hegel did not mean that.",
+      "His claim was that reality has a rational structure, which unfolds as conflicts arise and are resolved. What truly is, as opposed to what merely lasts for a while, can be understood by reason. And what is truly rational has the power to make itself actual. So the doctrine is an argument for reading history as a process with a logic, not as a series of accidents."
      ],
      "the answer needs to interpret the relation between reason and reality, or the logic of historical change."
     ],
@@ -4354,8 +4362,8 @@ const GUIDES = {
      "Kant",
      "the mind shapes experience",
      [
-      "Kant supplied the correction that stops Hegel’s view from becoming naive. We never meet things as they are in themselves. The mind imposes space, time and causality on whatever it receives.",
-      "Experience is therefore produced jointly by the world and by the mind receiving it. For the same reason, your perception of another person tells us something about you, because the categories you bring to the encounter are yours."
+      "Kant supplied the correction that stops Hegel’s view from becoming naive. We never meet things as they are in themselves. The mind arranges everything it receives in space and time, and connects events as causes and effects.",
+      "So experience is produced jointly by the world and by the mind receiving it. For the same reason, your perception of another person tells us something about you, because the categories you bring to the meeting are yours."
      ],
      "the question concerns how the mind shapes perception, or the limits of knowledge."
     ],
@@ -4363,8 +4371,8 @@ const GUIDES = {
      "Shankara",
      "superimposition",
      [
-      "Shankara pushed the same insight further. In Advaita Vedanta, the world as ordinarily experienced is real in practice but not ultimately real.",
-      "Adhyasa, or superimposition, is the process by which we mistake our own construction for the thing itself, as a rope seen in dim light is mistaken for a snake. Clear knowledge removes the superimposition."
+      "Shankara pushed the same insight further. In Advaita Vedanta, the world as we ordinarily experience it is real for practical purposes, but not ultimately real.",
+      "Shankara called our basic error adhyasa, or superimposition. We mistake our own construction for the thing itself, as a rope seen in dim light is mistaken for a snake. The fear is real, but the snake is not. Clear knowledge removes the superimposition, as a lamp reveals the rope."
      ],
      "the answer needs an Indian philosophical account of perception and illusion."
     ],
@@ -4372,17 +4380,17 @@ const GUIDES = {
      "Sartre",
      "the look",
      [
-      "Jean-Paul Sartre closed the loop on the side of human relations with what he called the look. In being seen by another person, you become an object in someone else’s world and discover a self you did not author.",
-      "My reaction to you therefore reveals me to myself. No perception happens without a perceiver, and the perceiver is always disclosed as well."
+      "Jean-Paul Sartre completed the picture on the side of human relationships, with what he called the look. When another person looks at you, you become an object in someone else’s world. You discover a self that you did not create. Think of the sudden shame of realising that someone saw you do something petty.",
+      "So my reaction to you reveals me to myself. No perception happens without a perceiver, and the perceiver is always revealed as well."
      ],
-     "the question concerns how others’ perceptions shape self-understanding."
+     "the question concerns how other people’s perceptions shape self-understanding."
     ],
     [
      "Plato",
      "the cave",
      [
-      "Plato’s cave holds the whole argument together. The prisoners are not deceived by anyone. They see accurately, and what they see is shadows. Their error is structural, not moral.",
-      "The alternative to a distorted perception is not an undistorted one. The alternative is knowing that you stand somewhere, and being willing to move towards a clearer view."
+      "Plato’s image of the cave holds the whole argument together. Prisoners are chained in a cave, facing a wall, and they see only shadows cast on the wall by a fire behind them. Nobody is deceiving the prisoners. They see accurately, and what they see is shadows. Their error comes from where they stand, not from bad character.",
+      "So the alternative to a distorted perception is not a perfect one. The alternative is knowing that you stand somewhere, and being willing to move towards a clearer view."
      ],
      "the answer needs an image of the difference between appearance and reality, or of learning to see better."
     ]
@@ -4391,78 +4399,80 @@ const GUIDES = {
     [
      "Attribution and bias",
      [
-      "The most usable finding in the psychology of perception is the fundamental attribution error. People explain others’ behaviour by character and their own by circumstance. The same lateness is his carelessness and my traffic. Confirmation bias filters new evidence towards what is already believed.",
-      "Public argument is largely conducted through attributions. Whether poverty is explained by effort or by structure, whether a riot is explained by character or provocation, and whether an official failure is explained by corruption or capacity are the same question. The evidence rarely settles which explanation people reach for first."
+      "The most useful finding in the psychology of perception is called the fundamental attribution error. People explain other people’s behaviour by their character, and their own behaviour by circumstances. When he is late, he is careless. When I am late, the traffic was bad. A second bias, confirmation bias, filters new evidence towards what a person already believes.",
+      "Public argument is largely conducted through such explanations. Is poverty explained by effort or by structure? Is a riot explained by character or by provocation? Is an official failure explained by corruption or by lack of capacity? Each is the same question about where to place the cause. And the evidence rarely decides which explanation people reach for first."
      ],
-     "Is the judgment about the other person or about the observer? Check whether the same standard is applied to oneself."
+     "Is the judgment about the other person, or about the observer? Check whether the same standard is applied to oneself."
     ],
     [
      "Media framing",
      [
-      "Framing is not falsehood, which is why it is harder to argue against. Every account must choose where an event begins, whose experience anchors it and which word names the actors. A report that opens with a retaliation and one that opens with the provocation can both be accurate and produce opposite judgments.",
-      "The same is true of the choice between “protest” and “unrest”, or between “welfare” and “subsidy”. Checking a story for accuracy is therefore not enough. The question that reveals the frame is what a fair account would have included that this one left out."
+      "Framing is not falsehood, which is why it is harder to argue against. Every account must choose where an event begins, whose experience is at its centre and which words name the people involved. A report that opens with a retaliation and a report that opens with the provocation can both be accurate. Yet readers of the two reports will reach opposite judgments.",
+      "The same is true of the choice between “protest” and “unrest”, or between “welfare” and “subsidy”. So checking a story for accuracy is not enough. The question that reveals the frame is different. What would a fair account have included that this one left out?"
      ],
      "What does the frame include and leave out? Ask what a fair account would have had to contain."
     ],
     [
      "Standpoint and objectivity",
      [
-      "Standpoint arguments are easy to state badly and worth stating well. The defensible version is about evidence. Someone who experiences a system from below has access to information about how it works that is unavailable from above. Excluding such people produces worse knowledge, not merely less inclusive knowledge.",
-      "The strong version, that a claim’s truth depends on who makes it, defeats itself. The strong version would apply to itself and leaves no way to decide between two standpoints that disagree. Standpoint governs access to evidence, but it does not decide truth."
+      "Standpoint arguments are easy to state badly and worth stating well. The defensible version is about evidence. Someone who experiences a system from below has information about how it works that nobody can see from above. So leaving such people out produces worse knowledge, not merely less inclusive knowledge.",
+      "The strong version says that whether a claim is true depends on who makes it. The strong version defeats itself. The strong version would have to apply to itself, and it leaves no way to decide between two standpoints that disagree. So standpoint governs access to evidence, but standpoint does not decide truth."
      ],
      "Whose experience is missing from the evidence? Include excluded standpoints without making truth depend on identity."
     ],
     [
      "Eyewitness testimony",
      [
-      "Eyewitness identification shows that perception rebuilds rather than records. Of the DNA exonerations recorded by the Innocence Project in the United States, around sixty-nine per cent involved eyewitness misidentification, the largest single cause of those wrongful convictions.",
-      "Elizabeth Loftus showed the mechanism experimentally. Memory is rebuilt at each recall and absorbs information met after the event, so the wording of a question can change what is sincerely remembered. Confidence and accuracy are only weakly related after identification procedures, so the signal a jury trusts most may carry the least information."
+      "Eyewitness identification shows that perception rebuilds instead of recording. The Innocence Project in the United States has recorded many cases in which DNA evidence later freed a convicted person. Around sixty-nine per cent of those cases involved a mistaken eyewitness, the largest single cause of the wrongful convictions.",
+      "The psychologist Elizabeth Loftus showed the mechanism in experiments. Memory is rebuilt each time it is recalled, and it absorbs information met after the event. So the wording of a question can change what a person sincerely remembers. Asking how fast the cars were going when they “smashed” produces higher estimates than asking when they “hit”. Confidence and accuracy are only weakly linked once a witness has been through identification procedures. So the signal a jury trusts most may carry the least information."
      ],
      "How reliable is sincere perception? Separate a witness’s confidence from the accuracy of the memory."
     ],
     [
      "Scientific realism",
      [
-      "The counter-argument stops the theme from becoming the claim that reality is whatever we take it to be. The strongest version is the no-miracles argument: the predictive success of mature science would be an extraordinary coincidence if its theories did not track something real.",
-      "General relativity predicted the bending of starlight, confirmed in 1919. A vaccine designed on a model of a virus works in bodies that know nothing of the model. Frameworks shape which questions are asked, but the world keeps the power to refuse an answer. Perception is constructed. What perception is constructed about is not."
+      "The counter-argument stops the theme from becoming the claim that reality is whatever we take it to be. The strongest version is called the no-miracles argument. Mature science predicts the world with great success. That success would be an extraordinary coincidence if scientific theories did not track something real.",
+      "General relativity predicted that starlight would bend around the sun, and observations in 1919 confirmed it. A vaccine designed from a model of a virus works in bodies that know nothing of the model. Frameworks shape which questions are asked, but the world keeps the power to refuse an answer. So perception is constructed. What perception is constructed about is not."
      ],
-     "Does the world constrain our constructions? Use the success of science to show that reality pushes back."
+     "Does the world limit our constructions? Use the success of science to show that reality pushes back."
     ]
    ],
    "topics": [
     [
      "2021A2",
      [
-      "When I perceive you, I bring my own categories, fears and expectations. What I notice, and how I judge it, says as much about me as about you. Kant showed that the mind shapes all experience, and psychology confirms it: people explain others’ faults by character and their own by circumstance. My perception of you is therefore partly a reflection of me.",
-      "The second half of the statement turns inward. My reaction to you reveals me to myself. Sartre described how being seen by another makes us aware of a self we did not author. Anger, envy or admiration in response to another person shows what I value and fear. Each encounter is a mirror in which I can learn about my own character.",
-      "The insight has limits. Perception is not only projection. Other people have real qualities, and some perceptions are more accurate than others. The eyewitness research shows that sincere perception can be wrong, but careful procedures can improve it. The wise response is humility: to recognise that my view of others is shaped by my standpoint, and to use my reactions as a way of knowing myself, while still seeking the truth about others."
+      "When I perceive you, I bring my own categories, fears and expectations. What I notice, and how I judge it, says as much about me as about you. Kant showed that the mind shapes all experience, and psychology confirms it. People explain other people’s faults by character and their own faults by circumstance. So my perception of you is partly a reflection of me.",
+      "The second half of the statement turns inward. My reaction to you reveals me to myself. Sartre described how being seen by another person makes us aware of a self we did not create. Anger, envy or admiration towards another person shows what I value and what I fear. Each meeting is a mirror in which I can learn about my own character.",
+      "But the insight has limits. Perception is not only projection. Other people have real qualities, and some perceptions are more accurate than others. The research on eyewitnesses shows that sincere perception can be wrong, but careful procedures can improve it. So the wise response is humility. I should recognise that my standpoint shapes my view of others, and use my reactions as a way of knowing myself. And I should still seek the truth about others."
      ]
     ],
     [
      "2021A4",
      [
-      "Hegel’s statement is often misread as saying that whatever exists is justified. Hegel meant something different. Reality has a rational structure that unfolds through contradiction and its resolution. What genuinely is can be understood by reason, and what is genuinely rational has the power to become actual. History, on this view, is not a sequence of accidents but a process with a logic.",
-      "The first half, that the real is rational, expresses confidence that reality can be known. Science supports that confidence. The predictive success of theories such as general relativity would be a miracle if the world had no rational structure. The second half, that the rational is real, suggests that rational ideas tend to realise themselves. Ideas such as equality and human rights, once reasoned out, have gradually reshaped institutions.",
-      "The statement needs qualification. Kant warned that we know reality only through the forms of our own mind. Plato’s cave shows how people can take shadows for reality. Many irrational practices persist for long periods, and not every rational idea is realised. The statement is best read as a direction rather than a guarantee: reason can understand reality and can help to change it, but only through continued inquiry and effort."
+      "Hegel’s statement is often misread as saying that whatever exists is justified. Hegel meant something different. Reality has a rational structure, which unfolds as conflicts arise and are resolved. What truly is can be understood by reason, and what is truly rational has the power to become actual. History, on this view, is not a string of accidents but a process with a logic.",
+      "The first half of the statement, that the real is rational, expresses confidence that reality can be known. Science supports that confidence. The predictive success of theories such as general relativity would be a miracle if the world had no rational structure. The second half, that the rational is real, suggests that rational ideas tend to make themselves real. Ideas such as equality and human rights, once they were reasoned out, have gradually reshaped institutions.",
+      "But the statement needs a qualification. Kant warned that we know reality only through the forms of our own minds. Plato’s cave shows how people can take shadows for reality. Many irrational practices last for long periods, and not every rational idea comes true. So the statement is best read as a direction, not a guarantee. Reason can understand reality and can help to change it, but only through continued inquiry and effort."
      ]
     ]
    ],
    "intro": [
-    "We usually assume that we see the world as it is. Yet two people can look at the same event and see different things, and each reveals as much about themselves as about the event. Philosophers have long asked how much of what we perceive comes from the world and how much from the mind. The question is how perception relates to reality, what our judgments of others reveal about us, and whether reality has a rational structure we can know."
+    "We usually assume that we see the world as it is. Yet two people can look at the same event and see different things. Each one reveals as much about themselves as about the event. Philosophers have long asked how much of what we perceive comes from the world, and how much comes from the mind.",
+    "So the questions are these. How does perception relate to reality? What do our judgments of other people reveal about us? And does reality have a rational structure that we can know?"
    ],
-   "claim": "Perception is shaped by the perceiver. The categories, expectations and experiences we bring to an encounter decide what we notice, so our perception of others reveals us as well as them. Yet perception is constructed about something real. The success of science shows that the world can refuse an answer whatever our framework. The wise response is not to seek a view from nowhere, but to know where we stand and to be willing to move.",
+   "claim": "The perceiver shapes perception. The categories, expectations and experiences we bring to an encounter decide what we notice. So our perception of other people reveals us as well as them. Yet perception is always built about something real. The success of science shows that the world can refuse an answer, whatever framework we bring to it. So the wise response is not to look for a view from nowhere. The wise response is to know where we stand, and to be willing to move.",
    "problem": [
-    "Much public conflict is conducted through perception. People explain their own failures by circumstance and others’ by character. Media reports frame the same event differently. Witnesses sincerely remember what did not happen. When each side is certain that it sees clearly, disagreement becomes hostility.",
-    "The opposite error is to conclude that nothing is real and every view is equally valid. Relativism of this kind removes the possibility of argument and makes truth depend on power. The challenge is to accept that perception is shaped by standpoint while holding that some accounts fit the evidence better than others, and that reality has a structure which reason can gradually understand."
+    "Much public conflict is fought through perception. People explain their own failures by circumstances and other people’s failures by character. News reports frame the same event in different ways. Witnesses sincerely remember things that never happened. When each side is certain that it sees clearly, disagreement turns into hostility.",
+    "But there is an opposite error. Some people conclude that nothing is real and every view is equally valid. This relativism removes the possibility of argument, and it makes truth depend on power. If no account is better than another, the loudest account wins.",
+    "So the challenge has two parts. Accept that a person’s standpoint shapes what they perceive. But hold on to the idea that some accounts fit the evidence better than others, and that reason can slowly come to understand the structure of reality."
    ],
    "distinction": [
     "A useful distinction",
-    "Standpoint governs access to evidence: someone below a system sees things that someone above it cannot. Standpoint does not decide whether a claim is true. Keeping the two apart preserves both the insight and the possibility of argument."
+    "The important distinction is between access to evidence and the truth of a claim. A person’s standpoint governs their access to evidence. A cleaning worker at a hospital sees things about how the hospital runs that the director never sees. But standpoint does not decide whether a claim is true. Keeping the two apart preserves both the insight of standpoint and the possibility of argument."
    ],
    "thinkersTitle": "Five thinkers, five tests of perception",
    "together": [
     "Putting the five together",
-    "Hegel argues that reality has a rational structure. Kant shows that the mind shapes experience. Shankara explains how we mistake our constructions for reality. Sartre shows how others’ perceptions reveal us to ourselves. Plato’s cave shows the path from shadows to clearer sight. Together they explain why perception reflects the perceiver while reason still seeks what is real."
+    "Hegel argues that reality has a rational structure. Kant shows that the mind shapes experience. Shankara explains how we mistake our constructions for reality. Sartre shows how other people’s perceptions reveal us to ourselves. Plato’s cave shows the path from shadows to clearer sight. Together they explain why perception reflects the perceiver, while reason still seeks what is real."
    ],
    "models": [
     [
@@ -4471,19 +4481,19 @@ const GUIDES = {
     ],
     [
      "We judge others and ourselves differently.",
-     "The fundamental attribution error explains others’ behaviour by character and our own by circumstance. Public arguments about poverty, riots and failure often follow the same bias."
+     "The fundamental attribution error explains other people’s behaviour by character and our own by circumstances. Public arguments about poverty, riots and failure often follow the same bias."
     ],
     [
      "Sincere memory can be wrong.",
-     "Around sixty-nine per cent of DNA exonerations recorded by the Innocence Project involved eyewitness misidentification. Confidence is not accuracy."
+     "Around sixty-nine per cent of the DNA exonerations recorded by the Innocence Project involved a mistaken eyewitness. Confidence is not accuracy."
     ],
     [
      "Standpoint governs access, not truth.",
-     "People who experience a system from below see evidence that others cannot. Including their view improves knowledge, but truth still depends on evidence."
+     "People who experience a system from below see evidence that others cannot. Including their view improves knowledge. But truth still depends on evidence."
     ],
     [
      "Reality pushes back.",
-     "The success of science would be a miracle if theories did not track something real. Perception is constructed, but what it is constructed about is not."
+     "The success of science would be a miracle if theories did not track something real. Perception is constructed, but what perception is constructed about is not."
     ]
    ],
    "steps": [
