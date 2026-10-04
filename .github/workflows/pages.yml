@@ -1,0 +1,46 @@
+# The old GitHub Pages address now only forwards readers to the new one.
+#
+# The site itself is published by Cloudflare Pages, from the repository root, at
+# https://thinkers.okayupsc.com. What GitHub Pages serves at
+# agni98.github.io/upsc-thinkers/ is the small page in
+# .github/pages-redirect/, which sends each visitor to the same page there,
+# the part after the # included. Its 404.html does the same for any other
+# path under the old address.
+
+name: Redirect the old Pages address
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/pages-redirect/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:        # so a deploy can be re-run without a commit
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it half-published.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .github/pages-redirect
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
