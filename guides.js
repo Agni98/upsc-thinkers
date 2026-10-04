@@ -6511,9 +6511,10 @@ const GUIDES = {
     [
      "2024A1",
      [
-      "The saying packs a long history into one line. Forests and fertile land made settlement, farming and cities possible. When forests were cleared, soils washed away and rivers changed, some civilisations weakened or moved. Schumacher explained the logic. Natural resources are capital, not income. A civilisation that uses up its natural capital while calling it growth is selling off its inheritance, and the desert appears after the prosperity.",
-      "Modern India faces the same choice. Mining in the Aravallis threatens a range that holds back the spread of the desert. The reports on the Western Ghats show how scientific advice about protection meets political resistance. Compensatory afforestation counts hectares planted without restoring what the forest did. Gandhi’s warning that the earth cannot satisfy greed applies to a model of development that measures success by output alone.",
-      "But the saying should not be read as fate. Ostrom showed that communities can manage forests, fisheries and water sustainably when they have clear rights and local rules. Where the Forest Rights Act has been put into practice, gram sabhas have protected forests and earned from them. Burke reminds us that the unborn are partners in today’s decisions. So deserts follow civilisations only when they forget that nature is capital. A civilisation that keeps its accounts honestly can keep its forests."
+      "The saying packs a long history into one line. Forests and fertile land made settlement, farming and cities possible. When forests were cleared, soil washed away, rivers silted and some civilisations weakened or moved. Schumacher explained the logic behind the pattern. Natural resources are capital, not income. A family that sells a field each year to pay for its expenses looks prosperous until the land runs out. A civilisation that uses up its forests while calling it growth is doing the same, and the desert appears after the prosperity.",
+      "Modern India faces the same choice. The Aravalli hills hold back the eastward spread of the Thar desert, yet mining has cut gaps through the range. In 2011 an expert panel led by Madhav Gadgil proposed protecting most of the Western Ghats. A later panel cut the protected share to about a third, after resistance from states and industries. Compensatory afforestation counts hectares planted against hectares lost, without restoring what an old forest did. Gandhi’s warning that the earth cannot satisfy greed applies to any model that measures success by output alone.",
+      "But there is a problem with reading the saying as fate. Ostrom showed that communities can manage forests, fisheries and water sustainably when they have clear rights and local rules. Mendha Lekha, a village in Gadchiroli, won community rights over its forest under the Forest Rights Act. The gram sabha now harvests and sells bamboo itself, and protects the forest that pays its income. Burke reminds us that the unborn are partners in such decisions.",
+      "So deserts follow civilisations only when they forget that nature is capital. A civilisation that keeps its accounts honestly, and gives the people who live beside a forest a stake in its future, can keep its forests."
      ]
     ]
    ],
@@ -6534,28 +6535,28 @@ const GUIDES = {
    "thinkersTitle": "Five thinkers, five tests of natural capital",
    "together": [
     "Putting the five together",
-    "Schumacher shows natural capital being spent as income. Gandhi warns that greed has no limit. Ostrom shows that shared resources can be managed well. Burke includes the unborn in present decisions. Thoreau reminds us that civilisation depends on what it did not make. Together they explain why deserts follow civilisations that forget their inheritance."
+    "The five thinkers explain why deserts follow civilisations that forget their inheritance, and why they need not. Schumacher names the basic error. Forests, soil and fossil fuels are capital, but most economies spend them as if they were income. Gandhi explains why the spending never stops. The earth has enough for need but not for greed, and greed has no natural limit. Thoreau reminds us that civilisation rests on what it did not make, since in wildness lies the preservation of the world. Burke widens the account to include the unborn, who will inherit whatever is left. Ostrom supplies the hope. Communities have managed forests and water well for centuries when they held clear rights and made their own rules. So collapse is a risk, not a fate, and institutions decide which way a society goes."
    ],
    "models": [
     [
      "Nature is capital, not income.",
-     "Schumacher argued that treating fossil fuels, soil and forests as income is a basic accounting error. A civilisation that spends its natural capital reports growth until the desert appears."
+     "Every economy runs on two kinds of wealth: income that renews itself and capital that does not. Schumacher argued that modern economies make a basic accounting error. They treat fossil fuels, topsoil and old forests as income, and spend them as if they will return next year. A district that mines its hills for stone reports rising output for twenty years. Then the hills are gone, the groundwater falls and the dust storms begin. But some use of natural capital is unavoidable for development. So the real question is whether a society replaces what it spends, and whether its accounts show the spending at all."
     ],
     [
      "The commons can be governed.",
-     "Ostrom showed that communities manage forests and water sustainably when boundaries are clear, rules are local and users watch each other. The tragedy of the commons is a failure of institutions, not a law."
+     "For decades, economists assumed that shared resources are doomed. If nobody owns a pasture, each herder adds cattle until the grass is gone. Elinor Ostrom studied real communities and found many that had avoided this fate for centuries. Swiss villages managed alpine meadows, Nepali farmers ran irrigation canals and Indian villages protected forests. The successful cases shared clear boundaries, rules made by the users and users who watched each other. But these conditions are often destroyed when outsiders take control. So the tragedy of the commons is a failure of institutions, not a law of nature."
     ],
     [
      "Planting is not restoring.",
-     "Compensatory afforestation counts hectares planted against hectares lost. Plantations of a single species do not reproduce what an old forest does."
+     "A forest is not a number of trees. India’s compensatory afforestation system requires a project that clears forest to pay for planting elsewhere. The accounts then compare hectares lost with hectares planted. But an old forest holds soil, stores water, shelters hundreds of species and supports the people who gather its produce. A new plantation of a single fast-growing species does little of this for decades, and some plantings are on land that was never suitable. But planting still helps where it restores degraded land with native species. So counting hectares is not enough. Restoration should be judged by what the forest does, not by how many trees were planted."
     ],
     [
      "The unborn are partners.",
-     "Burke described society as a partnership between the living, the dead and the unborn. A forest felled today settles a question for people who cannot object."
+     "Burke described society as a partnership between the living, the dead and those not yet born. The idea has sharp force for forests. A forest that took three hundred years to grow can be cleared in a season. The people who will live without it, and without the water and soil it held, have no vote and no voice in the decision. They cannot object, so their interests are easily ignored. But the present generation also has real needs that cannot simply wait. So a decision to clear an old forest should carry a heavy burden of proof, because it settles a question for people who cannot speak."
     ],
     [
      "Collapse is a risk, not a fate.",
-     "Easter Island and the Indus cities are disputed cases. The defensible claim is that societies can undermine their resource base, and that institutions decide whether they do."
+     "History offers cautionary tales, but they are often disputed. Easter Island was long cited as a society that destroyed itself by cutting its trees. Later research pointed also to rats, disease and slave raids. The decline of the Indus cities is linked to shifting rivers and a changing climate, not only to human error. The defensible claim is narrower. Societies can undermine the resources they depend on, and some have. Others, such as communities managing forests under strong local rules, have lasted for centuries. But no society is guaranteed safety. So collapse is a risk, and institutions decide whether a society runs it."
     ]
    ],
    "steps": [
@@ -6684,9 +6685,10 @@ const GUIDES = {
     [
      "2022A1",
      [
-      "Forests are models of efficiency. Forests recycle nutrients without waste. They regulate water, store carbon, protect soil and support many forms of life, all powered by sunlight. They sustain the livelihoods of millions of people through food, fuel, medicine and other produce. Ostrom showed that communities have managed forests sustainably for centuries, without private or state ownership. In these senses, forests are excellent case studies of economic excellence.",
-      "Forests are also case studies in how ordinary economics fails. Schumacher pointed out that market prices count timber and ignore everything else, so a forest’s value is always understated. Gandhi explained why converting a forest always seems profitable. The income is counted, and the loss is not. Efforts to value nature, such as TEEB, and the Finance Commission’s reward for forest cover try to correct the bias. Joint Forest Management and the Forest Rights Act show that communities manage forests best when they hold real rights to decide.",
-      "The lesson for economic excellence is broader. True excellence produces value sustainably. True excellence shares the benefits with the people who depend on the resource. And true excellence keeps accounts for future generations, as Burke’s partnership with the unborn requires. Growth that eats its natural capital is not excellence. Such growth is selling off assets. So forests show that the best economy is one that can carry on indefinitely, while sustaining the people who depend on it."
+      "At first the statement sounds strange, because forests are usually seen as the opposite of an economy. Yet a forest is a remarkably efficient system. A forest recycles nutrients without waste, regulates water, stores carbon, protects soil and supports thousands of species, all powered by sunlight. A forest also supports the livelihoods of millions of people in India through food, fuel, fodder, medicine and produce such as tendu leaves and mahua. Ostrom showed that communities have often managed such forests well for centuries, without private or state ownership.",
+      "Forests are also case studies in how ordinary economics fails. Schumacher pointed out that market prices count timber and ignore almost everything else. The water a forest releases slowly through the dry season, the bees it shelters for nearby farms and the floods it prevents have no price. So when a project is assessed, those services count as zero. Gandhi explained why clearing a forest therefore always seems profitable. The income is counted, and the loss is not.",
+      "Some corrections have begun. Valuation studies, such as the international TEEB project, put rough figures on services that used to be ignored. The Fifteenth Finance Commission gave forest cover a weight of ten per cent when sharing taxes among states. Joint Forest Management and the Forest Rights Act show that forests do best when the communities beside them hold real rights to decide. But there is a risk here too. Putting a price on a forest can suggest that it can be bought, as if a payment could replace what is lost.",
+      "So the lesson for economic excellence is broader than forests. True excellence produces value without exhausting its source. True excellence shares its benefits with the people who depend on the resource, and keeps accounts for future generations, as Burke’s partnership with the unborn requires. Growth that eats its natural capital is not excellence. Such growth is selling off assets."
      ]
     ]
    ],
@@ -6707,28 +6709,28 @@ const GUIDES = {
    "thinkersTitle": "Five thinkers, five tests of forest economics",
    "together": [
     "Putting the five together",
-    "Ostrom shows that communities can manage forests efficiently. Schumacher shows that market prices leave out most of a forest’s value. Sen shows the forest as the very ability to live of the people who depend on it. Gandhi explains why conversion always seems profitable. Burke adds the claims of future generations. Together they explain why the forest is a model of economic excellence that ordinary accounts cannot see."
+    "The five thinkers explain why a forest is a model of economic excellence that ordinary accounts cannot see. Ostrom shows the forest as an institution. Communities have managed forests efficiently for centuries without private or state ownership. Schumacher explains why markets miss this. Market prices count timber and ignore water, soil and pollination, so a forest’s value is always understated. Sen adds the human side. For the people who live from it, the forest is the very ability to eat, earn and stay healthy. Gandhi explains why conversion always seems to win. The income from clearing is counted, while the loss is not. Burke widens the account to future generations, who will inherit what is left. So a forest shows what real economic excellence looks like: value produced without exhausting its source, and shared with those who depend on it."
    ],
    "models": [
     [
      "Commons can be managed efficiently.",
-     "Ostrom showed that communities have governed forests for centuries without ordinary owners. Clear boundaries, local rules and watching by the users themselves are the conditions of success."
+     "Economists long assumed that only private or state ownership could manage a resource well. Ostrom showed otherwise. In many places, communities have governed forests for centuries without either kind of owner. In parts of Odisha, villages formed forest protection committees in which households take turns patrolling, and fines for illegal felling are set by the village itself. The forests recovered. Ostrom found the same conditions behind such successes everywhere: clear boundaries, rules made by the users and users who watch each other. But these arrangements can break down when outsiders or the state override them. So community management is not a romantic idea, and it works under conditions that law can protect."
     ],
     [
      "Market prices omit most of a forest’s value.",
-     "Schumacher argued that valuing a forest as timber ignores water, soil, pollination and livelihoods. The market’s price is an omission, not a measurement."
+     "A forest has a market price, but the price measures only a small part of what it does. A buyer pays for timber. Nobody pays the forest for the water it releases slowly through the dry season, the soil it holds on steep slopes or the bees it shelters for nearby orchards. Schumacher argued that this makes the market’s price an omission, not a measurement. When a forest is cleared for a project, the timber income appears in the accounts and the lost services do not. But some services are hard to measure, and estimates can be wrong. So a decision based only on market prices will clear forests that are worth more standing."
     ],
     [
      "An unpriced service is valued at zero.",
-     "Valuation exercises such as TEEB do not give exact figures. They correct the default of treating a wetland or a forest as costless when a project is appraised."
+     "When a project is appraised, anything without a price is quietly counted as worth nothing. A wetland that absorbs floodwater, or a forest that feeds a town’s springs, enters the calculation at zero. Valuation exercises such as the international TEEB project try to correct this. Their figures are rough, and nobody should treat them as exact. But a rough figure is better than an implied zero, because it forces planners to weigh what will be lost. A city that fills in its lakes and then floods every monsoon has learned the true price too late. So valuation is useful mainly as a correction to a default that is certainly wrong."
     ],
     [
      "Rewards must reach those who bear the cost.",
-     "The Fifteenth Finance Commission gave forest cover a 10 per cent weight in sharing taxes. Transfers without conditions reward states, but the communities who protect forests may receive nothing."
+     "Protecting a forest costs someone something. A state that keeps its forests gives up mining royalties and land for industry. The Fifteenth Finance Commission recognised this by giving forest cover a ten per cent weight when sharing central taxes among states. But the money goes to the state treasury without conditions. The villagers who patrol the forest, and who give up grazing or felling, may see none of it. So the people who carry the cost of conservation receive little of the reward. But routing money directly to villages also needs honest accounts. So rewards for conservation must reach those who actually bear its cost."
     ],
     [
      "Livelihoods can align with conservation.",
-     "Forest produce other than timber requires the forest to stay standing. Fair prices through MSP and Van Dhan centres make conservation the collector’s own interest."
+     "Conservation and livelihoods are often presented as rivals. Forest produce other than timber shows how they can align. Tendu leaves, mahua flowers, honey and lac can be gathered only from a forest that stays standing. A family that earns from them has every reason to protect the trees. The problem is price. Collectors have often sold to middlemen for a fraction of the market value. Minimum support prices for forest produce and the Van Dhan centres, where collectors process and sell together, try to raise their share. But such schemes work only when the prices are actually paid. So a fair price can make conservation the collector’s own interest."
     ]
    ],
    "steps": [
