@@ -6850,9 +6850,10 @@ const GUIDES = {
     [
      "2026B1",
      [
-      "To call nature the symbol of the spirit is to say that the order we see in nature reflects an order we can find within ourselves. Tagore taught children under trees so that they would learn proportion, the sense that they are part of something not made for their use. Thoreau went to the woods to learn what life really requires. Aurobindo saw spirit working through matter, so that nature’s evolution is the early expression of consciousness.",
-      "Indian ethics adds a moral side. Mahavira extended non-violence to all living things, and so recognised their standing apart from human use. Sacred groves and the Bishnoi tradition show how reverence can protect nature through belief and the community’s disapproval of harm. Deep ecology gives the modern form of the same insight: living systems have value in themselves.",
-      "But the symbol has limits in practice. Reverence for the Ganga has not stopped its pollution, and belief does not bind outside companies. The Uttarakhand High Court’s attempt to make rivers legal persons shows the search for ways to turn reverence into protection. So nature can be the symbol of the spirit only if a society acts on the symbol. A society must join inner regard with law that can be enforced, and with fair access to nature for everyone."
+      "The line comes from Emerson, and it makes a large claim. The order we see in nature, he suggested, reflects an order we can find within ourselves. A person who watches a river find its way around a rock, or a forest grow back after a fire, may recognise something about patience and resilience in their own life. Tagore built a school on this idea. At Santiniketan, children learned under the trees, so that they would grow up seeing the world as a relationship and not as raw material. Thoreau went to live by Walden Pond to learn what life really requires. Aurobindo went further. He saw spirit working through matter, so that nature’s slow evolution is an early form of consciousness.",
+      "Indian traditions have turned this regard into conduct. Mahavira extended non-violence to all living things, and Jain monks still sweep the ground ahead of them to avoid crushing insects. In 1730 at Khejarli in Rajasthan, Amrita Devi and more than three hundred other Bishnois were killed while hugging khejri trees to stop a ruler’s men from felling them. Thousands of sacred groves across India survive because villagers believe that cutting them would bring misfortune. Deep ecology, as the philosopher Arne Naess described it in 1973, gives the modern version of the same insight. Living systems have value in themselves, not only as resources.",
+      "But there is a problem with relying on the symbol. Reverence has not saved the Ganga. The river is worshipped by millions and still receives untreated sewage and industrial waste from the towns along its banks. Belief binds believers, but it has no hold on a factory owner who does not share it. In 2017 the Uttarakhand High Court declared the Ganga and the Yamuna legal persons, in an attempt to turn reverence into rights. The Supreme Court stayed the order within months, partly because nobody could say who would answer for a river’s duties.",
+      "So nature can be the symbol of the spirit only if a society acts on the symbol. Inner regard gives conservation its deepest motive. Enforceable law, working treatment plants and fair access to green spaces give that motive effect. The important distinction is between reverence that changes conduct and reverence that only decorates it."
      ]
     ]
    ],
@@ -6873,28 +6874,28 @@ const GUIDES = {
    "thinkersTitle": "Four thinkers, four tests of nature and spirit",
    "together": [
     "Putting the four together",
-    "Tagore sees nature as a relationship that teaches proportion. Thoreau uses nature to know himself. Mahavira gives moral standing to all life. Aurobindo sees spirit working through matter. Together they explain why nature can be the symbol of the spirit. Nature is the thing a person did not make and cannot improve."
+    "The four thinkers explain how nature can stand for something inside us, and what that regard asks of us. Tagore starts with education. He taught children under the trees at Santiniketan so that they would learn proportion, the sense of belonging to a world not made for their use. Thoreau turns the same relationship inward. He went to live by Walden Pond to find out what life really requires, and found that nature showed him himself. Mahavira gives the moral consequence. If every living thing has standing, then non-violence extends to all of them, not only to people. Aurobindo supplies the deepest link. He saw spirit at work in matter itself, so the order of nature and the order of the mind are one order met twice. So nature can symbolise the spirit because it is the one thing a person did not make and cannot improve. But a symbol protects nothing unless people act on it."
    ],
    "models": [
     [
      "Nature teaches proportion.",
-     "Tagore held that children educated among growing things learn to see the world as a relationship, not as material. Nature is where a person learns to be part of something not made for their use."
+     "Children raised among screens and concrete can grow up believing that everything exists for their use. Tagore saw this danger early. At Santiniketan he held classes under the trees, so that children would learn among things they had not made and could not control. A child who watches a monsoon cloud build, or waits weeks for a seed to sprout, learns proportion: the sense of being one part of something much larger. Tagore thought this sense was the root of both humility and wonder. But time in nature does not automatically produce wisdom. So nature is where a person can learn to belong to something not made for their use."
     ],
     [
      "Nature is a mirror for self-knowledge.",
-     "Thoreau went to Walden to live deliberately and to learn what life really requires. In wildness, he wrote, is the preservation of the world."
+     "Thoreau went to live in a small cabin by Walden Pond in 1845. He wanted to live deliberately, stripped of everything inessential, and to find out what life actually required. The woods worked as a mirror. Away from the town’s routines, he could see which of his needs were real and which were only habits. Many people have a smaller version of the experience on a long walk, when ordinary worries shrink. Thoreau also wrote that in wildness lies the preservation of the world. But his cabin was a short walk from town, and he left after two years. So nature can show a person themselves, but the lesson must be carried back into ordinary life."
     ],
     [
      "All life has standing.",
-     "Mahavira extended ahimsa to every living thing. Deep ecology, as Arne Naess described it in 1973, holds that living systems have value apart from human use."
+     "Most ethics asks how people should treat people. Mahavira asked how people should treat every living thing. Jain non-violence extends to animals, insects and plants, which is why Jain monks sweep the path before them and avoid eating after dark. The practice can look extreme. But its principle is that a life has value in itself, whether or not it is useful to humans. Arne Naess gave the idea a modern form in 1973 under the name deep ecology. A wetland or a species matters, on this view, even if nobody ever profits from it. Yet such principles are hard to apply when human needs conflict. So all life has standing, and that standing must still be weighed in hard cases."
     ],
     [
      "Belief can conserve, within limits.",
-     "Sacred groves and the Bishnoi tradition protect nature through prohibitions that people hold inside themselves. Belief binds believers, but it has no hold on outside companies."
+     "Some of India’s best-protected forests are protected by belief, not by law. Thousands of sacred groves survive because villagers believe that cutting them would anger the deity who lives there. In 1730 at Khejarli, the Bishnoi woman Amrita Devi and more than three hundred others were killed while hugging trees to stop them being felled. Such belief works because people hold the prohibition inside themselves, so no guard is needed. But belief binds only believers. A mining company or a builder from outside the community feels no such restraint. So belief is a powerful conserver within a community, and law must protect what belief cannot reach."
     ],
     [
      "Reverence needs regulation.",
-     "Worship of the Ganga has gone on alongside its pollution. Spiritual regard for nature is most powerful when it is joined to law that can be enforced."
+     "India worships many of its rivers, and pollutes them. The Ganga is sacred to millions, yet towns along its banks have long discharged untreated sewage into it, and factories add chemical waste. Reverence shapes how people bathe and pray at the river. Reverence does not decide how a municipality spends its budget or how a tannery disposes of its waste. Law, money and enforcement shape those choices. The Namami Gange programme, with its sewage treatment plants, shows the kind of action that reverence alone could not produce. But regulation without public regard is weak too. So spiritual regard for nature is most powerful when it is joined to law that can be enforced."
     ]
    ],
    "steps": [
@@ -7023,9 +7024,10 @@ const GUIDES = {
     [
      "2018A1",
      [
-      "Climate change will test India’s farms, water systems, energy supply and cities. Resilience means the ability to absorb shocks and recover from them. Alternative technologies can strengthen resilience where large centralised systems are vulnerable. Rooftop and community solar reduce dependence on a single grid. Millets and crops that resist drought reduce dependence on irrigation. Traditional water systems such as johads and ahar-pyne refill groundwater and survive local failures.",
-      "Schumacher’s intermediate technology gives the tests: affordable, repairable and suited to local control. Gandhi’s charkha showed the value of tools that households can own. Kalam’s insistence on self-reliance adds a strategic side. A technology India cannot build may become unavailable exactly when it is most needed. Deendayal Upadhyaya’s test asks whether a technology serves the whole person and the whole society.",
-      "But alternative does not always mean small. Green hydrogen for heavy industry, and low-carbon power that runs round the clock, need large scale, and the National Green Hydrogen Mission reflects this. Access to money and technology also matters, which is why technology transfer and climate finance remain central in negotiations. So a climate-resilient India needs technologies chosen for fit. They should be spread out where local control and repair matter, large where the task demands it, and always designed so that a failure in one place does not become a failure everywhere."
+      "Climate change will test India’s farms, water systems, power supply and cities. Resilience means the ability to absorb a shock and recover from it. Large centralised systems are efficient in normal times, but they can fail all at once. In 2019 Cyclone Fani wrecked much of the power network around Puri, and parts of the district were without electricity for weeks. A village with rooftop solar panels and batteries would have recovered faster. The point is general. Systems made of many small, independent parts keep working when one part fails.",
+      "Alternative technologies can build this kind of resilience. Rooftop and community solar spread power generation across millions of homes, and the PM Surya Ghar scheme aims to put panels on one crore roofs. Millets and drought-resistant crop varieties need far less water than rice, so a weak monsoon hurts less. Traditional water systems are also climate infrastructure. In Alwar in Rajasthan, villagers rebuilt earthen check dams called johads, and the Arvari river, dry for decades, began to flow again. Schumacher’s tests fit these technologies well, because they are affordable, repairable and under local control. Gandhi’s spinning wheel made the same point about ownership.",
+      "But there is a problem with treating alternative as always meaning small. Steel, cement and fertiliser plants need large, continuous supplies of clean energy that rooftop panels cannot provide. The National Green Hydrogen Mission of 2023 reflects this, with a target of five million tonnes a year by 2030. Kalam’s insistence on self-reliance adds another point. In 1993, under American pressure, Russia withdrew from an agreement to transfer cryogenic rocket engine technology, and ISRO spent two decades building its own. Critical technologies that India cannot make may be denied when they are most needed. Money matters too, which is why climate finance and technology transfer remain central in international negotiations.",
+      "So a climate-resilient India needs technologies chosen for fit. They should be spread out where local control and repair matter, large where the task demands it, and built at home where dependence would be dangerous. Above all, they should be designed so that a failure in one place does not become a failure everywhere."
      ]
     ]
    ],
@@ -7046,28 +7048,28 @@ const GUIDES = {
    "thinkersTitle": "Five thinkers, five tests of appropriate technology",
    "together": [
     "Putting the five together",
-    "Schumacher sets the tests of access, repair and scale. Gandhi shows technology that households can own. Kalam shows self-reliance as resilience. Einstein shows that being able to build something does not settle whether to build it. Deendayal Upadhyaya judges technology by whether it serves the whole person. Together they define appropriate technology by three things: fit, control and the ability to change course."
+    "The five thinkers give a set of tests for choosing technology in a warming world. Schumacher supplies the first three. A good technology is affordable, can be repaired locally and suits the scale of the task. Gandhi adds ownership. He chose the spinning wheel because a household could own it, use it and earn from it. Kalam adds a strategic test. A technology a country cannot build itself may be denied exactly when it is needed most. Einstein, who urged the building of the atomic bomb and later regretted it, adds a limit. Being able to build something does not settle whether it should be built. Deendayal Upadhyaya asks the final question: does the technology serve the whole person and the whole society? So appropriate technology is defined by fit, control and the freedom to change course, not by size."
    ],
    "models": [
     [
      "Technology must fit the task.",
-     "Schumacher’s intermediate technology is accessible, repairable and affordable. Whether a technology is appropriate depends on its fit to the task and to its users, not on its size alone."
+     "A technology is not good or bad because of its size. A technology is good when it fits the task and the people who must use it. Schumacher called for intermediate technology: tools more productive than traditional ones, but cheap enough to buy and simple enough to repair locally. Consider a village water pump. An imported motor pump may be powerful, but if the nearest spare part is two hundred kilometres away, it will soon stand idle. India’s Mark II hand pump, designed in the 1970s so that village mechanics could maintain it, spread across the country for exactly this reason. But some tasks genuinely need advanced tools. So appropriateness depends on fit to the task and its users, not on size alone."
     ],
     [
      "Ownership decides who benefits.",
-     "Gandhi chose the charkha because a household could own it and earn from it. Technology that gathers ownership in a few hands can hand over control instead of ability."
+     "The same technology can empower people or make them dependent, depending on who owns it. Gandhi chose the spinning wheel as a symbol for this reason. A household could own it, run it without anyone’s permission and earn from what it produced. A textile mill produced cloth more efficiently, but the profit and the decisions went to its owners. The same question arises today. A farmer who owns a solar pump controls their own irrigation. A farmer who depends on one company’s seeds, software or machinery may find the terms changing every season. But shared ownership through cooperatives can also work. So ownership decides whether a technology transfers ability or control."
     ],
     [
      "Self-reliance is resilience.",
-     "Kalam’s experience of sanctions showed that a technology you cannot build may be denied when you need it. Critical abilities must be secured at home."
+     "A technology a country cannot build itself may be denied exactly when it is needed. India learned this more than once. After the 1974 nuclear test, many countries restricted technology exports to India. In 1993, under American pressure, Russia withdrew from an agreement to supply cryogenic rocket engine technology. ISRO spent two decades developing its own engine, and flew it successfully in 2014. Kalam drew the lesson that critical abilities must be secured at home. The same logic now applies to solar cells, batteries and chips. But self-reliance does not mean making everything, which would be wasteful. So a country should secure at home the technologies whose denial would cripple it."
     ],
     [
      "Decentralisation reduces single points of failure.",
-     "Rooftop solar, millets and traditional water systems spread risk across many small units. One failure does not disable the whole system."
+     "A centralised system is efficient until its centre fails. When Cyclone Fani hit Odisha in 2019, it wrecked much of the power network around Puri, and parts of the district were without electricity for weeks. A system built from many small units behaves differently. If one rooftop panel fails, the rest keep working. If one crop fails, a region growing several varieties of millet still has food. If one traditional water tank silts up, others still hold water. But many small units are harder to coordinate and maintain. So decentralised technology spreads risk, and one failure does not disable the whole system."
     ],
     [
      "Some tasks need scale.",
-     "Heavy industry needs large and continuous supplies of energy. The National Green Hydrogen Mission of 2023 shows that appropriate technology can be large when the task is large."
+     "Small is not always beautiful. Making steel, cement and fertiliser requires large amounts of energy, day and night, at very high temperatures. Rooftop solar panels cannot supply that. Large plants producing green hydrogen, powered by big solar and wind farms, may be able to. The National Green Hydrogen Mission of 2023 aims for five million tonnes of green hydrogen a year by 2030. Railways, power grids and ports are also large by necessity. But scale brings its own risks, such as conflicts over land and failures concentrated in one place. So appropriate technology can be large when the task is large, and the test is fit, not size."
     ]
    ],
    "steps": [
@@ -7205,18 +7207,20 @@ const GUIDES = {
     [
      "practice",
      [
-      "Growth increases the resources a society has. Development is what people are able to do with those resources: to be healthy, educated, secure and free. Sen defined development as the expansion of real freedoms. His evidence showed that countries with similar incomes reach very different results. Kerala’s high human development at a moderate income is the clearest Indian example.",
-      "Treating growth as the end hides the people it is supposed to serve. Jobless growth can raise output while most workers stay informal and insecure. National averages can hide large differences between states, as the SDG India Index shows. Nussbaum’s threshold and Deendayal Upadhyaya’s antyodaya both ask whether every person, and especially the last person, has gained.",
-      "Growth remains necessary. Without growth, public services cannot be paid for, and stagnation harms the poor first. Development also requires sustainability, since Schumacher showed that growth which eats natural capital is temporary. So the balanced conclusion is that growth should be pursued with its purpose stated at the start: what it is meant to make possible, for whom and for how long."
+      "Growth increases what a society has. Development concerns what people are able to do with it: to be healthy, educated, secure and free to choose a life. The two usually move together, but not always. Sen showed that countries and regions with similar incomes reach very different results. In the early 1990s Kerala had lower income per head than Punjab, yet its people lived longer and far more of them could read. The difference came from public choices about schools, clinics and food. Income was the means. What Kerala did with it decided the result.",
+      "Treating growth as the end hides the people it is supposed to serve. Output can rise quickly while most workers stay in informal jobs without contracts or pensions. National averages can hide large differences between states. The SDG India Index regularly shows Kerala and Himachal Pradesh far ahead of Bihar and Jharkhand on the same goals. Nussbaum’s threshold and Deendayal Upadhyaya’s antyodaya both ask a sharper question than the average does. Has every person, and especially the last person, actually gained?",
+      "But there is a problem with dismissing growth. Growth remains necessary. Without it, public services cannot be paid for, and stagnation harms the poor first, through lost work and shrinking budgets. Development also needs sustainability. Schumacher showed that growth which eats natural capital, such as groundwater or forests, borrows from the future and must eventually stop.",
+      "So the important distinction is between growth as a means and growth as a goal. Growth should be pursued with its purpose stated at the start: what it is meant to make possible, for whom and for how long. A government that reports only the growth rate has answered the wrong question."
      ],
      "Growth is a means, development is the end."
     ],
     [
      "practice",
      [
-      "GDP measures total output. People live individual lives. The two can move apart in three ways. Growth can be concentrated among a few. Growth can create few secure jobs. And public services can fail to turn income into health and education. India’s large informal workforce shows how output can rise while the security of the typical worker barely changes.",
-      "The gap is not inevitable. Public services decide whether growth becomes capability. Kerala built schools and health centres early, and reached high human development before reaching high income. The Multidimensional Poverty Index shows that direct measures of deprivation can fall quickly when basic services expand. Gandhi’s talisman asks the right question of any plan for growth: will it help the poorest person you have seen?",
-      "People grow when their capabilities grow. Tagore warned that a society can meet every target and still treat people as tools of production. So an economy should be measured by more than how fast it grows. The test is whether growth widens the freedoms of the people at the bottom, sustains the natural base, and keeps people as the purpose of the economy instead of its tools."
+      "GDP measures total output. People live individual lives. The two can move apart in three ways. Growth can be concentrated among a few. Growth can create few secure jobs. And public services can fail to turn income into health and education. Imagine a district where a new port and refinery double output in ten years. The plant hires a few thousand skilled workers from outside. The fishing families displaced by the port find casual work at lower wages. The district’s output has doubled, while many of its people are worse off.",
+      "But there is a problem with treating the gap as inevitable. Public services decide whether growth becomes capability. Kerala built schools and health centres early, and reached high human development before reaching high income. Direct measures show that deprivation can fall quickly when basic services expand. India’s Multidimensional Poverty Index, which counts gaps in nutrition, schooling, sanitation, cooking fuel and housing, fell from about 29 per cent of the population in 2013-14 to about 11 per cent in 2022-23. Gandhi’s talisman asks the right question of any growth plan: will it help the poorest person you have seen?",
+      "The index also has limits. The thresholds it uses are low. A family with a gas connection and a bank account has left the index, but may still be one illness away from debt. Tagore warned that a society can meet every target and still treat people as tools of production.",
+      "So an economy should be measured by more than how fast it grows. People grow when their capabilities grow. The test is whether growth widens the freedoms of the people at the bottom, sustains the natural base, and keeps people as the purpose of the economy instead of its tools."
      ],
      "An economy can grow while its people do not."
     ]
@@ -7238,28 +7242,28 @@ const GUIDES = {
    "thinkersTitle": "Six thinkers, six tests of development",
    "together": [
     "Putting the six together",
-    "Sen defines development as freedom. Nussbaum sets a threshold for every person. Gandhi and Deendayal Upadhyaya test policy by the poorest and the last. Schumacher adds ecological sustainability. Tagore insists that people are the point of the economy. Together they show that growth is a means, and its purpose must be stated from the start."
+    "The six thinkers explain why growth is a means and development the end. Sen gives the definition. Development is the expansion of what people are actually able to do and be, so income matters as a tool, not as the goal. Nussbaum adds a threshold that applies to every person, not to the average. Gandhi and Deendayal Upadhyaya give practical tests. Gandhi asks whether a plan will help the poorest person you have seen. Upadhyaya asks whether the last person in the queue has risen. Schumacher adds the ecological condition. Growth that uses up forests, soil and water is a loan from the future, not real development. Tagore keeps the human purpose in view. People are the point of the economy, not its instruments. So growth must be pursued with its purpose stated from the start."
    ],
    "models": [
     [
      "Development is freedom.",
-     "Sen defined development as the expansion of what people can do and be. Growth is a means, and turning it into well-being is a political achievement, not an automatic result."
+     "A rising income does not tell us whether people’s lives are improving. Sen defined development as the expansion of what people can actually do and be: live long, stay healthy, read, work, take part in public life and choose how to live. Income helps, but only as a means. Two families with the same income may have very different freedoms if one lives near a working school and clinic and the other does not. Turning growth into well-being is therefore a political achievement, made through public choices. But income still matters, because it pays for much of what freedom requires. So development should be judged by freedoms gained, not only by income earned."
     ],
     [
      "Thresholds reveal what averages hide.",
-     "Nussbaum requires every person to reach a threshold in the central capabilities. A rising average can hide a fifth of the population living below a decent life."
+     "An average can rise while many people stay behind. Nussbaum argued that justice requires every person to reach a minimum threshold in central capabilities such as health, education, bodily safety and political voice. Consider a state where average years of schooling rise steadily. Within it, the Adivasi girls of one district may still leave school at twelve. The average reports progress. The threshold test reports a failure that the average hid. In the same way, a rising average can hide a fifth of the population living below a decent life. But setting the threshold is itself a political choice. So development should be judged by how many people remain below the floor."
     ],
     [
      "The floor has risen, the goal is further.",
-     "Multidimensional poverty fell from about 29 per cent in 2013-14 to about 11 per cent in 2022-23. The index measures low thresholds, so the distance to a decent life remains."
+     "India has made real progress against the most basic deprivations. The Multidimensional Poverty Index counts gaps in nutrition, schooling, sanitation, cooking fuel, housing and bank accounts. By that measure, the share of Indians who were multidimensionally poor fell from about 29 per cent in 2013-14 to about 11 per cent in 2022-23. The gain is large and should be acknowledged. But the index measures low thresholds. A family with a toilet, a gas connection and a bank account has left the index, yet may still face poor schools, insecure work and debt after an illness. So the floor has risen, and the distance to a decent life remains."
     ],
     [
      "Public provision converts income into capability.",
-     "Kerala reached high human development at a moderate income through early investment in schools and health. Development can come before high growth."
+     "Income becomes well-being only through the services that let people use it. Kerala shows how much those services matter. From the late nineteenth century, the princely states of Travancore and Cochin, and later the state government, invested in schools and health centres. By the 1980s Kerala had literacy and life expectancy close to those of rich countries, while its income per head was no higher than the national average. Public provision did what income alone could not. But Kerala also struggled for decades to create enough jobs at home, and many workers emigrated. So public provision can bring development ahead of growth, though growth is still needed to sustain it."
     ],
     [
      "Growth is necessary but not sufficient.",
-     "Stagnation harms the poor first, and it shrinks the money available for public services. The error is not pursuing growth. The error is treating growth as the end."
+     "Arguments against growth can go too far. Stagnation harms the poor first. When an economy stalls, casual workers lose days of work before salaried staff lose jobs, and government budgets for schools and clinics shrink. India’s faster growth after 1991 paid for programmes, such as the rural employment guarantee and free grain, that earlier budgets could not have funded. Growth therefore matters a great deal. But growth alone does not decide who benefits, or whether the natural base survives. The error is not pursuing growth. The error is treating growth as the end, instead of as the means to wider freedom."
     ]
    ],
    "steps": [
