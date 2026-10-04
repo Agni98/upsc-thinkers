@@ -330,9 +330,16 @@ a sample guide for paragraph 1.1. All 45 guides are written the same way, and al
 are complete.
 
 Guides live in `guides.js`, keyed by theme title with one entry per paragraph (`null` where a
-paragraph has none). A paragraph without a guide falls back to the plain paragraph view. The
-writing follows the site's plain-English rules: normal word order, no semicolons, no sentence
-that opens with a bare "This" or "It", and no sentence over forty words.
+paragraph has none). A paragraph without a guide falls back to the plain paragraph view.
+
+The guides and the model essays follow the site's plain-English rules. Write for an intelligent
+reader with no specialist background, in the register of a good magazine essay. Keep sentences
+short or medium (none over 35 words), in normal word order, with no semicolons or dashes and no
+sentence that opens with a bare "This", "That" or "It". Explain abstract ideas in concrete
+terms, with an example where it helps. Say why one point leads to the next, signpost contrasts
+("At its best…", "But there is a problem…", "The important distinction is…"), and end each
+section on its central point. Keep every qualification: restructure, never just swap in
+synonyms.
 
 **No commentary about the site itself.** Pages carry content only. There are no "how every page
 is built" strips, no notes saying how to read a chart or a card, and no lines such as "the
@@ -368,7 +375,7 @@ All nineteen are written in **one register**. The argument is carried by policy,
 institutions; a thinker appears where the idea does real work and nowhere for the sake of
 appearing; and **no paragraph opens by announcing a philosopher** — a rule the build checks,
 because opening that way is the tell that an essay has stopped being editorial. Each is
-1,500–1,900 words and is built from its theme's five model paragraphs plus the "Open it out
+1,600–2,000 words and is built from its theme's five model paragraphs plus the "Open it out
 with" prompts those paragraphs leave for the writer. Where a story, experiment or model from the
 Human Thought Atlas does real work in an argument, it is used inside the paragraph that needs
 it; no essay is built around one.
