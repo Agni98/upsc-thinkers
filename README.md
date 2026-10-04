@@ -517,6 +517,8 @@ essays.js     19 model essays, two per theme, partitioned across the past questi
 pyq.js        nine years of past essay questions, classified by theme
 portraits.js  pre-resolved portrait URLs (verified to load)
 atlas.js      the Human Thought Atlas: stories, thought experiments and models
+              (an entry may carry a `saga`: a long telling in coloured chapters with
+               verses, echoes and a closing point; Nachiketa is told this way)
 gs4pyq.js     257 GS-IV questions, 2013 to 2026, 81 of them case studies
 gs4concepts.js the GS-IV concept notes, and the 17 case-study themes
 cases.js      the case-study method and a model answer for every case

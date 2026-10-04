@@ -3459,7 +3459,7 @@ const atlasLook = x => ATLAS_FORM_LOOK[x.fg] || ["idea", "compass"];
 const atlasKindHTML = x =>
   `<span class="akind fam-${atlasLook(x)[0]}">${ico(atlasLook(x)[1])}${esc(ATLAS_FORMS[x.fg] || x.form)}</span>`;
 function atlasMinutes(e){
-  const words = [].concat(e.setup, [e.question, e.reveals], e.readings.map(r => r[1]), e.breaks, e.uses)
+  const words = [].concat(e.setup, [e.question, e.reveals], e.readings.map(r => r[1]), e.breaks, e.uses, sagaWords(e.saga))
     .join(" ").split(/\s+/).length;
   return Math.max(2, Math.round(words / 220));
 }
@@ -3582,6 +3582,73 @@ function atlasEssayHTML(id){
           `<button class="pill" data-to="themes|${home(k)}|e:${esc(k)}">${esc(ESSAYS[k].et || ESSAYS[k].t)}</button>`).join("")}</span></div>` : "");
 }
 
+/* ---- A long story told in chapters ----
+   An entry may carry a `saga` in place of its short story: chapters, each with
+   its own colour (k), a mark, a kicker, a title and a lede, built from blocks.
+   p paragraph · h sub-heading · v verse [ref, Devanagari, transliteration,
+   translation] · echo [title, text] · key the chapter's point · quote [original,
+   English, who] · cast · cmp [heads, rows] · map · cards [title, rows] · traits. */
+const sagaWords = saga => !saga ? [] : saga.flatMap(c => [c.sub].concat(c.b.flatMap(b =>
+  b[0] === "v" ? [b[4]] : b[0] === "p" || b[0] === "key" ? [b[1]] : b[0] === "echo" ? [b[2]] : [])));
+const sagaText = s => esc(s).replace(/\*([^*]+)\*/g, "<i>$1</i>");
+const SAGA_TONES = ["dawn", "ember", "night", "gold", "leaf", "sky", "violet", "river"];
+function sagaBlock(b){
+  switch (b[0]) {
+    case "p": return `<p>${sagaText(b[1])}</p>`;
+    case "h": return `<h5 class="sg-sub">${esc(b[1])}</h5>`;
+    case "v": return `
+        <figure class="sg-verse">
+          <blockquote class="sg-sa" lang="sa">${esc(b[2])}</blockquote>
+          <p class="sg-tr" lang="sa-Latn">${esc(b[3])}</p>
+          <p class="sg-en">${sagaText(b[4])}</p>
+          <figcaption>${esc(b[1])}</figcaption>
+        </figure>`;
+    case "echo": return `
+        <aside class="sg-echo"><p class="sg-echo-k">Echo</p><b>${esc(b[1])}</b><p>${sagaText(b[2])}</p></aside>`;
+    case "key": return `<p class="sg-key">${sagaText(b[1])}</p>`;
+    case "quote": return `
+        <blockquote class="sg-quote"><p class="sg-quote-o" lang="sa-Latn">${esc(b[1])}</p>
+          <p class="sg-quote-en">“${esc(b[2])}”</p><cite>${esc(b[3])}</cite></blockquote>`;
+    case "cast": return `
+        <div class="sg-cast">${b[1].map((r, i) => `
+          <div class="sg-person k-${["dawn", "ember", "night"][i % 3]}"><b>${esc(r[0])}</b>
+            <span class="sg-dev" lang="sa">${esc(r[1])}</span><p>${sagaText(r[2])}</p></div>`).join("")}
+        </div>`;
+    case "cmp": return `
+        <div class="sg-cmp">
+          <div class="sg-cmp-h"><b class="k-ember">${esc(b[1][0])}</b><b class="k-leaf">${esc(b[1][1])}</b></div>${b[2].map(r => `
+          <div class="sg-cmp-r"><span>${esc(r[0])}</span><span>${esc(r[1])}</span></div>`).join("")}
+        </div>`;
+    case "map": return `
+        <dl class="sg-map">${b[1].map(r => `<div><dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd></div>`).join("")}</dl>`;
+    case "cards": return `
+        <div class="sg-cards"><p class="sg-cards-t">${esc(b[1])}</p>
+          <ol>${b[2].map((r, i) => `<li style="--step:${i}"><i>${i + 1}</i><b>${esc(r[0])}</b><span>${esc(r[1])}</span></li>`).join("")}</ol>
+        </div>`;
+    case "traits": return `
+        <div class="sg-traits">${b[1].map((r, i) => `
+          <div class="sg-trait k-${SAGA_TONES[i % SAGA_TONES.length]}"><b>${esc(r[0])}</b><p>${esc(r[1])}</p><span>Katha ${esc(r[2])}</span></div>`).join("")}
+        </div>`;
+  }
+  return "";
+}
+function sagaHTML(saga){
+  return `
+      <div class="saga">
+        <nav class="sg-route" aria-label="Chapters of the story">${saga.map((c, i) => `
+          <button class="k-${c.k}" data-jumpto="sg-${i}"><i lang="sa">${esc(c.m)}</i>${esc(c.s)}</button>`).join("")}
+        </nav>${saga.map((c, i) => `${i ? `
+        <div class="sg-break" aria-hidden="true"><span lang="sa">॥ ॐ ॥</span></div>` : ""}
+        <section class="sg-ch k-${c.k}" id="sg-${i}">
+          <header class="sg-head">
+            <span class="sg-mark" lang="sa" aria-hidden="true">${esc(c.m)}</span>
+            <div><p class="sg-kick">${esc(c.kick)}</p><h4 class="sg-t">${esc(c.t)}</h4><p class="sg-lede">${sagaText(c.sub)}</p></div>
+          </header>
+          ${c.b.map(sagaBlock).join("")}
+        </section>`).join("")}
+      </div>`;
+}
+
 /* One entry. Inside a theme (theme given) an entry the theme lists opens beside
    it and anything else opens in the atlas; in the atlas itself everything opens
    in place and the entries can be paged through in order. */
@@ -3638,7 +3705,7 @@ function atlasEntryHTML(x, theme){
       </nav>
 
       <section class="apart ap-story" id="ap-story">${head(0)}
-        ${e.setup.map(p => `<p>${esc(p)}</p>`).join("")}</section>
+        ${e.saga ? sagaHTML(e.saga) : e.setup.map(p => `<p>${esc(p)}</p>`).join("")}</section>
 
       <section class="apart ap-question" id="ap-question">${head(1)}
         <p class="atl-q">${esc(e.question)}</p></section>
