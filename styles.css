@@ -1555,67 +1555,14 @@ button.work.deep:hover .radio{background:var(--accent);box-shadow:inset 0 0 0 2p
 #toast.on{opacity:1;transform:translate(-50%,0)}
 @media print{ .share-btn{display:none} }
 
-/* ---------------- A painting that moves ----------------
-   The frame shows a band of a tall picture and tilts down it and back. */
+/* ---------------- A scene that opens a work ---------------- */
 .wl-scene{margin:4px 0 26px}
 .wl-scene-frame{
-  position:relative;overflow:hidden;border-radius:14px;aspect-ratio:16/10;background:#2b170c;
-  box-shadow:0 12px 32px rgba(45,22,6,.28)}
-.wl-scene-frame::after{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(ellipse at 50% 45%,transparent 52%,rgba(22,9,2,.55))}
-.wl-scene-art{
-  position:absolute;left:0;top:0;width:100%;transform-origin:50% 30%;
-  animation:wlTilt 36s ease-in-out infinite alternate}
-.wl-scene-art img{display:block;width:100%;height:100%;object-fit:cover}
-@keyframes wlTilt{
-  0%,12%{transform:translateY(0) scale(1.04)}
-  88%,100%{transform:translateY(var(--pan)) scale(1.04)}}
-.wl-scene-glow{
-  position:absolute;width:34%;aspect-ratio:1;border-radius:50%;pointer-events:none;mix-blend-mode:screen;
-  background:radial-gradient(circle,rgba(255,220,150,.6),rgba(255,190,100,.2) 42%,transparent 68%);
-  transform:translate(-50%,-50%);animation:wlBreathe 6s ease-in-out infinite}
-@keyframes wlBreathe{
-  0%,100%{opacity:.3;transform:translate(-50%,-50%) scale(.88)}
-  50%{opacity:.85;transform:translate(-50%,-50%) scale(1.08)}}
-.wl-scene-smoke{
-  position:absolute;width:20%;aspect-ratio:1;border-radius:50%;pointer-events:none;opacity:0;filter:blur(7px);
-  background:radial-gradient(circle,rgba(255,238,218,.34),transparent 66%);
-  animation:wlSmoke 9.3s linear infinite}
-@keyframes wlSmoke{
-  0%{opacity:0;transform:translate(-50%,0) scale(.55)}
-  25%{opacity:.9}
-  100%{opacity:0;transform:translate(-25%,-140%) scale(1.7)}}
-.wl-scene-motes i{
-  position:absolute;top:104%;width:3px;height:3px;border-radius:50%;opacity:0;
-  background:rgba(255,228,175,.9);box-shadow:0 0 7px rgba(255,200,120,.85);
-  animation:wlMote 15s linear infinite}
-.wl-scene-motes i:nth-child(1){left:9%;animation-delay:-1s}
-.wl-scene-motes i:nth-child(2){left:21%;animation-delay:-7s;animation-duration:18s}
-.wl-scene-motes i:nth-child(3){left:33%;animation-delay:-12s}
-.wl-scene-motes i:nth-child(4){left:44%;animation-delay:-4s;animation-duration:20s}
-.wl-scene-motes i:nth-child(5){left:52%;animation-delay:-9s;animation-duration:13s}
-.wl-scene-motes i:nth-child(6){left:61%;animation-delay:-2.5s;animation-duration:17s}
-.wl-scene-motes i:nth-child(7){left:70%;animation-delay:-14s}
-.wl-scene-motes i:nth-child(8){left:79%;animation-delay:-6s;animation-duration:19s}
-.wl-scene-motes i:nth-child(9){left:88%;animation-delay:-10s;animation-duration:14s}
-.wl-scene-motes i:nth-child(10){left:95%;animation-delay:-3.5s;animation-duration:16s}
-@keyframes wlMote{
-  0%{top:104%;opacity:0;transform:translateX(0)}
-  12%{opacity:.9}
-  50%{transform:translateX(12px)}
-  85%{opacity:.5}
-  100%{top:-4%;opacity:0;transform:translateX(-6px)}}
+  position:relative;overflow:hidden;border-radius:14px;aspect-ratio:16/10;background:#0b0a22;
+  box-shadow:0 12px 32px rgba(20,14,40,.28)}
+.wl-scene-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .wl-scene figcaption{margin:12px 0 0}
 @media (max-width:700px){ .wl-scene-frame{aspect-ratio:4/3} }
-@media (prefers-reduced-motion:reduce){
-  .wl-scene-art,.wl-scene-glow,.wl-scene-smoke,.wl-scene-motes i{animation:none}
-  .wl-scene-art{transform:translateY(calc(var(--pan) * .5))}
-  .wl-scene-glow{opacity:.45;transform:translate(-50%,-50%)}
-  .wl-scene-smoke,.wl-scene-motes{display:none}}
-@media print{
-  .wl-scene-art,.wl-scene-glow{animation:none}
-  .wl-scene-smoke,.wl-scene-motes,.wl-scene-glow{display:none}}
 
 @media (max-width:700px){
   .worklab > h1{font-size:25px}

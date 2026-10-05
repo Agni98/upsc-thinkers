@@ -1458,21 +1458,12 @@ function wlYear(s){
   return /BCE|\bBC\b/.test(s) ? -n : n;
 }
 
-/* A painting that moves: the frame tilts slowly down the picture and back,
-   a light breathes at the point it settles on, smoke and dust drift up.
-   Still for readers who ask for less motion. */
+/* A work may open with a scene: a picture that carries its own animation
+   (an SVG with its own CSS, still under reduced motion), shown wide. */
 function sceneHTML(w){
-  const sc = w.scene, g = sc.glow || [50, 50];
   return `
       <figure class="wl-scene">
-        <div class="wl-scene-frame" style="--pan:${sc.pan || -44}%">
-          <div class="wl-scene-art" style="aspect-ratio:${sc.w} / ${sc.h}">
-            <img src="${esc(sc.src)}" alt="${esc(sc.alt || w.t)}" decoding="async">
-            <span class="wl-scene-glow" style="left:${g[0]}%;top:${g[1]}%"></span>
-            ${(sc.smoke || []).map((p, i) => `<span class="wl-scene-smoke" style="left:${p[0]}%;top:${p[1]}%;animation-delay:${-i * 3.1}s"></span>`).join("")}
-          </div>
-          <span class="wl-scene-motes" aria-hidden="true">${"<i></i>".repeat(10)}</span>
-        </div>
+        <div class="wl-scene-frame"><img src="${esc(w.scene.src)}" alt="${esc(w.scene.alt || w.t)}" decoding="async"></div>
         ${ w.coverNote ? `<figcaption class="wl-covernote">${esc(w.coverNote)}</figcaption>` : "" }
       </figure>`;
 }
