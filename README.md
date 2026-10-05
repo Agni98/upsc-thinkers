@@ -265,13 +265,6 @@ Each thinker page has: a collapsed **Read full introduction** toggle → **Core 
 **Key Quotations** → **Major Works** → **Where to Use It** (split into Essay themes and
 GS-IV syllabus hooks).
 
-### Hindi
-
-Inside the introduction panel, thinkers with a translation show an **English / हिंदी**
-switch. Translations live in `hindi.js`, keyed by thinker id with the same `p` and
-`essence` fields as `profiles.js`. A thinker with no entry there simply shows no switch,
-so translations can be added a few at a time without breaking anything.
-
 ### Practice questions
 
 Below **Where to Use It** sits a **Practice questions** toggle with two multiple-statement
@@ -471,6 +464,8 @@ sections, illustrated with a CC0 palm-leaf manuscript from Kashmir written in **
 script — chosen because it makes the piece's central point visible: the language is ancient,
 the script is not.
 
+A seventh entry is also a text: **the Katha Upanishad**, with one work, **Nachiketa at the House of Death**. It is told as a saga: 14 coloured chapters with a chapter route at the top, 43 verses in Devanagari with transliteration and English, 13 echoes in later thought, and a portrait of the hero. A work with a `saga` renders those chapters in place of prose. The Thought Atlas entry for Nachiketa keeps its short story and links here.
+
 Content lives in `worklab.js`, keyed by thinker id. Each work's `t` matches its title in
 `works.js` exactly — that is what makes the link work. Adding a sixth thinker is a matter of
 adding an entry; the buttons appear on their own.
@@ -508,10 +503,9 @@ index.html    page shell
 styles.css    all styling (light + dark themes, print rules)
 data.js       ← ALL CONTENT LIVES HERE
 profiles.js   the ~200-word introductions behind each toggle
-hindi.js      Hindi translations of those introductions
 works.js      3–4 major works per thinker
 covers.js     cover / title-page images for those works
-worklab.js    16 works explored in depth, including the Rigveda
+worklab.js    17 works explored in depth, including the Rigveda and the Katha Upanishad
 mcqs.js       two practice questions per thinker
 answers.js    five sub-theme model paragraphs per essay theme (45 in all)
 guides.js     each model paragraph as a six-part revision guide
@@ -519,8 +513,6 @@ essays.js     19 model essays, two per theme, partitioned across the past questi
 pyq.js        nine years of past essay questions, classified by theme
 portraits.js  pre-resolved portrait URLs (verified to load)
 atlas.js      the Human Thought Atlas: stories, thought experiments and models
-              (an entry may carry a `saga`: a long telling in coloured chapters with
-               verses, echoes and a closing point; Nachiketa is told this way)
 gs4pyq.js     257 GS-IV questions, 2013 to 2026, 81 of them case studies
 gs4concepts.js the GS-IV concept notes, and the 17 case-study themes
 cases.js      the case-study method and a model answer for every case

@@ -1442,7 +1442,7 @@ function wlCover(id, work){
 /* Every shelf in order, and every work on them, for paging and the timeline. */
 const wlIds = () => Object.keys(WORKLAB).filter(id => byId[id] || WORKLAB[id].who);
 const wlAll = () => wlIds().flatMap(id => WORKLAB[id].works.map(w => ({ id, w })));
-const wlWords = w => w.p.join(" ").split(/\s+/).length;
+const wlWords = w => (w.saga ? sagaWords(w.saga) : w.p).join(" ").split(/\s+/).length;
 /* A work's date as printed, and as a number for ordering: "c. 4th c. BCE" is
    -350, "c. 1500–1000 BCE" is -1250, "1844" is 1844. */
 function wlWhen(id, w){
@@ -1495,7 +1495,7 @@ function renderWork(id, title){
         </div>
       </div>
       ${ w.coverNote ? `<p class="wl-covernote">${esc(w.coverNote)}</p>` : "" }
-      <div class="wl-prose">${wlBody(w.p)}</div>
+      ${w.saga ? sagaHTML(w.saga) : `<div class="wl-prose">${wlBody(w.p)}</div>`}
       ${wlTimeline(w.timeline)}
       ${ others.length ? `<section class="wl-sibs">
         <b>Also by ${esc(who.name)}</b>
@@ -2928,15 +2928,7 @@ function render(){
 function profileHTML(t){
   const pr = (typeof PROFILES !== "undefined") ? PROFILES[t.id] : null;
   if (!pr) return "";
-  const hi = (typeof HINDI !== "undefined") ? HINDI[t.id] : null;
   const words = (pr.p.join(" ") + " " + pr.essence).trim().split(/\s+/).length;
-
-  const body = (obj, lang, hidden) => `
-    <div class="profile-body" data-lang="${lang}"${hidden ? " hidden" : ""}>
-      ${obj.p.map(x => `<p>${esc(x)}</p>`).join("")}
-      <p class="essence"><b>${lang === "hi" ? "संक्षेप में:" : "In essence:"}</b> ${esc(obj.essence)}</p>
-    </div>`;
-
   return `
   <details class="profile">
     <summary>
@@ -2944,12 +2936,10 @@ function profileHTML(t){
       <span class="ptitle">Read full introduction</span>
       <span class="pmeta">${words} words</span>
     </summary>
-    ${ hi ? `<div class="langbar" role="group" aria-label="Language">
-        <button class="langbtn on" data-lang="en">English</button>
-        <button class="langbtn" data-lang="hi">हिंदी</button>
-      </div>` : "" }
-    ${body(pr, "en", false)}
-    ${hi ? body(hi, "hi", true) : ""}
+    <div class="profile-body">
+      ${pr.p.map(x => `<p>${esc(x)}</p>`).join("")}
+      <p class="essence"><b>In essence:</b> ${esc(pr.essence)}</p>
+    </div>
   </details>`;
 }
 
@@ -3476,7 +3466,7 @@ const atlasLook = x => ATLAS_FORM_LOOK[x.fg] || ["idea", "compass"];
 const atlasKindHTML = x =>
   `<span class="akind fam-${atlasLook(x)[0]}">${ico(atlasLook(x)[1])}${esc(ATLAS_FORMS[x.fg] || x.form)}</span>`;
 function atlasMinutes(e){
-  const words = [].concat(e.setup, [e.question, e.reveals], e.readings.map(r => r[1]), e.breaks, e.uses, sagaWords(e.saga))
+  const words = [].concat(e.setup, [e.question, e.reveals], e.readings.map(r => r[1]), e.breaks, e.uses)
     .join(" ").split(/\s+/).length;
   return Math.max(2, Math.round(words / 220));
 }
@@ -3600,7 +3590,7 @@ function atlasEssayHTML(id){
 }
 
 /* ---- A long story told in chapters ----
-   An entry may carry a `saga` in place of its short story: chapters, each with
+   A work in Works in Depth may carry a `saga` in place of its prose: chapters, each with
    its own colour (k), a mark, a kicker, a title and a lede, built from blocks.
    p paragraph · h sub-heading · v verse [ref, Devanagari, transliteration,
    translation] · echo [title, text] · key the chapter's point · quote [original,
@@ -3722,7 +3712,8 @@ function atlasEntryHTML(x, theme){
       </nav>
 
       <section class="apart ap-story" id="ap-story">${head(0)}
-        ${e.saga ? sagaHTML(e.saga) : e.setup.map(p => `<p>${esc(p)}</p>`).join("")}</section>
+        ${e.setup.map(p => `<p>${esc(p)}</p>`).join("")}${ e.work ? `
+        <button class="pill atl-work" data-work="${esc(e.work[0])}:${esc(e.work[1])}">Read the full story in Works in Depth ${ico("arrow")}</button>` : "" }</section>
 
       <section class="apart ap-question" id="ap-question">${head(1)}
         <p class="atl-q">${esc(e.question)}</p></section>
@@ -4128,16 +4119,6 @@ document.addEventListener("click", e => {
       });
       q.querySelector(".why").hidden = false;
     }
-    e.preventDefault();
-    return;
-  }
-
-  const lang = e.target.closest(".langbtn");
-  if (lang) {
-    const box = lang.closest(".profile");
-    box.querySelectorAll(".langbtn").forEach(b => b.classList.toggle("on", b === lang));
-    box.querySelectorAll(".profile-body").forEach(b =>
-      b.hidden = (b.dataset.lang !== lang.dataset.lang));
     e.preventDefault();
     return;
   }
