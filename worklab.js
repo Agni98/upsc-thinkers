@@ -750,6 +750,9 @@ const WORKLAB = {
      fate:"Carried by recitation, then read through Shankara, Vivekananda and Maugham",
      gist:"A boy sent to Death in anger refuses every bribe and learns what does not die.",
      cover:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Myths_of_the_Hindus_%26_Buddhists_-_Yama_and_Nachiketas.jpg/500px-Myths_of_the_Hindus_%26_Buddhists_-_Yama_and_Nachiketas.jpg",
+     scene:{src:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Myths_of_the_Hindus_%26_Buddhists_-_Yama_and_Nachiketas.jpg/960px-Myths_of_the_Hindus_%26_Buddhists_-_Yama_and_Nachiketas.jpg",
+            w:1988, h:2970, pan:-44, glow:[71, 54], smoke:[[58, 16], [66, 11], [51, 20]],
+            alt:"Nandalal Bose’s painting Yama and Nachiketas: a crowned figure with a staff leans from a palace window above a haloed figure who raises one hand."},
      coverNote:"Yama and Nachiketas, painted by Nandalal Bose for Sister Nivedita and Ananda Coomaraswamy’s Myths of the Hindus and Buddhists (1913). Bose later illuminated the original manuscript of the Constitution of India.",
      saga:[
       {m:"ॐ", k:"dawn", s:"Prologue",

@@ -288,6 +288,7 @@ const ICONS = {
   eye:      '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
   alert:    '<path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.2h.01"/>',
   search:   '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+  share:    '<path d="M12 15V3.5"/><path d="m7.5 8 4.5-4.5L16.5 8"/><path d="M5 12.5V19a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6.5"/>',
   arrow:    '<path d="M5 12h14M13 6l6 6-6 6"/>',
   chev:     '<path d="m9 6 6 6-6 6"/>'
 };
@@ -1457,6 +1458,25 @@ function wlYear(s){
   return /BCE|\bBC\b/.test(s) ? -n : n;
 }
 
+/* A painting that moves: the frame tilts slowly down the picture and back,
+   a light breathes at the point it settles on, smoke and dust drift up.
+   Still for readers who ask for less motion. */
+function sceneHTML(w){
+  const sc = w.scene, g = sc.glow || [50, 50];
+  return `
+      <figure class="wl-scene">
+        <div class="wl-scene-frame" style="--pan:${sc.pan || -44}%">
+          <div class="wl-scene-art" style="aspect-ratio:${sc.w} / ${sc.h}">
+            <img src="${esc(sc.src)}" alt="${esc(sc.alt || w.t)}" decoding="async">
+            <span class="wl-scene-glow" style="left:${g[0]}%;top:${g[1]}%"></span>
+            ${(sc.smoke || []).map((p, i) => `<span class="wl-scene-smoke" style="left:${p[0]}%;top:${p[1]}%;animation-delay:${-i * 3.1}s"></span>`).join("")}
+          </div>
+          <span class="wl-scene-motes" aria-hidden="true">${"<i></i>".repeat(10)}</span>
+        </div>
+        ${ w.coverNote ? `<figcaption class="wl-covernote">${esc(w.coverNote)}</figcaption>` : "" }
+      </figure>`;
+}
+
 /* Level 3 — one work. */
 function renderWork(id, title){
   const e = WORKLAB[id];
@@ -1476,10 +1496,11 @@ function renderWork(id, title){
       <button class="rd-up" data-work="${esc(id)}:">${esc(who.name)}</button>
       ${e.works.length > 1 ? `<span class="rd-sep" aria-hidden="true">/</span>
       <span>Work ${e.works.indexOf(w) + 1} of ${e.works.length}</span>` : ""}
+      ${shareBtn(w.t, pageHash(state))}
     </div>
     <article class="worklab work-one">
       <div class="wl-head">
-        ${c.html}
+        ${w.scene ? "" : c.html}
         <div>
           <div class="essay-kicker">${esc(who.name)} &middot; ${esc(who.tradition)}</div>
           <h1>${esc(w.t)}</h1>
@@ -1494,7 +1515,7 @@ function renderWork(id, title){
           </div>
         </div>
       </div>
-      ${ w.coverNote ? `<p class="wl-covernote">${esc(w.coverNote)}</p>` : "" }
+      ${ w.scene ? sceneHTML(w) : w.coverNote ? `<p class="wl-covernote">${esc(w.coverNote)}</p>` : "" }
       ${w.saga ? sagaHTML(w.saga) : `<div class="wl-prose">${wlBody(w.p)}</div>`}
       ${wlTimeline(w.timeline)}
       ${ others.length ? `<section class="wl-sibs">
@@ -1521,6 +1542,7 @@ function renderWorkThinker(id){
       <button class="rd-up" data-view="worklab">Works in Depth</button>
       <span class="rd-sep" aria-hidden="true">/</span>
       <span>Shelf ${at + 1} of ${ids.length}</span>
+      ${shareBtn(who.name, pageHash(state))}
     </div>
     <article class="worklab">
       <div class="essay-kicker">${esc(who.name)} &middot; ${esc(who.years)} &middot; ${esc(who.tradition)}</div>
@@ -1683,6 +1705,7 @@ function renderEssay(topic, mode){
       <button class="rd-up" data-view="essays">Model Essays</button>
       <span class="rd-sep" aria-hidden="true">/</span>
       <span>Essay ${at + 1} of ${order.length}</span>
+      ${shareBtn(ESSAYS[topic] ? (ESSAYS[topic].et || ESSAYS[topic].t || topic) : topic, pageHash(state))}
     </div>`}
     <article class="essay-doc">
       <div class="essay-kicker">${esc(themeOfEssay(topic) || topic)}</div>
@@ -3021,6 +3044,7 @@ function openSheet(id){
   sheet.innerHTML = `
     <header class="sheet-head">
       <button class="close-btn" id="closeBtn" aria-label="Close">&times;</button>
+      ${shareBtn(t.name, "#" + t.id, true)}
       ${portraitHTML(t)}
       <div class="sheet-title">
         <h2>${esc(t.name)}</h2>
@@ -3100,7 +3124,114 @@ const NAV_KEYS = ["view", "page", "sel", "nav", "fold", "mode", "q", "tag", "amo
 let navRestoring = false;
 const navSnap = () => Object.fromEntries(NAV_KEYS.map(k => [k, state[k]]));
 const navId = s => [s.view, s.page, s.sel, s.mode].join("|");
-const navUrl = () => location.pathname + location.search;
+const baseUrl = () => location.pathname + location.search;
+const navUrl = () => baseUrl() + pageHash(state);
+
+/* ================= LINKS =================
+   Every page has an address that can be copied or shared, and opening it
+   lands on the same page: #/work/katha/nachiketa-at-the-house-of-death,
+   #/atlas/nachiketa, #/essay/<title>, #/themes?page=3. A thinker keeps #id.
+   Only what a page uses goes into its address, and the sidebar follows the page. */
+const SITE_URL = "https://thinkers.okayupsc.com/";
+const NAV_DEFAULT = { page:0, sel:null, mode:"thinker", q:"", tag:"", amode:"section", qmode:"school", qshort:false, fold:false };
+const PAGE_VIEWS = ["home", "essays", "pyq", "gs4pyq", "atlas", "worklab", "quotes", "cases", "syllabus", "themes", "search", "essay", "work"];
+const MAP_VIEWS = ["syllabus", "themes", "atlas"];
+const NAV_USES = {
+  page:   v => MAP_VIEWS.includes(v),
+  sel:    v => MAP_VIEWS.includes(v),
+  mode:   v => v.startsWith("essay:") || v === "themes",
+  q:      v => v === "search",
+  tag:    v => !PAGE_VIEWS.includes(v.split(":")[0]),
+  amode:  v => v === "atlas",
+  qmode:  v => v === "quotes",
+  qshort: v => v === "quotes",
+  fold:   v => v === "syllabus" || v === "themes"
+};
+const navOf = v => MAP_VIEWS.includes(v) ? v : "views";
+const slugOf = x => String(x).toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "")
+  .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+
+function pageHash(s){
+  const bits = s.view.split(":"), rest = bits.slice(2).join(":");
+  let path = bits[0], sel = s.sel;
+  if (bits[0] === "work") path += "/" + bits[1] + (rest ? "/" + slugOf(rest) : "");
+  else if (bits[0] === "essay") path += "/" + slugOf(bits.slice(1).join(":"));
+  else if (bits[0] === "atlas" && sel && /^[a-z0-9-]+$/.test(sel)) { path += "/" + sel; sel = null; }
+  const q = [];
+  Object.keys(NAV_USES).forEach(k => {
+    const val = k === "sel" ? sel : s[k];
+    if (NAV_USES[k](s.view) && val !== NAV_DEFAULT[k] && val != null) q.push(k + "=" + encodeURIComponent(val));
+  });
+  if (path === "home" && !q.length) return "";
+  return "#/" + path + (q.length ? "?" + q.join("&") : "");
+}
+
+/* An address back into a page, or null if it is not a page address. */
+function routeFromHash(h){
+  if (!h || h.slice(0, 2) !== "#/") return null;
+  const [path, query] = h.slice(2).split("?");
+  const seg = path.split("/").map(x => { try { return decodeURIComponent(x); } catch (e) { return x; } });
+  const r = Object.assign({}, NAV_DEFAULT);
+  let v = seg[0] || "home";
+  if (!/^[a-z0-9-]+$/.test(v)) return null;
+  if (v === "work") {
+    const e = (typeof WORKLAB !== "undefined") ? WORKLAB[seg[1]] : null;
+    const w = e && seg[2] ? e.works.find(x => slugOf(x.t) === seg[2]) : null;
+    v = e ? "work:" + seg[1] + (w ? ":" + w.t : "") : "worklab";
+  } else if (v === "essay") {
+    const key = (typeof ESSAYS !== "undefined") ? Object.keys(ESSAYS).find(k => slugOf(k) === seg[1]) : null;
+    v = key ? "essay:" + key : "essays";
+  } else if (v === "atlas" && seg[1]) r.sel = seg[1];
+  r.view = v;
+  r.nav = navOf(v);
+  (query || "").split("&").filter(Boolean).forEach(kv => {
+    const i = kv.indexOf("="), k = kv.slice(0, i), raw = kv.slice(i + 1);
+    let val; try { val = decodeURIComponent(raw); } catch (e) { val = raw; }
+    if (k === "page") r.page = +val || 0;
+    else if (k === "sel") r.sel = val;
+    else if (k in NAV_DEFAULT) r[k] = typeof NAV_DEFAULT[k] === "boolean" ? val === "true" : val;
+  });
+  return r;
+}
+
+/* The address bar changed by hand: a thinker opens as a sheet, a page renders. */
+function applyHash(){
+  const id = location.hash.slice(1);
+  if (byId[id]) { openSheet(id); return; }
+  const r = routeFromHash(location.hash);
+  if (!r) return;
+  Object.assign(state, r);
+  closeSheet();
+  render();
+}
+
+/* Share: the phone's share sheet where there is one, otherwise the link is
+   copied. The link always names the public site, so it works from the app too. */
+const shareBtn = (title, hash, iconOnly) =>
+  `<button class="share-btn${iconOnly ? " share-ico" : ""}" data-share="${esc(title)}" data-hash="${esc(hash)}" aria-label="Share" title="Share">${ico("share")}${iconOnly ? "" : "<span>Share</span>"}</button>`;
+
+function copyText(text){
+  if (navigator.clipboard && window.isSecureContext)
+    return navigator.clipboard.writeText(text).catch(() => copyOld(text));
+  return copyOld(text);
+}
+function copyOld(text){
+  return new Promise((ok, no) => {
+    const t = document.createElement("textarea");
+    t.value = text; t.setAttribute("readonly", ""); t.style.cssText = "position:fixed;top:-1000px;opacity:0";
+    document.body.appendChild(t); t.select();
+    let done = false; try { done = document.execCommand("copy"); } catch (e) {}
+    t.remove(); done ? ok() : no();
+  });
+}
+function toast(msg){
+  let t = document.getElementById("toast");
+  if (!t) { t = document.createElement("div"); t.id = "toast"; t.setAttribute("role", "status"); document.body.appendChild(t); }
+  t.textContent = msg;
+  t.classList.add("on");
+  clearTimeout(toast.h);
+  toast.h = setTimeout(() => t.classList.remove("on"), 2200);
+}
 
 function navRecord(){
   if (navRestoring) return;
@@ -3108,7 +3239,7 @@ function navRecord(){
   if (!h || !h.nav) { history.replaceState({ nav:snap, idx:0 }, "", navUrl()); return; }
   // leaving a thinker's sheet for a page: the page takes the sheet's place
   if (h.sheet) { history.replaceState({ nav:snap, idx:h.idx }, "", navUrl()); return; }
-  if (navId(h.nav) === navId(snap)) { history.replaceState(Object.assign({}, h, { nav:snap }), ""); return; }
+  if (navId(h.nav) === navId(snap)) { history.replaceState(Object.assign({}, h, { nav:snap }), "", navUrl()); return; }
   history.replaceState(Object.assign({}, h, { y:window.scrollY }), "");
   history.pushState({ nav:snap, idx:(h.idx || 0) + 1 }, "", navUrl());
 }
@@ -3117,12 +3248,12 @@ function navSheet(id){
   if (navRestoring) return;
   const h = history.state && history.state.nav ? history.state : { nav:navSnap(), idx:0 };
   history.replaceState(h.sheet ? h : Object.assign({}, h, { y:window.scrollY }), "");
-  history.pushState({ nav:navSnap(), idx:(h.idx || 0) + 1, sheet:id }, "", navUrl() + "#" + id);
+  history.pushState({ nav:navSnap(), idx:(h.idx || 0) + 1, sheet:id }, "", baseUrl() + "#" + id);
 }
 
 window.addEventListener("popstate", e => {
   const h = e.state;
-  if (!h || !h.nav) return;
+  if (!h || !h.nav) { applyHash(); return; }
   navRestoring = true;
   const move = navId(h.nav) !== navId(navSnap());
   Object.assign(state, h.nav);
@@ -3777,6 +3908,7 @@ function renderAtlas(){
           ${atlasKindHTML(x)}
           <span class="atl-time">Entry ${ATLAS.indexOf(x) + 1} of ${ATLAS.length} &middot; ${plural(atlasMinutes(e), "minute", "minutes")} to read</span>
           ${x.th.map(k => `<span class="atl-theme">${esc(ATLAS_THEMES[k])}</span>`).join("")}
+          ${shareBtn(x.t, pageHash(state))}
         </div>
       </div>
       <div class="hero-aside">${aside.map(a =>
@@ -3919,6 +4051,14 @@ document.addEventListener("click", e => {
     const h = open.dataset.idea;
     const el = h ? [...document.querySelectorAll("#sheet .idea")].find(x => x.dataset.h === h) : null;
     if (el) { el.classList.add("idea-on"); requestAnimationFrame(() => el.scrollIntoView({ block:"center" })); }
+    return;
+  }
+
+  const sh = e.target.closest("[data-share]");
+  if (sh) {
+    const url = SITE_URL + sh.dataset.hash, title = sh.dataset.share;
+    if (navigator.share) navigator.share({ title, url }).catch(() => {});
+    else copyText(url).then(() => toast("Link copied"), () => toast(url));
     return;
   }
 
@@ -4300,9 +4440,12 @@ document.addEventListener("input", e => {
     }
   }catch(e){}
 
-  // a reload returns to the page the reader was on, and to its open sheet
+  // a reload returns to the page the reader was on, and to its open sheet;
+  // a shared link opens its page. Read the address before the first render.
+  const startHash = location.hash;
   const was = history.state && history.state.nav ? history.state : null;
   if (was) Object.assign(state, was.nav);
+  else { const r = routeFromHash(startHash); if (r) Object.assign(state, r); }
 
   loadCache();
   renderTopNav();
@@ -4314,7 +4457,7 @@ document.addEventListener("input", e => {
     openSheet(was.sheet);
     navRestoring = false;
   } else {
-    const hash = location.hash.slice(1);
-    if (hash && byId[hash]) openSheet(hash);
+    const id = startHash.slice(1);
+    if (id && byId[id]) openSheet(id);
   }
 })();

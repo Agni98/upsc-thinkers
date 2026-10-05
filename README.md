@@ -464,7 +464,7 @@ sections, illustrated with a CC0 palm-leaf manuscript from Kashmir written in **
 script — chosen because it makes the piece's central point visible: the language is ancient,
 the script is not.
 
-A seventh entry is also a text: **the Katha Upanishad**, with one work, **Nachiketa at the House of Death**. It is told as a saga: 14 coloured chapters with a chapter route at the top, 43 verses in Devanagari with transliteration and English, 13 echoes in later thought, and a portrait of the hero. A work with a `saga` renders those chapters in place of prose. The Thought Atlas entry for Nachiketa keeps its short story and links here.
+A seventh entry is also a text: **the Katha Upanishad**, with one work, **Nachiketa at the House of Death**. It is told as a saga: 14 coloured chapters with a chapter route at the top, 43 verses in Devanagari with transliteration and English, 13 echoes in later thought, and a portrait of the hero. A work with a `saga` renders those chapters in place of prose. The Thought Atlas entry for Nachiketa keeps its short story and links here. A work with a `scene` opens with the painting in motion: the frame tilts slowly down it and back, a light breathes on the halo, smoke and dust drift up, and all of it stands still for readers who ask for reduced motion.
 
 Content lives in `worklab.js`, keyed by thinker id. Each work's `t` matches its title in
 `works.js` exactly — that is what makes the link work. Adding a sixth thinker is a matter of
@@ -494,7 +494,11 @@ A thinker with no entry there simply shows no toggle, so you can add or rewrite 
 - `Esc` — close a thinker page
 - Sun/moon button — light / dark mode, remembered between visits
 - `Ctrl+P` on an open thinker page — prints just that page, clean, for revision notes
-- The URL carries a `#thinker-id`, so you can bookmark or share a specific entry
+- Every page has its own address, so any page can be bookmarked or shared: a thinker is
+  `#socrates`, other pages `#/work/katha/nachiketa-at-the-house-of-death`, `#/atlas/nachiketa`,
+  `#/essay/<title>`, `#/themes?page=2`. The **Share** button on thinkers, essays, Atlas entries
+  and Works in Depth opens the phone's share sheet, or copies the link where there is none
+  (as in the app); the link always names thinkers.okayupsc.com
 
 ## Files
 
