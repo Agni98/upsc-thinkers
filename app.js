@@ -4057,7 +4057,8 @@ document.addEventListener("click", e => {
   const sh = e.target.closest("[data-share]");
   if (sh) {
     const url = SITE_URL + sh.dataset.hash, title = sh.dataset.share;
-    if (navigator.share) navigator.share({ title, url }).catch(() => {});
+    if (window.AndroidShare) window.AndroidShare.share(title, url);   // the app: Android's own share sheet
+    else if (navigator.share) navigator.share({ title, url }).catch(() => {});
     else copyText(url).then(() => toast("Link copied"), () => toast(url));
     return;
   }
