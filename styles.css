@@ -554,6 +554,157 @@ html[data-theme="dark"] .hero-art,
 html[data-theme="dark"] .pcard-art{mix-blend-mode:normal;opacity:.16;filter:grayscale(1)}
 html[data-theme="dark"] .cont-art{filter:grayscale(.4) brightness(.85)}
 
+/* ---------------- The front page, quietly ----------------
+   Fewer boxes and more air: a display serif for names and headings, hairline
+   rules beside each heading, links set as underlined words with an arrow, and
+   lists in place of cards. The statue stands larger in the hero and fades into
+   the page. In the dark theme the page reads as ink and gold. */
+.hero-home,.home{--display:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+.hero.hero-home{
+  --art:min(44%,560px);
+  grid-template-columns:minmax(0,1fr) 230px;padding:58px 30px 40px;
+  background:none;border-bottom:0}
+.hero-home .hero-body{max-width:780px}
+.hero-home .hero-art{
+  width:calc(var(--art) + 120px);background-position:60% 18%;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 45%),linear-gradient(0deg,transparent 0,#000 30%);
+          mask-image:linear-gradient(90deg,transparent 0,#000 45%),linear-gradient(0deg,transparent 0,#000 30%);
+  -webkit-mask-composite:source-in;mask-composite:intersect;opacity:.55}
+html[data-theme="dark"] .hero-home .hero-art{opacity:.62;filter:grayscale(.55) sepia(.35) brightness(.5) contrast(1.15)}
+.hero-home .hero-t{font:600 clamp(40px,5.4vw,66px)/1.02 var(--display);letter-spacing:-.4px;color:var(--head)}
+.hero-home .hero-t span{color:var(--saffron-ink)}
+.hero-home .hero-s{margin:12px 0 30px;font:400 clamp(17px,1.7vw,21px)/1.45 var(--serif);color:var(--ink-2)}
+.hero-home .hsearch{max-width:700px;padding:4px 16px;background:var(--panel);border-color:var(--line);border-radius:8px;box-shadow:none}
+html[data-theme="dark"] .hero-home .hsearch{background:rgba(25,24,23,.72)}
+.hero-home .hsearch:focus-within{border-color:var(--saffron);box-shadow:0 0 0 3px var(--saffron-soft)}
+.hero-home .hsearch input{font:16px/1.4 var(--serif);padding:12px 0}
+.hs-kbd{
+  flex:0 0 auto;padding:3px 7px;border:1px solid var(--line);border-radius:5px;
+  font:500 11.5px/1.3 var(--sans);color:var(--ink-3);background:none;white-space:nowrap}
+@media (hover:none){ .hs-kbd{display:none} }
+.hero-home .hero-pop{gap:6px 26px;margin-top:18px}
+.hero-home .pop{
+  padding:4px 0;border:0;border-bottom:1px solid transparent;border-radius:0;background:none;
+  font:400 15.5px/1.3 var(--serif);color:var(--ink-2)}
+.hero-home .pop:hover{background:none;border-bottom-color:var(--saffron);color:var(--saffron-ink)}
+.hero-home .hero-q{margin-top:4px;text-align:left}
+.hero-home .hero-q q{font:italic 500 19px/1.4 var(--display);color:var(--head)}
+.hero-home .hero-q span{font:italic 400 13.5px/1.4 var(--serif);color:var(--ink-3)}
+.hero-home .hero-q q,.hero-home .hero-q span{text-shadow:0 0 18px var(--bg),0 0 6px var(--bg),0 0 2px var(--bg)}
+
+.home{max-width:1240px}
+.home .hblock{margin-top:42px}
+.home .hb-head{align-items:center;gap:20px;margin-bottom:18px}
+.home .hb-head > :first-child{flex:1;min-width:0;display:flex;align-items:center;gap:20px}
+.home .hb-head > :first-child::after{content:"";flex:1;height:1px;background:var(--line)}
+.home .hb-t{border:0;padding:0;font:600 clamp(24px,2.3vw,29px)/1.15 var(--display);letter-spacing:-.1px;white-space:nowrap}
+.home .hb-link{font:400 14px/1.3 var(--serif);color:var(--ink-2)}
+.home .hb-link:hover{color:var(--saffron-ink)}
+.home .hb-link .ic{width:15px;height:15px}
+
+/* a square tile carries each section's mark in gold */
+.cont-tile,.home .pcard-ico{
+  flex:0 0 auto;display:grid;place-items:center;width:76px;height:72px;border-radius:4px;
+  background:var(--saffron-soft);border:1px solid var(--line);color:var(--saffron-ink)}
+.cont-tile .ic,.home .pcard-ico .ic{width:30px;height:30px;stroke-width:1.4}
+.home .cont{
+  display:flex;align-items:center;gap:22px;width:100%;padding:0;text-align:left;
+  background:none;border:0;border-radius:0;box-shadow:none;cursor:pointer}
+.home .cont-body{display:flex;flex-direction:column;min-width:0;flex:1}
+.cont-name{font:600 23px/1.2 var(--display);color:var(--head)}
+.home .cont:hover .cont-name{color:var(--saffron-ink)}
+.home .cont-w{margin-top:4px;font:400 15px/1.4 var(--serif);color:var(--ink-2)}
+.cont-prog{display:flex;align-items:center;gap:16px;max-width:460px;margin-top:12px}
+.home .cont-bar{flex:1;height:5px;max-width:none;margin:0;background:var(--line)}
+.cont-prog b{font:400 13px/1 var(--serif);color:var(--ink-2)}
+
+/* links as words: underlined, with an arrow that moves on hover */
+.hlinks{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:20px}
+.hlinks button{
+  display:inline-flex;align-items:center;gap:14px;padding:0 0 7px;border:0;
+  border-bottom:1px solid var(--line);background:none;cursor:pointer;
+  font:400 16px/1.3 var(--serif);color:var(--head);transition:border-color .15s,color .15s}
+.hlinks button .ic{width:15px;height:15px;color:var(--saffron-ink);transition:transform .15s}
+.hlinks button:hover{border-bottom-color:var(--saffron);color:var(--saffron-ink)}
+.hlinks button:hover .ic{transform:translateX(3px)}
+.hlinks button:focus-visible,.home .cont:focus-visible,.arow:focus-visible{outline:2px solid var(--saffron);outline-offset:3px}
+
+.home .pcards{grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
+.home .pcard{
+  flex-direction:row;align-items:flex-start;gap:20px;padding:4px 30px 4px 0;
+  background:none;border:0;border-radius:0;box-shadow:none;overflow:visible}
+.home .pcard + .pcard{padding:4px 0 4px 30px;border-left:1px solid var(--line)}
+.home .pcard-main{min-width:0}
+.home .pcard h4{font:600 25px/1.2 var(--display);color:var(--head)}
+.home .pcard-main p{margin-top:5px;font:400 15.5px/1.45 var(--serif);color:var(--ink-2)}
+
+.home .tcards{grid-template-columns:repeat(6,minmax(0,1fr));gap:22px 16px}
+@media (max-width:1320px){ .home .tcards{grid-template-columns:repeat(3,minmax(0,1fr))} }
+.home .tcard{
+  flex-direction:row;align-items:flex-start;gap:14px;padding:0;
+  background:none;border:0;border-radius:0;box-shadow:none}
+.home .tcard:hover{box-shadow:none;transform:none}
+.home .tcard{gap:12px}
+.home .tcard .portrait{flex:0 0 auto;width:74px;height:86px;border-radius:3px}
+.home .tcard-id{display:flex;flex-direction:column;min-width:0;padding-top:2px}
+.home .tcard-id b{font:600 18.5px/1.2 var(--display);color:var(--head)}
+.home .tcard:hover .tcard-id b{color:var(--saffron-ink)}
+.home .tcard-id > span{margin-top:3px;font:400 13.5px/1.35 var(--serif);color:var(--ink-3)}
+.home .tcard-id small{margin-top:12px;font:400 12.5px/1.45 var(--serif);color:var(--ink-2)}
+
+/* the themes as a list in two columns, read down each column */
+.home .topics{
+  grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,auto);grid-auto-flow:column;
+  gap:0 0}
+.home .topic{
+  display:grid;grid-template-columns:30px minmax(0,1fr) auto 16px;align-items:center;gap:14px;
+  padding:15px 0;margin:0 32px 0 0;background:none;border:0;border-bottom:1px solid var(--line);
+  border-radius:0;box-shadow:none}
+.home .topic:nth-child(n+4){margin:0 0 0 32px}
+.home .topics{background:linear-gradient(var(--line),var(--line)) 50% 0/1px 100% no-repeat}
+.home .topic:hover{transform:none}
+.home .topic-ico{width:auto;height:auto;border-radius:0;background:none;color:var(--saffron-ink)}
+.home .topic-ico .ic{width:22px;height:22px;stroke-width:1.4}
+.home .topic b{font:500 19px/1.25 var(--display);color:var(--head)}
+.home .topic small{font:400 13.5px/1.3 var(--serif);color:var(--ink-3);white-space:nowrap}
+.home .topic > .ic{width:15px;height:15px;color:var(--ink-3);transition:transform .15s,color .15s}
+.home .topic:hover b,.home .topic:hover > .ic{color:var(--saffron-ink)}
+.home .topic:hover > .ic{transform:translateX(3px)}
+
+/* atlas entries: kind, name and question, under a hairline */
+.arows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 32px}
+.arow{
+  display:flex;flex-direction:column;gap:5px;padding:14px 0 16px;text-align:left;
+  background:none;border:0;border-top:1px solid var(--line);cursor:pointer}
+.arow-k{font:600 10.5px/1.3 var(--sans);letter-spacing:1px;text-transform:uppercase;color:var(--fam)}
+.arow b{font:600 19px/1.25 var(--display);color:var(--head)}
+.arow-q{font:italic 400 14px/1.5 var(--serif);color:var(--ink-3)}
+.arow:hover b{color:var(--saffron-ink)}
+
+@media (max-width:900px){
+  .hero.hero-home{grid-template-columns:minmax(0,1fr);padding-top:40px}
+  .hero-home .hero-q{max-width:420px}
+  .home .pcards{grid-template-columns:minmax(0,1fr);gap:26px}
+  .home .pcard,.home .pcard + .pcard{padding:0;border-left:0}
+  .home .topics{grid-template-columns:minmax(0,1fr);grid-template-rows:none;grid-auto-flow:row;background:none}
+  .home .topic,.home .topic:nth-child(n+4){margin:0}
+  .arows{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:620px){
+  .hero-home .hero-art{opacity:.3}
+  html[data-theme="dark"] .hero-home .hero-art{opacity:.4}
+  .cont-tile,.home .pcard-ico{width:60px;height:58px}
+  .cont-tile .ic,.home .pcard-ico .ic{width:24px;height:24px}
+  .home .cont,.home .pcard{gap:16px}
+  .home .tcards{grid-template-columns:minmax(0,1fr)}
+  .home .topic{grid-template-columns:26px minmax(0,1fr) 16px}
+  .home .topic small{grid-column:2;grid-row:2;margin-top:-8px}
+  .home .topic > .ic{grid-column:3;grid-row:1 / 3}
+  .arows{grid-template-columns:minmax(0,1fr)}
+  .hb-atlas .arow:nth-child(n+4){display:none}
+  .home .hb-t{white-space:normal}
+}
+
 /* ---------------- Site search ---------------- */
 .srch{max-width:1100px}
 .srch .hsearch{max-width:none}

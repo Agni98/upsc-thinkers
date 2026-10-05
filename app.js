@@ -333,23 +333,21 @@ function heroHTML(){
   const cs = SYLLABUS.findIndex(r => r.t === "Case Studies") + 1;
   const pop = [
     ["Gandhi", `data-open="gandhi"`],
-    ["Ambedkar", `data-open="ambedkar"`],
     ["Justice", `data-to="themes|${theme("Justice")}|"`],
     ["Sisyphus", `data-to="atlas|0|sisyphus"`],
     ["Happiness", `data-to="themes|${theme("The Good Life")}|"`],
     ["Technology", `data-to="themes|${theme("Technology")}|"`],
-    cs && ["Ethics case studies", `data-view="cases"`],
-    ["Emotional intelligence", `data-find="emotional intelligence"`]
-  ].filter(Boolean);
+    ["Conscience", `data-find="conscience"`]
+  ];
   return `
-  <section class="hero">
+  <section class="hero hero-home">
     <div class="hero-art art-thinker" aria-hidden="true"></div>
     <div class="hero-body">
-      <h2 class="hero-t">Thinkers for UPSC Mains</h2>
-      <p class="hero-s">Ideas from thinkers. Structured around UPSC questions.</p>
-      ${searchBoxHTML("")}
-      <div class="hero-pop"><span>Popular:</span>${pop.map(p =>
-        `<button class="pop" ${p[1]}>${esc(p[0])}</button>`).join("")}</div>
+      <h2 class="hero-t">Thinkers for <span>UPSC Mains</span></h2>
+      <p class="hero-s">Ideas from thinkers, structured around UPSC questions.</p>
+      ${searchBoxHTML("", true)}
+      <nav class="hero-pop" aria-label="Popular searches">${pop.map(p =>
+        `<button class="pop" ${p[1]}>${esc(p[0])}</button>`).join("")}</nav>
     </div>
     ${qd ? `
     <button class="hero-q" data-open="${qd[0].id}" title="Open ${esc(qd[0].name)}">
@@ -358,14 +356,19 @@ function heroHTML(){
   </section>`;
 }
 
-function searchBoxHTML(q){
+/* On the front page the box carries the keyboard hint instead of a button:
+   Enter searches, and Ctrl K (Cmd K on a Mac) opens search from any page. */
+function searchBoxHTML(q, home){
+  const mac = /Mac|iPhone|iPad/.test(navigator.platform || "");
   return `
       <form class="hsearch" role="search" data-search>
         ${ico("search")}
         <input type="search" name="q" value="${esc(q)}" autocomplete="off"
                aria-label="Search the site"
-               placeholder="Search thinkers, concepts, PYQs, quotes (e.g. Gandhi, justice, Sisyphus, emotional intelligence)">
-        <button class="cta" type="submit">Search</button>
+               placeholder="${home ? "Search thinkers, concepts, PYQs, quotes…"
+                 : "Search thinkers, concepts, PYQs, quotes (e.g. Gandhi, justice, Sisyphus, emotional intelligence)"}">
+        ${home ? `<kbd class="hs-kbd" aria-hidden="true">${mac ? "⌘" : "Ctrl"} K</kbd>`
+               : `<button class="cta" type="submit">Search</button>`}
       </form>`;
 }
 
@@ -376,14 +379,14 @@ function continueHTML(){
   if (!x || !x.to) return `
   <section class="hblock">
     <div class="hb-head"><h3 class="hb-t">Start Studying</h3></div>
-    <div class="cont">
-      <span class="cont-art art-thinker" aria-hidden="true"></span>
+    <div class="cont cont-start">
+      <span class="cont-tile" aria-hidden="true">${ico("book")}</span>
       <div class="cont-body">
-        <div class="cont-t"><b>Begin with the first heading of either paper</b></div>
-      </div>
-      <div class="cont-go">
-        <button class="cta" data-to="syllabus|1|">GS-IV ${ico("arrow")}</button>
-        <button class="obtn" data-to="themes|1|">Essay ${ico("arrow")}</button>
+        <b class="cont-name">Begin with the first heading of either paper</b>
+        <nav class="hlinks">
+          <button data-to="syllabus|1|">GS-IV ${ico("arrow")}</button>
+          <button data-to="themes|1|">Essay ${ico("arrow")}</button>
+        </nav>
       </div>
     </div>
   </section>`;
@@ -421,25 +424,28 @@ function continueHTML(){
     art = "flammarion";
   }
   const pct = total ? Math.round(done / total * 100) : 0;
+  // the tile shows the section's own mark: a heading's icon, the case studies'
+  // briefcase, an essay's nib or the atlas's compass
+  const tile = icon || { hercules:"case", jerome:"nib", pen:"nib", flammarion:"compass" }[art] || "book";
   return `
   <section class="hblock">
     <div class="hb-head">
       <h3 class="hb-t">Continue Studying</h3>
       <button class="hb-link" data-to="${esc(home)}">Go to my reading ${ico("arrow")}</button>
     </div>
-    <div class="cont">
-      ${art ? `<span class="cont-art art-${art}" aria-hidden="true"></span>`
-            : `<span class="cont-art cont-ico" aria-hidden="true">${ico(icon)}</span>`}
-      <div class="cont-body">
-        <div class="cont-t"><b>${esc(x.t || "")}</b>${kind ? `<span class="cont-tag">${esc(kind)}</span>` : ""}</div>
-        <p class="cont-w">${esc(where)}</p>
+    <button class="cont" data-to="${esc(x.to)}" title="Continue reading">
+      <span class="cont-tile" aria-hidden="true">${ico(tile)}</span>
+      <span class="cont-body">
+        <b class="cont-name">${esc(x.t || "")}</b>
+        <span class="cont-w">${esc(where)}${kind ? ` &middot; ${esc(kind)}` : ""}</span>
         ${total ? `
-        <div class="cont-bar" role="progressbar" aria-label="Read in this ${unit}"
-             aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><i style="width:${pct}%"></i></div>
-        <div class="cont-n"><span>${done} of ${total} read in this ${unit}</span><b>${pct}%</b></div>` : ""}
-      </div>
-      <div class="cont-go"><button class="cta" data-to="${esc(x.to)}">Continue ${ico("arrow")}</button></div>
-    </div>
+        <span class="cont-prog">
+          <span class="cont-bar" role="progressbar" aria-label="${done} of ${total} read in this ${unit}"
+                aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><i style="width:${pct}%"></i></span>
+          <b>${pct}%</b>
+        </span>` : ""}
+      </span>
+    </button>
   </section>`;
 }
 
@@ -447,14 +453,14 @@ function continueHTML(){
 function paperCardHTML(o){
   return `
     <section class="pcard">
-      <span class="pcard-art art-${o.art}" aria-hidden="true"></span>
-      <div class="pcard-h">
-        <span class="pcard-ico">${ico(o.icon)}</span>
-        <div><h4>${o.t}</h4><p>${o.d}</p></div>
+      <span class="pcard-ico" aria-hidden="true">${ico(o.icon)}</span>
+      <div class="pcard-main">
+        <h4>${o.t}</h4>
+        <p>${o.d}</p>
+        <nav class="hlinks" aria-label="${esc(o.t)}">${o.links.map(l => `
+          <button data-to="${l[1]}" title="${esc(l[2])}">${esc(l[0])} ${ico("arrow")}</button>`).join("")}
+        </nav>
       </div>
-      <nav class="pcard-links" aria-label="${esc(o.t)}">${o.links.map(l => `
-        <button data-to="${l[2]}" title="${esc(l[3])}"><span class="pl-ico">${ico(l[0])}</span><b>${esc(l[1])}</b>${ico("chev")}</button>`).join("")}
-      </nav>
     </section>`;
 }
 
@@ -462,15 +468,27 @@ const HOME_THINKERS = ["gandhi", "ambedkar", "aristotle", "kant", "nietzsche", "
 
 function thinkerTileHTML(t){
   const ideas = t.ideas.map(i => splitIdea(i).h.replace(/\s*\(.*?\)\s*/g, " ").trim())
-    .filter(h => h && h.length <= 24).slice(0, 3);
+    .filter(h => h && h.length <= 18).slice(0, 2);
   return `
     <button class="tcard" data-open="${t.id}">
-      <div class="tcard-top">
-        ${portraitHTML(t)}
-        <div class="tcard-id"><b>${esc(t.name.split(" ").pop())}</b><span>${esc(regionOf(t))}</span></div>
-      </div>
-      <div class="tcard-tags">${ideas.map(h => `<span>${esc(h)}</span>`).join("")}</div>
+      ${portraitHTML(t)}
+      <span class="tcard-id">
+        <b>${esc(t.name.split(" ").pop())}</b>
+        <span>${esc(regionOf(t))}</span>
+        <small>${ideas.map(esc).join(" &middot; ")}</small>
+      </span>
     </button>`;
+}
+
+/* One atlas entry on the front page: its kind, its name and the question it asks. */
+function atlasHomeHTML(x){
+  const e = ATLAS_ENTRIES[x.id];
+  return `
+        <button class="arow fam-${atlasLook(x)[0]}" data-to="atlas|0|${x.id}">
+          <span class="arow-k">${esc(ATLAS_FORMS[x.fg] || x.form)}</span>
+          <b>${esc(x.t)}</b>
+          <span class="arow-q">${esc(e.question)}</span>
+        </button>`;
 }
 
 function renderHome(){
@@ -484,30 +502,28 @@ function renderHome(){
     ${continueHTML()}
 
     <section class="hblock">
-      <div class="hb-head">
-        <div><h3 class="hb-t">Study by Paper</h3></div>
-      </div>
+      <div class="hb-head"><h3 class="hb-t">Study by Paper</h3></div>
       <div class="pcards">
         ${paperCardHTML({
-          t:"GS-IV: Ethics", d:"Concepts, thinkers, case studies and PYQs", icon:"scale", art:"aristotle",
-          links:[["layers", "Topics", "syllabus|0|", "The syllabus headings"],
-                 ["calendar", "PYQs", "gs4pyq|0|", "Past GS-IV questions"],
-                 ["book", "Notes", "syllabus|1|", "Concept notes"],
-                 ["case", "Case Studies", cs ? "cases|0|" : "gs4pyq|0|", "Case studies with model answers"]]
+          t:"GS-IV &middot; Ethics", d:"Concepts, thinkers, case studies and PYQs", icon:"scale",
+          links:[["Topics", "syllabus|0|", "The syllabus headings"],
+                 ["Case Studies", cs ? "cases|0|" : "gs4pyq|0|", "Case studies with model answers"],
+                 ["PYQs", "gs4pyq|0|", "Past GS-IV questions"],
+                 ["Notes", "syllabus|1|", "Concept notes"]]
         })}
         ${paperCardHTML({
-          t:"Essay Paper", d:"Themes, model essays, arguments and examples", icon:"nib", art:"pen",
-          links:[["layers", "Themes", "themes|0|", "The essay themes"],
-                 ["calendar", "PYQs", "pyq|0|", "Past essay topics"],
-                 ["file", "Paragraphs", "themes|1|p:0", "Model paragraphs"],
-                 ["nib", "Essays", "essays|0|", "Model essays"]]
+          t:"Essay Paper", d:"Themes, model essays, arguments and examples", icon:"nib",
+          links:[["Themes", "themes|0|", "The essay themes"],
+                 ["Essays", "essays|0|", "Model essays"],
+                 ["PYQs", "pyq|0|", "Past essay topics"],
+                 ["Paragraphs", "themes|1|p:0", "Model paragraphs"]]
         })}
       </div>
     </section>
 
     <section class="hblock">
       <div class="hb-head">
-        <div><h3 class="hb-t">Explore Thinkers</h3></div>
+        <h3 class="hb-t">Explore Thinkers</h3>
         <button class="hb-link" data-view="all">View all ${s.thinkers} thinkers ${ico("arrow")}</button>
       </div>
       <div class="tcards">${HOME_THINKERS.map(id => byId[id]).filter(Boolean).map(thinkerTileHTML).join("")}</div>
@@ -515,14 +531,15 @@ function renderHome(){
 
     <section class="hblock">
       <div class="hb-head">
-        <div><h3 class="hb-t">High-yield Topics</h3></div>
+        <h3 class="hb-t">High-yield Themes</h3>
         <button class="hb-link" data-to="themes|0|">View all ${s.themes} themes ${ico("arrow")}</button>
       </div>
-      <div class="topics">${topics.map((r, k) => `
+      <div class="topics">${topics.map(r => `
         <button class="topic" data-to="themes|${r.i + 1}|">
-          <span class="topic-ico tone-${k}">${ico(r.t.ic)}</span>
-          <span class="topic-t"><b>${esc(r.t.n)}</b>
-            <small>${plural(r.q, "PYQ", "PYQs")} &middot; ${plural(r.t.ids.length, "thinker", "thinkers")}</small></span>
+          <span class="topic-ico">${ico(r.t.ic)}</span>
+          <b>${esc(r.t.n)}</b>
+          <small>${plural(r.q, "PYQ", "PYQs")} &middot; ${plural(r.t.ids.length, "thinker", "thinkers")}</small>
+          ${ico("arrow")}
         </button>`).join("")}
       </div>
     </section>
@@ -530,10 +547,10 @@ function renderHome(){
     ${typeof ATLAS !== "undefined" ? `
     <section class="hblock hb-atlas">
       <div class="hb-head">
-        <div><h3 class="hb-t">Human Thought Atlas</h3></div>
+        <h3 class="hb-t">Human Thought Atlas</h3>
         <button class="hb-link" data-to="atlas|0|">Open the atlas ${ico("arrow")}</button>
       </div>
-      <div class="acards">${atlasHighlights(6).map(x => atlasCardHTML(x, "atlas|0|" + x.id)).join("")}</div>
+      <div class="arows">${atlasHighlights(6).map(atlasHomeHTML).join("")}</div>
     </section>` : ""}
     </div>`;
 }

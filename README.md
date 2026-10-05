@@ -37,13 +37,15 @@ sidebar lists the same sections, then ways to browse: all thinkers, Indian, West
 contemporary thinkers, works in depth, and three groups that fold open (schools and traditions,
 the GS-IV headings, the essay themes), with case studies, quotes and stories below.
 
-The home page opens with one search box for the whole site, a row of shortcuts and a quotation
-from the quote bank that changes daily. Below it: where you stopped, with how much of that heading
-or theme is read; the two papers, each with four named links (GS-IV: topics, PYQs, notes, case
-studies; Essay: themes, PYQs, paragraphs, essays); six thinkers; the six essay themes the paper has
-asked most; and six entries from the Thought Atlas, one of each kind first, a different six each
-day (three on a phone). The photographs are public-domain and CC0 images
-from Wikimedia Commons.
+The home page is deliberately quiet: a display serif (Cormorant Garamond) for names and headings,
+hairline rules beside each heading, links set as underlined words with an arrow, and lists in
+place of cards. It opens with one search box for the whole site (Ctrl K or Cmd K opens search
+from any page), six shortcuts and a quotation from the quote bank that changes daily, over Rodin's
+Thinker. Below it: where you stopped, with how much of that heading or theme is read; the two
+papers, each with four named links (GS-IV: topics, case studies, PYQs, notes; Essay: themes,
+essays, PYQs, paragraphs); six thinkers; the six essay themes the paper has asked most, in two
+columns; and six entries from the Thought Atlas, one of each kind first, a different six each day
+(three on a phone). The photographs are public-domain and CC0 images from Wikimedia Commons.
 
 ### GS-IV concept notes
 
