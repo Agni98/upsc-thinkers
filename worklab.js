@@ -749,6 +749,8 @@ const WORKLAB = {
      form:"A story that frames a dialogue, in 119 verses across six sections",
      fate:"Carried by recitation, then read through Shankara, Vivekananda and Maugham",
      gist:"A boy sent to Death in anger refuses every bribe and learns what does not die.",
+     cover:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Myths_of_the_Hindus_%26_Buddhists_-_Yama_and_Nachiketas.jpg/500px-Myths_of_the_Hindus_%26_Buddhists_-_Yama_and_Nachiketas.jpg",
+     coverNote:"Yama and Nachiketas, painted by Nandalal Bose for Sister Nivedita and Ananda Coomaraswamy’s Myths of the Hindus and Buddhists (1913). Bose later illuminated the original manuscript of the Constitution of India.",
      saga:[
       {m:"ॐ", k:"dawn", s:"Prologue",
        kick:"Before the story",
