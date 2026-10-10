@@ -1910,7 +1910,7 @@ html[data-theme="dark"]{--viz-a:#5a86d4;--viz-b:#c9792b}
 .sm-pane .ans-head{margin-top:0}
 
 /* ---------------- Reading ----------------
-   A plain white sheet with room inside it, and the prose set in the serif at
+   A plain white sheet with room inside it, and the prose set in Roboto Slab at
    17px on 1.78 leading, left-aligned. The accent stripe comes off the sheet:
    the reference has none, and the type now does the work the stripe was doing. */
 .sm-pane,.sm-pane.gc-item,.sm-pane.ans{
