@@ -1739,7 +1739,7 @@ function essayStoriesHTML(e){
   return `
     <aside class="essay-stories">
       <b>Stories this essay uses</b>
-      <p>Each is told in full in the Thought Atlas: the story, what it shows, how it has been read and where it breaks.</p>
+      <p>Each is told in full in the Thought Atlas: the story, what it shows and how it has been read.</p>
       <div class="arelated">${ids.map(id => `
         <button class="arel" ${theme && (theme.atlas || []).includes(id) ? `data-sel="a:${id}"` : `data-to="atlas|0|${id}"`}>
           ${atlasKindHTML(ix[id])}<b>${esc(ix[id].t)}</b><span>${esc(ix[id].q)}</span></button>`).join("")}
@@ -3575,9 +3575,11 @@ function renderAtlasNav(){
 }
 
 /* ---- How the atlas is read ----
-   Every entry answers the same eight questions in the same order. The overview
+   Every entry answers the same questions in the same order. The overview
    shows the order once, and each entry carries it as a strip of numbered parts,
-   so a reader always knows what comes next and can jump to it. */
+   so a reader always knows what comes next and can jump to it. The entries
+   from the Upanishads, Vedanta and the Gita have no "Where it breaks", so
+   their parts are numbered without it. */
 const ATLAS_PARTS = [
   ["story",    "book",    "The story",         "What happened, or the case to imagine"],
   ["question", "help",    "The question",      "The problem it forces you to face"],
@@ -3611,7 +3613,7 @@ const atlasLook = x => ATLAS_FORM_LOOK[x.fg] || ["idea", "compass"];
 const atlasKindHTML = x =>
   `<span class="akind fam-${atlasLook(x)[0]}">${ico(atlasLook(x)[1])}${esc(ATLAS_FORMS[x.fg] || x.form)}</span>`;
 function atlasMinutes(e){
-  const words = [].concat(e.setup, [e.question, e.reveals], e.readings.map(r => r[1]), e.breaks, e.uses)
+  const words = [].concat(e.setup, [e.question, e.reveals], e.readings.map(r => r[1]), e.breaks || [], e.uses)
     .join(" ").split(/\s+/).length;
   return Math.max(2, Math.round(words / 220));
 }
@@ -3821,8 +3823,9 @@ function atlasEntryHTML(x, theme){
   const ref = r => `<li>${r[2]
     ? `<a href="${esc(r[2])}" target="_blank" rel="noopener">${esc(r[0])}</a>` : esc(r[0])}${
     r[1] ? `<span>${esc(r[1])}</span>` : ""}</li>`;
-  const head = n => {
-    const p = ATLAS_PARTS[n];
+  const parts = ATLAS_PARTS.filter(p => p[0] !== "breaks" || (e.breaks || []).length);
+  const head = k => {
+    const n = parts.findIndex(p => p[0] === k), p = parts[n];
     return `<h6 class="apart-h"><span class="apart-n">${n + 1}</span>${ico(p[1])}${esc(p[2])}</h6>`;
   };
   let pager = "";
@@ -3852,38 +3855,39 @@ function atlasEntryHTML(x, theme){
         </dl>
       </header>` : ""}
 
-      <nav class="atl-jump" aria-label="Parts of this entry">${ATLAS_PARTS.map((p, i) => `
+      <nav class="atl-jump" aria-label="Parts of this entry">${parts.map((p, i) => `
         <button data-apart="ap-${p[0]}"><i>${i + 1}</i>${esc(p[2])}</button>`).join("")}
       </nav>
 
-      <section class="apart ap-story" id="ap-story">${head(0)}
+      <section class="apart ap-story" id="ap-story">${head("story")}
         ${e.setup.map(p => `<p>${esc(p)}</p>`).join("")}${ e.work ? `
         <button class="pill atl-work" data-work="${esc(e.work[0])}:${esc(e.work[1])}">Read the full story in Works in Depth ${ico("arrow")}</button>` : "" }</section>
 
-      <section class="apart ap-question" id="ap-question">${head(1)}
+      <section class="apart ap-question" id="ap-question">${head("question")}
         <p class="atl-q">${esc(e.question)}</p></section>
 
-      <section class="apart ap-reveals" id="ap-reveals">${head(2)}
+      <section class="apart ap-reveals" id="ap-reveals">${head("reveals")}
         <div class="abox"><p>${esc(e.reveals)}</p></div></section>
 
-      <section class="apart" id="ap-readings">${head(3)}
+      <section class="apart" id="ap-readings">${head("readings")}
         <div class="areadings">${e.readings.map(r =>
           `<div class="areading"><b>${esc(r[0])}</b><p>${esc(r[1])}</p></div>`).join("")}</div></section>
 
-      <section class="apart" id="ap-breaks">${head(4)}
-        <ul class="abreaks">${e.breaks.map(b => `<li>${esc(b)}</li>`).join("")}</ul></section>
+${(e.breaks || []).length ? `
+      <section class="apart" id="ap-breaks">${head("breaks")}
+        <ul class="abreaks">${e.breaks.map(b => `<li>${esc(b)}</li>`).join("")}</ul></section>` : ""}
 
-      <section class="apart" id="ap-uses">${head(5)}
+      <section class="apart" id="ap-uses">${head("uses")}
         <div class="auses">${uses.map(lead).join("")}</div></section>
 
-      <section class="apart" id="ap-exam">${head(6)}
+      <section class="apart" id="ap-exam">${head("exam")}
         <div class="aexam">${examRows.every(Boolean)
           ? examRows.map(r => `<div class="aexam-row"><b>${esc(r[0])}</b><span>${esc(r[1])}</span></div>`).join("")
           : `<div class="aexam-row"><span>${esc(examText)}</span></div>`}
           ${atlasEssayHTML(x.id)}
         </div></section>
 
-      <section class="apart" id="ap-more">${head(7)}
+      <section class="apart" id="ap-more">${head("more")}
         <div class="arelated">${e.related.filter(id => ix[id]).map(id => `
           <button class="arel" ${open(id)}>${atlasKindHTML(ix[id])}<b>${esc(ix[id].t)}</b><span>${esc(ix[id].q)}</span></button>`).join("")}
         </div>

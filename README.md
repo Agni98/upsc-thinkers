@@ -248,7 +248,10 @@ An entry opens on the same band. It gives the entry's section, title and subject
 its place (*Entry 15 of 110*), its reading time and its ideas. The numbers beside it jump to the
 story, to the exam use (or the interpretations, if no essay theme lists it) and to the related
 entries. An *At a glance* card follows, with the source, period, tradition and type. A strip of
-the eight parts works like the other pages' segmented controls. It stays at the top while you
+the eight parts works like the other pages' segmented controls. The ten entries from the
+Upanishads, Vedanta and the Gita have seven, because they leave out *Where it breaks*: Nachiketa,
+Gargi, Indra and Virochana, Uddalaka, the chariot, the two birds, neti neti, atman, maya and the
+gunas. The strip works the same way. It stays at the top while you
 read, marks the part you are in, and jumps to any other. Each part is its own card, with its own
 look inside:
 - the question: a blue call-out
@@ -508,6 +511,8 @@ okay-ui.css   the look shared with okayupsc.com and the Constitution site: colou
               corners and the navy OkayUPSC bar. Copied in from the okayupsc repo by
               tools/sync-ui.js there; edit it in that repo, not here
 styles.css    all styling (light + dark themes, print rules), with its colours mapped onto okay-ui.css
+fonts/        Roboto Slab (copied in from the okayupsc repo with okay-ui.css) and Noto Serif
+              Devanagari for the Sanskrit (this repo's own), each with its licence
 data.js       ← ALL CONTENT LIVES HERE
 profiles.js   the ~200-word introductions behind each toggle
 works.js      3–4 major works per thinker

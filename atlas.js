@@ -164,14 +164,6 @@ const ATLAS_ENTRIES = {
         "The Katha takes an older ritual tale from the Taittiriya Brahmana and turns it into philosophy. The fire ritual becomes a stepping stone, and the question about death becomes the heart of the story."
       ]
     ],
-    "breaks": [
-      "The teaching depends on a permanent self. Buddhism agrees that the good is better than the pleasant, but denies any permanent self.",
-      "A government cannot treat money, health and long life as unimportant. For public policy, food, income and housing are part of the good life, and Nachiketa’s refusal is a personal ideal, not a welfare policy.",
-      "Nachiketa is exceptional. The story shows what a strong will looks like, but says little about how ordinary people can build one.",
-      "The beginning is troubling. A father gives away his child in anger, and the text never criticises him. The first boon heals the relationship, but the father’s cruelty goes unexamined.",
-      "In its own time the teaching was addressed to a Brahmin boy, and such knowledge was closed to most women and to lower castes. The last verse opens the door to “any other”, but the society around the text did not.",
-      "The verse that says the self is won by the one whom the self chooses can make liberation seem arbitrary. The commentators’ different readings show how much depends on interpretation."
-    ],
     "uses": [
       "Integrity: Yama’s offers work like a bribe. A bribe offers something pleasant so that a person gives up what is right, and an honest officer’s refusal is Nachiketa’s refusal in miniature.",
       "Speaking truth to power: Nachiketa questions his father respectfully but persistently. A civil servant who must point out a flaw in a minister’s plan faces the same task, which is to expose a wrong without humiliating the person responsible.",
@@ -5426,11 +5418,6 @@ const ATLAS_ENTRIES = {
         "The contest at Janaka’s court is an early example of the Indian tradition of public debate, later called shastrartha (शास्त्रार्थ). Ideas were tested in open argument before an assembly, and the loser was expected to accept the result. Gargi’s courtesy to her opponent is part of that tradition."
       ]
     ],
-    "breaks": [
-      "The warning about Gargi’s head falling off is a threat, not an argument. The warning does not explain why the question cannot be asked.",
-      "Saying that the chain ends in the Imperishable does not fully settle the matter. A doubter can still ask why the chain must end there.",
-      "The debate was a contest for a prize of cows and gold, so reputation was at stake as well as truth."
-    ],
     "uses": [
       "Freedom of inquiry: Universities and research depend on the right to ask difficult questions, even about established ideas.",
       "Scientific thinking: Science also keeps asking what each explanation depends on, from atoms, to particles, to fields.",
@@ -5492,11 +5479,6 @@ const ATLAS_ENTRIES = {
         "Moral reading",
         "Virochana’s teaching, that one should serve only one’s own body, describes a selfish way of life. The Upanishad links this teaching to people who do not give and do not share. The gods and the demons can be read as two attitudes found in every person."
       ]
-    ],
-    "breaks": [
-      "The story treats the body as a trap. Modern ethics sees care for the body, through health, food and dignity, as part of a good life.",
-      "Calling people who do not give or believe “demons” is harsh. The label can encourage contempt for people with different beliefs.",
-      "The final teaching about the knowing Self is hard to put into words. The story shows the journey more clearly than the destination."
     ],
     "uses": [
       "Appearance and social media: The pan of water is like a mirror or a selfie. People can come to believe that their appearance is who they are.",
@@ -5567,11 +5549,6 @@ const ATLAS_ENTRIES = {
         "Ethical reading",
         "If the same Self is in every being, then harming another person is harming oneself. The German philosopher Arthur Schopenhauer praised tat tvam asi as the best statement of the basis of compassion."
       ]
-    ],
-    "breaks": [
-      "The examples of clay, seeds and salt illustrate the idea, but they do not prove it. Salt dissolved in water is still a separate substance.",
-      "If everything is one, it is hard to explain the real differences and conflicts between people. The schools of Vedanta disagree sharply on this point.",
-      "The idea of oneness can be used to ask people to accept injustice calmly. But oneness does not remove the duty to fight inequality."
     ],
     "uses": [
       "Compassion and service: If the same Self is in all, then serving others is a natural duty. Swami Vivekananda used this idea to call for service to the poor.",
@@ -5994,11 +5971,6 @@ const ATLAS_ENTRIES = {
         "The Gita develops a similar idea. Arjuna says that the mind is restless and as hard to control as the wind. Krishna answers that the mind can be controlled through practice and detachment."
       ]
     ],
-    "breaks": [
-      "The comparison treats the senses and emotions as horses that must be controlled. Modern psychology shows that emotions also carry useful information, so they should be understood and not only held back.",
-      "The comparison places the body and the senses at the bottom of a ladder. Such a ranking can lead to contempt for the body and for ordinary pleasures.",
-      "The comparison says that a wise driver is needed, but it does not explain how a person becomes wise. The hardest part, training the intellect, is left out."
-    ],
     "uses": [
       "Emotional intelligence: Officers face anger, pressure and temptation. The chariot is a simple picture of managing emotions instead of being driven by them.",
       "Digital distraction: Phones and apps pull the senses in many directions. A person needs clear goals and firm habits to stay in control of his attention.",
@@ -6057,11 +6029,6 @@ const ATLAS_ENTRIES = {
         "Psychological reading",
         "Many modern teachers of mindfulness describe an observing self. A person can notice his own anger or fear without being carried away by it. The watching bird is an early picture of this ability."
       ]
-    ],
-    "breaks": [
-      "The watching bird can seem cold and uninvolved. A good life also needs caring and acting, not only watching.",
-      "The verses do not explain how the eating bird learns to see the other bird. The practice needed for this change is left out.",
-      "Different schools read the same verses in opposite ways. So the image alone cannot settle whether the self and God are one or two."
     ],
     "uses": [
       "Emotional intelligence: An officer facing an angry crowd can notice his own rising anger before he responds. Calm observation leads to better decisions.",
@@ -6367,11 +6334,6 @@ const ATLAS_ENTRIES = {
         "In chapter 18, the Gita links the gunas to the duties of the four varnas. Critics argue that this link was used to justify the caste hierarchy, by claiming that people are born with fixed natures."
       ]
     ],
-    "breaks": [
-      "The gunas are not a scientific theory. They cannot be measured, so they should not be used to label people with certainty.",
-      "Calling a food, a person or a group tamasic can become a way to look down on others.",
-      "Every person is a mixture of all three gunas. The framework becomes less useful when it is used to sort people into fixed boxes."
-    ],
     "uses": [
       "Governance: Tamas in administration looks like delay, red tape and indifference. Rajas looks like hurry, ambition and show. Sattva looks like calm, fair and well-informed decisions.",
       "Charity and CSR: The Gita’s three kinds of giving help us to judge the motive behind a donation, not only its size.",
@@ -6423,11 +6385,6 @@ const ATLAS_ENTRIES = {
         "Swami Vivekananda",
         "Vivekananda said that maya is not a theory to explain the world. He called it a simple statement of facts about our lives, which are full of contradictions: good and evil, pleasure and pain, always mixed together."
       ]
-    ],
-    "breaks": [
-      "If the world is only an appearance, poverty and injustice may also seem unimportant. Critics say that the idea can weaken the will to improve society.",
-      "The rope and snake example needs someone who can bring a lamp and see the rope. It does not show how anyone can step outside the world to check what is real.",
-      "The word illusion is often misunderstood. Many teachers stress that maya does not mean that the world does not exist, only that the world is not the final reality."
     ],
     "uses": [
       "Misinformation and deepfakes: False images and news can make people afraid of snakes that are really ropes. Checking the facts is like bringing a lamp.",
@@ -6482,11 +6439,6 @@ const ATLAS_ENTRIES = {
         "Self-inquiry",
         "The twentieth-century teacher Ramana Maharshi taught a related method. Instead of only denying, he asked seekers to keep asking, “Who am I?”"
       ]
-    ],
-    "breaks": [
-      "Negation alone cannot give positive knowledge. Saying what something is not does not show what it is.",
-      "The method can lead some people to feel that nothing matters, since everything is “not this”.",
-      "The final experience that neti neti points to cannot be checked by others. It depends on personal realisation."
     ],
     "uses": [
       "Problem solving: Doctors and investigators often find the answer by ruling out what it is not. Diagnosis by elimination is a practical form of neti neti.",
@@ -6543,11 +6495,6 @@ const ATLAS_ENTRIES = {
         "Buddhist criticism",
         "The Buddha taught anatta, the idea that there is no permanent self. Buddhists argue that belief in an eternal self is itself a cause of attachment."
       ]
-    ],
-    "breaks": [
-      "The identity of Atman and Brahman cannot be proved by observation. It depends on scripture and inner experience.",
-      "If everything is one Self, it is hard to explain individual responsibility and the real differences between people.",
-      "Some people use the idea to escape from the world instead of improving it."
     ],
     "uses": [
       "Human dignity: If the same reality lives in every person, then every person has equal worth. The idea supports the constitutional value of the dignity of the individual.",
