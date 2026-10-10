@@ -2637,8 +2637,20 @@ function mapWalk(){
       out.push({ p:i + 1, id:it.id, t:it.t, h:r.t })));
   else if (state.view === "themes")
     ESSAY_THEMES.forEach((t, i) => themeItems(t).forEach(it =>
-      out.push({ p:i + 1, id:it.id, t:it.t, h:t.t })));
+      out.push({ p:i + 1, id:it.id, t:it.t, h:t.t, g:it.g, k:it.k })));
   return out;
+}
+
+/* The step from item `at` of the walk, back (-1) or on (+1), or -1 for none.
+   The GS-IV map is read straight through. On the Essay Theme Map the step keeps
+   to the kind of item open: after a theme's last model paragraph comes the next
+   theme's first, not its essays and stories, and essays and stories run on in
+   the same way. */
+function mapStep(walk, at, dir){
+  if (at < 0 || state.view !== "themes") return at + dir;
+  for (let i = at + dir; i >= 0 && i < walk.length; i += dir)
+    if (walk[i].g === walk[at].g) return i;
+  return -1;
 }
 
 function mapWhere(walk, page, sel){
@@ -2674,11 +2686,20 @@ function mapPageHTML(spec){
           <span><b>${st.questions}</b> ${cases ? "cases" : "past questions"}</span>
           ${cases && typeof CASE_ANSWERS !== "undefined" ? `<span><b>${Object.keys(CASE_ANSWERS).length}</b> model answers</span>` : ""}
           <span><b>${st.thinkers}</b> thinkers</span></p>`; })() : (() => {
-          const es = (x.essays || []).filter(k => (typeof ESSAYS !== "undefined") && ESSAYS[k]).length; return `
+          // each count opens the first item of its kind, since next and previous
+          // keep to the kind already open
+          const es = (x.essays || []).filter(k => (typeof ESSAYS !== "undefined") && ESSAYS[k]).length;
+          const kindLink = (num, label, g) => {
+            const first = items.find(y => y.g === g);
+            return num && first
+              ? `<button class="rd-stat${it && it.g === g ? " on" : ""}" data-sel="${esc(first.id)}"><b>${num}</b> ${label}</button>`
+              : `<span><b>${num}</b> ${label}</span>`;
+          };
+          return `
         <p class="rd-stats">${ico(x.ic || "target")}
-          <span><b>${themeStats(x).list.length}</b> model paragraphs</span>
-          <span><b>${es}</b> full essays</span>
-          <span><b>${themeStories(x).length}</b> stories</span>
+          ${kindLink(themeStats(x).list.length, "model paragraphs", "Model paragraphs")}
+          ${kindLink(es, "full essays", "Written out in full")}
+          ${kindLink(themeStories(x).length, "stories", "Stories to use")}
           <span><b>${themeQuestions(x)}</b> past topics</span></p>`; })()}
         <div class="rd-where">
           ${kind ? `<span class="rd-kind">${esc(kind)}</span>` : "<span></span>"}
@@ -2701,16 +2722,18 @@ function stepHTML(walk, at){
                  aria-label="${word}: ${esc(walk[i].t)}">${arrow}</button>`
       : `<span class="rd-step off" aria-hidden="true">${arrow}</span>`;
   };
-  return `<span class="rd-steps">${step(at - 1, -1)}${step(at + 1, 1)}</span>`;
+  return `<span class="rd-steps">${step(mapStep(walk, at, -1), -1)}${step(mapStep(walk, at, 1), 1)}</span>`;
 }
 
 /* Where the reader can go from here. The heading is named only when the step
    leaves the one they are in. */
 function moveHTML(walk, at, here){
   if (at < 0) return "";
+  const kind = state.view === "themes" && walk[at].k ? walk[at].k.toLowerCase() : "";
   const step = (i, dir) => {
     const x = walk[i];
-    if (!x) return `<span class="mv-end">${dir < 0 ? "Start of the map" : "End of the map"}</span>`;
+    if (!x) return `<span class="mv-end">${kind ? (dir < 0 ? "The first " : "The last ") + kind
+                                                : dir < 0 ? "Start of the map" : "End of the map"}</span>`;
     return `<button class="mv ${dir < 0 ? "prev" : "next"}" data-go="${i}">
         <em>${dir < 0 ? "Previous" : "Next"}</em>
         <span>${esc(x.t)}</span>
@@ -2719,8 +2742,8 @@ function moveHTML(walk, at, here){
   };
   return `
     <nav class="sm-move" aria-label="Move through the map">
-      ${step(at - 1, -1)}
-      ${step(at + 1, 1)}
+      ${step(mapStep(walk, at, -1), -1)}
+      ${step(mapStep(walk, at, 1), 1)}
     </nav>`;
 }
 
@@ -4368,7 +4391,7 @@ document.addEventListener("keydown", e => {
     if (!n) x = back ? null : walk[0];
     else {
       const spec = mapSpec(state.view);
-      x = walk[mapWhere(walk, n, mapSel(spec.items(spec.list[n - 1]))) + (back ? -1 : 1)];
+      x = walk[mapStep(walk, mapWhere(walk, n, mapSel(spec.items(spec.list[n - 1]))), back ? -1 : 1)];
     }
     if (x) { state.page = x.p; state.sel = x.id; state.fold = false; render(); }
   }

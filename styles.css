@@ -1797,6 +1797,10 @@ html[data-theme="dark"]{--viz-a:#5a86d4;--viz-b:#c9792b}
 .rd-stats{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin-top:10px;font:13px/1.4 var(--sans);color:var(--ink-3)}
 .rd-stats .ic{width:18px;height:18px;color:var(--saffron-ink)}
 .rd-stats b{font-weight:700;color:var(--head)}
+.rd-stat{padding:0 0 1px;font:inherit;color:inherit;border-bottom:1px solid var(--line)}
+.rd-stat:hover{color:var(--saffron-ink);border-color:currentColor}
+.rd-stat.on{color:var(--saffron-ink);border-color:currentColor}
+.rd-stat.on b{color:inherit}
 
 /* a concept note's strip of its parts */
 .gc-jump{margin-top:-4px}
