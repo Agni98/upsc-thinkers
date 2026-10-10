@@ -4320,9 +4320,25 @@ function setRail(off){
   document.getElementById("menuBtn").setAttribute("aria-expanded", off ? "false" : "true");
   try { localStorage.setItem("upsc_thinkers_side", off ? "off" : "on"); } catch (e) {}
 }
+/* The OkayUPSC bar above the header scrolls away with the page. Until it has
+   gone, the panel and the drawer start that much lower. The value is set only
+   when it changes, so scrolling further down costs nothing. */
+const suiteGap = (() => {
+  const suite = document.querySelector(".ok-suite");
+  let vis = -1;
+  const set = () => {
+    const v = suite ? Math.max(0, Math.round(suite.getBoundingClientRect().bottom)) : 0;
+    if (v !== vis) { vis = v; document.documentElement.style.setProperty("--ok-suite-vis", v + "px"); }
+  };
+  window.addEventListener("scroll", set, { passive:true });
+  window.addEventListener("resize", set);
+  set();
+  return set;
+})();
 document.getElementById("railBtn").addEventListener("click", () =>
   setRail(document.documentElement.dataset.side !== "off"));
 document.getElementById("menuBtn").addEventListener("click", () => {
+  suiteGap();
   if (window.matchMedia("(max-width:880px)").matches) {
     document.getElementById("sidebar").classList.toggle("open");
     return;

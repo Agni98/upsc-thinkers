@@ -37,7 +37,7 @@ sidebar lists the same sections, then ways to browse: all thinkers, Indian, West
 contemporary thinkers, works in depth, and three groups that fold open (schools and traditions,
 the GS-IV headings, the essay themes), with case studies, quotes and stories below.
 
-The home page is deliberately quiet: a display serif (Cormorant Garamond) for names and headings,
+The home page is deliberately quiet: the serif for names and headings,
 hairline rules beside each heading, links set as underlined words with an arrow, and lists in
 place of cards. It opens with one search box for the whole site (Ctrl K or Cmd K opens search
 from any page), six shortcuts and a quotation from the quote bank that changes daily, over Rodin's
@@ -504,7 +504,10 @@ A thinker with no entry there simply shows no toggle, so you can add or rewrite 
 
 ```
 index.html    page shell
-styles.css    all styling (light + dark themes, print rules)
+okay-ui.css   the look shared with okayupsc.com and the Constitution site: colours, type,
+              corners and the navy OkayUPSC bar. Copied in from the okayupsc repo by
+              tools/sync-ui.js there; edit it in that repo, not here
+styles.css    all styling (light + dark themes, print rules), with its colours mapped onto okay-ui.css
 data.js       ← ALL CONTENT LIVES HERE
 profiles.js   the ~200-word introductions behind each toggle
 works.js      3–4 major works per thinker

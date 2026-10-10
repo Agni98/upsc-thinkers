@@ -1,88 +1,63 @@
 /* ================= UPSC THINKERS — STYLES ================= */
 
+/* The colours, type and shapes come from okay-ui.css, the look shared by the
+   three OkayUPSC sites. The names below are this site's own, mapped onto it.
+   Only what belongs to this site alone is set here. */
 :root{
-  --bg:#fbfaf8;
-  --bg-2:#fefdfc;
-  --panel:#ffffff;
+  --bg:var(--ok-bg);
+  --bg-2:var(--ok-surface-2);
+  --panel:var(--ok-surface);
   /* the brand gradient runs across both of these and carries white text, so it
      stays the same in either theme; --accent alone is too pale in dark mode */
   --brand-a:#2f4b80;
   --brand-b:#1f2a44;
-  --ink:#333130;      /* warm near-black: 11.9:1, not 14.6 */
-  --ink-2:#55524f;    /* body text, 7.5:1 */
-  --ink-3:#6f6b67;    /* labels and captions, 4.8:1 */
-  --line:#e8e5e1;
-  --line-2:#f2f0ed;
-  --rail:#ffffff;      /* the sidebar, a step lighter than the page */
-  /* ink and saffron: ink blue for anything you can press, saffron only for the
-     rules and marks that frame a heading */
-  --accent:#2f4b80;    /* 8.3:1 on the page */
-  --accent-2:#4a6aa6;
-  --accent-soft:#edf1f8;
-  --head:#1f2a44;      /* page headings */
-  --saffron:#e0902f;   /* rules, underlines and the brand mark; never text on white */
-  --saffron-ink:#9a5514; /* saffron as text: the small labels over a heading, 5.7:1 */
-  --saffron-soft:#fdf0e1; /* a saffron wash behind the section you are in */
-  --cta:#b05e18;       /* filled buttons; white on it is 4.7:1 */
-  --cta-h:#9a5314;
-  --cta-ink:#ffffff;
-  --hero:linear-gradient(180deg,#f6f0e7,#fbfaf8);
+  --ink:var(--ok-ink);
+  --ink-2:var(--ok-ink-2);
+  --ink-3:var(--ok-ink-3);
+  --line:var(--ok-line);
+  --line-2:var(--ok-line-2);
+  --rail:var(--ok-surface);   /* the sidebar, a step lighter than the page */
+  --accent:var(--ok-accent);
+  --accent-2:var(--ok-accent-2);
+  --accent-soft:var(--ok-accent-soft);
+  --head:var(--ok-head);
+  --saffron:var(--ok-saffron);
+  --saffron-ink:var(--ok-saffron-ink);
+  --saffron-soft:var(--ok-saffron-soft);
+  --cta:var(--ok-cta);
+  --cta-h:var(--ok-cta-h);
+  --cta-ink:var(--ok-cta-ink);
+  --hero:linear-gradient(180deg,#f3eee5,var(--ok-bg));
   --gold:#7d6a3c;
   --gold-soft:#f5f3ea;
-  --shadow:0 1px 2px rgba(30,30,28,.05), 0 8px 24px rgba(30,30,28,.06);
-  --shadow-lg:0 4px 12px rgba(30,30,28,.09), 0 24px 60px rgba(30,30,28,.14);
-  --radius:14px;
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
-  --sans:"Segoe UI",Inter,system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
-  /* quotations get their own face so they stand apart from the body text */
-  --quote:Aptos,"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+  --shadow:var(--ok-shadow);
+  --shadow-lg:var(--ok-shadow-lg);
+  --radius:var(--ok-r);
+  --serif:var(--ok-serif);
+  --sans:var(--ok-sans);
+  /* quotations are set in the sans so they stand apart from the serif reading */
+  --quote:var(--ok-sans);
   --quote-ink:#2b2927;
   --sidebar-w:288px;
-  /* the reading: a slab serif, set large and loose, the way ANRF sets its prose */
-  --read:"Roboto Slab","Rockwell","Georgia",serif;
+  --read:var(--ok-serif);
+  --display:var(--ok-serif);
   --read-ink:#3a3835;
-  --band:#1f2a44;      /* the header; white on it is 14.3:1 */
-  --band-ink:#c9cfdc;  /* the sections you are not in, 9.1:1 on the header */
-  /* the masthead: the page's own paper, navy type, the mark in navy and saffron */
-  --mast:#fbf7f0;
-  --mast-line:#e6ddcd;
-  --mast-ink:#586072;  /* the sections you are not in, 6.3:1 on the masthead */
-  --mark-bg:#1f2a44;
-  --mark-ink:#f0a54d;
+  --band:var(--ok-navy);
+  /* the masthead: the header paper every OkayUPSC site uses */
+  --mast:var(--ok-surface-2);
+  --mast-line:var(--ok-line);
+  --mast-ink:var(--ok-ink-2);
+  --mark-bg:var(--ok-mark-bg);
+  --mark-ink:var(--ok-mark-ink);
 }
 
 html[data-theme="dark"]{
-  --bg:#191817;
-  --bg-2:#211f1e;
-  --panel:#262423;
-  --ink:#e4e1dc;      /* eased off pure white too */
-  --ink-2:#b0aca6;
-  --ink-3:#948f89;
-  --line:#38352f;
-  --line-2:#2d2a28;
-  --rail:#131211;      /* the sidebar, a step deeper than the page */
-  --accent:#9fb5e3;
-  --accent-2:#bccbee;
-  --accent-soft:#212838;
-  --head:#e3e7f0;
-  --saffron-ink:#e8a55a;
-  --saffron-soft:#33261a;
-  --cta:#e8a55a;
-  --cta-h:#f0b672;
-  --cta-ink:#1b1a19;
-  --hero:linear-gradient(180deg,#221f1c,#191817);
+  --rail:#131316;      /* the sidebar, a step deeper than the page */
+  --hero:linear-gradient(180deg,#1f1e1d,var(--ok-bg));
   --gold:#cbb47c;
   --gold-soft:#282318;
-  --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
-  --shadow-lg:0 4px 12px rgba(0,0,0,.4), 0 24px 60px rgba(0,0,0,.55);
   --quote-ink:#eeeae4;
   --read-ink:#dcd8d2;
-  --band:#182033;
-  --mast:#1f1d1b;
-  --mast-line:#35312c;
-  --mast-ink:#b1aca4;
-  --mark-bg:#e0902f;
-  --mark-ink:#1f2a44;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -106,9 +81,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .topbar{
   position:sticky;top:0;z-index:60;
   display:flex;align-items:center;gap:12px;
-  height:64px;padding:0 0 0 18px;
+  height:var(--ok-header-h);padding:0 0 0 14px;
   background:var(--mast);color:var(--head);
-  box-shadow:0 1px 0 var(--mast-line),0 4px 14px rgba(60,45,30,.05);
+  border-bottom:1px solid var(--mast-line);
 }
 .skip{
   position:absolute;left:12px;top:-52px;z-index:90;
@@ -119,18 +94,17 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .brand{display:flex;align-items:center;gap:11px;flex-shrink:0;min-width:0;color:inherit}
 .brand:focus-visible{outline:2px solid var(--saffron);outline-offset:3px;border-radius:8px}
 .brand-mark{
-  width:38px;height:38px;border-radius:50%;flex-shrink:0;
+  width:34px;height:34px;border-radius:var(--ok-r-mark);flex-shrink:0;
   background:var(--mark-bg);color:var(--mark-ink);
   display:grid;place-items:center;
-  font-family:var(--serif);font-size:20px;font-weight:700;
-  box-shadow:0 0 0 3px rgba(224,144,47,.25);
+  font-family:var(--serif);font-size:19px;font-weight:700;line-height:1;
 }
 .brand-text h1{
-  font-family:var(--read);font-size:19px;font-weight:500;letter-spacing:-.1px;
-  line-height:1.15;color:var(--head);white-space:nowrap}
+  font:600 17px/1.1 var(--serif);letter-spacing:-.01em;
+  color:var(--head);white-space:nowrap}
 .brand-text p{
-  font-size:10.5px;color:var(--ink-3);letter-spacing:.6px;text-transform:uppercase;
-  margin-top:3px;white-space:nowrap}
+  font-size:10px;font-weight:600;color:var(--ink-3);letter-spacing:.1em;text-transform:uppercase;
+  margin-top:3px;line-height:1.15;white-space:nowrap}
 
 .band{
   position:relative;align-self:stretch;margin-left:auto;
@@ -142,12 +116,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .tn{position:relative;display:flex}
 .tn-btn{
   position:relative;display:flex;align-items:center;gap:8px;height:100%;
-  padding:0 14px;font-family:var(--read);font-size:15.5px;font-weight:400;
-  letter-spacing:.1px;color:var(--mast-ink);white-space:nowrap;transition:color .15s}
+  padding:0 11px;font:600 14.5px/1 var(--sans);
+  color:var(--mast-ink);white-space:nowrap;transition:color .15s}
 .tn:hover .tn-btn,.tn:focus-within .tn-btn,.tn.open .tn-btn,.tn.on .tn-btn{color:var(--head)}
 /* a saffron bar under the section you are in; a fainter one under the menu you are in */
 .tn-btn::after{
-  content:"";position:absolute;left:14px;right:14px;bottom:0;height:3px;
+  content:"";position:absolute;left:11px;right:11px;bottom:-1px;height:3px;
   border-radius:3px 3px 0 0;background:var(--saffron);opacity:0;transition:opacity .15s}
 .tn:hover .tn-btn::after,.tn:focus-within .tn-btn::after,.tn.open .tn-btn::after{opacity:.5}
 .tn.on .tn-btn::after{opacity:1}
@@ -156,11 +130,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .tn-feature{align-items:center;margin:0 4px 0 8px}
 .tn-feature .tn-btn{
   height:auto;gap:7px;padding:7px 15px 7px 11px;border-radius:20px;
-  border:1px solid rgba(224,144,47,.45);background:var(--saffron-soft);color:var(--saffron-ink);font-weight:500}
+  border:1px solid color-mix(in srgb,var(--saffron) 45%,transparent);background:var(--saffron-soft);color:var(--saffron-ink);font-weight:600}
 .tn-feature .tn-btn .ic{width:17px;height:17px}
 .tn-feature .tn-btn::after{display:none}
 .tn-feature:hover .tn-btn,.tn-feature:focus-within .tn-btn{border-color:var(--saffron);color:var(--saffron-ink)}
-.tn-feature.on .tn-btn{background:var(--saffron);border-color:var(--saffron);color:#fff}
+.tn-feature.on .tn-btn{background:var(--cta);border-color:var(--cta);color:var(--cta-ink)}
 .tn-feature .tn-btn:focus-visible{outline-offset:2px;border-radius:20px}
 .tn-caret{
   width:0;height:0;margin-top:2px;opacity:.85;
@@ -170,7 +144,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   display:none;position:absolute;top:100%;left:0;z-index:80;
   min-width:300px;padding:6px;
   background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--saffron);
-  border-radius:0 0 12px 12px;box-shadow:var(--shadow-lg)}
+  border-radius:0 0 var(--ok-r) var(--ok-r);box-shadow:var(--shadow-lg)}
 .tn:last-child .dd{left:auto;right:0}
 @media (hover:hover){ .topnav:not(.shut) .tn:hover > .dd{display:block} }
 .topnav:not(.shut) .tn:focus-within > .dd,.tn.open > .dd{display:block}
@@ -179,7 +153,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   display:block;width:100%;text-align:left;padding:9px 12px;border-radius:8px;
   transition:background .12s}
 .dd-item b{
-  display:block;font-family:var(--read);font-size:15px;font-weight:500;
+  display:block;font-family:var(--sans);font-size:14.5px;font-weight:600;
   line-height:1.35;color:var(--ink)}
 .dd-item span{display:block;margin-top:2px;font-size:12.5px;line-height:1.45;color:var(--ink-2)}
 .dd-item:hover,.dd-item:focus-visible{background:var(--accent-soft)}
@@ -188,10 +162,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
 .band-btn{
   width:38px;height:38px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;
-  border:1.5px solid var(--mast-line);color:var(--head);font-size:16px;transition:.15s}
+  border:1px solid var(--mast-line);background:var(--panel);color:var(--ink-2);font-size:16px;transition:.15s}
 .band-btn:hover{background:var(--saffron-soft);border-color:var(--saffron);color:var(--saffron-ink)}
 /* on a narrow screen the sections leave for the drawer, but the atlas keeps a button */
-.band-atlas{display:none;border-color:rgba(224,144,47,.5);background:var(--saffron-soft);color:var(--saffron-ink)}
+.band-atlas{display:none;border-color:color-mix(in srgb,var(--saffron) 50%,transparent);background:var(--saffron-soft);color:var(--saffron-ink)}
 .band-btn:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 
 /* search drops out of the band's end, and stays open while it holds a query */
@@ -199,7 +173,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   display:none;position:absolute;top:100%;right:14px;z-index:85;
   width:min(560px,calc(100vw - 28px));padding:10px;
   background:var(--panel);border:1px solid var(--line);border-top:0;
-  border-radius:0 0 12px 12px;box-shadow:var(--shadow-lg)}
+  border-radius:0 0 var(--ok-r) var(--ok-r);box-shadow:var(--shadow-lg)}
 .searchbar.open{display:block}
 .search-wrap{position:relative}
 .search-wrap svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--ink-3)}
@@ -221,20 +195,20 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   border:1px solid var(--line);background:var(--panel);color:var(--ink-2);
   transition:.15s;flex-shrink:0;
 }
-.icon-btn:hover{border-color:var(--accent);color:var(--accent)}
+.icon-btn:hover{border-color:var(--saffron);color:var(--saffron-ink)}
 
 /* the menu button collapses the sidebar on a wide screen and opens the drawer
    on a narrow one, so one control means one thing: show me the navigation */
 .menu-btn{display:grid}
-.topbar .menu-btn{background:transparent;border-color:var(--mast-line);color:var(--head)}
-.topbar .menu-btn:hover{border-color:var(--saffron);color:var(--saffron)}
+.topbar .menu-btn{background:var(--panel);border-color:var(--mast-line);color:var(--ink-2)}
+.topbar .menu-btn:hover{border-color:var(--saffron);color:var(--saffron-ink)}
 .topbar .menu-btn:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 
 /* The band gives up air first, then the name steps back to its mark, and only
    then do the sections leave for the drawer, which already lists them all. */
 @media (max-width:1340px){
-  .tn-btn{padding:0 11px;font-size:14.5px}
-  .tn-btn::after{left:11px;right:11px}
+  .tn-btn{padding:0 9px;font-size:14px}
+  .tn-btn::after{left:9px;right:9px}
   .band{padding-left:16px}
 }
 @media (max-width:1260px) and (min-width:1001px){ .brand-text{display:none} }
@@ -245,8 +219,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
 .sidebar{
   width:var(--sidebar-w);flex-shrink:0;
-  position:sticky;top:64px;
-  height:calc(100vh - 64px);overflow-y:auto;
+  position:sticky;top:var(--ok-header-h);
+  height:calc(100vh - var(--ok-header-h) - var(--ok-suite-vis));overflow-y:auto;
   padding:12px 14px 40px;
   background:var(--rail);
   border-right:1px solid var(--line);
@@ -559,7 +533,6 @@ html[data-theme="dark"] .cont-art{filter:grayscale(.4) brightness(.85)}
    rules beside each heading, links set as underlined words with an arrow, and
    lists in place of cards. The statue stands larger in the hero and fades into
    the page. In the dark theme the page reads as ink and gold. */
-.hero-home,.home{--display:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
 .hero.hero-home{
   --art:min(44%,560px);
   grid-template-columns:minmax(0,1fr) 230px;padding:58px 30px 40px;
@@ -571,7 +544,7 @@ html[data-theme="dark"] .cont-art{filter:grayscale(.4) brightness(.85)}
           mask-image:linear-gradient(90deg,transparent 0,#000 45%),linear-gradient(0deg,transparent 0,#000 30%);
   -webkit-mask-composite:source-in;mask-composite:intersect;opacity:.55}
 html[data-theme="dark"] .hero-home .hero-art{opacity:.62;filter:grayscale(.55) sepia(.35) brightness(.5) contrast(1.15)}
-.hero-home .hero-t{font:600 clamp(40px,5.4vw,66px)/1.02 var(--display);letter-spacing:-.4px;color:var(--head)}
+.hero-home .hero-t{font:600 clamp(34px,4.6vw,52px)/1.06 var(--display);letter-spacing:-.022em;color:var(--head)}
 .hero-home .hero-t span{color:var(--saffron-ink)}
 .hero-home .hero-s{margin:12px 0 30px;font:400 clamp(17px,1.7vw,21px)/1.45 var(--serif);color:var(--ink-2)}
 .hero-home .hsearch{max-width:700px;padding:4px 16px;background:var(--panel);border-color:var(--line);border-radius:8px;box-shadow:none}
@@ -588,7 +561,7 @@ html[data-theme="dark"] .hero-home .hsearch{background:rgba(25,24,23,.72)}
   font:400 15.5px/1.3 var(--serif);color:var(--ink-2)}
 .hero-home .pop:hover{background:none;border-bottom-color:var(--saffron);color:var(--saffron-ink)}
 .hero-home .hero-q{margin-top:4px;text-align:left}
-.hero-home .hero-q q{font:italic 500 19px/1.4 var(--display);color:var(--head)}
+.hero-home .hero-q q{font:italic 500 17px/1.45 var(--display);color:var(--head)}
 .hero-home .hero-q span{font:italic 400 13.5px/1.4 var(--serif);color:var(--ink-3)}
 .hero-home .hero-q q,.hero-home .hero-q span{text-shadow:0 0 18px var(--bg),0 0 6px var(--bg),0 0 2px var(--bg)}
 
@@ -597,7 +570,7 @@ html[data-theme="dark"] .hero-home .hsearch{background:rgba(25,24,23,.72)}
 .home .hb-head{align-items:center;gap:20px;margin-bottom:18px}
 .home .hb-head > :first-child{flex:1;min-width:0;display:flex;align-items:center;gap:20px}
 .home .hb-head > :first-child::after{content:"";flex:1;height:1px;background:var(--line)}
-.home .hb-t{border:0;padding:0;font:600 clamp(24px,2.3vw,29px)/1.15 var(--display);letter-spacing:-.1px;white-space:nowrap}
+.home .hb-t{border:0;padding:0;font:600 clamp(21px,2vw,25px)/1.2 var(--display);letter-spacing:-.01em;white-space:nowrap}
 .home .hb-link{font:400 14px/1.3 var(--serif);color:var(--ink-2)}
 .home .hb-link:hover{color:var(--saffron-ink)}
 .home .hb-link .ic{width:15px;height:15px}
@@ -611,7 +584,7 @@ html[data-theme="dark"] .hero-home .hsearch{background:rgba(25,24,23,.72)}
   display:flex;align-items:center;gap:22px;width:100%;padding:0;text-align:left;
   background:none;border:0;border-radius:0;box-shadow:none;cursor:pointer}
 .home .cont-body{display:flex;flex-direction:column;min-width:0;flex:1}
-.cont-name{font:600 23px/1.2 var(--display);color:var(--head)}
+.cont-name{font:600 20px/1.25 var(--display);color:var(--head)}
 .home .cont:hover .cont-name{color:var(--saffron-ink)}
 .home .cont-w{margin-top:4px;font:400 15px/1.4 var(--serif);color:var(--ink-2)}
 .cont-prog{display:flex;align-items:center;gap:16px;max-width:460px;margin-top:12px}
@@ -635,7 +608,7 @@ html[data-theme="dark"] .hero-home .hsearch{background:rgba(25,24,23,.72)}
   background:none;border:0;border-radius:0;box-shadow:none;overflow:visible}
 .home .pcard + .pcard{padding:4px 0 4px 30px;border-left:1px solid var(--line)}
 .home .pcard-main{min-width:0}
-.home .pcard h4{font:600 25px/1.2 var(--display);color:var(--head)}
+.home .pcard h4{font:600 21px/1.25 var(--display);color:var(--head)}
 .home .pcard-main p{margin-top:5px;font:400 15.5px/1.45 var(--serif);color:var(--ink-2)}
 
 .home .tcards{grid-template-columns:repeat(6,minmax(0,1fr));gap:22px 16px}
@@ -647,7 +620,7 @@ html[data-theme="dark"] .hero-home .hsearch{background:rgba(25,24,23,.72)}
 .home .tcard{gap:12px}
 .home .tcard .portrait{flex:0 0 auto;width:74px;height:86px;border-radius:3px}
 .home .tcard-id{display:flex;flex-direction:column;min-width:0;padding-top:2px}
-.home .tcard-id b{font:600 18.5px/1.2 var(--display);color:var(--head)}
+.home .tcard-id b{font:600 16.5px/1.25 var(--display);color:var(--head)}
 .home .tcard:hover .tcard-id b{color:var(--saffron-ink)}
 .home .tcard-id > span{margin-top:3px;font:400 13.5px/1.35 var(--serif);color:var(--ink-3)}
 .home .tcard-id small{margin-top:12px;font:400 12.5px/1.45 var(--serif);color:var(--ink-2)}
@@ -665,7 +638,7 @@ html[data-theme="dark"] .hero-home .hsearch{background:rgba(25,24,23,.72)}
 .home .topic:hover{transform:none}
 .home .topic-ico{width:auto;height:auto;border-radius:0;background:none;color:var(--saffron-ink)}
 .home .topic-ico .ic{width:22px;height:22px;stroke-width:1.4}
-.home .topic b{font:500 19px/1.25 var(--display);color:var(--head)}
+.home .topic b{font:600 16.5px/1.3 var(--display);color:var(--head)}
 .home .topic small{font:400 13.5px/1.3 var(--serif);color:var(--ink-3);white-space:nowrap}
 .home .topic > .ic{width:15px;height:15px;color:var(--ink-3);transition:transform .15s,color .15s}
 .home .topic:hover b,.home .topic:hover > .ic{color:var(--saffron-ink)}
@@ -677,7 +650,7 @@ html[data-theme="dark"] .hero-home .hsearch{background:rgba(25,24,23,.72)}
   display:flex;flex-direction:column;gap:5px;padding:14px 0 16px;text-align:left;
   background:none;border:0;border-top:1px solid var(--line);cursor:pointer}
 .arow-k{font:600 10.5px/1.3 var(--sans);letter-spacing:1px;text-transform:uppercase;color:var(--fam)}
-.arow b{font:600 19px/1.25 var(--display);color:var(--head)}
+.arow b{font:600 16.5px/1.3 var(--display);color:var(--head)}
 .arow-q{font:italic 400 14px/1.5 var(--serif);color:var(--ink-3)}
 .arow:hover b{color:var(--saffron-ink)}
 
@@ -1284,7 +1257,7 @@ html[data-theme="dark"] .hero-home .hsearch{background:rgba(25,24,23,.72)}
   .brand-mark{width:34px;height:34px;font-size:18px}
   .brand-text h1{font-size:15px}
   .sidebar{
-    position:fixed;left:0;top:64px;z-index:70;background:var(--bg-2);
+    position:fixed;left:0;top:calc(var(--ok-header-h) + var(--ok-suite-vis));z-index:70;background:var(--bg-2);
     transform:translateX(-100%);transition:transform .22s;box-shadow:var(--shadow-lg);
   }
   .sidebar.open{transform:translateX(0)}
@@ -1937,7 +1910,7 @@ html[data-theme="dark"]{--viz-a:#5a86d4;--viz-b:#c9792b}
 .sm-pane .ans-head{margin-top:0}
 
 /* ---------------- Reading ----------------
-   A plain white sheet with room inside it, and the prose set in Roboto Slab at
+   A plain white sheet with room inside it, and the prose set in the serif at
    17px on 1.78 leading, left-aligned. The accent stripe comes off the sheet:
    the reference has none, and the type now does the work the stripe was doing. */
 .sm-pane,.sm-pane.gc-item,.sm-pane.ans{
@@ -2102,7 +2075,7 @@ html[data-theme="dark"] .fam-idea{--fam:#c8b4ea;--fam-bg:rgba(178,152,222,.16)}
 .atl-theme{font:600 11.5px/1 var(--sans);padding:5px 10px;border-radius:20px;background:var(--line-2);color:var(--ink-2)}
 /* the strip stays in view, and marks the part being read */
 .atl-jump{
-  position:sticky;top:64px;z-index:5;display:flex;gap:4px;overflow-x:auto;
+  position:sticky;top:var(--ok-header-h);z-index:5;display:flex;gap:4px;overflow-x:auto;
   margin:0 -40px 26px;padding:10px 40px;background:var(--panel);
   border-top:1px solid var(--line);border-bottom:1px solid var(--line);scrollbar-width:none}
 .atl-jump::-webkit-scrollbar{display:none}
@@ -2223,7 +2196,7 @@ html[data-theme="dark"] .abreaks li::before{background:rgba(221,128,100,.2);colo
   .atl-glance dl{grid-template-columns:minmax(0,1fr)}
   .atl-cards .apart{padding:18px 16px 20px}
   .atl-cards .apart-h{font-size:18px}
-  .atl-cards .atl-jump{top:64px}
+  .atl-cards .atl-jump{top:var(--ok-header-h)}
 }
 
 /* ---- A story told in chapters (an entry's saga) ----
