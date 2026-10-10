@@ -703,6 +703,10 @@ html[data-theme="dark"] .hero-home .hsearch{background:rgba(25,24,23,.72)}
   .arows{grid-template-columns:minmax(0,1fr)}
   .hb-atlas .arow:nth-child(n+4){display:none}
   .home .hb-t{white-space:normal}
+  /* a heading with a description (the Quote Bank's schools): the description
+     goes on its own line under the title, instead of squeezing in beside it */
+  .home .hb-head > :first-child{flex-wrap:wrap;row-gap:6px}
+  .home .hb-head .hb-s{flex-basis:100%;order:1;margin-top:0;padding-left:0}
 }
 
 /* ---------------- Site search ---------------- */
