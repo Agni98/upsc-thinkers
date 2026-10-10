@@ -248,10 +248,12 @@ An entry opens on the same band. It gives the entry's section, title and subject
 its place (*Entry 15 of 110*), its reading time and its ideas. The numbers beside it jump to the
 story, to the exam use (or the interpretations, if no essay theme lists it) and to the related
 entries. An *At a glance* card follows, with the source, period, tradition and type. A strip of
-the eight parts works like the other pages' segmented controls. The ten entries from the
-Upanishads, Vedanta and the Gita have seven, because they leave out *Where it breaks*: Nachiketa,
-Gargi, Indra and Virochana, Uddalaka, the chariot, the two birds, neti neti, atman, maya and the
-gunas. The strip works the same way. It stays at the top while you
+the eight parts works like the other pages' segmented controls. Eighteen entries have seven,
+because they leave out *Where it breaks*. Ten come from the Upanishads, Vedanta and the Gita:
+Nachiketa, Gargi, Indra and Virochana, Uddalaka, the chariot, the two birds, neti neti, atman,
+maya and the gunas. Eight come from the Buddhist texts: the poisoned arrow, Kisa Gotami, the
+raft, the burning house, Angulimala, the five aggregates, the three poisons, and the blind men
+and the elephant. The strip works the same way. It stays at the top while you
 read, marks the part you are in, and jumps to any other. Each part is its own card, with its own
 look inside:
 - the question: a blue call-out

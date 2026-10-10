@@ -1379,11 +1379,6 @@ const ATLAS_ENTRIES = {
         "Scholars ask whether the Buddha avoided these questions because they cannot be answered, or because any answer would mislead people. The Pali texts give practical reasons. But later Buddhist philosophers still debated these questions in great detail."
       ]
     ],
-    "breaks": [
-      "Sometimes theory is urgent. A doctor may need to know which poison was used in order to treat the wound. Knowing the cause can be part of the cure.",
-      "The story can be misused to shut down honest questions. People in authority may say “Don’t ask, just act” to avoid being questioned.",
-      "Deciding which questions are useful is itself a judgement, and people can disagree about it."
-    ],
     "uses": [
       "Disaster response: When people are in danger, the first duty is rescue and relief. Inquiries into who is to blame can come afterwards.",
       "Policy paralysis: Governments sometimes delay urgent action while they wait for more studies. The story warns against this.",
@@ -1443,11 +1438,6 @@ const ATLAS_ENTRIES = {
         "A woman’s voice",
         "Kisa Gotami is one of the early Buddhist nuns whose own verses survive in the Therigatha. In those verses, she speaks about the suffering in women’s lives and about the freedom she found."
       ]
-    ],
-    "breaks": [
-      "The story is about accepting death. It does not ask whether a death could have been prevented. Many deaths today, from hunger, accidents or poor health care, can and should be prevented.",
-      "Grief does not usually end in a single moment of understanding. For most people, it takes a long time.",
-      "The Buddha seems to offer a cure and then gives a task instead. Some readers find this test harsh, even though it leads to wisdom."
     ],
     "uses": [
       "Disaster response: Officials who deal with families after a disaster need patience and compassion, not only rules and procedures.",
@@ -5607,11 +5597,6 @@ const ATLAS_ENTRIES = {
         "Some readers worry that the simile could let people drop moral rules whenever they feel that they no longer need them. But in the Pali texts, the simile is given to monks who are still training, and the path itself includes strict ethical discipline."
       ]
     ],
-    "breaks": [
-      "It is not easy to know when we have really reached the far shore. People may drop a useful discipline too early.",
-      "Some things are more than tools. Values such as honesty and compassion are not meant to be thrown away.",
-      "The simile is about a spiritual goal. Applying it to every rule in society can be misleading."
-    ],
     "uses": [
       "Outdated laws: Governments often keep old laws and procedures long after their purpose has ended. In recent years, India has repealed more than a thousand obsolete laws for this reason.",
       "Ideology: Political and economic ideas are tools for solving problems. Holding on to them as fixed identities can stop people from seeing new solutions.",
@@ -5908,11 +5893,6 @@ const ATLAS_ENTRIES = {
         "No one has the complete truth, so people should talk to each other with humility. In the nineteenth century, the American poet John Godfrey Saxe wrote a poem about this story. His poem made this reading popular in English."
       ]
     ],
-    "breaks": [
-      "In the story, the king can see the whole elephant. So the story depends on someone having a complete view, even though its lesson is that people see only parts.",
-      "Some claims are not partly true. They are simply false. Being humble about our own point of view does not mean that every view is equally correct.",
-      "The blind people never share what they know with each other. If they had, they might have worked out what an elephant looks like. Good research and good discussion do exactly this."
-    ],
     "uses": [
       "Government departments: Health, finance and environment departments often see the same problem in different ways. The story shows why they need to work together on policy.",
       "Dialogue between communities: The story encourages tolerance between religions and communities. But it does not say that all views are equally true.",
@@ -6083,11 +6063,6 @@ const ATLAS_ENTRIES = {
         "Some readers point out that the story can be used to justify manipulation. Anyone in authority could claim that misleading people is for their own good."
       ]
     ],
-    "breaks": [
-      "The father knows for certain that the house is on fire. In real life, people in power are often less certain, and they may be wrong about the danger.",
-      "The story treats people like children who cannot understand the truth. Adults in a democracy have a right to honest information.",
-      "People who learn that they were misled may stop trusting the person who misled them, even if the deception was for their good."
-    ],
     "uses": [
       "Public health: Governments sometimes use rewards, such as lotteries or free gifts, to encourage people to get vaccinated. Such rewards appeal to what people want in order to protect them.",
       "Nudges: Policy nudges, such as making pension savings the default choice, guide people towards good outcomes without forcing them. The ethical question is how far such guidance can go before it becomes manipulation.",
@@ -6147,11 +6122,6 @@ const ATLAS_ENTRIES = {
         "In the discourse, the monk Angulimala meets a woman in a difficult childbirth. He says that since his new birth as a monk, he has not knowingly killed any living being, and he wishes that by this truth she and her child will be safe. His new life becomes a source of healing."
       ]
     ],
-    "breaks": [
-      "The Buddha’s success depends on his special wisdom. Most offenders will never meet such a teacher, so society cannot rely on sudden conversions.",
-      "The story says little about the victims and their families. Real justice must also consider what they need.",
-      "The story may seem to let a murderer escape the law by joining a religious order. Modern law cannot accept this."
-    ],
     "uses": [
       "Prison reform: In the 1990s, Kiran Bedi introduced Vipassana meditation classes in Tihar Jail as part of her reforms. In the United Kingdom, the Buddhist prison chaplaincy is named Angulimala after this story.",
       "Surrender and rehabilitation: Surrender policies for armed rebels are based on the idea that people who give up violence can return to society.",
@@ -6204,11 +6174,6 @@ const ATLAS_ENTRIES = {
         "Western parallels",
         "The Scottish philosopher David Hume described the self as a bundle of perceptions. Scholars point out that the modern philosopher Derek Parfit reached a view close to both Hume’s idea and the Buddhist idea of the five aggregates."
       ]
-    ],
-    "breaks": [
-      "If there is no permanent self, it is hard to explain who is responsible for past actions or who is reborn. Buddhist schools have long debated this problem.",
-      "A chariot is a lifeless object that people build and name. A living person has memory and consciousness, so the comparison may be too simple.",
-      "Some people misread the teaching as saying that persons do not exist at all. The teaching says that persons exist, but not as fixed, unchanging selves."
     ],
     "uses": [
       "Personal change: A person who has made mistakes is not fixed forever. Seeing the self as changing supports rehabilitation and growth.",
@@ -6269,11 +6234,6 @@ const ATLAS_ENTRIES = {
         "Social reading",
         "The three poisons do not stay inside individuals. Greed can shape economies, hatred can shape politics, and delusion can spread through propaganda and false information."
       ]
-    ],
-    "breaks": [
-      "The teaching places the causes of harm inside the mind. But poverty, unjust laws and weak institutions also cause harm, and they need social solutions.",
-      "Not every desire is greed, and not every anger is hatred. Anger at injustice can be a healthy moral response.",
-      "The three roots are broad categories. Real motives are often mixed and hard to separate."
     ],
     "uses": [
       "Corruption: Greed is the root of bribery and the misuse of public money. Ethics training and transparency try to weaken this root.",

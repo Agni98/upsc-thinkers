@@ -3578,8 +3578,8 @@ function renderAtlasNav(){
    Every entry answers the same questions in the same order. The overview
    shows the order once, and each entry carries it as a strip of numbered parts,
    so a reader always knows what comes next and can jump to it. The entries
-   from the Upanishads, Vedanta and the Gita have no "Where it breaks", so
-   their parts are numbered without it. */
+   from the Upanishads, Vedanta, the Gita and the Buddhist texts have no
+   "Where it breaks", so their parts are numbered without it. */
 const ATLAS_PARTS = [
   ["story",    "book",    "The story",         "What happened, or the case to imagine"],
   ["question", "help",    "The question",      "The problem it forces you to face"],
