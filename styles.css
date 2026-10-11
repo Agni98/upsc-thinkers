@@ -41,7 +41,7 @@
   --sidebar-w:288px;
   --read:var(--ok-serif);
   --display:var(--ok-serif);
-  --read-ink:#3a3835;
+  --read-ink:var(--ok-read-ink);
   --band:var(--ok-navy);
   /* the masthead: the header paper every OkayUPSC site uses */
   --mast:var(--ok-surface-2);
@@ -57,7 +57,6 @@ html[data-theme="dark"]{
   --gold:#cbb47c;
   --gold-soft:#282318;
   --quote-ink:#eeeae4;
-  --read-ink:#dcd8d2;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
