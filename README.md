@@ -1,16 +1,11 @@
 # Thinkers for UPSC Mains — Essay & GS-IV Ethics
 
-A single-page reference site covering **91 philosophers and thinkers** across 10 traditions,
-with core ideas, exact quotations, portraits, and a direct mapping to where each one belongs
-in the Essay paper and in GS Paper IV.
+A single-page reference site covering **91 philosophers and thinkers** across 10 traditions, with
+core ideas, exact quotations, portraits, and a direct mapping to where each one belongs in the
+Essay paper and in GS Paper IV.
 
-## Opening it
-
-Just double-click **`index.html`**. No build step, no install, no server needed.
-
-The 85 portrait URLs are pre-resolved and baked into `portraits.js`, so the site makes
-**no API calls at all** — photos load straight from Wikimedia. Fully offline, the page and
-all its text work exactly the same and show lettered monograms in place of photos.
+**<https://thinkers.okayupsc.com>** — Cloudflare Pages publishes this repo on every push to
+`main`.
 
 ## What's inside
 
@@ -20,273 +15,24 @@ all its text work exactly the same and show lettered monograms in place of photo
 | **Essay Paper** | Thinkers who supply an opening quote, a spine, or a counter-argument |
 | **GS-IV Ethics** | Thinkers named in or directly serving the Ethics syllabus |
 | **Quote Bank** | All 317 quotations, one card per thinker, arranged by tradition, essay theme or GS-IV heading |
-| **GS-IV Syllabus Map** | Each syllabus heading → its recurring concepts, the thinkers who answer it, its past questions |
-| **Essay Theme Map** | The nine themes the paper keeps asking → five sub-theme paragraphs, full essays, stories to use |
-| **Stories and Models** | The Human Thought Atlas: stories, thought experiments and models, arrangeable by essay theme |
-| **Past Questions** | 72 questions from nine Mains papers, grouped by what each one asks of you |
+| **GS-IV Syllabus Map** | Each syllabus heading, its recurring concepts, the thinkers who answer it and its past questions. All 81 case studies live here, each with a model answer |
+| **Essay Theme Map** | The nine themes the paper keeps asking, each with five model paragraphs, the essays and the stories to use |
+| **Stories and Models** | The Human Thought Atlas: 111 stories, thought experiments and models, arrangeable by essay theme |
+| **Past Questions** | 72 essay questions from nine papers and 257 GS-IV questions from 2013 to 2026, each grouped by what it asks of you |
 
-### The home page and finding your way
+Every page has its own address, so any page can be bookmarked or shared: a thinker is
+`#socrates`, and the rest are `#/work/katha/nachiketa-at-the-house-of-death`, `#/atlas/nachiketa`,
+`#/essay/<title>` and `#/themes?page=2`.
 
-The header is a paper masthead: the page's own warm off-white, the name in navy beside a navy
-and saffron mark, and a saffron underline under the section you are in. It carries five sections:
-**Home**, **Thinkers**, **GS-IV** and **Essay** (each with a menu of what is in it) and **PYQs**,
-whose page switches between essay topics and GS-IV questions. The **Thought Atlas** has its own
-saffron pill with a compass at the end, and keeps a compass button on a narrow screen, where
-the sections move into the drawer. The
-sidebar lists the same sections, then ways to browse: all thinkers, Indian, Western and
-contemporary thinkers, works in depth, and three groups that fold open (schools and traditions,
-the GS-IV headings, the essay themes), with case studies, quotes and stories below.
+The portrait URLs are pre-resolved and baked into `portraits.js`, so the site makes **no API
+calls**. It runs from the file system with no build step, and offline it shows lettered monograms
+in place of the photographs.
 
-The home page is deliberately quiet: the serif for names and headings,
-hairline rules beside each heading, links set as underlined words with an arrow, and lists in
-place of cards. It opens with one search box for the whole site (Ctrl K or Cmd K opens search
-from any page), six shortcuts and a quotation from the quote bank that changes daily, over Rodin's
-Thinker. Below it: where you stopped, with how much of that heading or theme is read; the two
-papers, each with four named links (GS-IV: topics, case studies, PYQs, notes; Essay: themes,
-essays, PYQs, paragraphs); six thinkers; the six essay themes the paper has asked most, in two
-columns; and six entries from the Thought Atlas, one of each kind first, a different six each day
-(three on a phone). The photographs are public-domain and CC0 images from Wikimedia Commons.
+## The nine essay themes
 
-### GS-IV concept notes
-
-Each concept in `gs4concepts.js` has a definition (`d`), the questions that asked it (`qs`) and a
-source line (`src`). Every concept under headings 1 to 15 is written as structured reading notes:
-`d` holds the definition, `secs` the numbered sections, each `[heading, paragraphs]`, and `take` the
-key takeaway. The page shows a definition box, the numbered sections and a takeaway box. A paragraph
-that is itself a list of strings becomes bullets. The nine case-study patterns under heading 16 use
-the same form, with the opening box labelled *The situation* (`dlab`) instead of *Definition*.
-
-A note can also link out. `tk` holds `[thinker id, idea heading]` pairs, shown as **Thinkers**
-buttons that open the thinker's page at that idea. `es` holds `[theme number, paragraph index]`
-pairs for model paragraphs in the Essay paper, and `at` holds Thought Atlas ids. The links go
-both ways: each idea on a thinker's page lists the GS-IV notes that point to it.
-
-**What the notes must cover.** The notes were first built only from past GS-IV questions, and
-that let obvious ideas slip. Trusteeship, civil disobedience and duty against charity had never
-been asked in GS-IV, so they had no note until the 2026 paper asked them. Other ideas had been
-asked and still got no note of their own, because the old notes grouped questions by the topic
-of the quotation. "Discuss Mahatma Gandhi's concept of Seven Sins" (2016) sat under no note at
-all, and 24 questions, including most of the 2025 paper, were linked to no note. The notes now
-also cover the standard canon, whether or not it has been asked yet:
-- the Western theories: utilitarianism, Kant, virtue ethics, Rawls, Mill's harm principle, the
-  social contract and the ethics of care
-- Indian thought: Gandhi's method, the seven social sins, sarvodaya and antyodaya, Kautilya,
-  nishkama karma and Mahavira
-- administration: Arendt, dirty hands, Simon and Weber
-- the syllabus's own phrases: lessons from leaders, tolerance, the philosophical basis of
-  governance, and citizen's charters with work culture and service delivery
-- moral development, end-of-life ethics and free speech
-
-Every question in `gs4pyq.js` is linked to at least one note. When a paper is added, link every
-question to a note, and give any idea the paper raises a note if the site lacks one.
-
-### Reading the maps
-
-Both maps, and the atlas, read the same way. A map opens on an **index** of every heading,
-each with what is inside it and how much of it has been read. Open a heading and the sidebar
-becomes its **contents**: every heading down the side, the open one showing its items as a
-tree, and a tick against each item once it has been opened. The item itself fills a single
-reading column capped at a comfortable width, under a header that says where you are
-(*Theme 4 of 9 · Model paragraph 2 of 5*), with previous and next both at the top and the
-bottom. The left and right arrow keys step item by item, across headings.
-
-The site remembers what has been read and where you stopped, in this browser only. The home
-page offers **Continue where you left off**, and each map's index offers its own. The card's
-picture belongs to what was being read. A case study shows the case studies' picture, and an
-essay shows Saint Jerome. A story shows the atlas's engraving, and a model paragraph the pen nib.
-A concept note shows its heading's icon. For a case study, progress is counted within its theme. On a narrow
-screen the contents live in the drawer, opened from **Contents** at the top of the column.
-
-### The GS-IV syllabus map
-
-Its first page has the home page's header band, with shortcuts to the concept notes, past
-questions and case studies. Below that come:
-- **Where the paper asks most**: a stacked bar per heading of theory and case-study questions,
-  2013 to 2026, sorted by total, with a tooltip and a table view. The two moral-thinkers headings
-  share one pool and appear once. The Case Studies heading is left out, since its cases are
-  already counted under the heading each tests.
-- a card per heading: its syllabus line, counts, most asked concepts and reading progress
-
-A heading page shows what the heading holds. Every concept note carries a strip of its parts
-(definition, numbered sections, takeaway, where it was asked) that stays in view and jumps to
-each one.
-
-### GS-IV case studies
-
-Case studies have a front page of their own, in the same style as the other pages. Its header
-band shows Annibale Carracci's *The Choice of Hercules* (1596, public domain): Hercules at the
-crossroads between Virtue and Vice. The first number in the band opens the full five-box method.
-Below the band:
-- a switch between two arrangements. **By theme** shows seventeen cards. Each gives the theme's
-  core conflict, its answer engine, a strip of the years its cases were set, the latest case and
-  your progress. **By year** lists every paper's cases, newest first, so a whole paper can be
-  practised at once.
-
-The menus, the sidebar and every "case studies" link lead to this page. The cards and rows open
-the answers, which are read in the syllabus map.
-
-The Case Studies heading of the syllabus map is where every Section B case lives: all 81, from
-2013 to 2026, each with a model answer. It holds three things.
-
-**How to answer one: the five boxes.** The method comes from the supplied answer framework.
-It runs: case, ethical conflict, governing principles, options, eliminate the defective ones,
-a defensible course of action. Every answer uses the same five boxes:
-1. Ethical conflict: what exactly pulls in opposite directions
-2. Stakeholders: who gains, who loses, who has a duty
-3. Options: each with its merit and its problem
-4. Decision criteria: legality, public interest, harm, fairness, integrity, feasibility
-5. Action sequence: what happens first, second, third
-
-The method page adds the six tests, a stakeholder checklist, the weak and strong versions of a
-conflict and of a sequence, the rules the answers follow, and what the cases teach.
-
-**Seventeen themes, each with a common architecture.** The first ten are the answer engines in the
-framework; seven more cover the cases those ten do not: threats and inducements, crises that will
-not wait, the job against the rest of your life, dignity at work, fixing the system,
-development against the people who pay for it, and good intentions against the right to decide.
-A case goes under the theme whose engine gives the right advice for it. Lata's case (2026) looked
-urgent but was not an emergency, so it sits under the right to decide, not under the crisis theme. Each theme has a core conflict and an engine
-(for example: record the facts, seek the order in writing, escalate through the channel, act
-lawfully). Its common architecture fills the five boxes in general terms and adds the traps. It
-links to the concept notes to reason with, and lists its cases, newest first.
-
-**A model answer for every case.** Each answer opens with the case in brief and the question as
-set, then the five boxes, then any part of the question the boxes do not already answer (the
-laws asked for, the training suggested, the policy measures), and a model conclusion. Five of
-the answers (Rajesh, Subash, Sunil, the Municipal Commissioner, the Executive Engineer) are the
-supplied model answers. The other seventy-six follow them.
-
-Every case is an item in the heading's contents tree, under its theme, so read ticks and
-previous and next work as they do elsewhere. Wherever a case appears (the GS-IV questions page,
-a heading's question list, a concept note, the site search), it links to its answer.
-
-The data: `cases.js` holds the method (`CASE_METHOD`) and the answers (`CASE_ANSWERS`, keyed by
-question id). The themes are the Case Studies entries in `gs4concepts.js`, with their `core`,
-`engine`, `arch` and `links`.
-
-**The 2026 paper** was added from the paper as supplied: thirteen theory questions (Q239 to Q251)
-and six cases (Q252 to Q257), each case with a model answer. The supplied paper carries no
-syllabus headings, so the 2026 questions' headings and themes were assigned from what each
-question asks. Five concept notes were added for ideas the paper raised and the site lacked:
-trusteeship, civil disobedience in a constitutional democracy, and duty and charity (under both
-moral-thinkers headings), efficiency and effectiveness (Probity in Governance), and national
-security and human rights (Public / Civil Service Values). The medical-ethics note gained a
-section on paternalism, and the drug-trials note one on untested remedies.
-
-### The Essay Theme Map
-
-Its first page follows the same pattern:
-- the header band
-- the same stacked chart, splitting each theme's past topics by the section of the paper they were
-  set in (A or B)
-- a card per theme with its counts, a strip of the years the paper asked it, and its latest topic
-
-A theme page shows what the theme holds. Both maps' charts come from one function,
-`stackChartHTML` in app.js.
-
-### Model essays
-
-The Model Essays page has the same header band, with Dürer's *Saint Jerome in His Study* (CC0).
-It shows the essays grouped by theme. Each card
-opens with the essay's own first sentence, followed by its word count, the topics it answers
-(with the first one quoted), the stories it uses, and whether you have read it.
-
-An essay page opens with where it sits (*Essay 3 of 19*) and what it holds: words, paragraphs,
-reading time, topics answered and stories used. The conclusion is set apart in a box, the
-stories it uses are cards, and previous and next move through the essays in theme order. An
-essay read here counts as read in its theme on the Essay Theme Map.
-
-### Past year questions
-
-Both past-question pages, Essay topics and GS-IV questions, have the same header band, with a
-marble head of Socrates from the Vatican Museums (public domain). The switch between the two
-papers sits in the band. The three numbers beside it lead somewhere. The paper count opens the
-By-year view. On the Essay page the other two open the By-theme view and the model paragraphs.
-On the GS-IV page they open the case studies and the concept notes.
-
-Below the band, each group is a card. It shows its rank and
-name, a bar for its share of all the questions, and a strip with one cell for each paper. A
-cell is light when the paper set one question from the group, and dark when it set two or more.
-*By theme* and *By year* are a
-segmented control, and a label under each question in By year jumps back to its group.
-
-### The Quote Bank
-
-The Quote Bank has the same header band, with Cesare Maccari's fresco of Cicero speaking in the
-Roman Senate (1889, public domain). The band holds a box that filters the quotations as you type
-and the paper switch. Every word you type has to appear in the quotation or in the thinker's name.
-
-Below it comes a switch that arranges the quotations
-by tradition, essay theme or GS-IV heading. A thinker listed under two themes or headings appears
-under both. Thinkers not listed under any appear in a last group, so every quotation is shown.
-*One-liners only* hides every quotation longer than 12 words.
-
-Each thinker is one card with their quotations. Click the name to open the thinker. The sidebar
-search now searches the whole site on this page too, as it does everywhere else.
-
-### Reading the atlas
-
-The atlas holds 111 entries. The most recent is the drowning child, Peter Singer's thought
-experiment on duty and charity (1972). The ten before it are models and findings from the social
-sciences: job market signalling, the digital provide (Kerala's fishermen and mobile phones), Sen
-on famine and entitlements, the Jevons paradox, Coase and the problem of social cost, the resource
-curse, defaults and nudges, the belief in a just world, the Pygmalion effect, and the great and
-little traditions. Three Upanishad stories are told in full: Uddalaka and Shvetaketu (all nine
-of the "that you are" examples, with the fast and the ordeal of the hot axe), Indra and Virochana
-(each of Indra's four returns to Prajapati), and Gargi and Yajnavalkya (the whole contest at
-Janaka's court, from the cows to Shakalya).
-
-The atlas opens on an **overview**, with the same header band as the other pages. The picture is
-the Flammarion engraving (1888, public domain). The three numbers in the band open the first
-entry, arrange the entries by essay theme, and jump to the key of kinds. Below the band come a
-search box, six ways to arrange the entries (section, essay theme, idea, tradition, form, A to Z), a
-tile for each group with how much of it has been read, and every entry as a card showing the
-question it asks. Colour marks the kind of entry throughout: imagined cases, stories, findings and
-models, and ideas and images.
-
-An entry opens on the same band. It gives the entry's section, title and subject, its kind,
-its place (*Entry 15 of 110*), its reading time and its ideas. The numbers beside it jump to the
-story, to the exam use (or the interpretations, if no essay theme lists it) and to the related
-entries. An *At a glance* card follows, with the source, period, tradition and type. A strip of
-the eight parts works like the other pages' segmented controls. Eighteen entries have seven,
-because they leave out *Where it breaks*. Ten come from the Upanishads, Vedanta and the Gita:
-Nachiketa, Gargi, Indra and Virochana, Uddalaka, the chariot, the two birds, neti neti, atman,
-maya and the gunas. Eight come from the Buddhist texts: the poisoned arrow, Kisa Gotami, the
-raft, the burning house, Angulimala, the five aggregates, the three poisons, and the blind men
-and the elephant. The strip works the same way. It stays at the top while you
-read, marks the part you are in, and jumps to any other. Each part is its own card, with its own
-look inside:
-- the question: a blue call-out
-- the insight: a saffron box
-- interpretations: cards
-- limits: flagged items
-- cases: labelled blocks
-- exam use: split into GS-IV and Essay rows, with the essay themes and model essays that use it
-- related entries: cards
-
-Inside the Essay Theme Map, an entry keeps its plain single sheet, so it reads as part of the theme.
-
-Each thinker page has: a collapsed **Read full introduction** toggle → **Core Ideas** →
-**Key Quotations** → **Major Works** → **Where to Use It** (split into Essay themes and
-GS-IV syllabus hooks).
-
-### Practice questions
-
-Below **Where to Use It** sits a **Practice questions** toggle with two multiple-statement
-questions per thinker, in the UPSC format. The answer appears the instant you pick an
-option — there is no submit step. A wrong pick marks your choice, highlights the correct
-option and reveals the explanation; the first answer stands, so you cannot click around
-until something turns green.
-
-They are written to teach rather than trap. Incorrect statements are plainly incorrect to
-anyone who has read the page above, never subtly misleading, and the explanation says why
-each statement stands or falls. Questions live in `mcqs.js` (`q`, `s`, `o`, `a`, `why`).
-
-### One theme list, three depths
-
-The Essay Theme Map, the model paragraphs and Past Questions all run on the **same nine
-themes**, derived from what the 2018-2026 papers actually asked rather than from a
-prep-guide taxonomy. Ordered most-asked first:
+The Essay Theme Map, the model paragraphs and Past Questions all run on the same nine themes,
+derived from what the 2018–2026 papers actually asked rather than from a prep-guide taxonomy.
+Most-asked first:
 
 | # | Theme | PYQs | Papers |
 |---|---|---|---|
@@ -300,211 +46,6 @@ prep-guide taxonomy. Ordered most-asked first:
 | 8 | Nature, Development and Civilisation | 4 | 4 of 9 |
 | 9 | Technology and the Modern Self | 4 | 4 of 9 |
 
-Each theme opens into **five model paragraphs, and they are not five restatements of the
-theme** — they are the five different *kinds* of question the theme keeps throwing up. So
-"Mathematics is the music of reason" reaches *Reason has a music*, while "The empires of the
-future will be the empires of the mind" reaches *The empire of the mind*, though both are
-knowledge questions. 45 paragraphs, 300-360 words each, built from the thinkers only.
-
-Every paragraph carries the past questions it answers; every past question carries a link to
-the paragraph written for it. All 72 questions reach one.
-
-### Each paragraph as a revision guide
-
-Open a model paragraph and it reads as a **revision and answer-building guide**, in six parts
-under a jump strip:
-
-1. **The moral problem**, with one useful distinction in a box.
-2. **The thinkers as tests of judgment.** Each thinker has a one-line subtitle, two short
-   paragraphs and a "Use X when" line. A box then says what the thinkers add up to.
-3. **Applying the framework.** Five worked examples, each ending with what the example tests.
-   They grew out of the "Open it out with" notes and take their place.
-4. **The past topics developed.** Every question the paragraph serves gets about 250 words.
-   Paragraphs 7.5, 8.5 and 9.4 serve none, so they get two **topics to practise** instead,
-   labelled as such.
-5. **Five model paragraphs** for answer writing, each opening with a bold lead.
-6. **Build a defensible answer**: seven steps and a conclusion formula.
-
-A short opening problem and **the central claim** sit above the six parts. The structure follows
-a sample guide for paragraph 1.1. All 45 guides are written the same way, and all nine themes
-are complete.
-
-Guides live in `guides.js`, keyed by theme title with one entry per paragraph (`null` where a
-paragraph has none). A paragraph without a guide falls back to the plain paragraph view.
-
-The guides and the model essays follow the site's plain-English rules. Write for an intelligent
-reader with no specialist background, in the register of a good magazine essay. Keep sentences
-short or medium (none over 35 words), in normal word order, with no semicolons or dashes and no
-sentence that opens with a bare "This", "That" or "It". Explain abstract ideas in concrete
-terms, with an example where it helps. Say why one point leads to the next, signpost contrasts
-("At its best…", "But there is a problem…", "The important distinction is…"), and end each
-section on its central point. Keep every qualification: restructure, never just swap in
-synonyms.
-
-**No commentary about the site itself.** Pages carry content only. There are no "how every page
-is built" strips, no notes saying how to read a chart or a card, and no lines such as "the
-examples below show". The numbers in a header band carry plain labels.
-
-### Model essays
-
-**Two essays per theme** (three for Justice), **nineteen in all**, and the pair on each theme
-is built to divide the work between them. The first takes the theme's central argument; the
-second takes the questions the first leaves open. So *The certificate and the question* asks
-whether Indian education produces minds or credentials, while its companion *The romantic man
-was never the enemy* asks what turns information into understanding — both knowledge
-questions, different demands, different essays.
-
-Each essay carries a **`serves`** list naming the past questions it is the home for. Across a
-theme those lists **partition** the theme's questions: every past question has exactly one
-essay, none is shared, and none is missed. The site checks this, and all **72 of 72** are
-covered.
-
-| Theme | Essays | PYQs |
-|---|---|---|
-| Ends, Means and the Ethics of Decision | The file that nobody moved · A standard nobody meets is still a standard | 12 |
-| Knowledge, Education and the Doubting Mind | The certificate and the question · The romantic man was never the enemy | 11 |
-| Character, Adversity and the Test of Power | We examine for endurance and promote for compliance · The straight line is the least likely path | 9 |
-| The Good Life | The country is richer. Ask it whether it is better · The inner life is not a private matter | 9 |
-| Culture, Memory and the Making of Meaning | The argument a country has with itself · The most confident account is rarely the true one | 9 |
-| Justice, Equality and the Excluded | A country should not need this much kindness · Educated, and still not counted · Somebody always pays for the public good | 9 |
-| Democracy, the State and India in the World | Between two elections · Autonomy is a capability, not a posture | 5 |
-| Nature, Development and Civilisation | The bill arrives in a different currency · We stopped being taught by anything we did not make | 4 |
-| Technology and the Modern Self | We built the rails without asking where they go · The jobs question is the wrong question | 4 |
-
-All nineteen are written in **one register**. The argument is carried by policy, data and
-institutions; a thinker appears where the idea does real work and nowhere for the sake of
-appearing; and **no paragraph opens by announcing a philosopher** — a rule the build checks,
-because opening that way is the tell that an essay has stopped being editorial. Each is
-1,600–2,000 words and is built from its theme's five model paragraphs plus the "Open it out
-with" prompts those paragraphs leave for the writer. Where a story, experiment or model from the
-Human Thought Atlas does real work in an argument, it is used inside the paragraph that needs
-it; no essay is built around one.
-
-The atlas is part of the Essay paper in three places. Each theme in the Essay Theme Map lists
-**Stories to use** after its essays — the ones its essays draw on first — and they open in the
-same reading column. Each essay ends with **Stories this essay uses**. And each atlas entry
-says which themes it suits and which model essays use it. A theme's list is its `atlas` field
-in `ESSAY_THEMES` (app.js); an essay's is its `atlas` field in `essays.js`.
-
-Essays live in `essays.js`, keyed by their own title: `et` the title, `ep` the paragraphs,
-`serves` the questions it answers, `note` how it relates to its pair. `**double asterisks**`
-render as bold and nothing else is treated as markup. Open one from the radio buttons under
-the model paragraphs, or from **Model essays** in the Essay menu.
-
-### Past questions, classified
-
-Its own view, under **PYQs** in the header: every essay set in the last nine
-Mains papers — **2018 to 2026, 72 questions** — grouped by what the question asks you to do
-rather than by subject.
-
-Grouped by the same nine themes as the Essay Theme Map, ordered **most-repeated first**. Each
-carries a 20–50 word note on what holds it together, the questions with year and section, the
-thinkers who help, and a link to the matching model essay. Every question also links to the
-model paragraph written to answer it.
-
-**Every question sits in exactly one group**, so the ordering is a count and not an
-impression. Where a question genuinely reads two ways, the second reading is printed under
-it as a note rather than counted twice. A **By year** tab shows the nine papers as they were
-set, each question labelled with the group it belongs to.
-
-
-Papers, groups and the trend notes live in `pyq.js`. Question ids are `<year><section><n>` —
-`2023B1` is the first question of Section B, 2023 — so a question is reclassified by moving
-one short string from one group's `qs` list to another's.
-
-### Major Works and covers
-
-`works.js` lists 3–4 key texts per thinker with a year and a one-line note. Where the work
-has a **freely-licensed** image on Wikimedia Commons — a first-edition title page, a
-manuscript folio — `covers.js` supplies it. Copyrighted modern jackets are deliberately
-excluded, and any work without an accurate image is drawn as a small printed title card
-instead, so nothing on the page is misleading.
-
-### Works in Depth
-
-Five thinkers, **one from each of five traditions**, picked to be as unlike each other as this
-roster allows. **Classified by thinker**, and each of their **15 works gets its own piece of
-roughly 1,000 words** — on what is actually in the book, and on what happened to it.
-
-| Thinker | Tradition | Works |
-|---|---|---|
-| Lao Tzu | Eastern Wisdom | Tao Te Ching |
-| Kautilya | Indian Classical | Arthashastra · Chanakya Niti |
-| Karl Marx | Modern Western Political | 1844 Manuscripts · The German Ideology · Manifesto · Das Kapital |
-| B. R. Ambedkar | Indian Renaissance | Problem of the Rupee · Annihilation of Caste · States and Minorities · Buddha and His Dhamma |
-| George Orwell | Global Humanist | Homage to Catalonia · Animal Farm · Politics and the English Language · Nineteen Eighty-Four |
-
-Every work carries two classification tags, because the second turns out to be half the story:
-
-- **Form** — what kind of book it is: aphoristic poem, statecraft manual, doctoral thesis,
-  unpublished notebooks, undelivered address, beast fable, war memoir.
-- **Fate** — how it reached us: *lost for fifteen centuries*, *abandoned to the mice and printed
-  in 1932*, *self-published after the conference was cancelled*, *rejected by four publishers*.
-
-**Three levels.** The index page has the same header band as the other pages, with Carl
-Spitzweg's *The Bookworm* (about 1850, public domain). Below it come all 16 works on one
-timeline, oldest first. Where more than two
-centuries pass between two works, the line breaks and says how long. Then comes a shelf for
-each thinker, with a portrait, the reason they were picked, and a card for each work. A card
-shows the cover, date, one-line gist, form, fate and reading time.
-
-A thinker's page carries the framing, the shelf and a boxed *Taken together* close. Each work has
-its own page with its form, fate, cover and the full piece, and the author's other works as
-cards. Both pages open with where they sit (*Works in Depth / Karl Marx / Work 3 of 4*) and
-what they hold: words and minutes. Previous and next run through every work in shelf order, or
-through the shelves on a thinker's page.
-
-Every piece leads with **what the work says** — the argument, the story, the ideas explained
-for someone who has not read it — with publishing history and reception kept to a supporting
-section near the end. Each is broken into named sections rather than running as undifferentiated
-paragraphs.
-
-**Every Major Works card for these five is a button.** Click a book anywhere on the site and it
-opens that work's page. Cards for the other 86 thinkers stay plain, so what is clickable looks
-clickable.
-
-A sixth entry is a **text rather than a person**: **Rigveda — an Overview**, filed under
-*The Rigveda · Vedic Corpus*, because it has no single author. About 4,000 words across 17
-sections, illustrated with a CC0 palm-leaf manuscript from Kashmir written in **Sharada**
-script — chosen because it makes the piece's central point visible: the language is ancient,
-the script is not.
-
-A seventh entry is also a text: **the Katha Upanishad**, with one work, **Nachiketa at the House of Death**. It is told as a saga: 14 coloured chapters with a chapter route at the top, 43 verses in Devanagari with transliteration and English, 13 echoes in later thought, and a portrait of the hero. A work with a `saga` renders those chapters in place of prose. The Thought Atlas entry for Nachiketa keeps its short story and links here. A work with a `scene` opens with a wide picture that animates itself: for the Katha it is `nachiketa-door.svg`, an original drawing in which the boy waits at Death's door while one more lamp is lit each night, until the doors open at dawn. The SVG carries its own CSS and stands still for readers who ask for reduced motion.
-
-Content lives in `worklab.js`, keyed by thinker id. Each work's `t` matches its title in
-`works.js` exactly — that is what makes the link work. Adding a sixth thinker is a matter of
-adding an entry; the buttons appear on their own.
-
-### The introductions
-
-Every thinker has a ~200-word prose profile behind the toggle under their photo — who they
-were, the background their thought grew out of, how their core concepts hang together, and
-an "In essence" conclusion. It stays collapsed so the page still opens clean and scannable;
-click to expand. Printing a thinker page includes the introduction whether or not it is open.
-
-These live in `profiles.js`, keyed by thinker id:
-
-```js
-"socrates":{
-  p:["First paragraph…", "Second paragraph…"],
-  essence:"The one-line synthesis, printed after 'In essence:'"
-}
-```
-
-A thinker with no entry there simply shows no toggle, so you can add or rewrite them freely.
-
-### Shortcuts
-- `/` or `Ctrl+K` — open the site search. Every word must match; results come grouped as
-  thinkers, GS-IV concepts, stories and models, model essays, past questions and quotations
-- `Esc` — close a thinker page
-- Sun/moon button — light / dark mode, remembered between visits
-- `Ctrl+P` on an open thinker page — prints just that page, clean, for revision notes
-- Every page has its own address, so any page can be bookmarked or shared: a thinker is
-  `#socrates`, other pages `#/work/katha/nachiketa-at-the-house-of-death`, `#/atlas/nachiketa`,
-  `#/essay/<title>`, `#/themes?page=2`. The **Share** button on thinkers, essays, Atlas entries
-  and Works in Depth opens the phone's share sheet, or copies the link where there is none
-  (as in the app); the link always names thinkers.okayupsc.com
-
 ## Files
 
 ```
@@ -512,16 +53,16 @@ index.html    page shell
 okay-ui.css   the look shared with okayupsc.com and the Constitution site: colours, type,
               corners and the navy OkayUPSC bar. Copied in from the okayupsc repo by
               tools/sync-ui.js there; edit it in that repo, not here
-styles.css    all styling (light + dark themes, print rules), with its colours mapped onto okay-ui.css
-fonts/        Roboto Slab (copied in from the okayupsc repo with okay-ui.css) and Noto Serif
-              Devanagari for the Sanskrit (this repo's own), each with its licence
-data.js       ← ALL CONTENT LIVES HERE
-profiles.js   the ~200-word introductions behind each toggle
-works.js      3–4 major works per thinker
-covers.js     cover / title-page images for those works
-worklab.js    17 works explored in depth, including the Rigveda and the Katha Upanishad
+styles.css    all styling (light + dark themes, print rules), mapped onto okay-ui.css
+fonts/        Roboto Slab (copied in with okay-ui.css) and Noto Serif Devanagari for the
+              Sanskrit (this repo's own), each with its licence
+data.js       ← ALL THINKER CONTENT LIVES HERE
+profiles.js   the ~200-word introduction behind each thinker's toggle
+works.js      3-4 major works per thinker
+covers.js     cover and title-page images for those works
+worklab.js    17 works explored in depth, across seven thinkers and texts
 mcqs.js       two practice questions per thinker
-answers.js    five sub-theme model paragraphs per essay theme (45 in all)
+answers.js    five model paragraphs per essay theme (45 in all)
 guides.js     each model paragraph as a six-part revision guide
 essays.js     19 model essays, two per theme, partitioned across the past questions
 pyq.js        nine years of past essay questions, classified by theme
@@ -532,13 +73,30 @@ gs4concepts.js the GS-IV concept notes, and the 17 case-study themes
 cases.js      the case-study method and a model answer for every case
 app.js        rendering, search, syllabus maps
 favicon.svg   the tab icon: the app's logo without its hills, cropped close so it holds at 16px
-favicon-32.png  the same as a PNG, for browsers without SVG icons
-apple-touch-icon.png  the full logo, 180px, for phone home screens
 ```
+
+**Images are freely licensed or they are not used.** The photographs are public-domain and CC0
+images from Wikimedia Commons. `covers.js` supplies a cover only where the work has a freely
+licensed image there, such as a first-edition title page or a manuscript folio. Copyrighted
+modern jackets are excluded, and a work without an accurate image is drawn as a small printed
+title card instead, so nothing on the page is misleading.
+
+## House style
+
+Write for an intelligent reader with no specialist background, in the register of a good magazine
+essay. No sentence over 35 words, in normal word order. No semicolons or dashes, and no sentence
+opening with a bare This, That or It. Explain abstract ideas in concrete terms, with an example
+where it helps. Say why one point leads to the next, signpost a contrast with "But", and end each
+section on its central point. Keep every qualification: restructure a sentence rather than
+swapping in synonyms.
+
+**No commentary about the site itself.** Pages carry content only. There are no "how every page
+is built" strips, no notes on how to read a chart or a card, and no lines such as "the examples
+below show". The numbers in a header band carry plain labels.
 
 ## Adding or editing a thinker
 
-Open `data.js` and copy any existing block. The fields:
+Open `data.js` and copy any existing block:
 
 ```js
 {
@@ -556,19 +114,96 @@ Open `data.js` and copy any existing block. The fields:
 }
 ```
 
-Save and refresh — counts, categories, search and both maps update themselves.
+Save and refresh — counts, categories, search and both maps update themselves. To add a thinker
+to a syllabus or theme grouping, add their `id` to the relevant `SYLLABUS` or `ESSAY_THEMES`
+entry at the top of `app.js`. A thinker with no entry in `portraits.js` has their portrait looked
+up from Wikipedia once and cached, so adding people still just works.
 
-To add a thinker to a syllabus or theme grouping, add their `id` to the relevant
-`SYLLABUS` or `ESSAY_THEMES` entry at the top of `app.js`.
+The introduction in `profiles.js` runs to three paragraphs and a one-line essence: who they were
+and the question they faced, the ideas made concrete, then the use, a limit and the central
+point.
 
-If a new thinker has no entry in `portraits.js`, the app falls back to looking their
-portrait up from Wikipedia once and caching it — so adding people still just works.
+## GS-IV concept notes
 
-## A note on the 6 monograms
+Each concept in `gs4concepts.js` has a definition (`d`), the questions that asked it (`qs`) and a
+source line (`src`). Notes under headings 1 to 15 are structured reading notes: `d` holds the
+definition, `secs` the numbered sections as `[heading, paragraphs]`, and `take` the key takeaway.
+A paragraph that is itself a list of strings becomes bullets. The nine case-study patterns under
+heading 16 use the same shape, with the opening box labelled *The situation* (`dlab`).
 
-Wikipedia has no freely-licensed photograph of Kohlberg, Festinger, Barnard,
-McGregor or Schumacher, and Paul Appleby's only image is an unlabelled group photo —
-so those six show lettered monograms rather than something misleading.
+A note links out through `tk` (`[thinker id, idea heading]` pairs), `es` (`[theme number,
+paragraph index]` pairs for model paragraphs) and `at` (Thought Atlas ids). The links go both
+ways: each idea on a thinker's page lists the GS-IV notes that point to it.
 
-To give any of them a picture, add an `img:"<url>"` field to that entry in `data.js`;
-it overrides everything else.
+**What the notes must cover.** The notes were first built only from past GS-IV questions, and
+that let obvious ideas slip. Trusteeship, civil disobedience and duty against charity had never
+been asked, so they had no note until the 2026 paper asked them. The notes now cover the standard
+canon whether or not it has been asked: the Western theories (utilitarianism, Kant, virtue
+ethics, Rawls, Mill's harm principle, the social contract, the ethics of care), Indian thought
+(Gandhi's method, the seven social sins, sarvodaya and antyodaya, Kautilya, nishkama karma,
+Mahavira), administration (Arendt, dirty hands, Simon, Weber), the syllabus's own phrases, and
+moral development, end-of-life ethics and free speech.
+
+Every question in `gs4pyq.js` is linked to at least one note. When a paper is added, link every
+question to a note, and write a note for any idea the paper raises that the site lacks.
+
+## GS-IV case studies
+
+All 81 Section B cases, from 2013 to 2026, each with a model answer.
+
+**The five boxes.** The method comes from the supplied answer framework, and every answer uses
+the same five boxes: the ethical conflict, the stakeholders, the options with the merit and
+problem of each, the decision criteria (legality, public interest, harm, fairness, integrity,
+feasibility), and the action sequence.
+
+**Seventeen themes.** The first ten are the answer engines in the framework. Seven more cover the
+cases those ten do not, such as threats and inducements, crises that will not wait, and good
+intentions against the right to decide. **A case goes under the theme whose engine gives the
+right advice for it, not the theme its surface suggests.** Lata's case (2026) looked urgent but
+was not an emergency, so it sits under the right to decide rather than under the crisis theme.
+
+Each answer opens with the case in brief and the question as set, then the five boxes, then any
+part of the question the boxes do not answer, and a model conclusion. Five answers are the
+supplied model answers, and the other seventy-six follow them.
+
+`cases.js` holds the method (`CASE_METHOD`) and the answers (`CASE_ANSWERS`, keyed by question
+id). The themes are the Case Studies entries in `gs4concepts.js`, with their `core`, `engine`,
+`arch` and `links`.
+
+The 2026 paper as supplied carries no syllabus headings, so its questions' headings and themes
+were assigned from what each question asks. That mapping is editorial, as it is for any paper
+that arrives without headings.
+
+## Model paragraphs, guides and essays
+
+Each theme opens into **five model paragraphs, which are not five restatements of the theme**.
+They are the five different kinds of question the theme keeps throwing up. So "Mathematics is the
+music of reason" reaches *Reason has a music*, while "The empires of the future will be the
+empires of the mind" reaches *The empire of the mind*, though both are knowledge questions. There
+are 45 paragraphs of 300 to 360 words, built from the thinkers only, and every past question
+reaches one.
+
+Open a paragraph and it reads as a revision and answer-building guide in six parts: the moral
+problem, the thinkers as tests of judgment, applying the framework through five worked examples,
+the past topics developed, five model paragraphs for answer writing, and a seven-step method for
+building a defensible answer. Guides live in `guides.js`, keyed by theme title with one entry per
+paragraph, and all 45 are written. A paragraph without a guide falls back to the plain view.
+
+**Two essays per theme** (three for Justice), **nineteen in all**. The pair on each theme divides
+the work: the first takes the theme's central argument, and the second takes the questions the
+first leaves open.
+
+## The six monograms
+
+Wikipedia has no freely-licensed photograph of Kohlberg, Festinger, Barnard, McGregor or
+Schumacher, and Paul Appleby's only image is an unlabelled group photo. Those six show lettered
+monograms rather than something misleading. To give any of them a picture, add an `img:"<url>"`
+field to that entry in `data.js`, which overrides everything else.
+
+## Shortcuts
+
+- `/` or `Ctrl+K` — open the site search. Every word must match, and results come grouped as
+  thinkers, GS-IV concepts, stories and models, model essays, past questions and quotations
+- `Esc` — close a thinker page
+- Sun/moon button — light or dark mode, remembered between visits
+- `Ctrl+P` on an open thinker page — prints just that page, clean, for revision notes
